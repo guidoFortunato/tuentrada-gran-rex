@@ -1,0 +1,6 @@
+export * from './Beneficios'
+export * from './ComoLlegar'
+export * from './DetalleEvento'
+export * from './Historia'
+export * from './Home'
+export * from './Ubicaciones'
