@@ -1,0 +1,14 @@
+.color-navbar{
+  background-color: #000;
+}
+
+.border-navbar-color:hover{
+  border-bottom: 1px solid red;
+  transition-delay: 2s;
+  transition: all .9s ease-in-out;
+  transition-timing-function: ease-in-out;
+}
+
+.border-navbar{
+  border: 1px solid #000;
+}

@@ -1,5 +1,6 @@
 import React from "react";
-import imgRex from '../assets/logo_rex.png'
+import imgRex from "../assets/logo_rex.png";
+import "../css/navbar.css";
 import { Link } from "react-router-dom";
 
 export const Navbar = () => {
@@ -7,7 +8,7 @@ export const Navbar = () => {
     <nav className="navbar navbar-dark navbar-expand-lg color-navbar">
       <div className="container">
         <Link className="navbar-brand" to="/">
-          <img src={imgRex} alt="logo gran rex" style={{width: "120px"}} />
+          <img src={imgRex} alt="logo gran rex" style={{ width: "120px" }} />
         </Link>
         <button
           className="navbar-toggler"
@@ -23,22 +24,36 @@ export const Navbar = () => {
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav ms-auto">
             <li className="nav-item">
-              <Link className="nav-link" to="/historia">
+              <Link
+                className="nav-link border-navbar-color border-navbar"
+                to="/historia"
+              >
                 Historia
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/ubicaciones">
+              <Link
+                className="nav-link border-navbar-color border-navbar"
+                to="/ubicaciones"
+              >
                 Ubicaciones
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/beneficios">
+              <Link
+                className="nav-link border-navbar-color border-navbar"
+                to="/beneficios"
+              >
                 Beneficios
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to='/como-llegar'>Cómo llegar</Link>
+              <Link
+                className="nav-link border-navbar-color border-navbar"
+                to="/como-llegar"
+              >
+                Cómo llegar
+              </Link>
             </li>
           </ul>
         </div>
