@@ -1,7 +1,7 @@
 import { Navbar } from "./components/Navbar";
 import { AppRouter } from "./router/AppRouter";
 
-function LandingApp() {
+function App() {
   return (
     <>
       <Navbar />
@@ -10,4 +10,4 @@ function LandingApp() {
   );
 }
 
-export default LandingApp;
+export default App;
