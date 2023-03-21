@@ -45,7 +45,7 @@ export const Home = () => {
               <div className="card mb-20">
                 <img
                   src="https://picsum.photos/500/500"
-                  className="card-img-top card-img-bottom"
+                  className="card-img-top card-img-bottom size-img"
                   alt="img logo"
                   // style={{ width: "80%" }}
                 />
@@ -53,7 +53,7 @@ export const Home = () => {
               <div className="card">
                 <img
                   src="https://picsum.photos/500/500"
-                  className="card-img-top card-img-bottom"
+                  className="card-img-top card-img-bottom size-img"
                   alt="img logo"
                   // style={{ width: "80%" }}
                 />

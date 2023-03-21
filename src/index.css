@@ -21,7 +21,8 @@ body {
 }
 
 @media screen and (min-width: 991px) {
-  .mb-20{
-    margin-bottom: 20px;
+  .size-img{
+   height: 100%;
+   object-fit: cover;
   }
 }
