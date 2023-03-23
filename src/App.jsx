@@ -1,4 +1,4 @@
-import { Navbar } from "./components/Navbar";
+import { Footer, Navbar } from "./components";
 import { AppRouter } from "./router/AppRouter";
 
 function App() {
@@ -6,6 +6,7 @@ function App() {
     <>
       <Navbar />
       <AppRouter />
+      <Footer />
     </>
   );
 }

@@ -8,7 +8,7 @@ export const Navbar = () => {
     <nav className="navbar navbar-dark navbar-expand-lg color-navbar">
       <div className="container">
         <Link className="navbar-brand" to="/">
-          <img src={imgRex} alt="logo gran rex" style={{ width: "100px" }} />
+          <img src={imgRex} alt="logo gran rex" style={{ width: "80px" }} />
         </Link>
         <button
           className="navbar-toggler"
