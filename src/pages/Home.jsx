@@ -1,5 +1,6 @@
 import "../css/header.css";
 import "../css/footer.css";
+import { Link } from "react-router-dom";
 export const Home = () => {
   return (
     <>
@@ -19,70 +20,37 @@ export const Home = () => {
         <div className="container">
           <div className="row">
             <div className="col-12 text-center mt-3 ">
-              <h2 style={{fontSize:"35px"}}>Próximos eventos</h2>
+              <h2 style={{ fontSize: "35px" }} className="my-3">
+                Próximos eventos
+              </h2>
             </div>
           </div>
-          <div >
-          <div className="row">
-            <article className="col-12 col-lg-8 desktop">
-              <div className="card">
-                <img
-                  src="https://picsum.photos/1000/487"
-                  className="card-img-top card-img-bottom"
-                  alt="img logo"
-                  // style={{ width: "80%" }}
-                />
-              </div>
-              <div className="card">
-                <img
-                  src="https://picsum.photos/1000/487"
-                  className="card-img-top card-img-bottom"
-                  alt="img logo"
-                  // style={{ width: "80%" }}
-                />
-              </div>
-            
-            </article>
+          <div>
+            <div className="row">
+              <article className="col-12  desktop">
+                <div className="card" style={{ width: "90%" }}>
+                  <img
+                    src="https://picsum.photos/1000/250"
+                    className="card-img-top card-img-bottom"
+                    alt="img logo"
+                    
+                  />
+                </div>
+              </article>
 
-            <article className="col-12 col-lg-4 card-media mobile" >
-              <div className="card mb-20">
-                <img
-                  src="https://picsum.photos/500/500"
-                  className="card-img-top card-img-bottom size-img"
-                  alt="img logo"
-                  // style={{ width: "80%" }}
-                />
-              </div>
-              <div className="card">
-                <img
-                  src="https://picsum.photos/500/500"
-                  className="card-img-top card-img-bottom size-img"
-                  alt="img logo"
-                  // style={{ width: "80%" }}
-                />
-              </div>
-            </article>
-           
-            <article className="col-12 col-lg-4 card-media" >
-              <div className="card mb-20">
-                <img
-                  src="https://picsum.photos/500/500"
-                  className="card-img-top card-img-bottom size-img"
-                  alt="img logo"
-                  // style={{ width: "80%" }}
-                />
-              </div>
-              <div className="card">
-                <img
-                  src="https://picsum.photos/500/500"
-                  className="card-img-top card-img-bottom size-img"
-                  alt="img logo"
-                  // style={{ width: "80%" }}
-                />
-              </div>
-            </article>
-       
-          </div>
+              <article className="col-12 col-lg-4 card-media mobile">
+                <div className="card mb-20">
+                  <img
+                    src="https://picsum.photos/500/500"
+                    className="card-img-top card-img-bottom size-img"
+                    alt="img logo"
+                    // style={{ width: "80%" }}
+                  />
+                </div>
+              </article>
+
+             
+            </div>
           </div>
           <div className="row sin-padding-right-left">
             <article className="col-12 col-md-6 col-lg-4">
@@ -147,41 +115,100 @@ export const Home = () => {
             </article>
           </div>
         </div>
-      </main> 
+      </main>
       <div className="container">
-        <footer className="py-5" style={{width:"100%",
-    padding:"inherit"}}>
+        <footer className="py-5" style={{ width: "100%", padding: "inherit" }}>
           <div className="row">
             <div className="col-6 col-md-2 mb-3">
               <h5>Section</h5>
               <ul className="nav flex-column">
-                <li className="nav-item mb-2"><a href="#" className="nav-link p-0 text-muted">Home</a></li>
-                <li className="nav-item mb-2"><a href="#" className="nav-link p-0 text-muted">Features</a></li>
-                <li className="nav-item mb-2"><a href="#" className="nav-link p-0 text-muted">Pricing</a></li>
-                <li className="nav-item mb-2"><a href="#" className="nav-link p-0 text-muted">FAQs</a></li>
-                <li className="nav-item mb-2"><a href="#" className="nav-link p-0 text-muted">About</a></li>
+                <li className="nav-item mb-2">
+                  <a href="#" className="nav-link p-0 text-muted">
+                    Home
+                  </a>
+                </li>
+                <li className="nav-item mb-2">
+                  <a href="#" className="nav-link p-0 text-muted">
+                    Features
+                  </a>
+                </li>
+                <li className="nav-item mb-2">
+                  <a href="#" className="nav-link p-0 text-muted">
+                    Pricing
+                  </a>
+                </li>
+                <li className="nav-item mb-2">
+                  <a href="#" className="nav-link p-0 text-muted">
+                    FAQs
+                  </a>
+                </li>
+                <li className="nav-item mb-2">
+                  <a href="#" className="nav-link p-0 text-muted">
+                    About
+                  </a>
+                </li>
               </ul>
             </div>
 
             <div className="col-6 col-md-2 mb-3">
               <h5>Section</h5>
               <ul className="nav flex-column">
-                <li className="nav-item mb-2"><a href="#" className="nav-link p-0 text-muted">Home</a></li>
-                <li className="nav-item mb-2"><a href="#" className="nav-link p-0 text-muted">Features</a></li>
-                <li className="nav-item mb-2"><a href="#" className="nav-link p-0 text-muted">Pricing</a></li>
-                <li className="nav-item mb-2"><a href="#" className="nav-link p-0 text-muted">FAQs</a></li>
-                <li className="nav-item mb-2"><a href="#" className="nav-link p-0 text-muted">About</a></li>
+                <li className="nav-item mb-2">
+                  <Link to="#" className="nav-link p-0 text-muted">
+                    Home
+                  </Link>
+                </li>
+                <li className="nav-item mb-2">
+                  <Link to="#" className="nav-link p-0 text-muted">
+                    Features
+                  </Link>
+                </li>
+                <li className="nav-item mb-2">
+                  <Link to="#" className="nav-link p-0 text-muted">
+                    Pricing
+                  </Link>
+                </li>
+                <li className="nav-item mb-2">
+                  <Link to="#" className="nav-link p-0 text-muted">
+                    FAQs
+                  </Link>
+                </li>
+                <li className="nav-item mb-2">
+                  <Link to="#" className="nav-link p-0 text-muted">
+                    About
+                  </Link>
+                </li>
               </ul>
             </div>
 
             <div className="col-6 col-md-2 mb-3">
               <h5>Section</h5>
               <ul className="nav flex-column">
-                <li className="nav-item mb-2"><a href="#" className="nav-link p-0 text-muted">Home</a></li>
-                <li className="nav-item mb-2"><a href="#" className="nav-link p-0 text-muted">Features</a></li>
-                <li className="nav-item mb-2"><a href="#" className="nav-link p-0 text-muted">Pricing</a></li>
-                <li className="nav-item mb-2"><a href="#" className="nav-link p-0 text-muted">FAQs</a></li>
-                <li className="nav-item mb-2"><a href="#" className="nav-link p-0 text-muted">About</a></li>
+                <li className="nav-item mb-2">
+                  <Link to="#" className="nav-link p-0 text-muted">
+                    Home
+                  </Link>
+                </li>
+                <li className="nav-item mb-2">
+                  <Link to="#" className="nav-link p-0 text-muted">
+                    Features
+                  </Link>
+                </li>
+                <li className="nav-item mb-2">
+                  <Link to="#" className="nav-link p-0 text-muted">
+                    Pricing
+                  </Link>
+                </li>
+                <li className="nav-item mb-2">
+                  <Link to="#" className="nav-link p-0 text-muted">
+                    FAQs
+                  </Link>
+                </li>
+                <li className="nav-item mb-2">
+                  <Link to="#" className="nav-link p-0 text-muted">
+                    About
+                  </Link>
+                </li>
               </ul>
             </div>
 
@@ -190,32 +217,87 @@ export const Home = () => {
                 <h5>Subscribe to our newsletter</h5>
                 <p>Monthly digest of what's new and exciting from us.</p>
                 <div className="d-flex flex-column flex-sm-row w-100 gap-2">
-                  <label for="newsletter1" className="visually-hidden">Email address</label>
-                  <input id="newsletter1" type="text" className="form-control" placeholder="Email address"/>
-                  <button className="btn btn-primary" type="button">Subscribe</button>
+                  <label htmlFor="newsletter1" className="visually-hidden">
+                    Email address
+                  </label>
+                  <input
+                    id="newsletter1"
+                    type="text"
+                    className="form-control"
+                    placeholder="Email address"
+                  />
+                  <button className="btn btn-primary" type="button">
+                    Subscribe
+                  </button>
                 </div>
               </form>
             </div>
           </div>
 
           <div className="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
-            <p>© 2022 Company, Inc. All rights reserved.</p>
+            <p>© 2023 Company, Inc. All rights reserved.</p>
             <ul className="list-unstyled d-flex">
-              <li className="ms-3"><a className="link-dark" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" style={{backgroundColor:"#000000", padding:"px", borderRadius:"50%"}} fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
-  <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"/>
-</svg></a></li>
-              <li className="ms-3"><a className="link-dark" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
-  <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
-</svg></a></li>
-              <li className="ms-3"><a className="link-dark" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-twitter" viewBox="0 0 16 16">
-  <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"/>
-</svg></a></li>
+              <li className="ms-3">
+                <a
+                  className="link-dark"
+                  rel="noreferrer"
+                  href="https://www.facebook.com/tuentrada"
+                  target="_blank"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    x="0px"
+                    y="0px"
+                    width="30"
+                    height="30"
+                    viewBox="0 0 50 50"
+                  >
+                    <path d="M25,3C12.85,3,3,12.85,3,25c0,11.03,8.125,20.137,18.712,21.728V30.831h-5.443v-5.783h5.443v-3.848 c0-6.371,3.104-9.168,8.399-9.168c2.536,0,3.877,0.188,4.512,0.274v5.048h-3.612c-2.248,0-3.033,2.131-3.033,4.533v3.161h6.588 l-0.894,5.783h-5.694v15.944C38.716,45.318,47,36.137,47,25C47,12.85,37.15,3,25,3z"></path>
+                  </svg>
+                </a>
+              </li>
+              <li className="ms-3">
+                <a
+                  className="link-dark"
+                  rel="noreferrer"
+                  href="https://twitter.com/tuentrada"
+                  target="_blank"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    x="0px"
+                    y="0px"
+                    width="30"
+                    height="30"
+                    viewBox="0 0 50 50"
+                  >
+                    <path d="M25,2C12.317,2,2,12.317,2,25s10.317,23,23,23s23-10.317,23-23S37.683,2,25,2z M36.237,20.524 c0.01,0.236,0.016,0.476,0.016,0.717C36.253,28.559,30.68,37,20.491,37c-3.128,0-6.041-0.917-8.491-2.489 c0.433,0.052,0.872,0.077,1.321,0.077c2.596,0,4.985-0.884,6.879-2.37c-2.424-0.044-4.468-1.649-5.175-3.847 c0.339,0.065,0.686,0.1,1.044,0.1c0.505,0,0.995-0.067,1.458-0.195c-2.532-0.511-4.441-2.747-4.441-5.432c0-0.024,0-0.047,0-0.07 c0.747,0.415,1.6,0.665,2.509,0.694c-1.488-0.995-2.464-2.689-2.464-4.611c0-1.015,0.272-1.966,0.749-2.786 c2.733,3.351,6.815,5.556,11.418,5.788c-0.095-0.406-0.145-0.828-0.145-1.262c0-3.059,2.48-5.539,5.54-5.539 c1.593,0,3.032,0.672,4.042,1.749c1.261-0.248,2.448-0.709,3.518-1.343c-0.413,1.292-1.292,2.378-2.437,3.064 c1.122-0.136,2.188-0.432,3.183-0.873C38.257,18.766,37.318,19.743,36.237,20.524z"></path>
+                  </svg>
+                </a>
+              </li>
+              <li className="ms-3">
+                <a
+                  className="link-dark"
+                  rel="noreferrer"
+                  href="https://www.instagram.com/tuentrada/"
+                  target="_blank"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    x="0px"
+                    y="0px"
+                    width="30"
+                    height="30"
+                    viewBox="0 0 50 50"
+                  >
+                    <path d="M25,3C12.85,3,3,12.85,3,25c0,11.03,8.125,20.137,18.712,21.728V30.831h-5.443v-5.783h5.443v-3.848 c0-6.371,3.104-9.168,8.399-9.168c2.536,0,3.877,0.188,4.512,0.274v5.048h-3.612c-2.248,0-3.033,2.131-3.033,4.533v3.161h6.588 l-0.894,5.783h-5.694v15.944C38.716,45.318,47,36.137,47,25C47,12.85,37.15,3,25,3z"></path>
+                  </svg>
+                </a>
+              </li>
             </ul>
           </div>
         </footer>
       </div>
-    
     </>
   );
-}
-
+};
