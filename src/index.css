@@ -63,6 +63,6 @@ article {
     display: flex;
   }
   .size-destacado {
-    width: 95.5%;  /* width: 92.5%; */
+    width: 95%;  /* width: 92.5%; */
   }
 }
