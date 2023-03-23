@@ -3,7 +3,7 @@
 }
 
 .border-navbar-color:hover{
-  border-bottom: 1px solid red;
+  border-bottom: 1px solid #fff;
   transition-delay: 2s;
   transition: all .9s ease-in-out;
   transition-timing-function: ease-in-out;

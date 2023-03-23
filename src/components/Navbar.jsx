@@ -26,6 +26,14 @@ export const Navbar = () => {
             <li className="nav-item">
               <Link
                 className="nav-link border-navbar-color border-navbar"
+                to="/"
+              >
+                Inicio
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link
+                className="nav-link border-navbar-color border-navbar"
                 to="/historia"
               >
                 Historia
