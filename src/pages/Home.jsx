@@ -20,26 +20,20 @@ export const Home = () => {
         <div className="container">
           <div className="row">
             <div className="col-12 text-center mt-3 ">
-              <h2 style={{ fontSize: "35px" }} className="my-3">Próximos eventos</h2>
+              <h2 style={{ fontSize: "35px" }} className="my-3">
+                Próximos eventos
+              </h2>
             </div>
           </div>
           <div>
             <div className="row">
-              <article className="col-12 col-lg-8 desktop">
-                <div className="card">
+              <article className="col-12  desktop">
+                <div className="card" style={{ width: "90%" }}>
                   <img
-                    src="https://picsum.photos/1000/487"
+                    src="https://picsum.photos/1000/250"
                     className="card-img-top card-img-bottom"
                     alt="img logo"
-                    // style={{ width: "80%" }}
-                  />
-                </div>
-                <div className="card">
-                  <img
-                    src="https://picsum.photos/1000/487"
-                    className="card-img-top card-img-bottom"
-                    alt="img logo"
-                    // style={{ width: "80%" }}
+                    
                   />
                 </div>
               </article>
@@ -53,34 +47,9 @@ export const Home = () => {
                     // style={{ width: "80%" }}
                   />
                 </div>
-                <div className="card">
-                  <img
-                    src="https://picsum.photos/500/500"
-                    className="card-img-top card-img-bottom size-img"
-                    alt="img logo"
-                    // style={{ width: "80%" }}
-                  />
-                </div>
               </article>
 
-              <article className="col-12 col-lg-4 card-media">
-                <div className="card mb-20">
-                  <img
-                    src="https://picsum.photos/500/500"
-                    className="card-img-top card-img-bottom size-img"
-                    alt="img logo"
-                    // style={{ width: "80%" }}
-                  />
-                </div>
-                <div className="card">
-                  <img
-                    src="https://picsum.photos/500/500"
-                    className="card-img-top card-img-bottom size-img"
-                    alt="img logo"
-                    // style={{ width: "80%" }}
-                  />
-                </div>
-              </article>
+             
             </div>
           </div>
           <div className="row sin-padding-right-left">
@@ -269,7 +238,12 @@ export const Home = () => {
             <p>© 2023 Company, Inc. All rights reserved.</p>
             <ul className="list-unstyled d-flex">
               <li className="ms-3">
-                <a className="link-dark" rel="noreferrer" href="https://www.facebook.com/tuentrada" target="_blank">
+                <a
+                  className="link-dark"
+                  rel="noreferrer"
+                  href="https://www.facebook.com/tuentrada"
+                  target="_blank"
+                >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     x="0px"
@@ -283,7 +257,12 @@ export const Home = () => {
                 </a>
               </li>
               <li className="ms-3">
-                <a className="link-dark" rel="noreferrer" href="https://twitter.com/tuentrada" target="_blank">
+                <a
+                  className="link-dark"
+                  rel="noreferrer"
+                  href="https://twitter.com/tuentrada"
+                  target="_blank"
+                >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     x="0px"
@@ -297,7 +276,12 @@ export const Home = () => {
                 </a>
               </li>
               <li className="ms-3">
-                <a className="link-dark" rel="noreferrer" href="https://www.instagram.com/tuentrada/" target="_blank">
+                <a
+                  className="link-dark"
+                  rel="noreferrer"
+                  href="https://www.instagram.com/tuentrada/"
+                  target="_blank"
+                >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     x="0px"

@@ -13,7 +13,14 @@ body {
 .card{
   margin: 10px;
   box-shadow: 5px 5px 6px 1px rgb(227, 227, 227);
+  width: 70%;
 }
+
+article{
+  display: flex;
+  justify-content: center;
+}
+
 
 @media screen and (min-width: 768px) and (max-width: 991px) {
   .card-media{
@@ -29,7 +36,7 @@ body {
 }
 
 .mobile {
-  display: block;
+  display: flex;
 }
 
 .desktop {
@@ -39,7 +46,7 @@ body {
 @media screen and (min-width: 768px) {
 
 .desktop {
-  display: block;
+  display: flex;
 }
 
 .mobile {

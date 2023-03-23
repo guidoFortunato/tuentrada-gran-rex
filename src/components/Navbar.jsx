@@ -28,7 +28,7 @@ export const Navbar = () => {
                 className="nav-link border-navbar-color border-navbar"
                 to="/"
               >
-                Inicio
+                <span className="size-item-nav">Inicio</span>
               </Link>
             </li>
             <li className="nav-item">
@@ -36,7 +36,7 @@ export const Navbar = () => {
                 className="nav-link border-navbar-color border-navbar"
                 to="/historia"
               >
-                Historia
+                <span className="size-item-nav">Historia</span>
               </Link>
             </li>
             <li className="nav-item">
@@ -44,7 +44,7 @@ export const Navbar = () => {
                 className="nav-link border-navbar-color border-navbar"
                 to="/ubicaciones"
               >
-                Ubicaciones
+                <span className="size-item-nav">Ubicaciones</span>
               </Link>
             </li>
             <li className="nav-item">
@@ -52,7 +52,7 @@ export const Navbar = () => {
                 className="nav-link border-navbar-color border-navbar"
                 to="/beneficios"
               >
-                Beneficios
+                <span className="size-item-nav">Beneficios</span>
               </Link>
             </li>
             <li className="nav-item">
@@ -60,7 +60,7 @@ export const Navbar = () => {
                 className="nav-link border-navbar-color border-navbar"
                 to="/como-llegar"
               >
-                Cómo llegar
+                <span className="size-item-nav">Cómo llegar</span>
               </Link>
             </li>
           </ul>

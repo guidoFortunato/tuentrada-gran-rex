@@ -12,3 +12,7 @@
 .border-navbar{
   border: 1px solid #000;
 }
+
+.size-item-nav{
+  font-size: 20px;
+}
