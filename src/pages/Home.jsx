@@ -1,7 +1,13 @@
 import "../css/header.css";
 import "../css/footer.css";
-import { Link } from "react-router-dom";
+import { useEffect, useState } from "react";
+// import { Link } from "react-router-dom";
 export const Home = () => {
+  const [evento, setEvento] = useState("");
+
+  console.log(evento);
+  // useEffect(() => {
+  // }, [evento]);
   return (
     <>
       <header>
@@ -10,7 +16,12 @@ export const Home = () => {
           <form className="d-flex form-buscar">
             <div>🔍︎</div>
             <div className="container-input">
-              <input className="border-0" placeholder="Buscar Evento" />
+              <input
+                className="border-0"
+                placeholder="Buscar Evento"
+                value={evento}
+                onChange={(e) => setEvento(e.target.value)}
+              />
             </div>
             {/* <button className="btn btn-outline-success" type="submit">Buscar</button> */}
           </form>
@@ -33,7 +44,6 @@ export const Home = () => {
                     src="https://picsum.photos/1000/400"
                     className="card-img-top card-img-bottom"
                     alt="img logo"
-                    
                   />
                 </div>
               </article>
@@ -44,7 +54,6 @@ export const Home = () => {
                     src="https://picsum.photos/1000/250"
                     className="card-img-top card-img-bottom"
                     alt="img logo"
-                    
                   />
                 </div>
               </article>
@@ -59,8 +68,6 @@ export const Home = () => {
                   />
                 </div>
               </article>
-
-             
             </div>
           </div>
           <div className="row sin-padding-right-left">
@@ -147,7 +154,6 @@ export const Home = () => {
           </div>
         </div>
       </main>
-     
     </>
   );
 };
