@@ -43,7 +43,7 @@ export const Home = () => {
           <div className="row">
             <div className="col-12 text-center mt-3 ">
               <h2 style={{ fontSize: "35px" }} className="my-3">
-                Próximos eventos
+                Próximos shows
               </h2>
             </div>
           </div>
