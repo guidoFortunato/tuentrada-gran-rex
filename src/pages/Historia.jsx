@@ -21,7 +21,7 @@ export const Historia = () => {
             permitían a los espectadores llamar a sus coches, que se encontraban
             en la estación de más de 200 coches situada en los dos subsuelos.
             También poseía un bar que ocupaba tres pisos, un bowling y billares
-            en el subsuelo. <br /><br /> Descripción arquitectónica <br /> Obra significativa de
+            en el subsuelo. <br /><br /> <strong>Descripción arquitectónica</strong>  <br /> Obra significativa de
             Alberto Prebisch, el Gran Rex representó un hito dentro de la
             historia de la arquitectura moderna argentina. Destaca en su
             construcción el efecto de continuidad entre el exterior e interior,
