@@ -1,19 +1,34 @@
 import "../css/header.css";
 import "../css/footer.css";
-// import { useEffect, useState } from "react";
-// import { Link } from "react-router-dom";
-export const Home = () => {
-  // const [evento, setEvento] = useState("");
+import { useContext, useState } from "react";
+import { EventosContext } from "../context/EventosProvider";
+import { useNavigate } from "react-router-dom";
 
-  // console.log(evento);
-  // useEffect(() => {
-  // }, [evento]);
+import anuel1 from "../assets/images/anuel1.jpg";
+import anuel2 from "../assets/images/anuel2.jpg";
+import chano500 from "../assets/images/chano.jpg";
+import ciro500 from "../assets/images/ciro500.jpg";
+import tini500 from "../assets/images/tini500.jpg";
+import ciro1000x250 from "../assets/images/ciro1000x250.png";
+import ciro1000x400 from "../assets/images/ciro1000x400.png";
+
+export const Home = () => {
+  const [evento, setEvento] = useState("");
+  const { agregarEvento } = useContext(EventosContext);
+  let navigate = useNavigate();
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    agregarEvento(evento);
+    setEvento("");
+    navigate("/busqueda-eventos");
+  };
   return (
     <>
       <header>
         <div className="header-home">
           <h1 className="titulo-principal">Gran Rex</h1>
-          <form className="d-flex form-buscar">
+          <form className="d-flex form-buscar" onSubmit={handleSubmit}>
             <div>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -30,8 +45,8 @@ export const Home = () => {
               <input
                 className="border-0"
                 placeholder="Buscar Evento"
-                // value={evento}
-                // onChange={(e) => setEvento(e.target.value)}
+                value={evento}
+                onChange={(e) => setEvento(e.target.value)}
               />
             </div>
             {/* <button className="btn btn-outline-success" type="submit">Buscar</button> */}
@@ -47,42 +62,80 @@ export const Home = () => {
               </h2>
             </div>
           </div>
-          <div>
-            <div className="row">
-              <article className="col-12 tablet">
-                <div className="card size-destacado">
-                  <img
-                    src="https://picsum.photos/1000/400"
-                    className="card-img-top card-img-bottom"
-                    alt="img logo"
-                  />
-                </div>
-              </article>
 
-              <article className="col-12 desktop">
-                <div className="card size-destacado">
-                  <img
-                    src="https://picsum.photos/1000/250"
-                    className="card-img-top card-img-bottom"
-                    alt="img logo"
-                  />
-                </div>
-              </article>
+          <div className="row">
+            <article className="col-12 tablet">
+              <div className="card size-destacado">
+                <img
+                  src={ciro1000x400}
+                  className="card-img-top card-img-bottom"
+                  alt="img logo"
+                />
+              </div>
+            </article>
 
-              <article className="col-12 col-lg-4 card-media mobile">
-                <div className="card mb-20">
-                  <img
-                    src="https://picsum.photos/500/500"
-                    className="card-img-top card-img-bottom"
-                    alt="img logo"
-                    // style={{ width: "80%" }}
-                  />
-                </div>
-              </article>
-            </div>
+            <article className="col-12 desktop">
+              <div className="card size-destacado">
+                <img
+                  src={ciro1000x250}
+                  className="card-img-top card-img-bottom"
+                  alt="img logo"
+                />
+              </div>
+            </article>
           </div>
           <div className="row sin-padding-right-left">
+            <article className="col-12 col-lg-4 card-media mobile">
+              <div className="card mb-20">
+                <img
+                  src={ciro500}
+                  className="card-img-top card-img-bottom"
+                  alt="img logo"
+                  // style={{ width: "80%" }}
+                />
+              </div>
+            </article>
             <article className="col-12 col-md-6 col-lg-4 col-xl-3">
+              <div className="card">
+                <img
+                  src={anuel1}
+                  className="card-img-top card-img-bottom"
+                  alt="img logo"
+                  // style={{ width: "80%" }}
+                />
+              </div>
+            </article>
+            <article className="col-12 col-md-6 col-lg-4 col-xl-3">
+              <div className="card">
+                <img
+                  src={anuel2}
+                  className="card-img-top card-img-bottom"
+                  alt="img logo"
+                  // style={{ width: "80%" }}
+                />
+              </div>
+            </article>
+            <article className="col-12 col-md-6 col-lg-4 col-xl-3">
+              <div className="card">
+                <img
+                  src={chano500}
+                  className="card-img-top card-img-bottom"
+                  alt="img logo"
+                  // style={{ width: "80%" }}
+                />
+              </div>
+            </article>
+            <article className="col-12 col-md-6 col-lg-4 col-xl-3">
+              <div className="card">
+                <img
+                  src={tini500}
+                  className="card-img-top card-img-bottom"
+                  alt="img logo"
+                  // style={{ width: "80%" }}
+                />
+              </div>
+            </article>
+            {/* <article className="col-12 col-md-6 col-lg-4 col-xl-3">
               <div className="card">
                 <img
                   src="https://picsum.photos/500/500"
@@ -131,37 +184,7 @@ export const Home = () => {
                   // style={{ width: "80%" }}
                 />
               </div>
-            </article>
-            <article className="col-12 col-md-6 col-lg-4 col-xl-3">
-              <div className="card">
-                <img
-                  src="https://picsum.photos/500/500"
-                  className="card-img-top card-img-bottom"
-                  alt="img logo"
-                  // style={{ width: "80%" }}
-                />
-              </div>
-            </article>
-            <article className="col-12 col-md-6 col-lg-4 col-xl-3">
-              <div className="card">
-                <img
-                  src="https://picsum.photos/500/500"
-                  className="card-img-top card-img-bottom"
-                  alt="img logo"
-                  // style={{ width: "80%" }}
-                />
-              </div>
-            </article>
-            <article className="col-12 col-md-6 col-lg-4 col-xl-3">
-              <div className="card">
-                <img
-                  src="https://picsum.photos/500/500"
-                  className="card-img-top card-img-bottom"
-                  alt="img logo"
-                  // style={{ width: "80%" }}
-                />
-              </div>
-            </article>
+            </article> */}
           </div>
         </div>
       </main>

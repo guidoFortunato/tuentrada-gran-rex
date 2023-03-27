@@ -1,5 +1,5 @@
 import { Route, Routes } from "react-router-dom";
-import { Beneficios, ComoLlegar, Historia, Home, Ubicaciones } from "../pages/";
+import { Beneficios, BusquedaEventos, ComoLlegar, Historia, Home, Ubicaciones } from "../pages/";
 
 export const AppRouter = () => {
   return (
@@ -9,6 +9,7 @@ export const AppRouter = () => {
       <Route path="/ubicaciones" element={<Ubicaciones />} />
       <Route path="/beneficios" element={<Beneficios />} />
       <Route path="/como-llegar" element={<ComoLlegar />} />
+      <Route path="/busqueda-eventos" element={<BusquedaEventos /> } />
     </Routes>
   );
 };
