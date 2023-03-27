@@ -13,12 +13,13 @@ export const Historia = () => {
   return (
     <>
       <div className="container">
-        <h2 className="heading">Historia: un teatro con trayectoria</h2>
+        <h2 style={{ fontSize: "35px" }} className="my-3 heading">Historia: un teatro con trayectoria</h2>
+
         <div className="col-12">
           <p className="parrafo-historia">
             Es el teatro de los grandes espectáculos musicales y recibe a los
             artistas más consagrados, nacional e internacionalmente. Su
-            capacidad es para 3.262 espectadores. El edificio, propiedad de
+            capacidad es para 3.262 espectadores. <br /><br /> El edificio, propiedad de
             Cordero, Cavallo y Lautaret S.A. y terminado en 1937, después de tan
             solo siete meses, es un exponente arquitectónico del estilo
             racionalista, obra del arquitecto Alberto Prebisch, el mismo que
@@ -27,7 +28,7 @@ export const Historia = () => {
             permitían a los espectadores llamar a sus coches, que se encontraban
             en la estación de más de 200 coches situada en los dos subsuelos.
             También poseía un bar que ocupaba tres pisos, un bowling y billares
-            en el subsuelo. Descripción arquitectónica Obra significativa de
+            en el subsuelo. <br /><br /> Descripción arquitectónica <br /> Obra significativa de
             Alberto Prebisch, el Gran Rex representó un hito dentro de la
             historia de la arquitectura moderna argentina. Destaca en su
             construcción el efecto de continuidad entre el exterior e interior,
@@ -51,7 +52,7 @@ export const Historia = () => {
             rápidamente y un conjunto de ascensores que comunican con las
             cocheras. Posee una sala asimétrica, producto de haber sido
             construido en un terreno irregular. Por ello, la está dispuesta en
-            forma oblicua a la línea del frente. Esta sala es una gran cáscara
+            forma oblicua a la línea del frente. <br /> Esta sala es una gran cáscara
             dividida en fajas encimadas, inspirada en el Radio City de New York.
             Los materiales son mármol Botticcino italiano, revoque, madera
             enchapada y bronce. Los espectadores se disponen en tres niveles:

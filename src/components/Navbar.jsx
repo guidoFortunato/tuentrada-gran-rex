@@ -8,7 +8,7 @@ export const Navbar = () => {
     <nav className="navbar navbar-dark navbar-expand-lg color-navbar">
       <div className="container">
         <Link className="navbar-brand" to="/">
-          <img src={imgRex} alt="logo gran rex" style={{ width: "80px" }} />
+          <img src={imgRex} alt="logo gran rex" style={{ width: "90px" }} />
         </Link>
         <button
           className="navbar-toggler"
@@ -19,10 +19,10 @@ export const Navbar = () => {
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
-          <span className="navbar-toggler-icon"></span>
+          <span style={{fontSize:"16px"}} className="navbar-toggler-icon"></span>
         </button>
         <div className="collapse navbar-collapse" id="navbarNav">
-          <ul className="navbar-nav ms-auto">
+          <ul className="navbar-nav ms-auto" style={{fontSize:"16px"}}>
             <li className="nav-item">
               <Link
                 className="nav-link border-navbar-color border-navbar"
