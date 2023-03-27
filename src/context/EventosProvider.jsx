@@ -4,6 +4,7 @@ import anuel1 from "../assets/images/anuel1.jpg";
 import anuel2 from "../assets/images/anuel2.jpg";
 import chano500 from "../assets/images/chano.jpg";
 import ciro500 from "../assets/images/ciro500.jpg";
+import tini500 from "../assets/images/tini500.jpg";
 
 const eventosTotales = [
   {
@@ -33,7 +34,7 @@ const eventosTotales = [
   {
     id: Math.random()*10,
     name: "tini",
-    img: chano500,
+    img: tini500,
     classMobile: "",
   },
 ];
