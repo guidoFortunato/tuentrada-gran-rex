@@ -19,7 +19,43 @@ export const Home = () => {
         <div className="container">
           <div className="row">
             <div className="col-12 text-center mt-3 ">
-              <h3>Próximos eventos</h3>
+              <h2 style={{ fontSize: "35px" }} className="my-3">
+                Próximos shows
+              </h2>
+            </div>
+          </div>
+          <div>
+            <div className="row">
+              <article className="col-12 tablet">
+                <div className="card size-destacado">
+                  <img
+                    src="https://picsum.photos/1000/400"
+                    className="card-img-top card-img-bottom"
+                    alt="img logo"
+                  />
+                </div>
+              </article>
+
+              <article className="col-12 desktop">
+                <div className="card size-destacado">
+                  <img
+                    src="https://picsum.photos/1000/250"
+                    className="card-img-top card-img-bottom"
+                    alt="img logo"
+                  />
+                </div>
+              </article>
+
+              <article className="col-12 col-lg-4 card-media mobile">
+                <div className="card mb-20">
+                  <img
+                    src="https://picsum.photos/500/500"
+                    className="card-img-top card-img-bottom"
+                    alt="img logo"
+                    // style={{ width: "80%" }}
+                  />
+                </div>
+              </article>
             </div>
           </div>
           <div >
