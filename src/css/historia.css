@@ -25,7 +25,13 @@ html {
 
 @media screen and (min-width: 768px) and (max-width: 991px) {
   html {
-    font-size: 60%; 
+    font-size: 48%; 
+    /* scroll-behavior: smooth; */
+  }
+}
+@media screen and (width: 653px) and (height: 280px) {
+  html {
+    font-size: 30%; 
     /* scroll-behavior: smooth; */
   }
 }
