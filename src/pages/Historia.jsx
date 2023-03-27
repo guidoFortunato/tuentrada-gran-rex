@@ -13,7 +13,7 @@ export const Historia = () => {
   return (
     <>
     <div className="container">
-      <h2 className="heading">Historia: un teatro con trayectoria</h2>
+      <h2 style={{fontSize:"25px"}} className="heading">Historia: un teatro con trayectoria</h2>
       <div className="col-12">
         <p className="parrafo-historia">Es el teatro de los grandes espectáculos musicales y recibe a los artistas más consagrados, nacional e internacionalmente. Su capacidad es para 3.262 espectadores.
 El edificio, propiedad de Cordero, Cavallo y Lautaret S.A. y terminado en 1937, después de tan solo siete meses, es un exponente arquitectónico del estilo racionalista, obra del arquitecto Alberto Prebisch, el mismo que creó el Obelisco de Buenos Aires, y del ingeniero civil Adolfo T. Moret.

@@ -14,13 +14,27 @@
 }
 
 html {
-  font-size: 45%; 
+  font-size:100%; 
   /* scroll-behavior: smooth; */
 }
 
 .parrafo-historia{
   font-size: 17px;
   text-align: center;
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  html {
+    font-size: 60%; 
+    /* scroll-behavior: smooth; */
+  }
+}
+
+@media screen and (min-width: 992px) {
+  html {
+    font-size: 45%; 
+    /* scroll-behavior: smooth; */
+  }
 }
 
 

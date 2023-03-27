@@ -42,19 +42,19 @@ export const Footer = () => {
 
         <div className="col-12 d-flex justify-content-center my-3">
           <form onSubmit={handleSubmit}>
-            <h5>Suscribite a nuestro newsletter</h5>
+            <h5 style={{fontSize:"16px"}} >Suscribite a nuestro newsletter</h5>
             {/* <p>Monthly digest of what's new and exciting from us.</p> */}
-            <div className="d-flex flex-column flex-sm-row w-100 gap-2">
-              <label htmlFor="newsletter1" className="visually-hidden">
+            <div className="d-flex flex-column flex-sm-row w-100 gap-2" >
+              <label  htmlFor="newsletter1" className="visually-hidden">
                 Email
               </label>
               <input
                 id="newsletter1"
                 type="text"
                 className="form-control"
-                placeholder="Ingrese su Email"
+                placeholder="Ingrese su Email" style={{fontSize:"14px"}}
               />
-              <button className="btn btn-primary" type="submit">
+              <button style={{fontSize:"14px"}} className="btn btn-primary" type="submit">
                 Subscribirse
               </button>
             </div>
@@ -62,13 +62,13 @@ export const Footer = () => {
         </div>
       </div>
 
-        <div className="container">
+        <div className="container" >
         <hr className="hr-footer"/>
         </div>
       <div className="row mb-5 text-center">
         <div className="col-12 col-md-6 d-flex justify-content-center align-items-center mb-4 mb-md-0">
           <div>
-            <p className="mb-0">
+            <p className="mb-0" style={{fontSize:"16px"}}>
               Copyright © 2023 tuentrada.com <br /> Todos los derechos reservados
             </p>
           </div>
