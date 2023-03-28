@@ -23,7 +23,7 @@ const eventosTotales = [
   },
   {
     id: Math.random() * 10,
-    name: "ciro",
+    name: "ciro y los persas",
     img: ciro500,
     classMobile: "mobile",
   },
