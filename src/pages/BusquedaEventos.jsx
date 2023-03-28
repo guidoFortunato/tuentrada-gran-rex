@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { EventosContext } from "../context/EventosProvider";
 
 import { Link } from "react-router-dom";
+import { FormBusqueda } from "../components";
 
 export const BusquedaEventos = () => {
   const { listaEventosBusqueda } = useContext(EventosContext);
@@ -9,6 +10,9 @@ export const BusquedaEventos = () => {
   return (
     <>
       <div className="container">
+        <div className="row justify-content-center my-5">
+          <FormBusqueda />
+        </div>
         <div className="row justify-content-center">
           {listaEventosBusqueda.length > 0 ? (
             listaEventosBusqueda.map((item) => (
@@ -26,7 +30,10 @@ export const BusquedaEventos = () => {
               </article>
             ))
           ) : (
-            <div className="d-flex justify-content-center alert alert-danger my-5 w-50" role="alert">
+            <div
+              className="d-flex justify-content-center alert alert-danger my-5 w-50"
+              role="alert"
+            >
               No existen eventos para tu búsqueda
             </div>
           )}

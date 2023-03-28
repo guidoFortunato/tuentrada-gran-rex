@@ -1,8 +1,4 @@
-import "../css/header.css";
-import "../css/footer.css";
-import { useContext, useState } from "react";
-import { EventosContext } from "../context/EventosProvider";
-import { useNavigate } from "react-router-dom";
+import { FormBusqueda } from "../components/";
 
 import anuel1 from "../assets/images/anuel1.jpg";
 import anuel2 from "../assets/images/anuel2.jpg";
@@ -12,45 +8,16 @@ import tini500 from "../assets/images/tini500.jpg";
 import ciro1000x250 from "../assets/images/ciro1000x250.png";
 import ciro1000x400 from "../assets/images/ciro1000x400.png";
 
-export const Home = () => {
-  const [evento, setEvento] = useState("");
-  const { agregarEvento } = useContext(EventosContext);
-  let navigate = useNavigate();
+import "../css/header.css";
+import "../css/footer.css";
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    agregarEvento(evento);
-    setEvento("");
-    navigate("/busqueda-eventos");
-  };
+export const Home = () => {
   return (
     <>
       <header>
         <div className="header-home">
           <h1 className="titulo-principal">Gran Rex</h1>
-          <form className="d-flex form-buscar" onSubmit={handleSubmit}>
-            <div>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="16"
-                height="16"
-                fill="currentColor"
-                className="bi bi-search"
-                viewBox="0 0 16 16"
-              >
-                <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
-              </svg>
-            </div>
-            <div className="container-input">
-              <input
-                className="border-0"
-                placeholder="Buscar Evento"
-                value={evento}
-                onChange={(e) => setEvento(e.target.value)}
-              />
-            </div>
-            {/* <button className="btn btn-outline-success" type="submit">Buscar</button> */}
-          </form>
+          <FormBusqueda />
         </div>
       </header>
       <main>
