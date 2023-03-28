@@ -1,19 +1,19 @@
-import { useContext, useState } from "react";
+import { useContext } from "react";
 import { EventosContext } from "../context/EventosProvider";
 import { useNavigate } from "react-router-dom";
 
 export const FormBusqueda = () => {
-  const [evento, setEvento] = useState("");
-  const { agregarEvento } = useContext(EventosContext);
+  // const [evento, setEvento] = useState("");
+  const { evento, handleEvento, agregarEvento } = useContext(EventosContext);
   let navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
     agregarEvento(evento);
-    setEvento("");
-    navigate("/busqueda-eventos");
+    navigate(`/busqueda-eventos/${evento}`);
+    handleEvento("");
   };
-  
+
   return (
     <form className="d-flex form-buscar" onSubmit={handleSubmit}>
       <div>
@@ -33,7 +33,7 @@ export const FormBusqueda = () => {
           className="border-0"
           placeholder="Buscar Evento"
           value={evento}
-          onChange={(e) => setEvento(e.target.value)}
+          onChange={(e) => handleEvento(e.target.value)}
         />
       </div>
       {/* <button className="btn btn-outline-success" type="submit">Buscar</button> */}

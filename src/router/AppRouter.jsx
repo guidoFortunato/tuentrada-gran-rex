@@ -9,7 +9,8 @@ export const AppRouter = () => {
       <Route path="/ubicaciones" element={<Ubicaciones />} />
       <Route path="/beneficios" element={<Beneficios />} />
       <Route path="/como-llegar" element={<ComoLlegar />} />
-      <Route path="/busqueda-eventos" element={<BusquedaEventos /> } />
+      {/* <Route path="/busqueda-eventos" element={<BusquedaEventos /> } /> */}
+      <Route path="/busqueda-eventos/:name" element={<BusquedaEventos /> } />
     </Routes>
   );
 };

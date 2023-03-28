@@ -50,8 +50,12 @@ const opciones = {
 const eventosBusqueda = [];
 
 const EventosProvider = (props) => {
-  // const [query, setQuery] = useState('');
+  const [evento, setEvento] = useState('');
   const [listaEventosBusqueda, setListaEventosBusqueda] = useState(eventosBusqueda);
+
+  const handleEvento = ( nombreEvento ) => {
+    setEvento(nombreEvento)
+  }
 
   const agregarEvento = (nombreEvento) => {
     // eventosTotales.filter( item => nombreEvento.toLowerCase().indexOf(item.name.toLowerCase()))
@@ -70,7 +74,7 @@ const EventosProvider = (props) => {
     
   };
   return (
-    <EventosContext.Provider value={{ listaEventosBusqueda, agregarEvento }}>
+    <EventosContext.Provider value={{ listaEventosBusqueda, agregarEvento, evento, handleEvento }}>
       {props.children}
     </EventosContext.Provider>
   );

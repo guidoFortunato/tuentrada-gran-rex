@@ -1,17 +1,24 @@
 import { useContext } from "react";
 import { EventosContext } from "../context/EventosProvider";
+import { useNavigate, useParams } from "react-router-dom";
 
 import { Link } from "react-router-dom";
 import { FormBusqueda } from "../components";
 
 export const BusquedaEventos = () => {
   const { listaEventosBusqueda } = useContext(EventosContext);
+  let { name } = useParams();
+  // const navigate = useNavigate()
+  // navigate()
 
   return (
     <>
       <div className="container">
         <div className="row justify-content-center my-5">
           <FormBusqueda />
+        </div>
+        <div className="row justify-content-center py-5">
+          <h2 className="text-center">Resultados de tu búsqueda <strong>"{name}"</strong></h2>
         </div>
         <div className="row justify-content-center">
           {listaEventosBusqueda.length > 0 ? (
