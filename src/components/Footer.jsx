@@ -55,7 +55,7 @@ export const Footer = () => {
                 placeholder="Ingrese su Email" style={{fontSize:"14px"}}
               />
               <button style={{fontSize:"14px"}} className="btn btn-primary" type="submit">
-                Subscribirse
+                Suscribirse
               </button>
             </div>
           </form>
