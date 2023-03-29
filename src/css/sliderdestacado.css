@@ -1,0 +1,39 @@
+/* .carousel-control-next-icon {
+    background-image: url(data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' fill='%23fff'%3e%3cpath d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e);
+} */
+
+.carousel-control-next-icon,
+.carousel-control-prev-icon {
+  width: 5rem;
+  height: 5rem;
+}
+
+#carouselExampleCaptions {
+  display: none;
+}
+
+@media screen and (min-width: 992px) {
+  #carouselExampleCaptions {
+    width: 93.3%;
+    display: block;
+  }
+  .carousel-caption {
+    background: #0000009e;
+    width: 100%;
+    right: 0;
+    left: 0;
+  }
+  .carousel-caption h5 {
+    font-size: 3.25rem;
+  }
+  .carousel-caption p {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  #carouselExampleCaptions {
+    width: 95%;
+    display: block;
+  }
+}
