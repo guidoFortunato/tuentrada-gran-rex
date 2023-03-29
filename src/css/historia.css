@@ -44,6 +44,7 @@ html {
 
 @media screen and (min-width: 992px) {
   html {
+    font-size: 45%; 
     font-size: 48%; 
     /* scroll-behavior: smooth; */
   }

@@ -71,8 +71,26 @@ export const Home = () => {
                   // style={{ width: "80%" }}
                 />
               </div>
+              <div className="card">
+                <img
+                  src="https://picsum.photos/1000/487"
+                  className="card-img-top card-img-bottom"
+                  alt="img logo"
+                  // style={{ width: "80%" }}
+                />
+              </div>
+            
             </article>
-            <article className="col-12 col-md-6 col-lg-4 col-xl-3">
+           
+            <article className="col-12 col-lg-4 card-media" >
+              <div className="card mb-20">
+                <img
+                  src="https://picsum.photos/500/500"
+                  className="card-img-top card-img-bottom size-img"
+                  alt="img logo"
+                  // style={{ width: "80%" }}
+                />
+              </div>
               <div className="card">
                 <img
                   src={anuel2}
@@ -82,7 +100,11 @@ export const Home = () => {
                 />
               </div>
             </article>
-            <article className="col-12 col-md-6 col-lg-4 col-xl-3">
+       
+          </div>
+          </div>
+          <div className="row sin-padding-right-left">
+            <article className="col-12 col-md-6 col-lg-4">
               <div className="card">
                 <img
                   src={chano500}
@@ -92,7 +114,7 @@ export const Home = () => {
                 />
               </div>
             </article>
-            <article className="col-12 col-md-6 col-lg-4 col-xl-3">
+            <article className="col-12 col-md-6 col-lg-4">
               <div className="card">
                 <img
                   src={tini500}
@@ -102,58 +124,9 @@ export const Home = () => {
                 />
               </div>
             </article>
-            {/* <article className="col-12 col-md-6 col-lg-4 col-xl-3">
-              <div className="card">
-                <img
-                  src="https://picsum.photos/500/500"
-                  className="card-img-top card-img-bottom"
-                  alt="img logo"
-                  // style={{ width: "80%" }}
-                />
-              </div>
-            </article>
-            <article className="col-12 col-md-6 col-lg-4 col-xl-3">
-              <div className="card">
-                <img
-                  src="https://picsum.photos/500/500"
-                  className="card-img-top card-img-bottom"
-                  alt="img logo"
-                  // style={{ width: "80%" }}
-                />
-              </div>
-            </article>
-            <article className="col-12 col-md-6 col-lg-4 col-xl-3">
-              <div className="card">
-                <img
-                  src="https://picsum.photos/500/500"
-                  className="card-img-top card-img-bottom"
-                  alt="img logo"
-                  // style={{ width: "80%" }}
-                />
-              </div>
-            </article>
-            <article className="col-12 col-md-6 col-lg-4 col-xl-3">
-              <div className="card">
-                <img
-                  src="https://picsum.photos/500/500"
-                  className="card-img-top card-img-bottom"
-                  alt="img logo"
-                  // style={{ width: "80%" }}
-                />
-              </div>
-            </article>
-            <article className="col-12 col-md-6 col-lg-4 col-xl-3">
-              <div className="card">
-                <img
-                  src="https://picsum.photos/500/500"
-                  className="card-img-top card-img-bottom"
-                  alt="img logo"
-                  // style={{ width: "80%" }}
-                />
-              </div>
-            </article> */}
+         
           </div>
-        </div>
+       
       </main>
     </>
   );
