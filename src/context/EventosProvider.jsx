@@ -54,6 +54,10 @@ const EventosProvider = (props) => {
   const [listaEventosBusqueda, setListaEventosBusqueda] = useState(eventosBusqueda);
 
   const handleEvento = ( nombreEvento ) => {
+    if (!nombreEvento.trim()) {
+      setEvento("")
+      return
+    }
     setEvento(nombreEvento)
   }
 

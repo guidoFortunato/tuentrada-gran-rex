@@ -9,6 +9,7 @@ export const FormBusqueda = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    if (evento.length === 0) return
     agregarEvento(evento);
     navigate(`/busqueda-eventos/${evento}`);
     handleEvento("");
