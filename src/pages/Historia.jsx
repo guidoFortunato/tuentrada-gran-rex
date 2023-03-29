@@ -1,4 +1,4 @@
-import { SwiperComponent } from "../components";
+import { GaleriaHistoria } from "../components";
 import "../css/historia.css";
 
 export const Historia = () => {
@@ -57,7 +57,7 @@ export const Historia = () => {
         </div>
       </div>
       <div className="container-historia">
-        <SwiperComponent />
+        <GaleriaHistoria />
       </div>
     </>
   );

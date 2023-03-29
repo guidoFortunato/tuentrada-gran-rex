@@ -5,11 +5,11 @@ import anuel2 from "../assets/images/anuel2.jpg";
 import chano500 from "../assets/images/chano.jpg";
 import ciro500 from "../assets/images/ciro500.jpg";
 import tini500 from "../assets/images/tini500.jpg";
-import ciro1000x250 from "../assets/images/ciro1000x250.png";
-import ciro1000x400 from "../assets/images/ciro1000x400.png";
+
 
 import "../css/header.css";
 import "../css/footer.css";
+import { SliderDestacado } from "../components/SliderDestacado";
 
 export const Home = () => {
   return (
@@ -30,7 +30,7 @@ export const Home = () => {
             </div>
           </div>
 
-          <div className="row">
+          {/* <div className="row">
             <article className="col-12 tablet">
               <div className="card size-destacado">
                 <img
@@ -50,6 +50,9 @@ export const Home = () => {
                 />
               </div>
             </article>
+          </div> */}
+          <div className="row justify-content-center">
+           <SliderDestacado />
           </div>
           <div className="row sin-padding-right-left">
             <article className="col-12 col-lg-4 card-media mobile">
