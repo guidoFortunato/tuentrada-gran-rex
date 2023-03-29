@@ -1,15 +1,19 @@
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { EventosContext } from "../context/EventosProvider";
-import { useNavigate, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 
 import { Link } from "react-router-dom";
 import { FormBusqueda } from "../components";
 
 export const BusquedaEventos = () => {
-  const { listaEventosBusqueda } = useContext(EventosContext);
-  let { name } = useParams();
+  const { listaEventosBusqueda, agregarEvento } = useContext(EventosContext);
   // const navigate = useNavigate()
   // navigate()
+  let { name } = useParams();
+
+  useEffect(() => {
+    agregarEvento(name);
+  }, [name]);
 
   return (
     <>
@@ -48,7 +52,7 @@ export const BusquedaEventos = () => {
         <div className="row">
           <Link to="/" className="text-center">
             <div style={{fontSize:"14px", padding:"3px 20px"}} className="btn btn-primary"> 
-              Volver
+              Inicio
             </div>
           </Link>
         </div>

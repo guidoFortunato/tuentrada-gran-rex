@@ -4,8 +4,9 @@ import { useNavigate } from "react-router-dom";
 
 export const FormBusqueda = () => {
   // const [evento, setEvento] = useState("");
-  const { evento, handleEvento, agregarEvento } = useContext(EventosContext);
+  const { evento, handleEvento, agregarEvento,  } = useContext(EventosContext);
   let navigate = useNavigate();
+ 
 
   const handleSubmit = (e) => {
     e.preventDefault();
