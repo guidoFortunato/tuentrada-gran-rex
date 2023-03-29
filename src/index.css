@@ -17,7 +17,9 @@ body {
 
 img {
   object-fit: cover;
+  cursor: pointer;
 }
+
 
 article {
   display: flex;
