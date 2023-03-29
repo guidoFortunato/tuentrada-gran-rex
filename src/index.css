@@ -8,7 +8,6 @@ body {
 .row>* {
   padding-right: 0;
   padding-left: 0;
-<<<<<<< HEAD
 } */
 
 .card {
@@ -36,12 +35,6 @@ article {
 }
 .desktop {
   display: none;
-=======
-}
-
-.card{
-  margin: 10px;
->>>>>>> 687d2e923e5c871cab4c15e45e81454fc06e7f21
 }
 
 
