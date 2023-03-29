@@ -47,8 +47,8 @@ export const BusquedaEventos = () => {
         </div>
         <div className="row">
           <Link to="/" className="text-center">
-            <div className="btn btn-primary w-50 btn-lg fw-bold my-5">
-              VOLVER
+            <div style={{fontSize:"14px", padding:"3px 20px"}} className="btn btn-primary"> 
+              Volver
             </div>
           </Link>
         </div>
