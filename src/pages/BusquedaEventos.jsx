@@ -28,17 +28,41 @@ export const BusquedaEventos = () => {
           {listaEventosBusqueda.length > 0 ? (
             listaEventosBusqueda.map((item) => (
               <article
-                className="col-12 col-md-6 col-lg-4 col-xl-3"
-                key={item.id}
-              >
-                <div className="card size-destacado">
-                  <img
-                    src={item.img}
-                    className="card-img-top card-img-bottom"
-                    alt={item.name}
-                  />
+              className="col-12 col-md-6 col-lg-4 col-xl-3"
+              style={{ textAlign: "center" }}
+              key={item.id}
+            >
+              <div className="card" style={{ position: "relative" }}>
+                <img
+                  src={item.img}
+                  className="card-img-top card-img-bottom"
+                  alt={item.name}
+                  // style={{ width: "80%" }}
+                />
+                <div>
+                  <h5
+                    className="btn"
+                    style={{
+                      border: `1px solid ${item.status === "Agotado" ? "orange" : item.status === "Reprogramado" ? "blue" : item.status === "Cancelado" ? "red" : "green"}`,
+                      background: `${item.status === "Agotado" ? "orange" : item.status === "Reprogramado" ? "blue" : item.status === "Cancelado" ? "red" : "green"}`,
+                      color: "white",
+                      position: "absolute",
+                      top: "10px",
+                      left: "10px",
+                      fontSize: "10px",
+                    }}
+                  >
+                    {item.status}
+                  </h5>
                 </div>
-              </article>
+                <div style={{ padding: "5px" }}>
+                  <h3 style={{ fontWeight: "bold", padding: "5px" }}>{item.name.toUpperCase()}</h3>
+                  <h4 style={{ padding: "5px 0" }}>
+                    {item.date} <br /> {item.time}
+                  </h4>
+                </div>
+              </div>
+            </article>
             ))
           ) : (
             <div
