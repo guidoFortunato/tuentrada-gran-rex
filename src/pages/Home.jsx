@@ -5,11 +5,10 @@ import anuel2 from "../assets/images/anuel2.jpg";
 import chano500 from "../assets/images/chano.jpg";
 import ciro500 from "../assets/images/ciro500.jpg";
 import tini500 from "../assets/images/tini500.jpg";
-import ciro1000x250 from "../assets/images/ciro1000x250.png";
-import ciro1000x400 from "../assets/images/ciro1000x400.png";
 
 import "../css/header.css";
 import "../css/footer.css";
+import { SliderDestacado } from "../components/SliderDestacado";
 
 export const Home = () => {
   return (
@@ -30,119 +29,442 @@ export const Home = () => {
             </div>
           </div>
 
-          <div className="row">
-            <article className="col-12 tablet">
-              <div className="card size-destacado">
-                <img
-                  src={ciro1000x400}
-                  className="card-img-top card-img-bottom"
-                  alt="img logo"
-                />
-              </div>
-            </article>
+          <div className="row justify-content-center">
+            <SliderDestacado />
+          </div>
 
-            <article className="col-12 desktop">
-              <div className="card size-destacado">
-                <img
-                  src={ciro1000x250}
-                  className="card-img-top card-img-bottom"
-                  alt="img logo"
-                />
-              </div>
-            </article>
-          </div>
-          <div >
-          <div className="row">
-            <article className="col-12 col-lg-8">
-              <div className="card">
-                <img
-                  src="https://picsum.photos/1000/487"
-                  className="card-img-top card-img-bottom"
-                  alt="img logo"
-                  // style={{ width: "80%" }}
-                />
-              </div>
-              <div className="card">
-                <img
-                  src="https://picsum.photos/1000/487"
-                  className="card-img-top card-img-bottom"
-                  alt="img logo"
-                  // style={{ width: "80%" }}
-                />
-              </div>
-            
-            </article>
-           
-            <article className="col-12 col-lg-4 card-media" >
-              <div className="card mb-20">
-                <img
-                  src="https://picsum.photos/500/500"
-                  className="card-img-top card-img-bottom size-img"
-                  alt="img logo"
-                  // style={{ width: "80%" }}
-                />
-              </div>
-              <div className="card">
-                <img
-                  src="https://picsum.photos/500/500"
-                  className="card-img-top card-img-bottom size-img"
-                  alt="img logo"
-                  // style={{ width: "80%" }}
-                />
-              </div>
-            </article>
-       
-          </div>
-          </div>
           <div className="row sin-padding-right-left">
-            <article className="col-12 col-lg-4 card-media mobile">
-              <div className="card mb-20">
+            <article
+              className="col-12 col-md-6 col-lg-4 col-xl-3"
+              style={{ textAlign: "center" }}
+            >
+              <div className="card" style={{ position: "relative" }}>
                 <img
                   src={ciro500}
                   className="card-img-top card-img-bottom"
                   alt="img logo"
                   // style={{ width: "80%" }}
                 />
+                <div>
+                  <h5
+                    className="btn"
+                    style={{
+                      border: "1px solid green",
+                      background: "green",
+                      color: "white",
+                      position: "absolute",
+                      top: "10px",
+                      left: "10px",
+                      fontSize: "10px",
+                    }}
+                  >
+                    Disponible
+                  </h5>
+                </div>
+                <div style={{ padding: "5px" }}>
+                  <h3 style={{ fontWeight: "bold", padding: "5px" }}>
+                    CIRO Y LOS PERSAS
+                  </h3>
+                  <h4 style={{ padding: "5px 0" }}>
+                    DOMINGO 29 MARZO <br /> 20HS
+                  </h4>
+                </div>
               </div>
             </article>
-            <article className="col-12 col-md-6 col-lg-4 col-xl-3">
-              <div className="card">
+            <article
+              className="col-12 col-md-6 col-lg-4 col-xl-3"
+              style={{ textAlign: "center" }}
+            >
+              <div className="card" style={{ position: "relative" }}>
                 <img
                   src={anuel1}
                   className="card-img-top card-img-bottom"
                   alt="img logo"
                   // style={{ width: "80%" }}
                 />
+                <div>
+                  <h5
+                    className="btn"
+                    style={{
+                      border: "1px solid orange",
+                      background: "orange",
+                      color: "white",
+                      position: "absolute",
+                      top: "10px",
+                      left: "10px",
+                      fontSize: "10px",
+                    }}
+                  >
+                    Agotado
+                  </h5>
+                </div>
+                <div style={{ padding: "5px" }}>
+                  <h3 style={{ fontWeight: "bold", padding: "5px" }}>ANUEL</h3>
+                  <h4 style={{ padding: "5px 0" }}>
+                    DOMINGO 29 MARZO <br /> 20HS
+                  </h4>
+                </div>
               </div>
             </article>
-            <article className="col-12 col-md-6 col-lg-4 col-xl-3">
-              <div className="card">
+
+            <article
+              className="col-12 col-md-6 col-lg-4 col-xl-3"
+              style={{ textAlign: "center" }}
+            >
+              <div className="card" style={{ position: "relative" }}>
                 <img
                   src={anuel2}
                   className="card-img-top card-img-bottom"
                   alt="img logo"
                   // style={{ width: "80%" }}
                 />
+                <div>
+                  <h5
+                    className="btn"
+                    style={{
+                      border: "1px solid orange",
+                      background: "orange",
+                      color: "white",
+                      position: "absolute",
+                      top: "10px",
+                      left: "10px",
+                      fontSize: "10px",
+                    }}
+                  >
+                    Agotado
+                  </h5>
+                </div>
+                <div style={{ padding: "5px" }}>
+                  <h3 style={{ fontWeight: "bold", padding: "5px" }}>ANUEL</h3>
+                  <h4 style={{ padding: "5px 0" }}>
+                    DOMINGO 29 MARZO <br /> 20HS
+                  </h4>
+                </div>
               </div>
             </article>
-            <article className="col-12 col-md-6 col-lg-4 col-xl-3">
-              <div className="card">
+            <article
+              className="col-12 col-md-6 col-lg-4 col-xl-3"
+              style={{ textAlign: "center" }}
+            >
+              <div className="card" style={{ position: "relative" }}>
                 <img
                   src={chano500}
                   className="card-img-top card-img-bottom"
                   alt="img logo"
                   // style={{ width: "80%" }}
                 />
+                <div>
+                  <h5
+                    className="btn"
+                    style={{
+                      border: "1px solid red",
+                      background: "red",
+                      color: "white",
+                      position: "absolute",
+                      top: "10px",
+                      left: "10px",
+                      fontSize: "10px",
+                    }}
+                  >
+                    Cancelado
+                  </h5>
+                </div>
+                <div style={{ padding: "5px" }}>
+                  <h3 style={{ fontWeight: "bold", padding: "5px" }}>CHANO</h3>
+                  <h4 style={{ padding: "5px 0" }}>
+                    DOMINGO 29 MARZO <br /> 20HS
+                  </h4>
+                </div>
               </div>
             </article>
-            <article className="col-12 col-md-6 col-lg-4 col-xl-3">
-              <div className="card">
+            <article
+              className="col-12 col-md-6 col-lg-4 col-xl-3"
+              style={{ textAlign: "center" }}
+            >
+              <div className="card" style={{ position: "relative" }}>
                 <img
                   src={tini500}
                   className="card-img-top card-img-bottom"
                   alt="img logo"
                   // style={{ width: "80%" }}
                 />
+                <div>
+                  <h5
+                    className="btn"
+                    style={{
+                      border: "1px solid blue",
+                      background: "blue",
+                      color: "white",
+                      position: "absolute",
+                      top: "10px",
+                      left: "10px",
+                      fontSize: "10px",
+                    }}
+                  >
+                    Reprogramado
+                  </h5>
+                </div>
+                <div style={{ padding: "5px" }}>
+                  <h3 style={{ fontWeight: "bold", padding: "5px" }}>
+                    TINI AQUÍ ESTOY
+                  </h3>
+                  <h4 style={{ padding: "5px 0" }}>
+                    DOMINGO 29 MARZO <br /> 20HS
+                  </h4>
+                </div>
+              </div>
+            </article>
+            <article
+              className="col-12 col-md-6 col-lg-4 col-xl-3"
+              style={{ textAlign: "center" }}
+            >
+              <div className="card" style={{ position: "relative" }}>
+                <img
+                  src={ciro500}
+                  className="card-img-top card-img-bottom"
+                  alt="img logo"
+                  // style={{ width: "80%" }}
+                />
+                <div>
+                  <h5
+                    className="btn"
+                    style={{
+                      border: "1px solid green",
+                      background: "green",
+                      color: "white",
+                      position: "absolute",
+                      top: "10px",
+                      left: "10px",
+                      fontSize: "10px",
+                    }}
+                  >
+                    Disponible
+                  </h5>
+                </div>
+                <div style={{ padding: "5px" }}>
+                  <h3 style={{ fontWeight: "bold", padding: "5px" }}>
+                    CIRO Y LOS PERSAS
+                  </h3>
+                  <h4 style={{ padding: "5px 0" }}>
+                    DOMINGO 29 MARZO <br /> 20HS
+                  </h4>
+                </div>
+              </div>
+            </article>
+            <article
+              className="col-12 col-md-6 col-lg-4 col-xl-3"
+              style={{ textAlign: "center" }}
+            >
+              <div className="card" style={{ position: "relative" }}>
+                <img
+                  src={anuel1}
+                  className="card-img-top card-img-bottom"
+                  alt="img logo"
+                  // style={{ width: "80%" }}
+                />
+                <div>
+                  <h5
+                    className="btn"
+                    style={{
+                      border: "1px solid orange",
+                      background: "orange",
+                      color: "white",
+                      position: "absolute",
+                      top: "10px",
+                      left: "10px",
+                      fontSize: "10px",
+                    }}
+                  >
+                    Agotado
+                  </h5>
+                </div>
+                <div style={{ padding: "5px" }}>
+                  <h3 style={{ fontWeight: "bold", padding: "5px" }}>ANUEL</h3>
+                  <h4 style={{ padding: "5px 0" }}>
+                    DOMINGO 29 MARZO <br /> 20HS
+                  </h4>
+                </div>
+              </div>
+            </article>
+            <article
+              className="col-12 col-md-6 col-lg-4 col-xl-3"
+              style={{ textAlign: "center" }}
+            >
+              <div className="card" style={{ position: "relative" }}>
+                <img
+                  src={ciro500}
+                  className="card-img-top card-img-bottom"
+                  alt="img logo"
+                  // style={{ width: "80%" }}
+                />
+                <div>
+                  <h5
+                    className="btn"
+                    style={{
+                      border: "1px solid green",
+                      background: "green",
+                      color: "white",
+                      position: "absolute",
+                      top: "10px",
+                      left: "10px",
+                      fontSize: "10px",
+                    }}
+                  >
+                    Disponible
+                  </h5>
+                </div>
+                <div style={{ padding: "5px" }}>
+                  <h3 style={{ fontWeight: "bold", padding: "5px" }}>
+                    CIRO Y LOS PERSAS
+                  </h3>
+                  <h4 style={{ padding: "5px 0" }}>
+                    DOMINGO 29 MARZO <br /> 20HS
+                  </h4>
+                </div>
+              </div>
+            </article>
+            <article
+              className="col-12 col-md-6 col-lg-4 col-xl-3"
+              style={{ textAlign: "center" }}
+            >
+              <div className="card" style={{ position: "relative" }}>
+                <img
+                  src={anuel1}
+                  className="card-img-top card-img-bottom"
+                  alt="img logo"
+                  // style={{ width: "80%" }}
+                />
+                <div>
+                  <h5
+                    className="btn"
+                    style={{
+                      border: "1px solid orange",
+                      background: "orange",
+                      color: "white",
+                      position: "absolute",
+                      top: "10px",
+                      left: "10px",
+                      fontSize: "10px",
+                    }}
+                  >
+                    Agotado
+                  </h5>
+                </div>
+                <div style={{ padding: "5px" }}>
+                  <h3 style={{ fontWeight: "bold", padding: "5px" }}>ANUEL</h3>
+                  <h4 style={{ padding: "5px 0" }}>
+                    DOMINGO 29 MARZO <br /> 20HS
+                  </h4>
+                </div>
+              </div>
+            </article>
+            <article
+              className="col-12 col-md-6 col-lg-4 col-xl-3"
+              style={{ textAlign: "center" }}
+            >
+              <div className="card" style={{ position: "relative" }}>
+                <img
+                  src={ciro500}
+                  className="card-img-top card-img-bottom"
+                  alt="img logo"
+                  // style={{ width: "80%" }}
+                />
+                <div>
+                  <h5
+                    className="btn"
+                    style={{
+                      border: "1px solid green",
+                      background: "green",
+                      color: "white",
+                      position: "absolute",
+                      top: "10px",
+                      left: "10px",
+                      fontSize: "10px",
+                    }}
+                  >
+                    Disponible
+                  </h5>
+                </div>
+                <div style={{ padding: "5px" }}>
+                  <h3 style={{ fontWeight: "bold", padding: "5px" }}>
+                    CIRO Y LOS PERSAS
+                  </h3>
+                  <h4 style={{ padding: "5px 0" }}>
+                    DOMINGO 29 MARZO <br /> 20HS
+                  </h4>
+                </div>
+              </div>
+            </article>
+            <article
+              className="col-12 col-md-6 col-lg-4 col-xl-3"
+              style={{ textAlign: "center" }}
+            >
+              <div className="card" style={{ position: "relative" }}>
+                <img
+                  src={anuel1}
+                  className="card-img-top card-img-bottom"
+                  alt="img logo"
+                  // style={{ width: "80%" }}
+                />
+                <div>
+                  <h5
+                    className="btn"
+                    style={{
+                      border: "1px solid orange",
+                      background: "orange",
+                      color: "white",
+                      position: "absolute",
+                      top: "10px",
+                      left: "10px",
+                      fontSize: "10px",
+                    }}
+                  >
+                    Agotado
+                  </h5>
+                </div>
+                <div style={{ padding: "5px" }}>
+                  <h3 style={{ fontWeight: "bold", padding: "5px" }}>ANUEL</h3>
+                  <h4 style={{ padding: "5px 0" }}>
+                    DOMINGO 29 MARZO <br /> 20HS
+                  </h4>
+                </div>
+              </div>
+            </article>
+            <article
+              className="col-12 col-md-6 col-lg-4 col-xl-3"
+              style={{ textAlign: "center" }}
+            >
+              <div className="card" style={{ position: "relative" }}>
+                <img
+                  src={ciro500}
+                  className="card-img-top card-img-bottom"
+                  alt="img logo"
+                  // style={{ width: "80%" }}
+                />
+                <div>
+                  <h5
+                    className="btn"
+                    style={{
+                      border: "1px solid green",
+                      background: "green",
+                      color: "white",
+                      position: "absolute",
+                      top: "10px",
+                      left: "10px",
+                      fontSize: "10px",
+                    }}
+                  >
+                    Disponible
+                  </h5>
+                </div>
+                <div style={{ padding: "5px" }}>
+                  <h3 style={{ fontWeight: "bold", padding: "5px" }}>
+                    CIRO Y LOS PERSAS
+                  </h3>
+                  <h4 style={{ padding: "5px 0" }}>
+                    DOMINGO 29 MARZO <br /> 20HS
+                  </h4>
+                </div>
               </div>
             </article>
             {/* <article className="col-12 col-md-6 col-lg-4 col-xl-3">
@@ -155,7 +477,7 @@ export const Home = () => {
                 />
               </div>
             </article>
-            <article className="col-12 col-md-6 col-lg-4">
+            <article className="col-12 col-md-6 col-lg-4 col-xl-3">
               <div className="card">
                 <img
                   src="https://picsum.photos/500/500"
@@ -165,7 +487,7 @@ export const Home = () => {
                 />
               </div>
             </article>
-            <article className="col-12 col-md-6 col-lg-4">
+            <article className="col-12 col-md-6 col-lg-4 col-xl-3">
               <div className="card">
                 <img
                   src="https://picsum.photos/500/500"
@@ -175,7 +497,7 @@ export const Home = () => {
                 />
               </div>
             </article>
-            <article className="col-12 col-md-6 col-lg-4">
+            <article className="col-12 col-md-6 col-lg-4 col-xl-3">
               <div className="card">
                 <img
                   src="https://picsum.photos/500/500"
@@ -185,7 +507,7 @@ export const Home = () => {
                 />
               </div>
             </article>
-            <article className="col-12 col-md-6 col-lg-4">
+            <article className="col-12 col-md-6 col-lg-4 col-xl-3">
               <div className="card">
                 <img
                   src="https://picsum.photos/500/500"

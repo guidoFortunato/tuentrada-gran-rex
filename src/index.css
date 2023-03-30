@@ -2,30 +2,61 @@ body {
   font-family: "Montserrat", "Roboto", sans-serif;
   min-height: 100vh;
   position: relative;
-  padding-bottom: 100px;
 }
 
-.row>* {
+/* .row > * {
   padding-right: 0;
   padding-left: 0;
+} */
+
+.card {
+  margin: 20px;
+  box-shadow: 5px 5px 6px 1px rgb(227, 227, 227);
+  width: 80%; /* width: 70%; */
 }
 
-.card{
-  margin: 10px;
+img {
+  object-fit: cover;
+  cursor: pointer;
 }
 
 
+article {
+  display: flex;
+  justify-content: center;
+}
+
+.mobile {
+  display: flex;
+}
+.tablet {
+  display: none;
+}
+.desktop {
+  display: none;
+}
 
 @media screen and (min-width: 768px) and (max-width: 991px) {
-  .card-media{
+  .card-media {
     display: flex;
+  }
+  .tablet {
+    display: flex;
+  }
+  .size-destacado {
+    width: 91%; /* width: 85% */
+  }
+  .desktop {
+    display: none;
+  }
+  .mobile {
+    display: none;
   }
 }
 
-@media screen and (min-width: 991px) {
-  .size-img{
-   height: 100%;
-  
+@media screen and (min-width: 992px) {
+  .mobile {
+    display: none;
   }
   .tablet {
     display: none;
