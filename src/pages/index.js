@@ -1,5 +1,6 @@
 export * from "./Beneficios";
 export * from "./BusquedaEventos";
+export * from "./Calendario";
 export * from "./ComoLlegar";
 export * from "./DetalleEvento";
 export * from "./Historia";

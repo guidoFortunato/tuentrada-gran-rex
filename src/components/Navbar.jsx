@@ -34,6 +34,14 @@ export const Navbar = () => {
             <li className="nav-item">
               <Link
                 className="nav-link border-navbar-color border-navbar"
+                to="/calendario"
+              >
+                <span className="size-item-nav">Calendario</span>
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link
+                className="nav-link border-navbar-color border-navbar"
                 to="/historia"
               >
                 <span className="size-item-nav">Historia</span>
@@ -47,14 +55,7 @@ export const Navbar = () => {
                 <span className="size-item-nav">Ubicaciones</span>
               </Link>
             </li>
-            <li className="nav-item">
-              <Link
-                className="nav-link border-navbar-color border-navbar"
-                to="/beneficios"
-              >
-                <span className="size-item-nav">Beneficios</span>
-              </Link>
-            </li>
+           
             <li className="nav-item">
               <Link
                 className="nav-link border-navbar-color border-navbar"
