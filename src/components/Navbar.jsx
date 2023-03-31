@@ -1,9 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import imgRex from "../assets/logo_rex.png";
 import "../css/navbar.css";
 import { Link } from "react-router-dom";
 
 export const Navbar = () => {
+  const [isNavCollapsed, setIsNavCollapsed] = useState(true);
+
+  const handleNavCollapse = () => setIsNavCollapsed(!isNavCollapsed);
+
   return (
     <nav className="navbar navbar-dark navbar-expand-lg color-navbar">
       <div className="container">
@@ -16,8 +20,9 @@ export const Navbar = () => {
           data-bs-toggle="collapse"
           data-bs-target="#navbarNav"
           aria-controls="navbarNav"
-          aria-expanded="false"
+          aria-expanded={!isNavCollapsed ? true : false}
           aria-label="Toggle navigation"
+          onClick={handleNavCollapse}
         >
           <span style={{fontSize:"16px"}} className="navbar-toggler-icon"></span>
         </button>
@@ -27,6 +32,7 @@ export const Navbar = () => {
               <Link
                 className="nav-link border-navbar-color border-navbar"
                 to="/"
+                onClick={handleNavCollapse}
               >
                 <span className="size-item-nav">Inicio</span>
               </Link>
@@ -35,6 +41,7 @@ export const Navbar = () => {
               <Link
                 className="nav-link border-navbar-color border-navbar"
                 to="/calendario"
+                onClick={handleNavCollapse}
               >
                 <span className="size-item-nav">Calendario</span>
               </Link>
@@ -43,6 +50,7 @@ export const Navbar = () => {
               <Link
                 className="nav-link border-navbar-color border-navbar"
                 to="/historia"
+                onClick={handleNavCollapse}
               >
                 <span className="size-item-nav">Historia</span>
               </Link>
@@ -51,6 +59,7 @@ export const Navbar = () => {
               <Link
                 className="nav-link border-navbar-color border-navbar"
                 to="/ubicaciones"
+                onClick={handleNavCollapse}
               >
                 <span className="size-item-nav">Ubicaciones</span>
               </Link>
@@ -60,6 +69,7 @@ export const Navbar = () => {
               <Link
                 className="nav-link border-navbar-color border-navbar"
                 to="/como-llegar"
+                onClick={handleNavCollapse}
               >
                 <span className="size-item-nav">Cómo llegar</span>
               </Link>
@@ -68,6 +78,7 @@ export const Navbar = () => {
               <Link
                 className="nav-link border-navbar-color border-navbar"
                 to="/preguntas-frecuentes"
+                onClick={handleNavCollapse}
               >
                 <span className="size-item-nav">Preguntas frecuentes</span>
               </Link>
