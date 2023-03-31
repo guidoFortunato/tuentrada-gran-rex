@@ -123,7 +123,7 @@ export const Calendario = () => {
 
   return (
     <>
-      <div className="container">
+      <div className="container container-calendar">
         <div className="row mt-5">
           <div className="col-12">
             <FullCalendar
@@ -133,8 +133,8 @@ export const Calendario = () => {
               headerToolbar={window.innerWidth <= 768 ? headerToolbarOptionsResponsive : headerToolbarOptionsDesktop}
               height={"70vh"}
               titleFormat={handleTitle}
-              eventBackgroundColor="#8C0D0A"
-              eventBorderColor="#8C0D0A"
+              eventBackgroundColor="#BA2828"
+              eventBorderColor="#BA2828"
               responsive={true}
               events={fullEvents}
               locale={"es"}
