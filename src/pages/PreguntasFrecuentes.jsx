@@ -12,7 +12,7 @@ export const PreguntasFrecuentes = () => {
               </h2>
               
             </div>
-            <p className="parrafo-historia">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere nesciunt adipisci sint enim, temporibus ratione delectus omnis ea alias, nisi accusamus. Nesciunt consectetur aut quae aliquid earum iusto assumenda neque?s Lorem ipsum dolor sit, amet consectetur adipisicing elit. Explicabo reiciendis sequi amet ad rem nemo blanditiis, minima dignissimos corporis nostrum! Enim officia magnam, nisi deleniti quos dolorem modi tempora eaque quidem necessitatibus vitae ab pariatur aliquid quae ipsum unde dolorum sint? Vero, illo quae quibusdam autem tenetur aperiam hic ab voluptates et atque dolores perspiciatis beatae itaque, vel dolorum cumque voluptatum, minima commodi natus repellendus error nihil rem! Tempora dolorem molestias quos illum fugiat officia harum, reprehenderit cumque, perspiciatis facilis praesentium aperiam tempore doloribus quisquam aliquam. Nobis ratione </p>
+            <p className="parrafo-historia">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere nesciunt adipisci sint enim, temporibus ratione delectus omnis ea alias, nisi accusamus. Nesciunt consectetur aut quae aliquid earum iusto assumenda neque?s Lorem ipsum dolor sit, amet consectetur adipisicing elit. Explicabo reiciendis sequi amet ad rem nemo blanditiis, minima dignissimos corporis nostrum! Enim officia magnam, nisi deleniti quos </p>
     <div className="accordion accordion-flush parrafo-historia " id="accordionFlushExample" >
   <div className="accordion-item ">
     <h2 className="accordion-header">
