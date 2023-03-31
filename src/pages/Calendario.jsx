@@ -8,6 +8,7 @@ import bootstrap5Plugin from "@fullcalendar/bootstrap5";
 import "../css/calendario.css";
 import { useNavigate } from "react-router-dom";
 
+const month = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"]
 export const Calendario = () => {
   const navigate = useNavigate();
   const handleClick = (info) => {
@@ -19,6 +20,11 @@ export const Calendario = () => {
       window.open(info.event.url, "_blank");
     }
   };
+
+  const handleTitle = (info)=>{
+      const {date} = info
+      return month[date.month] + " - " + date.year;
+  }
 
   return (
     <>
@@ -39,12 +45,7 @@ export const Calendario = () => {
                 end: "dayGridMonth,timeGridWeek,timeGridDay", // will normally be on the right. if RTL, will be on the left
               }}
               height={"70vh"}
-              // views={
-              //   "title"
-              // }
-              // titleFormat={{
-              //   month: 'MMMM yyyy',                             // September 2009                 // Tuesday, Sep 8, 2009
-              // }}
+              titleFormat={ handleTitle }
               events={[
                 {
                   id: 1,

@@ -5,4 +5,11 @@
   .fc-event-title{
     font-size: 1.6rem;
   }
+
+  /* .fc-toolbar-title {
+    text-transform: lowercase;
+  }
   
+  .fc-toolbar-title::first-letter {
+    text-transform: uppercase;
+  } */
