@@ -66,7 +66,7 @@ export const ComoLlegar = () => {
             <article
               className="col-12 col-lg-6 "
               style={{ textAlign: "center" }}>
-              <div>
+              <div className=" contenedor-div">
               <iframe 
                         style={{ border: "0" }}
                         src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d8330.22027964297!2d-58.394986536065595!3d-34.599265124507674!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sgran%20rex!5e1!3m2!1ses!2sar!4v1680018233423!5m2!1ses!2sar"
