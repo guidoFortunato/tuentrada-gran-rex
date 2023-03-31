@@ -5,4 +5,5 @@ export * from "./ComoLlegar";
 export * from "./DetalleEvento";
 export * from "./Historia";
 export * from "./Home";
+export * from "./PreguntasFrecuentes";
 export * from "./Ubicaciones";

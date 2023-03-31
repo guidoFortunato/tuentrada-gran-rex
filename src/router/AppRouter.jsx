@@ -1,5 +1,5 @@
 import { Route, Routes } from "react-router-dom";
-import { Beneficios, BusquedaEventos, Calendario, ComoLlegar, Historia, Home, Ubicaciones } from "../pages/";
+import { Beneficios, BusquedaEventos, Calendario, ComoLlegar, Historia, Home, PreguntasFrecuentes, Ubicaciones } from "../pages/";
 
 export const AppRouter = () => {
   return (
@@ -10,6 +10,7 @@ export const AppRouter = () => {
       <Route path="/como-llegar" element={<ComoLlegar />} />
       <Route path="/calendario" element={<Calendario />} />
       <Route path="/historia" element={<Historia />} />
+      <Route path="/preguntas-frecuentes" element={<PreguntasFrecuentes />} />
       <Route path="/ubicaciones" element={<Ubicaciones />} />
     </Routes>
   );

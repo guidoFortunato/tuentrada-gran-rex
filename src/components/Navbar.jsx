@@ -23,7 +23,7 @@ export const Navbar = () => {
         </button>
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav ms-auto" style={{fontSize:"16px"}}>
-            <li className="nav-item">
+            <li className="nav-item me-lg-4">
               <Link
                 className="nav-link border-navbar-color border-navbar"
                 to="/"
@@ -31,7 +31,7 @@ export const Navbar = () => {
                 <span className="size-item-nav">Inicio</span>
               </Link>
             </li>
-            <li className="nav-item">
+            <li className="nav-item me-lg-4">
               <Link
                 className="nav-link border-navbar-color border-navbar"
                 to="/calendario"
@@ -39,7 +39,7 @@ export const Navbar = () => {
                 <span className="size-item-nav">Calendario</span>
               </Link>
             </li>
-            <li className="nav-item">
+            <li className="nav-item me-lg-4">
               <Link
                 className="nav-link border-navbar-color border-navbar"
                 to="/historia"
@@ -47,7 +47,7 @@ export const Navbar = () => {
                 <span className="size-item-nav">Historia</span>
               </Link>
             </li>
-            <li className="nav-item">
+            <li className="nav-item me-lg-4">
               <Link
                 className="nav-link border-navbar-color border-navbar"
                 to="/ubicaciones"
@@ -56,12 +56,20 @@ export const Navbar = () => {
               </Link>
             </li>
            
-            <li className="nav-item">
+            <li className="nav-item me-lg-4">
               <Link
                 className="nav-link border-navbar-color border-navbar"
                 to="/como-llegar"
               >
                 <span className="size-item-nav">Cómo llegar</span>
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link
+                className="nav-link border-navbar-color border-navbar"
+                to="/preguntas-frecuentes"
+              >
+                <span className="size-item-nav">Preguntas frecuentes</span>
               </Link>
             </li>
           </ul>
