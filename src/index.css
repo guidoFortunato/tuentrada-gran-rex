@@ -2,6 +2,7 @@ body {
   font-family: "Montserrat", "Roboto", sans-serif;
   min-height: 100vh;
   position: relative;
+  background-color: #f5f2f0;
 }
 
 /* .row > * {
@@ -69,3 +70,13 @@ article {
   }
 }
 
+.btn {
+  background-color: #ba2828 ;
+  border-color: #ba2828;
+}
+
+.btn:hover{
+  border-color: #ba2828;
+  color: #ba2828!important;
+  background-color: #f5f2f0!important;
+}
