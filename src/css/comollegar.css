@@ -1,0 +1,12 @@
+.iframe {
+    width: auto;
+    height: 400px;
+}
+
+@media screen and (min-width:500px) {
+    .iframe {
+        width: 100%;
+        height: 600px;
+    }
+    
+}
