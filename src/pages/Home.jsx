@@ -220,7 +220,7 @@ export const Home = () => {
             >
               <div className="card" style={{ position: "relative" }}>
                 <img
-                  src={ciro500}
+                  src={"https://teatro-granrex.com.ar/wp-content/files_mf/cache/th_e35a08ccaa36484950ea400d25a9c4ce_1671631394BYE_BYE_TOUR290x240px_20DEMAYO.jpg"}
                   className="card-img-top card-img-bottom"
                   alt="img logo"
                   // style={{ width: "80%" }}
