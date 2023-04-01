@@ -26,7 +26,7 @@ export const Navbar = () => {
         >
           <span style={{fontSize:"16px"}} className="navbar-toggler-icon"></span>
         </button>
-        <div className="collapse navbar-collapse" id="navbarNav">
+        <div className={`${isNavCollapsed ? 'collapse' : ''} navbar-collapse`} id="navbarNav">
           <ul className="navbar-nav ms-auto" style={{fontSize:"16px"}}>
             <li className="nav-item me-lg-4">
               <Link
