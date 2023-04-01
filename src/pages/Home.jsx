@@ -8,7 +8,7 @@ import tini500 from "../assets/images/tini500.jpg";
 
 import "../css/header.css";
 import "../css/footer.css";
-import { SliderDestacado } from "../components/SliderDestacado";
+import { SliderDestacado } from "../components/";
 
 export const Home = () => {
   return (
