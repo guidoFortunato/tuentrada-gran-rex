@@ -1,0 +1,33 @@
+.btn{
+    font-size: 1.6rem;
+  }
+  
+  .fc-event-title{
+    font-size: 1.6rem;
+  }
+
+  /* .fc-toolbar-title {
+    text-transform: lowercase;
+  }
+  
+  .fc-toolbar-title::first-letter {
+    text-transform: uppercase;
+  } */
+
+  .btn-check:checked+.btn, .btn.active, .btn.show, .btn:first-child:active, :not(.btn-check)+.btn:active {
+    color: var(--bs-btn-active-color);
+    background-color: black;
+    border-color: black;
+}
+
+.btn.disabled, .btn:disabled, fieldset:disabled .btn {
+  color: var(--bs-btn-disabled-color);
+  pointer-events: none;
+ background-color:#000000;
+border-color: #000000; 
+  opacity: var(--bs-btn-disabled-opacity);
+}
+
+.container-calendar {
+  background-color: white;
+}
