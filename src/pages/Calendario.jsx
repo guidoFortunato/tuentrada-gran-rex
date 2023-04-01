@@ -135,7 +135,7 @@ export const Calendario = () => {
               titleFormat={handleTitle}
               eventBackgroundColor="#BA2828"
               eventBorderColor="#BA2828"
-              responsive={true}
+              // responsive={true}
               events={fullEvents}
               locale={"es"}
               buttonText={buttonTextOptions}
