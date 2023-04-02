@@ -100,26 +100,26 @@ export const Calendario = () => {
     return month[date.month] + " - " + date.year;
   };
 
-  // useEffect(() => {
-  //   const handleResize = () => {
-  //     console.log(window.innerWidth)
-  //     if (window.innerWidth <= 768) {
-  //       setVistaInicial("listWeek");
-  //     } else {
-  //       setVistaInicial("dayGridMonth");
-  //     }
-  //   };
-  //   handleResize();
-  //   window.addEventListener("resize", handleResize);
-  //   return () => window.removeEventListener("resize", handleResize);
-  // }, [window.innerWidth]);
+  useEffect(() => {
+    const handleResize = () => {
+      console.log(window.innerWidth)
+      if (window.innerWidth <= 768) {
+        setVistaInicial("listWeek");
+      } else {
+        setVistaInicial("dayGridMonth");
+      }
+    };
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, [window.innerWidth]);
 
-  // const views = {
-  //   mobileListWeek: {
-  //     type: "listWeek",
-  //     buttonText: "List Week",
-  //   },
-  // };
+  const views = {
+    mobileListWeek: {
+      type: "listWeek",
+      buttonText: "List Week",
+    },
+  };
 
   return (
     <>
@@ -141,7 +141,7 @@ export const Calendario = () => {
               buttonText={buttonTextOptions}
               themeSystem={"bootstrap5"}
               eventClick={handleClick}
-              // views={views}
+              views={views}
             />
           </div>
         </div>
