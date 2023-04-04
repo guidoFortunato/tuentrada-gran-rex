@@ -3,7 +3,7 @@ body {
   min-height: 100vh;
   position: relative;
   background-color: #f5f2f0;
-  padding-bottom: 210px;
+  padding-bottom: 320px;
 }
 
 /* .row > * {
@@ -42,6 +42,12 @@ article {
   display: none;
 }
 
+@media screen and (min-width: 400px){
+  body {
+    padding-bottom: 250px;
+  }
+}
+
 @media screen and (min-width: 768px) and (max-width: 991px) {
   .card-media {
     display: flex;
@@ -58,6 +64,9 @@ article {
   .mobile {
     display: none;
   }
+  body {
+    padding-bottom: 220px;
+  }
 }
 
 @media screen and (min-width: 992px) {
@@ -73,8 +82,16 @@ article {
   .size-destacado {
     width: 95%;  /* width: 92.5%; */
   }
+  body {
+    padding-bottom: 190px;
+  }
 }
-
+@media screen and (min-width: 2000px) {
+  
+  body {
+    padding-bottom: 230px;
+  }
+}
 .btn {
   background-color: #ba2828 ;
   border-color: #ba2828;

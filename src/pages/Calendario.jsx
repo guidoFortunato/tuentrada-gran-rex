@@ -101,7 +101,7 @@ export const Calendario = () => {
   return (
     <>
       <div className="container container-calendar">
-        <div className="row mt-5">
+        <div className="row my-5">
           <div className="col-12">
             <FullCalendar
               plugins={fullPlugins}
