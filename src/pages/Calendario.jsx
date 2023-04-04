@@ -30,13 +30,13 @@ const fullEvents = [
     id: 1,
     // start: "2023-03-30T10:00:00",
     // end: "2023-03-30T12:00:00",
-    date: "2023-03-30",
+    date: "2023-04-04",
     title: "Chano",
     url: "https://www.google.com/",
   },
   {
     id: 2,
-    date: "2023-03-31",
+    date: "2023-04-07",
     // start: "2023-03-30T20:00:00",
     // end: "2023-03-30T22:00:00",
     title: "Anuel",
@@ -44,7 +44,7 @@ const fullEvents = [
   },
   {
     id: 3,
-    date: "2023-04-01",
+    date: "2023-04-09",
     // start: "2023-04-01T21:00:00",
     // end: "2023-04-01T23:23:00",
     title: "Tini",
@@ -82,7 +82,7 @@ const buttonTextOptions = {
 
 export const Calendario = () => {
   // const calendarRef = useRef(null);
-  const [vistaInicial, setVistaInicial] = useState("listWeek");
+  // const [vistaInicial, setVistaInicial] = useState("listWeek");
   const navigate = useNavigate();
 
   const handleClick = (info) => {
@@ -100,26 +100,20 @@ export const Calendario = () => {
     return month[date.month] + " - " + date.year;
   };
 
-  useEffect(() => {
-    const handleResize = () => {
-      console.log(window.innerWidth)
-      if (window.innerWidth <= 768) {
-        setVistaInicial("listWeek");
-      } else {
-        setVistaInicial("dayGridMonth");
-      }
-    };
-    handleResize();
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, [window.innerWidth]);
+  // useEffect(() => {
+  //   const handleResize = () => {
+  //     console.log(window.innerWidth)
+  //     if (window.innerWidth <= 768) {
+  //       setVistaInicial("listWeek");
+  //     } else {
+  //       setVistaInicial("dayGridMonth");
+  //     }
+  //   };{}
+  //   handleResize();
+  //   window.addEventListener("resize", handleResize);
+  //   return () => window.removeEventListener("resize", handleResize);
+  // }, []);
 
-  const views = {
-    mobileListWeek: {
-      type: "listWeek",
-      buttonText: "List Week",
-    },
-  };
 
   return (
     <>
@@ -129,7 +123,7 @@ export const Calendario = () => {
             <FullCalendar
               // ref={calendarRef}
               plugins={fullPlugins}
-              initialView={window.innerWidth <= 768 ? "listMonth" : "dayGridMonth" } 
+              initialView={window.innerWidth <= 768 ? "listMonth" : "dayGridMonth"} 
               headerToolbar={window.innerWidth <= 768 ? headerToolbarOptionsResponsive : headerToolbarOptionsDesktop}
               height={"70vh"}
               titleFormat={handleTitle}
@@ -141,7 +135,6 @@ export const Calendario = () => {
               buttonText={buttonTextOptions}
               themeSystem={"bootstrap5"}
               eventClick={handleClick}
-              views={views}
             />
           </div>
         </div>
