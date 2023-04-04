@@ -34,79 +34,29 @@ export const Home = () => {
           </div>
 
           <div className="row sin-padding-right-left">
+            <CardEvento
+              img={
+                "https://www.tuentrada.com/teatro/gran-rex/imagenes/El_zar.webp"
+              }
+              status={"Disponible"}
+              title={"EL ZAR"}
+              date={"SÁBADO 15 DE ABRIL"}
+              time={"20:30hs"}
+            />
+            <CardEvento
+              img={
+                "https://www.tuentrada.com/teatro/gran-rex/imagenes/sergio_torres.webp"
+              }
+              status={"Disponible"}
+              title={"SERGIO TORRES"}
+              date={"DOMINGO 16 DE ABRIL"}
+              time={"21:30hs"}
+            />
+            
+            
+
            
-            <article
-              className="col-12 col-md-6 col-lg-4 col-xl-3"
-              style={{ textAlign: "center" }}
-            >
-              <div className="card" style={{ position: "relative" }}>
-                <img
-                  src={"https://www.tuentrada.com/teatro/gran-rex/imagenes/El_zar.webp"}
-                  className="card-img-top card-img-bottom"
-                  alt="img logo"
-                  // style={{ width: "80%" }}
-                />
-                <div>
-                  <h5
-                    className="btn"
-                    style={{
-                      border: "1px solid green",
-                      background: "green",
-                      color: "white",
-                      position: "absolute",
-                      top: "10px",
-                      left: "10px",
-                      fontSize: "10px",
-                    }}
-                  >
-                    Disponible
-                  </h5>
-                </div>
-                <div style={{ padding: "5px" }}>
-                  <h3 style={{ fontWeight: "bold", padding: "5px" }}>
-                    CIRO Y LOS PERSAS
-                  </h3>
-                  <h4 style={{ padding: "5px 0" }}>
-                    DOMINGO 29 MARZO <br /> 20HS
-                  </h4>
-                </div>
-              </div>
-            </article>
-            <article
-              className="col-12 col-md-6 col-lg-4 col-xl-3"
-              style={{ textAlign: "center" }}
-            >
-              <div className="card" style={{ position: "relative" }}>
-                <img
-                  src={"https://www.tuentrada.com/teatro/gran-rex/imagenes/sergio_torres.webp"}
-                  className="card-img-top card-img-bottom"
-                  alt="img logo"
-                  // style={{ width: "80%" }}
-                />
-                <div>
-                  <h5
-                    className="btn"
-                    style={{
-                      border: "1px solid orange",
-                      background: "orange",
-                      color: "white",
-                      position: "absolute",
-                      top: "10px",
-                      left: "10px",
-                      fontSize: "10px",
-                    }}
-                  >
-                    Agotado
-                  </h5>
-                </div>
-                <div style={{ padding: "5px" }}>
-                  <h3 style={{ fontWeight: "bold", padding: "5px" }}>ANUEL</h3>
-                  <h4 style={{ padding: "5px 0" }}>
-                    DOMINGO 29 MARZO <br /> 20HS
-                  </h4>
-                </div>
-              </div>
-            </article>
+           
 
             <article
               className="col-12 col-md-6 col-lg-4 col-xl-3"
@@ -114,7 +64,9 @@ export const Home = () => {
             >
               <div className="card" style={{ position: "relative" }}>
                 <img
-                  src={"https://www.tuentrada.com/teatro/gran-rex/imagenes/miranda.webp"}
+                  src={
+                    "https://www.tuentrada.com/teatro/gran-rex/imagenes/miranda.webp"
+                  }
                   className="card-img-top card-img-bottom"
                   alt="img logo"
                   // style={{ width: "80%" }}
@@ -149,7 +101,9 @@ export const Home = () => {
             >
               <div className="card" style={{ position: "relative" }}>
                 <img
-                  src={"https://www.tuentrada.com/teatro/gran-rex/imagenes/queen.webp"}
+                  src={
+                    "https://www.tuentrada.com/teatro/gran-rex/imagenes/queen.webp"
+                  }
                   className="card-img-top card-img-bottom"
                   alt="img logo"
                   // style={{ width: "80%" }}
@@ -184,7 +138,9 @@ export const Home = () => {
             >
               <div className="card" style={{ position: "relative" }}>
                 <img
-                  src={"https://www.tuentrada.com/teatro/gran-rex/imagenes/damian_cordoba.webp"}
+                  src={
+                    "https://www.tuentrada.com/teatro/gran-rex/imagenes/damian_cordoba.webp"
+                  }
                   className="card-img-top card-img-bottom"
                   alt="img logo"
                   // style={{ width: "80%" }}
