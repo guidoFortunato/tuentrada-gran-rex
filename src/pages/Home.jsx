@@ -23,9 +23,9 @@ export const Home = () => {
             </div>
           </div>
 
-          <div className="row justify-content-center">
+         {/* <div className="row justify-content-center">
             <SliderDestacado />
-          </div>
+          </div> */}
 
           <div className="row sin-padding-right-left">
             <CardEvento
@@ -35,7 +35,7 @@ export const Home = () => {
               status={"Disponible"}
               title={"EL ZAR"}
               date={"SÁBADO 15 DE ABRIL"}
-              time={"20:30hs"}
+              time={"20:30HS"}
             />
             <CardEvento
               img={
@@ -44,7 +44,7 @@ export const Home = () => {
               status={"Disponible"}
               title={"SERGIO TORRES"}
               date={"DOMINGO 16 DE ABRIL"}
-              time={"21:30hs"}
+              time={"21:30HS"}
             />
                <CardEvento
               img={
@@ -52,383 +52,119 @@ export const Home = () => {
               }
               status={"Agotado"}
               title={"MIRANDA"}
-              date={"VIERNES 21 DE ABRIL"}
-              time={"20:30hs"}
+              date={"21, 22 Y 23 DE ABRIL"}
+              time={"20:00HS Y 20:30HS"}
             />
-            
-            
+                <CardEvento
+              img={
+                "https://www.tuentrada.com/teatro/gran-rex/imagenes/queen.webp"
+              }
+              status={"Disponible"}
+              title={"QUEEN POR MASTER STROKE"}
+              date={"VIERNES 28 DE ABRIL"}
+              time={"20:30HS"}
+            />
+                <CardEvento
+              img={
+                "https://www.tuentrada.com/teatro/gran-rex/imagenes/damian_cordoba.webp"
+              }
+              status={"Disponible"}
+              title={"DAMIÁN CÓRDOBA"}
+              date={"SÁBADO 29 DE ABRIL"}
+              time={"20:30HS"}
+            />
 
-            
+<CardEvento
+              img={
+                "https://www.tuentrada.com/teatro/gran-rex/imagenes/festival_ballet.webp"
+              }
+              status={"Disponible"}
+              title={"INTERNATIONAL FESTIVAL BALLET FOR THE PEACE"}
+              date={"5 Y 6 DE MAYO"}
+              time={"20:30HS"}
+            />
+<CardEvento
+              img={
+                "https://www.tuentrada.com/teatro/gran-rex/imagenes/dale_qva.webp"
+              }
+              status={"Disponible"}
+              title={"DALE Q´VA"}
+              date={"VIERNES 12 DE MAYO"}
+              time={"20:30HS"}
+            />
+           <CardEvento
+              img={
+                "https://www.tuentrada.com/teatro/gran-rex/imagenes/turf.webp"
+              }
+              status={"Disponible"}
+              title={"TURF"}
+              date={"SÁBADO 13 DE MAYO"}
+              time={"20:30HS"}
+            /> 
+  <CardEvento
+              img={
+                "https://www.tuentrada.com/teatro/gran-rex/imagenes/the_beats.webp"
+              }
+              status={"Disponible"}
+              title={"THE BEATS"}
+              date={"DOMINGO 14 DE MAYO"}
+              time={"20:30HS"}
+            /> 
+             <CardEvento
+              img={
+                "https://www.tuentrada.com/teatro/gran-rex/imagenes/massacre.webp"
+              }
+              status={"Disponible"}
+              title={"MASSACRE"}
+              date={"VIERNES 19 DE MAYO"}
+              time={"20:30HS"}
+            /> 
 
-           
-           
-
-            <article
-              className="col-12 col-md-6 col-lg-4 col-xl-3"
-              style={{ textAlign: "center" }}
-            >
-              <div className="card" style={{ position: "relative" }}>
-                <img
-                  src={
-                    "https://www.tuentrada.com/teatro/gran-rex/imagenes/miranda.webp"
-                  }
-                  className="card-img-top card-img-bottom"
-                  alt="img logo"
-                  // style={{ width: "80%" }}
-                />
-                <div>
-                  <h5
-                    className="btn"
-                    style={{
-                      border: "1px solid orange",
-                      background: "orange",
-                      color: "white",
-                      position: "absolute",
-                      top: "10px",
-                      left: "10px",
-                      fontSize: "10px",
-                    }}
-                  >
-                    Agotado
-                  </h5>
-                </div>
-                <div style={{ padding: "5px" }}>
-                  <h3 style={{ fontWeight: "bold", padding: "5px" }}>ANUEL</h3>
-                  <h4 style={{ padding: "5px 0" }}>
-                    DOMINGO 29 MARZO <br /> 20HS
-                  </h4>
-                </div>
-              </div>
-            </article>
-            <article
-              className="col-12 col-md-6 col-lg-4 col-xl-3"
-              style={{ textAlign: "center" }}
-            >
-              <div className="card" style={{ position: "relative" }}>
-                <img
-                  src={
-                    "https://www.tuentrada.com/teatro/gran-rex/imagenes/queen.webp"
-                  }
-                  className="card-img-top card-img-bottom"
-                  alt="img logo"
-                  // style={{ width: "80%" }}
-                />
-                <div>
-                  <h5
-                    className="btn"
-                    style={{
-                      border: "1px solid red",
-                      background: "red",
-                      color: "white",
-                      position: "absolute",
-                      top: "10px",
-                      left: "10px",
-                      fontSize: "10px",
-                    }}
-                  >
-                    Cancelado
-                  </h5>
-                </div>
-                <div style={{ padding: "5px" }}>
-                  <h3 style={{ fontWeight: "bold", padding: "5px" }}>CHANO</h3>
-                  <h4 style={{ padding: "5px 0" }}>
-                    DOMINGO 29 MARZO <br /> 20HS
-                  </h4>
-                </div>
-              </div>
-            </article>
-            <article
-              className="col-12 col-md-6 col-lg-4 col-xl-3"
-              style={{ textAlign: "center" }}
-            >
-              <div className="card" style={{ position: "relative" }}>
-                <img
-                  src={
-                    "https://www.tuentrada.com/teatro/gran-rex/imagenes/damian_cordoba.webp"
-                  }
-                  className="card-img-top card-img-bottom"
-                  alt="img logo"
-                  // style={{ width: "80%" }}
-                />
-                <div>
-                  <h5
-                    className="btn"
-                    style={{
-                      border: "1px solid blue",
-                      background: "blue",
-                      color: "white",
-                      position: "absolute",
-                      top: "10px",
-                      left: "10px",
-                      fontSize: "10px",
-                    }}
-                  >
-                    Reprogramado
-                  </h5>
-                </div>
-                <div style={{ padding: "5px" }}>
-                  <h3 style={{ fontWeight: "bold", padding: "5px" }}>
-                    TINI AQUÍ ESTOY
-                  </h3>
-                  <h4 style={{ padding: "5px 0" }}>
-                    DOMINGO 29 MARZO <br /> 20HS
-                  </h4>
-                </div>
-              </div>
-            </article>
-            <article
-              className="col-12 col-md-6 col-lg-4 col-xl-3"
-              style={{ textAlign: "center" }}
-            >
-              <div className="card" style={{ position: "relative" }}>
-                <img
-                  src={ciro500}
-                  className="card-img-top card-img-bottom"
-                  alt="img logo"
-                  // style={{ width: "80%" }}
-                />
-                <div>
-                  <h5
-                    className="btn"
-                    style={{
-                      border: "1px solid green",
-                      background: "green",
-                      color: "white",
-                      position: "absolute",
-                      top: "10px",
-                      left: "10px",
-                      fontSize: "10px",
-                    }}
-                  >
-                    Disponible
-                  </h5>
-                </div>
-                <div style={{ padding: "5px" }}>
-                  <h3 style={{ fontWeight: "bold", padding: "5px" }}>
-                    CIRO Y LOS PERSAS
-                  </h3>
-                  <h4 style={{ padding: "5px 0" }}>
-                    DOMINGO 29 MARZO <br /> 20HS
-                  </h4>
-                </div>
-              </div>
-            </article>
-            <article
-              className="col-12 col-md-6 col-lg-4 col-xl-3"
-              style={{ textAlign: "center" }}
-            >
-              <div className="card" style={{ position: "relative" }}>
-                <img
-                  src={anuel1}
-                  className="card-img-top card-img-bottom"
-                  alt="img logo"
-                  // style={{ width: "80%" }}
-                />
-                <div>
-                  <h5
-                    className="btn"
-                    style={{
-                      border: "1px solid orange",
-                      background: "orange",
-                      color: "white",
-                      position: "absolute",
-                      top: "10px",
-                      left: "10px",
-                      fontSize: "10px",
-                    }}
-                  >
-                    Agotado
-                  </h5>
-                </div>
-                <div style={{ padding: "5px" }}>
-                  <h3 style={{ fontWeight: "bold", padding: "5px" }}>ANUEL</h3>
-                  <h4 style={{ padding: "5px 0" }}>
-                    DOMINGO 29 MARZO <br /> 20HS
-                  </h4>
-                </div>
-              </div>
-            </article>
-            <article
-              className="col-12 col-md-6 col-lg-4 col-xl-3"
-              style={{ textAlign: "center" }}
-            >
-              <div className="card" style={{ position: "relative" }}>
-                <img
-                  src={ciro500}
-                  className="card-img-top card-img-bottom"
-                  alt="img logo"
-                  // style={{ width: "80%" }}
-                />
-                <div>
-                  <h5
-                    className="btn"
-                    style={{
-                      border: "1px solid green",
-                      background: "green",
-                      color: "white",
-                      position: "absolute",
-                      top: "10px",
-                      left: "10px",
-                      fontSize: "10px",
-                    }}
-                  >
-                    Disponible
-                  </h5>
-                </div>
-                <div style={{ padding: "5px" }}>
-                  <h3 style={{ fontWeight: "bold", padding: "5px" }}>
-                    CIRO Y LOS PERSAS
-                  </h3>
-                  <h4 style={{ padding: "5px 0" }}>
-                    DOMINGO 29 MARZO <br /> 20HS
-                  </h4>
-                </div>
-              </div>
-            </article>
-            <article
-              className="col-12 col-md-6 col-lg-4 col-xl-3"
-              style={{ textAlign: "center" }}
-            >
-              <div className="card" style={{ position: "relative" }}>
-                <img
-                  src={anuel1}
-                  className="card-img-top card-img-bottom"
-                  alt="img logo"
-                  // style={{ width: "80%" }}
-                />
-                <div>
-                  <h5
-                    className="btn"
-                    style={{
-                      border: "1px solid orange",
-                      background: "orange",
-                      color: "white",
-                      position: "absolute",
-                      top: "10px",
-                      left: "10px",
-                      fontSize: "10px",
-                    }}
-                  >
-                    Agotado
-                  </h5>
-                </div>
-                <div style={{ padding: "5px" }}>
-                  <h3 style={{ fontWeight: "bold", padding: "5px" }}>ANUEL</h3>
-                  <h4 style={{ padding: "5px 0" }}>
-                    DOMINGO 29 MARZO <br /> 20HS
-                  </h4>
-                </div>
-              </div>
-            </article>
-            <article
-              className="col-12 col-md-6 col-lg-4 col-xl-3"
-              style={{ textAlign: "center" }}
-            >
-              <div className="card" style={{ position: "relative" }}>
-                <img
-                  src={ciro500}
-                  className="card-img-top card-img-bottom"
-                  alt="img logo"
-                  // style={{ width: "80%" }}
-                />
-                <div>
-                  <h5
-                    className="btn"
-                    style={{
-                      border: "1px solid green",
-                      background: "green",
-                      color: "white",
-                      position: "absolute",
-                      top: "10px",
-                      left: "10px",
-                      fontSize: "10px",
-                    }}
-                  >
-                    Disponible
-                  </h5>
-                </div>
-                <div style={{ padding: "5px" }}>
-                  <h3 style={{ fontWeight: "bold", padding: "5px" }}>
-                    CIRO Y LOS PERSAS
-                  </h3>
-                  <h4 style={{ padding: "5px 0" }}>
-                    DOMINGO 29 MARZO <br /> 20HS
-                  </h4>
-                </div>
-              </div>
-            </article>
-            <article
-              className="col-12 col-md-6 col-lg-4 col-xl-3"
-              style={{ textAlign: "center" }}
-            >
-              <div className="card" style={{ position: "relative" }}>
-                <img
-                  src={anuel1}
-                  className="card-img-top card-img-bottom"
-                  alt="img logo"
-                  // style={{ width: "80%" }}
-                />
-                <div>
-                  <h5
-                    className="btn"
-                    style={{
-                      border: "1px solid orange",
-                      background: "orange",
-                      color: "white",
-                      position: "absolute",
-                      top: "10px",
-                      left: "10px",
-                      fontSize: "10px",
-                    }}
-                  >
-                    Agotado
-                  </h5>
-                </div>
-                <div style={{ padding: "5px" }}>
-                  <h3 style={{ fontWeight: "bold", padding: "5px" }}>ANUEL</h3>
-                  <h4 style={{ padding: "5px 0" }}>
-                    DOMINGO 29 MARZO <br /> 20HS
-                  </h4>
-                </div>
-              </div>
-            </article>
-            <article
-              className="col-12 col-md-6 col-lg-4 col-xl-3"
-              style={{ textAlign: "center" }}
-            >
-              <div className="card" style={{ position: "relative" }}>
-                <img
-                  src={ciro500}
-                  className="card-img-top card-img-bottom"
-                  alt="img logo"
-                  // style={{ width: "80%" }}
-                />
-                <div>
-                  <h5
-                    className="btn"
-                    style={{
-                      border: "1px solid green",
-                      background: "green",
-                      color: "white",
-                      position: "absolute",
-                      top: "10px",
-                      left: "10px",
-                      fontSize: "10px",
-                    }}
-                  >
-                    Disponible
-                  </h5>
-                </div>
-                <div style={{ padding: "5px" }}>
-                  <h3 style={{ fontWeight: "bold", padding: "5px" }}>
-                    CIRO Y LOS PERSAS
-                  </h3>
-                  <h4 style={{ padding: "5px 0" }}>
-                    DOMINGO 29 MARZO <br /> 20HS
-                  </h4>
-                </div>
-              </div>
-            </article>
+<CardEvento
+              img={
+                "https://www.tuentrada.com/teatro/gran-rex/imagenes/jdpantoja_kimloaiza.webp"
+              }
+              status={"Agotado"}
+              title={"JD PANTOJA KIM LOAIZA"}
+              date={"20 y 21 DE MAYO"}
+              time={"12:00HS y 19:00HS"}
+            /> 
+           <CardEvento
+              img={
+                "https://www.tuentrada.com/teatro/gran-rex/imagenes/sergio_galleguillo.webp"
+              }
+              status={"Disponible"}
+              title={"SERGIO GALLEGUILLO"}
+              date={"20 DE MAYO"}
+              time={"21:00HS"}
+            /> 
+                <CardEvento
+              img={
+                "https://www.tuentrada.com/teatro/gran-rex/imagenes/matilda.webp"
+              }
+              status={"Disponible"}
+              title={"SERGIO GALLEGUILLO"}
+              date={"DEL 1 DE JUNIO AL 30 DE JULIO"}
+              time={"CONSULTAR HORARIOS"}
+            /> 
+     <CardEvento
+              img={
+                "https://www.tuentrada.com/teatro/gran-rex/imagenes/bxs.webp"
+              }
+              status={"Disponible"}
+              title={"BRYNDIS"}
+              date={"DOMINGO 27 DE AGOSTO"}
+              time={"20:00HS"}
+            /> 
+            <CardEvento
+              img={
+                "https://www.tuentrada.com/teatro/gran-rex/imagenes/daniel_agostini.webp"
+              }
+              status={"Disponible"}
+              title={"BRYNDIS"}
+              date={"DOMINGO 10 DE SEPTIEMBRE"}
+              time={"20:00HS"}
+            /> 
             {/* <article className="col-12 col-md-6 col-lg-4 col-xl-3">
               <div className="card">
                 <img

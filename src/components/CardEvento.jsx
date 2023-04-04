@@ -13,7 +13,7 @@ export const CardEvento = ({ img, status, title, date, time }) => {
         />
         <div>
           <h5
-            className="btn"
+            className="btn btn-sin-hover"
             style={{
               border: `1px solid ${status === "Agotado" ? "orange" : status === "Reprogramado" ? "blue" : status === "Cancelado" ? "red" : "green"}`,
               background: `${status === "Agotado" ? "orange" : status === "Reprogramado" ? "blue" : status === "Cancelado" ? "red" : "green"}`,
