@@ -1,3 +1,4 @@
+export * from "./CardEvento";
 export * from "./DetalleEvento";
 export * from "./Footer";
 export * from "./FormBusqueda";

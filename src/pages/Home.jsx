@@ -1,4 +1,4 @@
-import { FormBusqueda } from "../components/";
+import { CardEvento, FormBusqueda } from "../components/";
 
 import anuel1 from "../assets/images/anuel1.jpg";
 import anuel2 from "../assets/images/anuel2.jpg";
@@ -34,6 +34,7 @@ export const Home = () => {
           </div>
 
           <div className="row sin-padding-right-left">
+           
             <article
               className="col-12 col-md-6 col-lg-4 col-xl-3"
               style={{ textAlign: "center" }}
