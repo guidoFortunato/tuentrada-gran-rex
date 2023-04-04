@@ -1,0 +1,8 @@
+.linkEvento {
+    color: black;
+    text-decoration: none;
+}
+
+.linkEvento:hover {
+    color: black;
+}

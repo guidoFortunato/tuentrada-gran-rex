@@ -28,7 +28,8 @@ export const Home = () => {
           </div> */}
 
           <div className="row sin-padding-right-left">
-            <CardEvento
+          <CardEvento 
+          linkEvento={"/shows/el-zar/1"}
               img={
                 "https://www.tuentrada.com/teatro/gran-rex/imagenes/El_zar.webp"
               }
