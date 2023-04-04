@@ -41,7 +41,7 @@ export const Home = () => {
             >
               <div className="card" style={{ position: "relative" }}>
                 <img
-                  src={ciro500}
+                  src={"https://www.tuentrada.com/teatro/gran-rex/imagenes/El_zar.webp"}
                   className="card-img-top card-img-bottom"
                   alt="img logo"
                   // style={{ width: "80%" }}
@@ -78,7 +78,7 @@ export const Home = () => {
             >
               <div className="card" style={{ position: "relative" }}>
                 <img
-                  src={anuel1}
+                  src={"https://www.tuentrada.com/teatro/gran-rex/imagenes/sergio_torres.webp"}
                   className="card-img-top card-img-bottom"
                   alt="img logo"
                   // style={{ width: "80%" }}
@@ -114,7 +114,7 @@ export const Home = () => {
             >
               <div className="card" style={{ position: "relative" }}>
                 <img
-                  src={anuel2}
+                  src={"https://www.tuentrada.com/teatro/gran-rex/imagenes/miranda.webp"}
                   className="card-img-top card-img-bottom"
                   alt="img logo"
                   // style={{ width: "80%" }}
@@ -149,7 +149,7 @@ export const Home = () => {
             >
               <div className="card" style={{ position: "relative" }}>
                 <img
-                  src={chano500}
+                  src={"https://www.tuentrada.com/teatro/gran-rex/imagenes/queen.webp"}
                   className="card-img-top card-img-bottom"
                   alt="img logo"
                   // style={{ width: "80%" }}
@@ -184,7 +184,7 @@ export const Home = () => {
             >
               <div className="card" style={{ position: "relative" }}>
                 <img
-                  src={tini500}
+                  src={"https://www.tuentrada.com/teatro/gran-rex/imagenes/damian_cordoba.webp"}
                   className="card-img-top card-img-bottom"
                   alt="img logo"
                   // style={{ width: "80%" }}
