@@ -46,7 +46,7 @@ export const Navbar = () => {
                 <span className="size-item-nav">Calendario</span>
               </Link>
             </li>
-            <li className="nav-item me-lg-4">
+            {/* <li className="nav-item me-lg-4">
               <Link
                 className="nav-link border-navbar-color border-navbar"
                 to="/historia"
@@ -54,8 +54,8 @@ export const Navbar = () => {
               >
                 <span className="size-item-nav">Historia</span>
               </Link>
-            </li>
-            <li className="nav-item me-lg-4">
+            </li> */}
+            {/* <li className="nav-item me-lg-4">
               <Link
                 className="nav-link border-navbar-color border-navbar"
                 to="/ubicaciones"
@@ -63,7 +63,7 @@ export const Navbar = () => {
               >
                 <span className="size-item-nav">Ubicaciones</span>
               </Link>
-            </li>
+            </li> */}
            
             <li className="nav-item me-lg-4">
               <Link
@@ -74,7 +74,7 @@ export const Navbar = () => {
                 <span className="size-item-nav">Cómo llegar</span>
               </Link>
             </li>
-            <li className="nav-item">
+            {/* <li className="nav-item">
               <Link
                 className="nav-link border-navbar-color border-navbar"
                 to="/preguntas-frecuentes"
@@ -82,7 +82,7 @@ export const Navbar = () => {
               >
                 <span className="size-item-nav">Preguntas frecuentes</span>
               </Link>
-            </li>
+            </li> */}
           </ul>
         </div>
       </div>
