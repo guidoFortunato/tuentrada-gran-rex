@@ -2,7 +2,7 @@ import DOMPurify from "dompurify";
 import "../css/detalleevento.css";
 import { Link } from "react-router-dom";
 
-export const DetalleEvento = ({ title, description, href }) => {
+export const DetalleEvento = ({ title, description, href, img }) => {
   return (
     <>
       <div className="container my-5 px-5">
@@ -11,7 +11,7 @@ export const DetalleEvento = ({ title, description, href }) => {
         <div className="row">
           <div className="col-12 col-lg-6 mb-5 mb-lg-0 text-center">
             <img
-              src={`https://www.tuentrada.com/teatro/gran-rex/imagenes/bxs.webp`}
+              src={img}
               alt="imagen evento"
               className="img-fluid"
             />

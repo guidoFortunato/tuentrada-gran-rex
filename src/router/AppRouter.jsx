@@ -22,10 +22,26 @@ export const AppRouter = () => {
       <Route path="/historia" element={<Historia />} />
       <Route path="/preguntas-frecuentes" element={<PreguntasFrecuentes />} />
       <Route
+        path="/shows/el-zar/1"
+        element={
+          <DetalleEvento
+            title={"El Zar"}
+            img={"https://www.tuentrada.com/teatro/gran-rex/imagenes/El_zar.webp"}
+            description={`El ZAR presenta RIO HOTEL el 15 de Abril en el Teatro Gran Rex.
+            <br />
+            El Teatro Gran Rex informa que los eventos que se realizan en esta sala podrían ser fotografiados o filmados para su posterior difusión en medios y /o campañas publicitarias. <br />
+            El ingreso al establecimiento implica la autorización a la Productora y a Cordero, Cavallo y Lautaret S.A. a utilizar el contenido filmado y /o fotografiado y el uso de imagen personal sin compensación alguna.
+            `}
+            href={"https://www.ticketek.com.ar/el-zar/teatro-gran-rex"}
+          />
+        }
+      />
+      <Route
         path="/shows/bxs/15"
         element={
           <DetalleEvento
             title={"BXS"}
+            img={"https://www.tuentrada.com/teatro/gran-rex/imagenes/bxs.webp"}
             description={`Grupo Bryndis se presentará el día Domingo 27 de Agosto en el Teatro Gran Rex. <br />
             El Teatro Gran Rex informa que los eventos que se realizan en esta sala podrían ser fotografiados o filmados para su posterior difusión en medios y /o campañas publicitarias. <br />
             El ingreso al establecimiento implica la autorización a la Productora y a Cordero, Cavallo y Lautaret S.A. a utilizar el contenido filmado y /o fotografiado y el uso de imagen personal sin compensación alguna.
