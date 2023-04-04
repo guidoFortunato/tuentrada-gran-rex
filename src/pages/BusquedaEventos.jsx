@@ -41,7 +41,7 @@ export const BusquedaEventos = () => {
                 />
                 <div>
                   <h5
-                    className="btn"
+                    className="btn btn-sin-hover"
                     style={{
                       border: `1px solid ${item.status === "Agotado" ? "orange" : item.status === "Reprogramado" ? "blue" : item.status === "Cancelado" ? "red" : "green"}`,
                       background: `${item.status === "Agotado" ? "orange" : item.status === "Reprogramado" ? "blue" : item.status === "Cancelado" ? "red" : "green"}`,

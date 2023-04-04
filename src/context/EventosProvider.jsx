@@ -1,10 +1,6 @@
 import { createContext, useState } from "react";
 import Fuse from "fuse.js";
-import anuel1 from "../assets/images/anuel1.jpg";
-import anuel2 from "../assets/images/anuel2.jpg";
-import chano500 from "../assets/images/chano.jpg";
-import ciro500 from "../assets/images/ciro500.jpg";
-import tini500 from "../assets/images/tini500.jpg";
+
 
 export const EventosContext = createContext();
 
@@ -29,8 +25,8 @@ const eventosTotales = [
     id: 3,
     name: "miranda",
     img: "https://www.tuentrada.com/teatro/gran-rex/imagenes/miranda.webp",
-    date: "21, 22 y 23 de abril",
-    time: "20:00HS y20:30HS",
+    date: "21, 22 y 23 DE ABRIL",
+    time: "20:00HS y 20:30HS",
     status: "Agotado",
   },
   {
@@ -53,15 +49,15 @@ const eventosTotales = [
     id: 6,
     name: "International Festival Ballet for the Peace",
     img: "https://www.tuentrada.com/teatro/gran-rex/imagenes/festival_ballet.webp",
-    date: "5 y 6 de mayoL",
+    date: "5 y 6 DE MAYO",
     time: "20:30HS",
     status: "Disponible",
   },
   {
     id: 7,
     name: "DALE Q´VA",
-    img: "https://www.tuentrada.com/teatro/gran-rex/imagenes/festival_ballet.webp",
-    date: "5 y 6 de mayo",
+    img: "https://www.tuentrada.com/teatro/gran-rex/imagenes/dale_qva.webp",
+    date: "5 y 6 DE MAYO",
     time: "20:30HS",
     status: "Disponible",
   },
@@ -91,10 +87,10 @@ const eventosTotales = [
   },
   {
     id: 11,
-    name: "Massacre",
+    name: "Jd Pantoja y Kim Loaiza",
     img: "https://www.tuentrada.com/teatro/gran-rex/imagenes/jdpantoja_kimloaiza.webp",
     date: "20 Y 21 DE MAYO",
-    time: "12HS Y 19HS",
+    time: "12:00HS Y 19:00HS",
     status: "Agotado",
   },
   {
@@ -102,13 +98,13 @@ const eventosTotales = [
     name: "Sergio Galleguillo",
     img: "https://www.tuentrada.com/teatro/gran-rex/imagenes/sergio_galleguillo.webp",
     date: "SÁBADO 20 DE MAYO",
-    time: "21HS",
+    time: "21:00HS",
     status: "Disponible",
   },
   {
     id: 13,
     name: "matilda",
-    img: "https://www.tuentrada.com/teatro/gran-rex/imagenes/MATILDA.webp",
+    img: "https://www.tuentrada.com/teatro/gran-rex/imagenes/matilda.webp",
     date: "DEL 1 DE JUNIO AL 30 DE JULIO",
     time: "CONSULTAR HORARIOS",
     status: "Disponible",
