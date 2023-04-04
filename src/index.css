@@ -3,6 +3,7 @@ body {
   min-height: 100vh;
   position: relative;
   background-color: #f5f2f0;
+  padding-bottom: 210px;
 }
 
 /* .row > * {
@@ -19,6 +20,10 @@ body {
 img {
   object-fit: cover;
   cursor: pointer;
+}
+
+hr{
+  border: 1px solid #000;
 }
 
 

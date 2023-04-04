@@ -1,6 +1,13 @@
-.hr-footer{
-    border: 1px solid #000;
+footer{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* background-color: #000; */
+  background-color: #5f5d49;
 }
+/* footer p{
+  color: #fff;
+} */
 
 .btn { 
 background-color: #000;
