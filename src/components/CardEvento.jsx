@@ -15,8 +15,8 @@ export const CardEvento = ({ img, status, title, date, time }) => {
           <h5
             className="btn"
             style={{
-              border: "1px solid green",
-              background: "green",
+              border: `1px solid ${status === "Agotado" ? "orange" : status === "Reprogramado" ? "blue" : status === "Cancelado" ? "red" : "green"}`,
+              background: `${status === "Agotado" ? "orange" : status === "Reprogramado" ? "blue" : status === "Cancelado" ? "red" : "green"}`,
               color: "white",
               position: "absolute",
               top: "10px",
