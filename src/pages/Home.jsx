@@ -52,7 +52,18 @@ export const Home = () => {
               date={"DOMINGO 16 DE ABRIL"}
               time={"21:30hs"}
             />
+               <CardEvento
+              img={
+                "https://www.tuentrada.com/teatro/gran-rex/imagenes/miranda.webp"
+              }
+              status={"Agotado"}
+              title={"MIRANDA"}
+              date={"VIERNES 21 DE ABRIL"}
+              time={"20:30hs"}
+            />
             
+            
+
             
 
            
