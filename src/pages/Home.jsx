@@ -39,6 +39,7 @@ export const Home = () => {
               time={"20:30HS"}
             />
             <CardEvento
+            linkEvento={"/shows/sergiot/2"}
               img={
                 "https://www.tuentrada.com/teatro/gran-rex/imagenes/sergio_torres.webp"
               }
@@ -48,6 +49,7 @@ export const Home = () => {
               time={"21:30HS"}
             />
                <CardEvento
+                 linkEvento={"/shows/miranda/3"}
               img={
                 "https://www.tuentrada.com/teatro/gran-rex/imagenes/miranda.webp"
               }
@@ -57,6 +59,7 @@ export const Home = () => {
               time={"20:00HS Y 20:30HS"}
             />
                 <CardEvento
+                 linkEvento={"/shows/queen/4"}
               img={
                 "https://www.tuentrada.com/teatro/gran-rex/imagenes/queen.webp"
               }
@@ -66,6 +69,7 @@ export const Home = () => {
               time={"20:30HS"}
             />
                 <CardEvento
+                  linkEvento={"/shows/damianc/5"}
               img={
                 "https://www.tuentrada.com/teatro/gran-rex/imagenes/damian_cordoba.webp"
               }
@@ -76,6 +80,7 @@ export const Home = () => {
             />
 
 <CardEvento
+      linkEvento={"/shows/festivalballet/6"}
               img={
                 "https://www.tuentrada.com/teatro/gran-rex/imagenes/festival_ballet.webp"
               }
@@ -85,6 +90,7 @@ export const Home = () => {
               time={"20:30HS"}
             />
 <CardEvento
+   linkEvento={"/shows/daleqva/7"}
               img={
                 "https://www.tuentrada.com/teatro/gran-rex/imagenes/dale_qva.webp"
               }
@@ -94,6 +100,8 @@ export const Home = () => {
               time={"20:30HS"}
             />
            <CardEvento
+
+linkEvento={"/shows/turf/8"}
               img={
                 "https://www.tuentrada.com/teatro/gran-rex/imagenes/turf.webp"
               }
@@ -103,6 +111,7 @@ export const Home = () => {
               time={"20:30HS"}
             /> 
   <CardEvento
+linkEvento={"/shows/thebeats/9"}
               img={
                 "https://www.tuentrada.com/teatro/gran-rex/imagenes/the_beats.webp"
               }
@@ -112,6 +121,7 @@ export const Home = () => {
               time={"20:30HS"}
             /> 
              <CardEvento
+             linkEvento={"/shows/massacre/10"}
               img={
                 "https://www.tuentrada.com/teatro/gran-rex/imagenes/massacre.webp"
               }
@@ -122,6 +132,7 @@ export const Home = () => {
             /> 
 
 <CardEvento
+  linkEvento={"/shows/jdpantoja-kimloaiza/11"}
               img={
                 "https://www.tuentrada.com/teatro/gran-rex/imagenes/jdpantoja_kimloaiza.webp"
               }
@@ -131,6 +142,7 @@ export const Home = () => {
               time={"12:00HS y 19:00HS"}
             /> 
            <CardEvento
+             linkEvento={"/shows/sergiog/12"}
               img={
                 "https://www.tuentrada.com/teatro/gran-rex/imagenes/sergio_galleguillo.webp"
               }
@@ -140,6 +152,7 @@ export const Home = () => {
               time={"21:00HS"}
             /> 
                 <CardEvento
+                       linkEvento={"/shows/matilda/13"}
               img={
                 "https://www.tuentrada.com/teatro/gran-rex/imagenes/matilda.webp"
               }
@@ -149,6 +162,7 @@ export const Home = () => {
               time={"CONSULTAR HORARIOS"}
             /> 
      <CardEvento
+     linkEvento={"/shows/bxs/14"}
               img={
                 "https://www.tuentrada.com/teatro/gran-rex/imagenes/bxs.webp"
               }
@@ -158,11 +172,12 @@ export const Home = () => {
               time={"20:00HS"}
             /> 
             <CardEvento
+            linkEvento={"/shows/daniela/15"}
               img={
                 "https://www.tuentrada.com/teatro/gran-rex/imagenes/daniel_agostini.webp"
               }
               status={"Disponible"}
-              title={"BRYNDIS"}
+              title={"DANIEL AGOSTINI"}
               date={"DOMINGO 10 DE SEPTIEMBRE"}
               time={"20:00HS"}
             /> 
