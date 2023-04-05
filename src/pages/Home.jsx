@@ -39,6 +39,7 @@ export const Home = () => {
               time={"20:30HS"}
             />
             <CardEvento
+            linkEvento={"/shows/sergiot/2"}
               img={
                 "https://www.tuentrada.com/teatro/gran-rex/imagenes/sergio_torres.webp"
               }
@@ -47,7 +48,8 @@ export const Home = () => {
               date={"DOMINGO 16 DE ABRIL"}
               time={"21:30HS"}
             />
-            <CardEvento
+               <CardEvento
+                 linkEvento={"/shows/miranda/3"}
               img={
                 "https://www.tuentrada.com/teatro/gran-rex/imagenes/miranda.webp"
               }
@@ -56,7 +58,8 @@ export const Home = () => {
               date={"21, 22 Y 23 DE ABRIL"}
               time={"20:00HS Y 20:30HS"}
             />
-            <CardEvento
+                <CardEvento
+                 linkEvento={"/shows/queen/4"}
               img={
                 "https://www.tuentrada.com/teatro/gran-rex/imagenes/queen.webp"
               }
@@ -65,7 +68,8 @@ export const Home = () => {
               date={"VIERNES 28 DE ABRIL"}
               time={"20:30HS"}
             />
-            <CardEvento
+                <CardEvento
+                  linkEvento={"/shows/damianc/5"}
               img={
                 "https://www.tuentrada.com/teatro/gran-rex/imagenes/damian_cordoba.webp"
               }
@@ -75,7 +79,8 @@ export const Home = () => {
               time={"20:30HS"}
             />
 
-            <CardEvento
+<CardEvento
+      linkEvento={"/shows/festivalballet/6"}
               img={
                 "https://www.tuentrada.com/teatro/gran-rex/imagenes/festival_ballet.webp"
               }
@@ -84,7 +89,8 @@ export const Home = () => {
               date={"5 Y 6 DE MAYO"}
               time={"20:30HS"}
             />
-            <CardEvento
+<CardEvento
+   linkEvento={"/shows/daleqva/7"}
               img={
                 "https://www.tuentrada.com/teatro/gran-rex/imagenes/dale_qva.webp"
               }
@@ -93,7 +99,9 @@ export const Home = () => {
               date={"VIERNES 12 DE MAYO"}
               time={"20:30HS"}
             />
-            <CardEvento
+           <CardEvento
+
+linkEvento={"/shows/turf/8"}
               img={
                 "https://www.tuentrada.com/teatro/gran-rex/imagenes/turf.webp"
               }
@@ -101,8 +109,9 @@ export const Home = () => {
               title={"TURF"}
               date={"SÁBADO 13 DE MAYO"}
               time={"20:30HS"}
-            />
-            <CardEvento
+            /> 
+  <CardEvento
+linkEvento={"/shows/thebeats/9"}
               img={
                 "https://www.tuentrada.com/teatro/gran-rex/imagenes/the_beats.webp"
               }
@@ -110,8 +119,9 @@ export const Home = () => {
               title={"THE BEATS"}
               date={"DOMINGO 14 DE MAYO"}
               time={"20:30HS"}
-            />
-            <CardEvento
+            /> 
+             <CardEvento
+             linkEvento={"/shows/massacre/10"}
               img={
                 "https://www.tuentrada.com/teatro/gran-rex/imagenes/massacre.webp"
               }
@@ -121,7 +131,8 @@ export const Home = () => {
               time={"20:30HS"}
             />
 
-            <CardEvento
+<CardEvento
+  linkEvento={"/shows/jdpantoja-kimloaiza/11"}
               img={
                 "https://www.tuentrada.com/teatro/gran-rex/imagenes/jdpantoja_kimloaiza.webp"
               }
@@ -129,8 +140,9 @@ export const Home = () => {
               title={"JD PANTOJA KIM LOAIZA"}
               date={"20 y 21 DE MAYO"}
               time={"12:00HS y 19:00HS"}
-            />
-            <CardEvento
+            /> 
+           <CardEvento
+             linkEvento={"/shows/sergiog/12"}
               img={
                 "https://www.tuentrada.com/teatro/gran-rex/imagenes/sergio_galleguillo.webp"
               }
@@ -138,8 +150,9 @@ export const Home = () => {
               title={"SERGIO GALLEGUILLO"}
               date={"20 DE MAYO"}
               time={"21:00HS"}
-            />
-            <CardEvento
+            /> 
+                <CardEvento
+                       linkEvento={"/shows/matilda/13"}
               img={
                 "https://www.tuentrada.com/teatro/gran-rex/imagenes/matilda.webp"
               }
@@ -147,8 +160,9 @@ export const Home = () => {
               title={"SERGIO GALLEGUILLO"}
               date={"DEL 1 DE JUNIO AL 30 DE JULIO"}
               time={"CONSULTAR HORARIOS"}
-            />
-            <CardEvento
+            /> 
+     <CardEvento
+     linkEvento={"/shows/bxs/14"}
               img={
                 "https://www.tuentrada.com/teatro/gran-rex/imagenes/bxs.webp"
               }
@@ -158,11 +172,12 @@ export const Home = () => {
               time={"20:00HS"}
             />
             <CardEvento
+            linkEvento={"/shows/daniela/15"}
               img={
                 "https://www.tuentrada.com/teatro/gran-rex/imagenes/daniel_agostini.webp"
               }
               status={"Disponible"}
-              title={"BRYNDIS"}
+              title={"DANIEL AGOSTINI"}
               date={"DOMINGO 10 DE SEPTIEMBRE"}
               time={"20:00HS"}
             />

@@ -16,7 +16,7 @@ export const DetalleEvento = ({ title, description, href, img }) => {
               className="img-fluid"
             />
           </div>
-          <div className="col-12 col-lg-6">
+          <div className="col-12 col-lg-6 detalle-del-evento">
             <h2 className="fw-bold pb-2">Información general</h2>
             <p
               dangerouslySetInnerHTML={{

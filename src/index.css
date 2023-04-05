@@ -108,3 +108,16 @@ article {
  background-color: rgba(0, 0, 0, 0.852)!important;
 }
 
+.detalle-del-evento {
+  display: flex;
+justify-content: center;
+  flex-direction: column;
+}
+
+.fc-event-time {
+  color: black;
+}
+
+.fc-event-title {
+  color: black;
+}
