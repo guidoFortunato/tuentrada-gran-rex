@@ -127,7 +127,7 @@ const eventosTotales = [
     id: 14,
     img: "https://www.tuentrada.com/teatro/gran-rex/imagenes/bxs.webp",
     linkEvento: "/shows/bxs/14",
-    name: "bxs",
+    name: "bxs - bryndis x siempre",
     status: "Disponible",
     time: "20:00HS",
   },

@@ -6,7 +6,7 @@ export const DetalleEvento = ({ title, description, href, img }) => {
   return (
     <>
       <div className="container my-5 px-5">
-        <h1 style={{ fontSize: "25px" }}>{title}</h1>
+        <h1 style={{ fontSize: "25px" }}>{title.toUpperCase()}</h1>
         <hr />
         <div className="row">
           <div className="col-12 col-lg-6 mb-5 mb-lg-0 text-center">

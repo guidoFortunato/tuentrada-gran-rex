@@ -156,7 +156,7 @@ export const Home = () => {
                 "https://www.tuentrada.com/teatro/gran-rex/imagenes/matilda.webp"
               }
               status={"Disponible"}
-              title={"SERGIO GALLEGUILLO"}
+              title={"Matilda"}
               date={"DEL 1 DE JUNIO AL 30 DE JULIO"}
               time={"CONSULTAR HORARIOS"}
             />
@@ -166,11 +166,20 @@ export const Home = () => {
                 "https://www.tuentrada.com/teatro/gran-rex/imagenes/bxs.webp"
               }
               status={"Disponible"}
-              title={"BRYNDIS"}
+              title={"bxs - BRYNDIS x siempre"}
               date={"DOMINGO 27 DE AGOSTO"}
               time={"20:00HS"}
             />
-            
+            <CardEvento
+              linkEvento={"https://www.tuentrada.com/eventos/detalle/Daniel-Agostini/553776971040"}
+              img={
+                "https://www.tuentrada.com/teatro/gran-rex/imagenes/daniel_agostini.webp"
+              }
+              status={"Disponible"}
+              title={"DANIEL AGOSTINI"}
+              date={"DOMINGO 10 DE SEPTIEMBRE"}
+              time={"20:00HS"}
+            />
            
           </div>
         </div>

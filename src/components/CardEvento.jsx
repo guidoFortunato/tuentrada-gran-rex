@@ -2,9 +2,9 @@ import { Link } from "react-router-dom";
 import "../css/cardevento.css";
 
 export const CardEvento = ({ img, status, title, date, time, linkEvento }) => {
-  console.log('linkEvento: ' + linkEvento)
+
   const urlEvento = linkEvento?.split("/")[1] !== "shows";
-  console.log('urlEvento: ' + urlEvento)
+  
 
   return (
     <article

@@ -406,7 +406,7 @@ export const AppRouter = () => {
         path="/shows/bxs/14"
         element={
           <DetalleEvento
-            title={"BXS"}
+            title={"BXS - BRYNDIS X SIEMPRE"}
             img={"https://www.tuentrada.com/teatro/gran-rex/imagenes/bxs.webp"}
             description={`Grupo Bryndis se presentará el día Domingo 27 de Agosto en el Teatro Gran Rex. <br />
             El Teatro Gran Rex informa que los eventos que se realizan en esta sala podrían ser fotografiados o filmados para su posterior difusión en medios y /o campañas publicitarias. <br />
