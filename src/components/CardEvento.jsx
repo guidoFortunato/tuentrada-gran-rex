@@ -1,14 +1,22 @@
 import { Link } from "react-router-dom";
-import "../css/cardevento.css"
+import "../css/cardevento.css";
 
-export const CardEvento = ({ img, status, title, date, time , linkEvento }) => {
+export const CardEvento = ({ img, status, title, date, time, linkEvento }) => {
+  console.log('linkEvento: ' + linkEvento)
+  const urlEvento = linkEvento?.split("/")[1] !== "shows";
+  console.log('urlEvento: ' + urlEvento)
+
   return (
     <article
       className="col-12 col-md-6 col-lg-4 col-xl-3"
       style={{ textAlign: "center" }}
     >
       <div className="card" style={{ position: "relative" }}>
-        <Link to={linkEvento} className="linkEvento">
+        <Link
+          to={linkEvento}
+          className="linkEvento"
+          target={urlEvento ? "_blank" : null}
+        >
           <img
             src={img}
             className="card-img-top card-img-bottom"
@@ -48,9 +56,9 @@ export const CardEvento = ({ img, status, title, date, time , linkEvento }) => {
             </h5>
           </div>
           <div style={{ padding: "5px" }}>
-            <h3 style={{ fontWeight: "bold", padding: "5px" }}>{title}</h3>
+            <h3 style={{ fontWeight: "bold", padding: "5px" }}>{title.toUpperCase()}</h3>
             <h4 style={{ padding: "5px 0" }}>
-              {date} <br /> {time}
+              {date.toUpperCase()} <br /> {time.toUpperCase()}
             </h4>
           </div>
         </Link>

@@ -42,7 +42,7 @@ const fullEvents = [
     start: "2023-04-16T21:30:00",
     end: "-",
     title: "SERGIO TORRES",
-    url: "/shows/sergiot/2",
+    url: "/shows/sergio-torres/2",
   },
   {
     id: 3,
@@ -82,7 +82,7 @@ const fullEvents = [
     start: "2023-04-29T20:30:00",
     end: "-",
     title: "DAMIÁN CÓRDOBA",
-    url: "/shows/damianc/5",
+    url: "/shows/damian-cordoba/5",
   },
   {
     id: 8,
@@ -90,7 +90,7 @@ const fullEvents = [
     start: "2023-05-05T20:30:00",
     end: "-",
     title: "INTERNATIONAL FESTIVAL BALLET FOR THE PEACE",
-    url: "/shows/festivalballet/6",
+    url: "/shows/festival-ballet/6",
   },
   {
     id: 9,
@@ -98,7 +98,7 @@ const fullEvents = [
     start: "2023-05-06T20:30:00",
     end: "-",
     title: "INTERNATIONAL FESTIVAL BALLET FOR THE PEACE",
-    url: "/shows/festivalballet/6",
+    url: "/shows/festival-ballet/6",
   },
   {
     id: 10,
@@ -122,7 +122,7 @@ const fullEvents = [
     start: "2023-05-14T20:30:00",
     end: "-",
     title: "THE BEATS",
-    url: "/shows/thebeats/9",
+    url: "/shows/the-beats/9",
   },
   {
     id: 13,
@@ -154,7 +154,7 @@ const fullEvents = [
     start: "2023-05-20T21:01:00",
     end: "-",
     title: "SERGIO GALLEGUILLO",
-    url: "/shows/sergiog/12",
+    url: "/shows/sergio-galleguillo/12",
   },
   {
     id: 17,
@@ -754,8 +754,9 @@ const fullEvents = [
     start: "2023-09-10T20:01:00",
     end: "-",
     title: "DANIEL AGOSTINI",
-    url: "/shows/daniela/15",
+    url: "https://www.tuentrada.com/eventos/detalle/Daniel-Agostini/553776971040",
   },
+  
 ];
 
 const fullPlugins = [
@@ -791,13 +792,13 @@ export const Calendario = () => {
 
   const handleClick = (info) => {
     info.jsEvent.preventDefault();
-    // const busquedaEventos = info.event.url.split("/")[1] == "busqueda-eventos";
-    // if (busquedaEventos) {
-    //   navigate(info.event.url);
-    // } else {
-    //   window.open(info.event.url, "_blank");
-    // }
-    navigate(info.event.url);
+    const urlEvento = info.event.url?.split("/")[1] === "shows";
+    if (urlEvento) {
+      navigate(info.event.url);
+    } else {
+      window.open(info.event.url, "_blank");
+    }
+    // navigate(info.event.url);
   };
 
   const handleTitle = (info) => {
@@ -823,7 +824,7 @@ export const Calendario = () => {
               buttonText={buttonTextOptions}
               themeSystem={"bootstrap5"}
               eventClick={handleClick}
-              eventColor='#378006'
+              // eventColor='#378006'
             />
           </div>
         </div>

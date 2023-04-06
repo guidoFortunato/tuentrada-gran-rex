@@ -52,7 +52,7 @@ export const Footer = () => {
                 <a
                   className="link-dark"
                   rel="noreferrer"
-                  href="https://www.facebook.com/tuentrada"
+                  href="https://www.facebook.com/profile.php?id=100057465485820"
                   target="_blank"
                 >
                   <svg
@@ -79,7 +79,7 @@ export const Footer = () => {
                 <a
                   className="link-dark"
                   rel="noreferrer"
-                  href="https://twitter.com/tuentrada"
+                  href="https://twitter.com/teatrogranrex"
                   target="_blank"
                 >
                   <svg
@@ -106,7 +106,7 @@ export const Footer = () => {
                 <a
                   className="link-dark"
                   rel="noreferrer"
-                  href="https://www.instagram.com/tuentrada/"
+                  href="https://www.instagram.com/teatro_granrex/"
                   target="_blank"
                 >
                   <svg
