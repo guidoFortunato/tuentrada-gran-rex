@@ -791,12 +791,13 @@ export const Calendario = () => {
 
   const handleClick = (info) => {
     info.jsEvent.preventDefault();
-    const busquedaEventos = info.event.url.split("/")[1] == "busqueda-eventos";
-    if (busquedaEventos) {
-      navigate(info.event.url);
-    } else {
-      window.open(info.event.url, "_blank");
-    }
+    // const busquedaEventos = info.event.url.split("/")[1] == "busqueda-eventos";
+    // if (busquedaEventos) {
+    //   navigate(info.event.url);
+    // } else {
+    //   window.open(info.event.url, "_blank");
+    // }
+    navigate(info.event.url);
   };
 
   const handleTitle = (info) => {
@@ -811,8 +812,8 @@ export const Calendario = () => {
           <div className="col-12">
             <FullCalendar
               plugins={fullPlugins}
-              initialView={window.innerWidth <= 768 ? "listMonth" : "dayGridMonth"} 
-              headerToolbar={window.innerWidth <= 768 ? headerToolbarOptionsResponsive : headerToolbarOptionsDesktop}
+              initialView={window.innerWidth < 1400 ? "listMonth" : "dayGridMonth"} 
+              headerToolbar={window.innerWidth < 1400 ? headerToolbarOptionsResponsive : headerToolbarOptionsDesktop}
               height={"70vh"}
               titleFormat={handleTitle}
               eventBackgroundColor="#BA2828"
@@ -822,6 +823,7 @@ export const Calendario = () => {
               buttonText={buttonTextOptions}
               themeSystem={"bootstrap5"}
               eventClick={handleClick}
+              eventColor='#378006'
             />
           </div>
         </div>

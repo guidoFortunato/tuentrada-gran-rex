@@ -4,10 +4,12 @@ export const Footer = () => {
   return (
     <footer>
       <div className="container">
-        <div className="row mb-4">
-          {/* Newsletter */}
 
-          {/* 
+        {/* newsletter */}
+        {/* <div className="row mb-4">
+          Newsletter
+
+          
         <div className="col-12 d-flex justify-content-center my-3">
           <form onSubmit={handleSubmit}>
             <h5 style={{fontSize:"16px"}} >Suscribite a nuestro newsletter</h5>
@@ -26,25 +28,25 @@ export const Footer = () => {
               </button>
             </div>
           </form>
-        </div> */}
         </div>
+        </div> */}
 
       
-          <hr />
+          {/* <hr /> */}
        
-        <div className="row mb-5 text-center">
-          <div className="col-12 col-md-6 d-flex justify-content-center align-items-center mb-4 mb-md-0">
+        <div className="row mb-2 text-center">
+          <div className="col-12 col-md-6 d-flex justify-content-center align-items-center mb-3 mb-md-0 pt-3">
             <div className="d-flex flex-column text-start parrafo-footer">
               <p style={{ fontSize: "16px" }} className="mb-0">
                 <strong>Dirección:</strong> Av. Corrientes 857, Capital Federal.
               </p>
               <p style={{ fontSize: "16px" }}>
-                <strong>Horario de Boleteria:</strong> Lunes a Domingo de 12 a
+                <strong>Boleteria:</strong> Lunes a Domingo de 12 a
                 18 hs. Feriados Cerrado.
               </p>
             </div>
           </div>
-          <div className="col-12 col-md-6 d-flex justify-content-center align-items-center">
+          <div className="col-12 col-md-6 d-flex justify-content-center align-items-center my-2 my-lg-0">
             <ul className="list-unstyled d-flex mb-0">
               <li className="me-3">
                 <a
@@ -128,7 +130,7 @@ export const Footer = () => {
               </li>
             </ul>
           </div>
-          <div className="col-12 mt-5">
+          <div className="col-12 mt-5 mt-lg-3">
             <p className="mb-0 parrafo-footer" style={{ fontSize: "16px" }}>
               Copyright © 2023 tuentrada.com <br /> Todos los derechos
               reservados
