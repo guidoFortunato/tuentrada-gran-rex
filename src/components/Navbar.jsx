@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import imgRex from "../assets/logo_rex.png";
+import imgRex from "../assets/images/logo_rex_negro.jpg";
 import "../css/navbar.css";
 import { Link } from "react-router-dom";
 
@@ -12,7 +12,7 @@ export const Navbar = () => {
     <nav className="navbar navbar-dark navbar-expand-lg color-navbar">
       <div className="container">
         <Link className="navbar-brand" to="/">
-          <img src={imgRex} alt="logo gran rex" style={{ width: "90px" }} />
+          <img src={imgRex} alt="logo gran rex" style={{ width: "75px" }} />
         </Link>
         <button
           className="navbar-toggler"

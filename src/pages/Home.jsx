@@ -5,8 +5,6 @@ import "../css/footer.css";
 // import { SliderDestacado } from "../components/";
 
 export const Home = () => {
-
-
   return (
     <>
       <header>
@@ -173,7 +171,9 @@ export const Home = () => {
               time={"20:00HS"}
             />
             <CardEvento
-              linkEvento={"https://www.tuentrada.com/eventos/detalle/Daniel-Agostini/553776971040"}
+              linkEvento={
+                "https://www.tuentrada.com/eventos/detalle/Daniel-Agostini/553776971040"
+              }
               img={
                 "https://www.tuentrada.com/teatro/gran-rex/imagenes/daniel_agostini.webp"
               }
@@ -182,7 +182,6 @@ export const Home = () => {
               date={"DOMINGO 10 DE SEPTIEMBRE"}
               time={"20:00HS"}
             />
-           
           </div>
         </div>
       </main>

@@ -90,7 +90,7 @@ export const AppRouter = () => {
             img={
               "https://www.tuentrada.com/teatro/gran-rex/imagenes/miranda.webp"
             }
-            description={`Todo listo para la fiesta MIRANDA! La banda pop más icónica de la escena hispanoamericana, Miranda! cierra el año anunciando su nuevo álbum HOTEL MIRANDA! y las fechas de presentación para el 21 de abril en el imponente Teatro Gran Rex. Con más de 20 años de trayectoria, a la banda liderada por Ale Sergi y Juliana Gattas le sobran los motivos para celebrar y lo harán al mejor estilo Miranda!<br />
+            description={`Todo listo para la fiesta MIRANDA! <br /> La banda pop más icónica de la escena hispanoamericana, Miranda! cierra el año anunciando su nuevo álbum HOTEL MIRANDA! y las fechas de presentación para el 21 de abril en el imponente Teatro Gran Rex. Con más de 20 años de trayectoria, a la banda liderada por Ale Sergi y Juliana Gattas le sobran los motivos para celebrar y lo harán al mejor estilo Miranda!<br />
             El Teatro Gran Rex informa que los eventos que se realizan en esta sala podrían ser fotografiados o filmados para su posterior difusión en medios y /o campañas publicitarias. <br />
             El ingreso al establecimiento implica la autorización a la Productora y a Cordero, Cavallo y Lautaret S.A. a utilizar el contenido filmado y /o fotografiado y el uso de imagen personal sin compensación alguna. <br />
             <br />
@@ -456,7 +456,7 @@ export const AppRouter = () => {
         }
       /> */}
       <Route path="/ubicaciones" element={<Ubicaciones />} />
-      <Route path="/*" element={<Navigate to='/' />} />
+      <Route path="/*" element={<Navigate to="/" />} />
     </Routes>
   );
 };
