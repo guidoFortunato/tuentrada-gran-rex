@@ -7,9 +7,8 @@ import { CardEvento, FormBusqueda } from "../components";
 
 export const BusquedaEventos = () => {
   const { listaEventosBusqueda, agregarEvento } = useContext(EventosContext);
-  // const navigate = useNavigate()
-  // navigate()
   let { name } = useParams();
+  
 
   useEffect(() => {
     agregarEvento(name);

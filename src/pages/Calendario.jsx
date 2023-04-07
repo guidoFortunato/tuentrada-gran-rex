@@ -26,8 +26,6 @@ const month = [
 ];
 
 const fullEvents = [
-
-  
   {
     id: 1,
     start: "2023-04-15T20:30:00",
@@ -348,7 +346,7 @@ const fullEvents = [
     title: "MATILDA",
     url: "/shows/matilda/13",
   },
- {
+  {
     id: 41,
     date: "2023-06-24",
     start: "2023-06-24T19:01:00",
@@ -756,7 +754,6 @@ const fullEvents = [
     title: "DANIEL AGOSTINI",
     url: "https://www.tuentrada.com/eventos/detalle/Daniel-Agostini/553776971040",
   },
-  
 ];
 
 const fullPlugins = [
@@ -813,8 +810,14 @@ export const Calendario = () => {
           <div className="col-12">
             <FullCalendar
               plugins={fullPlugins}
-              initialView={window.innerWidth < 1400 ? "listMonth" : "dayGridMonth"} 
-              headerToolbar={window.innerWidth < 1400 ? headerToolbarOptionsResponsive : headerToolbarOptionsDesktop}
+              initialView={
+                window.innerWidth < 1400 ? "listMonth" : "dayGridMonth"
+              }
+              headerToolbar={
+                window.innerWidth < 1400
+                  ? headerToolbarOptionsResponsive
+                  : headerToolbarOptionsDesktop
+              }
               height={"70vh"}
               titleFormat={handleTitle}
               eventBackgroundColor="#BA2828"
@@ -824,7 +827,6 @@ export const Calendario = () => {
               buttonText={buttonTextOptions}
               themeSystem={"bootstrap5"}
               eventClick={handleClick}
-              // eventColor='#378006'
             />
           </div>
         </div>

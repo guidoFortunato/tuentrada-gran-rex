@@ -1,16 +1,17 @@
 import { useContext } from "react";
 import { EventosContext } from "../context/EventosProvider";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
 export const FormBusqueda = () => {
   // const [evento, setEvento] = useState("");
-  const { evento, handleEvento, agregarEvento,  } = useContext(EventosContext);
+  const { evento, handleEvento, agregarEvento } = useContext(EventosContext);
   let navigate = useNavigate();
- 
+  const { pathname } = useLocation();
+  localStorage.setItem("lastPath", pathname);
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (evento.length === 0) return
+    if (evento.length === 0) return;
     agregarEvento(evento);
     navigate(`/busqueda-eventos/${evento}`);
     handleEvento("");

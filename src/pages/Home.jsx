@@ -2,9 +2,11 @@ import { CardEvento, FormBusqueda } from "../components/";
 
 import "../css/header.css";
 import "../css/footer.css";
-import { SliderDestacado } from "../components/";
+// import { SliderDestacado } from "../components/";
 
 export const Home = () => {
+
+
   return (
     <>
       <header>

@@ -1,8 +1,17 @@
 import DOMPurify from "dompurify";
 import "../css/detalleevento.css";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 export const DetalleEvento = ({ title, description, href, img }) => {
+
+  const navigate = useNavigate()
+
+  const lastPath = localStorage.getItem('lastPath') || '/';  
+
+  const returnLastPath = () => {
+    navigate(lastPath)
+  }
+
   return (
     <>
       <div className="container my-5 px-5">
@@ -33,9 +42,9 @@ export const DetalleEvento = ({ title, description, href, img }) => {
               >
                 <button className="btn btn-primary mb-3 w-50">Comprar</button>
               </a>
-              <Link to={"/"} className="w-100 text-center">
-                <button className="btn btn-secondary w-50">Volver</button>
-              </Link>
+              <div className="w-100 text-center">
+                <button className="btn btn-secondary w-50" onClick={returnLastPath}>Volver</button>
+              </div>
             </div>
           </div>
         </div>
