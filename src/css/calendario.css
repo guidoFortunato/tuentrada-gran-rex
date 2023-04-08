@@ -49,6 +49,9 @@ fieldset:disabled .btn {
   color: #ba2828 !important;
   background-color: #f5f2f0 !important;
 }
+.fc-dayGridMonth-button{
+  cursor: auto !important;
+}
 .fc-dayGridMonth-button:hover{
   background-color: #000000 !important;
   border-color: #000000 !important;
