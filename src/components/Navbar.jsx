@@ -9,7 +9,7 @@ export const Navbar = () => {
   const handleNavCollapse = () => setIsNavCollapsed(!isNavCollapsed);
 
   return (
-    <nav className="navbar navbar-dark navbar-expand-lg color-navbar">
+    <nav className="navbar navbar-dark navbar-expand-lg color-navbar sticky-top">
       <div className="container">
         <Link className="navbar-brand" to="/">
           <img src={imgRex} alt="logo gran rex" style={{ width: "75px" }} />
