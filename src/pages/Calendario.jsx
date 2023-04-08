@@ -133,7 +133,7 @@ const fullEvents = [
   {
     id: 14,
     date: "2023-05-20",
-    start: "2023-05-20T12:01:00",
+    start: "2023-05-20T12:00:00",
     end: "-",
     title: "JD PANTOJA KIM LOAIZA",
     url: "/shows/jdpantoja-kimloaiza/11",
@@ -141,7 +141,7 @@ const fullEvents = [
   {
     id: 15,
     date: "2023-05-21",
-    start: "2023-05-21T19:01:00",
+    start: "2023-05-21T19:00:00",
     end: "-",
     title: "JD PANTOJA KIM LOAIZA",
     url: "/shows/jdpantoja-kimloaiza/11",
@@ -149,7 +149,7 @@ const fullEvents = [
   {
     id: 16,
     date: "2023-05-20",
-    start: "2023-05-20T21:01:00",
+    start: "2023-05-20T21:00:00",
     end: "-",
     title: "SERGIO GALLEGUILLO",
     url: "/shows/sergio-galleguillo/12",
@@ -157,7 +157,7 @@ const fullEvents = [
   {
     id: 17,
     date: "2023-06-01",
-    start: "2023-06-01T20:01:00",
+    start: "2023-06-01T20:00:00",
     end: "-",
     title: "MATILDA",
     url: "/shows/matilda/13",
@@ -165,7 +165,7 @@ const fullEvents = [
   {
     id: 18,
     date: "2023-06-02",
-    start: "2023-06-02T20:01:00",
+    start: "2023-06-02T20:00:00",
     end: "-",
     title: "MATILDA",
     url: "/shows/matilda/13",
@@ -173,7 +173,7 @@ const fullEvents = [
   {
     id: 19,
     date: "2023-06-03",
-    start: "2023-06-03T15:01:00",
+    start: "2023-06-03T15:00:00",
     end: "-",
     title: "MATILDA",
     url: "/shows/matilda/13",
@@ -181,7 +181,7 @@ const fullEvents = [
   {
     id: 20,
     date: "2023-06-03",
-    start: "2023-06-03T19:01:00",
+    start: "2023-06-03T19:00:00",
     end: "-",
     title: "MATILDA",
     url: "/shows/matilda/13",
@@ -197,7 +197,7 @@ const fullEvents = [
   {
     id: 22,
     date: "2023-06-04",
-    start: "2023-06-04T18:01:00",
+    start: "2023-06-04T18:00:00",
     end: "-",
     title: "MATILDA",
     url: "/shows/matilda/13",
@@ -205,7 +205,7 @@ const fullEvents = [
   {
     id: 23,
     date: "2023-06-08",
-    start: "2023-06-08T20:01:00",
+    start: "2023-06-08T20:00:00",
     end: "-",
     title: "MATILDA",
     url: "/shows/matilda/13",
@@ -213,7 +213,7 @@ const fullEvents = [
   {
     id: 24,
     date: "2023-06-09",
-    start: "2023-06-09T20:01:00",
+    start: "2023-06-09T20:00:00",
     end: "-",
     title: "MATILDA",
     url: "/shows/matilda/13",
@@ -221,7 +221,7 @@ const fullEvents = [
   {
     id: 25,
     date: "2023-06-10",
-    start: "2023-06-10T15:01:00",
+    start: "2023-06-10T15:00:00",
     end: "-",
     title: "MATILDA",
     url: "/shows/matilda/13",
@@ -229,7 +229,7 @@ const fullEvents = [
   {
     id: 26,
     date: "2023-06-10",
-    start: "2023-06-10T19:01:00",
+    start: "2023-06-10T19:00:00",
     end: "-",
     title: "MATILDA",
     url: "/shows/matilda/13",
@@ -245,7 +245,7 @@ const fullEvents = [
   {
     id: 28,
     date: "2023-06-11",
-    start: "2023-06-11T18:01:00",
+    start: "2023-06-11T18:00:00",
     end: "-",
     title: "MATILDA",
     url: "/shows/matilda/13",
@@ -253,7 +253,7 @@ const fullEvents = [
   {
     id: 29,
     date: "2023-06-14",
-    start: "2023-06-14T20:01:00",
+    start: "2023-06-14T20:00:00",
     end: "-",
     title: "MATILDA",
     url: "/shows/matilda/13",
@@ -261,7 +261,7 @@ const fullEvents = [
   {
     id: 30,
     date: "2023-06-15",
-    start: "2023-06-15T20:01:00",
+    start: "2023-06-15T20:00:00",
     end: "-",
     title: "MATILDA",
     url: "/shows/matilda/13",
@@ -269,7 +269,7 @@ const fullEvents = [
   {
     id: 31,
     date: "2023-06-16",
-    start: "2023-06-16T20:01:00",
+    start: "2023-06-16T20:00:00",
     end: "-",
     title: "MATILDA",
     url: "/shows/matilda/13",
@@ -277,7 +277,7 @@ const fullEvents = [
   {
     id: 32,
     date: "2023-06-17",
-    start: "2023-06-17T15:01:00",
+    start: "2023-06-17T15:00:00",
     end: "-",
     title: "MATILDA",
     url: "/shows/matilda/13",
@@ -285,7 +285,7 @@ const fullEvents = [
   {
     id: 33,
     date: "2023-06-17",
-    start: "2023-06-17T19:01:00",
+    start: "2023-06-17T19:00:00",
     end: "-",
     title: "MATILDA",
     url: "/shows/matilda/13",
@@ -293,7 +293,7 @@ const fullEvents = [
   {
     id: 34,
     date: "2023-06-18",
-    start: "2023-06-18T15:01:00",
+    start: "2023-06-18T15:00:00",
     end: "-",
     title: "MATILDA",
     url: "/shows/matilda/13",
@@ -301,7 +301,7 @@ const fullEvents = [
   {
     id: 35,
     date: "2023-06-18",
-    start: "2023-06-18T19:01:00",
+    start: "2023-06-18T19:00:00",
     end: "-",
     title: "MATILDA",
     url: "/shows/matilda/13",
@@ -309,7 +309,7 @@ const fullEvents = [
   {
     id: 36,
     date: "2023-06-20",
-    start: "2023-06-20T15:01:00",
+    start: "2023-06-20T15:00:00",
     end: "-",
     title: "MATILDA",
     url: "/shows/matilda/13",
@@ -317,7 +317,7 @@ const fullEvents = [
   {
     id: 37,
     date: "2023-06-20",
-    start: "2023-06-20T19:01:00",
+    start: "2023-06-20T19:00:00",
     end: "-",
     title: "MATILDA",
     url: "/shows/matilda/13",
@@ -325,7 +325,7 @@ const fullEvents = [
   {
     id: 38,
     date: "2023-06-22",
-    start: "2023-06-22T20:01:00",
+    start: "2023-06-22T20:00:00",
     end: "-",
     title: "MATILDA",
     url: "/shows/matilda/13",
@@ -333,7 +333,7 @@ const fullEvents = [
   {
     id: 39,
     date: "2023-06-23",
-    start: "2023-06-23T20:01:00",
+    start: "2023-06-23T20:00:00",
     end: "-",
     title: "MATILDA",
     url: "/shows/matilda/13",
@@ -341,7 +341,7 @@ const fullEvents = [
   {
     id: 40,
     date: "2023-06-24",
-    start: "2023-06-24T15:01:00",
+    start: "2023-06-24T15:00:00",
     end: "-",
     title: "MATILDA",
     url: "/shows/matilda/13",
@@ -349,7 +349,7 @@ const fullEvents = [
   {
     id: 41,
     date: "2023-06-24",
-    start: "2023-06-24T19:01:00",
+    start: "2023-06-24T19:00:00",
     end: "-",
     title: "MATILDA",
     url: "/shows/matilda/13",
@@ -365,7 +365,7 @@ const fullEvents = [
   {
     id: 42,
     date: "2023-06-25",
-    start: "2023-06-25T18:01:00",
+    start: "2023-06-25T18:00:00",
     end: "-",
     title: "MATILDA",
     url: "/shows/matilda/13",
@@ -373,7 +373,7 @@ const fullEvents = [
   {
     id: 43,
     date: "2023-06-28",
-    start: "2023-06-28T20:01:00",
+    start: "2023-06-28T20:00:00",
     end: "-",
     title: "MATILDA",
     url: "/shows/matilda/13",
@@ -381,7 +381,7 @@ const fullEvents = [
   {
     id: 44,
     date: "2023-06-29",
-    start: "2023-06-29T20:01:00",
+    start: "2023-06-29T20:00:00",
     end: "-",
     title: "MATILDA",
     url: "/shows/matilda/13",
@@ -389,7 +389,7 @@ const fullEvents = [
   {
     id: 45,
     date: "2023-06-30",
-    start: "2023-06-30T20:01:00",
+    start: "2023-06-30T20:00:00",
     end: "-",
     title: "MATILDA",
     url: "/shows/matilda/13",
@@ -397,7 +397,7 @@ const fullEvents = [
   {
     id: 45,
     date: "2023-07-01",
-    start: "2023-07-01T15:01:00",
+    start: "2023-07-01T15:00:00",
     end: "-",
     title: "MATILDA",
     url: "/shows/matilda/13",
@@ -405,7 +405,7 @@ const fullEvents = [
   {
     id: 46,
     date: "2023-07-01",
-    start: "2023-07-01T19:01:00",
+    start: "2023-07-01T19:00:00",
     end: "-",
     title: "MATILDA",
     url: "/shows/matilda/13",
@@ -421,7 +421,7 @@ const fullEvents = [
   {
     id: 48,
     date: "2023-07-02",
-    start: "2023-07-02T18:01:00",
+    start: "2023-07-02T18:00:00",
     end: "-",
     title: "MATILDA",
     url: "/shows/matilda/13",
@@ -429,7 +429,7 @@ const fullEvents = [
   {
     id: 49,
     date: "2023-07-05",
-    start: "2023-07-05T20:01:00",
+    start: "2023-07-05T20:00:00",
     end: "-",
     title: "MATILDA",
     url: "/shows/matilda/13",
@@ -437,7 +437,7 @@ const fullEvents = [
   {
     id: 50,
     date: "2023-07-06",
-    start: "2023-07-06T20:01:00",
+    start: "2023-07-06T20:00:00",
     end: "-",
     title: "MATILDA",
     url: "/shows/matilda/13",
@@ -445,7 +445,7 @@ const fullEvents = [
   {
     id: 51,
     date: "2023-07-07",
-    start: "2023-07-07T20:01:00",
+    start: "2023-07-07T20:00:00",
     end: "-",
     title: "MATILDA",
     url: "/shows/matilda/13",
@@ -453,7 +453,7 @@ const fullEvents = [
   {
     id: 52,
     date: "2023-07-08",
-    start: "2023-07-08T15:01:00",
+    start: "2023-07-08T15:00:00",
     end: "-",
     title: "MATILDA",
     url: "/shows/matilda/13",
@@ -461,7 +461,7 @@ const fullEvents = [
   {
     id: 53,
     date: "2023-07-08",
-    start: "2023-07-08T19:01:00",
+    start: "2023-07-08T19:00:00",
     end: "-",
     title: "MATILDA",
     url: "/shows/matilda/13",
@@ -477,7 +477,7 @@ const fullEvents = [
   {
     id: 55,
     date: "2023-07-09",
-    start: "2023-07-09T18:01:00",
+    start: "2023-07-09T18:00:00",
     end: "-",
     title: "MATILDA",
     url: "/shows/matilda/13",
@@ -485,7 +485,7 @@ const fullEvents = [
   {
     id: 56,
     date: "2023-07-12",
-    start: "2023-07-12T20:01:00",
+    start: "2023-07-12T20:00:00",
     end: "-",
     title: "MATILDA",
     url: "/shows/matilda/13",
@@ -493,7 +493,7 @@ const fullEvents = [
   {
     id: 57,
     date: "2023-07-13",
-    start: "2023-07-13T20:01:00",
+    start: "2023-07-13T20:00:00",
     end: "-",
     title: "MATILDA",
     url: "/shows/matilda/13",
@@ -501,7 +501,7 @@ const fullEvents = [
   {
     id: 58,
     date: "2023-07-14",
-    start: "2023-07-14T20:01:00",
+    start: "2023-07-14T20:00:00",
     end: "-",
     title: "MATILDA",
     url: "/shows/matilda/13",
@@ -509,7 +509,7 @@ const fullEvents = [
   {
     id: 58,
     date: "2023-07-14",
-    start: "2023-07-14T20:01:00",
+    start: "2023-07-14T20:00:00",
     end: "-",
     title: "MATILDA",
     url: "/shows/matilda/13",
@@ -525,7 +525,7 @@ const fullEvents = [
   {
     id: 60,
     date: "2023-07-15",
-    start: "2023-07-15T18:01:00",
+    start: "2023-07-15T18:00:00",
     end: "-",
     title: "MATILDA",
     url: "/shows/matilda/13",
@@ -541,7 +541,7 @@ const fullEvents = [
   {
     id: 62,
     date: "2023-07-16",
-    start: "2023-07-16T18:01:00",
+    start: "2023-07-16T18:00:00",
     end: "-",
     title: "MATILDA",
     url: "/shows/matilda/13",
@@ -557,7 +557,7 @@ const fullEvents = [
   {
     id: 64,
     date: "2023-07-17",
-    start: "2023-07-17T18:01:00",
+    start: "2023-07-17T18:00:00",
     end: "-",
     title: "MATILDA",
     url: "/shows/matilda/13",
@@ -573,7 +573,7 @@ const fullEvents = [
   {
     id: 66,
     date: "2023-07-19",
-    start: "2023-07-19T18:01:00",
+    start: "2023-07-19T18:00:00",
     end: "-",
     title: "MATILDA",
     url: "/shows/matilda/13",
@@ -589,7 +589,7 @@ const fullEvents = [
   {
     id: 68,
     date: "2023-07-20",
-    start: "2023-07-20T18:01:00",
+    start: "2023-07-20T18:00:00",
     end: "-",
     title: "MATILDA",
     url: "/shows/matilda/13",
@@ -605,7 +605,7 @@ const fullEvents = [
   {
     id: 70,
     date: "2023-07-21",
-    start: "2023-07-21T18:01:00",
+    start: "2023-07-21T18:00:00",
     end: "-",
     title: "MATILDA",
     url: "/shows/matilda/13",
@@ -621,7 +621,7 @@ const fullEvents = [
   {
     id: 72,
     date: "2023-07-22",
-    start: "2023-07-22T18:01:00",
+    start: "2023-07-22T18:00:00",
     end: "-",
     title: "MATILDA",
     url: "/shows/matilda/13",
@@ -637,7 +637,7 @@ const fullEvents = [
   {
     id: 74,
     date: "2023-07-23",
-    start: "2023-07-23T18:01:00",
+    start: "2023-07-23T18:00:00",
     end: "-",
     title: "MATILDA",
     url: "/shows/matilda/13",
@@ -653,7 +653,7 @@ const fullEvents = [
   {
     id: 76,
     date: "2023-07-24",
-    start: "2023-07-24T18:01:00",
+    start: "2023-07-24T18:00:00",
     end: "-",
     title: "MATILDA",
     url: "/shows/matilda/13",
@@ -669,7 +669,7 @@ const fullEvents = [
   {
     id: 78,
     date: "2023-07-26",
-    start: "2023-07-26T18:01:00",
+    start: "2023-07-26T18:00:00",
     end: "-",
     title: "MATILDA",
     url: "/shows/matilda/13",
@@ -685,7 +685,7 @@ const fullEvents = [
   {
     id: 80,
     date: "2023-07-27",
-    start: "2023-07-27T18:01:00",
+    start: "2023-07-27T18:00:00",
     end: "-",
     title: "MATILDA",
     url: "/shows/matilda/13",
@@ -701,7 +701,7 @@ const fullEvents = [
   {
     id: 82,
     date: "2023-07-28",
-    start: "2023-07-28T18:01:00",
+    start: "2023-07-28T18:00:00",
     end: "-",
     title: "MATILDA",
     url: "/shows/matilda/13",
@@ -717,7 +717,7 @@ const fullEvents = [
   {
     id: 84,
     date: "2023-07-29",
-    start: "2023-07-29T18:01:00",
+    start: "2023-07-29T18:00:00",
     end: "-",
     title: "MATILDA",
     url: "/shows/matilda/13",
@@ -733,7 +733,7 @@ const fullEvents = [
   {
     id: 86,
     date: "2023-07-30",
-    start: "2023-07-30T18:01:00",
+    start: "2023-07-30T18:00:00",
     end: "-",
     title: "MATILDA",
     url: "/shows/matilda/13",
@@ -741,7 +741,7 @@ const fullEvents = [
   {
     id: 87,
     date: "2023-08-27",
-    start: "2023-08-27T20:01:00",
+    start: "2023-08-27T20:00:00",
     end: "-",
     title: "BRYNDIS",
     url: "/shows/bxs/14",
@@ -749,7 +749,7 @@ const fullEvents = [
   {
     id: 88,
     date: "2023-09-10",
-    start: "2023-09-10T20:01:00",
+    start: "2023-09-10T20:00:00",
     end: "-",
     title: "DANIEL AGOSTINI",
     url: "https://www.tuentrada.com/eventos/detalle/Daniel-Agostini/553776971040",
@@ -784,6 +784,11 @@ const buttonTextOptions = {
   list: "Lista",
 };
 
+const eventTimeFormat = {
+  hour: "2-digit",
+  minute: "2-digit",
+}
+
 export const Calendario = () => {
   const navigate = useNavigate();
   const { pathname } = useLocation();
@@ -812,14 +817,8 @@ export const Calendario = () => {
           <div className="col-12">
             <FullCalendar
               plugins={fullPlugins}
-              initialView={
-                window.innerWidth < 1400 ? "listMonth" : "dayGridMonth"
-              }
-              headerToolbar={
-                window.innerWidth < 1400
-                  ? headerToolbarOptionsResponsive
-                  : headerToolbarOptionsDesktop
-              }
+              initialView={ window.innerWidth < 1400 ? "listMonth" : "dayGridMonth" }
+              headerToolbar={ window.innerWidth < 1400 ? headerToolbarOptionsResponsive : headerToolbarOptionsDesktop }
               height={"70vh"}
               titleFormat={handleTitle}
               eventBackgroundColor="#BA2828"
@@ -829,6 +828,7 @@ export const Calendario = () => {
               buttonText={buttonTextOptions}
               themeSystem={"bootstrap5"}
               eventClick={handleClick}
+              eventTimeFormat={ eventTimeFormat }
             />
           </div>
         </div>
