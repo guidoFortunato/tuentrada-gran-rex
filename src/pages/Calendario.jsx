@@ -6,7 +6,7 @@ import interactionPlugin from "@fullcalendar/interaction";
 import bootstrap5Plugin from "@fullcalendar/bootstrap5";
 import listViewPlugin from "@fullcalendar/list";
 
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
 import "../css/calendario.css";
 
@@ -773,7 +773,7 @@ const headerToolbarOptionsResponsive = {
 const headerToolbarOptionsDesktop = {
   start: "today prev,next", // will normally be on the left. if RTL, will be on the right
   center: "title",
-  end: "dayGridMonth,timeGridWeek,timeGridDay", // will normally be on the right. if RTL, will be on the left
+  end: "dayGridMonth", // will normally be on the right. if RTL, will be on the left
 };
 
 const buttonTextOptions = {
@@ -786,6 +786,8 @@ const buttonTextOptions = {
 
 export const Calendario = () => {
   const navigate = useNavigate();
+  const { pathname } = useLocation();
+  localStorage.setItem("lastPath", pathname);
 
   const handleClick = (info) => {
     info.jsEvent.preventDefault();

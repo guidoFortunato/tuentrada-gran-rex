@@ -41,8 +41,8 @@ export const Footer = () => {
                 <strong>Dirección:</strong> Av. Corrientes 857, Capital Federal.
               </p>
               <p style={{ fontSize: "16px" }}>
-                <strong>Boleteria:</strong> Lunes a Domingo de 12 a
-                18 hs. Feriados Cerrado.
+                <strong>Boletería:</strong> Lunes a Domingos de 12:00 a
+                18:00hs. Feriados Cerrado.
               </p>
             </div>
           </div>
