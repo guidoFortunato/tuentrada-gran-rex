@@ -51,7 +51,7 @@ export const BusquedaEventos = () => {
           <Link to="/" className="text-center">
             <div
               style={{ fontSize: "14px", padding: "3px 20px" }}
-              className="btn btn-primary"
+              className="btn-general"
             >
               Inicio
             </div>

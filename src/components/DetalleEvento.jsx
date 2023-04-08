@@ -40,10 +40,10 @@ export const DetalleEvento = ({ title, description, href, img }) => {
                 target="_blank"
                 rel="noreferrer"
               >
-                <button className="btn btn-primary mb-3 w-50">Comprar</button>
+                <div className="btn-general mb-3 w-50" style={{fontSize: "1.6rem"}}>Comprar</div>
               </a>
               <div className="w-100 text-center">
-                <button className="btn btn-secondary w-50" onClick={returnLastPath}>Volver</button>
+                <div className="btn-general w-50" onClick={returnLastPath} style={{fontSize: "1.6rem"}}>Volver</div>
               </div>
             </div>
           </div>

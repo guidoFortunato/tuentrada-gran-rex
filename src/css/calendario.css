@@ -37,3 +37,20 @@ fieldset:disabled .btn {
 .container-calendar {
   background-color: white;
 }
+
+.fc-next-button, .fc-prev-button  {
+  border-color: #ba2828;
+  color: #f5f2f0 !important;
+  background-color: #ba2828 !important;
+}
+
+.fc-next-button:hover, .fc-prev-button:hover {
+  border-color: #ba2828;
+  color: #ba2828 !important;
+  background-color: #f5f2f0 !important;
+}
+.fc-dayGridMonth-button:hover{
+  background-color: #000000 !important;
+  border-color: #000000 !important;
+  color: #fff !important;
+}

@@ -2,9 +2,7 @@ import { Link } from "react-router-dom";
 import "../css/cardevento.css";
 
 export const CardEvento = ({ img, status, title, date, time, linkEvento }) => {
-
   const urlEvento = linkEvento?.split("/")[1] !== "shows";
-  
 
   return (
     <article
@@ -25,7 +23,7 @@ export const CardEvento = ({ img, status, title, date, time, linkEvento }) => {
           />
           <div>
             <h5
-              className="btn btn-sin-hover"
+              className="btn-status"
               style={{
                 border: `1px solid ${
                   status === "Agotado"
@@ -56,7 +54,9 @@ export const CardEvento = ({ img, status, title, date, time, linkEvento }) => {
             </h5>
           </div>
           <div style={{ padding: "5px" }}>
-            <h3 style={{ fontWeight: "bold", padding: "5px" }}>{title.toUpperCase()}</h3>
+            <h3 style={{ fontWeight: "bold", padding: "5px" }}>
+              {title.toUpperCase()}
+            </h3>
             <h4 style={{ padding: "5px 0" }}>
               {date.toUpperCase()} <br /> {time.toUpperCase()}
             </h4>
