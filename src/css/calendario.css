@@ -19,19 +19,19 @@
 .btn.show,
 .btn:first-child:active,
 :not(.btn-check) + .btn:active {
-  color: var(--bs-btn-active-color);
-  background-color: black;
-  border-color: black;
+  color: #fff;
+  background-color: #ba2828;
+  border-color: #ba2828;
 }
 
 .btn.disabled,
 .btn:disabled,
 fieldset:disabled .btn {
-  color: var(--bs-btn-disabled-color);
+  color: #fff;
   pointer-events: none;
   background-color: #000000;
   border-color: #000000;
-  opacity: var(--bs-btn-disabled-opacity);
+  
 }
 
 .container-calendar {
@@ -50,11 +50,11 @@ padding: 10px;
   color: #ba2828 !important;
   background-color: #f5f2f0 !important;
 }
-.fc-dayGridMonth-button{
+/* .fc-dayGridMonth-button{
   cursor: auto !important;
 }
 .fc-dayGridMonth-button:hover{
   background-color: #000000 !important;
   border-color: #000000 !important;
   color: #fff !important;
-}
+} */

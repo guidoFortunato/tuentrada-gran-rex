@@ -172,7 +172,7 @@ export const Home = () => {
             />
             <CardEvento
               linkEvento={
-                "https://www.tuentrada.com/eventos/detalle/Daniel-Agostini/553776971040"
+                "/shows/daniel-agostini/15"
               }
               img={
                 "https://www.tuentrada.com/teatro/gran-rex/imagenes/daniel_agostini.webp"

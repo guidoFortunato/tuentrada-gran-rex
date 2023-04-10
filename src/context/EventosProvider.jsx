@@ -135,7 +135,7 @@ const eventosTotales = [
     date: "DOMINGO 10 DE SEPTIEMBRE",
     id: 15,
     img: "https://www.tuentrada.com/teatro/gran-rex/imagenes/daniel_agostini.webp",
-    linkEvento: "https://www.tuentrada.com/eventos/detalle/Daniel-Agostini/553776971040",
+    linkEvento: "/shows/daniel-agostini/15",
     name: "daniel agostini",
     status: "Disponible",
     time: "20:00HS",

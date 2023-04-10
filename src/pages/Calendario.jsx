@@ -754,7 +754,7 @@ const fullEvents = [
     start: "2023-09-10T20:00:00",
     end: "-",
     title: "DANIEL AGOSTINI",
-    url: "https://www.tuentrada.com/eventos/detalle/Daniel-Agostini/553776971040",
+    url: "/shows/daniel-agostini/15",
   },
 
   
@@ -779,7 +779,7 @@ const headerToolbarOptionsResponsive = {
 const headerToolbarOptionsDesktop = {
   start: "today prev,next", // will normally be on the left. if RTL, will be on the right
   center: "title",
-  end: "dayGridMonth", // will normally be on the right. if RTL, will be on the left
+  end: "dayGridMonth,dayGridWeek", // will normally be on the right. if RTL, will be on the left
 };
 
 
