@@ -6,8 +6,6 @@ import interactionPlugin from "@fullcalendar/interaction";
 import bootstrap5Plugin from "@fullcalendar/bootstrap5";
 import listViewPlugin from "@fullcalendar/list";
 
-
-
 import { useLocation, useNavigate } from "react-router-dom";
 
 import "../css/calendario.css";
@@ -756,10 +754,15 @@ const fullEvents = [
     title: "DANIEL AGOSTINI",
     url: "/shows/daniel-agostini/15",
   },
-
-  
+  {
+    id: 89,
+    date: "2023-09-16",
+    start: "2023-09-16T20:00:00",
+    end: "-",
+    title: "Chili Fernandez",
+    url: "/shows/chili-fernandez/16",
+  },
 ];
-
 
 const fullPlugins = [
   dayGridPlugin,
@@ -768,7 +771,6 @@ const fullPlugins = [
   bootstrap5Plugin,
   listViewPlugin,
 ];
-
 
 const headerToolbarOptionsResponsive = {
   start: "title", // will normally be on the left. if RTL, will be on the right
@@ -782,7 +784,6 @@ const headerToolbarOptionsDesktop = {
   end: "dayGridMonth,dayGridWeek", // will normally be on the right. if RTL, will be on the left
 };
 
-
 const buttonTextOptions = {
   today: "Hoy",
   month: "Mes",
@@ -794,7 +795,7 @@ const buttonTextOptions = {
 const eventTimeFormat = {
   hour: "2-digit",
   minute: "2-digit",
-}
+};
 
 export const Calendario = () => {
   const navigate = useNavigate();
@@ -820,21 +821,26 @@ export const Calendario = () => {
   return (
     <>
       <div className="container animate__animated animate__fadeIn animate__fast">
-      <div className="row animate__animated animate__fadeIn ">
-            <div className="col-12 text-center mt-3 ">
-              <h2 style={{ fontSize: "30px" }} className="my-3 tittle-h2">
-           Temporada
-              </h2>
-            </div>
+        <div className="row animate__animated animate__fadeIn ">
+          <div className="col-12 text-center mt-3 ">
+            <h2 style={{ fontSize: "30px" }} className="my-3 tittle-h2">
+              Temporada
+            </h2>
           </div>
-       
+        </div>
+
         <div className="row mt-5 container-calendar">
           <div className="col-12">
             <FullCalendar
-            
               plugins={fullPlugins}
-              initialView={ window.innerWidth < 1000 ? "listMonth" : "dayGridMonth" }
-              headerToolbar={ window.innerWidth < 1000 ? headerToolbarOptionsResponsive : headerToolbarOptionsDesktop }
+              initialView={
+                window.innerWidth < 1000 ? "listMonth" : "dayGridMonth"
+              }
+              headerToolbar={
+                window.innerWidth < 1000
+                  ? headerToolbarOptionsResponsive
+                  : headerToolbarOptionsDesktop
+              }
               height={"70vh"}
               titleFormat={handleTitle}
               eventBackgroundColor="#BA2828"
@@ -844,10 +850,9 @@ export const Calendario = () => {
               buttonText={buttonTextOptions}
               themeSystem={"bootstrap5"}
               eventClick={handleClick}
-              eventTimeFormat={ eventTimeFormat }
-              noEventsContent={ "No hay eventos disponibles" }
+              eventTimeFormat={eventTimeFormat}
+              noEventsContent={"No hay eventos disponibles"}
             />
-            
           </div>
         </div>
       </div>

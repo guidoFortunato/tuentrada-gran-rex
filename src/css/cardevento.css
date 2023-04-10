@@ -6,3 +6,10 @@
 .linkEvento:hover {
     color: black;
 }
+
+.cursor-default{
+    cursor: default !important;
+}
+.img-disabled{
+    opacity: 0.3;
+}
