@@ -3,8 +3,8 @@
 }
 
 .border-navbar-color:hover{
-  border-bottom: 1px solid #fff;
-  transition-delay: 2s;
+  border-bottom: 1px solid #0a0a0a;
+  transition-delay: 1s;
   transition: all .9s ease-in-out;
   transition-timing-function: ease-in-out;
 }
@@ -16,3 +16,13 @@
 /* .size-item-nav{
   font-size: 20px;
 } */
+
+@media screen and (min-width: 992px) {
+  .border-navbar-color:hover{
+    border-bottom: 1px solid #5e5858;
+    transition-delay: 1s;
+    transition: all .9s ease-in-out;
+    transition-timing-function: ease-in-out;
+  }
+    
+}
