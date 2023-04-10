@@ -25,7 +25,7 @@ export const BusquedaEventos = () => {
             Resultados de tu búsqueda <strong>"{name}"</strong>
           </h2>
         </div>
-        <div className="row">
+        <div className="row justify-content-center">
           {listaEventosBusqueda.length > 0 ? (
             listaEventosBusqueda.map(({id, linkEvento, img, status, name, date, time, disabled}) => (
               <CardEvento
