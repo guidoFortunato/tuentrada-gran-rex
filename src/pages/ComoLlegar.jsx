@@ -7,7 +7,7 @@ export const ComoLlegar = () => {
       <div className="container">
       <div className="row animate__animated animate__fadeIn ">
             <div className="col-12 text-center mt-3 ">
-              <h2 style={{ fontSize: "35px" }} className="my-3">
+              <h2 style={{ fontSize: "30px" }} className="my-3 tittle-h2">
             Cómo llegar
               </h2>
             </div>
