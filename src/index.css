@@ -148,3 +148,40 @@ body {
   font-family: 'Hind Madurai', sans-serif;
   
 }
+
+.tittle-h2 {
+  margin-top: 20px;
+  text-transform: uppercase;
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  position: relative;
+  
+}
+
+.tittle-h2::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 120px;
+  height: 1px;
+  background: #cac9c8;
+  bottom: 1px;
+  left: calc(50% - 60px);
+}
+
+.tittle-h2::after{
+  content: "";
+  position: absolute;
+  display: block;
+  width: 40px;
+  height: 3px;
+  background: #ba2828;
+  bottom: 0;
+  left: calc(50% - 20px);
+}
+
+.row {
+  margin-top: 20px;
+}

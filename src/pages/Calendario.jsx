@@ -822,7 +822,7 @@ export const Calendario = () => {
       <div className="container animate__animated animate__fadeIn animate__fast">
       <div className="row animate__animated animate__fadeIn ">
             <div className="col-12 text-center mt-3 ">
-              <h2 style={{ fontSize: "35px" }} className="my-3">
+              <h2 style={{ fontSize: "30px" }} className="my-3 tittle-h2">
            Temporada
               </h2>
             </div>

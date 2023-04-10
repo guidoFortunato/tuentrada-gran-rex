@@ -17,7 +17,7 @@ export const Home = () => {
         <div className="container">
           <div className="row animate__animated animate__fadeIn animate__fast	 ">
             <div className="col-12 text-center mt-3 ">
-              <h2 style={{ fontSize: "35px" }} className="my-3 animate__fadeIn animate__delay-1s" >
+              <h2 style={{ fontSize: "30px" }} className="my-3 animate__fadeIn animate__delay-1s tittle-h2" >
             Próximos eventos
               </h2>
             </div>
