@@ -13,6 +13,7 @@ const eventosTotales = [
     name: "el zar",
     status: "Disponible",
     time: "20:30HS",
+    disabled: false
   },
   {
     date: "DOMINGO 16 DE ABRIL",
@@ -22,6 +23,7 @@ const eventosTotales = [
     name: "sergio torres",
     status: "Disponible",
     time: "21:30HS",
+    disabled: false
   },
   {
     date: "21, 22 y 23 DE ABRIL",
@@ -31,6 +33,7 @@ const eventosTotales = [
     name: "miranda",
     status: "Agotado",
     time: "20:00HS y 20:30HS",
+    disabled: false
   },
   {
     date: "VIERNES 28 DE ABRIL",
@@ -40,6 +43,7 @@ const eventosTotales = [
     name: "queen por master stroke",
     status: "Disponible",
     time: "20:30HS",
+    disabled: false
   },
   {
     date: "SÁBADO 29 DE ABRIL",
@@ -49,6 +53,7 @@ const eventosTotales = [
     name: "damian cordoba",
     status: "Disponible",
     time: "20:30HS",
+    disabled: false
   },
   {
     date: "5 y 6 DE MAYO",
@@ -58,6 +63,7 @@ const eventosTotales = [
     name: "International Festival Ballet for the Peace",
     status: "Disponible",
     time: "20:30HS",
+    disabled: false
   },
   {
     date: "5 y 6 DE MAYO",
@@ -67,6 +73,7 @@ const eventosTotales = [
     name: "DALE Q´VA",
     status: "Disponible",
     time: "20:30HS",
+    disabled: false
   },
   {
     date: "SÁBADO 13 DE MAYO",
@@ -76,6 +83,7 @@ const eventosTotales = [
     name: "Turf",
     status: "Disponible",
     time: "20:30HS",
+    disabled: false
   },
   {
     date: "DOMINGO 14 DE MAYO",
@@ -85,6 +93,7 @@ const eventosTotales = [
     name: "The Beats",
     status: "Disponible",
     time: "20:30HS",
+    disabled: false
   },
   {
     date: "VIERNES 19 DE MAYO",
@@ -94,6 +103,7 @@ const eventosTotales = [
     name: "Massacre",
     status: "Disponible",
     time: "20:30HS",
+    disabled: false
   },
   {
     date: "20 Y 21 DE MAYO",
@@ -103,6 +113,7 @@ const eventosTotales = [
     name: "Jd Pantoja y Kim Loaiza",
     status: "Agotado",
     time: "12:00HS Y 19:00HS",
+    disabled: false
   },
   {
     date: "SÁBADO 20 DE MAYO",
@@ -112,6 +123,7 @@ const eventosTotales = [
     name: "Sergio Galleguillo",
     status: "Disponible",
     time: "21:00HS",
+    disabled: false
   },
   {
     date: "DEL 1 DE JUNIO AL 30 DE JULIO",
@@ -121,6 +133,7 @@ const eventosTotales = [
     name: "matilda",
     status: "Disponible",
     time: "CONSULTAR HORARIOS",
+    disabled: false
   },
   {
     date: "DOMINGO 27 DE AGOSTO",
@@ -130,6 +143,7 @@ const eventosTotales = [
     name: "bxs - bryndis x siempre",
     status: "Disponible",
     time: "20:00HS",
+    disabled: false
   },
   {
     date: "DOMINGO 10 DE SEPTIEMBRE",
@@ -139,6 +153,17 @@ const eventosTotales = [
     name: "daniel agostini",
     status: "Disponible",
     time: "20:00HS",
+    disabled: false
+  },
+  {
+    date: "Sábado 16 DE SEPTIEMBRE",
+    id: 16,
+    img: "https://www.tuentrada.com/teatro/gran-rex/imagenes/chili-fernandez.webp",
+    linkEvento: "/shows/chili-fernandez/16",
+    name: "chili fernandez",
+    status: "Próximamente",
+    time: "20:00HS",
+    disabled: true
   },
 ];
 

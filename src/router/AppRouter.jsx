@@ -30,7 +30,7 @@ export const AppRouter = () => {
           <DetalleEvento
             title={"El Zar"}
             img={
-              "https://www.tuentrada.com/teatro/gran-rex/imagenes/El_zar.webp"
+              "https://www.tuentrada.com/teatro/gran-rex/imagenes/el_zar.webp"
             }
             description={`El ZAR presenta RIO HOTEL el 15 de Abril en el Teatro Gran Rex.
             <br />
@@ -1565,6 +1565,95 @@ export const AppRouter = () => {
           />
         }
       />
+      {/* <Route
+        path="/shows/chili-fernandez/16"
+        element={
+          <DetalleEvento
+            title={"Chili Fernandez"}
+            img={
+              "https://www.tuentrada.com/teatro/gran-rex/imagenes/chili-fernandez.webp"
+            }
+            description={``}
+            href={
+              ""
+            }
+            ubicaciones={[
+              {
+                id: 1,
+                nombre: "PLATEA PLATINO",
+                color: "#E9C28C",
+                precio: "6000",
+              },
+              {
+                id: 2,
+                nombre: "PLATEA ORO",
+                color: "#F7E686",
+                precio: "5500",
+              },
+              {
+                id: 3,
+                nombre: "PLATEA PLATA",
+                color: "#D58500",
+                precio: "5000",
+              },
+              {
+                id: 4,
+                nombre: "PLATEA BRONCE",
+                color: "#F1D000",
+                precio: "4500",
+              },
+              {
+                id: 5,
+                nombre: "PLATEA BRONCE LATERAL",
+                color: "#C32520",
+                precio: "4100",
+              },
+              {
+                id: 6,
+                nombre: "SUPER PULLMAN 1",
+                color: "#E9CADF",
+                precio: "4300",
+              },
+              {
+                id: 7,
+                nombre: "SUPER PULLMAN 2",
+                color: "#D07EAE",
+                precio: "4000",
+              },
+              {
+                id: 8,
+                nombre: "PULLMAN 1",
+                color: "#DCE49F",
+                precio: "4400",
+              },
+              {
+                id: 9,
+                nombre: "PULLMAN 2",
+                color: "#8DB235",
+                precio: "4200",
+              },
+              {
+                id: 10,
+                nombre: "PULLMAN 3",
+                color: "#CAE4F6",
+                precio: "4000",
+              },
+              {
+                id: 11,
+                nombre: "PULLMAN 4",
+                color: "#5C9BD3",
+                precio: "3800",
+              },
+              {
+                id: 12,
+                nombre: "PULLMAN 5",
+                color: "#305678",
+                precio: "3600",
+              },
+            ]}
+          />
+        }
+      /> */}
       <Route path="/ubicaciones" element={<Ubicaciones />} />
       <Route path="/*" element={<Navigate to="/" />} />
     </Routes>

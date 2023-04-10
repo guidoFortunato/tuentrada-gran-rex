@@ -5,12 +5,14 @@ import "../css/footer.css";
 // import { SliderDestacado } from "../components/";
 
 export const Home = () => {
-  
   return (
     <>
       <header className="animate__animated animate__fadeIn animate__fast">
         <div className="header-home">
-          <h1 className="titulo-principal animate__animated animate__fadeInDown animate__fast	 "> <strong> Gran Rex</strong></h1>
+          <h1 className="titulo-principal animate__animated animate__fadeInDown animate__fast	 ">
+            {" "}
+            <strong> Gran Rex</strong>
+          </h1>
           <FormBusqueda />
         </div>
       </header>
@@ -18,8 +20,11 @@ export const Home = () => {
         <div className="container">
           <div className="row animate__animated animate__fadeIn animate__fast	 ">
             <div className="col-12 text-center mt-3 ">
-              <h2 style={{ fontSize: "30px" }} className="my-3 animate__fadeIn animate__delay-1s tittle-h2" >
-            Próximos eventos
+              <h2
+                style={{ fontSize: "30px" }}
+                className="my-3 animate__fadeIn animate__delay-1s tittle-h2"
+              >
+                Próximos eventos
               </h2>
             </div>
           </div>
@@ -172,9 +177,7 @@ export const Home = () => {
               time={"20:00HS"}
             />
             <CardEvento
-              linkEvento={
-                "/shows/daniel-agostini/15"
-              }
+              linkEvento={"/shows/daniel-agostini/15"}
               img={
                 "https://www.tuentrada.com/teatro/gran-rex/imagenes/daniel_agostini.webp"
               }
@@ -182,6 +185,17 @@ export const Home = () => {
               title={"DANIEL AGOSTINI"}
               date={"DOMINGO 10 DE SEPTIEMBRE"}
               time={"20:00HS"}
+            />
+            <CardEvento
+              linkEvento={"/shows/chili-feranndez/16"}
+              img={
+                "https://www.tuentrada.com/teatro/gran-rex/imagenes/chili-fernandez.webp"
+              }
+              status={"Próximamente"}
+              title={"Chili Fernandez"}
+              date={"Sábado 16 DE SEPTIEMBRE"}
+              time={"20:00HS"}
+              disabled={true}
             />
           </div>
         </div>
