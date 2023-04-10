@@ -9,15 +9,15 @@ export const Home = () => {
     <>
       <header className="animate__animated animate__fadeIn animate__fast">
         <div className="header-home">
-          <h1 className="titulo-principal animate__animated animate__fadeInDown animate__delay-1s	 "> <strong> Gran Rex</strong></h1>
+          <h1 className="titulo-principal animate__animated animate__fadeInDown animate__fast	 "> <strong> Gran Rex</strong></h1>
           <FormBusqueda />
         </div>
       </header>
       <main>
         <div className="container">
-          <div className="row animate__animated animate__fadeIn animate__delay-2s	 ">
+          <div className="row animate__animated animate__fadeIn animate__fast	 ">
             <div className="col-12 text-center mt-3 ">
-              <h2 style={{ fontSize: "35px" }} className="my-3">
+              <h2 style={{ fontSize: "35px" }} className="my-3 animate__fadeIn animate__delay-1s" >
             Próximos eventos
               </h2>
             </div>
@@ -27,7 +27,7 @@ export const Home = () => {
             <SliderDestacado />
           </div> */}
 
-          <div className="row sin-padding-right-left animate__animated animate__fadeIn  animate__delay-2s ">
+          <div className="row sin-padding-right-left animate__animated animate__fadeIn  animate__delay-1s ">
             <CardEvento
               linkEvento={"/shows/el-zar/1"}
               img={

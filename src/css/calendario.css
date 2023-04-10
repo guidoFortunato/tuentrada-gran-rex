@@ -36,6 +36,7 @@ fieldset:disabled .btn {
 
 .container-calendar {
   background-color: white;
+padding: 10px;
 }
 
 .fc-next-button, .fc-prev-button  {
