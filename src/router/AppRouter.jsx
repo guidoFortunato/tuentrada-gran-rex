@@ -48,6 +48,80 @@ export const AppRouter = () => {
             
             `}
             href={"https://www.ticketek.com.ar/el-zar/teatro-gran-rex"}
+            ubicaciones={[
+              {
+                id: 1,
+                nombre: "PLATEA PLATINO",
+                color: "#E9C28C",
+                precio: "6000",
+              },
+              {
+                id: 2,
+                nombre: "PLATEA ORO",
+                color: "#F7E686",
+                precio: "5500",
+              },
+              {
+                id: 3,
+                nombre: "PLATEA PLATA",
+                color: "#D58500",
+                precio: "5000",
+              },
+              {
+                id: 4,
+                nombre: "PLATEA BRONCE",
+                color: "#F1D000",
+                precio: "4500",
+              },
+              {
+                id: 5,
+                nombre: "PLATEA BRONCE LATERAL",
+                color: "#C32520",
+                precio: "4100",
+              },
+              {
+                id: 6,
+                nombre: "SUPER PULLMAN 1",
+                color: "#E9CADF",
+                precio: "4300",
+              },
+              {
+                id: 7,
+                nombre: "SUPER PULLMAN 2",
+                color: "#D07EAE",
+                precio: "4000",
+              },
+              {
+                id: 8,
+                nombre: "PULLMAN 1",
+                color: "#DCE49F",
+                precio: "4400",
+              },
+              {
+                id: 9,
+                nombre: "PULLMAN 2",
+                color: "#8DB235",
+                precio: "4200",
+              },
+              {
+                id: 10,
+                nombre: "PULLMAN 3",
+                color: "#CAE4F6",
+                precio: "4000",
+              },
+              {
+                id: 11,
+                nombre: "PULLMAN 4",
+                color: "#5C9BD3",
+                precio: "3800",
+              },
+              {
+                id: 12,
+                nombre: "PULLMAN 5",
+                color: "#305678",
+                precio: "3600",
+              },
+            ]}
           />
         }
       />
@@ -76,6 +150,80 @@ export const AppRouter = () => {
             
             `}
             href={"https://www.ticketek.com.ar/sergio-torres/teatro-gran-rex"}
+            ubicaciones={[
+              {
+                id: 1,
+                nombre: "PLATEA PLATINO",
+                color: "#E9C28C",
+                precio: "6000",
+              },
+              {
+                id: 2,
+                nombre: "PLATEA ORO",
+                color: "#F7E686",
+                precio: "5500",
+              },
+              {
+                id: 3,
+                nombre: "PLATEA PLATA",
+                color: "#D58500",
+                precio: "5000",
+              },
+              {
+                id: 4,
+                nombre: "PLATEA BRONCE",
+                color: "#F1D000",
+                precio: "4500",
+              },
+              {
+                id: 5,
+                nombre: "PLATEA BRONCE LATERAL",
+                color: "#C32520",
+                precio: "4100",
+              },
+              {
+                id: 6,
+                nombre: "SUPER PULLMAN 1",
+                color: "#E9CADF",
+                precio: "4300",
+              },
+              {
+                id: 7,
+                nombre: "SUPER PULLMAN 2",
+                color: "#D07EAE",
+                precio: "4000",
+              },
+              {
+                id: 8,
+                nombre: "PULLMAN 1",
+                color: "#DCE49F",
+                precio: "4400",
+              },
+              {
+                id: 9,
+                nombre: "PULLMAN 2",
+                color: "#8DB235",
+                precio: "4200",
+              },
+              {
+                id: 10,
+                nombre: "PULLMAN 3",
+                color: "#CAE4F6",
+                precio: "4000",
+              },
+              {
+                id: 11,
+                nombre: "PULLMAN 4",
+                color: "#5C9BD3",
+                precio: "3800",
+              },
+              {
+                id: 12,
+                nombre: "PULLMAN 5",
+                color: "#305678",
+                precio: "3600",
+              },
+            ]}
           />
         }
       />
@@ -208,6 +356,80 @@ export const AppRouter = () => {
             href={
               "https://www.ticketek.com.ar/queen-por-master-stroke/teatro-gran-rex"
             }
+            ubicaciones={[
+              {
+                id: 1,
+                nombre: "PLATEA PLATINO",
+                color: "#E9C28C",
+                precio: "6000",
+              },
+              {
+                id: 2,
+                nombre: "PLATEA ORO",
+                color: "#F7E686",
+                precio: "5500",
+              },
+              {
+                id: 3,
+                nombre: "PLATEA PLATA",
+                color: "#D58500",
+                precio: "5000",
+              },
+              {
+                id: 4,
+                nombre: "PLATEA BRONCE",
+                color: "#F1D000",
+                precio: "4500",
+              },
+              {
+                id: 5,
+                nombre: "PLATEA BRONCE LATERAL",
+                color: "#C32520",
+                precio: "4100",
+              },
+              {
+                id: 6,
+                nombre: "SUPER PULLMAN 1",
+                color: "#E9CADF",
+                precio: "4300",
+              },
+              {
+                id: 7,
+                nombre: "SUPER PULLMAN 2",
+                color: "#D07EAE",
+                precio: "4000",
+              },
+              {
+                id: 8,
+                nombre: "PULLMAN 1",
+                color: "#DCE49F",
+                precio: "4400",
+              },
+              {
+                id: 9,
+                nombre: "PULLMAN 2",
+                color: "#8DB235",
+                precio: "4200",
+              },
+              {
+                id: 10,
+                nombre: "PULLMAN 3",
+                color: "#CAE4F6",
+                precio: "4000",
+              },
+              {
+                id: 11,
+                nombre: "PULLMAN 4",
+                color: "#5C9BD3",
+                precio: "3800",
+              },
+              {
+                id: 12,
+                nombre: "PULLMAN 5",
+                color: "#305678",
+                precio: "3600",
+              },
+            ]}
           />
         }
       />
@@ -236,6 +458,80 @@ export const AppRouter = () => {
             
             `}
             href={"https://www.ticketek.com.ar/damian-cordoba/teatro-gran-rex"}
+            ubicaciones={[
+              {
+                id: 1,
+                nombre: "PLATEA PLATINO",
+                color: "#E9C28C",
+                precio: "6000",
+              },
+              {
+                id: 2,
+                nombre: "PLATEA ORO",
+                color: "#F7E686",
+                precio: "5500",
+              },
+              {
+                id: 3,
+                nombre: "PLATEA PLATA",
+                color: "#D58500",
+                precio: "5000",
+              },
+              {
+                id: 4,
+                nombre: "PLATEA BRONCE",
+                color: "#F1D000",
+                precio: "4500",
+              },
+              {
+                id: 5,
+                nombre: "PLATEA BRONCE LATERAL",
+                color: "#C32520",
+                precio: "4100",
+              },
+              {
+                id: 6,
+                nombre: "SUPER PULLMAN 1",
+                color: "#E9CADF",
+                precio: "4300",
+              },
+              {
+                id: 7,
+                nombre: "SUPER PULLMAN 2",
+                color: "#D07EAE",
+                precio: "4000",
+              },
+              {
+                id: 8,
+                nombre: "PULLMAN 1",
+                color: "#DCE49F",
+                precio: "4400",
+              },
+              {
+                id: 9,
+                nombre: "PULLMAN 2",
+                color: "#8DB235",
+                precio: "4200",
+              },
+              {
+                id: 10,
+                nombre: "PULLMAN 3",
+                color: "#CAE4F6",
+                precio: "4000",
+              },
+              {
+                id: 11,
+                nombre: "PULLMAN 4",
+                color: "#5C9BD3",
+                precio: "3800",
+              },
+              {
+                id: 12,
+                nombre: "PULLMAN 5",
+                color: "#305678",
+                precio: "3600",
+              },
+            ]}
           />
         }
       />
@@ -266,6 +562,80 @@ export const AppRouter = () => {
             href={
               "https://www.ticketek.com.ar/international-festival-ballet-peace/teatro-gran-rex"
             }
+            ubicaciones={[
+              {
+                id: 1,
+                nombre: "PLATEA PLATINO",
+                color: "#E9C28C",
+                precio: "6000",
+              },
+              {
+                id: 2,
+                nombre: "PLATEA ORO",
+                color: "#F7E686",
+                precio: "5500",
+              },
+              {
+                id: 3,
+                nombre: "PLATEA PLATA",
+                color: "#D58500",
+                precio: "5000",
+              },
+              {
+                id: 4,
+                nombre: "PLATEA BRONCE",
+                color: "#F1D000",
+                precio: "4500",
+              },
+              {
+                id: 5,
+                nombre: "PLATEA BRONCE LATERAL",
+                color: "#C32520",
+                precio: "4100",
+              },
+              {
+                id: 6,
+                nombre: "SUPER PULLMAN 1",
+                color: "#E9CADF",
+                precio: "4300",
+              },
+              {
+                id: 7,
+                nombre: "SUPER PULLMAN 2",
+                color: "#D07EAE",
+                precio: "4000",
+              },
+              {
+                id: 8,
+                nombre: "PULLMAN 1",
+                color: "#DCE49F",
+                precio: "4400",
+              },
+              {
+                id: 9,
+                nombre: "PULLMAN 2",
+                color: "#8DB235",
+                precio: "4200",
+              },
+              {
+                id: 10,
+                nombre: "PULLMAN 3",
+                color: "#CAE4F6",
+                precio: "4000",
+              },
+              {
+                id: 11,
+                nombre: "PULLMAN 4",
+                color: "#5C9BD3",
+                precio: "3800",
+              },
+              {
+                id: 12,
+                nombre: "PULLMAN 5",
+                color: "#305678",
+                precio: "3600",
+              },
+            ]}
           />
         }
       />
@@ -294,6 +664,80 @@ export const AppRouter = () => {
             
             `}
             href={"https://www.ticketek.com.ar/dale-qva/teatro-gran-rex"}
+            ubicaciones={[
+              {
+                id: 1,
+                nombre: "PLATEA PLATINO",
+                color: "#E9C28C",
+                precio: "6000",
+              },
+              {
+                id: 2,
+                nombre: "PLATEA ORO",
+                color: "#F7E686",
+                precio: "5500",
+              },
+              {
+                id: 3,
+                nombre: "PLATEA PLATA",
+                color: "#D58500",
+                precio: "5000",
+              },
+              {
+                id: 4,
+                nombre: "PLATEA BRONCE",
+                color: "#F1D000",
+                precio: "4500",
+              },
+              {
+                id: 5,
+                nombre: "PLATEA BRONCE LATERAL",
+                color: "#C32520",
+                precio: "4100",
+              },
+              {
+                id: 6,
+                nombre: "SUPER PULLMAN 1",
+                color: "#E9CADF",
+                precio: "4300",
+              },
+              {
+                id: 7,
+                nombre: "SUPER PULLMAN 2",
+                color: "#D07EAE",
+                precio: "4000",
+              },
+              {
+                id: 8,
+                nombre: "PULLMAN 1",
+                color: "#DCE49F",
+                precio: "4400",
+              },
+              {
+                id: 9,
+                nombre: "PULLMAN 2",
+                color: "#8DB235",
+                precio: "4200",
+              },
+              {
+                id: 10,
+                nombre: "PULLMAN 3",
+                color: "#CAE4F6",
+                precio: "4000",
+              },
+              {
+                id: 11,
+                nombre: "PULLMAN 4",
+                color: "#5C9BD3",
+                precio: "3800",
+              },
+              {
+                id: 12,
+                nombre: "PULLMAN 5",
+                color: "#305678",
+                precio: "3600",
+              },
+            ]}
           />
         }
       />
@@ -320,6 +764,80 @@ export const AppRouter = () => {
             
             `}
             href={"https://www.ticketek.com.ar/turf/teatro-gran-rex"}
+            ubicaciones={[
+              {
+                id: 1,
+                nombre: "PLATEA PLATINO",
+                color: "#E9C28C",
+                precio: "6000",
+              },
+              {
+                id: 2,
+                nombre: "PLATEA ORO",
+                color: "#F7E686",
+                precio: "5500",
+              },
+              {
+                id: 3,
+                nombre: "PLATEA PLATA",
+                color: "#D58500",
+                precio: "5000",
+              },
+              {
+                id: 4,
+                nombre: "PLATEA BRONCE",
+                color: "#F1D000",
+                precio: "4500",
+              },
+              {
+                id: 5,
+                nombre: "PLATEA BRONCE LATERAL",
+                color: "#C32520",
+                precio: "4100",
+              },
+              {
+                id: 6,
+                nombre: "SUPER PULLMAN 1",
+                color: "#E9CADF",
+                precio: "4300",
+              },
+              {
+                id: 7,
+                nombre: "SUPER PULLMAN 2",
+                color: "#D07EAE",
+                precio: "4000",
+              },
+              {
+                id: 8,
+                nombre: "PULLMAN 1",
+                color: "#DCE49F",
+                precio: "4400",
+              },
+              {
+                id: 9,
+                nombre: "PULLMAN 2",
+                color: "#8DB235",
+                precio: "4200",
+              },
+              {
+                id: 10,
+                nombre: "PULLMAN 3",
+                color: "#CAE4F6",
+                precio: "4000",
+              },
+              {
+                id: 11,
+                nombre: "PULLMAN 4",
+                color: "#5C9BD3",
+                precio: "3800",
+              },
+              {
+                id: 12,
+                nombre: "PULLMAN 5",
+                color: "#305678",
+                precio: "3600",
+              },
+            ]}
           />
         }
       />
@@ -348,6 +866,80 @@ export const AppRouter = () => {
             
             `}
             href={"https://www.ticketek.com.ar/beats/teatro-gran-rex"}
+            ubicaciones={[
+              {
+                id: 1,
+                nombre: "PLATEA PLATINO",
+                color: "#E9C28C",
+                precio: "6000",
+              },
+              {
+                id: 2,
+                nombre: "PLATEA ORO",
+                color: "#F7E686",
+                precio: "5500",
+              },
+              {
+                id: 3,
+                nombre: "PLATEA PLATA",
+                color: "#D58500",
+                precio: "5000",
+              },
+              {
+                id: 4,
+                nombre: "PLATEA BRONCE",
+                color: "#F1D000",
+                precio: "4500",
+              },
+              {
+                id: 5,
+                nombre: "PLATEA BRONCE LATERAL",
+                color: "#C32520",
+                precio: "4100",
+              },
+              {
+                id: 6,
+                nombre: "SUPER PULLMAN 1",
+                color: "#E9CADF",
+                precio: "4300",
+              },
+              {
+                id: 7,
+                nombre: "SUPER PULLMAN 2",
+                color: "#D07EAE",
+                precio: "4000",
+              },
+              {
+                id: 8,
+                nombre: "PULLMAN 1",
+                color: "#DCE49F",
+                precio: "4400",
+              },
+              {
+                id: 9,
+                nombre: "PULLMAN 2",
+                color: "#8DB235",
+                precio: "4200",
+              },
+              {
+                id: 10,
+                nombre: "PULLMAN 3",
+                color: "#CAE4F6",
+                precio: "4000",
+              },
+              {
+                id: 11,
+                nombre: "PULLMAN 4",
+                color: "#5C9BD3",
+                precio: "3800",
+              },
+              {
+                id: 12,
+                nombre: "PULLMAN 5",
+                color: "#305678",
+                precio: "3600",
+              },
+            ]}
           />
         }
       />
@@ -380,6 +972,80 @@ export const AppRouter = () => {
             
             `}
             href={"https://www.ticketek.com.ar/massacre/teatro-gran-rex"}
+            ubicaciones={[
+              {
+                id: 1,
+                nombre: "PLATEA PLATINO",
+                color: "#E9C28C",
+                precio: "6000",
+              },
+              {
+                id: 2,
+                nombre: "PLATEA ORO",
+                color: "#F7E686",
+                precio: "5500",
+              },
+              {
+                id: 3,
+                nombre: "PLATEA PLATA",
+                color: "#D58500",
+                precio: "5000",
+              },
+              {
+                id: 4,
+                nombre: "PLATEA BRONCE",
+                color: "#F1D000",
+                precio: "4500",
+              },
+              {
+                id: 5,
+                nombre: "PLATEA BRONCE LATERAL",
+                color: "#C32520",
+                precio: "4100",
+              },
+              {
+                id: 6,
+                nombre: "SUPER PULLMAN 1",
+                color: "#E9CADF",
+                precio: "4300",
+              },
+              {
+                id: 7,
+                nombre: "SUPER PULLMAN 2",
+                color: "#D07EAE",
+                precio: "4000",
+              },
+              {
+                id: 8,
+                nombre: "PULLMAN 1",
+                color: "#DCE49F",
+                precio: "4400",
+              },
+              {
+                id: 9,
+                nombre: "PULLMAN 2",
+                color: "#8DB235",
+                precio: "4200",
+              },
+              {
+                id: 10,
+                nombre: "PULLMAN 3",
+                color: "#CAE4F6",
+                precio: "4000",
+              },
+              {
+                id: 11,
+                nombre: "PULLMAN 4",
+                color: "#5C9BD3",
+                precio: "3800",
+              },
+              {
+                id: 12,
+                nombre: "PULLMAN 5",
+                color: "#305678",
+                precio: "3600",
+              },
+            ]}
           />
         }
       />
@@ -409,6 +1075,80 @@ export const AppRouter = () => {
             href={
               "https://www.ticketek.com.ar/jd-pantoja-kim-loaiza/teatro-gran-rex"
             }
+            ubicaciones={[
+              {
+                id: 1,
+                nombre: "PLATEA PLATINO",
+                color: "#E9C28C",
+                precio: "6000",
+              },
+              {
+                id: 2,
+                nombre: "PLATEA ORO",
+                color: "#F7E686",
+                precio: "5500",
+              },
+              {
+                id: 3,
+                nombre: "PLATEA PLATA",
+                color: "#D58500",
+                precio: "5000",
+              },
+              {
+                id: 4,
+                nombre: "PLATEA BRONCE",
+                color: "#F1D000",
+                precio: "4500",
+              },
+              {
+                id: 5,
+                nombre: "PLATEA BRONCE LATERAL",
+                color: "#C32520",
+                precio: "4100",
+              },
+              {
+                id: 6,
+                nombre: "SUPER PULLMAN 1",
+                color: "#E9CADF",
+                precio: "4300",
+              },
+              {
+                id: 7,
+                nombre: "SUPER PULLMAN 2",
+                color: "#D07EAE",
+                precio: "4000",
+              },
+              {
+                id: 8,
+                nombre: "PULLMAN 1",
+                color: "#DCE49F",
+                precio: "4400",
+              },
+              {
+                id: 9,
+                nombre: "PULLMAN 2",
+                color: "#8DB235",
+                precio: "4200",
+              },
+              {
+                id: 10,
+                nombre: "PULLMAN 3",
+                color: "#CAE4F6",
+                precio: "4000",
+              },
+              {
+                id: 11,
+                nombre: "PULLMAN 4",
+                color: "#5C9BD3",
+                precio: "3800",
+              },
+              {
+                id: 12,
+                nombre: "PULLMAN 5",
+                color: "#305678",
+                precio: "3600",
+              },
+            ]}
           />
         }
       />
@@ -439,6 +1179,80 @@ export const AppRouter = () => {
             href={
               "https://www.ticketek.com.ar/sergio-galleguillo/teatro-gran-rex"
             }
+            ubicaciones={[
+              {
+                id: 1,
+                nombre: "PLATEA PLATINO",
+                color: "#E9C28C",
+                precio: "6000",
+              },
+              {
+                id: 2,
+                nombre: "PLATEA ORO",
+                color: "#F7E686",
+                precio: "5500",
+              },
+              {
+                id: 3,
+                nombre: "PLATEA PLATA",
+                color: "#D58500",
+                precio: "5000",
+              },
+              {
+                id: 4,
+                nombre: "PLATEA BRONCE",
+                color: "#F1D000",
+                precio: "4500",
+              },
+              {
+                id: 5,
+                nombre: "PLATEA BRONCE LATERAL",
+                color: "#C32520",
+                precio: "4100",
+              },
+              {
+                id: 6,
+                nombre: "SUPER PULLMAN 1",
+                color: "#E9CADF",
+                precio: "4300",
+              },
+              {
+                id: 7,
+                nombre: "SUPER PULLMAN 2",
+                color: "#D07EAE",
+                precio: "4000",
+              },
+              {
+                id: 8,
+                nombre: "PULLMAN 1",
+                color: "#DCE49F",
+                precio: "4400",
+              },
+              {
+                id: 9,
+                nombre: "PULLMAN 2",
+                color: "#8DB235",
+                precio: "4200",
+              },
+              {
+                id: 10,
+                nombre: "PULLMAN 3",
+                color: "#CAE4F6",
+                precio: "4000",
+              },
+              {
+                id: 11,
+                nombre: "PULLMAN 4",
+                color: "#5C9BD3",
+                precio: "3800",
+              },
+              {
+                id: 12,
+                nombre: "PULLMAN 5",
+                color: "#305678",
+                precio: "3600",
+              },
+            ]}
           />
         }
       />
@@ -470,6 +1284,80 @@ export const AppRouter = () => {
             
             `}
             href={"https://www.ticketek.com.ar/matilda/teatro-gran-rex"}
+            ubicaciones={[
+              {
+                id: 1,
+                nombre: "PLATEA PLATINO",
+                color: "#E9C28C",
+                precio: "6000",
+              },
+              {
+                id: 2,
+                nombre: "PLATEA ORO",
+                color: "#F7E686",
+                precio: "5500",
+              },
+              {
+                id: 3,
+                nombre: "PLATEA PLATA",
+                color: "#D58500",
+                precio: "5000",
+              },
+              {
+                id: 4,
+                nombre: "PLATEA BRONCE",
+                color: "#F1D000",
+                precio: "4500",
+              },
+              {
+                id: 5,
+                nombre: "PLATEA BRONCE LATERAL",
+                color: "#C32520",
+                precio: "4100",
+              },
+              {
+                id: 6,
+                nombre: "SUPER PULLMAN 1",
+                color: "#E9CADF",
+                precio: "4300",
+              },
+              {
+                id: 7,
+                nombre: "SUPER PULLMAN 2",
+                color: "#D07EAE",
+                precio: "4000",
+              },
+              {
+                id: 8,
+                nombre: "PULLMAN 1",
+                color: "#DCE49F",
+                precio: "4400",
+              },
+              {
+                id: 9,
+                nombre: "PULLMAN 2",
+                color: "#8DB235",
+                precio: "4200",
+              },
+              {
+                id: 10,
+                nombre: "PULLMAN 3",
+                color: "#CAE4F6",
+                precio: "4000",
+              },
+              {
+                id: 11,
+                nombre: "PULLMAN 4",
+                color: "#5C9BD3",
+                precio: "3800",
+              },
+              {
+                id: 12,
+                nombre: "PULLMAN 5",
+                color: "#305678",
+                precio: "3600",
+              },
+            ]}
           />
         }
       />
@@ -496,13 +1384,87 @@ export const AppRouter = () => {
             
             `}
             href={"https://www.ticketek.com.ar/bryndis/teatro-gran-rex"}
+            ubicaciones={[
+              {
+                id: 1,
+                nombre: "PLATEA PLATINO",
+                color: "#E9C28C",
+                precio: "6000",
+              },
+              {
+                id: 2,
+                nombre: "PLATEA ORO",
+                color: "#F7E686",
+                precio: "5500",
+              },
+              {
+                id: 3,
+                nombre: "PLATEA PLATA",
+                color: "#D58500",
+                precio: "5000",
+              },
+              {
+                id: 4,
+                nombre: "PLATEA BRONCE",
+                color: "#F1D000",
+                precio: "4500",
+              },
+              {
+                id: 5,
+                nombre: "PLATEA BRONCE LATERAL",
+                color: "#C32520",
+                precio: "4100",
+              },
+              {
+                id: 6,
+                nombre: "SUPER PULLMAN 1",
+                color: "#E9CADF",
+                precio: "4300",
+              },
+              {
+                id: 7,
+                nombre: "SUPER PULLMAN 2",
+                color: "#D07EAE",
+                precio: "4000",
+              },
+              {
+                id: 8,
+                nombre: "PULLMAN 1",
+                color: "#DCE49F",
+                precio: "4400",
+              },
+              {
+                id: 9,
+                nombre: "PULLMAN 2",
+                color: "#8DB235",
+                precio: "4200",
+              },
+              {
+                id: 10,
+                nombre: "PULLMAN 3",
+                color: "#CAE4F6",
+                precio: "4000",
+              },
+              {
+                id: 11,
+                nombre: "PULLMAN 4",
+                color: "#5C9BD3",
+                precio: "3800",
+              },
+              {
+                id: 12,
+                nombre: "PULLMAN 5",
+                color: "#305678",
+                precio: "3600",
+              },
+            ]}
           />
         }
       />
 
       {/* EVENTO 15 DANIEL AGOSTINI */}
 
-      {/* <Route
+      <Route
         path="/shows/daniel-agostini/15"
         element={
           <DetalleEvento
@@ -526,9 +1488,83 @@ export const AppRouter = () => {
             href={
               "https://www.tuentrada.com/eventos/detalle/Daniel-Agostini/553776971040"
             }
+            ubicaciones={[
+              {
+                id: 1,
+                nombre: "PLATEA PLATINO",
+                color: "#E9C28C",
+                precio: "6000",
+              },
+              {
+                id: 2,
+                nombre: "PLATEA ORO",
+                color: "#F7E686",
+                precio: "5500",
+              },
+              {
+                id: 3,
+                nombre: "PLATEA PLATA",
+                color: "#D58500",
+                precio: "5000",
+              },
+              {
+                id: 4,
+                nombre: "PLATEA BRONCE",
+                color: "#F1D000",
+                precio: "4500",
+              },
+              {
+                id: 5,
+                nombre: "PLATEA BRONCE LATERAL",
+                color: "#C32520",
+                precio: "4100",
+              },
+              {
+                id: 6,
+                nombre: "SUPER PULLMAN 1",
+                color: "#E9CADF",
+                precio: "4300",
+              },
+              {
+                id: 7,
+                nombre: "SUPER PULLMAN 2",
+                color: "#D07EAE",
+                precio: "4000",
+              },
+              {
+                id: 8,
+                nombre: "PULLMAN 1",
+                color: "#DCE49F",
+                precio: "4400",
+              },
+              {
+                id: 9,
+                nombre: "PULLMAN 2",
+                color: "#8DB235",
+                precio: "4200",
+              },
+              {
+                id: 10,
+                nombre: "PULLMAN 3",
+                color: "#CAE4F6",
+                precio: "4000",
+              },
+              {
+                id: 11,
+                nombre: "PULLMAN 4",
+                color: "#5C9BD3",
+                precio: "3800",
+              },
+              {
+                id: 12,
+                nombre: "PULLMAN 5",
+                color: "#305678",
+                precio: "3600",
+              },
+            ]}
           />
         }
-      /> */}
+      />
       <Route path="/ubicaciones" element={<Ubicaciones />} />
       <Route path="/*" element={<Navigate to="/" />} />
     </Routes>
