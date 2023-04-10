@@ -8,7 +8,7 @@ const eventosTotales = [
   {
     date: "SÁBADO 15 DE ABRIL",
     id: 1,
-    img: "https://www.tuentrada.com/teatro/gran-rex/imagenes/El_zar.webp",
+    img: "https://www.tuentrada.com/teatro/gran-rex/imagenes/el_zar.webp",
     linkEvento: "/shows/el-zar/1",
     name: "el zar",
     status: "Disponible",

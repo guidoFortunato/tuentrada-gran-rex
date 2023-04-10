@@ -37,7 +37,7 @@ export const Home = () => {
             <CardEvento
               linkEvento={"/shows/el-zar/1"}
               img={
-                "https://www.tuentrada.com/teatro/gran-rex/imagenes/El_zar.webp"
+                "https://www.tuentrada.com/teatro/gran-rex/imagenes/el_zar.webp"
               }
               status={"Disponible"}
               title={"EL ZAR"}
