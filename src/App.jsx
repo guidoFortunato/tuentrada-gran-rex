@@ -1,6 +1,7 @@
 import { Footer, Navbar } from "./components";
 import { AppRouter } from "./router/AppRouter";
 import 'animate.css';
+
 function App() {
   return (
     <>

@@ -819,14 +819,22 @@ export const Calendario = () => {
 
   return (
     <>
-      <div className="container container-calendar animate__animated animate__fadeIn animate__fast">
-        <div className="row mt-5">
+      <div className="container animate__animated animate__fadeIn animate__fast">
+      <div className="row animate__animated animate__fadeIn ">
+            <div className="col-12 text-center mt-3 ">
+              <h2 style={{ fontSize: "35px" }} className="my-3">
+           Temporada
+              </h2>
+            </div>
+          </div>
+       
+        <div className="row mt-5 container-calendar">
           <div className="col-12">
             <FullCalendar
             
               plugins={fullPlugins}
-              initialView={ window.innerWidth < 1400 ? "listMonth" : "dayGridMonth" }
-              headerToolbar={ window.innerWidth < 1400 ? headerToolbarOptionsResponsive : headerToolbarOptionsDesktop }
+              initialView={ window.innerWidth < 1000 ? "listMonth" : "dayGridMonth" }
+              headerToolbar={ window.innerWidth < 1000 ? headerToolbarOptionsResponsive : headerToolbarOptionsDesktop }
               height={"70vh"}
               titleFormat={handleTitle}
               eventBackgroundColor="#BA2828"

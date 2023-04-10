@@ -5,11 +5,16 @@ export const ComoLlegar = () => {
   return (
     <>
       <div className="container">
-        <h2 style={{ fontSize: "35px" }} className="my-3 heading">
-          Cómo llegar
-        </h2>
+      <div className="row animate__animated animate__fadeIn ">
+            <div className="col-12 text-center mt-3 ">
+              <h2 style={{ fontSize: "35px" }} className="my-3">
+            Cómo llegar
+              </h2>
+            </div>
+          </div>
 
-        <div className="row">
+
+        <div className="row animate__animated animate__fadeIn ">
           <article className="col-12 col-lg-6 " style={{ textAlign: "center" }}>
             <div>
               <p className="parrafo-historia">
