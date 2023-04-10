@@ -4,6 +4,8 @@ import { TablaPrecios } from "./TablaPrecios";
 
 import DOMPurify from "dompurify";
 
+import imgRex from "../assets/images/rex2.jpg";
+
 import "../css/detalleevento.css";
 
 
@@ -62,8 +64,8 @@ export const DetalleEvento = ({ title, description, href, img, ubicaciones }) =>
               </div>
             </div>
           </div>
-          <div className="row">
-            <div className="col-12 col-lg-10 my-5">
+          <div className="row justify-content-center">
+            <div className="col-12 col-lg-8 my-5">
               <h2
                 style={{ fontSize: "20px" }}
               >
@@ -72,8 +74,8 @@ export const DetalleEvento = ({ title, description, href, img, ubicaciones }) =>
               {/* <hr /> */}
               <TablaPrecios ubicaciones={ubicaciones} />
             </div>
-            <div className="col-12 col-lg-2 my-5 text-center">
-              <img src="https://www.tuentrada.com/evento/mappa/img/rex.webp" alt="teatro gran rex" className="img-fluid" />
+            <div className="col-12 col-lg-4 my-5 text-center">
+              <img src={imgRex} alt="teatro gran rex" className="img-fluid" />
               <button className="btn-general mt-3">Ver Ubicaciones</button>
             </div>
           </div>
