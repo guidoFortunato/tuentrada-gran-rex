@@ -757,7 +757,7 @@ const fullEvents = [
   {
     id: 89,
     date: "2023-09-16",
-    start: "2023-09-16T20:00:00",
+    start: "2023-09-16T20:30:00",
     end: "-",
     title: "Chili Fernandez",
     url: "/shows/chili-fernandez/16",

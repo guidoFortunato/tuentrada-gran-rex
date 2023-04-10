@@ -162,7 +162,7 @@ const eventosTotales = [
     linkEvento: "/shows/chili-fernandez/16",
     name: "chili fernandez",
     status: "Próximamente",
-    time: "20:00HS",
+    time: "20:30HS",
     disabled: true
   },
 ];

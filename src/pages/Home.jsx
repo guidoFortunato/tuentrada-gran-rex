@@ -194,7 +194,7 @@ export const Home = () => {
               status={"Próximamente"}
               title={"Chili Fernandez"}
               date={"Sábado 16 DE SEPTIEMBRE"}
-              time={"20:00HS"}
+              time={"20:30HS"}
               disabled={true}
             />
           </div>
