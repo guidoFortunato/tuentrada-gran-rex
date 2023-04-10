@@ -1,3 +1,4 @@
+import { useEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import { TablaPrecios } from "./TablaPrecios";
 
@@ -5,10 +6,15 @@ import DOMPurify from "dompurify";
 
 import "../css/detalleevento.css";
 
-export const DetalleEvento = ({ title, description, href, img, ubicaciones }) => {
-  const navigate = useNavigate();
 
+export const DetalleEvento = ({ title, description, href, img, ubicaciones }) => {
+  const eventDetailRef = useRef(null);
+  const navigate = useNavigate();
   const lastPath = localStorage.getItem("lastPath") || "/";
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [eventDetailRef]);
 
   const returnLastPath = () => {
     navigate(lastPath);
@@ -16,7 +22,7 @@ export const DetalleEvento = ({ title, description, href, img, ubicaciones }) =>
 
   return (
     <>
-      <div className="container my-5 px-5 ">
+      <div className="container my-5 px-5" ref={eventDetailRef}>
         <h1 style={{ fontSize: "25px" }}>{title.toUpperCase()}</h1>
         <hr />
         <div className="row">

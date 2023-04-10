@@ -31,21 +31,22 @@ fieldset:disabled .btn {
   pointer-events: none;
   background-color: #000000;
   border-color: #000000;
-  
 }
 
 .container-calendar {
   background-color: white;
-padding: 10px;
+  padding: 10px;
 }
 
-.fc-next-button, .fc-prev-button  {
+.fc-next-button,
+.fc-prev-button {
   border-color: #ba2828;
   color: #f5f2f0 !important;
   background-color: #ba2828 !important;
 }
 
-.fc-next-button:hover, .fc-prev-button:hover {
+.fc-next-button:hover,
+.fc-prev-button:hover {
   border-color: #ba2828;
   color: #ba2828 !important;
   background-color: #f5f2f0 !important;

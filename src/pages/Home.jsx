@@ -5,6 +5,7 @@ import "../css/footer.css";
 // import { SliderDestacado } from "../components/";
 
 export const Home = () => {
+  
   return (
     <>
       <header className="animate__animated animate__fadeIn animate__fast">
