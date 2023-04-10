@@ -18,7 +18,7 @@ export const FormBusqueda = () => {
   };
 
   return (
-    <form className="d-flex form-buscar" onSubmit={handleSubmit}>
+    <form className="d-flex form-buscar animate__animated animate__fadeIn animate__delay-1s" onSubmit={handleSubmit}>
       <div>
         <svg
           xmlns="http://www.w3.org/2000/svg"

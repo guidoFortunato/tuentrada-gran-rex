@@ -819,7 +819,7 @@ export const Calendario = () => {
 
   return (
     <>
-      <div className="container container-calendar">
+      <div className="container container-calendar animate__animated animate__fadeIn animate__fast">
         <div className="row mt-5">
           <div className="col-12">
             <FullCalendar
