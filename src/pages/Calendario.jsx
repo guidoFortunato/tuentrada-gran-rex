@@ -6,6 +6,8 @@ import interactionPlugin from "@fullcalendar/interaction";
 import bootstrap5Plugin from "@fullcalendar/bootstrap5";
 import listViewPlugin from "@fullcalendar/list";
 
+
+
 import { useLocation, useNavigate } from "react-router-dom";
 
 import "../css/calendario.css";
@@ -61,7 +63,7 @@ const fullEvents = [
   {
     id: 5,
     date: "2023-04-23",
-    start: "2023-04-23T20:00:00",
+    start: "2023-04-23T20:01:00",
     end: "-",
     title: "MIRANDA!",
     url: "/shows/miranda/3",
@@ -754,7 +756,10 @@ const fullEvents = [
     title: "DANIEL AGOSTINI",
     url: "https://www.tuentrada.com/eventos/detalle/Daniel-Agostini/553776971040",
   },
+
+  
 ];
+
 
 const fullPlugins = [
   dayGridPlugin,
@@ -763,6 +768,7 @@ const fullPlugins = [
   bootstrap5Plugin,
   listViewPlugin,
 ];
+
 
 const headerToolbarOptionsResponsive = {
   start: "title", // will normally be on the left. if RTL, will be on the right
@@ -775,6 +781,7 @@ const headerToolbarOptionsDesktop = {
   center: "title",
   end: "dayGridMonth", // will normally be on the right. if RTL, will be on the left
 };
+
 
 const buttonTextOptions = {
   today: "Hoy",
@@ -812,13 +819,22 @@ export const Calendario = () => {
 
   return (
     <>
-      <div className="container container-calendar">
-        <div className="row mt-5">
+      <div className="container animate__animated animate__fadeIn animate__fast">
+      <div className="row animate__animated animate__fadeIn ">
+            <div className="col-12 text-center mt-3 ">
+              <h2 style={{ fontSize: "35px" }} className="my-3">
+           Temporada
+              </h2>
+            </div>
+          </div>
+       
+        <div className="row mt-5 container-calendar">
           <div className="col-12">
             <FullCalendar
+            
               plugins={fullPlugins}
-              initialView={ window.innerWidth < 1400 ? "listMonth" : "dayGridMonth" }
-              headerToolbar={ window.innerWidth < 1400 ? headerToolbarOptionsResponsive : headerToolbarOptionsDesktop }
+              initialView={ window.innerWidth < 1000 ? "listMonth" : "dayGridMonth" }
+              headerToolbar={ window.innerWidth < 1000 ? headerToolbarOptionsResponsive : headerToolbarOptionsDesktop }
               height={"70vh"}
               titleFormat={handleTitle}
               eventBackgroundColor="#BA2828"
@@ -831,6 +847,7 @@ export const Calendario = () => {
               eventTimeFormat={ eventTimeFormat }
               noEventsContent={ "No hay eventos disponibles" }
             />
+            
           </div>
         </div>
       </div>
