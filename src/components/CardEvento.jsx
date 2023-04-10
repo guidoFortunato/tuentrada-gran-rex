@@ -3,6 +3,8 @@ import "../css/cardevento.css";
 
 export const CardEvento = ({ img, status, title, date, time, linkEvento }) => {
   const urlEvento = linkEvento?.split("/")[1] !== "shows";
+  const newDate = date.charAt(0).toUpperCase() + date.slice(1).toLowerCase();
+  const newTime = time.charAt(0).toUpperCase() + time.slice(1).toLowerCase();
 
   return (
     <article
@@ -57,8 +59,8 @@ export const CardEvento = ({ img, status, title, date, time, linkEvento }) => {
             <h3 style={{ fontWeight: "bold", padding: "5px" }}>
               {title.toUpperCase()}
             </h3>
-            <h4 style={{ padding: "5px 0" }}>
-              {date.toUpperCase()} <br /> {time.toUpperCase()}
+            <h4 style={{ padding: "5px 0", fontSize: "15px" }}>
+              {newDate} <br /> {newTime}
             </h4>
           </div>
         </Link>

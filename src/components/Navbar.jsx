@@ -3,6 +3,45 @@ import imgRex from "../assets/images/logo_rex_negro.jpg";
 import "../css/navbar.css";
 import { Link } from "react-router-dom";
 
+const itemsNavbar = [
+  {
+    id: 1,
+    name: "Inicio",
+    link: "/",
+    mostrar: true,
+  },
+  {
+    id: 2,
+    name: "Calendario",
+    link: "/calendario",
+    mostrar: true,
+  },
+  {
+    id: 3,
+    name: "Historia",
+    link: "/historia",
+    mostrar: false,
+  },
+  {
+    id: 4,
+    name: "Ubicaciones",
+    link: "/ubicaciones",
+    mostrar: false,
+  },
+  {
+    id: 5,
+    name: "Cómo llegar",
+    link: "/como-llegar",
+    mostrar: true,
+  },
+  {
+    id: 6,
+    name: "Preguntas frecuentes",
+    link: "/preguntas-frecuentes",
+    mostrar: false,
+  },
+];
+
 export const Navbar = () => {
   const [isNavCollapsed, setIsNavCollapsed] = useState(true);
 
@@ -24,65 +63,30 @@ export const Navbar = () => {
           aria-label="Toggle navigation"
           onClick={handleNavCollapse}
         >
-          <span style={{fontSize:"16px"}} className="navbar-toggler-icon"></span>
+          <span
+            style={{ fontSize: "16px" }}
+            className="navbar-toggler-icon"
+          ></span>
         </button>
-        <div className={`${isNavCollapsed ? 'collapse' : ''} navbar-collapse`} id="navbarNav">
-          <ul className="navbar-nav ms-auto" style={{fontSize:"16px"}}>
-            <li className="nav-item me-lg-4">
-              <Link
-                className="nav-link border-navbar-color border-navbar"
-                to="/"
-                onClick={handleNavCollapse}
-              >
-                <span className="size-item-nav">Inicio</span>
-              </Link>
-            </li>
-            <li className="nav-item me-lg-4">
-              <Link
-                className="nav-link border-navbar-color border-navbar"
-                to="/calendario"
-                onClick={handleNavCollapse}
-              >
-                <span className="size-item-nav">Calendario</span>
-              </Link>
-            </li>
-            {/* <li className="nav-item me-lg-4">
-              <Link
-                className="nav-link border-navbar-color border-navbar"
-                to="/historia"
-                onClick={handleNavCollapse}
-              >
-                <span className="size-item-nav">Historia</span>
-              </Link>
-            </li> */}
-            {/* <li className="nav-item me-lg-4">
-              <Link
-                className="nav-link border-navbar-color border-navbar"
-                to="/ubicaciones"
-                onClick={handleNavCollapse}
-              >
-                <span className="size-item-nav">Ubicaciones</span>
-              </Link>
-            </li> */}
-           
-            <li className="nav-item me-lg-4">
-              <Link
-                className="nav-link border-navbar-color border-navbar"
-                to="/como-llegar"
-                onClick={handleNavCollapse}
-              >
-                <span className="size-item-nav">Cómo llegar</span>
-              </Link>
-            </li>
-            {/* <li className="nav-item">
-              <Link
-                className="nav-link border-navbar-color border-navbar"
-                to="/preguntas-frecuentes"
-                onClick={handleNavCollapse}
-              >
-                <span className="size-item-nav">Preguntas frecuentes</span>
-              </Link>
-            </li> */}
+        <div
+          className={`${isNavCollapsed ? "collapse" : ""} navbar-collapse`}
+          id="navbarNav"
+        >
+          <ul className="navbar-nav ms-auto" style={{ fontSize: "16px" }}>
+            {itemsNavbar.map(
+              (item) =>
+                item.mostrar && (
+                  <li className="nav-item me-lg-4" key={item.id}>
+                    <Link
+                      className="nav-link border-navbar-color border-navbar"
+                      to={item.link}
+                      onClick={handleNavCollapse}
+                    >
+                      <span className="size-item-nav">{item.name}</span>
+                    </Link>
+                  </li>
+                )
+            )}
           </ul>
         </div>
       </div>

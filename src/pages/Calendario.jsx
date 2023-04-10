@@ -829,6 +829,7 @@ export const Calendario = () => {
               themeSystem={"bootstrap5"}
               eventClick={handleClick}
               eventTimeFormat={ eventTimeFormat }
+              noEventsContent={ "No hay eventos disponibles" }
             />
           </div>
         </div>
