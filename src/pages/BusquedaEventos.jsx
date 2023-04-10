@@ -16,7 +16,7 @@ export const BusquedaEventos = () => {
 
   return (
     <>
-      <div className="container">
+      <div className="container animate__animated animate__fadeIn animate__fast">
         <div className="row justify-content-center my-5">
           <FormBusqueda />
         </div>
