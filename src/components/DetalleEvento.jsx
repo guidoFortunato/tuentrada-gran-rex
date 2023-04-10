@@ -1,12 +1,21 @@
 import DOMPurify from "dompurify";
 import "../css/detalleevento.css";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 export const DetalleEvento = ({ title, description, href, img }) => {
+
+  const navigate = useNavigate()
+
+  const lastPath = localStorage.getItem('lastPath') || '/';  
+
+  const returnLastPath = () => {
+    navigate(lastPath)
+  }
+
   return (
     <>
       <div className="container my-5 px-5">
-        <h1 style={{ fontSize: "25px" }}>{title}</h1>
+        <h1 style={{ fontSize: "25px" }}>{title.toUpperCase()}</h1>
         <hr />
         <div className="row">
           <div className="col-12 col-lg-6 mb-5 mb-lg-0 text-center">
@@ -31,11 +40,11 @@ export const DetalleEvento = ({ title, description, href, img }) => {
                 target="_blank"
                 rel="noreferrer"
               >
-                <button className="btn btn-primary mb-3 w-50">Comprar</button>
+                <div className="btn-general mb-3 w-50" style={{fontSize: "1.6rem"}}>Comprar</div>
               </a>
-              <Link to={"/"} className="w-100 text-center">
-                <button className="btn btn-secondary w-50">Volver</button>
-              </Link>
+              <div className="w-100 text-center">
+                <div className="btn-general w-50" onClick={returnLastPath} style={{fontSize: "1.6rem"}}>Volver</div>
+              </div>
             </div>
           </div>
         </div>
