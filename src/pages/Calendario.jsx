@@ -6,6 +6,7 @@ import interactionPlugin from "@fullcalendar/interaction";
 import bootstrap5Plugin from "@fullcalendar/bootstrap5";
 import listViewPlugin from "@fullcalendar/list";
 
+
 import { useNavigate } from "react-router-dom";
 
 import "../css/calendario.css";
@@ -63,7 +64,7 @@ const fullEvents = [
   {
     id: 5,
     date: "2023-04-23",
-    start: "2023-04-23T20:00:00",
+    start: "2023-04-23T20:01:00",
     end: "-",
     title: "MIRANDA!",
     url: "/shows/miranda/3",
@@ -756,7 +757,10 @@ const fullEvents = [
     title: "DANIEL AGOSTINI",
     url: "/shows/daniela/15",
   },
+
+  
 ];
+
 
 const fullPlugins = [
   dayGridPlugin,
@@ -765,6 +769,7 @@ const fullPlugins = [
   bootstrap5Plugin,
   listViewPlugin,
 ];
+
 
 const headerToolbarOptionsResponsive = {
   start: "title", // will normally be on the left. if RTL, will be on the right
@@ -777,6 +782,7 @@ const headerToolbarOptionsDesktop = {
   center: "title",
   end: "dayGridMonth,timeGridWeek,timeGridDay", // will normally be on the right. if RTL, will be on the left
 };
+
 
 const buttonTextOptions = {
   today: "Hoy",
@@ -810,6 +816,7 @@ export const Calendario = () => {
         <div className="row my-5">
           <div className="col-12">
             <FullCalendar
+            
               plugins={fullPlugins}
               initialView={window.innerWidth <= 992 ? "listMonth" : "dayGridMonth"} 
               headerToolbar={window.innerWidth <= 992 ? headerToolbarOptionsResponsive : headerToolbarOptionsDesktop}
@@ -823,6 +830,7 @@ export const Calendario = () => {
               themeSystem={"bootstrap5"}
               eventClick={handleClick}
             />
+            
           </div>
         </div>
       </div>
