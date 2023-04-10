@@ -1,16 +1,18 @@
-import DOMPurify from "dompurify";
-import "../css/detalleevento.css";
 import { useNavigate } from "react-router-dom";
+import { TablaPrecios } from "./TablaPrecios";
 
-export const DetalleEvento = ({ title, description, href, img }) => {
+import DOMPurify from "dompurify";
 
-  const navigate = useNavigate()
+import "../css/detalleevento.css";
 
-  const lastPath = localStorage.getItem('lastPath') || '/';  
+export const DetalleEvento = ({ title, description, href, img, ubicaciones }) => {
+  const navigate = useNavigate();
+
+  const lastPath = localStorage.getItem("lastPath") || "/";
 
   const returnLastPath = () => {
-    navigate(lastPath)
-  }
+    navigate(lastPath);
+  };
 
   return (
     <>
@@ -19,11 +21,7 @@ export const DetalleEvento = ({ title, description, href, img }) => {
         <hr />
         <div className="row">
           <div className="col-12 col-lg-6 mb-5 mb-lg-0 text-center">
-            <img
-              src={img}
-              alt="imagen evento"
-              className="img-fluid"
-            />
+            <img src={img} alt="imagen evento" className="img-fluid" />
           </div>
           <div className="col-12 col-lg-6 detalle-del-evento">
             <h2 className="fw-bold pb-2">Información general</h2>
@@ -40,11 +38,37 @@ export const DetalleEvento = ({ title, description, href, img }) => {
                 target="_blank"
                 rel="noreferrer"
               >
-                <div className="btn-general mb-3 w-50" style={{fontSize: "1.6rem"}}>Comprar</div>
+                <div
+                  className="btn-general mb-3 w-50"
+                  style={{ fontSize: "1.6rem" }}
+                >
+                  Comprar
+                </div>
               </a>
               <div className="w-100 text-center">
-                <div className="btn-general w-50" onClick={returnLastPath} style={{fontSize: "1.6rem"}}>Volver</div>
+                <div
+                  className="btn-general w-50"
+                  onClick={returnLastPath}
+                  style={{ fontSize: "1.6rem" }}
+                >
+                  Volver
+                </div>
               </div>
+            </div>
+          </div>
+          <div className="row">
+            <div className="col-12 col-lg-10 my-5">
+              <h2
+                style={{ fontSize: "20px" }}
+              >
+                Ubicación y precios
+              </h2>
+              {/* <hr /> */}
+              <TablaPrecios ubicaciones={ubicaciones} />
+            </div>
+            <div className="col-12 col-lg-2 my-5 text-center">
+              <img src="https://www.tuentrada.com/evento/mappa/img/rex.webp" alt="teatro gran rex" className="img-fluid" />
+              <button className="btn-general mt-3">Ver Ubicaciones</button>
             </div>
           </div>
         </div>
