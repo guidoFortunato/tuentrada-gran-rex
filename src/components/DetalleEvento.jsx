@@ -1,6 +1,6 @@
 import { useEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
-import { TablaPrecios } from "./TablaPrecios";
+import { ModalImg, TablaPrecios } from "./";
 
 import DOMPurify from "dompurify";
 
@@ -75,8 +75,9 @@ export const DetalleEvento = ({ title, description, href, img, ubicaciones }) =>
               <TablaPrecios ubicaciones={ubicaciones} />
             </div>
             <div className="col-12 col-lg-4 my-5 text-center">
-              <img src={imgRex} alt="teatro gran rex" className="img-fluid" />
-              <button className="btn-general mt-3">Ver Ubicaciones</button>
+              <img src={imgRex} alt="teatro gran rex" className="img-fluid" style={{ cursor: "default" }} />
+              <button className="btn-general mt-3 ocultar-responsive" data-bs-target="#imageUbicaciones" data-bs-toggle="modal">Ver ubicaciones</button>
+              <ModalImg  id={'imageUbicaciones'} className="ocultar-responsive"/>
             </div>
           </div>
         </div>

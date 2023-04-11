@@ -1562,6 +1562,7 @@ export const AppRouter = () => {
                 precio: "3600",
               },
             ]}
+            
           />
         }
       />
