@@ -2,7 +2,7 @@ import ubicaciones from "../assets/images/rex2.jpg";
 
 import '../css/modal.css'
 
-export const ModalImg = ({id}) => {
+export const ModalImg = ({id, imgPlano}) => {
   return (
     <>
       <div
@@ -21,7 +21,7 @@ export const ModalImg = ({id}) => {
                 aria-label="Close"
               ></button>
               <img
-                src={ubicaciones}
+                src={imgPlano}
                 alt="mapa ubicaciones"
                 className="img-fluid"
               />
