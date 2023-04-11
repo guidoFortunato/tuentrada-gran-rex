@@ -2,7 +2,7 @@ body {
   font-family: "Montserrat", "Roboto", sans-serif;
   min-height: 100vh;
   position: relative;
-  background-color: #f9f4f4da;
+  background-color: #f4f1f1b5;
   padding-bottom: 320px;
 }
 
@@ -98,7 +98,7 @@ article {
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15),0 1px 1px rgba(0, 0, 0, 0.075);
   color: #f5f2f0;
   display: inline-block;
-  font-size: 1.6rem;
+  font-size: 14px!important;
   font-weight: 400;
   line-height: 1.5;
   padding: 0.375rem 0.75rem;
