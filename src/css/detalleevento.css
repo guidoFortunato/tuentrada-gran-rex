@@ -1,15 +1,51 @@
 .titleDetalle {
-    font-size: 30px;
-    color: #ba2828;
-    font-weight: bold;
+  font-size: 30px;
+  color: #ba2828;
+  font-weight: bold;
 }
 
 .detalle-del-evento h2 {
-    font-size: 20px;
-    
+  font-size: 20px;
 }
 
 .detalle-del-evento p {
-    font-size: 17px;
+  font-size: 17px;
+}
 
+/*Modal*/
+
+.ReactModal__Overlay{
+  transition: opacity 0.5s ease-in-out;
+}
+
+.ReactModal__Overlay--after-open{
+  z-index: 9999;
+  background-color: rgba(0,0,0,0.75) !important;
+}
+
+.ReactModal__Content--after-open{
+  text-align: center;
+  background: none !important;
+  border: none !important;;
+}
+
+.icono-close{
+  position: absolute;
+  top: 60px;
+  right: 200px;
+  width: 30px;
+}
+
+.img-modal {
+  max-width: 100%;
+  height: 80vh;
+}
+
+.modal-transition {
+  opacity: 0;
+  transition: opacity 0.8s ease-in-out;
+}
+.modal-open {
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
 }

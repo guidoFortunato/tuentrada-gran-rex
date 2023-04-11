@@ -1382,7 +1382,7 @@ export const AppRouter = () => {
             href={
               "https://www.tuentrada.com/eventos/detalle/Daniel-Agostini/553776971040"
             }
-            imgPlano={"https://www.tuentrada.com/evento/mappa/img/rex.webp"}
+            imgPlano={"https://www.tuentrada.com/teatro/gran-rex/imagenes/planos/tue1.webp"}
             ubicaciones={[
               {
                 id: 1,

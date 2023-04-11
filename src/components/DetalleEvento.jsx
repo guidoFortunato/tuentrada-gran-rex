@@ -1,10 +1,11 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { ModalImg, TablaPrecios } from "./";
+import Modal from "react-modal";
+import imgClose from "../assets/images/close.svg";
+
+import { TablaPrecios } from "./";
 
 import DOMPurify from "dompurify";
-
-import imgRex from "../assets/images/rex2.jpg";
 
 import "../css/detalleevento.css";
 
@@ -14,25 +15,48 @@ export const DetalleEvento = ({
   href,
   img,
   ubicaciones,
-  imgPlano = "https://www.tuentrada.com/evento/mappa/img/rex.webp"
+  imgPlano = "https://www.tuentrada.com/evento/mappa/img/rex.webp",
 }) => {
-  const eventDetailRef = useRef(null);
+  const [modalIsOpen, setModalIsOpen] = useState(false);
+  // const eventDetailRef = useRef(null);
+  const modalRef = useRef(null);
   const navigate = useNavigate();
+
   const lastPath = localStorage.getItem("lastPath") || "/";
 
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [eventDetailRef]);
+  // useEffect(() => {
+  //   window.scrollTo(0, 0);
+  // }, [eventDetailRef]);
 
   const returnLastPath = () => {
     navigate(lastPath);
   };
 
+  // useEffect(() => {
+  //   console.log(modalRef.current)
+  //   if (modalRef.current) {
+  //     modalRef.current.style.opacity = "1";
+  //   }
+  // }, [modalIsOpen]);
+  
+  const handleOpenModal = () => {
+    setTimeout(() => {
+      modalRef.current.props.style.opacity = "1";
+      setModalIsOpen(true);
+    }, 100);
+  };
+
+  const handleCloseModal = () => {
+    setModalIsOpen(false);
+  };
+
   return (
     <>
       <div
-        className="container my-5 px-5 animate__animated animate__fadeIn animate__fast"
-        ref={eventDetailRef}
+        className={
+          "container my-5 px-5 animate__animated animate__fadeIn animate__fast"
+        }
+        // ref={eventDetailRef}
       >
         <h2 className="titleDetalle">{title.toUpperCase()}</h2>
         <hr />
@@ -122,16 +146,27 @@ export const DetalleEvento = ({
               />
               <button
                 className="btn-general mt-3 ocultar-responsive"
-                data-bs-target="#imageUbicaciones"
-                data-bs-toggle="modal"
+                onClick={handleOpenModal}
               >
                 Ver ubicaciones
               </button>
-              <ModalImg
-                id={"imageUbicaciones"}
-                className="ocultar-responsive"
-                imgPlano={imgPlano}
-              />
+              <div className="position-relative" onClick={handleCloseModal}>
+                <Modal
+                  isOpen={modalIsOpen}
+                  onRequestClose={handleCloseModal}
+                  appElement={document.getElementById("root")}
+                  // className={`${modalIsOpen ? "modal-open" : "modal-transition"}`}
+                  style={{ opacity: "0", transition: "opacity 0.7s ease-in-out" }}
+                  ref={modalRef}
+                >
+                  <img
+                    src={imgPlano}
+                    alt="ubicaciones gran rex"
+                    className="img-modal"
+                  />
+                  {/* <img src={imgClose} alt="icono cerrar" className="icono-close" onClick={handleCloseModal} /> */}
+                </Modal>
+              </div>
             </div>
           </div>
         </div>
