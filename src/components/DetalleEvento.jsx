@@ -24,7 +24,7 @@ export const DetalleEvento = ({ title, description, href, img, ubicaciones }) =>
 
   return (
     <>
-      <div className="container my-5 px-5" ref={eventDetailRef}>
+      <div className="container my-5 px-5 animate__animated animate__fadeIn animate__fast" ref={eventDetailRef}>
         <h1 style={{ fontSize: "25px" }}>{title.toUpperCase()}</h1>
         <hr />
         <div className="row">
@@ -39,7 +39,7 @@ export const DetalleEvento = ({ title, description, href, img, ubicaciones }) =>
               }}
             ></p>
 
-            <div className="d-flex justify-content-center flex-column align-items-center mt-4">
+            <div className="d-flex justify-content-center flex-column align-items-center mt-4 animate__animated animate__fadeIn">
               <a
                 href={href}
                 className="w-100 text-center"
