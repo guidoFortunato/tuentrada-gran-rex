@@ -6,6 +6,10 @@ import timeGridPlugin from "@fullcalendar/timegrid";
 import interactionPlugin from "@fullcalendar/interaction";
 import bootstrap5Plugin from "@fullcalendar/bootstrap5";
 import listViewPlugin from "@fullcalendar/list";
+import tippy from "tippy.js";
+
+import 'tippy.js/dist/tippy.css';
+import 'tippy.js/animations/scale.css';
 
 import "../css/calendario.css";
 
@@ -1022,6 +1026,17 @@ export const Calendario = () => {
     return month[date.month] + " - " + date.year;
   };
 
+  const handleEventMount = ( info ) => {
+      if (info.event.extendedProps.status !== "disponible") {
+        const tooltip = tippy(info.el, {
+          content: 'Próximamente',
+          placement: 'top',
+          theme: 'dark',
+        });
+        return tooltip        
+      }
+  }
+
   return (
     <>
       <div className="container animate__animated animate__fadeIn animate__fast">
@@ -1036,13 +1051,14 @@ export const Calendario = () => {
         <div className="row mt-5 container-calendar">
           <div className="col-12">
             <FullCalendar
-              buttonText={buttonTextOptions}
               // eventClassNames={eventClassNames}
-              eventClick={handleClick}
-              events={fullEvents}
-              eventTimeFormat={eventTimeFormat}
+              buttonText={buttonTextOptions}
               eventBackgroundColor="#ba2828"
               eventBorderColor="#ba2828"
+              eventClick={handleClick}
+              // eventMouseEnter={ handleMouseEnter }
+              events={fullEvents}
+              eventTimeFormat={eventTimeFormat}
               headerToolbar={ window.innerWidth < 1600 ? headerToolbarOptionsResponsive : headerToolbarOptionsDesktop }
               height={"70vh"}
               initialView={ window.innerWidth < 1600 ? "listMonth" : "dayGridMonth" }
@@ -1051,6 +1067,7 @@ export const Calendario = () => {
               plugins={fullPlugins}
               themeSystem={"bootstrap5"}
               titleFormat={handleTitle}
+              eventDidMount={ handleEventMount }
             />
           </div>
         </div>
