@@ -159,8 +159,10 @@ export const DetalleEvento = ({ title, description, href, img, ubicaciones, imgP
                     alt="ubicaciones gran rex"
                     className="img-modal"
                   />
-                  {/* <img src={imgClose} alt="icono cerrar" className="icono-close" onClick={handleCloseModal} /> */}
+               
+                 <img src={imgClose} alt="icono cerrar" className="icono-close" onClick={handleCloseModal} /> 
                 </Modal>
+              
               </div>
             </div>
           </div>

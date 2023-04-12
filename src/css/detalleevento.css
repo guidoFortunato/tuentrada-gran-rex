@@ -16,29 +16,39 @@
 
 .ReactModal__Overlay{
   transition: opacity 0.5s ease-in-out;
+  
+  
 }
 
 .ReactModal__Overlay--after-open{
   z-index: 9999;
-  background-color: rgba(0,0,0,0.75) !important;
+  background-color: rgba(117, 116, 116, 0.75) !important;
+  
+ 
 }
 
 .ReactModal__Content--after-open{
   text-align: center;
-  background: none !important;
-  border: none !important;;
+  background: rgba(216, 213, 213, 0.329)!important ;
+  border: 1px solid rgba(230, 230, 230, 0.116)!important;
+
+ position: relative;
 }
+
+
 
 .icono-close{
   position: absolute;
-  top: 60px;
-  right: 200px;
+  top: 0px;
+  right: 0px;
   width: 30px;
+ background-color: #ba2828;
 }
 
 .img-modal {
   max-width: 100%;
   height: 80vh;
+  
 }
 
 /* .modal-transition {
