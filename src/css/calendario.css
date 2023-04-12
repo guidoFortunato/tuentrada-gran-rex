@@ -75,7 +75,7 @@ fieldset:disabled .btn {
 }
 
 
-/* @media screen and (min-width: 1600px) {
+/* @media screen and (min-width: 1023px) {
   .evento-disponible {
     background-color: #ba2828;
     border-color: #ba2828;
@@ -86,4 +86,4 @@ fieldset:disabled .btn {
     background-color: rgb(114, 110, 110);
     border-color: rgb(114, 110, 110);
   }
-} */
+}  */

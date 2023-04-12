@@ -1059,9 +1059,10 @@ export const Calendario = () => {
               // eventMouseEnter={ handleMouseEnter }
               events={fullEvents}
               eventTimeFormat={eventTimeFormat}
-              headerToolbar={ window.innerWidth < 1600 ? headerToolbarOptionsResponsive : headerToolbarOptionsDesktop }
+              // eventBackgroundColor="red"
+              headerToolbar={ window.innerWidth < 1023 ? headerToolbarOptionsResponsive : headerToolbarOptionsDesktop }
               height={"70vh"}
-              initialView={ window.innerWidth < 1600 ? "listMonth" : "dayGridMonth" }
+              initialView={ window.innerWidth < 1023 ? "listMonth" : "dayGridMonth" }
               locale={"es"}
               noEventsContent={"No hay eventos disponibles"}
               plugins={fullPlugins}
