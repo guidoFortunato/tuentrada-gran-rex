@@ -1,4 +1,3 @@
-import { useEffect, useRef } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 
 import FullCalendar from "@fullcalendar/react"; // must go before plugins
@@ -7,7 +6,6 @@ import timeGridPlugin from "@fullcalendar/timegrid";
 import interactionPlugin from "@fullcalendar/interaction";
 import bootstrap5Plugin from "@fullcalendar/bootstrap5";
 import listViewPlugin from "@fullcalendar/list";
-
 
 import "../css/calendario.css";
 
@@ -35,7 +33,7 @@ const fullEvents = [
     title: "EL ZAR",
     url: "/shows/el-zar/1",
     display: "block",
-    status: 'disponible'
+    status: "disponible",
   },
   {
     id: 2,
@@ -45,7 +43,7 @@ const fullEvents = [
     title: "SERGIO TORRES",
     url: "/shows/sergio-torres/2",
     display: "block",
-    status: 'disponible'
+    status: "disponible",
   },
   {
     id: 3,
@@ -55,7 +53,7 @@ const fullEvents = [
     title: "MIRANDA!",
     url: "/shows/miranda/3",
     display: "block",
-    status: 'disponible'
+    status: "disponible",
   },
   {
     id: 4,
@@ -65,7 +63,7 @@ const fullEvents = [
     title: "MIRANDA!",
     url: "/shows/miranda/3",
     display: "block",
-    status: 'disponible'
+    status: "disponible",
   },
   {
     id: 5,
@@ -75,7 +73,7 @@ const fullEvents = [
     title: "MIRANDA!",
     url: "/shows/miranda/3",
     display: "block",
-    status: 'disponible'
+    status: "disponible",
   },
   {
     id: 6,
@@ -85,7 +83,7 @@ const fullEvents = [
     title: "MASTER STROKE",
     url: "/shows/queen/4",
     display: "block",
-    status: 'disponible'
+    status: "disponible",
   },
   {
     id: 7,
@@ -95,7 +93,7 @@ const fullEvents = [
     title: "DAMIÁN CÓRDOBA",
     url: "/shows/damian-cordoba/5",
     display: "block",
-    status: 'disponible'
+    status: "disponible",
   },
   {
     id: 8,
@@ -105,7 +103,7 @@ const fullEvents = [
     title: "INTERNATIONAL FESTIVAL BALLET FOR THE PEACE",
     url: "/shows/festival-ballet/6",
     display: "block",
-    status: 'disponible'
+    status: "disponible",
   },
   {
     id: 9,
@@ -115,7 +113,7 @@ const fullEvents = [
     title: "INTERNATIONAL FESTIVAL BALLET FOR THE PEACE",
     url: "/shows/festival-ballet/6",
     display: "block",
-    status: 'disponible'
+    status: "disponible",
   },
   {
     id: 10,
@@ -125,7 +123,7 @@ const fullEvents = [
     title: "DALE Q’ VA",
     url: "/shows/daleqva/7",
     display: "block",
-    status: 'disponible'
+    status: "disponible",
   },
   {
     id: 11,
@@ -135,7 +133,7 @@ const fullEvents = [
     title: "TURF",
     url: "/shows/turf/8",
     display: "block",
-    status: 'disponible'
+    status: "disponible",
   },
   {
     id: 12,
@@ -145,7 +143,7 @@ const fullEvents = [
     title: "THE BEATS",
     url: "/shows/the-beats/9",
     display: "block",
-    status: 'disponible'
+    status: "disponible",
   },
   {
     id: 13,
@@ -155,7 +153,7 @@ const fullEvents = [
     title: "MASSACRE",
     url: "/shows/massacre/10",
     display: "block",
-    status: 'disponible'
+    status: "disponible",
   },
   {
     id: 14,
@@ -165,7 +163,7 @@ const fullEvents = [
     title: "JD PANTOJA KIM LOAIZA",
     url: "/shows/jdpantoja-kimloaiza/11",
     display: "block",
-    status: 'disponible'
+    status: "disponible",
   },
   {
     id: 15,
@@ -175,7 +173,7 @@ const fullEvents = [
     title: "JD PANTOJA KIM LOAIZA",
     url: "/shows/jdpantoja-kimloaiza/11",
     display: "block",
-    status: 'disponible'
+    status: "disponible",
   },
   {
     id: 16,
@@ -185,7 +183,7 @@ const fullEvents = [
     title: "SERGIO GALLEGUILLO",
     url: "/shows/sergio-galleguillo/12",
     display: "block",
-    status: 'disponible'
+    status: "disponible",
   },
   {
     id: 17,
@@ -195,7 +193,7 @@ const fullEvents = [
     title: "MATILDA",
     url: "/shows/matilda/13",
     display: "block",
-    status: 'disponible'
+    status: "disponible",
   },
   {
     id: 18,
@@ -205,7 +203,7 @@ const fullEvents = [
     title: "MATILDA",
     url: "/shows/matilda/13",
     display: "block",
-    status: 'disponible'
+    status: "disponible",
   },
   {
     id: 19,
@@ -215,7 +213,7 @@ const fullEvents = [
     title: "MATILDA",
     url: "/shows/matilda/13",
     display: "block",
-    status: 'disponible'
+    status: "disponible",
   },
   {
     id: 20,
@@ -225,7 +223,7 @@ const fullEvents = [
     title: "MATILDA",
     url: "/shows/matilda/13",
     display: "block",
-    status: 'disponible'
+    status: "disponible",
   },
   {
     id: 21,
@@ -235,7 +233,7 @@ const fullEvents = [
     title: "MATILDA",
     url: "/shows/matilda/13",
     display: "block",
-    status: 'disponible'
+    status: "disponible",
   },
   {
     id: 22,
@@ -245,7 +243,7 @@ const fullEvents = [
     title: "MATILDA",
     url: "/shows/matilda/13",
     display: "block",
-    status: 'disponible'
+    status: "disponible",
   },
   {
     id: 23,
@@ -255,7 +253,7 @@ const fullEvents = [
     title: "MATILDA",
     url: "/shows/matilda/13",
     display: "block",
-    status: 'disponible'
+    status: "disponible",
   },
   {
     id: 24,
@@ -265,7 +263,7 @@ const fullEvents = [
     title: "MATILDA",
     url: "/shows/matilda/13",
     display: "block",
-    status: 'disponible'
+    status: "disponible",
   },
   {
     id: 25,
@@ -275,7 +273,7 @@ const fullEvents = [
     title: "MATILDA",
     url: "/shows/matilda/13",
     display: "block",
-    status: 'disponible'
+    status: "disponible",
   },
   {
     id: 26,
@@ -285,7 +283,7 @@ const fullEvents = [
     title: "MATILDA",
     url: "/shows/matilda/13",
     display: "block",
-    status: 'disponible'
+    status: "disponible",
   },
   {
     id: 27,
@@ -295,7 +293,7 @@ const fullEvents = [
     title: "MATILDA",
     url: "/shows/matilda/13",
     display: "block",
-    status: 'disponible'
+    status: "disponible",
   },
   {
     id: 28,
@@ -305,7 +303,7 @@ const fullEvents = [
     title: "MATILDA",
     url: "/shows/matilda/13",
     display: "block",
-    status: 'disponible'
+    status: "disponible",
   },
   {
     id: 29,
@@ -315,7 +313,7 @@ const fullEvents = [
     title: "MATILDA",
     url: "/shows/matilda/13",
     display: "block",
-    status: 'disponible'
+    status: "disponible",
   },
   {
     id: 30,
@@ -325,7 +323,7 @@ const fullEvents = [
     title: "MATILDA",
     url: "/shows/matilda/13",
     display: "block",
-    status: 'disponible'
+    status: "disponible",
   },
   {
     id: 31,
@@ -335,7 +333,7 @@ const fullEvents = [
     title: "MATILDA",
     url: "/shows/matilda/13",
     display: "block",
-    status: 'disponible'
+    status: "disponible",
   },
   {
     id: 32,
@@ -345,7 +343,7 @@ const fullEvents = [
     title: "MATILDA",
     url: "/shows/matilda/13",
     display: "block",
-    status: 'disponible'
+    status: "disponible",
   },
   {
     id: 33,
@@ -355,7 +353,7 @@ const fullEvents = [
     title: "MATILDA",
     url: "/shows/matilda/13",
     display: "block",
-    status: 'disponible'
+    status: "disponible",
   },
   {
     id: 34,
@@ -365,7 +363,7 @@ const fullEvents = [
     title: "MATILDA",
     url: "/shows/matilda/13",
     display: "block",
-    status: 'disponible'
+    status: "disponible",
   },
   {
     id: 35,
@@ -375,7 +373,7 @@ const fullEvents = [
     title: "MATILDA",
     url: "/shows/matilda/13",
     display: "block",
-    status: 'disponible'
+    status: "disponible",
   },
   {
     id: 36,
@@ -385,7 +383,7 @@ const fullEvents = [
     title: "MATILDA",
     url: "/shows/matilda/13",
     display: "block",
-    status: 'disponible'
+    status: "disponible",
   },
   {
     id: 37,
@@ -395,7 +393,7 @@ const fullEvents = [
     title: "MATILDA",
     url: "/shows/matilda/13",
     display: "block",
-    status: 'disponible'
+    status: "disponible",
   },
   {
     id: 38,
@@ -405,7 +403,7 @@ const fullEvents = [
     title: "MATILDA",
     url: "/shows/matilda/13",
     display: "block",
-    status: 'disponible'
+    status: "disponible",
   },
   {
     id: 39,
@@ -415,7 +413,7 @@ const fullEvents = [
     title: "MATILDA",
     url: "/shows/matilda/13",
     display: "block",
-    status: 'disponible'
+    status: "disponible",
   },
   {
     id: 40,
@@ -425,7 +423,7 @@ const fullEvents = [
     title: "MATILDA",
     url: "/shows/matilda/13",
     display: "block",
-    status: 'disponible'
+    status: "disponible",
   },
   {
     id: 41,
@@ -435,7 +433,7 @@ const fullEvents = [
     title: "MATILDA",
     url: "/shows/matilda/13",
     display: "block",
-    status: 'disponible'
+    status: "disponible",
   },
   {
     id: 41,
@@ -445,7 +443,7 @@ const fullEvents = [
     title: "MATILDA",
     url: "/shows/matilda/13",
     display: "block",
-    status: 'disponible'
+    status: "disponible",
   },
   {
     id: 42,
@@ -455,7 +453,7 @@ const fullEvents = [
     title: "MATILDA",
     url: "/shows/matilda/13",
     display: "block",
-    status: 'disponible'
+    status: "disponible",
   },
   {
     id: 43,
@@ -465,7 +463,7 @@ const fullEvents = [
     title: "MATILDA",
     url: "/shows/matilda/13",
     display: "block",
-    status: 'disponible'
+    status: "disponible",
   },
   {
     id: 44,
@@ -475,7 +473,7 @@ const fullEvents = [
     title: "MATILDA",
     url: "/shows/matilda/13",
     display: "block",
-    status: 'disponible'
+    status: "disponible",
   },
   {
     id: 45,
@@ -485,7 +483,7 @@ const fullEvents = [
     title: "MATILDA",
     url: "/shows/matilda/13",
     display: "block",
-    status: 'disponible'
+    status: "disponible",
   },
   {
     id: 45,
@@ -495,7 +493,7 @@ const fullEvents = [
     title: "MATILDA",
     url: "/shows/matilda/13",
     display: "block",
-    status: 'disponible'
+    status: "disponible",
   },
   {
     id: 46,
@@ -505,7 +503,7 @@ const fullEvents = [
     title: "MATILDA",
     url: "/shows/matilda/13",
     display: "block",
-    status: 'disponible'
+    status: "disponible",
   },
   {
     id: 47,
@@ -515,7 +513,7 @@ const fullEvents = [
     title: "MATILDA",
     url: "/shows/matilda/13",
     display: "block",
-    status: 'disponible'
+    status: "disponible",
   },
   {
     id: 48,
@@ -525,7 +523,7 @@ const fullEvents = [
     title: "MATILDA",
     url: "/shows/matilda/13",
     display: "block",
-    status: 'disponible'
+    status: "disponible",
   },
   {
     id: 49,
@@ -535,7 +533,7 @@ const fullEvents = [
     title: "MATILDA",
     url: "/shows/matilda/13",
     display: "block",
-    status: 'disponible'
+    status: "disponible",
   },
   {
     id: 50,
@@ -545,7 +543,7 @@ const fullEvents = [
     title: "MATILDA",
     url: "/shows/matilda/13",
     display: "block",
-    status: 'disponible'
+    status: "disponible",
   },
   {
     id: 51,
@@ -555,7 +553,7 @@ const fullEvents = [
     title: "MATILDA",
     url: "/shows/matilda/13",
     display: "block",
-    status: 'disponible'
+    status: "disponible",
   },
   {
     id: 52,
@@ -565,7 +563,7 @@ const fullEvents = [
     title: "MATILDA",
     url: "/shows/matilda/13",
     display: "block",
-    status: 'disponible'
+    status: "disponible",
   },
   {
     id: 53,
@@ -575,7 +573,7 @@ const fullEvents = [
     title: "MATILDA",
     url: "/shows/matilda/13",
     display: "block",
-    status: 'disponible'
+    status: "disponible",
   },
   {
     id: 54,
@@ -585,7 +583,7 @@ const fullEvents = [
     title: "MATILDA",
     url: "/shows/matilda/13",
     display: "block",
-    status: 'disponible'
+    status: "disponible",
   },
   {
     id: 55,
@@ -595,7 +593,7 @@ const fullEvents = [
     title: "MATILDA",
     url: "/shows/matilda/13",
     display: "block",
-    status: 'disponible'
+    status: "disponible",
   },
   {
     id: 56,
@@ -605,7 +603,7 @@ const fullEvents = [
     title: "MATILDA",
     url: "/shows/matilda/13",
     display: "block",
-    status: 'disponible'
+    status: "disponible",
   },
   {
     id: 57,
@@ -615,7 +613,7 @@ const fullEvents = [
     title: "MATILDA",
     url: "/shows/matilda/13",
     display: "block",
-    status: 'disponible'
+    status: "disponible",
   },
   {
     id: 58,
@@ -625,7 +623,7 @@ const fullEvents = [
     title: "MATILDA",
     url: "/shows/matilda/13",
     display: "block",
-    status: 'disponible'
+    status: "disponible",
   },
   {
     id: 58,
@@ -635,7 +633,7 @@ const fullEvents = [
     title: "MATILDA",
     url: "/shows/matilda/13",
     display: "block",
-    status: 'disponible'
+    status: "disponible",
   },
   {
     id: 59,
@@ -645,7 +643,7 @@ const fullEvents = [
     title: "MATILDA",
     url: "/shows/matilda/13",
     display: "block",
-    status: 'disponible'
+    status: "disponible",
   },
   {
     id: 60,
@@ -655,7 +653,7 @@ const fullEvents = [
     title: "MATILDA",
     url: "/shows/matilda/13",
     display: "block",
-    status: 'disponible'
+    status: "disponible",
   },
   {
     id: 61,
@@ -665,7 +663,7 @@ const fullEvents = [
     title: "MATILDA",
     url: "/shows/matilda/13",
     display: "block",
-    status: 'disponible'
+    status: "disponible",
   },
   {
     id: 62,
@@ -675,7 +673,7 @@ const fullEvents = [
     title: "MATILDA",
     url: "/shows/matilda/13",
     display: "block",
-    status: 'disponible'
+    status: "disponible",
   },
   {
     id: 63,
@@ -685,7 +683,7 @@ const fullEvents = [
     title: "MATILDA",
     url: "/shows/matilda/13",
     display: "block",
-    status: 'disponible'
+    status: "disponible",
   },
   {
     id: 64,
@@ -695,7 +693,7 @@ const fullEvents = [
     title: "MATILDA",
     url: "/shows/matilda/13",
     display: "block",
-    status: 'disponible'
+    status: "disponible",
   },
   {
     id: 65,
@@ -705,7 +703,7 @@ const fullEvents = [
     title: "MATILDA",
     url: "/shows/matilda/13",
     display: "block",
-    status: 'disponible'
+    status: "disponible",
   },
   {
     id: 66,
@@ -715,7 +713,7 @@ const fullEvents = [
     title: "MATILDA",
     url: "/shows/matilda/13",
     display: "block",
-    status: 'disponible'
+    status: "disponible",
   },
   {
     id: 67,
@@ -725,7 +723,7 @@ const fullEvents = [
     title: "MATILDA",
     url: "/shows/matilda/13",
     display: "block",
-    status: 'disponible'
+    status: "disponible",
   },
   {
     id: 68,
@@ -735,7 +733,7 @@ const fullEvents = [
     title: "MATILDA",
     url: "/shows/matilda/13",
     display: "block",
-    status: 'disponible'
+    status: "disponible",
   },
   {
     id: 69,
@@ -745,7 +743,7 @@ const fullEvents = [
     title: "MATILDA",
     url: "/shows/matilda/13",
     display: "block",
-    status: 'disponible'
+    status: "disponible",
   },
   {
     id: 70,
@@ -755,7 +753,7 @@ const fullEvents = [
     title: "MATILDA",
     url: "/shows/matilda/13",
     display: "block",
-    status: 'disponible'
+    status: "disponible",
   },
   {
     id: 71,
@@ -765,7 +763,7 @@ const fullEvents = [
     title: "MATILDA",
     url: "/shows/matilda/13",
     display: "block",
-    status: 'disponible'
+    status: "disponible",
   },
   {
     id: 72,
@@ -775,7 +773,7 @@ const fullEvents = [
     title: "MATILDA",
     url: "/shows/matilda/13",
     display: "block",
-    status: 'disponible'
+    status: "disponible",
   },
   {
     id: 73,
@@ -785,7 +783,7 @@ const fullEvents = [
     title: "MATILDA",
     url: "/shows/matilda/13",
     display: "block",
-    status: 'disponible'
+    status: "disponible",
   },
   {
     id: 74,
@@ -795,7 +793,7 @@ const fullEvents = [
     title: "MATILDA",
     url: "/shows/matilda/13",
     display: "block",
-    status: 'disponible'
+    status: "disponible",
   },
   {
     id: 75,
@@ -805,7 +803,7 @@ const fullEvents = [
     title: "MATILDA",
     url: "/shows/matilda/13",
     display: "block",
-    status: 'disponible'
+    status: "disponible",
   },
   {
     id: 76,
@@ -815,7 +813,7 @@ const fullEvents = [
     title: "MATILDA",
     url: "/shows/matilda/13",
     display: "block",
-    status: 'disponible'
+    status: "disponible",
   },
   {
     id: 77,
@@ -825,7 +823,7 @@ const fullEvents = [
     title: "MATILDA",
     url: "/shows/matilda/13",
     display: "block",
-    status: 'disponible'
+    status: "disponible",
   },
   {
     id: 78,
@@ -835,7 +833,7 @@ const fullEvents = [
     title: "MATILDA",
     url: "/shows/matilda/13",
     display: "block",
-    status: 'disponible'
+    status: "disponible",
   },
   {
     id: 79,
@@ -845,7 +843,7 @@ const fullEvents = [
     title: "MATILDA",
     url: "/shows/matilda/13",
     display: "block",
-    status: 'disponible'
+    status: "disponible",
   },
   {
     id: 80,
@@ -855,7 +853,7 @@ const fullEvents = [
     title: "MATILDA",
     url: "/shows/matilda/13",
     display: "block",
-    status: 'disponible'
+    status: "disponible",
   },
   {
     id: 81,
@@ -865,7 +863,7 @@ const fullEvents = [
     title: "MATILDA",
     url: "/shows/matilda/13",
     display: "block",
-    status: 'disponible'
+    status: "disponible",
   },
   {
     id: 82,
@@ -875,7 +873,7 @@ const fullEvents = [
     title: "MATILDA",
     url: "/shows/matilda/13",
     display: "block",
-    status: 'disponible'
+    status: "disponible",
   },
   {
     id: 83,
@@ -885,7 +883,7 @@ const fullEvents = [
     title: "MATILDA",
     url: "/shows/matilda/13",
     display: "block",
-    status: 'disponible'
+    status: "disponible",
   },
   {
     id: 84,
@@ -895,7 +893,7 @@ const fullEvents = [
     title: "MATILDA",
     url: "/shows/matilda/13",
     display: "block",
-    status: 'disponible'
+    status: "disponible",
   },
   {
     id: 85,
@@ -905,7 +903,7 @@ const fullEvents = [
     title: "MATILDA",
     url: "/shows/matilda/13",
     display: "block",
-    status: 'disponible'
+    status: "disponible",
   },
   {
     id: 86,
@@ -915,7 +913,7 @@ const fullEvents = [
     title: "MATILDA",
     url: "/shows/matilda/13",
     display: "block",
-    status: 'disponible'
+    status: "disponible",
   },
   {
     id: 87,
@@ -925,7 +923,7 @@ const fullEvents = [
     title: "BRYNDIS",
     url: "/shows/bxs/14",
     display: "block",
-    status: 'disponible'
+    status: "disponible",
   },
   {
     id: 88,
@@ -935,7 +933,7 @@ const fullEvents = [
     title: "DANIEL AGOSTINI",
     url: "/shows/daniel-agostini/15",
     display: "block",
-    status: 'disponible'
+    status: "disponible",
   },
   {
     id: 89,
@@ -944,8 +942,8 @@ const fullEvents = [
     end: "-",
     title: "Chili Fernandez",
     url: "/shows/chili-fernandez/16",
-    display: 'block',
-    status: '',
+    display: "block",
+    status: "",
   },
 ];
 
@@ -985,37 +983,33 @@ const eventTimeFormat = {
 export const Calendario = () => {
   const navigate = useNavigate();
   const { pathname } = useLocation();
-  const calendarRef = useRef(null)
   localStorage.setItem("lastPath", pathname);
 
-  useEffect(() => {
-    const handleStatus = ( ) => {
-      console.log(calendarRef)
-      // const statusEvento = info.event.extendedProps.status?.toLowerCase() === "disponible";
-      // if (statusEvento) {
-      //   return "#BA2828"
-      // }else{
-      //   return "#777070"
-      // }
+
+  const eventClassNames = (arg) => {
+    let classNames = [""];
+    if (arg.event.extendedProps.status.toLowerCase() === "disponible") {
+      classNames.push("evento-disponible");
+    } else {
+      classNames.push("evento-no-disponible");
     }
-    
-    handleStatus()
-  }, []);
+    return classNames;
+  };
 
   const handleClick = (info) => {
     info.jsEvent.preventDefault();
     const urlEvento = info.event.url?.split("/")[1].toLowerCase() === "shows";
-    const statusEvento = info.event.extendedProps.status?.toLowerCase() === "disponible";
-
+    const statusEvento =
+      info.event.extendedProps.status?.toLowerCase() === "disponible";
 
     if (urlEvento) {
       if (statusEvento) {
-        navigate(info.event.url);        
+        navigate(info.event.url);
       }
     } else {
       window.open(info.event.url, "_blank");
     }
-    // navigate(info.event.url);
+
   };
 
   const handleTitle = (info) => {
@@ -1037,22 +1031,11 @@ export const Calendario = () => {
         <div className="row mt-5 container-calendar">
           <div className="col-12">
             <FullCalendar
-              ref={calendarRef}
               plugins={fullPlugins}
-              initialView={
-                window.innerWidth < 1000 ? "listMonth" : "dayGridMonth"
-              }
-              headerToolbar={
-                window.innerWidth < 1000
-                  ? headerToolbarOptionsResponsive
-                  : headerToolbarOptionsDesktop
-              }
+              initialView={ window.innerWidth < 1000 ? "listMonth" : "dayGridMonth" }
+              headerToolbar={ window.innerWidth < 1000 ? headerToolbarOptionsResponsive : headerToolbarOptionsDesktop }
               height={"70vh"}
               titleFormat={handleTitle}
-              // eventBackgroundColor={statusEvento ? "#BA2828" : "#777070" }
-              // eventBackgroundColor={ handleStatus }
-              // eventBorderColor={ handleStatus }
-              // eventBorderColor={statusEvento ? "#BA2828" : "#777070" }
               events={fullEvents}
               locale={"es"}
               buttonText={buttonTextOptions}
@@ -1060,6 +1043,7 @@ export const Calendario = () => {
               eventClick={handleClick}
               eventTimeFormat={eventTimeFormat}
               noEventsContent={"No hay eventos disponibles"}
+              eventClassNames={eventClassNames}
             />
           </div>
         </div>
