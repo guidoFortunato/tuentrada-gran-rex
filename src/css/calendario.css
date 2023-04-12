@@ -59,3 +59,9 @@ fieldset:disabled .btn {
   border-color: #000000 !important;
   color: #fff !important;
 } */
+.fc-event-main-frame{
+  align-items: center;
+}
+.fc-event-title, .fc-event-time{
+  color: #fff !important;
+}

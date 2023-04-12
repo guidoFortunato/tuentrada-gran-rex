@@ -41,11 +41,11 @@
   height: 80vh;
 }
 
-.modal-transition {
+/* .modal-transition {
   opacity: 0;
-  transition: opacity 0.8s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
 }
 .modal-open {
   opacity: 1;
-  transition: opacity 0.5s ease-in-out;
-}
+  transition: opacity 0.3s ease-in-out;
+} */

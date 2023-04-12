@@ -1,4 +1,3 @@
-import React, { useEffect, useState } from "react";
 import FullCalendar from "@fullcalendar/react"; // must go before plugins
 import dayGridPlugin from "@fullcalendar/daygrid";
 import timeGridPlugin from "@fullcalendar/timegrid";
@@ -33,6 +32,7 @@ const fullEvents = [
     date: "2023-04-15",
     title: "EL ZAR",
     url: "/shows/el-zar/1",
+    display: "block"
   },
   {
     id: 2,
@@ -41,6 +41,7 @@ const fullEvents = [
     end: "-",
     title: "SERGIO TORRES",
     url: "/shows/sergio-torres/2",
+    display: "block"
   },
   {
     id: 3,
@@ -49,6 +50,7 @@ const fullEvents = [
     end: "-",
     title: "MIRANDA!",
     url: "/shows/miranda/3",
+    display: "block"
   },
   {
     id: 4,
@@ -57,14 +59,16 @@ const fullEvents = [
     end: "-",
     title: "MIRANDA!",
     url: "/shows/miranda/3",
+    display: "block"
   },
   {
     id: 5,
     date: "2023-04-23",
-    start: "2023-04-23T20:01:00",
+    start: "2023-04-23T20:00:00",
     end: "-",
     title: "MIRANDA!",
     url: "/shows/miranda/3",
+    display: "block"
   },
   {
     id: 6,
@@ -73,6 +77,7 @@ const fullEvents = [
     end: "-",
     title: "MASTER STROKE",
     url: "/shows/queen/4",
+    display: "block"
   },
   {
     id: 7,
@@ -761,6 +766,7 @@ const fullEvents = [
     end: "-",
     title: "Chili Fernandez",
     url: "/shows/chili-fernandez/16",
+    display: 'block'
   },
 ];
 
