@@ -66,11 +66,11 @@ export const CardEvento = ({
                 {newStatus}
               </h5>
             </div>
-            <div style={{ padding: "5px" }}>
+            <div style={{ padding: "5px", color:"gray" }}>
               <h3 style={{ fontWeight: "bold", padding: "5px" }}>
                 {title.toUpperCase()}
               </h3>
-              <h4 style={{ padding: "5px 0", fontSize: "15px" }}>
+              <h4 style={{ padding: "5px 0", fontSize: "15px",   color:"gray"}}>
                 {newDate} <br /> {newTime}
               </h4>
             </div>

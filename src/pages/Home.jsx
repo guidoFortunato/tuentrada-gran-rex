@@ -174,6 +174,18 @@ export const Home = () => {
               date={"DEL 1 DE JUNIO AL 30 DE JULIO"}
               time={"CONSULTAR HORARIOS"}
             />
+        
+          <CardEvento
+              linkEvento={"/shows/julieta-venegas/17"}
+              img={
+                "https://www.tuentrada.com/teatro/gran-rex/imagenes/julieta-venegas.webp"
+              }
+              status={"Próximamente"}
+              title={"JULIETA VENEGAS"}
+              date={"DOMINGO 26 DE AGOSTO"}
+              time={"20:30HS"}
+              disabled={true}
+            />
             <CardEvento
               linkEvento={"/shows/bxs/14"}
               img={

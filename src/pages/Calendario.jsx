@@ -950,6 +950,17 @@ const fullEvents = [
     display: "block",
     status: "",
   },
+  {
+    id: 90,
+    date: "2023-08-26",
+    start: "2023-08-26T20:30:00",
+    end: "-",
+    title: "Julieta Venegas",
+      // url: "/shows/julieta-venegas/17",
+    url: "",
+    display: "block",
+    status: "",
+  },
 ];
 
 const fullPlugins = [

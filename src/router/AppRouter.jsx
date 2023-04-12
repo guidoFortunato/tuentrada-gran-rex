@@ -1457,9 +1457,11 @@ export const AppRouter = () => {
             img={
               "https://www.tuentrada.com/teatro/gran-rex/imagenes/chili-fernandez.webp"
             }
-            description={``}
+            description={`Chili Fernandez se presentará el día Sábado 16 de Septiembre en el Teatro Gran Rex.  <br /> <br />
+            El Teatro Gran Rex informa que los eventos que se realizan en esta sala podrían ser fotografiados o filmados para su posterior difusión en medios y /o campañas publicitarias. <br /><br />
+            El ingreso al establecimiento implica la autorización a la Productora y a Cordero, Cavallo y Lautaret S.A. a utilizar el contenido filmado y /o fotografiado y el uso de imagen personal sin compensación alguna. <br />`}
             href={
-              ""
+              "https://www.tuentrada.com/eventos/detalle/Chili-Fernandez/495716168868"
             }
               imgPlano={"https://www.tuentrada.com/teatro/gran-rex/imagenes/planos/tue1.webp"}
             ubicaciones={[
@@ -1467,61 +1469,61 @@ export const AppRouter = () => {
                 id: 1,
                 nombre: "PLATEA 1", 
                 color: "#970513",
-                precio: "8.500",
+                precio: "9.500",
               },
               {
                 id: 2,
                 nombre: "PLATEA 2",
                 color: "#79C8C3",
-                precio: "8.000",
+                precio: "9.000",
               },
               {
                 id: 3,
                 nombre: "PLATEA 3",
                 color: "#EDB63B",
-                precio: "7.000",
+                precio: "8.500",
               },
               {
                 id: 4,
                 nombre: "PLATEA 4",
                 color: "#86AA4D",
-                precio: "6.500",
+                precio: "8.000",
               },
               {
                 id: 5,
                 nombre: "PLATEA 5",
                 color: "#052748",
-                precio: "6.500",
+                precio: "7.000",
               },
               {
                 id: 6,
                 nombre: "SUPER PULLMAN 1",
                 color: "#035F89",
-                precio: "6.000",
+                precio: "7.000",
               },
               {
                 id: 7,
                 nombre: "SUPER PULLMAN 2",
                 color: "#A9167D",
-                precio: "5.500",
+                precio: "6.000",
               },
               {
                 id: 8,
                 nombre: "PULLMAN 1",
                 color: "#EE6E08",
-                precio: "4.000",
+                precio: "5.000",
               },
               {
                 id: 9,
                 nombre: "PULLMAN 2",
                 color: "#037366",
-                precio: "3.500",
+                precio: "4.000",
               },
               {
                 id: 10,
                 nombre: "PULLMAN 3",
                 color: "#D97B77",
-                precio: "3.000",
+                precio: "3.500",
               },
               {
                 id: 11,
@@ -1533,7 +1535,99 @@ export const AppRouter = () => {
                 id: 12,
                 nombre: "PULLMAN 5",
                 color: "#5271FF",
-                precio: "2.500",
+                precio: "3.000",
+              },
+            ]}
+          />
+        }
+      />
+      <Route
+        path="/shows/julieta-venegas/17"
+        element={
+          <DetalleEvento
+            title={"Juelieta Venegas"}
+            img={
+              "https://www.tuentrada.com/teatro/gran-rex/imagenes/julieta-venegas.webp"
+            }
+            description={`Chili Fernandez se presentará el día Sábado 16 de Septiembre en el Teatro Gran Rex.  <br /> <br />
+            El Teatro Gran Rex informa que los eventos que se realizan en esta sala podrían ser fotografiados o filmados para su posterior difusión en medios y /o campañas publicitarias. <br /><br />
+            El ingreso al establecimiento implica la autorización a la Productora y a Cordero, Cavallo y Lautaret S.A. a utilizar el contenido filmado y /o fotografiado y el uso de imagen personal sin compensación alguna. <br />`}
+            href={
+              "https://www.tuentrada.com/eventos/detalle/Julieta-Venegas/2044219094378"
+            }
+              imgPlano={"https://www.tuentrada.com/teatro/gran-rex/imagenes/planos/tue1.webp"}
+            ubicaciones={[
+              {
+                id: 1,
+                nombre: "PLATEA 1", 
+                color: "#970513",
+                precio: "17.000",
+              },
+              {
+                id: 2,
+                nombre: "PLATEA 2",
+                color: "#79C8C3",
+                precio: "15.000",
+              },
+              {
+                id: 3,
+                nombre: "PLATEA 3",
+                color: "#EDB63B",
+                precio: "12.000",
+              },
+              {
+                id: 4,
+                nombre: "PLATEA 4",
+                color: "#86AA4D",
+                precio: "10.000",
+              },
+              {
+                id: 5,
+                nombre: "PLATEA 5",
+                color: "#052748",
+                precio: "8.000",
+              },
+              {
+                id: 6,
+                nombre: "SUPER PULLMAN 1",
+                color: "#035F89",
+                precio: "8.000",
+              },
+              {
+                id: 7,
+                nombre: "SUPER PULLMAN 2",
+                color: "#A9167D",
+                precio: "6.500",
+              },
+              {
+                id: 8,
+                nombre: "PULLMAN 1",
+                color: "#EE6E08",
+                precio: "6.500",
+              },
+              {
+                id: 9,
+                nombre: "PULLMAN 2",
+                color: "#037366",
+                precio: "6.000",
+              },
+              {
+                id: 10,
+                nombre: "PULLMAN 3",
+                color: "#D97B77",
+                precio: "5.500",
+              },
+              {
+                id: 11,
+                nombre: "PULLMAN 4",
+                color: "#AF0657",
+                precio: "5.000",
+              },
+              {
+                id: 12,
+                nombre: "PULLMAN 5",
+                color: "#5271FF",
+                precio: "4.500",
               },
             ]}
           />

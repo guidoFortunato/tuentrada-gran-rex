@@ -135,6 +135,17 @@ const eventosTotales = [
     time: "CONSULTAR HORARIOS",
     disabled: false
   },
+{
+  date: "Sábado 26 DE AGOSTO",
+  id: 17,
+  img: "https://www.tuentrada.com/teatro/gran-rex/imagenes/julieta-venegas.webp",
+  // linkEvento: "/shows/julieta-venegas/17",
+  linkEvento: "",
+  name: "Julieta Venegas",
+  status: "Próximamente",
+  time: "20:30HS",
+  disabled: true
+},
   {
     date: "DOMINGO 27 DE AGOSTO",
     id: 14,
