@@ -2,9 +2,17 @@ import { CardEvento, FormBusqueda } from "../components/";
 
 import "../css/header.css";
 import "../css/footer.css";
+import { useEffect } from "react";
 // import { SliderDestacado } from "../components/";
 
 export const Home = () => {
+
+  useEffect(() => {
+    setTimeout(() => {
+      window.scrollTo(0, 0);
+    }, 1000);
+  }, []);
+
   return (
     <>
       <header className="animate__animated animate__fadeIn animate__fast">

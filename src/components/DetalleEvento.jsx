@@ -9,14 +9,7 @@ import DOMPurify from "dompurify";
 
 import "../css/detalleevento.css";
 
-export const DetalleEvento = ({
-  title,
-  description,
-  href,
-  img,
-  ubicaciones,
-  imgPlano = "https://www.tuentrada.com/evento/mappa/img/rex.webp",
-}) => {
+export const DetalleEvento = ({ title, description, href, img, ubicaciones, imgPlano = "https://www.tuentrada.com/evento/mappa/img/rex.webp",}) => {
   const [modalIsOpen, setModalIsOpen] = useState(false);
   // const eventDetailRef = useRef(null);
   const modalRef = useRef(null);
@@ -24,9 +17,11 @@ export const DetalleEvento = ({
 
   const lastPath = localStorage.getItem("lastPath") || "/";
 
-  // useEffect(() => {
-  //   window.scrollTo(0, 0);
-  // }, [eventDetailRef]);
+  useEffect(() => {
+    setTimeout(() => {
+      window.scrollTo(0, 0);
+    }, 1000);
+  }, []);
 
   const returnLastPath = () => {
     navigate(lastPath);
@@ -40,10 +35,10 @@ export const DetalleEvento = ({
   // }, [modalIsOpen]);
   
   const handleOpenModal = () => {
-    setTimeout(() => {
-      modalRef.current.props.style.opacity = "1";
-      setModalIsOpen(true);
-    }, 100);
+    setModalIsOpen(true);
+    // setTimeout(() => {
+    //   modalRef.current.props.style.opacity = "1";
+    // }, 100);
   };
 
   const handleCloseModal = () => {

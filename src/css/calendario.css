@@ -59,19 +59,31 @@ fieldset:disabled .btn {
   border-color: #000000 !important;
   color: #fff !important;
 } */
-.fc-event-main-frame{
+.fc-event-main-frame {
   align-items: center;
 }
-.fc-event-title, .fc-event-time{
+.fc-event-title,
+.fc-event-time {
   color: #fff !important;
 }
 
-.evento-disponible{
-  background-color: #ba2828;
-  border-color: #ba2828;
+.evento-disponible > .fc-list-event-graphic > .fc-list-event-dot {
+  border: 5px solid #ba2828;
+}
+.evento-no-disponible > .fc-list-event-graphic > .fc-list-event-dot {
+  border: 5px solid rgb(114, 110, 110);
 }
 
-.evento-no-disponible{
-  background-color: rgb(114, 110, 110);
-  border-color: rgb(114, 110, 110);
+
+@media screen and (min-width: 1600px) {
+  .evento-disponible {
+    background-color: #ba2828;
+    border-color: #ba2828;
+  }
+  
+
+  .evento-no-disponible {
+    background-color: rgb(114, 110, 110);
+    border-color: rgb(114, 110, 110);
+  }
 }

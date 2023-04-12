@@ -941,7 +941,8 @@ const fullEvents = [
     start: "2023-09-16T20:30:00",
     end: "-",
     title: "Chili Fernandez",
-    url: "/shows/chili-fernandez/16",
+    // url: "/shows/chili-fernandez/16",
+    url: "",
     display: "block",
     status: "",
   },
@@ -998,17 +999,21 @@ export const Calendario = () => {
 
   const handleClick = (info) => {
     info.jsEvent.preventDefault();
-    const urlEvento = info.event.url?.split("/")[1].toLowerCase() === "shows";
-    const statusEvento =
-      info.event.extendedProps.status?.toLowerCase() === "disponible";
+    // const urlEvento = info.event.url?.split("/")[1].toLowerCase() === "shows";
+    const statusEvento =  info.event.extendedProps.status?.toLowerCase() === "disponible";
 
-    if (urlEvento) {
-      if (statusEvento) {
-        navigate(info.event.url);
-      }
-    } else {
-      window.open(info.event.url, "_blank");
+    if (statusEvento) {
+      navigate(info.event.url);
     }
+    
+    
+    // if (urlEvento) {
+    //   if (statusEvento) {
+    //     navigate(info.event.url);
+    //   }
+    // } else {
+    //   window.open(info.event.url, "_blank");
+    // }
 
   };
 
@@ -1031,19 +1036,20 @@ export const Calendario = () => {
         <div className="row mt-5 container-calendar">
           <div className="col-12">
             <FullCalendar
-              plugins={fullPlugins}
-              initialView={ window.innerWidth < 1000 ? "listMonth" : "dayGridMonth" }
-              headerToolbar={ window.innerWidth < 1000 ? headerToolbarOptionsResponsive : headerToolbarOptionsDesktop }
-              height={"70vh"}
-              titleFormat={handleTitle}
-              events={fullEvents}
-              locale={"es"}
               buttonText={buttonTextOptions}
-              themeSystem={"bootstrap5"}
-              eventClick={handleClick}
-              eventTimeFormat={eventTimeFormat}
-              noEventsContent={"No hay eventos disponibles"}
               eventClassNames={eventClassNames}
+              eventClick={handleClick}
+              events={fullEvents}
+              eventTimeFormat={eventTimeFormat}
+              // eventBackgroundColor="red"
+              headerToolbar={ window.innerWidth < 1600 ? headerToolbarOptionsResponsive : headerToolbarOptionsDesktop }
+              height={"70vh"}
+              initialView={ window.innerWidth < 1600 ? "listMonth" : "dayGridMonth" }
+              locale={"es"}
+              noEventsContent={"No hay eventos disponibles"}
+              plugins={fullPlugins}
+              themeSystem={"bootstrap5"}
+              titleFormat={handleTitle}
             />
           </div>
         </div>
