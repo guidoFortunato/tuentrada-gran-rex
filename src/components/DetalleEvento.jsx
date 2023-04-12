@@ -17,10 +17,8 @@ export const DetalleEvento = ({ title, description, href, img, ubicaciones, imgP
 
   const lastPath = localStorage.getItem("lastPath") || "/";
 
-  useEffect(() => {
-    setTimeout(() => {
-      window.scrollTo(0, 0);
-    }, 1000);
+  useEffect(() => {    
+      window.scrollTo(0, 0);    
   }, []);
 
   const returnLastPath = () => {

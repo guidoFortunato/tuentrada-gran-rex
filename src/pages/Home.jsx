@@ -10,7 +10,7 @@ export const Home = () => {
   useEffect(() => {
     setTimeout(() => {
       window.scrollTo(0, 0);
-    }, 1000);
+    }, 100);
   }, []);
 
   return (

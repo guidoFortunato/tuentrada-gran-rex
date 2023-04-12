@@ -987,15 +987,15 @@ export const Calendario = () => {
   localStorage.setItem("lastPath", pathname);
 
 
-  const eventClassNames = (arg) => {
-    let classNames = [""];
-    if (arg.event.extendedProps.status.toLowerCase() === "disponible") {
-      classNames.push("evento-disponible");
-    } else {
-      classNames.push("evento-no-disponible");
-    }
-    return classNames;
-  };
+  // const eventClassNames = (arg) => {
+  //   let classNames = [""];
+  //   if (arg.event.extendedProps.status.toLowerCase() === "disponible") {
+  //     classNames.push("evento-disponible");
+  //   } else {
+  //     classNames.push("evento-no-disponible");
+  //   }
+  //   return classNames;
+  // };
 
   const handleClick = (info) => {
     info.jsEvent.preventDefault();
@@ -1037,11 +1037,12 @@ export const Calendario = () => {
           <div className="col-12">
             <FullCalendar
               buttonText={buttonTextOptions}
-              eventClassNames={eventClassNames}
+              // eventClassNames={eventClassNames}
               eventClick={handleClick}
               events={fullEvents}
               eventTimeFormat={eventTimeFormat}
-              // eventBackgroundColor="red"
+              eventBackgroundColor="#ba2828"
+              eventBorderColor="#ba2828"
               headerToolbar={ window.innerWidth < 1600 ? headerToolbarOptionsResponsive : headerToolbarOptionsDesktop }
               height={"70vh"}
               initialView={ window.innerWidth < 1600 ? "listMonth" : "dayGridMonth" }

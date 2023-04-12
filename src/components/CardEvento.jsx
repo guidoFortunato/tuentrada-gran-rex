@@ -13,8 +13,7 @@ export const CardEvento = ({
   const urlEvento = linkEvento?.split("/")[1] !== "shows";
   const newDate = date.charAt(0).toUpperCase() + date.slice(1).toLowerCase();
   const newTime = time.charAt(0).toUpperCase() + time.slice(1).toLowerCase();
-  const newStatus =
-    status.charAt(0).toUpperCase() + status.slice(1).toLowerCase();
+  const newStatus = status.charAt(0).toUpperCase() + status.slice(1).toLowerCase();
 
   return (
     <article
@@ -24,17 +23,11 @@ export const CardEvento = ({
       <div className="card" style={{ position: "relative" }}>
         {disabled ? (
           <div
-            className={`${
-              disabled ? "linkEvento cursor-default" : "linkEvento"
-            }`}
+            className={`${"linkEvento cursor-default"}`}
           >
             <img
               src={img}
-              className={`${
-                disabled
-                  ? "card-img-top card-img-bottom cursor-default img-disabled"
-                  : "card-img-top card-img-bottom"
-              }`}
+              className={`${"card-img-top card-img-bottom cursor-default img-disabled"}`}
               alt="img logo"
             />
             <div>
@@ -85,18 +78,12 @@ export const CardEvento = ({
         ) : (
           <Link
             to={linkEvento}
-            className={`${
-              disabled ? "linkEvento cursor-default" : "linkEvento"
-            }`}
+            className={`${"linkEvento"}`}
             target={urlEvento ? "_blank" : null}
           >
             <img
               src={img}
-              className={`${
-                disabled
-                  ? "card-img-top card-img-bottom cursor-default img-disabled"
-                  : "card-img-top card-img-bottom"
-              }`}
+              className={`${"card-img-top card-img-bottom"}`}
               alt="img logo"
             />
             <div>
