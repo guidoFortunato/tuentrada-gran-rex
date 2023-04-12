@@ -709,7 +709,7 @@ export const AppRouter = () => {
             
             `}
             href={"https://www.ticketek.com.ar/turf/teatro-gran-rex"}
-            imgPlano={""}
+            imgPlano={"https://www.tuentrada.com/teatro/gran-rex/imagenes/planos/tue1.webp"}
             ubicaciones={[
               {
                 id: 1,
@@ -804,7 +804,7 @@ export const AppRouter = () => {
             
             `}
             href={"https://www.ticketek.com.ar/beats/teatro-gran-rex"}
-            imgPlano={""}
+            imgPlano={"https://www.tuentrada.com/teatro/gran-rex/imagenes/planos/tue1.webp"}
             ubicaciones={[
               {
                 id: 1,
@@ -903,7 +903,7 @@ export const AppRouter = () => {
             
             `}
             href={"https://www.ticketek.com.ar/massacre/teatro-gran-rex"}
-            imgPlano={""}
+            imgPlano={"https://www.tuentrada.com/teatro/gran-rex/imagenes/planos/tue1.webp"}
             ubicaciones={[
               {
                 id: 1,
@@ -1000,7 +1000,7 @@ export const AppRouter = () => {
             href={
               "https://www.ticketek.com.ar/jd-pantoja-kim-loaiza/teatro-gran-rex"
             }
-            imgPlano={""}
+            imgPlano={"https://www.tuentrada.com/teatro/gran-rex/imagenes/planos/tue1.webp"}
             ubicaciones={[
               {
                 id: 1,
@@ -1097,7 +1097,7 @@ export const AppRouter = () => {
             href={
               "https://www.ticketek.com.ar/sergio-galleguillo/teatro-gran-rex"
             }
-            imgPlano={""}
+            imgPlano={"https://www.tuentrada.com/teatro/gran-rex/imagenes/planos/tue1.webp"}
             ubicaciones={[
               {
                 id: 1,
@@ -1193,7 +1193,7 @@ export const AppRouter = () => {
             El ingreso al establecimiento implica la autorización a la Productora y a Cordero, Cavallo y Lautaret S.A. a utilizar el contenido filmado y /o fotografiado y el uso de imagen personal sin compensación alguna. <br />
             `}
             href={"https://www.ticketek.com.ar/matilda/teatro-gran-rex"}
-            imgPlano={""}
+            imgPlano={"https://www.tuentrada.com/teatro/gran-rex/imagenes/planos/tue1.webp"}
             ubicaciones={[
               {
                 id: 1,
@@ -1286,7 +1286,7 @@ export const AppRouter = () => {
             
             `}
             href={"https://www.ticketek.com.ar/bryndis/teatro-gran-rex"}
-            imgPlano={""}
+            imgPlano={"https://www.tuentrada.com/teatro/gran-rex/imagenes/planos/tue1.webp"}
             ubicaciones={[
               {
                 id: 1,
@@ -1382,7 +1382,7 @@ export const AppRouter = () => {
             href={
               "https://www.tuentrada.com/eventos/detalle/Daniel-Agostini/553776971040"
             }
-            imgPlano={"https://www.tuentrada.com/evento/mappa/img/rex.webp"}
+            imgPlano={"https://www.tuentrada.com/teatro/gran-rex/imagenes/planos/tue1.webp"}
             ubicaciones={[
               {
                 id: 1,
@@ -1472,7 +1472,7 @@ export const AppRouter = () => {
             href={
               ""
             }
-            imgPlano={""}
+            imgPlano={"https://www.tuentrada.com/teatro/gran-rex/imagenes/planos/tue1.webp"}
             ubicaciones={[
               {
                 id: 1,
