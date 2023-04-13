@@ -106,7 +106,7 @@ export const Home = () => {
               img={
                 "https://www.tuentrada.com/teatro/gran-rex/imagenes/festival_ballet.webp"
               }
-              status={"Disponible"}
+              status={"Cancelado"}
               title={"INTERNATIONAL FESTIVAL BALLET FOR THE PEACE"}
               date={"5 Y 6 DE MAYO"}
               time={"20:30HS"}

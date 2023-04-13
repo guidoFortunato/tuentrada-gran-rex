@@ -61,7 +61,7 @@ const eventosTotales = [
     img: "https://www.tuentrada.com/teatro/gran-rex/imagenes/festival_ballet.webp",
     linkEvento: "/shows/festival-ballet/6",
     name: "International Festival Ballet for the Peace",
-    status: "Disponible",
+    status: "Cancelado",
     time: "20:30HS",
     disabled: false
   },
