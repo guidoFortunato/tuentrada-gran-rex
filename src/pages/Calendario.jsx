@@ -1038,7 +1038,9 @@ export const Calendario = () => {
   };
 
   const handleEventMount = ( info ) => {
-      if (info.event.extendedProps.status?.toLowerCase() === "agotado") {
+
+    const status = info.event.extendedProps.status?.toLowerCase()
+      if (status === "agotado") {
         const tooltip = tippy(info.el, {
           content: 'Agotado',
           placement: 'top',
@@ -1046,7 +1048,7 @@ export const Calendario = () => {
         });
         return tooltip        
       }
-      if (info.event.extendedProps.status?.toLowerCase() === "próximamente") {
+      if (status === "próximamente") {
         const tooltip = tippy(info.el, {
           content: 'Próximamente',
           placement: 'top',
@@ -1054,7 +1056,7 @@ export const Calendario = () => {
         });
         return tooltip        
       }
-      if (info.event.extendedProps.status?.toLowerCase() === "cancelado") {
+      if (status === "cancelado") {
         const tooltip = tippy(info.el, {
           content: 'Cancelado',
           placement: 'top',
@@ -1062,7 +1064,7 @@ export const Calendario = () => {
         });
         return tooltip        
       }
-      if (info.event.extendedProps.status?.toLowerCase() === "reprogramado") {
+      if (status === "reprogramado") {
         const tooltip = tippy(info.el, {
           content: 'Reprogramado',
           placement: 'top',
