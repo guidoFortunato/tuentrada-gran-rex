@@ -3,7 +3,8 @@ import { CardEvento, FormBusqueda } from "../components/";
 import "../css/header.css";
 import "../css/footer.css";
 import { useEffect } from "react";
-// import { SliderDestacado } from "../components/";
+
+ import { SliderDestacado } from "../components/";
 
 export const Home = () => {
 
@@ -37,9 +38,16 @@ export const Home = () => {
             </div>
           </div>
 
-          {/* <div className="row justify-content-center">
-            <SliderDestacado />
-          </div> */}
+      {/*   <div className="row justify-content-center">
+           <SliderDestacado /> 
+           </div>
+           <div className="img-slider">
+            <div className="img-opacity" >
+          <h3>SOY UN COMUNICADO</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam aspernatur illo praesentium, dolore eos nostrum voluptatibus id obcaecati cum ad impedit velit eligendi voluptatem quisquam nam voluptate pariatur, enim deleniti.</p>
+          </div>
+          </div>
+         */} 
 
           <div className="row sin-padding-right-left animate__animated animate__fadeIn  animate__delay-1s ">
             <CardEvento
