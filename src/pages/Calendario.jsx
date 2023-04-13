@@ -57,7 +57,7 @@ const fullEvents = [
     title: "MIRANDA!",
     url: "/shows/miranda/3",
     display: "block",
-    status: "disponible",
+    status: "agotado",
   },
   {
     id: 4,
@@ -67,7 +67,7 @@ const fullEvents = [
     title: "MIRANDA!",
     url: "/shows/miranda/3",
     display: "block",
-    status: "disponible",
+    status: "agotado",
   },
   {
     id: 5,
@@ -77,7 +77,7 @@ const fullEvents = [
     title: "MIRANDA!",
     url: "/shows/miranda/3",
     display: "block",
-    status: "disponible",
+    status: "agotado",
   },
   {
     id: 6,
@@ -107,7 +107,7 @@ const fullEvents = [
     title: "INTERNATIONAL FESTIVAL BALLET FOR THE PEACE",
     url: "/shows/festival-ballet/6",
     display: "block",
-    status: "disponible",
+    status: "cancelado",
   },
   {
     id: 9,
@@ -117,7 +117,7 @@ const fullEvents = [
     title: "INTERNATIONAL FESTIVAL BALLET FOR THE PEACE",
     url: "/shows/festival-ballet/6",
     display: "block",
-    status: "disponible",
+    status: "cancelado",
   },
   {
     id: 10,
@@ -167,7 +167,7 @@ const fullEvents = [
     title: "JD PANTOJA KIM LOAIZA",
     url: "/shows/jdpantoja-kimloaiza/11",
     display: "block",
-    status: "disponible",
+    status: "agotado",
   },
   {
     id: 15,
@@ -177,7 +177,7 @@ const fullEvents = [
     title: "JD PANTOJA KIM LOAIZA",
     url: "/shows/jdpantoja-kimloaiza/11",
     display: "block",
-    status: "disponible",
+    status: "agotado",
   },
   {
     id: 16,
@@ -948,7 +948,7 @@ const fullEvents = [
     // url: "/shows/chili-fernandez/16",
     url: "",
     display: "block",
-    status: "",
+    status: "Próximamente",
   },
   {
     id: 90,
@@ -959,7 +959,7 @@ const fullEvents = [
       // url: "/shows/julieta-venegas/17",
     url: "",
     display: "block",
-    status: "",
+    status: "Próximamente",
   },
 ];
 
@@ -1015,7 +1015,7 @@ export const Calendario = () => {
   const handleClick = (info) => {
     info.jsEvent.preventDefault();
     // const urlEvento = info.event.url?.split("/")[1].toLowerCase() === "shows";
-    const statusEvento =  info.event.extendedProps.status?.toLowerCase() === "disponible";
+    const statusEvento =  info.event.extendedProps.status?.toLowerCase() !== "próximamente";
 
     if (statusEvento) {
       navigate(info.event.url);
@@ -1038,9 +1038,33 @@ export const Calendario = () => {
   };
 
   const handleEventMount = ( info ) => {
-      if (info.event.extendedProps.status !== "disponible") {
+      if (info.event.extendedProps.status?.toLowerCase() === "agotado") {
+        const tooltip = tippy(info.el, {
+          content: 'Agotado',
+          placement: 'top',
+          theme: 'dark',
+        });
+        return tooltip        
+      }
+      if (info.event.extendedProps.status?.toLowerCase() === "próximamente") {
         const tooltip = tippy(info.el, {
           content: 'Próximamente',
+          placement: 'top',
+          theme: 'dark',
+        });
+        return tooltip        
+      }
+      if (info.event.extendedProps.status?.toLowerCase() === "cancelado") {
+        const tooltip = tippy(info.el, {
+          content: 'Cancelado',
+          placement: 'top',
+          theme: 'dark',
+        });
+        return tooltip        
+      }
+      if (info.event.extendedProps.status?.toLowerCase() === "reprogramado") {
+        const tooltip = tippy(info.el, {
+          content: 'Reprogramado',
           placement: 'top',
           theme: 'dark',
         });
