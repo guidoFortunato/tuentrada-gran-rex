@@ -2,23 +2,37 @@ import { CardEvento, FormBusqueda } from "../components/";
 
 import "../css/header.css";
 import "../css/footer.css";
+import { useEffect } from "react";
 // import { SliderDestacado } from "../components/";
 
 export const Home = () => {
+
+  useEffect(() => {
+    setTimeout(() => {
+      window.scrollTo(0, 0);
+    }, 100);
+  }, []);
+
   return (
     <>
       <header className="animate__animated animate__fadeIn animate__fast">
         <div className="header-home">
-          <h1 className="titulo-principal animate__animated animate__fadeInDown animate__delay-1s	 "> <strong> Gran Rex</strong></h1>
+          <h1 className="titulo-principal animate__animated animate__fadeInDown animate__fast	 ">
+            {" "}
+            <strong> Gran Rex</strong>
+          </h1>
           <FormBusqueda />
         </div>
       </header>
       <main>
         <div className="container">
-          <div className="row animate__animated animate__fadeIn animate__delay-2s	 ">
+          <div className="row animate__animated animate__fadeIn animate__fast	 ">
             <div className="col-12 text-center mt-3 ">
-              <h2 style={{ fontSize: "35px" }} className="my-3">
-            Próximos eventos
+              <h2
+                style={{ fontSize: "30px" }}
+                className="my-3 animate__fadeIn animate__delay-1s tittle-h2"
+              >
+                Próximos eventos
               </h2>
             </div>
           </div>
@@ -27,11 +41,11 @@ export const Home = () => {
             <SliderDestacado />
           </div> */}
 
-          <div className="row sin-padding-right-left animate__animated animate__fadeIn  animate__delay-2s ">
+          <div className="row sin-padding-right-left animate__animated animate__fadeIn  animate__delay-1s ">
             <CardEvento
               linkEvento={"/shows/el-zar/1"}
               img={
-                "https://www.tuentrada.com/teatro/gran-rex/imagenes/El_zar.webp"
+                "https://www.tuentrada.com/teatro/gran-rex/imagenes/el_zar.webp"
               }
               status={"Disponible"}
               title={"EL ZAR"}
@@ -160,6 +174,18 @@ export const Home = () => {
               date={"DEL 1 DE JUNIO AL 30 DE JULIO"}
               time={"CONSULTAR HORARIOS"}
             />
+        
+          <CardEvento
+              linkEvento={"/shows/julieta-venegas/17"}
+              img={
+                "https://www.tuentrada.com/teatro/gran-rex/imagenes/julieta-venegas.webp"
+              }
+              status={"Próximamente"}
+              title={"JULIETA VENEGAS"}
+              date={"DOMINGO 26 DE AGOSTO"}
+              time={"20:30HS"}
+              disabled={true}
+            />
             <CardEvento
               linkEvento={"/shows/bxs/14"}
               img={
@@ -171,9 +197,7 @@ export const Home = () => {
               time={"20:00HS"}
             />
             <CardEvento
-              linkEvento={
-                "https://www.tuentrada.com/eventos/detalle/Daniel-Agostini/553776971040"
-              }
+              linkEvento={"/shows/daniel-agostini/15"}
               img={
                 "https://www.tuentrada.com/teatro/gran-rex/imagenes/daniel_agostini.webp"
               }
@@ -181,6 +205,17 @@ export const Home = () => {
               title={"DANIEL AGOSTINI"}
               date={"DOMINGO 10 DE SEPTIEMBRE"}
               time={"20:00HS"}
+            />
+            <CardEvento
+              linkEvento={"/shows/chili-feranndez/16"}
+              img={
+                "https://www.tuentrada.com/teatro/gran-rex/imagenes/chili-fernandez.webp"
+              }
+              status={"Próximamente"}
+              title={"Chili Fernandez"}
+              date={"Sábado 16 DE SEPTIEMBRE"}
+              time={"20:30HS"}
+              disabled={true}
             />
           </div>
         </div>

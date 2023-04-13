@@ -1,5 +1,4 @@
 import React from "react";
-import ciro1000x250 from "../assets/images/ciro1000x250.png";
 
 import "../css/sliderdestacado.css";
 
@@ -35,7 +34,7 @@ export const SliderDestacado = () => {
         </div>
         <div className="carousel-inner">
           <div className="carousel-item active">
-            <img src={ciro1000x250} className="d-block w-100" alt="..." />
+            <img src="https://picsum.photos/1000/250" className="d-block w-100" alt="..." />
             <div className="carousel-caption d-none d-md-block">
               <h5>First slide label</h5>
               <p>
@@ -44,7 +43,7 @@ export const SliderDestacado = () => {
             </div>
           </div>
           <div className="carousel-item">
-            <img src={ciro1000x250} className="d-block w-100" alt="..." />
+            <img src="https://picsum.photos/1000/250" className="d-block w-100" alt="..." />
             <div className="carousel-caption d-none d-md-block">
               <h5>Second slide label</h5>
               <p>
@@ -53,7 +52,7 @@ export const SliderDestacado = () => {
             </div>
           </div>
           <div className="carousel-item">
-            <img src={ciro1000x250} className="d-block w-100" alt="..." />
+            <img src="https://picsum.photos/1000/250" className="d-block w-100" alt="..." />
             <div className="carousel-caption d-none d-md-block">
               <h5>Third slide label</h5>
               <p>
