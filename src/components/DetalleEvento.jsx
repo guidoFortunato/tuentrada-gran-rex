@@ -55,7 +55,7 @@ export const DetalleEvento = ({ title, description, href, img, ubicaciones, imgP
         <hr />
         <div className="row">
           <div className="col-12 col-lg-6 mb-5 mb-lg-0 text-center">
-            <img src={img} alt="imagen evento" className="img-fluid" />
+            <img src={img} alt={ `imagen ${title}` } className="img-fluid" />
           </div>
           <div className="col-12 col-lg-6 detalle-del-evento">
             <p

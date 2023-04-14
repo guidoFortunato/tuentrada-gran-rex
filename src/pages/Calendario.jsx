@@ -1088,15 +1088,16 @@ export const Calendario = () => {
         <div className="row mt-5 container-calendar">
           <div className="col-12">
             <FullCalendar
+              // eventBackgroundColor="red"
               // eventClassNames={eventClassNames}
+              // eventMouseEnter={ handleMouseEnter }
               buttonText={buttonTextOptions}
               eventBackgroundColor="#ba2828"
               eventBorderColor="#ba2828"
               eventClick={handleClick}
-              // eventMouseEnter={ handleMouseEnter }
+              eventDidMount={ handleEventMount }
               events={fullEvents}
               eventTimeFormat={eventTimeFormat}
-              // eventBackgroundColor="red"
               headerToolbar={ window.innerWidth < 1023 ? headerToolbarOptionsResponsive : headerToolbarOptionsDesktop }
               height={"70vh"}
               initialView={ window.innerWidth < 1023 ? "listMonth" : "dayGridMonth" }
@@ -1105,7 +1106,6 @@ export const Calendario = () => {
               plugins={fullPlugins}
               themeSystem={"bootstrap5"}
               titleFormat={handleTitle}
-              eventDidMount={ handleEventMount }
             />
           </div>
         </div>

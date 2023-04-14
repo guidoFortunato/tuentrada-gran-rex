@@ -67,12 +67,12 @@ fieldset:disabled .btn {
   color: #fff !important;
 }
 
-.evento-disponible > .fc-list-event-graphic > .fc-list-event-dot {
+/* .evento-disponible > .fc-list-event-graphic > .fc-list-event-dot {
   border: 5px solid #ba2828;
 }
 .evento-no-disponible > .fc-list-event-graphic > .fc-list-event-dot {
   border: 5px solid rgb(114, 110, 110);
-}
+} */
 
 
 /* @media screen and (min-width: 1023px) {
