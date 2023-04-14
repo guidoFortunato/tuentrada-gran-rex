@@ -102,7 +102,7 @@ export const DetalleEvento = ({ title, description, href, img, ubicaciones, imgP
             </h2>
             <p style={{ color: "black" }}>
               <strong> Entradas en venta </strong> <br />
-              En las boleterias del Teatro Gran Rex (Av. Corrientes 857 -Lunes a
+              En las boleterias del Teatro Gran Rex (Av. Corrientes 857 - Lunes a
               Sábado de 12 a 18 hs. Feriados Cerrado.) <br /> <br />
               <strong>Personas con movilidad reducida</strong> <br />
               Las sillas de ruedas se ubican en el espacio habilitado para las
