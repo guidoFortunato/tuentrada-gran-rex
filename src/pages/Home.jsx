@@ -59,8 +59,8 @@ export const Home = () => {
               }
               status={"Agotado"}
               title={"MIRANDA"}
-              date={"21, 22 Y 23 DE ABRIL"}
-              time={"20:00HS Y 20:30HS"}
+              // date={"21, 22 Y 23 DE ABRIL"}
+              // time={"20:00HS Y 20:30HS"}
             />
             <CardEvento
               linkEvento={"/shows/queen/4"}
@@ -69,8 +69,8 @@ export const Home = () => {
               }
               status={"Disponible"}
               title={"QUEEN POR MASTER STROKE"}
-              date={"VIERNES 28 DE ABRIL"}
-              time={"20:30HS"}
+              // date={"VIERNES 28 DE ABRIL"}
+              // time={"20:30HS"}
             />
             <CardEvento
               linkEvento={"/shows/damian-cordoba/5"}
@@ -79,8 +79,8 @@ export const Home = () => {
               }
               status={"Disponible"}
               title={"DAMIÁN CÓRDOBA"}
-              date={"SÁBADO 29 DE ABRIL"}
-              time={"20:30HS"}
+              // date={"SÁBADO 29 DE ABRIL"}
+              // time={"20:30HS"}
             />
 
             <CardEvento
@@ -90,8 +90,8 @@ export const Home = () => {
               }
               status={"Cancelado"}
               title={"INTERNATIONAL FESTIVAL BALLET FOR THE PEACE"}
-              date={"5 Y 6 DE MAYO"}
-              time={"20:30HS"}
+              // date={"5 Y 6 DE MAYO"}
+              // time={"20:30HS"}
             />
                   <CardEvento
               linkEvento={"/shows/sergio-torres/2"}
@@ -100,8 +100,8 @@ export const Home = () => {
               }
               status={"Reprogramado"}
               title={"SERGIO TORRES"}
-              date={"DOMINGO 7 DE MAYO"}
-              time={"21:30HS"}
+              // date={"DOMINGO 7 DE MAYO"}
+              // time={"21:30HS"}
             />
             <CardEvento
               linkEvento={"/shows/daleqva/7"}
@@ -110,8 +110,8 @@ export const Home = () => {
               }
               status={"Disponible"}
               title={"DALE Q´VA"}
-              date={"VIERNES 12 DE MAYO"}
-              time={"20:30HS"}
+              // date={"VIERNES 12 DE MAYO"}
+              // time={"20:30HS"}
             />
             <CardEvento
               linkEvento={"/shows/turf/8"}
@@ -120,8 +120,8 @@ export const Home = () => {
               }
               status={"Disponible"}
               title={"TURF"}
-              date={"SÁBADO 13 DE MAYO"}
-              time={"20:30HS"}
+              // date={"SÁBADO 13 DE MAYO"}
+              // time={"20:30HS"}
             />
             <CardEvento
               linkEvento={"/shows/the-beats/9"}
@@ -130,8 +130,8 @@ export const Home = () => {
               }
               status={"Disponible"}
               title={"THE BEATS"}
-              date={"DOMINGO 14 DE MAYO"}
-              time={"20:30HS"}
+              // date={"DOMINGO 14 DE MAYO"}
+              // time={"20:30HS"}
             />
             <CardEvento
               linkEvento={"/shows/massacre/10"}
@@ -140,8 +140,8 @@ export const Home = () => {
               }
               status={"Disponible"}
               title={"MASSACRE"}
-              date={"VIERNES 19 DE MAYO"}
-              time={"20:30HS"}
+              // date={"VIERNES 19 DE MAYO"}
+              // time={"20:30HS"}
             />
 
             <CardEvento
@@ -151,8 +151,8 @@ export const Home = () => {
               }
               status={"Agotado"}
               title={"JD PANTOJA KIM LOAIZA"}
-              date={"20 y 21 DE MAYO"}
-              time={"12:00HS y 19:00HS"}
+              // date={"20 y 21 DE MAYO"}
+              // time={"12:00HS y 19:00HS"}
             />
             <CardEvento
               linkEvento={"/shows/sergio-galleguillo/12"}
@@ -161,8 +161,8 @@ export const Home = () => {
               }
               status={"Disponible"}
               title={"SERGIO GALLEGUILLO"}
-              date={"20 DE MAYO"}
-              time={"21:00HS"}
+              // date={"20 DE MAYO"}
+              // time={"21:00HS"}
             />
             <CardEvento
               linkEvento={"/shows/matilda/13"}
@@ -171,8 +171,8 @@ export const Home = () => {
               }
               status={"Disponible"}
               title={"Matilda"}
-              date={"DEL 1 DE JUNIO AL 30 DE JULIO"}
-              time={"CONSULTAR HORARIOS"}
+              // date={"DEL 1 DE JUNIO AL 30 DE JULIO"}
+              // time={"CONSULTAR HORARIOS"}
             />
         
           <CardEvento
@@ -182,8 +182,8 @@ export const Home = () => {
               }
               status={"Próximamente"}
               title={"JULIETA VENEGAS"}
-              date={"DOMINGO 26 DE AGOSTO"}
-              time={"20:30HS"}
+              // date={"DOMINGO 26 DE AGOSTO"}
+              // time={"20:30HS"}
               disabled={true}
             />
             <CardEvento
@@ -193,8 +193,8 @@ export const Home = () => {
               }
               status={"Disponible"}
               title={"bxs - BRYNDIS x siempre"}
-              date={"DOMINGO 27 DE AGOSTO"}
-              time={"20:00HS"}
+              // date={"DOMINGO 27 DE AGOSTO"}
+              // time={"20:00HS"}
             />
             <CardEvento
               linkEvento={"/shows/daniel-agostini/15"}
@@ -203,8 +203,8 @@ export const Home = () => {
               }
               status={"Disponible"}
               title={"DANIEL AGOSTINI"}
-              date={"DOMINGO 10 DE SEPTIEMBRE"}
-              time={"20:00HS"}
+              // date={"DOMINGO 10 DE SEPTIEMBRE"}
+              // time={"20:00HS"}
             />
             <CardEvento
               linkEvento={"/shows/chili-fernandez/16"}
@@ -213,8 +213,8 @@ export const Home = () => {
               }
               status={"Disponible"}
               title={"Chili Fernandez"}
-              date={"Sábado 16 DE SEPTIEMBRE"}
-              time={"20:30HS"}
+              // date={"Sábado 16 DE SEPTIEMBRE"}
+              // time={"20:30HS"}
            
             />
           </div>
