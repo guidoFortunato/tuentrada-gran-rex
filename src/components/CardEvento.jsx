@@ -67,7 +67,7 @@ export const CardEvento = ({
               </h5>
             </div>
             <div style={{ padding: "5px", color:"gray" }}>
-              <h3 style={{ fontWeight: "bold", padding: "5px" }}>
+              <h3 className="h3-card" style={{ fontWeight: "bold", padding: "5px" }}>
                 {title.toUpperCase()}
               </h3>
               {/* <h4 style={{ padding: "5px 0", fontSize: "15px",   color:"gray"}}>
@@ -123,7 +123,7 @@ export const CardEvento = ({
               </h5>
             </div>
             <div style={{ padding: "5px" }}>
-              <h3 style={{ fontWeight: "bold", padding: "5px" }}>
+              <h3 className="h3-card" style={{ fontWeight: "bold", padding: "5px" }}>
                 {title.toUpperCase()}
               </h3>
               {/* <h4 style={{ padding: "5px 0", fontSize: "15px" }}>

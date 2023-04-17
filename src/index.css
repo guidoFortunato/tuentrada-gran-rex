@@ -12,9 +12,13 @@ body {
 } */
 
 .card {
-  margin: 20px;
+  margin: 5px;
   box-shadow: 5px 5px 6px 1px rgb(227, 227, 227);
   width: 80%; /* width: 70%; */
+}
+
+.h3-card{
+  font-size: 20px;
 }
 
 img {
@@ -66,6 +70,15 @@ article {
   body {
     padding-bottom: 220px;
   }
+
+  .card {
+    margin: 5px;
+    box-shadow: 5px 5px 6px 1px rgb(227, 227, 227);
+    width: 80%;
+}
+.h3-card{
+  font-size: 16px;
+}
 }
 
 @media screen and (min-width: 992px) {
@@ -83,6 +96,15 @@ article {
   }
   body {
     padding-bottom: 190px;
+  }
+  .card {
+    margin: 5px;
+    box-shadow: 5px 5px 6px 1px rgb(227, 227, 227);
+    width: 100%; /* width: 70%; */
+  }
+
+  .h3-card{
+    font-size: 16px;
   }
 }
 @media screen and (min-width: 2000px) {
