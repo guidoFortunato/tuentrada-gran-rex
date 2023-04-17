@@ -29,25 +29,16 @@ const month = [
 ];
 
 const fullEvents = [
-  {
-    id: 1,
-    start: "2023-04-15T20:30:00",
-    end: "-",
-    date: "2023-04-15",
-    title: "EL ZAR",
-    url: "/shows/el-zar/1",
-    display: "block",
-    status: "disponible",
-  },
+
   {
     id: 2,
-    date: "2023-04-16",
-    start: "2023-04-16T21:30:00",
+    date: "2023-05-07",
+    start: "2023-05-07T21:30:00",
     end: "-",
     title: "SERGIO TORRES",
     url: "/shows/sergio-torres/2",
     display: "block",
-    status: "disponible",
+    status: "reprogramado",
   },
   {
     id: 3,

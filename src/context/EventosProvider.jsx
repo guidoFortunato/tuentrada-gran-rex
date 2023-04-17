@@ -5,23 +5,14 @@ import Fuse from "fuse.js";
 export const EventosContext = createContext();
 
 const eventosTotales = [
-  {
-    date: "SÁBADO 15 DE ABRIL",
-    id: 1,
-    img: "https://www.tuentrada.com/teatro/gran-rex/imagenes/el_zar.webp",
-    linkEvento: "/shows/el-zar/1",
-    name: "el zar",
-    status: "Disponible",
-    time: "20:30HS",
-    disabled: false
-  },
-  {
-    date: "DOMINGO 16 DE ABRIL",
+ 
+  { 
+    date: "DOMINGO 7 DE MAYO",
     id: 2,
     img: "https://www.tuentrada.com/teatro/gran-rex/imagenes/sergio_torres.webp",
     linkEvento: "/shows/sergio-torres/2",
     name: "sergio torres",
-    status: "Disponible",
+    status: "Reprogramado",
     time: "21:30HS",
     disabled: false
   },

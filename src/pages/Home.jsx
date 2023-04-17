@@ -50,26 +50,8 @@ export const Home = () => {
          */} 
 
           <div className="row sin-padding-right-left animate__animated animate__fadeIn  animate__delay-1s ">
-            <CardEvento
-              linkEvento={"/shows/el-zar/1"}
-              img={
-                "https://www.tuentrada.com/teatro/gran-rex/imagenes/el_zar.webp"
-              }
-              status={"Disponible"}
-              title={"EL ZAR"}
-              date={"SÁBADO 15 DE ABRIL"}
-              time={"20:30HS"}
-            />
-            <CardEvento
-              linkEvento={"/shows/sergio-torres/2"}
-              img={
-                "https://www.tuentrada.com/teatro/gran-rex/imagenes/sergio_torres.webp"
-              }
-              status={"Disponible"}
-              title={"SERGIO TORRES"}
-              date={"DOMINGO 16 DE ABRIL"}
-              time={"21:30HS"}
-            />
+        
+      
             <CardEvento
               linkEvento={"/shows/miranda/3"}
               img={
@@ -110,6 +92,16 @@ export const Home = () => {
               title={"INTERNATIONAL FESTIVAL BALLET FOR THE PEACE"}
               date={"5 Y 6 DE MAYO"}
               time={"20:30HS"}
+            />
+                  <CardEvento
+              linkEvento={"/shows/sergio-torres/2"}
+              img={
+                "https://www.tuentrada.com/teatro/gran-rex/imagenes/sergio_torres.webp"
+              }
+              status={"Reprogramado"}
+              title={"SERGIO TORRES"}
+              date={"DOMINGO 7 DE MAYO"}
+              time={"21:30HS"}
             />
             <CardEvento
               linkEvento={"/shows/daleqva/7"}
