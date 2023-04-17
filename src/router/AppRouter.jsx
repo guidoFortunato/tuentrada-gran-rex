@@ -1354,7 +1354,7 @@ export const AppRouter = () => {
           />
         }
       />
-      {/* <Route
+      <Route
         path="/shows/chili-fernandez/16"
         element={
           <DetalleEvento
@@ -1446,7 +1446,7 @@ export const AppRouter = () => {
           />
         }
       />
-      <Route
+    {/*   <Route
         path="/shows/julieta-venegas/17"
         element={
           <DetalleEvento

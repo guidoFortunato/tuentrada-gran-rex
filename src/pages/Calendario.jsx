@@ -936,10 +936,9 @@ const fullEvents = [
     start: "2023-09-16T20:30:00",
     end: "-",
     title: "CHILI FERNANDEZ",
-    // url: "/shows/chili-fernandez/16",
-    url: "",
+    url: "/shows/chili-fernandez/16",
     display: "block",
-    status: "Próximamente",
+    status: "Disponible",
   },
   {
     id: 90,

@@ -207,15 +207,15 @@ export const Home = () => {
               time={"20:00HS"}
             />
             <CardEvento
-              linkEvento={"/shows/chili-feranndez/16"}
+              linkEvento={"/shows/chili-fernandez/16"}
               img={
                 "https://www.tuentrada.com/teatro/gran-rex/imagenes/chili-fernandez.webp"
               }
-              status={"Próximamente"}
+              status={"Disponible"}
               title={"Chili Fernandez"}
               date={"Sábado 16 DE SEPTIEMBRE"}
               time={"20:30HS"}
-              disabled={true}
+           
             />
           </div>
         </div>

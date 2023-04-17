@@ -161,12 +161,12 @@ const eventosTotales = [
     date: "Sábado 16 DE SEPTIEMBRE",
     id: 16,
     img: "https://www.tuentrada.com/teatro/gran-rex/imagenes/chili-fernandez.webp",
-    // linkEvento: "/shows/chili-fernandez/16",
-    linkEvento: "",
+ 
+    linkEvento: "/shows/chili-fernandez/16",
     name: "chili fernandez",
-    status: "Próximamente",
+    status: "Disponible",
     time: "20:30HS",
-    disabled: true
+    disabled: false
   },
 ];
 
