@@ -81,6 +81,20 @@ article {
   }
 }
 
+/*navbar*/
+.container-redes-nav{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.item-nav{
+  margin-right: 30px;
+}
+
+
+/******/
+
 
 @media screen and (min-width: 992px) {
   .mobile {
@@ -106,6 +120,9 @@ article {
 
   .h3-card {
     font-size: 16px;
+  }
+  .container-redes-nav{
+    justify-content: flex-end;
   }
 }
 @media screen and (min-width: 2000px) {
