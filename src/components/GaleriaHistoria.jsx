@@ -8,6 +8,7 @@ import "swiper/css/navigation";
 
 export const GaleriaHistoria = () => {
   return (
+    
     <Swiper
       effect="coverflow"
       grabCursor
@@ -63,3 +64,4 @@ export const GaleriaHistoria = () => {
     </Swiper>
   );
 };
+

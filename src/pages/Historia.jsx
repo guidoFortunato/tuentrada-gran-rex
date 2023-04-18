@@ -55,10 +55,14 @@ export const Historia = () => {
             rojizo.
           </p>
         </div>
-      </div>
-      <div className="container-historia">
+       
+    
+        </div>
+      
+      {/* <div className="container-historia">
         <GaleriaHistoria />
-      </div>
+      </div> */}
+     
     </>
   );
 };
