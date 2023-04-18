@@ -20,7 +20,7 @@ const itemsNavbar = [
     id: 3,
     name: "Historia",
     link: "/historia",
-    mostrar: true,
+    mostrar: false,
   },
   {
     id: 4,
