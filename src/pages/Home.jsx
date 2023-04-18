@@ -217,6 +217,17 @@ export const Home = () => {
               // time={"20:30HS"}
            
             />
+             <CardEvento
+              linkEvento={"/shows/perota-chingo/18"}
+              img={
+                "https://www.tuentrada.com/teatro/gran-rex/imagenes/perota-chingo.webp"
+              }
+              status={"Disponible"}
+              title={"Perotá Chingó"}
+              // date={"Sábado 25 DE NOVIEMBRE"}
+              // time={"20:30HS"}
+           
+            />
           </div>
         </div>
       </main>

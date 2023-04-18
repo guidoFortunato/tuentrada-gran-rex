@@ -57,6 +57,7 @@ export const DetalleEvento = ({ title, description, href, img, ubicaciones, imgP
           <div className="col-12 col-lg-6 mb-5 mb-lg-0 text-center">
             <img src={img} alt={ `imagen ${title}` } className="img-fluid" />
           </div>
+          
           <div className="col-12 col-lg-6 detalle-del-evento">
             <p
               className="animate__animated animate__fadeIn"
@@ -64,6 +65,7 @@ export const DetalleEvento = ({ title, description, href, img, ubicaciones, imgP
                 __html: DOMPurify.sanitize(description),
               }}
             ></p>
+             
             <div className="d-flex justify-content-center flex-column align-items-center mt-4 ">
               <a
                 href={href}
@@ -89,6 +91,7 @@ export const DetalleEvento = ({ title, description, href, img, ubicaciones, imgP
               </div>
             </div>
           </div>
+          
           <div className="d-flex justify-content-center flex-column align-items-center mt-4 detalle-del-evento">
             <h2
               className="tittle-h2"
@@ -98,9 +101,13 @@ export const DetalleEvento = ({ title, description, href, img, ubicaciones, imgP
                 fontSize: "30px",
               }}
             >
+              
               INFORMACIÓN GENERAL
             </h2>
+            
             <p style={{ color: "black" }}>
+              
+            El ingreso al establecimiento implica la autorización a la Productora y a Cordero, Cavallo y Lautaret S.A. a utilizar el contenido filmado y /o fotografiado y el uso de imagen personal sin compensación alguna. <br /><br />
               <strong> Entradas en venta </strong> <br />
               En las boleterias del Teatro Gran Rex (Av. Corrientes 857 - Lunes a
               Sábado de 12 a 18 hs. Feriados Cerrado.) <br /> <br />

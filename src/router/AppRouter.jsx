@@ -36,11 +36,18 @@ export const AppRouter = () => {
             }
             description={`Vuelve al Gran Rex el máximo exponente de la cumbia santafecina, Sergio Torres "LA VOZ" y esta vez vamos a festejarsu cumpleaños en el Rex, en una noche única y especial. Vuelve el Negro al Gran Rex y no te lo podes perder. <br /> <br />
             El Teatro Gran Rex informa que los eventos que se realizan en esta sala podrían ser fotografiados o filmados para su posterior difusión en medios y /o campañas publicitarias. <br /><br />
-            El ingreso al establecimiento implica la autorización a la Productora y a Cordero, Cavallo y Lautaret S.A. a utilizar el contenido filmado y /o fotografiado y el uso de imagen personal sin compensación alguna. <br />
+            <strong>  Fechas:  </strong>
+            <ul>
+              <li>
+              Reprogramado: Domingo 7 de mayo 21:30hs
+              </li>
+           
+           </ul>
   
-            
+             
             
             `}
+           
             href={"https://www.ticketek.com.ar/sergio-torres/teatro-gran-rex"}
             imgPlano={"https://www.tuentrada.com/teatro/gran-rex/imagenes/planos/tue1.webp"}
             ubicaciones={[
@@ -119,6 +126,7 @@ export const AppRouter = () => {
             ]}
           />
         }
+     
       />
 
       {/* EVENTO 3 MIRANDA  */}
@@ -131,11 +139,25 @@ export const AppRouter = () => {
             img={
               "https://www.tuentrada.com/teatro/gran-rex/imagenes/miranda.webp"
             }
-            description={`Todo listo para la fiesta MIRANDA! <br /> La banda pop más icónica de la escena hispanoamericana, Miranda! cierra el año anunciando su nuevo álbum HOTEL MIRANDA! y las fechas de presentación para el 21 de abril en el imponente Teatro Gran Rex. Con más de 20 años de trayectoria, a la banda liderada por Ale Sergi y Juliana Gattas le sobran los motivos para celebrar y lo harán al mejor estilo Miranda! <br /> <br />
+            description={` 
+          
+            <strong> Todo listo para la fiesta MIRANDA! </strong> <br /> La banda pop más icónica de la escena hispanoamericana, Miranda! cierra el año anunciando su nuevo álbum HOTEL MIRANDA! y las fechas de presentación para el 21 de abril en el imponente Teatro Gran Rex. Con más de 20 años de trayectoria, a la banda liderada por Ale Sergi y Juliana Gattas le sobran los motivos para celebrar y lo harán al mejor estilo Miranda! <br /> <br />
             El Teatro Gran Rex informa que los eventos que se realizan en esta sala podrían ser fotografiados o filmados para su posterior difusión en medios y /o campañas publicitarias. <br /><br />
-            El ingreso al establecimiento implica la autorización a la Productora y a Cordero, Cavallo y Lautaret S.A. a utilizar el contenido filmado y /o fotografiado y el uso de imagen personal sin compensación alguna. <br />
+            <strong>  Fechas:  </strong>
+             <ul>
+               <li>
+               Viernes 21 de abril 20:30hs
+               </li>
+               <li>
+               Sábado 22 de abril 20:30hs
+               </li>
+               <li>
+               Domingo 23 de abril 20:00hs
+               </li>
+            </ul>
             
             `}
+            
             href={"https://www.ticketek.com.ar/miranda/teatro-gran-rex"}
             imgPlano={"https://www.tuentrada.com/teatro/gran-rex/imagenes/planos/tue1.webp"}
             ubicaciones={[
@@ -226,9 +248,15 @@ export const AppRouter = () => {
             img={
               "https://www.tuentrada.com/teatro/gran-rex/imagenes/queen.webp"
             }
-            description={`Master Stroke, integrado por Ema Caradoso en voz, Brian Morua en guitarra, Manuel Olveira en bajo, Agustín Albertini en batería y Alberto Ludueña en teclados, es la banda tributo a Queen destacada por el mismo Brian May en sus redes sociales y la que Ángel Mahler sumó a sus espectáculos de Rapsodia Bohemia Sinfónico en 2020. <br /> <br />
+            description={`    <strong>Master Stroke</strong>, integrado por Ema Caradoso en voz, Brian Morua en guitarra, Manuel Olveira en bajo, Agustín Albertini en batería y Alberto Ludueña en teclados, es la banda tributo a Queen destacada por el mismo Brian May en sus redes sociales y la que Ángel Mahler sumó a sus espectáculos de Rapsodia Bohemia Sinfónico en 2020. <br /> <br />
             El Teatro Gran Rex informa que los eventos que se realizan en esta sala podrían ser fotografiados o filmados para su posterior difusión en medios y /o campañas publicitarias. <br /><br />
-            El ingreso al establecimiento implica la autorización a la Productora y a Cordero, Cavallo y Lautaret S.A. a utilizar el contenido filmado y /o fotografiado y el uso de imagen personal sin compensación alguna. <br />
+            <strong>  Fechas:  </strong>
+            <ul>
+              <li>
+              Viernes 28 de abril 20:30hs
+              </li>
+           
+           </ul>
             
             `}
             href={
@@ -325,7 +353,13 @@ export const AppRouter = () => {
             }
             description={`Damián Córdoba es un fenómeno del cuarteto que se mantiene vigente en el tiempo. Con más de 20 años de trayectoria, continúa llenando en cada presentación, bailes y festivales donde se presenta, convocando multitudes. Así lo viene demostrando con su participación en los principales festivales del país: Festival de Jesús María, Cosquín Cuarteto, Festival de Peñas de Villa María, y muchos, muchos más. <br /> <br />
             El Teatro Gran Rex informa que los eventos que se realizan en esta sala podrían ser fotografiados o filmados para su posterior difusión en medios y /o campañas publicitarias. <br /><br />
-            El ingreso al establecimiento implica la autorización a la Productora y a Cordero, Cavallo y Lautaret S.A. a utilizar el contenido filmado y /o fotografiado y el uso de imagen personal sin compensación alguna. <br />
+            <strong>  Fechas:  </strong>
+            <ul>
+              <li>
+              Sábado 29 de abril 20:30hs
+              </li>
+           
+           </ul>
             
             `}
             href={"https://www.ticketek.com.ar/damian-cordoba/teatro-gran-rex"}
@@ -420,7 +454,19 @@ export const AppRouter = () => {
             }
             description={`International Festival Ballet for the Peace se llevará a cabo los días Viernes 5 y Sabado 6 de Mayo de 2023 en el Teatro Gran Rex. <br /> <br />
             El Teatro Gran Rex informa que los eventos que se realizan en esta sala podrían ser fotografiados o filmados para su posterior difusión en medios y /o campañas publicitarias. <br /><br />
-            El ingreso al establecimiento implica la autorización a la Productora y a Cordero, Cavallo y Lautaret S.A. a utilizar el contenido filmado y /o fotografiado y el uso de imagen personal sin compensación alguna. <br />
+            <strong>  Fechas:  </strong>
+            <ul>
+              <li>
+             Cancelado: Viernes 5 de mayo 20:30hs
+          
+              </li>
+              <li>
+              Cancelado: Sábado 6 de mayo 20:30hs
+           
+               </li>
+             
+           
+           </ul>
             
             `}
             href={
@@ -517,7 +563,13 @@ export const AppRouter = () => {
             }
             description={`Dale Q’ Va es, sin dudas, uno de los grupos cuarteteros del momento, se encuentran viviendo un presente excelente a lo largo y ancho de todo el país.  <br /> <br />
             El Teatro Gran Rex informa que los eventos que se realizan en esta sala podrían ser fotografiados o filmados para su posterior difusión en medios y /o campañas publicitarias. <br /><br />
-            El ingreso al establecimiento implica la autorización a la Productora y a Cordero, Cavallo y Lautaret S.A. a utilizar el contenido filmado y /o fotografiado y el uso de imagen personal sin compensación alguna. <br />
+            <strong>  Fechas:  </strong>
+            <ul>
+              <li>
+             Viernes 12 de mayo 20:30hs
+              </li>
+           
+           </ul>
             
             `}
             href={"https://www.ticketek.com.ar/dale-qva/teatro-gran-rex"}
@@ -608,9 +660,16 @@ export const AppRouter = () => {
           <DetalleEvento
             title={"TURF"}
             img={"https://www.tuentrada.com/teatro/gran-rex/imagenes/turf.webp"}
-            description={`Turf se presenta el 13 de Mayo en el Teatro Gran Rex. <br /> <br />
+            description={`
+            Turf se presenta el 13 de Mayo en el Teatro Gran Rex. <br /> <br />
             El Teatro Gran Rex informa que los eventos que se realizan en esta sala podrían ser fotografiados o filmados para su posterior difusión en medios y /o campañas publicitarias. <br /><br />
-            El ingreso al establecimiento implica la autorización a la Productora y a Cordero, Cavallo y Lautaret S.A. a utilizar el contenido filmado y /o fotografiado y el uso de imagen personal sin compensación alguna. <br />
+            <strong>  Fechas:  </strong>
+            <ul>
+              <li>
+              Sábado 13 de mayo 20:30hs
+              </li>
+           
+           </ul>
             
             `}
             href={"https://www.ticketek.com.ar/turf/teatro-gran-rex"}
@@ -705,7 +764,13 @@ export const AppRouter = () => {
             }
             description={`The Beats se presentan el Domingo 14 Mayo 20:30 hs. en el Teatro Gran Rex. <br /> <br />
             El Teatro Gran Rex informa que los eventos que se realizan en esta sala podrían ser fotografiados o filmados para su posterior difusión en medios y /o campañas publicitarias. <br /><br />
-            El ingreso al establecimiento implica la autorización a la Productora y a Cordero, Cavallo y Lautaret S.A. a utilizar el contenido filmado y /o fotografiado y el uso de imagen personal sin compensación alguna. <br />
+            <strong>  Fechas:  </strong>
+            <ul>
+              <li>
+              Domingo 14 de mayo 20:30hs
+              </li>
+           
+           </ul>
             
             `}
             href={"https://www.ticketek.com.ar/beats/teatro-gran-rex"}
@@ -804,7 +869,13 @@ export const AppRouter = () => {
             el maridaje perfecto para que Riesgo Rex sea otro suceso en la
             trayectoria de la banda. <br /> <br />
             El Teatro Gran Rex informa que los eventos que se realizan en esta sala podrían ser fotografiados o filmados para su posterior difusión en medios y /o campañas publicitarias. <br /><br />
-            El ingreso al establecimiento implica la autorización a la Productora y a Cordero, Cavallo y Lautaret S.A. a utilizar el contenido filmado y /o fotografiado y el uso de imagen personal sin compensación alguna. <br />
+            <strong>  Fechas:  </strong>
+            <ul>
+              <li>
+              Viernes 19 de mayo 20:30hs
+              </li>
+           
+           </ul>
             
             `}
             href={"https://www.ticketek.com.ar/massacre/teatro-gran-rex"}
@@ -899,7 +970,16 @@ export const AppRouter = () => {
             description={`Kim Loaiza y JD Pantoja, los Youtubers y Cantantes más populares del momento, anuncian su último tour juntos el cual lleva por nombre “BYE BYE”, quiénes cantarán por última vez juntos en un mismo escenario su mayores éxitos.<br />
             El Teatro Gran Rex informa que los eventos que se realizan en esta sala podrían ser fotografiados o filmados para su posterior difusión en medios y /o campañas publicitarias.  <br /> <br />
             El Teatro Gran Rex informa que los eventos que se realizan en esta sala podrían ser fotografiados o filmados para su posterior difusión en medios y /o campañas publicitarias. <br /><br />
-            El ingreso al establecimiento implica la autorización a la Productora y a Cordero, Cavallo y Lautaret S.A. a utilizar el contenido filmado y /o fotografiado y el uso de imagen personal sin compensación alguna. <br />
+            <strong>  Fechas:  </strong>
+            <ul>
+              <li>
+              Sábado 20 de mayo 12:00hs
+              </li>
+              <li>
+              Domingo 21 de mayo 19:00hs
+              </li>
+           
+           </ul>
             
             `}
             href={
@@ -996,8 +1076,13 @@ export const AppRouter = () => {
             description={`Sergio Galleguillo lleva “La fiesta de La Rioja” al Gran Rex.
             <br />
             El hoy reconocido Embajador Artístico y Cultural de La Rioja llega al Gran Rex para celebrar el aniversario de La Rioja. “Yo soy nacido en La Rioja señores… La Tierra del Carnaval”, es la lírica que lo abraza a su terruño y a su esencia de folklorista.<br />
-            Sergio Galleguillo fue conquistando cada escenario del país donde llevo su música contagiada de alegría, logrando instaurar en los lugares más recónditos de nuestro país y del mundo, el juego y la mística de una ancestral fiesta llamada CHAYA. En sus inicios, conformó grupos como Tiahuanaco y Arahuanco pero, su máxima explosión y aceptación en el folklore fue con “Sergio Galleguillo y Los Amigos”, banda formada en 1997 con la cual editó 6 discos. En 1998 editan su álbum debut “Agitando Pañuelos”. Ese mismo año se presentan en la peña de Los Nocheros en Cosquín, lo cual les da un lugar luego en el escenario de la Plaza Próspero Molina. <br />
-        
+            Sergio Galleguillo fue conquistando cada escenario del país donde llevo su música contagiada de alegría, logrando instaurar en los lugares más recónditos de nuestro país y del mundo, el juego y la mística de una ancestral fiesta llamada CHAYA. En sus inicios, conformó grupos como Tiahuanaco y Arahuanco pero, su máxima explosión y aceptación en el folklore fue con “Sergio Galleguillo y Los Amigos”, banda formada en 1997 con la cual editó 6 discos. En 1998 editan su álbum debut “Agitando Pañuelos”. Ese mismo año se presentan en la peña de Los Nocheros en Cosquín, lo cual les da un lugar luego en el escenario de la Plaza Próspero Molina. <br /><br />
+            <strong>  Fechas:  </strong>
+            <ul>
+            <li>
+            Sábado 20 de mayo 21:00hs
+            </li>
+            </ul>
             `}
             href={
               "https://www.ticketek.com.ar/sergio-galleguillo/teatro-gran-rex"
@@ -1095,7 +1180,12 @@ export const AppRouter = () => {
             <br />
             Basado en la homónima novela de Roald Dahl, autor que ha vendido más de 250 millones de libros, y que ha inspirado la icónica película infantil de los 90 es una megaproducción que lleva presentándose, con gran éxito mundialmente: 12 años en Londres y 4 años en cartel en Broadway con más de 1.500 representaciones, 99 premios internacionales y más de 10 millones de espectadores que ya la vieron. <br /> <br />
             El Teatro Gran Rex informa que los eventos que se realizan en esta sala podrían ser fotografiados o filmados para su posterior difusión en medios y /o campañas publicitarias. <br /><br />
-            El ingreso al establecimiento implica la autorización a la Productora y a Cordero, Cavallo y Lautaret S.A. a utilizar el contenido filmado y /o fotografiado y el uso de imagen personal sin compensación alguna. <br />
+            <strong>  Fechas:  </strong>
+            <ul>
+            <li>
+            Del 1 de junio al 30 de julio
+            </li>
+            </ul>
             `}
             href={"https://www.ticketek.com.ar/matilda/teatro-gran-rex"}
             imgPlano={"https://www.tuentrada.com/teatro/gran-rex/imagenes/planos/tue1.webp"}
@@ -1176,7 +1266,12 @@ export const AppRouter = () => {
             img={"https://www.tuentrada.com/teatro/gran-rex/imagenes/bxs.webp"}
             description={`Grupo Bryndis se presentará el día Domingo 27 de Agosto en el Teatro Gran Rex.  <br /> <br />
             El Teatro Gran Rex informa que los eventos que se realizan en esta sala podrían ser fotografiados o filmados para su posterior difusión en medios y /o campañas publicitarias. <br /><br />
-            El ingreso al establecimiento implica la autorización a la Productora y a Cordero, Cavallo y Lautaret S.A. a utilizar el contenido filmado y /o fotografiado y el uso de imagen personal sin compensación alguna. <br />
+            <strong>  Fechas:  </strong>
+            <ul>
+            <li>
+           Domingo 27 de agosto 20:00hs
+            </li>
+            </ul>
             
             `}
             href={"https://www.ticketek.com.ar/bryndis/teatro-gran-rex"}
@@ -1271,7 +1366,12 @@ export const AppRouter = () => {
             }
             description={`Daniel Agostini se presentará el día Domingo 10 de Septiembre en el Teatro Gran Rex.  <br /> <br />
             El Teatro Gran Rex informa que los eventos que se realizan en esta sala podrían ser fotografiados o filmados para su posterior difusión en medios y /o campañas publicitarias. <br /><br />
-            El ingreso al establecimiento implica la autorización a la Productora y a Cordero, Cavallo y Lautaret S.A. a utilizar el contenido filmado y /o fotografiado y el uso de imagen personal sin compensación alguna. <br />
+            <strong>  Fechas:  </strong>
+            <ul>
+            <li>
+           Domingo 10 de septiemnre 20:00hs
+            </li>
+            </ul>
             `}
             href={
               "https://www.tuentrada.com/eventos/detalle/Daniel-Agostini/553776971040"
@@ -1364,7 +1464,13 @@ export const AppRouter = () => {
             }
             description={`Chili Fernandez se presentará el día Sábado 16 de Septiembre en el Teatro Gran Rex.  <br /> <br />
             El Teatro Gran Rex informa que los eventos que se realizan en esta sala podrían ser fotografiados o filmados para su posterior difusión en medios y /o campañas publicitarias. <br /><br />
-            El ingreso al establecimiento implica la autorización a la Productora y a Cordero, Cavallo y Lautaret S.A. a utilizar el contenido filmado y /o fotografiado y el uso de imagen personal sin compensación alguna. <br />`}
+            <strong>  Fechas:  </strong>
+            <ul>
+            <li>
+           Sábado 16 de septiembre 20:30hs
+            </li>
+            </ul>
+             `}
             href={
               "https://www.tuentrada.com/eventos/detalle/Chili-Fernandez/495716168868"
             }
@@ -1454,9 +1560,14 @@ export const AppRouter = () => {
             img={
               "https://www.tuentrada.com/teatro/gran-rex/imagenes/julieta-venegas.webp"
             }
-            description={`Chili Fernandez se presentará el día Sábado 16 de Septiembre en el Teatro Gran Rex.  <br /> <br />
+            description={`Julieta Venegas se presentará el día Domingo 26 de Agosto en el Teatro Gran Rex.  <br /> <br />
             El Teatro Gran Rex informa que los eventos que se realizan en esta sala podrían ser fotografiados o filmados para su posterior difusión en medios y /o campañas publicitarias. <br /><br />
-            El ingreso al establecimiento implica la autorización a la Productora y a Cordero, Cavallo y Lautaret S.A. a utilizar el contenido filmado y /o fotografiado y el uso de imagen personal sin compensación alguna. <br />`}
+             <strong>  Fechas:  </strong>
+            <ul>
+            <li>
+           Domingo 26 de agosto 20:30hs
+            </li>
+            </ul>`}
             href={
               "https://www.tuentrada.com/eventos/detalle/Julieta-Venegas/2044219094378"
             }
@@ -1538,6 +1649,103 @@ export const AppRouter = () => {
           />
         }
       /> */}
+      <Route
+        path="/shows/perota-chingo/18"
+        element={
+          <DetalleEvento
+            title={"Perotá Chingó"}
+            img={
+              "https://www.tuentrada.com/teatro/gran-rex/imagenes/perota-chingo.webp"
+            }
+            description={`Perotá Chingó se presentará el día Sábado 25 de Noviembre en el Teatro Gran Rex.  <br /> <br />
+            El Teatro Gran Rex informa que los eventos que se realizan en esta sala podrían ser fotografiados o filmados para su posterior difusión en medios y /o campañas publicitarias. <br /><br />
+             <strong>  Fechas:  </strong>
+            <ul>
+            <li>
+           Sábado 25 de noviembre 20:30hs
+            </li>
+            </ul>`}
+            href={
+              "https://www.tuentrada.com/eventos/detalle/Perota-Chingo/114421632871"
+            }
+              imgPlano={"https://www.tuentrada.com/teatro/gran-rex/imagenes/planos/tue1.webp"}
+            ubicaciones={[
+              {
+                id: 1,
+                nombre: "PLATEA 1", 
+                color: "#970513",
+                precio: "8.500",
+              },
+              {
+                id: 2,
+                nombre: "PLATEA 2",
+                color: "#79C8C3",
+                precio: "8.000",
+              },
+              {
+                id: 3,
+                nombre: "PLATEA 3",
+                color: "#EDB63B",
+                precio: "7.500",
+              },
+              {
+                id: 4,
+                nombre: "PLATEA 4",
+                color: "#86AA4D",
+                precio: "7.000",
+              },
+              {
+                id: 5,
+                nombre: "PLATEA 5",
+                color: "#052748",
+                precio: "6.000",
+              },
+              {
+                id: 6,
+                nombre: "SUPER PULLMAN 1",
+                color: "#035F89",
+                precio: "7.000",
+              },
+              {
+                id: 7,
+                nombre: "SUPER PULLMAN 2",
+                color: "#A9167D",
+                precio: "6.000",
+              },
+              {
+                id: 8,
+                nombre: "PULLMAN 1",
+                color: "#EE6E08",
+                precio: "5.000",
+              },
+              {
+                id: 9,
+                nombre: "PULLMAN 2",
+                color: "#037366",
+                precio: "4.500",
+              },
+              {
+                id: 10,
+                nombre: "PULLMAN 3",
+                color: "#D97B77",
+                precio: "3.500",
+              },
+              {
+                id: 11,
+                nombre: "PULLMAN 4",
+                color: "#AF0657",
+                precio: "3.000",
+              },
+              {
+                id: 12,
+                nombre: "PULLMAN 5",
+                color: "#5271FF",
+                precio: "3.000",
+              },
+            ]}
+          />
+        }
+      />
       <Route path="/ubicaciones" element={<Ubicaciones />} />
       <Route path="/*" element={<Navigate to="/" />} />
     </Routes>

@@ -951,6 +951,16 @@ const fullEvents = [
     display: "block",
     status: "Próximamente",
   },
+  {
+    id: 91,
+    date: "2023-11-25",
+    start: "2023-11-25T20:30:00",
+    end: "-",
+    title: "PEROTÁ CHINGÓ",
+    url: "/shows/perota-chingo/18",
+    display: "block",
+    status: "Disponible",
+  },
 ];
 
 const fullPlugins = [
