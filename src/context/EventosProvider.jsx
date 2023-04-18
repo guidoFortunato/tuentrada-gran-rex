@@ -167,6 +167,16 @@ const eventosTotales = [
     status: "Disponible",
     disabled: false
   },
+  {
+    //  date: "Sábado 25 DE NOVIEMBRE",
+    // time: "20:30HS",
+    id: 18,
+    img: "https://www.tuentrada.com/teatro/gran-rex/imagenes/perota-chingo.webp",
+    linkEvento: "/shows/perota-chingo/18",
+    name: "perota chingo",
+    status: "Disponible",
+    disabled: false
+  },
 ];
 
 // Configuración de Fuse.js
