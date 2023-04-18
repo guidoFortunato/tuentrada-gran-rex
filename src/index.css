@@ -94,7 +94,10 @@ article {
   margin-right: 30px;
 }
 
-
+.span-redes{
+  color: #ffffff8c;
+  font-size: 18px;
+}
 /******/
 
 
@@ -126,6 +129,9 @@ article {
   .container-redes-nav{
     justify-content: flex-end;
     /* position: absolute; */
+  }
+  .span-redes{
+    display: none;
   }
 }
 @media screen and (min-width: 2000px) {
