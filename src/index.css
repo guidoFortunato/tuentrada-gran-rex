@@ -45,18 +45,7 @@ article {
   display: none;
 }
 
-.redes-nav{
-  margin: 10px 0;
- } 
- .redes-info{
-  display: flex;
-  flex-direction: column;
-  align-self: baseline;
-}
-  .container-nav {
-    display: flex;
-    flex-direction: column;
-  }
+
 
 @media screen and (min-width: 400px) {
   body {
@@ -136,6 +125,7 @@ article {
   }
   .container-redes-nav{
     justify-content: flex-end;
+    /* position: absolute; */
   }
 }
 @media screen and (min-width: 2000px) {
