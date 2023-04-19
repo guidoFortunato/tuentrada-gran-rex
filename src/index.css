@@ -94,7 +94,7 @@ article {
   }
 }
 
-/*navbar*/
+/navbar/
 .container-redes-nav{
   display: flex;
   justify-content: center;
@@ -105,7 +105,10 @@ article {
   margin-right: 30px;
 }
 
-
+.span-redes{
+  color: #ffffff8c;
+  font-size: 18px;
+}
 /******/
 
 
@@ -136,6 +139,10 @@ article {
   }
   .container-redes-nav{
     justify-content: flex-end;
+    /* position: absolute; */
+  }
+  .span-redes{
+    display: none;
   }
 }
 @media screen and (min-width: 2000px) {
@@ -244,6 +251,6 @@ body {
 
 @media screen and (min-width: 992px) {
   .ocultar-responsive {
-    display: inline;
-  }
+    display: inline;
+  }
 }
