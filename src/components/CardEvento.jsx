@@ -1,19 +1,12 @@
 import { Link } from "react-router-dom";
 import "../css/cardevento.css";
 
-export const CardEvento = ({
-  img = "",
-  status = "Disponible",
-  title = "",
-  date = "",
-  time = "",
-  linkEvento = "",
-  disabled = false,
-}) => {
+export const CardEvento = ({ img = "", status = "disponible", title = "", linkEvento = "", disabled = false,}) => {
   const urlEvento = linkEvento?.split("/")[1] !== "shows";
-  const newDate = date.charAt(0).toUpperCase() + date.slice(1).toLowerCase();
-  const newTime = time.charAt(0).toUpperCase() + time.slice(1).toLowerCase();
+  // const newDate = date.charAt(0).toUpperCase() + date.slice(1).toLowerCase();
+  // const newTime = time.charAt(0).toUpperCase() + time.slice(1).toLowerCase();
   const newStatus = status.charAt(0).toUpperCase() + status.slice(1).toLowerCase();
+  
 
   return (
     <article

@@ -27,16 +27,15 @@ export const BusquedaEventos = () => {
         </div>
         <div className="row justify-content-center">
           {listaEventosBusqueda.length > 0 ? (
-            listaEventosBusqueda.map(({id, linkEvento, img, status, name, date, time, disabled}) => (
+            listaEventosBusqueda.map((evento) => (
               <CardEvento
-                key={id}
-                linkEvento={linkEvento}
-                img={img}
-                status={status}
-                title={name}
-                date={date}
-                time={time}
-                disabled={disabled}
+              linkEvento={evento.links.path}
+              img={ evento.imagenes.evento }
+              status={evento.estado}
+              title={evento.nombre}
+              key={evento.id}
+              disabled={evento.disabled}
+                
               />
             ))
           ) : (

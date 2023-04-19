@@ -1,12 +1,15 @@
-import { useEffect } from "react";
+import { useContext, useEffect } from "react";
+import { EventosContext } from "../context/EventosProvider";
 import { CardEvento, FormBusqueda } from "../components/";
 
-import { SliderDestacado } from "../components/";
+// import { SliderDestacado } from "../components/";
 
 import "../css/header.css";
 import "../css/footer.css";
 
 export const Home = () => {
+  const { eventosTotales } = useContext(EventosContext);
+
   useEffect(() => {
     setTimeout(() => {
       window.scrollTo(0, 0);
@@ -49,180 +52,17 @@ export const Home = () => {
          */}
 
           <div className="row sin-padding-right-left animate__animated animate__fadeIn  animate__delay-1s ">
-            <CardEvento
-              linkEvento={"/shows/miranda/3"}
-              img={
-                "https://www.tuentrada.com/teatro/gran-rex/imagenes/miranda.webp"
-              }
-              status={"Agotado"}
-              title={"MIRANDA"}
-              date={"21, 22 Y 23 DE ABRIL"}
-              time={"20:00HS Y 20:30HS"}
-            />
-            <CardEvento
-              linkEvento={"/shows/queen/4"}
-              img={
-                "https://www.tuentrada.com/teatro/gran-rex/imagenes/queen.webp"
-              }
-              status={"Disponible"}
-              title={"QUEEN POR MASTER STROKE"}
-              // date={"VIERNES 28 DE ABRIL"}
-              // time={"20:30HS"}
-            />
-            <CardEvento
-              linkEvento={"/shows/damian-cordoba/5"}
-              img={
-                "https://www.tuentrada.com/teatro/gran-rex/imagenes/damian_cordoba.webp"
-              }
-              status={"Disponible"}
-              title={"DAMIÁN CÓRDOBA"}
-              // date={"SÁBADO 29 DE ABRIL"}
-              // time={"20:30HS"}
-            />
+            {eventosTotales.map((evento) => (
 
-            <CardEvento
-              linkEvento={"/shows/festival-ballet/6"}
-              img={
-                "https://www.tuentrada.com/teatro/gran-rex/imagenes/festival_ballet.webp"
-              }
-              status={"Cancelado"}
-              title={"INTERNATIONAL FESTIVAL BALLET"}
-              // date={"5 Y 6 DE MAYO"}
-              // time={"20:30HS"}
-            />
-            <CardEvento
-              linkEvento={"/shows/sergio-torres/2"}
-              img={
-                "https://www.tuentrada.com/teatro/gran-rex/imagenes/sergio_torres.webp"
-              }
-              status={"Reprogramado"}
-              title={"SERGIO TORRES"}
-              // date={"DOMINGO 7 DE MAYO"}
-              // time={"21:30HS"}
-            />
-            <CardEvento
-              linkEvento={"/shows/daleqva/7"}
-              img={
-                "https://www.tuentrada.com/teatro/gran-rex/imagenes/dale_qva.webp"
-              }
-              status={"Disponible"}
-              title={"DALE Q´VA"}
-              // date={"VIERNES 12 DE MAYO"}
-              // time={"20:30HS"}
-            />
-            <CardEvento
-              linkEvento={"/shows/turf/8"}
-              img={
-                "https://www.tuentrada.com/teatro/gran-rex/imagenes/turf.webp"
-              }
-              status={"Disponible"}
-              title={"TURF"}
-              // date={"SÁBADO 13 DE MAYO"}
-              // time={"20:30HS"}
-            />
-            <CardEvento
-              linkEvento={"/shows/the-beats/9"}
-              img={
-                "https://www.tuentrada.com/teatro/gran-rex/imagenes/the_beats.webp"
-              }
-              status={"Disponible"}
-              title={"THE BEATS"}
-              // date={"DOMINGO 14 DE MAYO"}
-              // time={"20:30HS"}
-            />
-            <CardEvento
-              linkEvento={"/shows/massacre/10"}
-              img={
-                "https://www.tuentrada.com/teatro/gran-rex/imagenes/massacre.webp"
-              }
-              status={"Disponible"}
-              title={"MASSACRE"}
-              // date={"VIERNES 19 DE MAYO"}
-              // time={"20:30HS"}
-            />
-
-            <CardEvento
-              linkEvento={"/shows/jdpantoja-kimloaiza/11"}
-              img={
-                "https://www.tuentrada.com/teatro/gran-rex/imagenes/jdpantoja_kimloaiza.webp"
-              }
-              status={"Agotado"}
-              title={"JD PANTOJA KIM LOAIZA"}
-              // date={"20 y 21 DE MAYO"}
-              // time={"12:00HS y 19:00HS"}
-            />
-            <CardEvento
-              linkEvento={"/shows/sergio-galleguillo/12"}
-              img={
-                "https://www.tuentrada.com/teatro/gran-rex/imagenes/sergio_galleguillo.webp"
-              }
-              status={"Disponible"}
-              title={"SERGIO GALLEGUILLO"}
-              // date={"20 DE MAYO"}
-              // time={"21:00HS"}
-            />
-            <CardEvento
-              linkEvento={"/shows/matilda/13"}
-              img={
-                "https://www.tuentrada.com/teatro/gran-rex/imagenes/matilda.webp"
-              }
-              status={"Disponible"}
-              title={"Matilda"}
-              // date={"DEL 1 DE JUNIO AL 30 DE JULIO"}
-              // time={"CONSULTAR HORARIOS"}
-            />
-
-            <CardEvento
-              linkEvento={"/shows/julieta-venegas/17"}
-              img={
-                "https://www.tuentrada.com/teatro/gran-rex/imagenes/julieta-venegas.webp"
-              }
-              status={"Próximamente"}
-              title={"JULIETA VENEGAS"}
-              // date={"DOMINGO 26 DE AGOSTO"}
-              // time={"20:30HS"}
-              disabled={true}
-            />
-            <CardEvento
-              linkEvento={"/shows/bxs/14"}
-              img={
-                "https://www.tuentrada.com/teatro/gran-rex/imagenes/bxs.webp"
-              }
-              status={"Disponible"}
-              title={"bxs - BRYNDIS x siempre"}
-              // date={"DOMINGO 27 DE AGOSTO"}
-              // time={"20:00HS"}
-            />
-            <CardEvento
-              linkEvento={"/shows/daniel-agostini/15"}
-              img={
-                "https://www.tuentrada.com/teatro/gran-rex/imagenes/daniel_agostini.webp"
-              }
-              status={"Disponible"}
-              title={"DANIEL AGOSTINI"}
-              // date={"DOMINGO 10 DE SEPTIEMBRE"}
-              // time={"20:00HS"}
-            />
-            <CardEvento
-              linkEvento={"/shows/chili-fernandez/16"}
-              img={
-                "https://www.tuentrada.com/teatro/gran-rex/imagenes/chili-fernandez.webp"
-              }
-              status={"Disponible"}
-              title={"Chili Fernandez"}
-              // date={"Sábado 16 DE SEPTIEMBRE"}
-              // time={"20:30HS"}
-            />
-            <CardEvento
-              linkEvento={"/shows/perota-chingo/18"}
-              img={
-                "https://www.tuentrada.com/teatro/gran-rex/imagenes/perota-chingo.webp"
-              }
-              status={"Disponible"}
-              title={"Perotá Chingó"}
-              // date={"Sábado 25 DE NOVIEMBRE"}
-              // time={"20:30HS"}
-            />
+              <CardEvento
+                linkEvento={evento.links.path}
+                img={ evento.imagenes.evento }
+                status={evento.estado}
+                title={evento.nombre}
+                key={evento.id}
+                disabled={evento.disabled}
+              />
+            ))}
           </div>
         </div>
       </main>

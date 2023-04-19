@@ -12,6 +12,8 @@ import 'tippy.js/dist/tippy.css';
 import 'tippy.js/animations/scale.css';
 
 import "../css/calendario.css";
+import { useContext } from "react";
+import { EventosContext } from "../context/EventosProvider";
 
 const month = [
   "Enero",
@@ -997,10 +999,23 @@ const eventTimeFormat = {
 };
 
 export const Calendario = () => {
+  const { eventosTotales } = useContext(EventosContext)
   const navigate = useNavigate();
   const { pathname } = useLocation();
   localStorage.setItem("lastPath", pathname);
+  // {
+  //   id: 2,
+  //   date: "2023-05-07",
+  //   start: "2023-05-07T21:30:00",
+  //   end: "-",
+  //   title: "SERGIO TORRES",
+  //   url: "/shows/sergio-torres/2",
+  //   display: "block",
+  //   status: "reprogramado",
+  // },
+  const newEvents = eventosTotales.map( item => ({id: item.id, start: item.fechas.fecha1.horaInicioCalendario, title: item.nombre, url: item.links.path, display: item.display, status: item.estado}) )
 
+  console.log({newEvents})
 
   // const eventClassNames = (arg) => {
   //   let classNames = [""];

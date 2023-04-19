@@ -19,26 +19,26 @@ const eventosTotales = [
     disabled: false,
     display: "block",
     estado: "agotado",
-    fechas: {
-      fecha1: {
+    fechas: [
+      {
         dia: "viernes 21 de abril",
         hora: "20:30HS",
-        horaInicioCalendario: "2023-04-21T20:30:00",
-        horaFinalizacionCalendario: "-",
+        start: "2023-04-21T20:30:00",
+        end: "-",
       },
-      fecha2: {
+      {
         dia: "sábado 22 de abril",
         hora: "20:30HS",
-        horaInicioCalendario: "2023-04-22T20:30:00",
-        horaFinalizacionCalendario: "-",
+        start: "2023-04-22T20:30:00",
+        end: "-",
       },
-      fecha3: {
+      {
         dia: "domingo 23 de abril",
         hora: "20:00HS",
-        horaInicioCalendario: "2023-04-23T20:00:00",
-        horaFinalizacionCalendario: "-",
+        start: "2023-04-23T20:00:00",
+        end: "-",
       },
-    },
+    ],
     links: {
       href: "https://www.ticketek.com.ar/miranda/teatro-gran-rex",
       path: "/shows/miranda/1",
@@ -136,15 +136,15 @@ const eventosTotales = [
     disabled: false,
     display: "block",
     estado: "disponible",
-    fechas: {
-      fecha1: {
+    fechas: [
+      {
         dia: "sábado 13 de mayo",
         hora: "20:30HS",
-        horaInicioCalendario: "2023-05-13T20:30:00",
-        horaFinalizacionCalendario: "-",
+        start: "2023-05-13T20:30:00",
+        end: "-",
       },
       
-    },
+    ],
     links: {
       href: "https://www.ticketek.com.ar/queen-por-master-stroke/teatro-gran-rex",
       path: "/shows/queen/2",
@@ -243,15 +243,15 @@ const eventosTotales = [
     disabled: false,
     display: "block",
     estado: "disponible",
-    fechas: {
-      fecha1: {
+    fechas: [
+      {
         dia: "sábado 29 de abril",
         hora: "20:30HS",
-        horaInicioCalendario: "2023-04-29T20:30:00",
-        horaFinalizacionCalendario: "-",
+        start: "2023-04-29T20:30:00",
+        end: "-",
       },
       
-    },
+    ],
     links: {
       href: "https://www.ticketek.com.ar/damian-cordoba/teatro-gran-rex",
       path: "/shows/damian-cordoba/3",
@@ -350,21 +350,21 @@ const eventosTotales = [
     disabled: false,
     display: "block",
     estado: "cancelado",
-    fechas: {
-      fecha1: {
+    fechas: [
+       {
         dia: "viernes 5 de mayo",
         hora: "20:30HS",
-        horaInicioCalendario: "2023-05-05T20:30:00",
-        horaFinalizacionCalendario: "-",
+        start: "2023-05-05T20:30:00",
+        end: "-",
       },
-      fecha2: {
+      {
         dia: "sábado 6 de mayo",
         hora: "20:30HS",
-        horaInicioCalendario: "2023-05-06T20:30:00",
-        horaFinalizacionCalendario: "-",
+        start: "2023-05-06T20:30:00",
+        end: "-",
       },      
-      
-    },
+    
+    ],
     links: {
       href: "https://www.ticketek.com.ar/international-festival-ballet-peace/teatro-gran-rex",
       path: "/shows/festival-ballet/4",
@@ -463,14 +463,14 @@ const eventosTotales = [
     disabled: false,
     display: "block",
     estado: "reprogramado",
-    fechas: {
-      fecha1: {
+    fechas: [
+     {
         dia: "domingo 7 de mayo",
         hora: "21:30HS",
-        horaInicioCalendario: "2023-05-07T21:30:00",
-        horaFinalizacionCalendario: "-",
+        start: "2023-05-07T21:30:00",
+        end: "-",
       }
-    },
+],
     links: {
       href: "https://www.ticketek.com.ar/sergio-torres/teatro-gran-rex",
       path: "/shows/sergio-torres/5",
@@ -570,14 +570,14 @@ const eventosTotales = [
     disabled: false,
     display: "block",
     estado: "disponible",
-    fechas: {
-      fecha1: {
+    fechas: [
+      {
         dia: "viernes 12 de mayo",
         hora: "20:30HS",
-        horaInicioCalendario: "2023-05-12T20:30:00",
-        horaFinalizacionCalendario: "-",
+        start: "2023-05-12T20:30:00",
+        end: "-",
       }
-    },
+    ],
     links: {
       href: "https://www.ticketek.com.ar/dale-qva/teatro-gran-rex",
       path: "/shows/daleqva/6",
@@ -677,14 +677,14 @@ const eventosTotales = [
     disabled: false,
     display: "block",
     estado: "disponible",
-    fechas: {
-      fecha1: {
+    fechas: [
+     { 
         dia: "sábado 13 de mayo",
         hora: "20:30HS",
-        horaInicioCalendario: "2023-05-13T20:30:00",
-        horaFinalizacionCalendario: "-",
+        start: "2023-05-13T20:30:00",
+        end: "-",
       }
-    },
+],
     links: {
       href: "https://www.ticketek.com.ar/turf/teatro-gran-rex",
       path: "/shows/turf/7",
@@ -784,14 +784,14 @@ const eventosTotales = [
     disabled: false,
     display: "block",
     estado: "disponible",
-    fechas: {
-      fecha1: {
+    fechas: [
+       {
         dia: "domingo 14 de mayo",
         hora: "20:30HS",
-        horaInicioCalendario: "2023-05-14T20:30:00",
-        horaFinalizacionCalendario: "-",
+        start: "2023-05-14T20:30:00",
+        end: "-",
       }
-    },
+    ],
     links: {
       href: "https://www.ticketek.com.ar/beats/teatro-gran-rex",
       path: "/shows/the-beats/8",
@@ -894,14 +894,14 @@ const eventosTotales = [
     disabled: false,
     display: "block",
     estado: "disponible",
-    fechas: {
-      fecha1: {
+    fechas: [
+       {
         dia: "viernes 19 de mayo",
         hora: "20:30HS",
-        horaInicioCalendario: "2023-05-19T20:30:00",
-        horaFinalizacionCalendario: "-",
+        start: "2023-05-19T20:30:00",
+        end: "-",
       }
-    },
+     ],
     links: {
       href: "https://www.ticketek.com.ar/massacre/teatro-gran-rex",
       path:"/shows/massacre/9"
@@ -1001,20 +1001,20 @@ const eventosTotales = [
     disabled: false,
     display: "block",
     estado: "agotado",
-    fechas: {
-      fecha1: {
+    fechas: [
+       {
         dia: "sábado 20 de mayo",
         hora: "12:00HS",
-        horaInicioCalendario: "2023-05-20T12:00:00",
-        horaFinalizacionCalendario: "-",
+        start: "2023-05-20T12:00:00",
+        end: "-",
       },
-      fecha2: {
+      {
         dia: "domingo 21 de mayo",
         hora: "19:00HS",
-        horaInicioCalendario: "2023-05-21T19:00:00",
-        horaFinalizacionCalendario: "-",
+        start: "2023-05-21T19:00:00",
+        end: "-",
       },
-    },
+],
     links: {
       href: "https://www.ticketek.com.ar/jd-pantoja-kim-loaiza/teatro-gran-rex",
       path:"/shows/jdpantoja-kimloaiza/10"
@@ -1114,14 +1114,14 @@ const eventosTotales = [
     disabled: false,
     display: "block",
     estado: "disponible",
-    fechas: {
-      fecha1: {
+    fechas: [
+      {
         dia: "sábado 20 de mayo",
         hora: "21:00hs",
-        horaInicioCalendario: "2023-05-20T21:00:00",
-        horaFinalizacionCalendario: "-",
+        start: "2023-05-20T21:00:00",
+        end: "-",
       },      
-    },
+    ],
     links: {
       href: "https://www.ticketek.com.ar/sergio-galleguillo/teatro-gran-rex",
       path:"/shows/sergio-galleguillo/11"
@@ -1221,14 +1221,440 @@ const eventosTotales = [
     disabled: false,
     display: "block",
     estado: "disponible",
-    fechas: {
-      fecha1: {
-        dia: "Del 1 de junio al 30 de julio",
+    fechas: [
+      {
+        dia: "",
         hora: "",
-        horaInicioCalendario: "2023-06-01T20:00:00",
-        horaFinalizacionCalendario: "2023-07-30T18:00:00",
+        start: "2023-06-01T20:00:00",
+        end: "",
       },      
-    },
+      {
+        dia: "",
+        hora: "",
+        start: "2023-06-02T20:00:00",
+        end: "",
+      },    
+      {
+        dia: "",
+        hora: "",
+        start: "2023-06-03T15:00:00",
+        end: "",
+      },    
+      {
+        dia: "",
+        hora: "",
+        start: "2023-06-03T19:00:00",
+        end: "",
+      },    
+      {
+        dia: "",
+        hora: "",
+        start: "2023-06-04T18:00:00",
+        end: "",
+      },    
+      {
+        dia: "",
+        hora: "",
+        start: "2023-06-08T20:00:00",
+        end: "",
+      },    
+      {
+        dia: "",
+        hora: "",
+        start: "2023-06-09T20:00:00",
+        end: "",
+      },    
+      {
+        dia: "",
+        hora: "",
+        start: "2023-06-10T15:00:00",
+        end: "",
+      },    
+      {
+        dia: "",
+        hora: "",
+        start: "2023-06-10T19:00:00",
+        end: "",
+      },    
+      {
+        dia: "",
+        hora: "",
+        start: "2023-06-11T14:30:00",
+        end: "",
+      },    
+      {
+        dia: "",
+        hora: "",
+        start: "2023-06-11T18:00:00",
+        end: "",
+      },    
+      {
+        dia: "",
+        hora: "",
+        start: "2023-06-14T20:00:00",
+        end: "",
+      },    
+      {
+        dia: "",
+        hora: "",
+        start: "2023-06-15T20:00:00",
+        end: "",
+      },    
+      {
+        dia: "",
+        hora: "",
+        start: "2023-06-16T20:00:00",
+        end: "",
+      },    
+      {
+        dia: "",
+        hora: "",
+        start: "2023-06-17T15:00:00",
+        end: "",
+      },    
+      {
+        dia: "",
+        hora: "",
+        start: "2023-06-17T19:00:00",
+        end: "",
+      },    
+      {
+        dia: "",
+        hora: "",
+        start: "2023-06-18T15:00:00",
+        end: "",
+      },    
+      {
+        dia: "",
+        hora: "",
+        start: "2023-06-18T19:00:00",
+        end: "",
+      },    
+      {
+        dia: "",
+        hora: "",
+        start: "2023-06-20T15:00:00",
+        end: "",
+      },    
+      {
+        dia: "",
+        hora: "",
+        start: "2023-06-20T19:00:00",
+        end: "",
+      },    
+      {
+        dia: "",
+        hora: "",
+        start: "2023-06-22T20:00:00",
+        end: "",
+      },    
+      {
+        dia: "",
+        hora: "",
+        start: "2023-06-23T20:00:00",
+        end: "",
+      },    
+      {
+        dia: "",
+        hora: "",
+        start: "2023-06-24T15:00:00",
+        end: "",
+      },    
+      {
+        dia: "",
+        hora: "",
+        start: "2023-06-24T19:00:00",
+        end: "",
+      },    
+      {
+        dia: "",
+        hora: "",
+        start: "2023-06-25T14:30:00",
+        end: "",
+      },    
+      {
+        dia: "",
+        hora: "",
+        start: "2023-06-25T18:00:00",
+        end: "",
+      },    
+      {
+        dia: "",
+        hora: "",
+        start: "2023-06-28T20:00:00",
+        end: "",
+      },    
+      {
+        dia: "",
+        hora: "",
+        start: "2023-06-29T20:00:00",
+        end: "",
+      },    
+      {
+        dia: "",
+        hora: "",
+        start: "2023-06-30T20:00:00",
+        end: "",
+      },    
+      {
+        dia: "",
+        hora: "",
+        start: "2023-07-01T15:00:00",
+        end: "",
+      },    
+      {
+        dia: "",
+        hora: "",
+        start: "2023-07-01T19:00:00",
+        end: "",
+      },    
+      {
+        dia: "",
+        hora: "",
+        start: "2023-07-02T14:30:00",
+        end: "",
+      },    
+      {
+        dia: "",
+        hora: "",
+        start: "2023-07-02T18:00:00",
+        end: "",
+      },    
+      {
+        dia: "",
+        hora: "",
+        start: "2023-07-05T20:00:00",
+        end: "",
+      },    
+      {
+        dia: "",
+        hora: "",
+        start: "2023-07-06T20:00:00",
+        end: "",
+      },    
+      {
+        dia: "",
+        hora: "",
+        start: "2023-07-07T20:00:00",
+        end: "",
+      },    
+      {
+        dia: "",
+        hora: "",
+        start: "2023-07-08T15:00:00",
+        end: "",
+      },    
+      {
+        dia: "",
+        hora: "",
+        start: "2023-07-08T19:00:00",
+        end: "",
+      },    
+      {
+        dia: "",
+        hora: "",
+        start: "2023-07-09T14:30:00",
+        end: "",
+      },    
+      {
+        dia: "",
+        hora: "",
+        start: "2023-07-09T18:00:00",
+        end: "",
+      },   
+      {
+        dia: "",
+        hora: "",
+        start: "2023-07-12T20:00:00",
+        end: "",
+      },    
+      {
+        dia: "",
+        hora: "",
+        start: "2023-07-13T20:00:00",
+        end: "",
+      },    
+      {
+        dia: "",
+        hora: "",
+        start: "2023-07-14T20:00:00",
+        end: "",
+      },    
+      {
+        dia: "",
+        hora: "",
+        start: "2023-07-14T20:00:00",
+        end: "",
+      },    
+      {
+        dia: "",
+        hora: "",
+        start: "2023-07-15T14:30:00",
+        end: "",
+      },    
+      {
+        dia: "",
+        hora: "",
+        start: "2023-07-15T18:00:00",
+        end: "",
+      },    
+      {
+        dia: "",
+        hora: "",
+        start: "2023-07-16T14:30:00",
+        end: "",
+      },    
+      {
+        dia: "",
+        hora: "",
+        start: "2023-07-16T18:00:00",
+        end: "",
+      },    
+      {
+        dia: "",
+        hora: "",
+        start: "2023-07-17T14:30:00",
+        end: "",
+      },    
+      {
+        dia: "",
+        hora: "",
+        start: "2023-07-17T18:00:00",
+        end: "",
+      },    
+      {
+        dia: "",
+        hora: "",
+        start: "2023-07-19T14:30:00",
+        end: "",
+      },    
+      {
+        dia: "",
+        hora: "",
+        start: "2023-07-19T18:00:00",
+        end: "",
+      },    
+      {
+        dia: "",
+        hora: "",
+        start: "2023-07-20T14:30:00",
+        end: "",
+      },    
+      {
+        dia: "",
+        hora: "",
+        start: "2023-07-20T18:00:00",
+        end: "",
+      },    
+      {
+        dia: "",
+        hora: "",
+        start: "2023-07-21T14:30:00",
+        end: "",
+      },    
+      {
+        dia: "",
+        hora: "",
+        start: "2023-07-21T18:00:00",
+        end: "",
+      },    
+      {
+        dia: "",
+        hora: "",
+        start: "2023-07-22T14:30:00",
+        end: "",
+      },    
+      {
+        dia: "",
+        hora: "",
+        start: "2023-07-22T18:00:00",
+        end: "",
+      },    
+      {
+        dia: "",
+        hora: "",
+        start: "2023-07-23T14:30:00",
+        end: "",
+      },     
+      {
+        dia: "",
+        hora: "",
+        start: "2023-07-23T18:00:00",
+        end: "",
+      },     
+      {
+        dia: "",
+        hora: "",
+        start: "2023-07-24T14:30:00",
+        end: "",
+      },     
+      {
+        dia: "",
+        hora: "",
+        start: "2023-07-24T18:00:00",
+        end: "",
+      },     
+      {
+        dia: "",
+        hora: "",     
+        start: "2023-07-26T14:30:00",
+        end: "",
+      },     
+      {
+        dia: "",
+        hora: "",
+        start: "2023-07-26T18:00:00",
+        end: "",
+      },     
+      {
+        dia: "",
+        hora: "",
+        start: "2023-07-27T14:30:00",
+        end: "",
+      },     
+      {
+        dia: "",
+        hora: "",
+        start: "2023-07-27T18:00:00",
+        end: "",
+      },     
+      {
+        dia: "",
+        hora: "",
+        start: "2023-07-28T14:30:00",
+        end: "",
+      },     
+      {
+        dia: "",
+        hora: "",
+        start: "2023-07-28T18:00:00",
+        end: "",
+      },     
+      {
+        dia: "",
+        hora: "",
+        start: "2023-07-29T14:30:00",
+        end: "",
+      },     
+      {
+        dia: "",
+        hora: "",
+        start: "2023-07-29T18:00:00",
+        end: "",
+      },     
+      {
+        dia: "",
+        hora: "",
+        start: "2023-07-30T14:30:00",
+        end: "",
+      },     
+      {
+        dia: "",
+        hora: "",
+        start: "2023-07-30T18:00:00",
+        end: "",
+      },     
+    ],
     links: {
       href: "https://www.ticketek.com.ar/matilda/teatro-gran-rex",
       path:"/shows/matilda/12"
@@ -1301,6 +1727,8 @@ const eventosTotales = [
       },
     ],
   },
+
+  
   
   {
     id: 13,
@@ -1314,14 +1742,14 @@ const eventosTotales = [
     disabled: true,
     display: "block",
     estado: "próximamente",
-    fechas: {
-      fecha1: {
+    fechas: [
+     {
         dia: "sábado 26 de agosto",
         hora: "20:30hs",
-        horaInicioCalendario: "2023-08-26T20:30:00",
-        horaFinalizacionCalendario: "",
+        start: "2023-08-26T20:30:00",
+        end: "",
       },      
-    },
+    ],
     links: {
       href: "https://www.tuentrada.com/eventos/detalle/Julieta-Venegas/2044219094378",
       path:"/shows/julieta-venegas/13"
@@ -1420,14 +1848,15 @@ const eventosTotales = [
     disabled: false,
     display: "block",
     estado: "disponible",
-    fechas: {
-      fecha1: {
+    fechas: [
+  {
         dia: "domingo 27 de agosto",
         hora: "20:00hs",
-        horaInicioCalendario: "2023-08-27T20:30:00",
-        horaFinalizacionCalendario: "",
+        start: "2023-08-27T20:30:00",
+        end: "",
       },      
-    },
+      
+    ],
     links: {
       href: "https://www.ticketek.com.ar/bryndis/teatro-gran-rex",
       path:"/shows/bxs/14"
@@ -1525,14 +1954,14 @@ const eventosTotales = [
     disabled: false,
     display: "block",
     estado: "disponible",
-    fechas: {
-      fecha1: {
+    fechas: [
+      {
         dia: "domingo 10 de septiembre",
         hora: "20:00hs",
-        horaInicioCalendario: "2023-08-10T20:00:00",
-        horaFinalizacionCalendario: "",
+        start: "2023-08-10T20:00:00",
+        end: "",
       },      
-    },
+    ],
     links: {
       href: "https://www.tuentrada.com/eventos/detalle/Daniel-Agostini/553776971040",
       path:"/shows/daniel-agostini/15"
@@ -1630,14 +2059,14 @@ const eventosTotales = [
     disabled: false,
     display: "block",
     estado: "disponible",
-    fechas: {
-      fecha1: {
+    fechas: [
+      {
         dia: "sábado 16 de septiembre",
         hora: "20:30hs",
-        horaInicioCalendario: "2023-08-16T20:30:00",
-        horaFinalizacionCalendario: "",
+        start: "2023-08-16T20:30:00",
+        end: "",
       },      
-    },
+    ],
     links: {
       href: "https://www.tuentrada.com/eventos/detalle/Chili-Fernandez/495716168868",
       path:"/shows/chili-fernandez/16"
@@ -1737,14 +2166,14 @@ const eventosTotales = [
     disabled: false,
     display: "block",
     estado: "disponible",
-    fechas: {
-      fecha1: {
+    fechas: [
+       {
         dia: "sábado 25 de noviembre",
         hora: "20:30hs",
-        horaInicioCalendario: "2023-11-25T20:30:00",
-        horaFinalizacionCalendario: "",
+        start: "2023-11-25T20:30:00",
+        end: "",
       },      
-    },
+    ],
     links: {
       href: "https://www.tuentrada.com/eventos/detalle/Perota-Chingo/114421632871",
       path:"/shows/perota-chingo/17"
@@ -1843,8 +2272,7 @@ const eventosBusqueda = [];
 
 const EventosProvider = (props) => {
   const [evento, setEvento] = useState("");
-  const [listaEventosBusqueda, setListaEventosBusqueda] =
-    useState(eventosBusqueda);
+  const [listaEventosBusqueda, setListaEventosBusqueda] = useState(eventosBusqueda);
 
   const handleEvento = (nombreEvento) => {
     if (!nombreEvento.trim()) {
@@ -1859,7 +2287,7 @@ const EventosProvider = (props) => {
 
     // Busca eventos que coincidan exactamente con la consulta
     const resultadosExactos = eventosTotales.filter((item) =>
-      item.name.toLowerCase().includes(nombreEvento.toLowerCase())
+      item.nombre.toLowerCase().includes(nombreEvento.toLowerCase())
     );
 
     // Si no hay resultados exactos, buscar sugerencias
