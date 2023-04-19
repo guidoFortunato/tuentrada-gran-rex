@@ -42,11 +42,7 @@ export const Navbar = () => {
   const handleNavCollapse = () => setIsNavCollapsed(!isNavCollapsed);
 
   return (
-<<<<<<< HEAD
-    <nav className="navbar navbar-dark navbar-expand-lg color-navbar sticky-top animate_animated animatefadeIn animate_faster">
-=======
     <nav className="navbar navbar-dark navbar-expand-lg color-navbar sticky-top animate__animated animate__fadeIn animate__faster">
->>>>>>> 2c893d5a65907f06ff22a6d31d07d3de6bbe8bc2
       <div className="container-fluid">
         <Link className="navbar-brand ms-lg-4" to="/">
           <img src={imgRex} alt="logo gran rex" style={{ width: "75px" }} />
