@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 const itemsNavbar = [
   {
     id: 1,
-    name: "Inicio",
+    name: "Home",
     link: "/",
     mostrar: true,
   },
@@ -20,13 +20,7 @@ const itemsNavbar = [
     id: 3,
     name: "Historia",
     link: "/historia",
-    mostrar: false,
-  },
-  {
-    id: 4,
-    name: "Ubicaciones",
-    link: "/ubicaciones",
-    mostrar: false,
+    mostrar: true,
   },
   {
     id: 5,
@@ -38,7 +32,7 @@ const itemsNavbar = [
     id: 6,
     name: "Preguntas frecuentes",
     link: "/preguntas-frecuentes",
-    mostrar: false,
+    mostrar: true,
   },
 ];
 
