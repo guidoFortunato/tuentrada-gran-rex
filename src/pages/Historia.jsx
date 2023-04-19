@@ -1,12 +1,25 @@
 import { GaleriaHistoria } from "../components";
 import "../css/historia.css";
 
+
+
+
 export const Historia = () => {
 
   return (
     <>
-      <div className="container">
-        <h2 style={{ fontSize: "35px" }} className="my-3 heading">Historia: un teatro con trayectoria</h2>
+     <div className="container">
+          <div className="row animate__animated animate__fadeIn animate__fast	 ">
+            <div className="col-12 text-center mt-3 ">
+              <h2
+                style={{ fontSize: "30px" }}
+                className="my-3 animate__fadeIn animate__delay-1s tittle-h2"
+              >
+                Historia: un teatro con trayectoria
+              </h2>
+            </div>
+          </div>
+      
 
         <div className="col-12">
           <p className="parrafo-historia">

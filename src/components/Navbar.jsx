@@ -32,7 +32,7 @@ const itemsNavbar = [
     id: 6,
     name: "Preguntas frecuentes",
     link: "/preguntas-frecuentes",
-    mostrar: true,
+    mostrar: false,
   },
 ];
 
