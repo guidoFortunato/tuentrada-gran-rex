@@ -1,13 +1,12 @@
+import { useEffect } from "react";
 import { CardEvento, FormBusqueda } from "../components/";
+
+import { SliderDestacado } from "../components/";
 
 import "../css/header.css";
 import "../css/footer.css";
-import { useEffect } from "react";
-
- import { SliderDestacado } from "../components/";
 
 export const Home = () => {
-
   useEffect(() => {
     setTimeout(() => {
       window.scrollTo(0, 0);
@@ -38,7 +37,7 @@ export const Home = () => {
             </div>
           </div>
 
-      {/*   <div className="row justify-content-center">
+          {/*   <div className="row justify-content-center">
            <SliderDestacado /> 
            </div>
            <div className="img-slider">
@@ -47,11 +46,9 @@ export const Home = () => {
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam aspernatur illo praesentium, dolore eos nostrum voluptatibus id obcaecati cum ad impedit velit eligendi voluptatem quisquam nam voluptate pariatur, enim deleniti.</p>
           </div>
           </div>
-         */} 
+         */}
 
           <div className="row sin-padding-right-left animate__animated animate__fadeIn  animate__delay-1s ">
-        
-      
             <CardEvento
               linkEvento={"/shows/miranda/3"}
               img={
@@ -59,8 +56,8 @@ export const Home = () => {
               }
               status={"Agotado"}
               title={"MIRANDA"}
-              // date={"21, 22 Y 23 DE ABRIL"}
-              // time={"20:00HS Y 20:30HS"}
+              date={"21, 22 Y 23 DE ABRIL"}
+              time={"20:00HS Y 20:30HS"}
             />
             <CardEvento
               linkEvento={"/shows/queen/4"}
@@ -89,11 +86,11 @@ export const Home = () => {
                 "https://www.tuentrada.com/teatro/gran-rex/imagenes/festival_ballet.webp"
               }
               status={"Cancelado"}
-              title={"INTERNATIONAL FESTIVAL BALLET FOR THE PEACE"}
+              title={"INTERNATIONAL FESTIVAL BALLET"}
               // date={"5 Y 6 DE MAYO"}
               // time={"20:30HS"}
             />
-                  <CardEvento
+            <CardEvento
               linkEvento={"/shows/sergio-torres/2"}
               img={
                 "https://www.tuentrada.com/teatro/gran-rex/imagenes/sergio_torres.webp"
@@ -174,8 +171,8 @@ export const Home = () => {
               // date={"DEL 1 DE JUNIO AL 30 DE JULIO"}
               // time={"CONSULTAR HORARIOS"}
             />
-        
-          <CardEvento
+
+            <CardEvento
               linkEvento={"/shows/julieta-venegas/17"}
               img={
                 "https://www.tuentrada.com/teatro/gran-rex/imagenes/julieta-venegas.webp"
@@ -215,9 +212,8 @@ export const Home = () => {
               title={"Chili Fernandez"}
               // date={"Sábado 16 DE SEPTIEMBRE"}
               // time={"20:30HS"}
-           
             />
-             <CardEvento
+            <CardEvento
               linkEvento={"/shows/perota-chingo/18"}
               img={
                 "https://www.tuentrada.com/teatro/gran-rex/imagenes/perota-chingo.webp"
@@ -226,7 +222,6 @@ export const Home = () => {
               title={"Perotá Chingó"}
               // date={"Sábado 25 DE NOVIEMBRE"}
               // time={"20:30HS"}
-           
             />
           </div>
         </div>

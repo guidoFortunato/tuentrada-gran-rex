@@ -7,10 +7,10 @@ import EventosProvider from "./context/EventosProvider";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <HashRouter>
-      <EventosProvider>
+    <EventosProvider>
+      <HashRouter>
         <App />
-      </EventosProvider>
-    </HashRouter>
+      </HashRouter>
+    </EventosProvider>
   </React.StrictMode>
 );

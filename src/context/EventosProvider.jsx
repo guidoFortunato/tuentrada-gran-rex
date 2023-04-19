@@ -1,222 +1,1888 @@
 import { createContext, useState } from "react";
 import Fuse from "fuse.js";
 
-
 export const EventosContext = createContext();
 
 const eventosTotales = [
  
-  { 
-    // date: "DOMINGO 7 DE MAYO",
+  {
+    id: 1,
+    descripcion: `<strong> Todo listo para la fiesta MIRANDA! </strong> <br /> La banda pop más icónica de la escena hispanoamericana, Miranda! cierra el año anunciando su nuevo álbum HOTEL MIRANDA! y las fechas de presentación para el 21 de abril en el imponente Teatro Gran Rex. Con más de 20 años de trayectoria, a la banda liderada por Ale Sergi y Juliana Gattas le sobran los motivos para celebrar y lo harán al mejor estilo Miranda! <br /> <br />
+    El Teatro Gran Rex informa que los eventos que se realizan en esta sala podrían ser fotografiados o filmados para su posterior difusión en medios y /o campañas publicitarias. <br /><br />
+    <strong>  Fechas:  </strong>
+     <ul> 
+       <li> Viernes 21 de abril 20:30hs </li>
+       <li> Sábado 22 de abril 20:30hs </li>
+       <li> Domingo 23 de abril 20:00hs </li>
+    </ul>   
+    `,
+    disabled: false,
+    display: "block",
+    estado: "agotado",
+    fechas: {
+      fecha1: {
+        dia: "viernes 21 de abril",
+        hora: "20:30HS",
+        horaInicioCalendario: "2023-04-21T20:30:00",
+        horaFinalizacionCalendario: "-",
+      },
+      fecha2: {
+        dia: "sábado 22 de abril",
+        hora: "20:30HS",
+        horaInicioCalendario: "2023-04-22T20:30:00",
+        horaFinalizacionCalendario: "-",
+      },
+      fecha3: {
+        dia: "domingo 23 de abril",
+        hora: "20:00HS",
+        horaInicioCalendario: "2023-04-23T20:00:00",
+        horaFinalizacionCalendario: "-",
+      },
+    },
+    links: {
+      href: "https://www.ticketek.com.ar/miranda/teatro-gran-rex",
+      path: "/shows/miranda/1",
+    },
+    imagenes: {
+      evento: "https://www.tuentrada.com/teatro/gran-rex/imagenes/miranda.webp",
+      plano: "https://www.tuentrada.com/teatro/gran-rex/imagenes/planos/tue1.webp",
+    },
+    nombre: "miranda!",
+    ubicaciones: [
+      {
+        id: 1,
+        nombre: "PLATEA 1",
+        color: "#970513",
+        precio: "11.500",
+      },
+      {
+        id: 2,
+        nombre: "PLATEA 2",
+        color: "#79C8C3",
+        precio: "10.500",
+      },
+      {
+        id: 3,
+        nombre: "PLATEA 3",
+        color: "#EDB63B",
+        precio: "9.500",
+      },
+      {
+        id: 4,
+        nombre: "PLATEA 4",
+        color: "#86AA4D",
+        precio: "8.500",
+      },
+      {
+        id: 5,
+        nombre: "PLATEA 5",
+        color: "#052748",
+        precio: "7.500",
+      },
+      {
+        id: 6,
+        nombre: "SUPER PULLMAN 1",
+        color: "#035F89",
+        precio: "8.500",
+      },
+      {
+        id: 7,
+        nombre: "SUPER PULLMAN 2",
+        color: "#A9167D",
+        precio: "7.500",
+      },
+      {
+        id: 8,
+        nombre: "PULLMAN 1",
+        color: "#EE6E08",
+        precio: "6.500",
+      },
+      {
+        id: 9,
+        nombre: "PULLMAN 2",
+        color: "#037366",
+        precio: "6.000",
+      },
+      {
+        id: 10,
+        nombre: "PULLMAN 3",
+        color: "#D97B77",
+        precio: "5.500",
+      },
+      {
+        id: 11,
+        nombre: "PULLMAN 4",
+        color: "#AF0657",
+        precio: "5.000",
+      },
+      {
+        id: 12,
+        nombre: "PULLMAN 5",
+        color: "#5271FF",
+        precio: "4.500",
+      },
+    ],
+  },
+ 
+  {
     id: 2,
-    img: "https://www.tuentrada.com/teatro/gran-rex/imagenes/sergio_torres.webp",
-    linkEvento: "/shows/sergio-torres/2",
-    name: "sergio torres",
-    status: "Reprogramado",
-    // time: "21:30HS",
-    disabled: false
+    descripcion: `<strong>Master Stroke</strong>, integrado por Ema Caradoso en voz, Brian Morua en guitarra, Manuel Olveira en bajo, Agustín Albertini en batería y Alberto Ludueña en teclados, es la banda tributo a Queen destacada por el mismo Brian May en sus redes sociales y la que Ángel Mahler sumó a sus espectáculos de Rapsodia Bohemia Sinfónico en 2020. <br /> <br />
+    El Teatro Gran Rex informa que los eventos que se realizan en esta sala podrían ser fotografiados o filmados para su posterior difusión en medios y /o campañas publicitarias. <br /><br />
+    <strong>  Fechas:  </strong>
+    <ul>
+      <li> Viernes 28 de abril 20:30hs </li>   
+   </ul>   
+    `,
+    disabled: false,
+    display: "block",
+    estado: "disponible",
+    fechas: {
+      fecha1: {
+        dia: "sábado 13 de mayo",
+        hora: "20:30HS",
+        horaInicioCalendario: "2023-05-13T20:30:00",
+        horaFinalizacionCalendario: "-",
+      },
+      
+    },
+    links: {
+      href: "https://www.ticketek.com.ar/queen-por-master-stroke/teatro-gran-rex",
+      path: "/shows/queen/2",
+
+    },
+    imagenes: {
+      evento: "https://www.tuentrada.com/teatro/gran-rex/imagenes/queen.webp",
+      plano: "https://www.tuentrada.com/teatro/gran-rex/imagenes/planos/tue1.webp",
+
+    },
+    nombre: "master stroke",
+    ubicaciones: [
+      {
+        id: 1,
+        nombre: "PLATEA 1",
+        color: "#970513",
+        precio: "7.500",
+      },
+      {
+        id: 2,
+        nombre: "PLATEA 2",
+        color: "#79C8C3",
+        precio: "7.000",
+      },
+      {
+        id: 3,
+        nombre: "PLATEA 3",
+        color: "#EDB63B",
+        precio: "6.500",
+      },
+      {
+        id: 4,
+        nombre: "PLATEA 4",
+        color: "#86AA4D",
+        precio: "5.500",
+      },
+      {
+        id: 5,
+        nombre: "PLATEA 5",
+        color: "#052748",
+        precio: "5.000",
+      },
+      {
+        id: 6,
+        nombre: "SUPER PULLMAN 1",
+        color: "#035F89",
+        precio: "7.000",
+      },
+      {
+        id: 7,
+        nombre: "SUPER PULLMAN 2",
+        color: "#A9167D",
+        precio: "6.000",
+      },
+      {
+        id: 8,
+        nombre: "PULLMAN 1",
+        color: "#EE6E08",
+        precio: "5.500",
+      },
+      {
+        id: 9,
+        nombre: "PULLMAN 2",
+        color: "#037366",
+        precio: "5.000",
+      },
+      {
+        id: 10,
+        nombre: "PULLMAN 3",
+        color: "#D97B77",
+        precio: "4.500",
+      },
+      {
+        id: 11,
+        nombre: "PULLMAN 4",
+        color: "#AF0657",
+        precio: "4.000",
+      },
+      {
+        id: 12,
+        nombre: "PULLMAN 5",
+        color: "#5271FF",
+        precio: "3.000",
+      },
+    ],
   },
   {
-    // date: "21, 22 y 23 DE ABRIL",
     id: 3,
-    img: "https://www.tuentrada.com/teatro/gran-rex/imagenes/miranda.webp",
-    linkEvento: "/shows/miranda/3",
-    name: "miranda",
-    status: "Agotado",
-    // time: "20:00HS y 20:30HS",
-    disabled: false
+    descripcion: `Damián Córdoba es un fenómeno del cuarteto que se mantiene vigente en el tiempo. Con más de 20 años de trayectoria, continúa llenando en cada presentación, bailes y festivales donde se presenta, convocando multitudes. Así lo viene demostrando con su participación en los principales festivales del país: Festival de Jesús María, Cosquín Cuarteto, Festival de Peñas de Villa María, y muchos, muchos más. <br /> <br />
+    El Teatro Gran Rex informa que los eventos que se realizan en esta sala podrían ser fotografiados o filmados para su posterior difusión en medios y /o campañas publicitarias. <br /><br />
+    <strong>  Fechas:  </strong>
+    <ul>
+      <li> Sábado 29 de abril 20:30hs </li>   
+   </ul>   
+    `,
+    disabled: false,
+    display: "block",
+    estado: "disponible",
+    fechas: {
+      fecha1: {
+        dia: "sábado 29 de abril",
+        hora: "20:30HS",
+        horaInicioCalendario: "2023-04-29T20:30:00",
+        horaFinalizacionCalendario: "-",
+      },
+      
+    },
+    links: {
+      href: "https://www.ticketek.com.ar/damian-cordoba/teatro-gran-rex",
+      path: "/shows/damian-cordoba/3",
+
+    },
+    imagenes: {      
+      evento: "https://www.tuentrada.com/teatro/gran-rex/imagenes/damian_cordoba.webp",
+      plano: "https://www.tuentrada.com/teatro/gran-rex/imagenes/planos/tue1.webp",
+    },
+    nombre: "damián córdoba",
+    ubicaciones: [
+      {
+        id: 1,
+        nombre: "PLATEA 1",
+        color: "#970513",
+        precio: "8.500",
+      },
+      {
+        id: 2,
+        nombre: "PLATEA 2",
+        color: "#79C8C3",
+        precio: "8.000",
+      },
+      {
+        id: 3,
+        nombre: "PLATEA 3",
+        color: "#EDB63B",
+        precio: "7.000",
+      },
+      {
+        id: 4,
+        nombre: "PLATEA 4",
+        color: "#86AA4D",
+        precio: "6.500",
+      },
+      {
+        id: 5,
+        nombre: "PLATEA 5",
+        color: "#052748",
+        precio: "6.000",
+      },
+      {
+        id: 6,
+        nombre: "SUPER PULLMAN 1",
+        color: "#035F89",
+        precio: "6.500",
+      },
+      {
+        id: 7,
+        nombre: "SUPER PULLMAN 2",
+        color: "#A9167D",
+        precio: "6.000",
+      },
+      {
+        id: 8,
+        nombre: "PULLMAN 1",
+        color: "#EE6E08",
+        precio: "5.500",
+      },
+      {
+        id: 9,
+        nombre: "PULLMAN 2",
+        color: "#037366",
+        precio: "5.000",
+      },
+      {
+        id: 10,
+        nombre: "PULLMAN 3",
+        color: "#D97B77",
+        precio: "4.000",
+      },
+      {
+        id: 11,
+        nombre: "PULLMAN 4",
+        color: "#AF0657",
+        precio: "3.000",
+      },
+      {
+        id: 12,
+        nombre: "PULLMAN 5",
+        color: "#5271FF",
+        precio: "2.500",
+      },
+    ],
   },
   {
-    // date: "VIERNES 28 DE ABRIL",
     id: 4,
-    img: "https://www.tuentrada.com/teatro/gran-rex/imagenes/queen.webp",
-    linkEvento: "/shows/queen/4",
-    name: "queen por master stroke",
-    status: "Disponible",
-    // time: "20:30HS",
-    disabled: false
+    descripcion: `International Festival Ballet for the Peace se llevará a cabo los días Viernes 5 y Sabado 6 de Mayo de 2023 en el Teatro Gran Rex. <br /> <br />
+    El Teatro Gran Rex informa que los eventos que se realizan en esta sala podrían ser fotografiados o filmados para su posterior difusión en medios y /o campañas publicitarias. <br /><br />
+    <strong>  Fechas:  </strong>
+    <ul>
+      <li>Cancelado: Viernes 5 de mayo 20:30hs </li>
+      <li> Cancelado: Sábado 6 de mayo 20:30hs </li>   
+    </ul>  
+    `,
+    disabled: false,
+    display: "block",
+    estado: "cancelado",
+    fechas: {
+      fecha1: {
+        dia: "viernes 5 de mayo",
+        hora: "20:30HS",
+        horaInicioCalendario: "2023-05-05T20:30:00",
+        horaFinalizacionCalendario: "-",
+      },
+      fecha2: {
+        dia: "sábado 6 de mayo",
+        hora: "20:30HS",
+        horaInicioCalendario: "2023-05-06T20:30:00",
+        horaFinalizacionCalendario: "-",
+      },      
+      
+    },
+    links: {
+      href: "https://www.ticketek.com.ar/international-festival-ballet-peace/teatro-gran-rex",
+      path: "/shows/festival-ballet/4",
+
+    },
+    imagenes: {
+      evento: "https://www.tuentrada.com/teatro/gran-rex/imagenes/festival_ballet.webp",
+      plano: "https://www.tuentrada.com/teatro/gran-rex/imagenes/planos/tue1.webp",
+
+    },
+    nombre: "international festival ballet",
+    ubicaciones: [
+      {
+        id: 1,
+        nombre: "PLATEA 1",
+        color: "#970513",
+        precio: "9.000",
+      },
+      {
+        id: 2,
+        nombre: "PLATEA 2",
+        color: "#79C8C3",
+        precio: "8.500",
+      },
+      {
+        id: 3,
+        nombre: "PLATEA 3",
+        color: "#EDB63B",
+        precio: "8.000",
+      },
+      {
+        id: 4,
+        nombre: "PLATEA 4",
+        color: "#86AA4D",
+        precio: "7.500",
+      },
+      {
+        id: 5,
+        nombre: "PLATEA 5",
+        color: "#052748",
+        precio: "6.500",
+      },
+      {
+        id: 6,
+        nombre: "SUPER PULLMAN 1",
+        color: "#035F89",
+        precio: "7.500",
+      },
+      {
+        id: 7,
+        nombre: "SUPER PULLMAN 2",
+        color: "#A9167D",
+        precio: "6.500",
+      },
+      {
+        id: 8,
+        nombre: "PULLMAN 1",
+        color: "#EE6E08",
+        precio: "5.000",
+      },
+      {
+        id: 9,
+        nombre: "PULLMAN 2",
+        color: "#037366",
+        precio: "4.500",
+      },
+      {
+        id: 10,
+        nombre: "PULLMAN 3",
+        color: "#D97B77",
+        precio: "4.500",
+      },
+      {
+        id: 11,
+        nombre: "PULLMAN 4",
+        color: "#AF0657",
+        precio: "4.000",
+      },
+      {
+        id: 12,
+        nombre: "PULLMAN 5",
+        color: "#5271FF",
+        precio: "4.000",
+      },
+    ],
   },
+ 
   {
-    // date: "SÁBADO 29 DE ABRIL",
     id: 5,
-    img: "https://www.tuentrada.com/teatro/gran-rex/imagenes/damian_cordoba.webp",
-    linkEvento: "/shows/damian-cordoba/5",
-    name: "damian cordoba",
-    status: "Disponible",
-    // time: "20:30HS",
-    disabled: false
+    descripcion: `Vuelve al Gran Rex el máximo exponente de la cumbia santafecina, Sergio Torres "LA VOZ" y esta vez vamos a festejarsu cumpleaños en el Rex, en una noche única y especial. Vuelve el Negro al Gran Rex y no te lo podes perder. <br /> <br />
+    El Teatro Gran Rex informa que los eventos que se realizan en esta sala podrían ser fotografiados o filmados para su posterior difusión en medios y /o campañas publicitarias. <br /><br />
+    <strong>  Fechas:  </strong>
+    <ul> <li> Reprogramado: Domingo 7 de mayo 21:30hs </li>   
+    </ul>   
+    `,
+    disabled: false,
+    display: "block",
+    estado: "reprogramado",
+    fechas: {
+      fecha1: {
+        dia: "domingo 7 de mayo",
+        hora: "21:30HS",
+        horaInicioCalendario: "2023-05-07T21:30:00",
+        horaFinalizacionCalendario: "-",
+      }
+    },
+    links: {
+      href: "https://www.ticketek.com.ar/sergio-torres/teatro-gran-rex",
+      path: "/shows/sergio-torres/5",
+
+    },
+    imagenes: {
+      evento: "https://www.tuentrada.com/teatro/gran-rex/imagenes/sergio_torres.webp",
+      plano: "https://www.tuentrada.com/teatro/gran-rex/imagenes/planos/tue1.webp",
+
+    },
+    nombre: "sergio torres",
+    ubicaciones: [
+      {
+        id: 1,
+        nombre: "PLATEA 1",
+        color: "#970513",
+        precio: "8.000",
+      },
+      {
+        id: 2,
+        nombre: "PLATEA 2",
+        color: "#79C8C3",
+        precio: "7.500",
+      },
+      {
+        id: 3,
+        nombre: "PLATEA 3",
+        color: "#EDB63B",
+        precio: "7.000",
+      },
+      {
+        id: 4,
+        nombre: "PLATEA 4",
+        color: "#86AA4D",
+        precio: "6.500",
+      },
+      {
+        id: 5,
+        nombre: "PLATEA 5",
+        color: "#052748",
+        precio: "6.000",
+      },
+      {
+        id: 6,
+        nombre: "SUPER PULLMAN 1",
+        color: "#035F89",
+        precio: "6.500",
+      },
+      {
+        id: 7,
+        nombre: "SUPER PULLMAN 2",
+        color: "#A9167D",
+        precio: "6.000",
+      },
+      {
+        id: 8,
+        nombre: "PULLMAN 1",
+        color: "#EE6E08",
+        precio: "5.500",
+      },
+      {
+        id: 9,
+        nombre: "PULLMAN 2",
+        color: "#037366",
+        precio: "5.000",
+      },
+      {
+        id: 10,
+        nombre: "PULLMAN 3",
+        color: "#D97B77",
+        precio: "4.500",
+      },
+      {
+        id: 11,
+        nombre: "PULLMAN 4",
+        color: "#AF0657",
+        precio: "4.000",
+      },
+      {
+        id: 12,
+        nombre: "PULLMAN 5",
+        color: "#5271FF",
+        precio: "3.500",
+      },
+    ],
   },
+
   {
-    // date: "5 y 6 DE MAYO",
     id: 6,
-    img: "https://www.tuentrada.com/teatro/gran-rex/imagenes/festival_ballet.webp",
-    linkEvento: "/shows/festival-ballet/6",
-    name: "International Festival Ballet for the Peace",
-    status: "Cancelado",
-    // time: "20:30HS",
-    disabled: false
+    descripcion: `Dale Q’ Va es, sin dudas, uno de los grupos cuarteteros del momento, se encuentran viviendo un presente excelente a lo largo y ancho de todo el país.  <br /> <br />
+    El Teatro Gran Rex informa que los eventos que se realizan en esta sala podrían ser fotografiados o filmados para su posterior difusión en medios y /o campañas publicitarias. <br /><br />
+    <strong>  Fechas:  </strong>
+    <ul>
+      <li> Viernes 12 de mayo 20:30hs </li>   
+   </ul>  
+    `,
+    disabled: false,
+    display: "block",
+    estado: "disponible",
+    fechas: {
+      fecha1: {
+        dia: "viernes 12 de mayo",
+        hora: "20:30HS",
+        horaInicioCalendario: "2023-05-12T20:30:00",
+        horaFinalizacionCalendario: "-",
+      }
+    },
+    links: {
+      href: "https://www.ticketek.com.ar/dale-qva/teatro-gran-rex",
+      path: "/shows/daleqva/6",
+
+    },
+    imagenes: {
+      evento: "https://www.tuentrada.com/teatro/gran-rex/imagenes/dale_qva.webp",
+      plano: "https://www.tuentrada.com/teatro/gran-rex/imagenes/planos/tue1.webp",
+
+    },
+    nombre: "dale q’ va",
+    ubicaciones: [
+      {
+        id: 1,
+        nombre: "PLATEA 1",
+        color: "#970513",
+        precio: "8.500",
+      },
+      {
+        id: 2,
+        nombre: "PLATEA 2",
+        color: "#79C8C3",
+        precio: "8.500",
+      },
+      {
+        id: 3,
+        nombre: "PLATEA 3",
+        color: "#EDB63B",
+        precio: "7.500",
+      },
+      {
+        id: 4,
+        nombre: "PLATEA 4",
+        color: "#86AA4D",
+        precio: "7.500",
+      },
+      {
+        id: 5,
+        nombre: "PLATEA 5",
+        color: "#052748",
+        precio: "6.000",
+      },
+      {
+        id: 6,
+        nombre: "SUPER PULLMAN 1",
+        color: "#035F89",
+        precio: "7.500",
+      },
+      {
+        id: 7,
+        nombre: "SUPER PULLMAN 2",
+        color: "#A9167D",
+        precio: "7.500",
+      },
+      {
+        id: 8,
+        nombre: "PULLMAN 1",
+        color: "#EE6E08",
+        precio: "5.500",
+      },
+      {
+        id: 9,
+        nombre: "PULLMAN 2",
+        color: "#037366",
+        precio: "5.000",
+      },
+      {
+        id: 10,
+        nombre: "PULLMAN 3",
+        color: "#D97B77",
+        precio: "4.000",
+      },
+      {
+        id: 11,
+        nombre: "PULLMAN 4",
+        color: "#AF0657",
+        precio: "3.000",
+      },
+      {
+        id: 12,
+        nombre: "PULLMAN 5",
+        color: "#5271FF",
+        precio: "3.000",
+      },
+    ],
   },
+
   {
-    // date: "5 y 6 DE MAYO",
     id: 7,
-    img: "https://www.tuentrada.com/teatro/gran-rex/imagenes/dale_qva.webp",
-    linkEvento: "/shows/daleqva/7",
-    name: "DALE Q´VA",
-    status: "Disponible",
-    // time: "20:30HS",
-    disabled: false
+    descripcion: `Turf se presenta el 13 de Mayo en el Teatro Gran Rex. <br /> <br />
+    El Teatro Gran Rex informa que los eventos que se realizan en esta sala podrían ser fotografiados o filmados para su posterior difusión en medios y /o campañas publicitarias. <br /><br />
+    <strong>  Fechas:  </strong>
+    <ul>
+      <li>Sábado 13 de mayo 20:30hs</li>   
+   </ul>
+    `,
+    disabled: false,
+    display: "block",
+    estado: "disponible",
+    fechas: {
+      fecha1: {
+        dia: "sábado 13 de mayo",
+        hora: "20:30HS",
+        horaInicioCalendario: "2023-05-13T20:30:00",
+        horaFinalizacionCalendario: "-",
+      }
+    },
+    links: {
+      href: "https://www.ticketek.com.ar/turf/teatro-gran-rex",
+      path: "/shows/turf/7",
+
+    },
+    imagenes: {
+      evento: "https://www.tuentrada.com/teatro/gran-rex/imagenes/turf.webp",
+      plano: "https://www.tuentrada.com/teatro/gran-rex/imagenes/planos/tue1.webp",
+
+    },
+    nombre: "turf",
+    ubicaciones: [
+      {
+        id: 1,
+        nombre: "PLATEA 1",
+        color: "#970513",
+        precio: "7.000",
+      },
+      {
+        id: 2,
+        nombre: "PLATEA 2",
+        color: "#79C8C3",
+        precio: "6.500",
+      },
+      {
+        id: 3,
+        nombre: "PLATEA 3",
+        color: "#EDB63B",
+        precio: "6.000",
+      },
+      {
+        id: 4,
+        nombre: "PLATEA 4",
+        color: "#86AA4D",
+        precio: "5.500",
+      },
+      {
+        id: 5,
+        nombre: "PLATEA 5",
+        color: "#052748",
+        precio: "5.000",
+      },
+      {
+        id: 6,
+        nombre: "SUPER PULLMAN 1",
+        color: "#035F89",
+        precio: "5.500",
+      },
+      {
+        id: 7,
+        nombre: "SUPER PULLMAN 2",
+        color: "#A9167D",
+        precio: "5.000",
+      },
+      {
+        id: 8,
+        nombre: "PULLMAN 1",
+        color: "#EE6E08",
+        precio: "4.500",
+      },
+      {
+        id: 9,
+        nombre: "PULLMAN 2",
+        color: "#037366",
+        precio: "4.200",
+      },
+      {
+        id: 10,
+        nombre: "PULLMAN 3",
+        color: "#D97B77",
+        precio: "4.000",
+      },
+      {
+        id: 11,
+        nombre: "PULLMAN 4",
+        color: "#AF0657",
+        precio: "3.500",
+      },
+      {
+        id: 12,
+        nombre: "PULLMAN 5",
+        color: "#5271FF",
+        precio: "3.000",
+      },
+    ],
   },
+  
   {
-    // date: "SÁBADO 13 DE MAYO",
     id: 8,
-    img: "https://www.tuentrada.com/teatro/gran-rex/imagenes/turf.webp",
-    linkEvento: "/shows/turf/8",
-    name: "Turf",
-    status: "Disponible",
-    // time: "20:30HS",
-    disabled: false
+    descripcion: `The Beats se presentan el Domingo 14 Mayo 20:30 hs. en el Teatro Gran Rex. <br /> <br />
+    El Teatro Gran Rex informa que los eventos que se realizan en esta sala podrían ser fotografiados o filmados para su posterior difusión en medios y /o campañas publicitarias. <br /><br />
+    <strong>  Fechas:  </strong>
+    <ul>
+      <li> Domingo 14 de mayo 20:30hs </li>   
+   </ul>
+    `,
+    disabled: false,
+    display: "block",
+    estado: "disponible",
+    fechas: {
+      fecha1: {
+        dia: "domingo 14 de mayo",
+        hora: "20:30HS",
+        horaInicioCalendario: "2023-05-14T20:30:00",
+        horaFinalizacionCalendario: "-",
+      }
+    },
+    links: {
+      href: "https://www.ticketek.com.ar/beats/teatro-gran-rex",
+      path: "/shows/the-beats/8",
+
+    },
+    imagenes: {
+      evento: "https://www.tuentrada.com/teatro/gran-rex/imagenes/the_beats.webp",
+      plano: "https://www.tuentrada.com/teatro/gran-rex/imagenes/planos/tue1.webp",
+
+    },
+    nombre: "the beats",
+    ubicaciones: [
+      {
+        id: 1,
+        nombre: "PLATEA 1",
+        color: "#970513",
+        precio: "6.500",
+      },
+      {
+        id: 2,
+        nombre: "PLATEA 2",
+        color: "#79C8C3",
+        precio: "6.000",
+      },
+      {
+        id: 3,
+        nombre: "PLATEA 3",
+        color: "#EDB63B",
+        precio: "5.500",
+      },
+      {
+        id: 4,
+        nombre: "PLATEA 4",
+        color: "#86AA4D",
+        precio: "4.500",
+      },
+      {
+        id: 5,
+        nombre: "PLATEA 5",
+        color: "#052748",
+        precio: "4.000",
+      },
+      {
+        id: 6,
+        nombre: "SUPER PULLMAN 1",
+        color: "#035F89",
+        precio: "4.500",
+      },
+      {
+        id: 7,
+        nombre: "SUPER PULLMAN 2",
+        color: "#A9167D",
+        precio: "4.000",
+      },
+      {
+        id: 8,
+        nombre: "PULLMAN 1",
+        color: "#EE6E08",
+        precio: "3.500",
+      },
+      {
+        id: 9,
+        nombre: "PULLMAN 2",
+        color: "#037366",
+        precio: "3.000",
+      },
+      {
+        id: 10,
+        nombre: "PULLMAN 3",
+        color: "#D97B77",
+        precio: "2.800",
+      },
+      {
+        id: 11,
+        nombre: "PULLMAN 4",
+        color: "#AF0657",
+        precio: "2.800",
+      },
+      {
+        id: 12,
+        nombre: "PULLMAN 5",
+        color: "#5271FF",
+        precio: "2.500",
+      },
+    ],
   },
   {
-    // date: "DOMINGO 14 DE MAYO",
     id: 9,
-    img: "https://www.tuentrada.com/teatro/gran-rex/imagenes/the_beats.webp",
-    linkEvento: "/shows/the-beats/9",
-    name: "The Beats",
-    status: "Disponible",
-    // time: "20:30HS",
-    disabled: false
+    descripcion: `Massacre vuelve a la calle Corrientes con Riesgo Rex un show que
+    sorprenderá a propios y extraños.
+    El 19 de Mayo de 2023, la psicodelia, la adrenalina y la sorpresa, serán
+    el maridaje perfecto para que Riesgo Rex sea otro suceso en la
+    trayectoria de la banda. <br /> <br />
+    El Teatro Gran Rex informa que los eventos que se realizan en esta sala podrían ser fotografiados o filmados para su posterior difusión en medios y /o campañas publicitarias. <br /><br />
+    <strong>  Fechas:  </strong>
+    <ul>
+      <li> Viernes 19 de mayo 20:30hs </li>   
+    </ul>
+    `,
+    disabled: false,
+    display: "block",
+    estado: "disponible",
+    fechas: {
+      fecha1: {
+        dia: "viernes 19 de mayo",
+        hora: "20:30HS",
+        horaInicioCalendario: "2023-05-19T20:30:00",
+        horaFinalizacionCalendario: "-",
+      }
+    },
+    links: {
+      href: "https://www.ticketek.com.ar/massacre/teatro-gran-rex",
+      path:"/shows/massacre/9"
+    },
+    imagenes: {
+      evento: "https://www.tuentrada.com/teatro/gran-rex/imagenes/massacre.webp",
+      plano: "https://www.tuentrada.com/teatro/gran-rex/imagenes/planos/tue1.webp"
+    },
+    nombre: "massacre",
+    ubicaciones: [
+      {
+        id: 1,
+        nombre: "PLATEA 1",
+        color: "#970513",
+        precio: "10.000",
+      },
+      {
+        id: 2,
+        nombre: "PLATEA 2",
+        color: "#79C8C3",
+        precio: "8.500",
+      },
+      {
+        id: 3,
+        nombre: "PLATEA 3",
+        color: "#EDB63B",
+        precio: "8.000",
+      },
+      {
+        id: 4,
+        nombre: "PLATEA 4",
+        color: "#86AA4D",
+        precio: "6.500",
+      },
+      {
+        id: 5,
+        nombre: "PLATEA 5",
+        color: "#052748",
+        precio: "5.500",
+      },
+      {
+        id: 6,
+        nombre: "SUPER PULLMAN 1",
+        color: "#035F89",
+        precio: "5.000",
+      },
+      {
+        id: 7,
+        nombre: "SUPER PULLMAN 2",
+        color: "#A9167D",
+        precio: "5.500",
+      },
+      {
+        id: 8,
+        nombre: "PULLMAN 1",
+        color: "#EE6E08",
+        precio: "5.000",
+      },
+      {
+        id: 9,
+        nombre: "PULLMAN 2",
+        color: "#037366",
+        precio: "4.300",
+      },
+      {
+        id: 10,
+        nombre: "PULLMAN 3",
+        color: "#D97B77",
+        precio: "4.000",
+      },
+      {
+        id: 11,
+        nombre: "PULLMAN 4",
+        color: "#AF0657",
+        precio: "3.700",
+      },
+      {
+        id: 12,
+        nombre: "PULLMAN 5",
+        color: "#5271FF",
+        precio: "3.500",
+      },
+    ],
   },
   {
-    // date: "VIERNES 19 DE MAYO",
     id: 10,
-    img: "https://www.tuentrada.com/teatro/gran-rex/imagenes/massacre.webp",
-    linkEvento: "/shows/massacre/10",
-    name: "Massacre",
-    status: "Disponible",
-    // time: "20:30HS",
-    disabled: false
+    descripcion: `Kim Loaiza y JD Pantoja, los Youtubers y Cantantes más populares del momento, anuncian su último tour juntos el cual lleva por nombre “BYE BYE”, quiénes cantarán por última vez juntos en un mismo escenario su mayores éxitos.<br />
+    El Teatro Gran Rex informa que los eventos que se realizan en esta sala podrían ser fotografiados o filmados para su posterior difusión en medios y /o campañas publicitarias.  <br /> <br />
+    El Teatro Gran Rex informa que los eventos que se realizan en esta sala podrían ser fotografiados o filmados para su posterior difusión en medios y /o campañas publicitarias. <br /><br />
+    <strong>  Fechas:  </strong>
+    <ul>
+      <li> Sábado 20 de mayo 12:00hs </li>
+      <li> Domingo 21 de mayo 19:00hs </li>
+   
+   </ul>
+    `,
+    disabled: false,
+    display: "block",
+    estado: "agotado",
+    fechas: {
+      fecha1: {
+        dia: "sábado 20 de mayo",
+        hora: "12:00HS",
+        horaInicioCalendario: "2023-05-20T12:00:00",
+        horaFinalizacionCalendario: "-",
+      },
+      fecha2: {
+        dia: "domingo 21 de mayo",
+        hora: "19:00HS",
+        horaInicioCalendario: "2023-05-21T19:00:00",
+        horaFinalizacionCalendario: "-",
+      },
+    },
+    links: {
+      href: "https://www.ticketek.com.ar/jd-pantoja-kim-loaiza/teatro-gran-rex",
+      path:"/shows/jdpantoja-kimloaiza/10"
+    },
+    imagenes: {
+      evento: "https://www.tuentrada.com/teatro/gran-rex/imagenes/jdpantoja_kimloaiza.webp",
+      plano: "https://www.tuentrada.com/teatro/gran-rex/imagenes/planos/tue1.webp"
+    },
+    nombre: "jd pantoja kim loaiza",
+    ubicaciones: [
+      {
+        id: 1,
+        nombre: "PLATEA 1", 
+        color: "#970513",
+        precio: "9.600",
+      },
+      {
+        id: 2,
+        nombre: "PLATEA 2",
+        color: "#79C8C3",
+        precio: "8.400",
+      },
+      {
+        id: 3,
+        nombre: "PLATEA 3",
+        color: "#EDB63B",
+        precio: "8.000",
+      },
+      {
+        id: 4,
+        nombre: "PLATEA 4",
+        color: "#86AA4D",
+        precio: "7.200",
+      },
+      {
+        id: 5,
+        nombre: "PLATEA 5",
+        color: "#052748",
+        precio: "6.400",
+      },
+      {
+        id: 6,
+        nombre: "SUPER PULLMAN 1",
+        color: "#035F89",
+        precio: "8.400",
+      },
+      {
+        id: 7,
+        nombre: "SUPER PULLMAN 2",
+        color: "#A9167D",
+        precio: "7.200",
+      },
+      {
+        id: 8,
+        nombre: "PULLMAN 1",
+        color: "#EE6E08",
+        precio: "6.400",
+      },
+      {
+        id: 9,
+        nombre: "PULLMAN 2",
+        color: "#037366",
+        precio: "5.600",
+      },
+      {
+        id: 10,
+        nombre: "PULLMAN 3",
+        color: "#D97B77",
+        precio: "4.800",
+      },
+      {
+        id: 11,
+        nombre: "PULLMAN 4",
+        color: "#AF0657",
+        precio: "3.600",
+      },
+      {
+        id: 12,
+        nombre: "PULLMAN 5",
+        color: "#5271FF",
+        precio: "3.200",
+      },
+    ],
   },
+
   {
-    // date: "20 Y 21 DE MAYO",
     id: 11,
-    img: "https://www.tuentrada.com/teatro/gran-rex/imagenes/jdpantoja_kimloaiza.webp",
-    linkEvento: "/shows/jdpantoja-kimloaiza/11",
-    name: "Jd Pantoja y Kim Loaiza",
-    status: "Agotado",
-    // time: "12:00HS Y 19:00HS",
-    disabled: false
+    descripcion: `Sergio Galleguillo lleva “La fiesta de La Rioja” al Gran Rex.
+    <br />
+    El hoy reconocido Embajador Artístico y Cultural de La Rioja llega al Gran Rex para celebrar el aniversario de La Rioja. “Yo soy nacido en La Rioja señores… La Tierra del Carnaval”, es la lírica que lo abraza a su terruño y a su esencia de folklorista.<br />
+    Sergio Galleguillo fue conquistando cada escenario del país donde llevo su música contagiada de alegría, logrando instaurar en los lugares más recónditos de nuestro país y del mundo, el juego y la mística de una ancestral fiesta llamada CHAYA. En sus inicios, conformó grupos como Tiahuanaco y Arahuanco pero, su máxima explosión y aceptación en el folklore fue con “Sergio Galleguillo y Los Amigos”, banda formada en 1997 con la cual editó 6 discos. En 1998 editan su álbum debut “Agitando Pañuelos”. Ese mismo año se presentan en la peña de Los Nocheros en Cosquín, lo cual les da un lugar luego en el escenario de la Plaza Próspero Molina. <br /><br />
+    <strong>  Fechas:  </strong>
+    <ul>
+     <li> Sábado 20 de mayo 21:00hs </li>
+    </ul>
+    `,
+    disabled: false,
+    display: "block",
+    estado: "disponible",
+    fechas: {
+      fecha1: {
+        dia: "sábado 20 de mayo",
+        hora: "21:00hs",
+        horaInicioCalendario: "2023-05-20T21:00:00",
+        horaFinalizacionCalendario: "-",
+      },      
+    },
+    links: {
+      href: "https://www.ticketek.com.ar/sergio-galleguillo/teatro-gran-rex",
+      path:"/shows/sergio-galleguillo/11"
+    },
+    imagenes: {
+      evento: "https://www.tuentrada.com/teatro/gran-rex/imagenes/sergio_galleguillo.webp",
+      plano: "https://www.tuentrada.com/teatro/gran-rex/imagenes/planos/tue1.webp"
+    },
+    nombre: "sergio galleguillo",
+    ubicaciones: [
+      {
+        id: 1,
+        nombre: "PLATEA 1", 
+        color: "#970513",
+        precio: "7.000",
+      },
+      {
+        id: 2,
+        nombre: "PLATEA 2",
+        color: "#79C8C3",
+        precio: "7.000",
+      },
+      {
+        id: 3,
+        nombre: "PLATEA 3",
+        color: "#EDB63B",
+        precio: "6.000",
+      },
+      {
+        id: 4,
+        nombre: "PLATEA 4",
+        color: "#86AA4D",
+        precio: "6.000",
+      },
+      {
+        id: 5,
+        nombre: "PLATEA 5",
+        color: "#052748",
+        precio: "6.000",
+      },
+      {
+        id: 6,
+        nombre: "SUPER PULLMAN 1",
+        color: "#035F89",
+        precio: "6.500",
+      },
+      {
+        id: 7,
+        nombre: "SUPER PULLMAN 2",
+        color: "#A9167D",
+        precio: "6.500",
+      },
+      {
+        id: 8,
+        nombre: "PULLMAN 1",
+        color: "#EE6E08",
+        precio: "5.500",
+      },
+      {
+        id: 9,
+        nombre: "PULLMAN 2",
+        color: "#037366",
+        precio: "5.000",
+      },
+      {
+        id: 10,
+        nombre: "PULLMAN 3",
+        color: "#D97B77",
+        precio: "4.000",
+      },
+      {
+        id: 11,
+        nombre: "PULLMAN 4",
+        color: "#AF0657",
+        precio: "3.000",
+      },
+      {
+        id: 12,
+        nombre: "PULLMAN 5",
+        color: "#5271FF",
+        precio: "3.000",
+      },
+    ],
   },
+ 
   {
-    // date: "SÁBADO 20 DE MAYO",
     id: 12,
-    img: "https://www.tuentrada.com/teatro/gran-rex/imagenes/sergio_galleguillo.webp",
-    linkEvento: "/shows/sergio-galleguillo/12",
-    name: "Sergio Galleguillo",
-    status: "Disponible",
-    // time: "21:00HS",
-    disabled: false
+    descripcion: `La obra éxito de Broadway y el West End Londinense llega al Teatro Gran Rex por 8 únicas semanas en Junio 2023.
+    <br />
+    Basado en la homónima novela de Roald Dahl, autor que ha vendido más de 250 millones de libros, y que ha inspirado la icónica película infantil de los 90 es una megaproducción que lleva presentándose, con gran éxito mundialmente: 12 años en Londres y 4 años en cartel en Broadway con más de 1.500 representaciones, 99 premios internacionales y más de 10 millones de espectadores que ya la vieron. <br /> <br />
+    El Teatro Gran Rex informa que los eventos que se realizan en esta sala podrían ser fotografiados o filmados para su posterior difusión en medios y /o campañas publicitarias. <br /><br />
+    <strong>  Fechas:  </strong>
+    <ul>
+     <li> Del 1 de junio al 30 de julio </li>
+    </ul>
+    `,
+    disabled: false,
+    display: "block",
+    estado: "disponible",
+    fechas: {
+      fecha1: {
+        dia: "Del 1 de junio al 30 de julio",
+        hora: "",
+        horaInicioCalendario: "2023-06-01T20:00:00",
+        horaFinalizacionCalendario: "2023-07-30T18:00:00",
+      },      
+    },
+    links: {
+      href: "https://www.ticketek.com.ar/matilda/teatro-gran-rex",
+      path:"/shows/matilda/12"
+    },
+    imagenes: {
+      evento: "https://www.tuentrada.com/teatro/gran-rex/imagenes/matilda.webp",
+      plano: "https://www.tuentrada.com/teatro/gran-rex/imagenes/planos/tue1.webp"
+    },
+    nombre: "matilda",
+    ubicaciones: [
+      {
+        id: 1,
+        nombre: "PLATEA 1", 
+        color: "#970513",
+        precio: "10.000",
+      },
+      {
+        id: 2,
+        nombre: "PLATEA 2",
+        color: "#79C8C3",
+        precio: "10.000",
+      },
+      {
+        id: 3,
+        nombre: "PLATEA 3",
+        color: "#EDB63B",
+        precio: "10.000",
+      },
+      {
+        id: 4,
+        nombre: "PLATEA 4",
+        color: "#86AA4D",
+        precio: "9.500",
+      },
+      {
+        id: 5,
+        nombre: "PLATEA 5",
+        color: "#052748",
+        precio: "8.800",
+      },
+      {
+        id: 6,
+        nombre: "SUPER PULLMAN 1",
+        color: "#035F89",
+        precio: "9.500",
+      },
+      {
+        id: 7,
+        nombre: "SUPER PULLMAN 2",
+        color: "#A9167D",
+        precio: "8.800",
+      },
+      {
+        id: 8,
+        nombre: "PULLMAN 1",
+        color: "#EE6E08",
+        precio: "6.500",
+      },
+      {
+        id: 9,
+        nombre: "PULLMAN 2",
+        color: "#037366",
+        precio: "4.500",
+      },
+      {
+        id: 10,
+        nombre: "PULLMAN 3",
+        color: "#D97B77",
+        precio: "3.900",
+      },
+    ],
   },
+  
   {
-    // date: "DEL 1 DE JUNIO AL 30 DE JULIO",
     id: 13,
-    img: "https://www.tuentrada.com/teatro/gran-rex/imagenes/matilda.webp",
-    linkEvento: "/shows/matilda/13",
-    name: "matilda",
-    status: "Disponible",
-    // time: "CONSULTAR HORARIOS",
-    disabled: false
+    descripcion: `Julieta Venegas se presentará el día Domingo 26 de Agosto en el Teatro Gran Rex.  <br /> <br />
+    El Teatro Gran Rex informa que los eventos que se realizan en esta sala podrían ser fotografiados o filmados para su posterior difusión en medios y /o campañas publicitarias. <br /><br />
+     <strong>  Fechas:  </strong>
+    <ul>
+      <li> Sábado 26 de agosto 20:30hs </li>
+    </ul>
+    `,
+    disabled: true,
+    display: "block",
+    estado: "próximamente",
+    fechas: {
+      fecha1: {
+        dia: "sábado 26 de agosto",
+        hora: "20:30hs",
+        horaInicioCalendario: "2023-08-26T20:30:00",
+        horaFinalizacionCalendario: "",
+      },      
+    },
+    links: {
+      href: "https://www.tuentrada.com/eventos/detalle/Julieta-Venegas/2044219094378",
+      path:"/shows/julieta-venegas/13"
+    },
+    imagenes: {
+      evento: "https://www.tuentrada.com/teatro/gran-rex/imagenes/julieta-venegas.webp",
+      plano: "https://www.tuentrada.com/teatro/gran-rex/imagenes/planos/tue1.webp"
+    },
+    nombre: "julieta venegas",
+    ubicaciones: [
+      {
+        id: 1,
+        nombre: "PLATEA 1", 
+        color: "#970513",
+        precio: "17.000",
+      },
+      {
+        id: 2,
+        nombre: "PLATEA 2",
+        color: "#79C8C3",
+        precio: "15.000",
+      },
+      {
+        id: 3,
+        nombre: "PLATEA 3",
+        color: "#EDB63B",
+        precio: "12.000",
+      },
+      {
+        id: 4,
+        nombre: "PLATEA 4",
+        color: "#86AA4D",
+        precio: "10.000",
+      },
+      {
+        id: 5,
+        nombre: "PLATEA 5",
+        color: "#052748",
+        precio: "8.000",
+      },
+      {
+        id: 6,
+        nombre: "SUPER PULLMAN 1",
+        color: "#035F89",
+        precio: "8.000",
+      },
+      {
+        id: 7,
+        nombre: "SUPER PULLMAN 2",
+        color: "#A9167D",
+        precio: "6.500",
+      },
+      {
+        id: 8,
+        nombre: "PULLMAN 1",
+        color: "#EE6E08",
+        precio: "6.500",
+      },
+      {
+        id: 9,
+        nombre: "PULLMAN 2",
+        color: "#037366",
+        precio: "6.000",
+      },
+      {
+        id: 10,
+        nombre: "PULLMAN 3",
+        color: "#D97B77",
+        precio: "5.500",
+      },
+      {
+        id: 11,
+        nombre: "PULLMAN 4",
+        color: "#AF0657",
+        precio: "5.000",
+      },
+      {
+        id: 12,
+        nombre: "PULLMAN 5",
+        color: "#5271FF",
+        precio: "4.500",
+      },
+    ],
   },
-{
-  // date: "Sábado 26 DE AGOSTO",
-  id: 17,
-  img: "https://www.tuentrada.com/teatro/gran-rex/imagenes/julieta-venegas.webp",
-  // linkEvento: "/shows/julieta-venegas/17",
-  linkEvento: "",
-  name: "Julieta Venegas",
-  status: "Próximamente",
-  // time: "20:30HS",
-  disabled: true
-},
   {
-   // // date: "DOMINGO 27 DE AGOSTO",
     id: 14,
-    img: "https://www.tuentrada.com/teatro/gran-rex/imagenes/bxs.webp",
-    linkEvento: "/shows/bxs/14",
-    name: "bxs - bryndis x siempre",
-    status: "Disponible",
- //   time: "20:00HS",
-    disabled: false
+    descripcion: `Grupo Bryndis se presentará el día Domingo 27 de Agosto en el Teatro Gran Rex.  <br /> <br />
+    El Teatro Gran Rex informa que los eventos que se realizan en esta sala podrían ser fotografiados o filmados para su posterior difusión en medios y /o campañas publicitarias. <br /><br />
+    <strong>  Fechas:  </strong>
+    <ul>
+     <li>
+      Domingo 27 de agosto 20:00hs
+     </li>
+    </ul>
+    `,
+    disabled: false,
+    display: "block",
+    estado: "disponible",
+    fechas: {
+      fecha1: {
+        dia: "domingo 27 de agosto",
+        hora: "20:00hs",
+        horaInicioCalendario: "2023-08-27T20:30:00",
+        horaFinalizacionCalendario: "",
+      },      
+    },
+    links: {
+      href: "https://www.ticketek.com.ar/bryndis/teatro-gran-rex",
+      path:"/shows/bxs/14"
+    },
+    imagenes: {
+      evento: "https://www.tuentrada.com/teatro/gran-rex/imagenes/bxs.webp",
+      plano: "https://www.tuentrada.com/teatro/gran-rex/imagenes/planos/tue1.webp"
+    },
+    nombre: "bxs - bryndis x siempre",
+    ubicaciones: [
+      {
+        id: 1,
+        nombre: "PLATEA 1", 
+        color: "#970513",
+        precio: "14.000",
+      },
+      {
+        id: 2,
+        nombre: "PLATEA 2",
+        color: "#79C8C3",
+        precio: "12.500",
+      },
+      {
+        id: 3,
+        nombre: "PLATEA 3",
+        color: "#EDB63B",
+        precio: "11.500",
+      },
+      {
+        id: 4,
+        nombre: "PLATEA 4",
+        color: "#86AA4D",
+        precio: "10.000",
+      },
+      {
+        id: 5,
+        nombre: "PLATEA 5",
+        color: "#052748",
+        precio: "9.500",
+      },
+      {
+        id: 6,
+        nombre: "SUPER PULLMAN 1",
+        color: "#035F89",
+        precio: "10.000",
+      },
+      {
+        id: 7,
+        nombre: "SUPER PULLMAN 2",
+        color: "#A9167D",
+        precio: "9.000",
+      },
+      {
+        id: 8,
+        nombre: "PULLMAN 1",
+        color: "#EE6E08",
+        precio: "8.000",
+      },
+      {
+        id: 9,
+        nombre: "PULLMAN 2",
+        color: "#037366",
+        precio: "7.000",
+      },
+      {
+        id: 10,
+        nombre: "PULLMAN 3",
+        color: "#D97B77",
+        precio: "6.500",
+      },
+      {
+        id: 11,
+        nombre: "PULLMAN 4",
+        color: "#AF0657",
+        precio: "5.000",
+      },
+      {
+        id: 12,
+        nombre: "PULLMAN 5",
+        color: "#5271FF",
+        precio: "5.000",
+      },
+    ],
   },
+
   {
-    //  date: "DOMINGO 10 DE SEPTIEMBRE",
-    // time: "20:00HS",
     id: 15,
-    img: "https://www.tuentrada.com/teatro/gran-rex/imagenes/daniel_agostini.webp",
-    linkEvento: "/shows/daniel-agostini/15",
-    name: "daniel agostini",
-    status: "Disponible",
-    disabled: false
+    descripcion: `Daniel Agostini se presentará el día Domingo 10 de Septiembre en el Teatro Gran Rex.  <br /> <br />
+    El Teatro Gran Rex informa que los eventos que se realizan en esta sala podrían ser fotografiados o filmados para su posterior difusión en medios y /o campañas publicitarias. <br /><br />
+    <strong>  Fechas:  </strong>
+    <ul>
+     <li> Domingo 10 de septiemnre 20:00hs </li>
+    </ul>
+    `,
+    disabled: false,
+    display: "block",
+    estado: "disponible",
+    fechas: {
+      fecha1: {
+        dia: "domingo 10 de septiembre",
+        hora: "20:00hs",
+        horaInicioCalendario: "2023-08-10T20:00:00",
+        horaFinalizacionCalendario: "",
+      },      
+    },
+    links: {
+      href: "https://www.tuentrada.com/eventos/detalle/Daniel-Agostini/553776971040",
+      path:"/shows/daniel-agostini/15"
+    },
+    imagenes: {
+      evento: "https://www.tuentrada.com/teatro/gran-rex/imagenes/daniel_agostini.webp",
+      plano: "https://www.tuentrada.com/teatro/gran-rex/imagenes/planos/tue1.webp"
+    },
+    nombre: "daniel agostini",
+    ubicaciones: [
+      {
+        id: 1,
+        nombre: "PLATEA 1", 
+        color: "#970513",
+        precio: "18.000",
+      },
+      {
+        id: 2,
+        nombre: "PLATEA 2",
+        color: "#79C8C3",
+        precio: "16.000",
+      },
+      {
+        id: 3,
+        nombre: "PLATEA 3",
+        color: "#EDB63B",
+        precio: "14.000",
+      },
+      {
+        id: 4,
+        nombre: "PLATEA 4",
+        color: "#86AA4D",
+        precio: "12.000",
+      },
+      {
+        id: 5,
+        nombre: "PLATEA 5",
+        color: "#052748",
+        precio: "11.000",
+      },
+      {
+        id: 6,
+        nombre: "SUPER PULLMAN 1",
+        color: "#035F89",
+        precio: "12.000",
+      },
+      {
+        id: 7,
+        nombre: "SUPER PULLMAN 2",
+        color: "#A9167D",
+        precio: "10.000",
+      },
+      {
+        id: 8,
+        nombre: "PULLMAN 1",
+        color: "#EE6E08",
+        precio: "9.000",
+      },
+      {
+        id: 9,
+        nombre: "PULLMAN 2",
+        color: "#037366",
+        precio: "8.000",
+      },
+      {
+        id: 10,
+        nombre: "PULLMAN 3",
+        color: "#D97B77",
+        precio: "7.000",
+      },
+      {
+        id: 11,
+        nombre: "PULLMAN 4",
+        color: "#AF0657",
+        precio: "6.000",
+      },
+      {
+        id: 12,
+        nombre: "PULLMAN 5",
+        color: "#5271FF",
+        precio: "5.500",
+      },
+    ],
   },
+
   {
-    //  date: "Sábado 16 DE SEPTIEMBRE",
-    // time: "20:30HS",
     id: 16,
-    img: "https://www.tuentrada.com/teatro/gran-rex/imagenes/chili-fernandez.webp",
-    linkEvento: "/shows/chili-fernandez/16",
-    name: "chili fernandez",
-    status: "Disponible",
-    disabled: false
+    descripcion: `Chili Fernandez se presentará el día Sábado 16 de Septiembre en el Teatro Gran Rex.  <br /> <br />
+    El Teatro Gran Rex informa que los eventos que se realizan en esta sala podrían ser fotografiados o filmados para su posterior difusión en medios y /o campañas publicitarias. <br /><br />
+    <strong>  Fechas:  </strong>
+    <ul>
+     <li> Sábado 16 de septiembre 20:30hs </li>
+    </ul>
+    `,
+    disabled: false,
+    display: "block",
+    estado: "disponible",
+    fechas: {
+      fecha1: {
+        dia: "sábado 16 de septiembre",
+        hora: "20:30hs",
+        horaInicioCalendario: "2023-08-16T20:30:00",
+        horaFinalizacionCalendario: "",
+      },      
+    },
+    links: {
+      href: "https://www.tuentrada.com/eventos/detalle/Chili-Fernandez/495716168868",
+      path:"/shows/chili-fernandez/16"
+    },
+    imagenes: {
+      evento: "https://www.tuentrada.com/teatro/gran-rex/imagenes/chili-fernandez.webp",
+      plano: "https://www.tuentrada.com/teatro/gran-rex/imagenes/planos/tue1.webp"
+    },
+    nombre: "chili fernandez",
+    ubicaciones: [
+      {
+        id: 1,
+        nombre: "PLATEA 1", 
+        color: "#970513",
+        precio: "9.500",
+      },
+      {
+        id: 2,
+        nombre: "PLATEA 2",
+        color: "#79C8C3",
+        precio: "9.000",
+      },
+      {
+        id: 3,
+        nombre: "PLATEA 3",
+        color: "#EDB63B",
+        precio: "8.500",
+      },
+      {
+        id: 4,
+        nombre: "PLATEA 4",
+        color: "#86AA4D",
+        precio: "8.000",
+      },
+      {
+        id: 5,
+        nombre: "PLATEA 5",
+        color: "#052748",
+        precio: "7.000",
+      },
+      {
+        id: 6,
+        nombre: "SUPER PULLMAN 1",
+        color: "#035F89",
+        precio: "7.000",
+      },
+      {
+        id: 7,
+        nombre: "SUPER PULLMAN 2",
+        color: "#A9167D",
+        precio: "6.000",
+      },
+      {
+        id: 8,
+        nombre: "PULLMAN 1",
+        color: "#EE6E08",
+        precio: "5.000",
+      },
+      {
+        id: 9,
+        nombre: "PULLMAN 2",
+        color: "#037366",
+        precio: "4.000",
+      },
+      {
+        id: 10,
+        nombre: "PULLMAN 3",
+        color: "#D97B77",
+        precio: "3.500",
+      },
+      {
+        id: 11,
+        nombre: "PULLMAN 4",
+        color: "#AF0657",
+        precio: "3.000",
+      },
+      {
+        id: 12,
+        nombre: "PULLMAN 5",
+        color: "#5271FF",
+        precio: "3.000",
+      },
+    ],
   },
+
   {
-    //  date: "Sábado 25 DE NOVIEMBRE",
-    // time: "20:30HS",
-    id: 18,
-    img: "https://www.tuentrada.com/teatro/gran-rex/imagenes/perota-chingo.webp",
-    linkEvento: "/shows/perota-chingo/18",
-    name: "perota chingo",
-    status: "Disponible",
-    disabled: false
+    id: 17,
+    descripcion: `Perotá Chingó se presentará el día Sábado 25 de Noviembre en el Teatro Gran Rex.  <br /> <br />
+    El Teatro Gran Rex informa que los eventos que se realizan en esta sala podrían ser fotografiados o filmados para su posterior difusión en medios y /o campañas publicitarias. <br /><br />
+     <strong>  Fechas:  </strong>
+    <ul>
+    <li>
+     Sábado 25 de noviembre 20:30hs
+    </li>
+    </ul>
+    `,
+    disabled: false,
+    display: "block",
+    estado: "disponible",
+    fechas: {
+      fecha1: {
+        dia: "sábado 25 de noviembre",
+        hora: "20:30hs",
+        horaInicioCalendario: "2023-11-25T20:30:00",
+        horaFinalizacionCalendario: "",
+      },      
+    },
+    links: {
+      href: "https://www.tuentrada.com/eventos/detalle/Perota-Chingo/114421632871",
+      path:"/shows/perota-chingo/17"
+    },
+    imagenes: {
+      evento: "https://www.tuentrada.com/teatro/gran-rex/imagenes/perota-chingo.webp",
+      plano: "https://www.tuentrada.com/teatro/gran-rex/imagenes/planos/tue1.webp"
+    },
+    nombre: "perotá chingó",
+    ubicaciones: [
+      {
+        id: 1,
+        nombre: "PLATEA 1", 
+        color: "#970513",
+        precio: "8.500",
+      },
+      {
+        id: 2,
+        nombre: "PLATEA 2",
+        color: "#79C8C3",
+        precio: "8.000",
+      },
+      {
+        id: 3,
+        nombre: "PLATEA 3",
+        color: "#EDB63B",
+        precio: "7.500",
+      },
+      {
+        id: 4,
+        nombre: "PLATEA 4",
+        color: "#86AA4D",
+        precio: "7.000",
+      },
+      {
+        id: 5,
+        nombre: "PLATEA 5",
+        color: "#052748",
+        precio: "6.000",
+      },
+      {
+        id: 6,
+        nombre: "SUPER PULLMAN 1",
+        color: "#035F89",
+        precio: "7.000",
+      },
+      {
+        id: 7,
+        nombre: "SUPER PULLMAN 2",
+        color: "#A9167D",
+        precio: "6.000",
+      },
+      {
+        id: 8,
+        nombre: "PULLMAN 1",
+        color: "#EE6E08",
+        precio: "5.000",
+      },
+      {
+        id: 9,
+        nombre: "PULLMAN 2",
+        color: "#037366",
+        precio: "4.500",
+      },
+      {
+        id: 10,
+        nombre: "PULLMAN 3",
+        color: "#D97B77",
+        precio: "3.500",
+      },
+      {
+        id: 11,
+        nombre: "PULLMAN 4",
+        color: "#AF0657",
+        precio: "3.000",
+      },
+      {
+        id: 12,
+        nombre: "PULLMAN 5",
+        color: "#5271FF",
+        precio: "3.000",
+      },
+    ],
   },
+
+
 ];
 
 // Configuración de Fuse.js
 const opciones = {
   includeScore: true,
-  keys: ['name']
+  keys: ["name"],
 };
 
 const eventosBusqueda = [];
 
 const EventosProvider = (props) => {
-  const [evento, setEvento] = useState('');
-  const [listaEventosBusqueda, setListaEventosBusqueda] = useState(eventosBusqueda);
+  const [evento, setEvento] = useState("");
+  const [listaEventosBusqueda, setListaEventosBusqueda] =
+    useState(eventosBusqueda);
 
-  const handleEvento = ( nombreEvento ) => {
+  const handleEvento = (nombreEvento) => {
     if (!nombreEvento.trim()) {
-      setEvento("")
-      return
+      setEvento("");
+      return;
     }
-    setEvento(nombreEvento)
-  }
+    setEvento(nombreEvento);
+  };
 
   const agregarEvento = (nombreEvento) => {
     // eventosTotales.filter( item => nombreEvento.toLowerCase().indexOf(item.name.toLowerCase()))
 
     // Busca eventos que coincidan exactamente con la consulta
-    const resultadosExactos = eventosTotales.filter( item => item.name.toLowerCase().includes(nombreEvento.toLowerCase()))
+    const resultadosExactos = eventosTotales.filter((item) =>
+      item.name.toLowerCase().includes(nombreEvento.toLowerCase())
+    );
 
     // Si no hay resultados exactos, buscar sugerencias
     if (resultadosExactos.length === 0) {
       const fuse = new Fuse(eventosTotales, opciones);
-      const sugerencias = fuse.search(nombreEvento).map(resultado => resultado.item);
+      const sugerencias = fuse
+        .search(nombreEvento)
+        .map((resultado) => resultado.item);
       setListaEventosBusqueda(sugerencias);
     } else {
       setListaEventosBusqueda(resultadosExactos);
     }
-    
   };
   return (
-    <EventosContext.Provider value={{ listaEventosBusqueda, agregarEvento, evento, handleEvento }}>
+    <EventosContext.Provider
+      value={{
+        listaEventosBusqueda,
+        agregarEvento,
+        evento,
+        handleEvento,
+        eventosTotales,
+      }}
+    >
       {props.children}
     </EventosContext.Provider>
   );

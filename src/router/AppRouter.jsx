@@ -1,3 +1,4 @@
+import { useContext } from "react";
 import { Navigate, Route, Routes } from "react-router-dom";
 import {
   Beneficios,
@@ -10,8 +11,11 @@ import {
   Ubicaciones,
 } from "../pages/";
 import { DetalleEvento } from "../components";
+import { EventosContext } from "../context/EventosProvider";
 
 export const AppRouter = () => {
+  const { eventosTotales } = useContext(EventosContext);
+  console.log(eventosTotales)
   return (
     <Routes>
       <Route path="/" element={<Home />} />

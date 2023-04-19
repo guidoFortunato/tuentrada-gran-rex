@@ -83,7 +83,7 @@ article {
   }
 }
 
-/navbar/
+/*navbar*/
 .container-redes-nav{
   display: flex;
   justify-content: center;
@@ -98,7 +98,7 @@ article {
   color: #ffffff8c;
   font-size: 18px;
 }
-/******/
+/**/
 
 
 @media screen and (min-width: 992px) {
@@ -240,6 +240,6 @@ body {
 
 @media screen and (min-width: 992px) {
   .ocultar-responsive {
-    display: inline;
-  }
+    display: inline;
+  }
 }
