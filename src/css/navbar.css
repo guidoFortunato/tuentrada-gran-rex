@@ -9,6 +9,7 @@
   transition-timing-function: ease-in-out;
 }
 
+
 .border-navbar{
   border: 1px solid #000;
 }
@@ -20,9 +21,10 @@
 @media screen and (min-width: 992px) {
   .border-navbar-color:hover{
     border-bottom: 1px solid #5e5858;
-    transition-delay: 1s;
-    transition: all .9s ease-in-out;
     transition-timing-function: ease-in-out;
+    transition-delay: 1s;
+    transition: all ease-in-out 0.5s;
+ 
   }
-    
 }
+
