@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import imgRex from "../assets/images/logo_rex_negro.jpg";
+import imgRex from "/assets/imagenes/logo_rex_negro.jpg";
 import "../css/navbar.css";
 import { Link } from "react-router-dom";
 
