@@ -73,7 +73,7 @@ export const Calendario = () => {
 
   for (let i = 0; i < eventosTotales.length; i++) {
     for (let j = 0; j < eventosTotales[i].fechas.length; j++) {
-      newEvents.push({id: eventosTotales[i].id, start: eventosTotales[i].fechas[j].start, title: eventosTotales[i].nombre.toUpperCase(), url: eventosTotales[i].links.path, display: eventosTotales[i].display, status: eventosTotales[i].estado})      
+      newEvents.push({id: eventosTotales[i].id, start: eventosTotales[i].fechas[j].start, title: eventosTotales[i].nombre.toUpperCase(), url: eventosTotales[i].links.path, display: eventosTotales[i].display, status: eventosTotales[i].fechas[j].estadoCalendario})      
     }    
   }
 

@@ -4,7 +4,6 @@ import Fuse from "fuse.js";
 export const EventosContext = createContext();
 
 const eventosTotales = [
- 
   {
     id: 1,
     descripcion: `<strong> Todo listo para la fiesta MIRANDA! </strong> <br /> La banda pop más icónica de la escena hispanoamericana, Miranda! cierra el año anunciando su nuevo álbum HOTEL MIRANDA! y las fechas de presentación para el 21 de abril en el imponente Teatro Gran Rex. Con más de 20 años de trayectoria, a la banda liderada por Ale Sergi y Juliana Gattas le sobran los motivos para celebrar y lo harán al mejor estilo Miranda! <br /> <br />
@@ -24,19 +23,22 @@ const eventosTotales = [
         dia: "viernes 21 de abril",
         hora: "20:30HS",
         start: "2023-04-21T20:30:00",
-        end: "-",
+        end: "",
+        estadoCalendario: "agotado",
       },
       {
         dia: "sábado 22 de abril",
         hora: "20:30HS",
         start: "2023-04-22T20:30:00",
-        end: "-",
+        end: "",
+        estadoCalendario: "agotado",
       },
       {
         dia: "domingo 23 de abril",
         hora: "20:00HS",
         start: "2023-04-23T20:00:00",
-        end: "-",
+        end: "",
+        estadoCalendario: "agotado",
       },
     ],
     links: {
@@ -45,7 +47,8 @@ const eventosTotales = [
     },
     imagenes: {
       evento: "https://www.tuentrada.com/teatro/gran-rex/imagenes/miranda.webp",
-      plano: "https://www.tuentrada.com/teatro/gran-rex/imagenes/planos/tue1.webp",
+      plano:
+        "https://www.tuentrada.com/teatro/gran-rex/imagenes/planos/tue1.webp",
     },
     nombre: "miranda!",
     ubicaciones: [
@@ -123,7 +126,7 @@ const eventosTotales = [
       },
     ],
   },
- 
+
   {
     id: 2,
     descripcion: `<strong>Master Stroke</strong>, integrado por Ema Caradoso en voz, Brian Morua en guitarra, Manuel Olveira en bajo, Agustín Albertini en batería y Alberto Ludueña en teclados, es la banda tributo a Queen destacada por el mismo Brian May en sus redes sociales y la que Ángel Mahler sumó a sus espectáculos de Rapsodia Bohemia Sinfónico en 2020. <br /> <br />
@@ -138,22 +141,21 @@ const eventosTotales = [
     estado: "disponible",
     fechas: [
       {
-        dia: "sábado 13 de mayo",
+        dia: "sábado 28 de abril",
         hora: "20:30HS",
-        start: "2023-05-13T20:30:00",
-        end: "-",
+        start: "2023-04-28T20:30:00",
+        end: "",
+        estadoCalendario: "disponible",
       },
-      
     ],
     links: {
       href: "https://www.ticketek.com.ar/queen-por-master-stroke/teatro-gran-rex",
       path: "/shows/queen/2",
-
     },
     imagenes: {
       evento: "https://www.tuentrada.com/teatro/gran-rex/imagenes/queen.webp",
-      plano: "https://www.tuentrada.com/teatro/gran-rex/imagenes/planos/tue1.webp",
-
+      plano:
+        "https://www.tuentrada.com/teatro/gran-rex/imagenes/planos/tue1.webp",
     },
     nombre: "master stroke",
     ubicaciones: [
@@ -248,18 +250,19 @@ const eventosTotales = [
         dia: "sábado 29 de abril",
         hora: "20:30HS",
         start: "2023-04-29T20:30:00",
-        end: "-",
+        end: "",
+        estadoCalendario: "disponible",
       },
-      
     ],
     links: {
       href: "https://www.ticketek.com.ar/damian-cordoba/teatro-gran-rex",
       path: "/shows/damian-cordoba/3",
-
     },
-    imagenes: {      
-      evento: "https://www.tuentrada.com/teatro/gran-rex/imagenes/damian_cordoba.webp",
-      plano: "https://www.tuentrada.com/teatro/gran-rex/imagenes/planos/tue1.webp",
+    imagenes: {
+      evento:
+        "https://www.tuentrada.com/teatro/gran-rex/imagenes/damian_cordoba.webp",
+      plano:
+        "https://www.tuentrada.com/teatro/gran-rex/imagenes/planos/tue1.webp",
     },
     nombre: "damián córdoba",
     ubicaciones: [
@@ -351,29 +354,30 @@ const eventosTotales = [
     display: "block",
     estado: "cancelado",
     fechas: [
-       {
+      {
         dia: "viernes 5 de mayo",
         hora: "20:30HS",
         start: "2023-05-05T20:30:00",
-        end: "-",
+        end: "",
+        estadoCalendario: "cancelado",
       },
       {
         dia: "sábado 6 de mayo",
         hora: "20:30HS",
         start: "2023-05-06T20:30:00",
-        end: "-",
-      },      
-    
+        end: "",
+        estadoCalendario: "cancelado",
+      },
     ],
     links: {
       href: "https://www.ticketek.com.ar/international-festival-ballet-peace/teatro-gran-rex",
       path: "/shows/festival-ballet/4",
-
     },
     imagenes: {
-      evento: "https://www.tuentrada.com/teatro/gran-rex/imagenes/festival_ballet.webp",
-      plano: "https://www.tuentrada.com/teatro/gran-rex/imagenes/planos/tue1.webp",
-
+      evento:
+        "https://www.tuentrada.com/teatro/gran-rex/imagenes/festival_ballet.webp",
+      plano:
+        "https://www.tuentrada.com/teatro/gran-rex/imagenes/planos/tue1.webp",
     },
     nombre: "international festival ballet",
     ubicaciones: [
@@ -451,7 +455,7 @@ const eventosTotales = [
       },
     ],
   },
- 
+
   {
     id: 5,
     descripcion: `Vuelve al Gran Rex el máximo exponente de la cumbia santafecina, Sergio Torres "LA VOZ" y esta vez vamos a festejarsu cumpleaños en el Rex, en una noche única y especial. Vuelve el Negro al Gran Rex y no te lo podes perder. <br /> <br />
@@ -464,22 +468,23 @@ const eventosTotales = [
     display: "block",
     estado: "reprogramado",
     fechas: [
-     {
+      {
         dia: "domingo 7 de mayo",
         hora: "21:30HS",
         start: "2023-05-07T21:30:00",
-        end: "-",
-      }
-],
+        end: "",
+        estadoCalendario: "reprogramado",
+      },
+    ],
     links: {
       href: "https://www.ticketek.com.ar/sergio-torres/teatro-gran-rex",
       path: "/shows/sergio-torres/5",
-
     },
     imagenes: {
-      evento: "https://www.tuentrada.com/teatro/gran-rex/imagenes/sergio_torres.webp",
-      plano: "https://www.tuentrada.com/teatro/gran-rex/imagenes/planos/tue1.webp",
-
+      evento:
+        "https://www.tuentrada.com/teatro/gran-rex/imagenes/sergio_torres.webp",
+      plano:
+        "https://www.tuentrada.com/teatro/gran-rex/imagenes/planos/tue1.webp",
     },
     nombre: "sergio torres",
     ubicaciones: [
@@ -575,18 +580,19 @@ const eventosTotales = [
         dia: "viernes 12 de mayo",
         hora: "20:30HS",
         start: "2023-05-12T20:30:00",
-        end: "-",
-      }
+        end: "",
+        estadoCalendario: "disponible",
+      },
     ],
     links: {
       href: "https://www.ticketek.com.ar/dale-qva/teatro-gran-rex",
       path: "/shows/daleqva/6",
-
     },
     imagenes: {
-      evento: "https://www.tuentrada.com/teatro/gran-rex/imagenes/dale_qva.webp",
-      plano: "https://www.tuentrada.com/teatro/gran-rex/imagenes/planos/tue1.webp",
-
+      evento:
+        "https://www.tuentrada.com/teatro/gran-rex/imagenes/dale_qva.webp",
+      plano:
+        "https://www.tuentrada.com/teatro/gran-rex/imagenes/planos/tue1.webp",
     },
     nombre: "dale q’ va",
     ubicaciones: [
@@ -678,22 +684,22 @@ const eventosTotales = [
     display: "block",
     estado: "disponible",
     fechas: [
-     { 
+      {
         dia: "sábado 13 de mayo",
         hora: "20:30HS",
         start: "2023-05-13T20:30:00",
-        end: "-",
-      }
-],
+        end: "",
+        estadoCalendario: "disponible",
+      },
+    ],
     links: {
       href: "https://www.ticketek.com.ar/turf/teatro-gran-rex",
       path: "/shows/turf/7",
-
     },
     imagenes: {
       evento: "https://www.tuentrada.com/teatro/gran-rex/imagenes/turf.webp",
-      plano: "https://www.tuentrada.com/teatro/gran-rex/imagenes/planos/tue1.webp",
-
+      plano:
+        "https://www.tuentrada.com/teatro/gran-rex/imagenes/planos/tue1.webp",
     },
     nombre: "turf",
     ubicaciones: [
@@ -771,7 +777,7 @@ const eventosTotales = [
       },
     ],
   },
-  
+
   {
     id: 8,
     descripcion: `The Beats se presentan el Domingo 14 Mayo 20:30 hs. en el Teatro Gran Rex. <br /> <br />
@@ -785,22 +791,23 @@ const eventosTotales = [
     display: "block",
     estado: "disponible",
     fechas: [
-       {
+      {
         dia: "domingo 14 de mayo",
         hora: "20:30HS",
         start: "2023-05-14T20:30:00",
-        end: "-",
-      }
+        end: "",
+        estadoCalendario: "disponible",
+      },
     ],
     links: {
       href: "https://www.ticketek.com.ar/beats/teatro-gran-rex",
       path: "/shows/the-beats/8",
-
     },
     imagenes: {
-      evento: "https://www.tuentrada.com/teatro/gran-rex/imagenes/the_beats.webp",
-      plano: "https://www.tuentrada.com/teatro/gran-rex/imagenes/planos/tue1.webp",
-
+      evento:
+        "https://www.tuentrada.com/teatro/gran-rex/imagenes/the_beats.webp",
+      plano:
+        "https://www.tuentrada.com/teatro/gran-rex/imagenes/planos/tue1.webp",
     },
     nombre: "the beats",
     ubicaciones: [
@@ -895,20 +902,23 @@ const eventosTotales = [
     display: "block",
     estado: "disponible",
     fechas: [
-       {
+      {
         dia: "viernes 19 de mayo",
         hora: "20:30HS",
         start: "2023-05-19T20:30:00",
-        end: "-",
-      }
-     ],
+        end: "",
+        estadoCalendario: "disponible",
+      },
+    ],
     links: {
       href: "https://www.ticketek.com.ar/massacre/teatro-gran-rex",
-      path:"/shows/massacre/9"
+      path: "/shows/massacre/9",
     },
     imagenes: {
-      evento: "https://www.tuentrada.com/teatro/gran-rex/imagenes/massacre.webp",
-      plano: "https://www.tuentrada.com/teatro/gran-rex/imagenes/planos/tue1.webp"
+      evento:
+        "https://www.tuentrada.com/teatro/gran-rex/imagenes/massacre.webp",
+      plano:
+        "https://www.tuentrada.com/teatro/gran-rex/imagenes/planos/tue1.webp",
     },
     nombre: "massacre",
     ubicaciones: [
@@ -1002,32 +1012,36 @@ const eventosTotales = [
     display: "block",
     estado: "agotado",
     fechas: [
-       {
+      {
         dia: "sábado 20 de mayo",
         hora: "12:00HS",
         start: "2023-05-20T12:00:00",
-        end: "-",
+        end: "",
+        estadoCalendario: "agotado",
       },
       {
         dia: "domingo 21 de mayo",
         hora: "19:00HS",
         start: "2023-05-21T19:00:00",
-        end: "-",
+        end: "",
+        estadoCalendario: "agotado",
       },
-],
+    ],
     links: {
       href: "https://www.ticketek.com.ar/jd-pantoja-kim-loaiza/teatro-gran-rex",
-      path:"/shows/jdpantoja-kimloaiza/10"
+      path: "/shows/jdpantoja-kimloaiza/10",
     },
     imagenes: {
-      evento: "https://www.tuentrada.com/teatro/gran-rex/imagenes/jdpantoja_kimloaiza.webp",
-      plano: "https://www.tuentrada.com/teatro/gran-rex/imagenes/planos/tue1.webp"
+      evento:
+        "https://www.tuentrada.com/teatro/gran-rex/imagenes/jdpantoja_kimloaiza.webp",
+      plano:
+        "https://www.tuentrada.com/teatro/gran-rex/imagenes/planos/tue1.webp",
     },
     nombre: "jd pantoja kim loaiza",
     ubicaciones: [
       {
         id: 1,
-        nombre: "PLATEA 1", 
+        nombre: "PLATEA 1",
         color: "#970513",
         precio: "9.600",
       },
@@ -1119,22 +1133,25 @@ const eventosTotales = [
         dia: "sábado 20 de mayo",
         hora: "21:00hs",
         start: "2023-05-20T21:00:00",
-        end: "-",
-      },      
+        end: "",
+        estadoCalendario: "disponible",
+      },
     ],
     links: {
       href: "https://www.ticketek.com.ar/sergio-galleguillo/teatro-gran-rex",
-      path:"/shows/sergio-galleguillo/11"
+      path: "/shows/sergio-galleguillo/11",
     },
     imagenes: {
-      evento: "https://www.tuentrada.com/teatro/gran-rex/imagenes/sergio_galleguillo.webp",
-      plano: "https://www.tuentrada.com/teatro/gran-rex/imagenes/planos/tue1.webp"
+      evento:
+        "https://www.tuentrada.com/teatro/gran-rex/imagenes/sergio_galleguillo.webp",
+      plano:
+        "https://www.tuentrada.com/teatro/gran-rex/imagenes/planos/tue1.webp",
     },
     nombre: "sergio galleguillo",
     ubicaciones: [
       {
         id: 1,
-        nombre: "PLATEA 1", 
+        nombre: "PLATEA 1",
         color: "#970513",
         precio: "7.000",
       },
@@ -1206,7 +1223,7 @@ const eventosTotales = [
       },
     ],
   },
- 
+
   {
     id: 12,
     descripcion: `La obra éxito de Broadway y el West End Londinense llega al Teatro Gran Rex por 8 únicas semanas en Junio 2023.
@@ -1227,447 +1244,527 @@ const eventosTotales = [
         hora: "",
         start: "2023-06-01T20:00:00",
         end: "",
-      },      
+        estadoCalendario: "disponible",
+      },
       {
         dia: "",
         hora: "",
         start: "2023-06-02T20:00:00",
         end: "",
-      },    
+        estadoCalendario: "disponible",
+      },
       {
         dia: "",
         hora: "",
         start: "2023-06-03T15:00:00",
         end: "",
-      },    
+        estadoCalendario: "disponible",
+      },
       {
         dia: "",
         hora: "",
         start: "2023-06-03T19:00:00",
         end: "",
-      },    
+        estadoCalendario: "disponible",
+      },
+      {
+        dia: "",
+        hora: "",
+        start: "2023-06-04T14:30:00",
+        end: "",
+        estadoCalendario: "disponible",
+      },
       {
         dia: "",
         hora: "",
         start: "2023-06-04T18:00:00",
         end: "",
-      },    
+        estadoCalendario: "disponible",
+      },
       {
         dia: "",
         hora: "",
         start: "2023-06-08T20:00:00",
         end: "",
-      },    
+        estadoCalendario: "disponible",
+      },
       {
         dia: "",
         hora: "",
         start: "2023-06-09T20:00:00",
         end: "",
-      },    
+        estadoCalendario: "disponible",
+      },
       {
         dia: "",
         hora: "",
         start: "2023-06-10T15:00:00",
         end: "",
-      },    
+        estadoCalendario: "disponible",
+      },
       {
         dia: "",
         hora: "",
         start: "2023-06-10T19:00:00",
         end: "",
-      },    
+        estadoCalendario: "disponible",
+      },
       {
         dia: "",
         hora: "",
         start: "2023-06-11T14:30:00",
         end: "",
-      },    
+        estadoCalendario: "disponible",
+      },
       {
         dia: "",
         hora: "",
         start: "2023-06-11T18:00:00",
         end: "",
-      },    
+        estadoCalendario: "disponible",
+      },
       {
         dia: "",
         hora: "",
         start: "2023-06-14T20:00:00",
         end: "",
-      },    
+        estadoCalendario: "disponible",
+      },
       {
         dia: "",
         hora: "",
         start: "2023-06-15T20:00:00",
         end: "",
-      },    
+        estadoCalendario: "disponible",
+      },
       {
         dia: "",
         hora: "",
         start: "2023-06-16T20:00:00",
         end: "",
-      },    
+        estadoCalendario: "disponible",
+      },
       {
         dia: "",
         hora: "",
         start: "2023-06-17T15:00:00",
         end: "",
-      },    
+        estadoCalendario: "disponible",
+      },
       {
         dia: "",
         hora: "",
         start: "2023-06-17T19:00:00",
         end: "",
-      },    
+        estadoCalendario: "disponible",
+      },
       {
         dia: "",
         hora: "",
         start: "2023-06-18T15:00:00",
         end: "",
-      },    
+        estadoCalendario: "disponible",
+      },
       {
         dia: "",
         hora: "",
         start: "2023-06-18T19:00:00",
         end: "",
-      },    
+        estadoCalendario: "disponible",
+      },
       {
         dia: "",
         hora: "",
         start: "2023-06-20T15:00:00",
         end: "",
-      },    
+        estadoCalendario: "disponible",
+      },
       {
         dia: "",
         hora: "",
         start: "2023-06-20T19:00:00",
         end: "",
-      },    
+        estadoCalendario: "disponible",
+      },
       {
         dia: "",
         hora: "",
         start: "2023-06-22T20:00:00",
         end: "",
-      },    
+        estadoCalendario: "disponible",
+      },
       {
         dia: "",
         hora: "",
         start: "2023-06-23T20:00:00",
         end: "",
-      },    
+        estadoCalendario: "disponible",
+      },
       {
         dia: "",
         hora: "",
         start: "2023-06-24T15:00:00",
         end: "",
-      },    
+        estadoCalendario: "disponible",
+      },
       {
         dia: "",
         hora: "",
         start: "2023-06-24T19:00:00",
         end: "",
-      },    
+        estadoCalendario: "disponible",
+      },
       {
         dia: "",
         hora: "",
         start: "2023-06-25T14:30:00",
         end: "",
-      },    
+        estadoCalendario: "disponible",
+      },
       {
         dia: "",
         hora: "",
         start: "2023-06-25T18:00:00",
         end: "",
-      },    
+        estadoCalendario: "disponible",
+      },
       {
         dia: "",
         hora: "",
         start: "2023-06-28T20:00:00",
         end: "",
-      },    
+        estadoCalendario: "disponible",
+      },
       {
         dia: "",
         hora: "",
         start: "2023-06-29T20:00:00",
         end: "",
-      },    
+        estadoCalendario: "disponible",
+      },
       {
         dia: "",
         hora: "",
         start: "2023-06-30T20:00:00",
         end: "",
-      },    
+        estadoCalendario: "disponible",
+      },
       {
         dia: "",
         hora: "",
         start: "2023-07-01T15:00:00",
         end: "",
-      },    
+        estadoCalendario: "disponible",
+      },
       {
         dia: "",
         hora: "",
         start: "2023-07-01T19:00:00",
         end: "",
-      },    
+        estadoCalendario: "disponible",
+      },
       {
         dia: "",
         hora: "",
         start: "2023-07-02T14:30:00",
         end: "",
-      },    
+        estadoCalendario: "disponible",
+      },
       {
         dia: "",
         hora: "",
         start: "2023-07-02T18:00:00",
         end: "",
-      },    
+        estadoCalendario: "disponible",
+      },
       {
         dia: "",
         hora: "",
         start: "2023-07-05T20:00:00",
         end: "",
-      },    
+        estadoCalendario: "disponible",
+      },
       {
         dia: "",
         hora: "",
         start: "2023-07-06T20:00:00",
         end: "",
-      },    
+        estadoCalendario: "disponible",
+      },
       {
         dia: "",
         hora: "",
         start: "2023-07-07T20:00:00",
         end: "",
-      },    
+        estadoCalendario: "disponible",
+      },
       {
         dia: "",
         hora: "",
         start: "2023-07-08T15:00:00",
         end: "",
-      },    
+        estadoCalendario: "disponible",
+      },
       {
         dia: "",
         hora: "",
         start: "2023-07-08T19:00:00",
         end: "",
-      },    
+        estadoCalendario: "disponible",
+      },
       {
         dia: "",
         hora: "",
         start: "2023-07-09T14:30:00",
         end: "",
-      },    
+        estadoCalendario: "disponible",
+      },
       {
         dia: "",
         hora: "",
         start: "2023-07-09T18:00:00",
         end: "",
-      },   
+        estadoCalendario: "disponible",
+      },
       {
         dia: "",
         hora: "",
         start: "2023-07-12T20:00:00",
         end: "",
-      },    
+        estadoCalendario: "disponible",
+      },
       {
         dia: "",
         hora: "",
         start: "2023-07-13T20:00:00",
         end: "",
-      },    
+        estadoCalendario: "disponible",
+      },
       {
         dia: "",
         hora: "",
         start: "2023-07-14T20:00:00",
         end: "",
-      },    
+        estadoCalendario: "disponible",
+      },
       {
         dia: "",
         hora: "",
         start: "2023-07-14T20:00:00",
         end: "",
-      },    
+        estadoCalendario: "disponible",
+      },
       {
         dia: "",
         hora: "",
         start: "2023-07-15T14:30:00",
         end: "",
-      },    
+        estadoCalendario: "disponible",
+      },
       {
         dia: "",
         hora: "",
         start: "2023-07-15T18:00:00",
         end: "",
-      },    
+        estadoCalendario: "disponible",
+      },
       {
         dia: "",
         hora: "",
         start: "2023-07-16T14:30:00",
         end: "",
-      },    
+        estadoCalendario: "disponible",
+      },
       {
         dia: "",
         hora: "",
         start: "2023-07-16T18:00:00",
         end: "",
-      },    
+        estadoCalendario: "disponible",
+      },
       {
         dia: "",
         hora: "",
         start: "2023-07-17T14:30:00",
         end: "",
-      },    
+        estadoCalendario: "disponible",
+      },
       {
         dia: "",
         hora: "",
         start: "2023-07-17T18:00:00",
         end: "",
-      },    
+        estadoCalendario: "disponible",
+      },
       {
         dia: "",
         hora: "",
         start: "2023-07-19T14:30:00",
         end: "",
-      },    
+        estadoCalendario: "disponible",
+      },
       {
         dia: "",
         hora: "",
         start: "2023-07-19T18:00:00",
         end: "",
-      },    
+        estadoCalendario: "disponible",
+      },
       {
         dia: "",
         hora: "",
         start: "2023-07-20T14:30:00",
         end: "",
-      },    
+        estadoCalendario: "disponible",
+      },
       {
         dia: "",
         hora: "",
         start: "2023-07-20T18:00:00",
         end: "",
-      },    
+        estadoCalendario: "disponible",
+      },
       {
         dia: "",
         hora: "",
         start: "2023-07-21T14:30:00",
         end: "",
-      },    
+        estadoCalendario: "disponible",
+      },
       {
         dia: "",
         hora: "",
         start: "2023-07-21T18:00:00",
         end: "",
-      },    
+        estadoCalendario: "disponible",
+      },
       {
         dia: "",
         hora: "",
         start: "2023-07-22T14:30:00",
         end: "",
-      },    
+        estadoCalendario: "disponible",
+      },
       {
         dia: "",
         hora: "",
         start: "2023-07-22T18:00:00",
         end: "",
-      },    
+        estadoCalendario: "disponible",
+      },
       {
         dia: "",
         hora: "",
         start: "2023-07-23T14:30:00",
         end: "",
-      },     
+        estadoCalendario: "disponible",
+      },
       {
         dia: "",
         hora: "",
         start: "2023-07-23T18:00:00",
         end: "",
-      },     
+        estadoCalendario: "disponible",
+      },
       {
         dia: "",
         hora: "",
         start: "2023-07-24T14:30:00",
         end: "",
-      },     
+        estadoCalendario: "disponible",
+      },
       {
         dia: "",
         hora: "",
         start: "2023-07-24T18:00:00",
         end: "",
-      },     
+        estadoCalendario: "disponible",
+      },
       {
         dia: "",
-        hora: "",     
+        hora: "",
         start: "2023-07-26T14:30:00",
         end: "",
-      },     
+        estadoCalendario: "disponible",
+      },
       {
         dia: "",
         hora: "",
         start: "2023-07-26T18:00:00",
         end: "",
-      },     
+        estadoCalendario: "disponible",
+      },
       {
         dia: "",
         hora: "",
         start: "2023-07-27T14:30:00",
         end: "",
-      },     
+        estadoCalendario: "disponible",
+      },
       {
         dia: "",
         hora: "",
         start: "2023-07-27T18:00:00",
         end: "",
-      },     
+        estadoCalendario: "disponible",
+      },
       {
         dia: "",
         hora: "",
         start: "2023-07-28T14:30:00",
         end: "",
-      },     
+        estadoCalendario: "disponible",
+      },
       {
         dia: "",
         hora: "",
         start: "2023-07-28T18:00:00",
         end: "",
-      },     
+        estadoCalendario: "disponible",
+      },
       {
         dia: "",
         hora: "",
         start: "2023-07-29T14:30:00",
         end: "",
-      },     
+        estadoCalendario: "disponible",
+      },
       {
         dia: "",
         hora: "",
         start: "2023-07-29T18:00:00",
         end: "",
-      },     
+        estadoCalendario: "disponible",
+      },
       {
         dia: "",
         hora: "",
         start: "2023-07-30T14:30:00",
         end: "",
-      },     
+        estadoCalendario: "disponible",
+      },
       {
         dia: "",
         hora: "",
         start: "2023-07-30T18:00:00",
         end: "",
-      },     
+        estadoCalendario: "disponible",
+      },
     ],
     links: {
       href: "https://www.ticketek.com.ar/matilda/teatro-gran-rex",
-      path:"/shows/matilda/12"
+      path: "/shows/matilda/12",
     },
     imagenes: {
       evento: "https://www.tuentrada.com/teatro/gran-rex/imagenes/matilda.webp",
-      plano: "https://www.tuentrada.com/teatro/gran-rex/imagenes/planos/tue1.webp"
+      plano:
+        "https://www.tuentrada.com/teatro/gran-rex/imagenes/planos/tue1.webp",
     },
     nombre: "matilda",
     ubicaciones: [
       {
         id: 1,
-        nombre: "PLATEA 1", 
+        nombre: "PLATEA 1",
         color: "#970513",
         precio: "10.000",
       },
@@ -1728,8 +1825,6 @@ const eventosTotales = [
     ],
   },
 
-  
-  
   {
     id: 13,
     descripcion: `Julieta Venegas se presentará el día Domingo 26 de Agosto en el Teatro Gran Rex.  <br /> <br />
@@ -1743,26 +1838,29 @@ const eventosTotales = [
     display: "block",
     estado: "próximamente",
     fechas: [
-     {
+      {
         dia: "sábado 26 de agosto",
         hora: "20:30hs",
         start: "2023-08-26T20:30:00",
         end: "",
-      },      
+        estadoCalendario: "próximamente",
+      },
     ],
     links: {
       href: "https://www.tuentrada.com/eventos/detalle/Julieta-Venegas/2044219094378",
-      path:"/shows/julieta-venegas/13"
+      path: "/shows/julieta-venegas/13",
     },
     imagenes: {
-      evento: "https://www.tuentrada.com/teatro/gran-rex/imagenes/julieta-venegas.webp",
-      plano: "https://www.tuentrada.com/teatro/gran-rex/imagenes/planos/tue1.webp"
+      evento:
+        "https://www.tuentrada.com/teatro/gran-rex/imagenes/julieta-venegas.webp",
+      plano:
+        "https://www.tuentrada.com/teatro/gran-rex/imagenes/planos/tue1.webp",
     },
     nombre: "julieta venegas",
     ubicaciones: [
       {
         id: 1,
-        nombre: "PLATEA 1", 
+        nombre: "PLATEA 1",
         color: "#970513",
         precio: "17.000",
       },
@@ -1849,27 +1947,28 @@ const eventosTotales = [
     display: "block",
     estado: "disponible",
     fechas: [
-  {
+      {
         dia: "domingo 27 de agosto",
         hora: "20:00hs",
         start: "2023-08-27T20:30:00",
         end: "",
-      },      
-      
+        estadoCalendario: "disponible",
+      },
     ],
     links: {
       href: "https://www.ticketek.com.ar/bryndis/teatro-gran-rex",
-      path:"/shows/bxs/14"
+      path: "/shows/bxs/14",
     },
     imagenes: {
       evento: "https://www.tuentrada.com/teatro/gran-rex/imagenes/bxs.webp",
-      plano: "https://www.tuentrada.com/teatro/gran-rex/imagenes/planos/tue1.webp"
+      plano:
+        "https://www.tuentrada.com/teatro/gran-rex/imagenes/planos/tue1.webp",
     },
     nombre: "bxs - bryndis x siempre",
     ubicaciones: [
       {
         id: 1,
-        nombre: "PLATEA 1", 
+        nombre: "PLATEA 1",
         color: "#970513",
         precio: "14.000",
       },
@@ -1958,23 +2057,26 @@ const eventosTotales = [
       {
         dia: "domingo 10 de septiembre",
         hora: "20:00hs",
-        start: "2023-08-10T20:00:00",
+        start: "2023-09-10T20:00:00",
         end: "",
-      },      
+        estadoCalendario: "disponible",
+      },
     ],
     links: {
       href: "https://www.tuentrada.com/eventos/detalle/Daniel-Agostini/553776971040",
-      path:"/shows/daniel-agostini/15"
+      path: "/shows/daniel-agostini/15",
     },
     imagenes: {
-      evento: "https://www.tuentrada.com/teatro/gran-rex/imagenes/daniel_agostini.webp",
-      plano: "https://www.tuentrada.com/teatro/gran-rex/imagenes/planos/tue1.webp"
+      evento:
+        "https://www.tuentrada.com/teatro/gran-rex/imagenes/daniel_agostini.webp",
+      plano:
+        "https://www.tuentrada.com/teatro/gran-rex/imagenes/planos/tue1.webp",
     },
     nombre: "daniel agostini",
     ubicaciones: [
       {
         id: 1,
-        nombre: "PLATEA 1", 
+        nombre: "PLATEA 1",
         color: "#970513",
         precio: "18.000",
       },
@@ -2063,23 +2165,26 @@ const eventosTotales = [
       {
         dia: "sábado 16 de septiembre",
         hora: "20:30hs",
-        start: "2023-08-16T20:30:00",
+        start: "2023-09-16T20:30:00",
         end: "",
-      },      
+        estadoCalendario: "disponible",
+      },
     ],
     links: {
       href: "https://www.tuentrada.com/eventos/detalle/Chili-Fernandez/495716168868",
-      path:"/shows/chili-fernandez/16"
+      path: "/shows/chili-fernandez/16",
     },
     imagenes: {
-      evento: "https://www.tuentrada.com/teatro/gran-rex/imagenes/chili-fernandez.webp",
-      plano: "https://www.tuentrada.com/teatro/gran-rex/imagenes/planos/tue1.webp"
+      evento:
+        "https://www.tuentrada.com/teatro/gran-rex/imagenes/chili-fernandez.webp",
+      plano:
+        "https://www.tuentrada.com/teatro/gran-rex/imagenes/planos/tue1.webp",
     },
     nombre: "chili fernandez",
     ubicaciones: [
       {
         id: 1,
-        nombre: "PLATEA 1", 
+        nombre: "PLATEA 1",
         color: "#970513",
         precio: "9.500",
       },
@@ -2167,26 +2272,29 @@ const eventosTotales = [
     display: "block",
     estado: "disponible",
     fechas: [
-       {
+      {
         dia: "sábado 25 de noviembre",
         hora: "20:30hs",
         start: "2023-11-25T20:30:00",
         end: "",
-      },      
+        estadoCalendario: "disponible",
+      },
     ],
     links: {
       href: "https://www.tuentrada.com/eventos/detalle/Perota-Chingo/114421632871",
-      path:"/shows/perota-chingo/17"
+      path: "/shows/perota-chingo/17",
     },
     imagenes: {
-      evento: "https://www.tuentrada.com/teatro/gran-rex/imagenes/perota-chingo.webp",
-      plano: "https://www.tuentrada.com/teatro/gran-rex/imagenes/planos/tue1.webp"
+      evento:
+        "https://www.tuentrada.com/teatro/gran-rex/imagenes/perota-chingo.webp",
+      plano:
+        "https://www.tuentrada.com/teatro/gran-rex/imagenes/planos/tue1.webp",
     },
     nombre: "perotá chingó",
     ubicaciones: [
       {
         id: 1,
-        nombre: "PLATEA 1", 
+        nombre: "PLATEA 1",
         color: "#970513",
         precio: "8.500",
       },
@@ -2258,8 +2366,6 @@ const eventosTotales = [
       },
     ],
   },
-
-
 ];
 
 // Configuración de Fuse.js
@@ -2272,7 +2378,8 @@ const eventosBusqueda = [];
 
 const EventosProvider = (props) => {
   const [evento, setEvento] = useState("");
-  const [listaEventosBusqueda, setListaEventosBusqueda] = useState(eventosBusqueda);
+  const [listaEventosBusqueda, setListaEventosBusqueda] =
+    useState(eventosBusqueda);
 
   const handleEvento = (nombreEvento) => {
     if (!nombreEvento.trim()) {
