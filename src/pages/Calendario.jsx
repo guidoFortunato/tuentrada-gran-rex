@@ -1003,19 +1003,15 @@ export const Calendario = () => {
   const navigate = useNavigate();
   const { pathname } = useLocation();
   localStorage.setItem("lastPath", pathname);
-  // {
-  //   id: 2,
-  //   date: "2023-05-07",
-  //   start: "2023-05-07T21:30:00",
-  //   end: "-",
-  //   title: "SERGIO TORRES",
-  //   url: "/shows/sergio-torres/2",
-  //   display: "block",
-  //   status: "reprogramado",
-  // },
-  const newEvents = eventosTotales.map( item => ({id: item.id, start: item.fechas.fecha1.horaInicioCalendario, title: item.nombre, url: item.links.path, display: item.display, status: item.estado}) )
+  const newEvents = []
 
-  console.log({newEvents})
+  for (let i = 0; i < eventosTotales.length; i++) {
+    for (let j = 0; j < eventosTotales[i].fechas.length; j++) {
+      newEvents.push({id: eventosTotales[i].id, start: eventosTotales[i].fechas[j].start, title: eventosTotales[i].nombre, url: eventosTotales[i].links.path, display: eventosTotales[i].display, status: eventosTotales[i].estado})      
+    }    
+  }
+
+  // console.log({newEvents})
 
   // const eventClassNames = (arg) => {
   //   let classNames = [""];
@@ -1111,7 +1107,7 @@ export const Calendario = () => {
               eventBorderColor="#ba2828"
               eventClick={handleClick}
               eventDidMount={ handleEventMount }
-              events={fullEvents}
+              events={newEvents}
               eventTimeFormat={eventTimeFormat}
               headerToolbar={ window.innerWidth < 1023 ? headerToolbarOptionsResponsive : headerToolbarOptionsDesktop }
               height={"70vh"}
