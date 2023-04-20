@@ -32,7 +32,7 @@ const itemsNavbar = [
     id: 6,
     name: "Preguntas frecuentes",
     link: "/preguntas-frecuentes",
-    mostrar: true,
+    mostrar: false,
   },
 ];
 
@@ -85,7 +85,7 @@ export const Navbar = () => {
                 )
             )}
           </ul>
-          <div className="d-flex align-items-center ms-lg-auto me-lg-4">
+          <div className="d-flex flex-column ms-lg-auto me-lg-4">
             <div>
               <span className="span-redes me-2">Seguinos en nuestras redes:</span>
             </div>

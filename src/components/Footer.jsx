@@ -47,6 +47,7 @@ export const Footer = () => {
             </div>
           </div>
           <div className="col-12 col-md-6 d-flex justify-content-center align-items-center my-2 my-lg-0">
+            <span style={{color:"white", fontSize:"15px"}}>Seguinos en nuestras redes:</span>
             <ul className="list-unstyled d-flex mb-0">
               <li className="me-3">
                 <a
@@ -61,8 +62,7 @@ export const Footer = () => {
                     y="0px"
                     style={{
                       
-                      border: "1px solid white",
-                      borderRadius: "50%",
+                  
                       padding: "5px",
                       fill:"#ffffff"
                     }}
@@ -88,8 +88,7 @@ export const Footer = () => {
                     y="0px"
                     style={{
                   
-                      border: "1px solid white",
-                      borderRadius: "50%",
+                      
                       padding: "5px",
                       fill:"#ffffff"
                     }}
@@ -115,8 +114,7 @@ export const Footer = () => {
                     y="0px"
                     style={{
                      
-                      border: "1px solid white",
-                      borderRadius: "50%",
+                      
                       padding: "5px",
                       fill:"#ffffff"
                     }}
