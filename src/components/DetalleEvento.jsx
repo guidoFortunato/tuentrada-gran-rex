@@ -1,5 +1,5 @@
 import { useContext, useEffect, useRef, useState } from "react";
-import { useLocation, useNavigate, useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import Modal from "react-modal";
 
 import { EventosContext } from "../context/EventosProvider";
@@ -16,18 +16,22 @@ export const DetalleEvento = () => {
   const modalRef = useRef(null);
   const navigate = useNavigate();
   const { name, id } = useParams();
-  const {pathname} = useLocation()
-  
+
   // console.log({eventosTotales})
   // console.log({ evento });
 
   useEffect(() => {
     if (eventosTotales.length > 0) {
-    const data = eventosTotales.find( (item) => (item.id == id) && (item.nombrePath == name))
-    setEvento(data);
-  }
+      const data = eventosTotales.find(
+        (item) => item.id == id && item.nombrePath == name
+      );
+      if (data) {
+        setEvento(data);
+      } else {
+        navigate("/");
+      }
+    }
   }, [name, id, eventosTotales]);
-
 
   const lastPath = localStorage.getItem("lastPath") || "/";
 
@@ -47,10 +51,9 @@ export const DetalleEvento = () => {
     setModalIsOpen(false);
   };
 
-  if (evento === null || evento === undefined) {
+  if (evento === null) {
     return <p>cargando...</p>;
   }
-
 
   return (
     <>
