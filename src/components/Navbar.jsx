@@ -45,7 +45,7 @@ export const Navbar = () => {
     <nav className="navbar navbar-dark navbar-expand-lg color-navbar sticky-top animate__animated animate__fadeIn animate__faster">
       <div className="container-fluid">
         <Link className="navbar-brand ms-lg-4" to="/">
-          <img src={"https://www.tuentrada.com/teatro/gran-rex/imagenes/logo_rex_negro.jpg"} alt="logo gran rex" style={{ width: "75px" }} />
+          <img src={"storage/imagenes/logo_rex_negro.jpg"} alt="logo gran rex" style={{ width: "75px" }} />
         </Link>
 
         <button

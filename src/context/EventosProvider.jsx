@@ -2269,7 +2269,7 @@ const EventosProvider = (props) => {
   useEffect(() => {
     const getData = async()=>{
       try {
-        const res = await fetch("./eventos.json")
+        const res = await fetch("storage/json/eventos.json")
         console.log(res)
         const data = await res.json()
         console.log(data)

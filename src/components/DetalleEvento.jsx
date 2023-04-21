@@ -8,7 +8,7 @@ import DOMPurify from "dompurify";
 
 import "../css/detalleevento.css";
 
-export const DetalleEvento = ({ title, description, href, img, ubicaciones, imgPlano = "https://www.tuentrada.com/teatro/gran-rex/imagenes/plano/tue1.webp",}) => {
+export const DetalleEvento = ({ title, description, href, img, ubicaciones, imgPlano = "storage/imagenes/plano/tue1.webp",}) => {
   const [modalIsOpen, setModalIsOpen] = useState(false);
   // const eventDetailRef = useRef(null);
   const modalRef = useRef(null);
@@ -164,7 +164,7 @@ export const DetalleEvento = ({ title, description, href, img, ubicaciones, imgP
                     className="img-modal"
                   />
                
-                 <img src={"https://www.tuentrada.com/teatro/gran-rex/imagenes/close.svg"} alt="icono cerrar" className="icono-close" onClick={handleCloseModal} /> 
+                 <img src={"storage/imagenes/close.svg"} alt="icono cerrar" className="icono-close" onClick={handleCloseModal} /> 
                 </Modal>
               
               </div>
