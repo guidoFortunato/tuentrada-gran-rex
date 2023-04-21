@@ -1013,9 +1013,9 @@ export const Calendario = () => {
   //   display: "block",
   //   status: "reprogramado",
   // },
-  const newEvents = eventosTotales.map( item => ({id: item.id, start: item.fechas.fecha1.horaInicioCalendario, title: item.nombre, url: item.links.path, display: item.display, status: item.estado}) )
+  // const newEvents = eventosTotales.map( item => ({id: item.id, start: item.fechas.fecha1.start, title: item.nombre, url: item.links.path, display: item.display, status: item.estado}) )
 
-  console.log({newEvents})
+  // console.log({newEvents})
 
   // const eventClassNames = (arg) => {
   //   let classNames = [""];
