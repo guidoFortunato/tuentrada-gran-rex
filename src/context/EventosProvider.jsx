@@ -4,7 +4,7 @@ import Fuse from "fuse.js";
 
 export const EventosContext = createContext();
 
-const eventosTotales =[
+const eventosViejos =[
   {
     id: 1,
     descripcion: "<strong> Todo listo para la fiesta MIRANDA! </strong> <br /> La banda pop más icónica de la escena hispanoamericana, Miranda! cierra el año anunciando su nuevo álbum HOTEL MIRANDA! y las fechas de presentación para el 21 de abril en el imponente Teatro Gran Rex. Con más de 20 años de trayectoria, a la banda liderada por Ale Sergi y Juliana Gattas le sobran los motivos para celebrar y lo harán al mejor estilo Miranda! <br /> <br />     El Teatro Gran Rex informa que los eventos que se realizan en esta sala podrían ser fotografiados o filmados para su posterior difusión en medios y /o campañas publicitarias. <br /><br />    <strong>  Fechas:  </strong>     <ul>        <li> Viernes 21 de abril 20:30hs </li>       <li> Sábado 22 de abril 20:30hs </li>       <li> Domingo 23 de abril 20:00hs </li>    </ul> ",
@@ -2252,6 +2252,7 @@ const eventosTotales =[
 
 
 
+
 // Configuración de Fuse.js
 const opciones = {
   includeScore: true,
@@ -2263,7 +2264,7 @@ const eventosBusqueda = [];
 const EventosProvider = (props) => {
   const [evento, setEvento] = useState("");
   const [listaEventosBusqueda, setListaEventosBusqueda] =  useState(eventosBusqueda);
-  const [eventosTotaless, setEventosTotaless] = useState('');
+  const [eventosTotales, setEventosTotales] = useState([]);
 
   useEffect(() => {
     const getData = async()=>{
