@@ -1,5 +1,5 @@
 import { useContext, useEffect, useRef, useState } from "react";
-import { useNavigate, useParams } from "react-router-dom";
+import { useLocation, useNavigate, useParams } from "react-router-dom";
 import Modal from "react-modal";
 
 import { EventosContext } from "../context/EventosProvider";
@@ -16,13 +16,17 @@ export const DetalleEvento = () => {
   const modalRef = useRef(null);
   const navigate = useNavigate();
   const { name, id } = useParams();
-
-  console.log({ evento });
+  const {pathname} = useLocation()
+  
+  // console.log({eventosTotales})
+  // console.log({ evento });
 
   useEffect(() => {
+    if (eventosTotales.length > 0) {
     const data = eventosTotales.find( (item) => (item.id == id) && (item.nombrePath == name))
     setEvento(data);
-  }, [id, name]);
+  }
+  }, [name, id, eventosTotales]);
 
 
   const lastPath = localStorage.getItem("lastPath") || "/";

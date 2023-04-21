@@ -27,7 +27,7 @@ export const AppRouter = () => {
       <Route path="/preguntas-frecuentes" element={<PreguntasFrecuentes />} />
       <Route path="/shows/:name/:id" element={<DetalleEvento />} />
       <Route path="/ubicaciones" element={<Ubicaciones />} />
-      {/* <Route path="/*" element={<Navigate to="/" />} /> */}
+      <Route path="/*" element={<Navigate to="/" />} />
     </Routes>
   );
 };
