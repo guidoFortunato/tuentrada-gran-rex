@@ -91,46 +91,46 @@ export const Historia = () => {
       style={{ textAlign:"center", padding:"20px" }}>
         <div className="row">
           <div className="col-12 col-md-6 col-lg-4 col-xl-3 mb-5 p-2 galeria-img" >
-            <img style={{boxShadow:"5px 5px 6px 5px rgba(128, 128, 128, 0.443)", width:"250px" }} src="https://tuentrada.com/teatro/gran-rex/imagenes/galeria/1.webp" alt="img-rex" />
+            <img style={{boxShadow:"5px 5px 6px 5px rgba(128, 128, 128, 0.443)", width:"250px" }} src="storage/imagenes/galeria/1.webp" alt="img-rex" />
             </div>
             <div className="col-12 col-md-6 col-lg-4 col-xl-3 mb-5 p-2 galeria-img" >
-            <img style={{boxShadow:"5px 5px 6px 5px rgba(128, 128, 128, 0.443)", width:"250px" }} src="https://tuentrada.com/teatro/gran-rex/imagenes/galeria/2.webp" alt="img-rex" />
+            <img style={{boxShadow:"5px 5px 6px 5px rgba(128, 128, 128, 0.443)", width:"250px" }} src="storage/imagenes/galeria/2.webp" alt="img-rex" />
             </div>
             <div className="col-12 col-md-6 col-lg-4 col-xl-3 mb-5 p-2 galeria-img" >
-            <img style={{boxShadow:"5px 5px 6px 5px rgba(128, 128, 128, 0.443)", width:"250px" }} src="https://tuentrada.com/teatro/gran-rex/imagenes/galeria/3.webp" alt="img-rex" />
+            <img style={{boxShadow:"5px 5px 6px 5px rgba(128, 128, 128, 0.443)", width:"250px" }} src="storage/imagenes/galeria/3.webp" alt="img-rex" />
             </div>
             <div className="col-12 col-md-6 col-lg-4 col-xl-3 mb-5 p-2 galeria-img" >
-            <img style={{boxShadow:"5px 5px 6px 5px rgba(128, 128, 128, 0.443)", width:"250px" }} src="https://tuentrada.com/teatro/gran-rex/imagenes/galeria/4.webp" alt="img-rex" />
+            <img style={{boxShadow:"5px 5px 6px 5px rgba(128, 128, 128, 0.443)", width:"250px" }} src="storage/imagenes/galeria/4.webp" alt="img-rex" />
             </div>
             <div className="col-12 col-md-6 col-lg-4 col-xl-3 mb-5 p-2 galeria-img" >
-            <img style={{boxShadow:"5px 5px 6px 5px rgba(128, 128, 128, 0.443)", width:"250px" }} src="https://tuentrada.com/teatro/gran-rex/imagenes/galeria/5.webp" alt="img-rex" />
+            <img style={{boxShadow:"5px 5px 6px 5px rgba(128, 128, 128, 0.443)", width:"250px" }} src="storage/imagenes/galeria/5.webp" alt="img-rex" />
             </div>
             <div className="col-12 col-md-6 col-lg-4 col-xl-3 mb-5 p-2 galeria-img" >
-            <img style={{boxShadow:"5px 5px 6px 5px rgba(128, 128, 128, 0.443)", width:"250px" }} src="https://tuentrada.com/teatro/gran-rex/imagenes/galeria/6.webp" alt="img-rex" />
+            <img style={{boxShadow:"5px 5px 6px 5px rgba(128, 128, 128, 0.443)", width:"250px" }} src="storage/imagenes/galeria/6.webp" alt="img-rex" />
             </div>
             <div className="col-12 col-md-6 col-lg-4 col-xl-3 mb-5 p-2 galeria-img" >
-            <img style={{boxShadow:"5px 5px 6px 5px rgba(128, 128, 128, 0.443)", width:"250px" }} src="https://tuentrada.com/teatro/gran-rex/imagenes/galeria/7.webp" alt="img-rex" />
+            <img style={{boxShadow:"5px 5px 6px 5px rgba(128, 128, 128, 0.443)", width:"250px" }} src="storage/imagenes/galeria/7.webp" alt="img-rex" />
             </div>
             <div className="col-12 col-md-6 col-lg-4 col-xl-3 mb-5 p-2 galeria-img" >
-            <img style={{boxShadow:"5px 5px 6px 5px rgba(128, 128, 128, 0.443)", width:"250px" }} src="https://tuentrada.com/teatro/gran-rex/imagenes/galeria/8.webp" alt="img-rex" />
+            <img style={{boxShadow:"5px 5px 6px 5px rgba(128, 128, 128, 0.443)", width:"250px" }} src="storage/imagenes/galeria/8.webp" alt="img-rex" />
             </div>
             <div className="col-12 col-md-6 col-lg-4 col-xl-3 mb-5 p-2 galeria-img" >
-            <img style={{boxShadow:"5px 5px 6px 5px rgba(128, 128, 128, 0.443)", width:"250px" }} src="https://tuentrada.com/teatro/gran-rex/imagenes/galeria/9.webp" alt="img-rex" />
+            <img style={{boxShadow:"5px 5px 6px 5px rgba(128, 128, 128, 0.443)", width:"250px" }} src="storage/imagenes/galeria/9.webp" alt="img-rex" />
             </div>
             <div className="col-12 col-md-6 col-lg-4 col-xl-3 mb-5 p-2 galeria-img" >
-            <img style={{boxShadow:"5px 5px 6px 5px rgba(128, 128, 128, 0.443)", width:"250px" }} src="https://tuentrada.com/teatro/gran-rex/imagenes/galeria/10.webp" alt="img-rex" />
+            <img style={{boxShadow:"5px 5px 6px 5px rgba(128, 128, 128, 0.443)", width:"250px" }} src="storage/imagenes/galeria/10.webp" alt="img-rex" />
             </div>
             <div className="col-12 col-md-6 col-lg-4 col-xl-3 mb-5 p-2 galeria-img" >
-            <img style={{boxShadow:"5px 5px 6px 5px rgba(128, 128, 128, 0.443)", width:"250px" }} src="https://tuentrada.com/teatro/gran-rex/imagenes/galeria/11.webp" alt="img-rex" />
+            <img style={{boxShadow:"5px 5px 6px 5px rgba(128, 128, 128, 0.443)", width:"250px" }} src="storage/imagenes/galeria/11.webp" alt="img-rex" />
             </div>
             <div className="col-12 col-md-6 col-lg-4 col-xl-3 mb-5 p-2 galeria-img" >
-            <img style={{boxShadow:"5px 5px 6px 5px rgba(128, 128, 128, 0.443)", width:"250px" }} src="https://tuentrada.com/teatro/gran-rex/imagenes/galeria/12.webp" alt="img-rex" />
+            <img style={{boxShadow:"5px 5px 6px 5px rgba(128, 128, 128, 0.443)", width:"250px" }} src="storage/imagenes/galeria/12.webp" alt="img-rex" />
             </div>
             <div className="col-12 col-md-6 col-lg-4 col-xl-3 mb-5 p-2 galeria-img" >
-            <img style={{boxShadow:"5px 5px 6px 5px rgba(128, 128, 128, 0.443)", width:"250px" }} src="https://tuentrada.com/teatro/gran-rex/imagenes/galeria/13.webp" alt="img-rex" />
+            <img style={{boxShadow:"5px 5px 6px 5px rgba(128, 128, 128, 0.443)", width:"250px" }} src="storage/imagenes/galeria/13.webp" alt="img-rex" />
             </div>
             <div className="col-12 col-md-6 col-lg-4 col-xl-3 mb-5 p-2 galeria-img" >
-            <img style={{boxShadow:"5px 5px 6px 5px rgba(128, 128, 128, 0.443)", width:"250px" }} src="https://tuentrada.com/teatro/gran-rex/imagenes/galeria/14.webp" alt="img-rex" />
+            <img style={{boxShadow:"5px 5px 6px 5px rgba(128, 128, 128, 0.443)", width:"250px" }} src="storage/imagenes/galeria/14.webp" alt="img-rex" />
             </div>
            
             
