@@ -53,7 +53,7 @@ export const BusquedaEventos = () => {
               style={{ fontSize: "14px", padding: "3px 20px" }}
               className="btn-general"
             >
-              Inicio
+              Home
             </div>
           </Link>
         </div>
