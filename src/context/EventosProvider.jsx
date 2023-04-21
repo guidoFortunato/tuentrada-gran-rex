@@ -2269,10 +2269,9 @@ const EventosProvider = (props) => {
   useEffect(() => {
     const getData = async()=>{
       try {
-        const res = await fetch("storage/json/eventos.json")
-        console.log(res)
+        // const res = await fetch("storage/json/eventos.json")
+        const res = await fetch("eventosPrueba.json")
         const data = await res.json()
-        console.log(data)
         setEventosTotales(data)
       } catch (error) {
         throw new Error(error)
