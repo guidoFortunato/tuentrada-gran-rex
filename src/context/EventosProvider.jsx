@@ -39,9 +39,9 @@ const eventosViejos =[
       path: "/shows/miranda/1"
     },
     imagenes: {
-      evento: "https://www.tuentrada.com/teatro/gran-rex/imagenes/miranda.webp",
+      evento: "storage/imagenes/miranda.webp",
       plano:
-        "https://www.tuentrada.com/teatro/gran-rex/imagenes/planos/tue1.webp"
+        "storage/imagenes/planos/tue1.webp"
     },
     nombre: "miranda!",
     ubicaciones: [
@@ -140,9 +140,9 @@ const eventosViejos =[
       path: "/shows/queen/2"
     },
     imagenes: {
-      evento: "https://www.tuentrada.com/teatro/gran-rex/imagenes/queen.webp",
+      evento: "storage/imagenes/queen.webp",
       plano:
-        "https://www.tuentrada.com/teatro/gran-rex/imagenes/planos/tue1.webp"
+        "storage/imagenes/planos/tue1.webp"
     },
     nombre: "master stroke",
     ubicaciones: [
@@ -241,9 +241,9 @@ const eventosViejos =[
     },
     imagenes: {
       evento:
-        "https://www.tuentrada.com/teatro/gran-rex/imagenes/damian_cordoba.webp",
+        "storage/imagenes/damian_cordoba.webp",
       plano:
-        "https://www.tuentrada.com/teatro/gran-rex/imagenes/planos/tue1.webp"
+        "storage/imagenes/planos/tue1.webp"
     },
     nombre: "damián córdoba",
     ubicaciones: [
@@ -349,9 +349,9 @@ const eventosViejos =[
     },
     imagenes: {
       evento:
-        "https://www.tuentrada.com/teatro/gran-rex/imagenes/festival_ballet.webp",
+        "storage/imagenes/festival_ballet.webp",
       plano:
-        "https://www.tuentrada.com/teatro/gran-rex/imagenes/planos/tue1.webp"
+        "storage/imagenes/planos/tue1.webp"
     },
     nombre: "international festival ballet",
     ubicaciones: [
@@ -451,9 +451,9 @@ const eventosViejos =[
     },
     imagenes: {
       evento:
-        "https://www.tuentrada.com/teatro/gran-rex/imagenes/sergio_torres.webp",
+        "storage/imagenes/sergio_torres.webp",
       plano:
-        "https://www.tuentrada.com/teatro/gran-rex/imagenes/planos/tue1.webp"
+        "storage/imagenes/planos/tue1.webp"
     },
     nombre: "sergio torres",
     ubicaciones: [
@@ -553,9 +553,9 @@ const eventosViejos =[
     },
     imagenes: {
       evento:
-        "https://www.tuentrada.com/teatro/gran-rex/imagenes/dale_qva.webp",
+        "storage/imagenes/dale_qva.webp",
       plano:
-        "https://www.tuentrada.com/teatro/gran-rex/imagenes/planos/tue1.webp"
+        "storage/imagenes/planos/tue1.webp"
     },
     nombre: "dale q’ va",
     ubicaciones: [
@@ -654,9 +654,9 @@ const eventosViejos =[
       path: "/shows/turf/7"
     },
     imagenes: {
-      evento: "https://www.tuentrada.com/teatro/gran-rex/imagenes/turf.webp",
+      evento: "storage/imagenes/turf.webp",
       plano: 
-        "https://www.tuentrada.com/teatro/gran-rex/imagenes/planos/tue1.webp"
+        "storage/imagenes/planos/tue1.webp"
     },
     nombre: "turf",
     ubicaciones: [
@@ -756,9 +756,9 @@ const eventosViejos =[
     },
     imagenes: {
       evento:
-        "https://www.tuentrada.com/teatro/gran-rex/imagenes/the_beats.webp",
+        "storage/imagenes/the_beats.webp",
       plano:
-        "https://www.tuentrada.com/teatro/gran-rex/imagenes/planos/tue1.webp"
+        "storage/imagenes/planos/tue1.webp"
     },
     nombre: "the beats",
     ubicaciones: [
@@ -857,9 +857,9 @@ const eventosViejos =[
     },
     imagenes: {
       evento:
-        "https://www.tuentrada.com/teatro/gran-rex/imagenes/massacre.webp",
+        "storage/imagenes/massacre.webp",
       plano:
-        "https://www.tuentrada.com/teatro/gran-rex/imagenes/planos/tue1.webp"
+        "storage/imagenes/planos/tue1.webp"
     },
     nombre: "massacre",
     ubicaciones: [
@@ -965,9 +965,9 @@ const eventosViejos =[
     },
     imagenes: {
       evento:
-        "https://www.tuentrada.com/teatro/gran-rex/imagenes/jdpantoja_kimloaiza.webp",
+        "storage/imagenes/jdpantoja_kimloaiza.webp",
       plano:
-        "https://www.tuentrada.com/teatro/gran-rex/imagenes/planos/tue1.webp"
+        "storage/imagenes/planos/tue1.webp"
     },
     nombre: "jd pantoja kim loaiza",
     ubicaciones: [
@@ -1067,9 +1067,9 @@ const eventosViejos =[
     },
     imagenes: {
       evento:
-        "https://www.tuentrada.com/teatro/gran-rex/imagenes/sergio_galleguillo.webp",
+        "storage/imagenes/sergio_galleguillo.webp",
       plano:
-        "https://www.tuentrada.com/teatro/gran-rex/imagenes/planos/tue1.webp"
+        "storage/imagenes/planos/tue1.webp"
     },
     nombre: "sergio galleguillo",
     ubicaciones: [
@@ -1672,9 +1672,9 @@ const eventosViejos =[
       path: "/shows/matilda/12"
     },
     imagenes: {
-      evento: "https://www.tuentrada.com/teatro/gran-rex/imagenes/matilda.webp",
+      evento: "storage/imagenes/matilda.webp",
       plano:
-        "https://www.tuentrada.com/teatro/gran-rex/imagenes/planos/tue1.webp"
+        "storage/imagenes/planos/tue1.webp"
     },
     nombre: "matilda",
     ubicaciones: [
@@ -1762,9 +1762,9 @@ const eventosViejos =[
     },
     imagenes: {
       evento:
-        "https://www.tuentrada.com/teatro/gran-rex/imagenes/julieta-venegas.webp",
+        "storage/imagenes/julieta-venegas.webp",
       plano:
-        "https://www.tuentrada.com/teatro/gran-rex/imagenes/planos/tue1.webp"
+        "storage/imagenes/planos/tue1.webp"
     },
     nombre: "julieta venegas",
     ubicaciones: [
@@ -1862,9 +1862,9 @@ const eventosViejos =[
       path: "/shows/bxs/14"
     },
     imagenes: {
-      evento: "https://www.tuentrada.com/teatro/gran-rex/imagenes/bxs.webp",
+      evento: "storage/imagenes/bxs.webp",
       plano:
-        "https://www.tuentrada.com/teatro/gran-rex/imagenes/planos/tue1.webp"
+        "storage/imagenes/planos/tue1.webp"
     },
     nombre: "bxs - bryndis x siempre",
     ubicaciones: [
@@ -1964,9 +1964,9 @@ const eventosViejos =[
     },
     imagenes: {
       evento:
-        "https://www.tuentrada.com/teatro/gran-rex/imagenes/daniel_agostini.webp",
+        "storage/imagenes/daniel_agostini.webp",
       plano:
-        "https://www.tuentrada.com/teatro/gran-rex/imagenes/planos/tue1.webp"
+        "storage/imagenes/planos/tue1.webp"
     },
     nombre: "daniel agostini",
     ubicaciones: [
@@ -2066,9 +2066,9 @@ const eventosViejos =[
     },
     imagenes: {
       evento:
-        "https://www.tuentrada.com/teatro/gran-rex/imagenes/chili-fernandez.webp",
+        "storage/imagenes/chili-fernandez.webp",
       plano:
-        "https://www.tuentrada.com/teatro/gran-rex/imagenes/planos/tue1.webp"
+        "storage/imagenes/planos/tue1.webp"
     },
     nombre: "chili fernandez",
     ubicaciones: [
@@ -2168,9 +2168,9 @@ const eventosViejos =[
     },
     imagenes: {
       evento:
-        "https://www.tuentrada.com/teatro/gran-rex/imagenes/perota-chingo.webp",
+        "storage/imagenes/perota-chingo.webp",
       plano:
-        "https://www.tuentrada.com/teatro/gran-rex/imagenes/planos/tue1.webp"
+        "storage/imagenes/planos/tue1.webp"
     },
     nombre: "perotá chingó",
     ubicaciones: [
