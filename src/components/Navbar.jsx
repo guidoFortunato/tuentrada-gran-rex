@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import imgRex from "../assets/images/logo_rex_negro.jpg";
+// import imgRex from "/assets/imagenes/logo_rex_negro.jpg";
 import "../css/navbar.css";
 import { Link } from "react-router-dom";
 
@@ -32,7 +32,7 @@ const itemsNavbar = [
     id: 6,
     name: "Preguntas frecuentes",
     link: "/preguntas-frecuentes",
-    mostrar: true,
+    mostrar: false,
   },
 ];
 
@@ -45,7 +45,7 @@ export const Navbar = () => {
     <nav className="navbar navbar-dark navbar-expand-lg color-navbar sticky-top animate__animated animate__fadeIn animate__faster">
       <div className="container-fluid">
         <Link className="navbar-brand ms-lg-4" to="/">
-          <img src={imgRex} alt="logo gran rex" style={{ width: "75px" }} />
+          <img src={"/assets/imagenes/logo_rex_negro.jpg"} alt="logo gran rex" style={{ width: "75px" }} />
         </Link>
 
         <button
@@ -85,7 +85,7 @@ export const Navbar = () => {
                 )
             )}
           </ul>
-          <div className="d-flex align-items-center ms-lg-auto me-lg-4">
+          <div className="d-flex flex-column ms-lg-auto me-lg-4">
             <div>
               <span className="span-redes me-2">Seguinos en nuestras redes:</span>
             </div>
