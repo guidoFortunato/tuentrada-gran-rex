@@ -1,7 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Modal from "react-modal";
-import imgClose from "../assets/images/close.svg";
 
 import { TablaPrecios } from "./";
 
@@ -9,7 +8,7 @@ import DOMPurify from "dompurify";
 
 import "../css/detalleevento.css";
 
-export const DetalleEvento = ({ title, description, href, img, ubicaciones, imgPlano = "https://www.tuentrada.com/evento/mappa/img/rex.webp",}) => {
+export const DetalleEvento = ({ title, description, href, img, ubicaciones, imgPlano = "https://www.tuentrada.com/teatro/gran-rex/imagenes/plano/tue1.webp",}) => {
   const [modalIsOpen, setModalIsOpen] = useState(false);
   // const eventDetailRef = useRef(null);
   const modalRef = useRef(null);
@@ -165,7 +164,7 @@ export const DetalleEvento = ({ title, description, href, img, ubicaciones, imgP
                     className="img-modal"
                   />
                
-                 <img src={imgClose} alt="icono cerrar" className="icono-close" onClick={handleCloseModal} /> 
+                 <img src={"https://www.tuentrada.com/teatro/gran-rex/imagenes/close.svg"} alt="icono cerrar" className="icono-close" onClick={handleCloseModal} /> 
                 </Modal>
               
               </div>
