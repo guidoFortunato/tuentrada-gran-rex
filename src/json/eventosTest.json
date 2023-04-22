@@ -28,6 +28,7 @@
         "estadoCalendario": "agotado"
       }
     ],
+    "keywords": ["miranda", "miranda!", "hotel"],
     "links": {
       "href": "https://www.ticketek.com.ar/miranda/teatro-gran-rex",
       "path": "/shows/miranda/1"
@@ -128,6 +129,7 @@
         "estadoCalendario": "disponible"
       }
     ],
+    "keywords": ["master", "stroke", "estroke", "stroque", "stroqe", "queen", "quen"],
     "links": {
       "href": "https://www.ticketek.com.ar/queen-por-master-stroke/teatro-gran-rex",
       "path": "/shows/master-stroke/2"
@@ -228,6 +230,7 @@
         "estadoCalendario": "disponible"
       }
     ],
+    "keywords": ["damian", "damián", "cordoba", "cordova", "córdoba", "córdova"],
     "links": {
       "href": "https://www.ticketek.com.ar/damian-cordoba/teatro-gran-rex",
       "path": "/shows/damian-cordoba/3"
@@ -335,6 +338,7 @@
         "estadoCalendario": "cancelado"
       }
     ],
+    "keywords": ["festival", "ballet", "festibal", "balet", "valet", "vallet", "International"],
     "links": {
       "href": "https://www.ticketek.com.ar/international-festival-ballet-peace/teatro-gran-rex",
       "path": "/shows/festival-ballet/4"
@@ -435,6 +439,7 @@
         "estadoCalendario": "reprogramado"
       }
     ],
+    "keywords": ["sergio", "torres", "cergio", "serjio", "cerjio", "tores"],
     "links": {
       "href": "https://www.ticketek.com.ar/sergio-torres/teatro-gran-rex",
       "path": "/shows/sergio-torres/5"
@@ -535,6 +540,7 @@
         "estadoCalendario": "disponible"
       }
     ],
+    "keywords": ["dale", "q", "va", "daleqva", "q'"],
     "links": {
       "href": "https://www.ticketek.com.ar/dale-qva/teatro-gran-rex",
       "path": "/shows/daleqva/6"
@@ -635,6 +641,7 @@
         "estadoCalendario": "disponible"
       }
     ],
+    "keywords": ["turf", "truf", "tur"],
     "links": {
       "href": "https://www.ticketek.com.ar/turf/teatro-gran-rex",
       "path": "/shows/turf/7"
@@ -735,6 +742,7 @@
         "estadoCalendario": "disponible"
       }
     ],
+    "keywords": ["the", "beats", "veats", "bits", "vits"],
     "links": {
       "href": "https://www.ticketek.com.ar/beats/teatro-gran-rex",
       "path": "/shows/the-beats/8"
@@ -835,6 +843,7 @@
         "estadoCalendario": "disponible"
       }
     ],
+    "keywords": ["massacre", "masacre"],
     "links": {
       "href": "https://www.ticketek.com.ar/massacre/teatro-gran-rex",
       "path": "/shows/massacre/9"
@@ -942,6 +951,7 @@
         "estadoCalendario": "agotado"
       }
     ],
+    "keywords": ["Loaiza", "Kim", "Pantoja", "jd"],
     "links": {
       "href": "https://www.ticketek.com.ar/jd-pantoja-kim-loaiza/teatro-gran-rex",
       "path": "/shows/jdpantoja-kimloaiza/10"
@@ -1042,6 +1052,7 @@
         "estadoCalendario": "disponible"
       }
     ],
+    "keywords": ["sergio", "galleguillo", "cergio", "galeguilo"],
     "links": {
       "href": "https://www.ticketek.com.ar/sergio-galleguillo/teatro-gran-rex",
       "path": "/shows/sergio-galleguillo/11"
@@ -1646,6 +1657,7 @@
         "estadoCalendario": "disponible"
       }
     ],
+    "keywords": ["matilda"],
     "links": {
       "href": "https://www.ticketek.com.ar/matilda/teatro-gran-rex",
       "path": "/shows/matilda/12"
@@ -1734,6 +1746,7 @@
         "estadoCalendario": "próximamente"
       }
     ],
+    "keywords": ["julieta", "venegas", "benegas"],
     "links": {
       "href": "https://www.tuentrada.com/eventos/detalle/Julieta-Venegas/2044219094378",
       "path": "/shows/julieta-venegas/13"
@@ -1834,6 +1847,7 @@
         "estadoCalendario": "disponible"
       }
     ],
+    "keywords": ["bxs", "bryndis", "brindis"],
     "links": {
       "href": "https://www.ticketek.com.ar/bryndis/teatro-gran-rex",
       "path": "/shows/bxs/14"
@@ -1934,6 +1948,7 @@
         "estadoCalendario": "disponible"
       }
     ],
+    "keywords": ["daniel", "agostini", "agostin", "agos", "dan"],
     "links": {
       "href": "https://www.tuentrada.com/eventos/detalle/Daniel-Agostini/553776971040",
       "path": "/shows/daniel-agostini/15"
@@ -2034,6 +2049,7 @@
         "estadoCalendario": "disponible"
       }
     ],
+    "keywords": ["chili", "fernandez", "fernandes", "chil", "ferna"],
     "links": {
       "href": "https://www.tuentrada.com/eventos/detalle/Chili-Fernandez/495716168868",
       "path": "/shows/chili-fernandez/16"
@@ -2134,6 +2150,7 @@
         "estadoCalendario": "disponible"
       }
     ],
+    "keywords": ["perotá", "chingó", "perota", "chingo"],
     "links": {
       "href": "https://www.tuentrada.com/eventos/detalle/Perota-Chingo/114421632871",
       "path": "/shows/perota-chingo/17"
@@ -2142,7 +2159,7 @@
       "evento": "https://www.tuentrada.com/teatro/gran-rex/imagenes/perota-chingo.webp",
       "plano": "https://www.tuentrada.com/teatro/gran-rex/imagenes/planos/tue1.webp"
     },
-    "nombre": "perotá chingó",
+    "nombre": "perota chingo",
     "nombrePath": "perota-chingo",
     "ubicaciones": [
       {

@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "name": "Home",
+    "link": "/",
+    "mostrar": true
+  },
+  {
+    "id": 2,
+    "name": "Calendario",
+    "link": "/calendario",
+    "mostrar": true
+  },
+  {
+    "id": 3,
+    "name": "Historia",
+    "link": "/historia",
+    "mostrar": true
+  },
+  {
+    "id": 5,
+    "name": "Cómo llegar",
+    "link": "/como-llegar",
+    "mostrar": true
+  },
+  {
+    "id": 6,
+    "name": "Preguntas frecuentes",
+    "link": "/preguntas-frecuentes",
+    "mostrar": false
+  }
+]

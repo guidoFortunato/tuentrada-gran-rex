@@ -8,13 +8,17 @@ import "../css/header.css";
 import "../css/footer.css";
 
 export const Home = () => {
-  const { eventosTotales } = useContext(EventosContext);
-
+  const { eventosTotales, isLoading } = useContext(EventosContext);
   useEffect(() => {
     setTimeout(() => {
       window.scrollTo(0, 0);
     }, 100);
   }, []);
+
+  if (isLoading) {
+    return <p>cargando...</p>
+  }
+
 
   return (
     <>
@@ -52,7 +56,7 @@ export const Home = () => {
          */}
 
           <div className="row sin-padding-right-left animate__animated animate__fadeIn  animate__delay-1s ">
-            {eventosTotales.map((evento) => (
+            {eventosTotales?.map((evento) => (
 
               <CardEvento
                 linkEvento={evento.links.path}

@@ -1,5 +1,5 @@
-import { createContext, useEffect, useState } from "react";
-import { getEnvVariables } from "../helpers";
+import { createContext, useState } from "react";
+import { useFetch } from "../helpers";
 
 import Fuse from "fuse.js";
 export const EventosContext = createContext();
@@ -2262,25 +2262,11 @@ const eventosBusqueda = [];
 const EventosProvider = (props) => {
   const [evento, setEvento] = useState("");
   const [listaEventosBusqueda, setListaEventosBusqueda] =  useState(eventosBusqueda);
-  const [eventosTotales, setEventosTotales] = useState([]);
+  const urlTest = "/src/json/eventosTest.json"
+  // const { VITE_JSON_EVENTOS } = getEnvVariables()
 
-  const { VITE_JSON_EVENTOS } = getEnvVariables()
 
-  useEffect(() => {
-    const getData = async()=>{
-      try {
-        // const res = await fetch(VITE_JSON_EVENTOS)
-        const res = await fetch("eventosPrueba.json")
-        const data = await res.json()
-        setEventosTotales(data)
-      } catch (error) {
-        throw new Error(error)
-      }
-    }
-    getData()
-    
-  }, []);
-
+ const { data, isLoading, hasError } = useFetch(urlTest)
 
   const handleEvento = (nombreEvento) => {
     if (!nombreEvento.trim()) {
@@ -2291,16 +2277,13 @@ const EventosProvider = (props) => {
   };
 
   const agregarEvento = (nombreEvento) => {
-    // eventosTotales.filter( item => nombreEvento.toLowerCase().indexOf(item.name.toLowerCase()))
 
     // Busca eventos que coincidan exactamente con la consulta
-    const resultadosExactos = eventosTotales.filter((item) =>
-      item.nombre.toLowerCase().includes(nombreEvento.toLowerCase())
-    );
+    const resultadosExactos = data?.filter((item) => item.nombre.toLowerCase().includes(nombreEvento.toLowerCase()));
 
     // Si no hay resultados exactos, buscar sugerencias
-    if (resultadosExactos.length === 0) {
-      const fuse = new Fuse(eventosTotales, opciones);
+    if (resultadosExactos?.length) {
+      const fuse = new Fuse(data, opciones);
       const sugerencias = fuse
         .search(nombreEvento)
         .map((resultado) => resultado.item);
@@ -2316,8 +2299,9 @@ const EventosProvider = (props) => {
         agregarEvento,
         evento,
         handleEvento,
-        eventosTotales,
-        
+        eventosTotales : data,
+        isLoading,
+        hasError
       }}
     >
       {props.children}

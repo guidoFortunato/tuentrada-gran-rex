@@ -10,7 +10,7 @@ import DOMPurify from "dompurify";
 import "../css/detalleevento.css";
 
 export const DetalleEvento = () => {
-  const { eventosTotales } = useContext(EventosContext);
+  const { eventosTotales, isLoading } = useContext(EventosContext);
   const [evento, setEvento] = useState(null);
   const [modalIsOpen, setModalIsOpen] = useState(false);
   const modalRef = useRef(null);
@@ -21,7 +21,7 @@ export const DetalleEvento = () => {
   // console.log({ evento });
 
   useEffect(() => {
-    if (eventosTotales.length > 0) {
+    if (eventosTotales?.length > 0) {
       const data = eventosTotales.find((item) => item.id == id && item.nombrePath == name);
       if (data) {
         setEvento(data);
@@ -49,6 +49,9 @@ export const DetalleEvento = () => {
     setModalIsOpen(false);
   };
 
+  if (isLoading) {
+    return <p>cargando...</p>;
+  }
   if (evento === null) {
     return <p>cargando...</p>;
   }
@@ -61,13 +64,13 @@ export const DetalleEvento = () => {
         }
         // ref={eventDetailRef}
       >
-        <h2 className="titleDetalle">{evento.nombre?.toUpperCase()}</h2>
+        <h2 className="titleDetalle">{evento?.nombre.toUpperCase()}</h2>
         <hr />
         <div className="row">
           <div className="col-12 col-lg-6 mb-5 mb-lg-0 text-center">
             <img
-              src={evento.imagenes.evento}
-              alt={`imagen ${evento.nombre}`}
+              src={evento?.imagenes.evento}
+              alt={`imagen ${evento?.nombre}`}
               className="img-fluid"
             />
           </div>
@@ -76,13 +79,13 @@ export const DetalleEvento = () => {
             <p
               className="animate__animated animate__fadeIn"
               dangerouslySetInnerHTML={{
-                __html: DOMPurify.sanitize(evento.descripcion),
+                __html: DOMPurify.sanitize(evento?.descripcion),
               }}
             ></p>
 
             <div className="d-flex justify-content-center flex-column align-items-center mt-4 ">
               <a
-                href={evento.links.href}
+                href={evento?.links.href}
                 className=" text-center"
                 target="_blank"
                 rel="noreferrer"
@@ -151,11 +154,11 @@ export const DetalleEvento = () => {
           <div className="row justify-content-center">
             <div className="col-12 col-lg-8 my-5">
               {/* <hr /> */}
-              <TablaPrecios ubicaciones={evento.ubicaciones} />
+              <TablaPrecios ubicaciones={evento?.ubicaciones} />
             </div>
             <div className="col-12 col-lg-4 my-5 text-center">
               <img
-                src={evento.imagenes.plano}
+                src={evento?.imagenes.plano}
                 alt="ubicaciones gran rex"
                 className="img-fluid"
                 style={{ cursor: "default" }}
@@ -179,7 +182,7 @@ export const DetalleEvento = () => {
                   ref={modalRef}
                 >
                   <img
-                    src={evento.imagenes.plano}
+                    src={evento?.imagenes.plano}
                     alt="ubicaciones gran rex"
                     className="img-modal"
                   />
