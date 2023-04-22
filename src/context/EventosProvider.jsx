@@ -1,8 +1,9 @@
 import { createContext, useEffect, useState } from "react";
-import Fuse from "fuse.js";
-// import "./eventos.json"
+import { getEnvVariables } from "../helpers";
 
+import Fuse from "fuse.js";
 export const EventosContext = createContext();
+
 
 const eventosViejos =[
   {
@@ -2250,9 +2251,6 @@ const eventosViejos =[
   }
 ]
 
-
-
-
 // Configuración de Fuse.js
 const opciones = {
   includeScore: true,
@@ -2266,10 +2264,12 @@ const EventosProvider = (props) => {
   const [listaEventosBusqueda, setListaEventosBusqueda] =  useState(eventosBusqueda);
   const [eventosTotales, setEventosTotales] = useState([]);
 
+  const { VITE_JSON_EVENTOS } = getEnvVariables()
+
   useEffect(() => {
     const getData = async()=>{
       try {
-        // const res = await fetch("storage/json/eventos.json")
+        // const res = await fetch(VITE_JSON_EVENTOS)
         const res = await fetch("eventosPrueba.json")
         const data = await res.json()
         setEventosTotales(data)

@@ -37,78 +37,79 @@
       "plano": "storage/imagenes/planos/tue1.webp"
     },
     "nombre": "miranda!",
+    "nombrePath": "miranda",
     "ubicaciones": [
       {
         "id": 1,
         "nombre": "PLATEA 1",
         "color": "#970513",
-        "precio": 11.5
+        "precio": "$11.500"
       },
       {
         "id": 2,
         "nombre": "PLATEA 2",
         "color": "#79C8C3",
-        "precio": 10.5
+        "precio": "$10.500"
       },
       {
         "id": 3,
         "nombre": "PLATEA 3",
         "color": "#EDB63B",
-        "precio": 9.5
+        "precio": "$9.500"
       },
       {
         "id": 4,
         "nombre": "PLATEA 4",
         "color": "#86AA4D",
-        "precio": 8.5
+        "precio": "$8.500"
       },
       {
         "id": 5,
         "nombre": "PLATEA 5",
         "color": "#052748",
-        "precio": 7.5
+        "precio": "$7.500"
       },
       {
         "id": 6,
         "nombre": "SUPER PULLMAN 1",
         "color": "#035F89",
-        "precio": 8.5
+        "precio": "$8.500"
       },
       {
         "id": 7,
         "nombre": "SUPER PULLMAN 2",
         "color": "#A9167D",
-        "precio": 7.5
+        "precio": "$7.500"
       },
       {
         "id": 8,
         "nombre": "PULLMAN 1",
         "color": "#EE6E08",
-        "precio": 6.5
+        "precio": "$6.500"
       },
       {
         "id": 9,
         "nombre": "PULLMAN 2",
         "color": "#037366",
-        "precio": 6
+        "precio": "$6.000"
       },
       {
         "id": 10,
         "nombre": "PULLMAN 3",
         "color": "#D97B77",
-        "precio": 5.5
+        "precio": "$5.500"
       },
       {
         "id": 11,
         "nombre": "PULLMAN 4",
         "color": "#AF0657",
-        "precio": 5
+        "precio": "$5.000"
       },
       {
         "id": 12,
         "nombre": "PULLMAN 5",
         "color": "#5271FF",
-        "precio": 4.5
+        "precio": "$4.500"
       }
     ]
   },
@@ -135,79 +136,80 @@
       "evento": "storage/imagenes/queen.webp",
       "plano": "storage/imagenes/planos/tue1.webp"
     },
-    "nombre": "master stroke",
+    "nombre": "queen por master stroke",
+    "nombrePath": "master-stroke",
     "ubicaciones": [
       {
         "id": 1,
         "nombre": "PLATEA 1",
         "color": "#970513",
-        "precio": 7.5
+        "precio": "$7.500"
       },
       {
         "id": 2,
         "nombre": "PLATEA 2",
         "color": "#79C8C3",
-        "precio": 7
+        "precio": "$7.000"
       },
       {
         "id": 3,
         "nombre": "PLATEA 3",
         "color": "#EDB63B",
-        "precio": 6.5
+        "precio": "$6.500"
       },
       {
         "id": 4,
         "nombre": "PLATEA 4",
         "color": "#86AA4D",
-        "precio": 5.5
+        "precio": "$5.500"
       },
       {
         "id": 5,
         "nombre": "PLATEA 5",
         "color": "#052748",
-        "precio": 5
+        "precio": "$5.000"
       },
       {
         "id": 6,
         "nombre": "SUPER PULLMAN 1",
         "color": "#035F89",
-        "precio": 7
+        "precio": "$7.000"
       },
       {
         "id": 7,
         "nombre": "SUPER PULLMAN 2",
         "color": "#A9167D",
-        "precio": 6
+        "precio": "$6.000"
       },
       {
         "id": 8,
         "nombre": "PULLMAN 1",
         "color": "#EE6E08",
-        "precio": 5.5
+        "precio": "$5.500"
       },
       {
         "id": 9,
         "nombre": "PULLMAN 2",
         "color": "#037366",
-        "precio": 5
+        "precio": "$5.000"
       },
       {
         "id": 10,
         "nombre": "PULLMAN 3",
         "color": "#D97B77",
-        "precio": 4.5
+        "precio": "$4.500"
       },
       {
         "id": 11,
         "nombre": "PULLMAN 4",
         "color": "#AF0657",
-        "precio": 4
+        "precio": "$4.000"
       },
       {
         "id": 12,
         "nombre": "PULLMAN 5",
         "color": "#5271FF",
-        "precio": 3
+        "precio": "$3.000"
       }
     ]
   },
@@ -235,78 +237,79 @@
       "plano": "storage/imagenes/planos/tue1.webp"
     },
     "nombre": "damián córdoba",
+    "nombrePath": "damian-cordoba",
     "ubicaciones": [
       {
         "id": 1,
         "nombre": "PLATEA 1",
         "color": "#970513",
-        "precio": 8.5
+        "precio": "$8.500"
       },
       {
         "id": 2,
         "nombre": "PLATEA 2",
         "color": "#79C8C3",
-        "precio": 8
+        "precio": "$8.000"
       },
       {
         "id": 3,
         "nombre": "PLATEA 3",
         "color": "#EDB63B",
-        "precio": 7
+        "precio": "$7.000"
       },
       {
         "id": 4,
         "nombre": "PLATEA 4",
         "color": "#86AA4D",
-        "precio": 6.5
+        "precio": "$6.500"
       },
       {
         "id": 5,
         "nombre": "PLATEA 5",
         "color": "#052748",
-        "precio": 6
+        "precio": "$6.000"
       },
       {
         "id": 6,
         "nombre": "SUPER PULLMAN 1",
         "color": "#035F89",
-        "precio": 6.5
+        "precio": "$6.500"
       },
       {
         "id": 7,
         "nombre": "SUPER PULLMAN 2",
         "color": "#A9167D",
-        "precio": 6
+        "precio": "$6.000"
       },
       {
         "id": 8,
         "nombre": "PULLMAN 1",
         "color": "#EE6E08",
-        "precio": 5.5
+        "precio": "$5.500"
       },
       {
         "id": 9,
         "nombre": "PULLMAN 2",
         "color": "#037366",
-        "precio": 5
+        "precio": "$5.000"
       },
       {
         "id": 10,
         "nombre": "PULLMAN 3",
         "color": "#D97B77",
-        "precio": 4
+        "precio": "$4.000"
       },
       {
         "id": 11,
         "nombre": "PULLMAN 4",
         "color": "#AF0657",
-        "precio": 3
+        "precio": "$3.000"
       },
       {
         "id": 12,
         "nombre": "PULLMAN 5",
         "color": "#5271FF",
-        "precio": 2.5
+        "precio": "$2.500"
       }
     ]
   },
@@ -341,78 +344,79 @@
       "plano": "storage/imagenes/planos/tue1.webp"
     },
     "nombre": "international festival ballet",
+    "nombrePath": "festival-ballet",
     "ubicaciones": [
       {
         "id": 1,
         "nombre": "PLATEA 1",
         "color": "#970513",
-        "precio": 9
+        "precio": "$9.000"
       },
       {
         "id": 2,
         "nombre": "PLATEA 2",
         "color": "#79C8C3",
-        "precio": 8.5
+        "precio": "$8.500"
       },
       {
         "id": 3,
         "nombre": "PLATEA 3",
         "color": "#EDB63B",
-        "precio": 8
+        "precio": "$8.000"
       },
       {
         "id": 4,
         "nombre": "PLATEA 4",
         "color": "#86AA4D",
-        "precio": 7.5
+        "precio": "$7.500"
       },
       {
         "id": 5,
         "nombre": "PLATEA 5",
         "color": "#052748",
-        "precio": 6.5
+        "precio": "$6.500"
       },
       {
         "id": 6,
         "nombre": "SUPER PULLMAN 1",
         "color": "#035F89",
-        "precio": 7.5
+        "precio": "$7.500"
       },
       {
         "id": 7,
         "nombre": "SUPER PULLMAN 2",
         "color": "#A9167D",
-        "precio": 6.5
+        "precio": "$6.500"
       },
       {
         "id": 8,
         "nombre": "PULLMAN 1",
         "color": "#EE6E08",
-        "precio": 5
+        "precio": "$5.000"
       },
       {
         "id": 9,
         "nombre": "PULLMAN 2",
         "color": "#037366",
-        "precio": 4.5
+        "precio": "$4.500"
       },
       {
         "id": 10,
         "nombre": "PULLMAN 3",
         "color": "#D97B77",
-        "precio": 4.5
+        "precio": "$4.500"
       },
       {
         "id": 11,
         "nombre": "PULLMAN 4",
         "color": "#AF0657",
-        "precio": 4
+        "precio": "$4.000"
       },
       {
         "id": 12,
         "nombre": "PULLMAN 5",
         "color": "#5271FF",
-        "precio": 4
+        "precio": "$4.000"
       }
     ]
   },
@@ -440,78 +444,79 @@
       "plano": "storage/imagenes/planos/tue1.webp"
     },
     "nombre": "sergio torres",
+    "nombrePath": "sergio-torres",
     "ubicaciones": [
       {
         "id": 1,
         "nombre": "PLATEA 1",
         "color": "#970513",
-        "precio": 8
+        "precio": "$8.000"
       },
       {
         "id": 2,
         "nombre": "PLATEA 2",
         "color": "#79C8C3",
-        "precio": 7.5
+        "precio": "$7.500"
       },
       {
         "id": 3,
         "nombre": "PLATEA 3",
         "color": "#EDB63B",
-        "precio": 7
+        "precio": "$7.000"
       },
       {
         "id": 4,
         "nombre": "PLATEA 4",
         "color": "#86AA4D",
-        "precio": 6.5
+        "precio": "$6.500"
       },
       {
         "id": 5,
         "nombre": "PLATEA 5",
         "color": "#052748",
-        "precio": 6
+        "precio": "$6.000"
       },
       {
         "id": 6,
         "nombre": "SUPER PULLMAN 1",
         "color": "#035F89",
-        "precio": 6.5
+        "precio": "$6.500"
       },
       {
         "id": 7,
         "nombre": "SUPER PULLMAN 2",
         "color": "#A9167D",
-        "precio": 6
+        "precio": "$6.000"
       },
       {
         "id": 8,
         "nombre": "PULLMAN 1",
         "color": "#EE6E08",
-        "precio": 5.5
+        "precio": "$5.500"
       },
       {
         "id": 9,
         "nombre": "PULLMAN 2",
         "color": "#037366",
-        "precio": 5
+        "precio": "$5.000"
       },
       {
         "id": 10,
         "nombre": "PULLMAN 3",
         "color": "#D97B77",
-        "precio": 4.5
+        "precio": "$4.500"
       },
       {
         "id": 11,
         "nombre": "PULLMAN 4",
         "color": "#AF0657",
-        "precio": 4
+        "precio": "$4.000"
       },
       {
         "id": 12,
         "nombre": "PULLMAN 5",
         "color": "#5271FF",
-        "precio": 3.5
+        "precio": "$3.500"
       }
     ]
   },
@@ -539,78 +544,79 @@
       "plano": "storage/imagenes/planos/tue1.webp"
     },
     "nombre": "dale q’ va",
+    "nombrePath": "daleqva",
     "ubicaciones": [
       {
         "id": 1,
         "nombre": "PLATEA 1",
         "color": "#970513",
-        "precio": 8.5
+        "precio": "$8.500"
       },
       {
         "id": 2,
         "nombre": "PLATEA 2",
         "color": "#79C8C3",
-        "precio": 8.5
+        "precio": "$8.500"
       },
       {
         "id": 3,
         "nombre": "PLATEA 3",
         "color": "#EDB63B",
-        "precio": 7.5
+        "precio": "$7.500"
       },
       {
         "id": 4,
         "nombre": "PLATEA 4",
         "color": "#86AA4D",
-        "precio": 7.5
+        "precio": "$7.500"
       },
       {
         "id": 5,
         "nombre": "PLATEA 5",
         "color": "#052748",
-        "precio": 6
+        "precio": "$6.000"
       },
       {
         "id": 6,
         "nombre": "SUPER PULLMAN 1",
         "color": "#035F89",
-        "precio": 7.5
+        "precio": "$7.500"
       },
       {
         "id": 7,
         "nombre": "SUPER PULLMAN 2",
         "color": "#A9167D",
-        "precio": 7.5
+        "precio": "$7.500"
       },
       {
         "id": 8,
         "nombre": "PULLMAN 1",
         "color": "#EE6E08",
-        "precio": 5.5
+        "precio": "$5.500"
       },
       {
         "id": 9,
         "nombre": "PULLMAN 2",
         "color": "#037366",
-        "precio": 5
+        "precio": "$5.000"
       },
       {
         "id": 10,
         "nombre": "PULLMAN 3",
         "color": "#D97B77",
-        "precio": 4
+        "precio": "$4.000"
       },
       {
         "id": 11,
         "nombre": "PULLMAN 4",
         "color": "#AF0657",
-        "precio": 3
+        "precio": "$3.000"
       },
       {
         "id": 12,
         "nombre": "PULLMAN 5",
         "color": "#5271FF",
-        "precio": 3
+        "precio": "$3.000"
       }
     ]
   },
@@ -638,78 +644,79 @@
       "plano": "storage/imagenes/planos/tue1.webp"
     },
     "nombre": "turf",
+    "nombrePath": "turf",
     "ubicaciones": [
       {
         "id": 1,
         "nombre": "PLATEA 1",
         "color": "#970513",
-        "precio": 7
+        "precio": "$7.000"
       },
       {
         "id": 2,
         "nombre": "PLATEA 2",
         "color": "#79C8C3",
-        "precio": 6.5
+        "precio": "$6.500"
       },
       {
         "id": 3,
         "nombre": "PLATEA 3",
         "color": "#EDB63B",
-        "precio": 6
+        "precio": "$6.000"
       },
       {
         "id": 4,
         "nombre": "PLATEA 4",
         "color": "#86AA4D",
-        "precio": 5.5
+        "precio": "$5.500"
       },
       {
         "id": 5,
         "nombre": "PLATEA 5",
         "color": "#052748",
-        "precio": 5
+        "precio": "$5.000"
       },
       {
         "id": 6,
         "nombre": "SUPER PULLMAN 1",
         "color": "#035F89",
-        "precio": 5.5
+        "precio": "$5.500"
       },
       {
         "id": 7,
         "nombre": "SUPER PULLMAN 2",
         "color": "#A9167D",
-        "precio": 5
+        "precio": "$5.000"
       },
       {
         "id": 8,
         "nombre": "PULLMAN 1",
         "color": "#EE6E08",
-        "precio": 4.5
+        "precio": "$4.500"
       },
       {
         "id": 9,
         "nombre": "PULLMAN 2",
         "color": "#037366",
-        "precio": 4.2
+        "precio": "$4.200"
       },
       {
         "id": 10,
         "nombre": "PULLMAN 3",
         "color": "#D97B77",
-        "precio": 4
+        "precio": "$4.000"
       },
       {
         "id": 11,
         "nombre": "PULLMAN 4",
         "color": "#AF0657",
-        "precio": 3.5
+        "precio": "$3.500"
       },
       {
         "id": 12,
         "nombre": "PULLMAN 5",
         "color": "#5271FF",
-        "precio": 3
+        "precio": "$3.000"
       }
     ]
   },
@@ -737,78 +744,79 @@
       "plano": "storage/imagenes/planos/tue1.webp"
     },
     "nombre": "the beats",
+    "nombrePath": "the-beats",
     "ubicaciones": [
       {
         "id": 1,
         "nombre": "PLATEA 1",
         "color": "#970513",
-        "precio": 6.5
+        "precio": "$6.500"
       },
       {
         "id": 2,
         "nombre": "PLATEA 2",
         "color": "#79C8C3",
-        "precio": 6
+        "precio": "$6.000"
       },
       {
         "id": 3,
         "nombre": "PLATEA 3",
         "color": "#EDB63B",
-        "precio": 5.5
+        "precio": "$5.500"
       },
       {
         "id": 4,
         "nombre": "PLATEA 4",
         "color": "#86AA4D",
-        "precio": 4.5
+        "precio": "$4.500"
       },
       {
         "id": 5,
         "nombre": "PLATEA 5",
         "color": "#052748",
-        "precio": 4
+        "precio": "$4.000"
       },
       {
         "id": 6,
         "nombre": "SUPER PULLMAN 1",
         "color": "#035F89",
-        "precio": 4.5
+        "precio": "$4.500"
       },
       {
         "id": 7,
         "nombre": "SUPER PULLMAN 2",
         "color": "#A9167D",
-        "precio": 4
+        "precio": "$4.000"
       },
       {
         "id": 8,
         "nombre": "PULLMAN 1",
         "color": "#EE6E08",
-        "precio": 3.5
+        "precio": "$3.500"
       },
       {
         "id": 9,
         "nombre": "PULLMAN 2",
         "color": "#037366",
-        "precio": 3
+        "precio": "$3.000"
       },
       {
         "id": 10,
         "nombre": "PULLMAN 3",
         "color": "#D97B77",
-        "precio": 2.8
+        "precio": "$2.800"
       },
       {
         "id": 11,
         "nombre": "PULLMAN 4",
         "color": "#AF0657",
-        "precio": 2.8
+        "precio": "$2.800"
       },
       {
         "id": 12,
         "nombre": "PULLMAN 5",
         "color": "#5271FF",
-        "precio": 2.5
+        "precio": "$2.500"
       }
     ]
   },
@@ -836,78 +844,79 @@
       "plano": "storage/imagenes/planos/tue1.webp"
     },
     "nombre": "massacre",
+    "nombrePath": "massacre",
     "ubicaciones": [
       {
         "id": 1,
         "nombre": "PLATEA 1",
         "color": "#970513",
-        "precio": 10
+        "precio": "$10.000"
       },
       {
         "id": 2,
         "nombre": "PLATEA 2",
         "color": "#79C8C3",
-        "precio": 8.5
+        "precio": "$8.500"
       },
       {
         "id": 3,
         "nombre": "PLATEA 3",
         "color": "#EDB63B",
-        "precio": 8
+        "precio": "$8.000"
       },
       {
         "id": 4,
         "nombre": "PLATEA 4",
         "color": "#86AA4D",
-        "precio": 6.5
+        "precio": "$6.500"
       },
       {
         "id": 5,
         "nombre": "PLATEA 5",
         "color": "#052748",
-        "precio": 5.5
+        "precio": "$5.500"
       },
       {
         "id": 6,
         "nombre": "SUPER PULLMAN 1",
         "color": "#035F89",
-        "precio": 5
+        "precio": "$5.000"
       },
       {
         "id": 7,
         "nombre": "SUPER PULLMAN 2",
         "color": "#A9167D",
-        "precio": 5.5
+        "precio": "$5.500"
       },
       {
         "id": 8,
         "nombre": "PULLMAN 1",
         "color": "#EE6E08",
-        "precio": 5
+        "precio": "$5.000"
       },
       {
         "id": 9,
         "nombre": "PULLMAN 2",
         "color": "#037366",
-        "pprecio": 4.3
+        "precio": "$4.300"
       },
       {
         "id": 10,
         "nombre": "PULLMAN 3",
         "color": "#D97B77",
-        "precio": 4
+        "precio": "$4.000"
       },
       {
         "id": 11,
         "nombre": "PULLMAN 4",
         "color": "#AF0657",
-        "precio": 3.7
+        "precio": "$3.700"
       },
       {
         "id": 12,
         "nombre": "PULLMAN 5",
         "color": "#5271FF",
-        "precio": 3.5
+        "precio": "$3.500"
       }
     ]
   },
@@ -942,78 +951,79 @@
       "plano": "storage/imagenes/planos/tue1.webp"
     },
     "nombre": "jd pantoja kim loaiza",
+    "nombrePath": "jdpantoja-kimloaiza",
     "ubicaciones": [
       {
         "id": 1,
         "nombre": "PLATEA 1",
         "color": "#970513",
-        "precio": 9.6
+        "precio": "$9.600"
       },
       {
         "id": 2,
         "nombre": "PLATEA 2",
         "color": "#79C8C3",
-        "pprecio": 8.4
+        "precio": "$8.400"
       },
       {
         "id": 3,
         "nombre": "PLATEA 3",
         "color": "#EDB63B",
-        "precio": 8
+        "precio": "$8.000"
       },
       {
         "id": 4,
         "nombre": "PLATEA 4",
         "color": "#86AA4D",
-        "precio": 7.2
+        "precio": "$7.200"
       },
       {
         "id": 5,
         "nombre": "PLATEA 5",
         "color": "#052748",
-        "precio": 6.4
+        "precio": "$6.400"
       },
       {
         "id": 6,
         "nombre": "SUPER PULLMAN 1",
         "color": "#035F89",
-        "pprecio": 8.4
+        "precio": "$8.400"
       },
       {
         "id": 7,
         "nombre": "SUPER PULLMAN 2",
         "color": "#A9167D",
-        "precio": 7.2
+        "precio": "$7.200"
       },
       {
         "id": 8,
         "nombre": "PULLMAN 1",
         "color": "#EE6E08",
-        "precio": 6.4
+        "precio": "$6.400"
       },
       {
         "id": 9,
         "nombre": "PULLMAN 2",
         "color": "#037366",
-        "precio": 5.6
+        "precio": "$5.600"
       },
       {
         "id": 10,
         "nombre": "PULLMAN 3",
         "color": "#D97B77",
-        "precio": 4.8
+        "precio": "$4.800"
       },
       {
         "id": 11,
         "nombre": "PULLMAN 4",
         "color": "#AF0657",
-        "precio": 3.6
+        "precio": "$3.600"
       },
       {
         "id": 12,
         "nombre": "PULLMAN 5",
         "color": "#5271FF",
-        "precio": 3.2
+        "precio": "$3.200"
       }
     ]
   },
@@ -1041,78 +1051,79 @@
       "plano": "storage/imagenes/planos/tue1.webp"
     },
     "nombre": "sergio galleguillo",
+    "nombrePath": "sergio-galleguillo",
     "ubicaciones": [
       {
         "id": 1,
         "nombre": "PLATEA 1",
         "color": "#970513",
-        "precio": 7
+        "precio": "$7.000"
       },
       {
         "id": 2,
         "nombre": "PLATEA 2",
         "color": "#79C8C3",
-        "precio": 7
+        "precio": "$7.000"
       },
       {
         "id": 3,
         "nombre": "PLATEA 3",
         "color": "#EDB63B",
-        "precio": 6
+        "precio": "$6.000"
       },
       {
         "id": 4,
         "nombre": "PLATEA 4",
         "color": "#86AA4D",
-        "precio": 6
+        "precio": "$6.000"
       },
       {
         "id": 5,
         "nombre": "PLATEA 5",
         "color": "#052748",
-        "precio": 6
+        "precio": "$6.000"
       },
       {
         "id": 6,
         "nombre": "SUPER PULLMAN 1",
         "color": "#035F89",
-        "precio": 6.5
+        "precio": "$6.500"
       },
       {
         "id": 7,
         "nombre": "SUPER PULLMAN 2",
         "color": "#A9167D",
-        "precio": 6.5
+        "precio": "$6.500"
       },
       {
         "id": 8,
         "nombre": "PULLMAN 1",
         "color": "#EE6E08",
-        "precio": 5.5
+        "precio": "$5.500"
       },
       {
         "id": 9,
         "nombre": "PULLMAN 2",
         "color": "#037366",
-        "precio": 5
+        "precio": "$5.000"
       },
       {
         "id": 10,
         "nombre": "PULLMAN 3",
         "color": "#D97B77",
-        "precio": 4
+        "precio": "$4.000"
       },
       {
         "id": 11,
         "nombre": "PULLMAN 4",
         "color": "#AF0657",
-        "precio": 3
+        "precio": "$3.000"
       },
       {
         "id": 12,
         "nombre": "PULLMAN 5",
         "color": "#5271FF",
-        "precio": 3
+        "precio": "$3.000"
       }
     ]
   },
@@ -1644,66 +1655,67 @@
       "plano": "storage/imagenes/planos/tue1.webp"
     },
     "nombre": "matilda",
+    "nombrePath": "matilda",
     "ubicaciones": [
       {
         "id": 1,
         "nombre": "PLATEA 1",
         "color": "#970513",
-        "precio": 10
+        "precio": "$10.000"
       },
       {
         "id": 2,
         "nombre": "PLATEA 2",
         "color": "#79C8C3",
-        "precio": 10
+        "precio": "$10.000"
       },
       {
         "id": 3,
         "nombre": "PLATEA 3",
         "color": "#EDB63B",
-        "precio": 10
+        "precio": "$10.000"
       },
       {
         "id": 4,
         "nombre": "PLATEA 4",
         "color": "#86AA4D",
-        "precio": 9.5
+        "precio": "$9.500"
       },
       {
         "id": 5,
         "nombre": "PLATEA 5",
         "color": "#052748",
-        "precio": 8.8
+        "precio": "$8.800"
       },
       {
         "id": 6,
         "nombre": "SUPER PULLMAN 1",
         "color": "#035F89",
-        "precio": 9.5
+        "precio": "$9.500"
       },
       {
         "id": 7,
         "nombre": "SUPER PULLMAN 2",
         "color": "#A9167D",
-        "precio": 8.8
+        "precio": "$8.800"
       },
       {
         "id": 8,
         "nombre": "PULLMAN 1",
         "color": "#EE6E08",
-        "precio": 6.5
+        "precio": "$6.500"
       },
       {
         "id": 9,
         "nombre": "PULLMAN 2",
         "color": "#037366",
-        "precio": 4.5
+        "precio": "$4.500"
       },
       {
         "id": 10,
         "nombre": "PULLMAN 3",
         "color": "#D97B77",
-        "precio": 3.9
+        "precio": "$3.900"
       }
     ]
   },
@@ -1731,78 +1743,79 @@
       "plano": "storage/imagenes/planos/tue1.webp"
     },
     "nombre": "julieta venegas",
+    "nombrePath": "julieta-venegas",
     "ubicaciones": [
       {
         "id": 1,
         "nombre": "PLATEA 1",
         "color": "#970513",
-        "precio": 17
+        "precio": "$17.000"
       },
       {
         "id": 2,
         "nombre": "PLATEA 2",
         "color": "#79C8C3",
-        "precio": 15
+        "precio": "$15.000"
       },
       {
         "id": 3,
         "nombre": "PLATEA 3",
         "color": "#EDB63B",
-        "precio": 12
+        "precio": "$12.000"
       },
       {
         "id": 4,
         "nombre": "PLATEA 4",
         "color": "#86AA4D",
-        "precio": 10
+        "precio": "$10.000"
       },
       {
         "id": 5,
         "nombre": "PLATEA 5",
         "color": "#052748",
-        "precio": 8
+        "precio": "$8.000"
       },
       {
         "id": 6,
         "nombre": "SUPER PULLMAN 1",
         "color": "#035F89",
-        "precio": 8
+        "precio": "$8.000"
       },
       {
         "id": 7,
         "nombre": "SUPER PULLMAN 2",
         "color": "#A9167D",
-        "precio": 6.5
+        "precio": "$6.500"
       },
       {
         "id": 8,
         "nombre": "PULLMAN 1",
         "color": "#EE6E08",
-        "precio": 6.5
+        "precio": "$6.500"
       },
       {
         "id": 9,
         "nombre": "PULLMAN 2",
         "color": "#037366",
-        "precio": 6
+        "precio": "$6.000"
       },
       {
         "id": 10,
         "nombre": "PULLMAN 3",
         "color": "#D97B77",
-        "precio": 5.5
+        "precio": "$5.500"
       },
       {
         "id": 11,
         "nombre": "PULLMAN 4",
         "color": "#AF0657",
-        "precio": 5
+        "precio": "$5.000"
       },
       {
         "id": 12,
         "nombre": "PULLMAN 5",
         "color": "#5271FF",
-        "precio": 4.5
+        "precio": "$4.500"
       }
     ]
   },
@@ -1830,78 +1843,79 @@
       "plano": "storage/imagenes/planos/tue1.webp"
     },
     "nombre": "bxs - bryndis x siempre",
+    "nombrePath": "bxs",
     "ubicaciones": [
       {
         "id": 1,
         "nombre": "PLATEA 1",
         "color": "#970513",
-        "precio": 14
+        "precio": "$14.000"
       },
       {
         "id": 2,
         "nombre": "PLATEA 2",
         "color": "#79C8C3",
-        "precio": 12.5
+        "precio": "$12.500"
       },
       {
         "id": 3,
         "nombre": "PLATEA 3",
         "color": "#EDB63B",
-        "precio": 11.5
+        "precio": "$11.500"
       },
       {
         "id": 4,
         "nombre": "PLATEA 4",
         "color": "#86AA4D",
-        "precio": 10
+        "precio": "$10.000"
       },
       {
         "id": 5,
         "nombre": "PLATEA 5",
         "color": "#052748",
-        "precio": 9.5
+        "precio": "$9.500"
       },
       {
         "id": 6,
         "nombre": "SUPER PULLMAN 1",
         "color": "#035F89",
-        "precio": 10
+        "precio": "$10.000"
       },
       {
         "id": 7,
         "nombre": "SUPER PULLMAN 2",
         "color": "#A9167D",
-        "precio": 9
+        "precio": "$9.000"
       },
       {
         "id": 8,
         "nombre": "PULLMAN 1",
         "color": "#EE6E08",
-        "precio": 8
+        "precio": "$8.000"
       },
       {
         "id": 9,
         "nombre": "PULLMAN 2",
         "color": "#037366",
-        "precio": 7
+        "precio": "$7.000"
       },
       {
         "id": 10,
         "nombre": "PULLMAN 3",
         "color": "#D97B77",
-        "precio": 6.5
+        "precio": "$6.500"
       },
       {
         "id": 11,
         "nombre": "PULLMAN 4",
         "color": "#AF0657",
-        "precio": 5
+        "precio": "$5.000"
       },
       {
         "id": 12,
         "nombre": "PULLMAN 5",
         "color": "#5271FF",
-        "precio": 5
+        "precio": "$5.000"
       }
     ]
   },
@@ -1929,78 +1943,79 @@
       "plano": "storage/imagenes/planos/tue1.webp"
     },
     "nombre": "daniel agostini",
+    "nombrePath": "daniel-agostini",
     "ubicaciones": [
       {
         "id": 1,
         "nombre": "PLATEA 1",
         "color": "#970513",
-        "precio": 18
+        "precio": "$18.000"
       },
       {
         "id": 2,
         "nombre": "PLATEA 2",
         "color": "#79C8C3",
-        "precio": 16
+        "precio": "$16.000"
       },
       {
         "id": 3,
         "nombre": "PLATEA 3",
         "color": "#EDB63B",
-        "precio": 14
+        "precio": "$14.000"
       },
       {
         "id": 4,
         "nombre": "PLATEA 4",
         "color": "#86AA4D",
-        "precio": 12
+        "precio": "$12.000"
       },
       {
         "id": 5,
         "nombre": "PLATEA 5",
         "color": "#052748",
-        "precio": 11
+        "precio": "$11.000"
       },
       {
         "id": 6,
         "nombre": "SUPER PULLMAN 1",
         "color": "#035F89",
-        "precio": 12
+        "precio": "$12.000"
       },
       {
         "id": 7,
         "nombre": "SUPER PULLMAN 2",
         "color": "#A9167D",
-        "precio": 10
+        "precio": "$10.000"
       },
       {
         "id": 8,
         "nombre": "PULLMAN 1",
         "color": "#EE6E08",
-        "precio": 9
+        "precio": "$9.000"
       },
       {
         "id": 9,
         "nombre": "PULLMAN 2",
         "color": "#037366",
-        "precio": 8
+        "precio": "$8.000"
       },
       {
         "id": 10,
         "nombre": "PULLMAN 3",
         "color": "#D97B77",
-        "precio": 7
+        "precio": "$7.000"
       },
       {
         "id": 11,
         "nombre": "PULLMAN 4",
         "color": "#AF0657",
-        "precio": 6
+        "precio": "$6.000"
       },
       {
         "id": 12,
         "nombre": "PULLMAN 5",
         "color": "#5271FF",
-        "precio": 5.5
+        "precio": "$5.500"
       }
     ]
   },
@@ -2028,78 +2043,79 @@
       "plano": "storage/imagenes/planos/tue1.webp"
     },
     "nombre": "chili fernandez",
+    "nombrePath": "chili-fernandez",
     "ubicaciones": [
       {
         "id": 1,
         "nombre": "PLATEA 1",
         "color": "#970513",
-        "precio": 9.5
+        "precio": "9.500"
       },
       {
         "id": 2,
         "nombre": "PLATEA 2",
         "color": "#79C8C3",
-        "precio": 9
+        "precio": "$9.000"
       },
       {
         "id": 3,
         "nombre": "PLATEA 3",
         "color": "#EDB63B",
-        "precio": 8.5
+        "precio": "$8.500"
       },
       {
         "id": 4,
         "nombre": "PLATEA 4",
         "color": "#86AA4D",
-        "precio": 8
+        "precio": "$8.000"
       },
       {
         "id": 5,
         "nombre": "PLATEA 5",
         "color": "#052748",
-        "precio": 7
+        "precio": "$7.000"
       },
       {
         "id": 6,
         "nombre": "SUPER PULLMAN 1",
         "color": "#035F89",
-        "precio": 7
+        "precio": "$7.000"
       },
       {
         "id": 7,
         "nombre": "SUPER PULLMAN 2",
         "color": "#A9167D",
-        "precio": 6
+        "precio": "$6.000"
       },
       {
         "id": 8,
         "nombre": "PULLMAN 1",
         "color": "#EE6E08",
-        "precio": 5
+        "precio": "$5.000"
       },
       {
         "id": 9,
         "nombre": "PULLMAN 2",
         "color": "#037366",
-        "precio": 4
+        "precio": "$4.000"
       },
       {
         "id": 10,
         "nombre": "PULLMAN 3",
         "color": "#D97B77",
-        "precio": 3.5
+        "precio": "$3.500"
       },
       {
         "id": 11,
         "nombre": "PULLMAN 4",
         "color": "#AF0657",
-        "precio": 3
+        "precio": "$3.000"
       },
       {
         "id": 12,
         "nombre": "PULLMAN 5",
         "color": "#5271FF",
-        "precio": 3
+        "precio": "$3.000"
       }
     ]
   },
@@ -2127,78 +2143,79 @@
       "plano": "storage/imagenes/planos/tue1.webp"
     },
     "nombre": "perotá chingó",
+    "nombrePath": "perota-chingo",
     "ubicaciones": [
       {
         "id": 1,
         "nombre": "PLATEA 1",
         "color": "#970513",
-        "precio": 8.5
+        "precio": "$8.500"
       },
       {
         "id": 2,
         "nombre": "PLATEA 2",
         "color": "#79C8C3",
-        "precio": 8
+        "precio": "$8.000"
       },
       {
         "id": 3,
         "nombre": "PLATEA 3",
         "color": "#EDB63B",
-        "precio": 7.5
+        "precio": "$7.500"
       },
       {
         "id": 4,
         "nombre": "PLATEA 4",
         "color": "#86AA4D",
-        "precio": 7
+        "precio": "$7.000"
       },
       {
         "id": 5,
         "nombre": "PLATEA 5",
         "color": "#052748",
-        "precio": 6
+        "precio": "$6.000"
       },
       {
         "id": 6,
         "nombre": "SUPER PULLMAN 1",
         "color": "#035F89",
-        "precio": 7
+        "precio": "$7.000"
       },
       {
         "id": 7,
         "nombre": "SUPER PULLMAN 2",
         "color": "#A9167D",
-        "precio": 6
+        "precio": "$6.000"
       },
       {
         "id": 8,
         "nombre": "PULLMAN 1",
         "color": "#EE6E08",
-        "precio": 5
+        "precio": "$5.000"
       },
       {
         "id": 9,
         "nombre": "PULLMAN 2",
         "color": "#037366",
-        "precio": 4.5
+        "precio": "$4.500"
       },
       {
         "id": 10,
         "nombre": "PULLMAN 3",
         "color": "#D97B77",
-        "precio": 3.5
+        "precio": "$3.500"
       },
       {
         "id": 11,
         "nombre": "PULLMAN 4",
         "color": "#AF0657",
-        "precio": 3
+        "precio": "$3.000"
       },
       {
         "id": 12,
         "nombre": "PULLMAN 5",
         "color": "#5271FF",
-        "precio": 3
+        "precio": "$3.000"
       }
     ]
   }
