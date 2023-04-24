@@ -1,5 +1,5 @@
 import { createContext, useState } from "react";
-import { useFetch } from "../helpers";
+import { getEnvVariables, useFetch } from "../helpers";
 
 export const EventosContext = createContext();
 
