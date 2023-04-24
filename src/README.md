@@ -1,4 +1,4 @@
-# Web del Teatro Gran Rex
+# Teatro Gran Rex
 
 
 ## Development pasos
