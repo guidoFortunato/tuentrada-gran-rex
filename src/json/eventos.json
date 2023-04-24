@@ -35,7 +35,7 @@
     "links": {
       "href": "https://www.ticketek.com.ar/queen-por-master-stroke/teatro-gran-rex",
       "nombreBoton": "Comprar",
-      "path": "/shows/master-stroke/2"
+      "path": "/master-stroke"
     },
     "imagenes": {
       "evento": "https://www.tuentrada.com/teatro/gran-rex/imagenes/queen.webp",
@@ -152,7 +152,7 @@
     "links": {
       "href": "https://www.ticketek.com.ar/damian-cordoba/teatro-gran-rex",
       "nombreBoton": "Comprar",
-      "path": "/shows/damian-cordoba/3"
+      "path": "/damian-cordoba"
     },
     "imagenes": {
       "evento": "https://www.tuentrada.com/teatro/gran-rex/imagenes/damian_cordoba.webp",
@@ -276,7 +276,7 @@
     "links": {
       "href": "https://www.ticketek.com.ar/international-festival-ballet-peace/teatro-gran-rex",
       "nombreBoton": "Comprar",
-      "path": "/shows/festival-ballet/4"
+      "path": "/festival-ballet"
     },
     "imagenes": {
       "evento": "https://www.tuentrada.com/teatro/gran-rex/imagenes/festival_ballet.webp",
@@ -393,7 +393,7 @@
     "links": {
       "href": "https://www.ticketek.com.ar/sergio-torres/teatro-gran-rex",
       "nombreBoton": "Comprar",
-      "path": "/shows/sergio-torres/5"
+      "path": "/sergio-torres"
     },
     "imagenes": {
       "evento": "https://www.tuentrada.com/teatro/gran-rex/imagenes/sergio_torres.webp",
@@ -511,7 +511,7 @@
     "links": {
       "href": "https://www.ticketek.com.ar/dale-qva/teatro-gran-rex",
       "nombreBoton": "Comprar",
-      "path": "/shows/daleqva/6"
+      "path": "/daleqva"
     },
     "imagenes": {
       "evento": "https://www.tuentrada.com/teatro/gran-rex/imagenes/dale_qva.webp",
@@ -620,7 +620,7 @@
     "links": {
       "href": "https://www.ticketek.com.ar/turf/teatro-gran-rex",
       "nombreBoton": "Comprar",
-      "path": "/shows/turf/7"
+      "path": "/turf"
     },
     "imagenes": {
       "evento": "https://www.tuentrada.com/teatro/gran-rex/imagenes/turf.webp",
@@ -729,7 +729,7 @@
     "links": {
       "href": "https://www.ticketek.com.ar/beats/teatro-gran-rex",
       "nombreBoton": "Comprar",
-      "path": "/shows/the-beats/8"
+      "path": "/the-beats"
     },
     "imagenes": {
       "evento": "https://www.tuentrada.com/teatro/gran-rex/imagenes/the_beats.webp",
@@ -845,7 +845,7 @@
     "links": {
       "href": "https://www.ticketek.com.ar/massacre/teatro-gran-rex",
       "nombreBoton": "Comprar",
-      "path": "/shows/massacre/9"
+      "path": "/massacre"
     },
     "imagenes": {
       "evento": "https://www.tuentrada.com/teatro/gran-rex/imagenes/massacre.webp",
@@ -961,7 +961,7 @@
     "links": {
       "href": "https://www.ticketek.com.ar/jd-pantoja-kim-loaiza/teatro-gran-rex",
       "nombreBoton": "Comprar",
-      "path": "/shows/jdpantoja-kimloaiza/10"
+      "path": "/jdpantoja-kimloaiza"
     },
     "imagenes": {
       "evento": "https://www.tuentrada.com/teatro/gran-rex/imagenes/jdpantoja_kimloaiza.webp",
@@ -1080,7 +1080,7 @@
     "links": {
       "href": "https://www.ticketek.com.ar/sergio-galleguillo/teatro-gran-rex",
       "nombreBoton": "Comprar",
-      "path": "/shows/sergio-galleguillo/11"
+      "path": "/sergio-galleguillo"
     },
     "imagenes": {
       "evento": "https://www.tuentrada.com/teatro/gran-rex/imagenes/sergio_galleguillo.webp",
@@ -1701,7 +1701,7 @@
     "links": {
       "href": "https://www.ticketek.com.ar/matilda/teatro-gran-rex",
       "nombreBoton": "Comprar",
-      "path": "/shows/matilda/12"
+      "path": "/matilda"
     },
     "imagenes": {
       "evento": "https://www.tuentrada.com/teatro/gran-rex/imagenes/matilda.webp",
@@ -1805,7 +1805,7 @@
     "links": {
       "href": "https://www.tuentrada.com/eventos/detalle/Julieta-Venegas/204421909437",
       "nombreBoton": "Comprar",
-      "path": "/shows/julieta-venegas/13"
+      "path": "/julieta-venegas"
     },
     "imagenes": {
       "evento": "https://www.tuentrada.com/teatro/gran-rex/imagenes/julieta-venegas.webp",
@@ -1924,7 +1924,7 @@
     "links": {
       "href": "https://www.ticketek.com.ar/bryndis/teatro-gran-rex",
       "nombreBoton": "Comprar",
-      "path": "/shows/bxs/14"
+      "path": "/bxs"
     },
     "imagenes": {
       "evento": "https://www.tuentrada.com/teatro/gran-rex/imagenes/bxs.webp",
@@ -2033,7 +2033,7 @@
     "links": {
       "href": "https://www.tuentrada.com/eventos/detalle/Daniel-Agostini/553776971040",
       "nombreBoton": "Comprar",
-      "path": "/shows/daniel-agostini/15"
+      "path": "/daniel-agostini"
     },
     "imagenes": {
       "evento": "https://www.tuentrada.com/teatro/gran-rex/imagenes/daniel_agostini.webp",
@@ -2151,7 +2151,7 @@
     "links": {
       "href": "https://www.tuentrada.com/eventos/detalle/Chili-Fernandez/495716168868",
       "nombreBoton": "Comprar",
-      "path": "/shows/chili-fernandez/16"
+      "path": "/chili-fernandez"
     },
     "imagenes": {
       "evento": "https://www.tuentrada.com/teatro/gran-rex/imagenes/chili-fernandez.webp",
@@ -2267,7 +2267,7 @@
     "links": {
       "href": "https://www.tuentrada.com/eventos/detalle/Perota-Chingo/114421632871",
       "nombreBoton": "Comprar",
-      "path": "/shows/perota-chingo/17"
+      "path": "/perota-chingo"
     },
     "imagenes": {
       "evento": "https://www.tuentrada.com/teatro/gran-rex/imagenes/perota-chingo.webp",

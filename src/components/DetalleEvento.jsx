@@ -11,14 +11,11 @@ import "../css/detalleevento.css";
 
 export const DetalleEvento = () => {
   const { eventosTotales, isLoading } = useContext(EventosContext);
-  const [evento, setEvento] = useState(null);
-  const [modalIsOpen, setModalIsOpen] = useState(false);
+  const [ evento, setEvento ] = useState(null);
+  const [ modalIsOpen, setModalIsOpen ] = useState(false);
   const modalRef = useRef(null);
   const navigate = useNavigate();
   const { name, id } = useParams();
-
-  // console.log({eventosTotales})
-  // console.log({ evento });
 
   useEffect(() => {
     if (eventosTotales?.length > 0) {

@@ -7,8 +7,12 @@ import { CardEvento, FormBusqueda, Spinner } from "../components/";
 import "../css/header.css";
 import "../css/footer.css";
 
+
 export const Home = () => {
-  const { eventosTotales, isLoading } = useContext(EventosContext);
+  const { eventosTotales, isLoading, dataNavbar } = useContext(EventosContext);
+  // const titulo1 = dataNavbar[0].items[0].titulo1?.toUpperCase()
+  // const titulo2 = dataNavbar[0].items[0].titulo2?.toUpperCase()
+
   useEffect(() => {
     setTimeout(() => {
       window.scrollTo(0, 0);
@@ -25,7 +29,7 @@ export const Home = () => {
         <div className="header-home">
           <h1 className="titulo-principal animate__animated animate__fadeInDown animate__fast	 ">
             {" "}
-            <strong>Gran Rex</strong>
+            <strong>Gran rex</strong>
           </h1>
           <FormBusqueda />
         </div>

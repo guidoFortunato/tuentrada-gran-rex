@@ -1,13 +1,13 @@
 [
   {
-    "logo": "storage/imagenes/logo_rex_negro.jpg",
+    "logo": "https://tuentrada.com/teatro/gran-rex/imagenes/logo_rex_negro.jpg",
     "items": [
       {
         "id": 1,
         "name": "Home",
         "link": "/",
         "mostrar": true,
-        "titulo1": "Gran Rex",
+        "titulo1": "Gran Rexa",
         "titulo2": "Próximos eventos"
       },
       {

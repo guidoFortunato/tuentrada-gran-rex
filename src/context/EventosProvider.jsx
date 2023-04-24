@@ -4,11 +4,13 @@ import { getEnvVariables, useFetch } from "../helpers";
 export const EventosContext = createContext();
 
 const eventosBusqueda = [];
+const urlTestEventos = "/src/json/eventosTest.json";
+const urlTestNavbar = "/src/json/navbarTest.json";
 
 const EventosProvider = (props) => {
   const [evento, setEvento] = useState("");
   const [listaEventosBusqueda, setListaEventosBusqueda] = useState(eventosBusqueda);
-  const urlTest = "/src/json/eventosTest.json";
+  
   //  const { VITE_JSON_EVENTOS } = getEnvVariables()
 
   const handleEvento = (nombreEvento) => {
@@ -19,7 +21,9 @@ const EventosProvider = (props) => {
     setEvento(nombreEvento);
   };
 
-  const { data, isLoading, hasError } = useFetch(urlTest);
+  const { data, isLoading, hasError } = useFetch(urlTestEventos);
+  const { data: dataNavbar } = useFetch(urlTestNavbar);
+  
 
   const agregarEvento = (nombreEvento) => {
     const resultadosExactos = data.eventos.filter((item) =>
@@ -33,13 +37,14 @@ const EventosProvider = (props) => {
   return (
     <EventosContext.Provider
       value={{
-        listaEventosBusqueda,
         agregarEvento,
+        dataNavbar,
         evento,
-        handleEvento,
         eventosTotales: data,
-        isLoading,
+        handleEvento,
         hasError,
+        isLoading,
+        listaEventosBusqueda,
       }}
     >
       {props.children}
