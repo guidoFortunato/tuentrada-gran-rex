@@ -1,46 +1,77 @@
-[ 
+[
   {
-    "id": 1,
-    "name": "Home",
-    "link": "/",
-    "mostrar": true
-  },
-  {
-    "id": 2,
-    "name": "Calendario",
-    "link": "/calendario",
-    "mostrar": true
-  },
-  {
-    "id": 3,
-    "name": "Historia",
-    "link": "/historia",
-    "mostrar": true
-  },
-  {
-    "id": 5,
-    "name": "Cómo llegar",
-    "link": "/como-llegar",
-    "mostrar": true
-  },
-  {
-    "id": 6,
-    "name": "Preguntas frecuentes",
-    "link": "/preguntas-frecuentes",
-    "mostrar": false
+    "logo": "storage/imagenes/logo_rex_negro.jpg",
+    "items": [
+      {
+        "id": 1,
+        "name": "Home",
+        "link": "/",
+        "mostrar": true,
+        "titulo": "Gran Rex",
+        "tituloSecundario": "Próximos eventos"
+      },
+      {
+        "id": 2,
+        "name": "Calendario",
+        "link": "/calendario",
+        "mostrar": true,
+        "titulo": "Temporada",
+        "tituloSecundario": ""
+      },
+      {
+        "id": 3,
+        "name": "Historia",
+        "link": "/historia",
+        "mostrar": true,
+        "titulo": "Historia: Un teatro con trayectoria",
+        "tituloSecundario": "Galería"
+      },
+      {
+        "id": 5,
+        "name": "Cómo llegar",
+        "link": "/como-llegar",
+        "mostrar": true,
+        "titulo": "Cómo llegar",
+        "tituloSecundario": ""
+      },
+      {
+        "id": 6,
+        "name": "Preguntas frecuentes",
+        "link": "/preguntas-frecuentes",
+        "mostrar": false,
+        "titulo": "Preguntas frecuentes",
+        "tituloSecundario": ""
+      },
+      {
+        "id": 7,
+        "name": "Términos y condiciones",
+        "link": "/terminos-condiciones",
+        "mostrar": false,
+        "titulo": "Términos y condiciones",
+        "tituloSecundario": ""
+      }
+    ],
+    "labelRedes": "Seguinos en nuestras redes",
+    "itemsRedes": [
+      {
+        "id": 1,
+        "icon": "",
+        "href": "",
+        "alt": ""
+      },
+      {
+        "id": 2,
+        "icon": "",
+        "href": "",
+        "alt": ""
+      },
+      {
+        "id": 3,
+        "icon": "",
+        "href": "",
+        "alt": ""
+      }
+    ]
   }
 ]
 
-// logo 
-// "logo": "storage/imagenes/logo_rex_negro.jpg,"
-
-//redes 
-//iconos editables 
-//contenido de iconos editable 
-
-
-
-//titulo h1 
-
-// Para segunda versión
-//editar color del navbar y todos los componentes (todos los li)

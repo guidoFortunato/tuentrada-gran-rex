@@ -1,5 +1,4 @@
 [
-  
   {
     "id": 2,
     "descripcion": "<strong>Master Stroke</strong>, integrado por Ema Caradoso en voz, Brian Morua en guitarra, Manuel Olveira en bajo, Agustín Albertini en batería y Alberto Ludueña en teclados, es la banda tributo a Queen destacada por el mismo Brian May en sus redes sociales y la que Ángel Mahler sumó a sus espectáculos de Rapsodia Bohemia Sinfónico en 2020. <br /> <br />    El Teatro Gran Rex informa que los eventos que se realizan en esta sala podrían ser fotografiados o filmados para su posterior difusión en medios y /o campañas publicitarias. <br /><br />    <strong>  Fechas:  </strong>    <ul>      <li> Viernes 28 de abril 20:30hs </li>     </ul>   ",
@@ -15,9 +14,21 @@
         "estadoCalendario": "disponible"
       }
     ],
-    "keywords": ["master","stroke", "estroke", "stroque", "stroqe", "queen", "quen", "tributo", "abril"],
+    "informacionGeneral": "<p style={{ color: 'black' }}>El ingreso al establecimiento implica la autorización a la Productora y a Cordero, Cavallo y Lautaret S.A. a utilizar el     contenido filmado y /o fotografiado y el uso de imagen personal     sin compensación alguna. <br />    <br />    <strong> Entradas en venta </strong> <br />    En las boleterias del Teatro Gran Rex (Av. Corrientes 857 - Lunes a Sábado de 12 a 18 hs. Feriados Cerrado.) <br /> <br />    <strong>Personas con movilidad reducida</strong> <br />    Las sillas de ruedas se ubican en el espacio habilitado para las    mismas detrás de la fila 25 del sector derecho de la Platea. En    todos los casos abonan la entrada. Dichas localidades deben ser    adquiridas solo en la boleteria del Teatro, presentando certificado de discapacidad. Al momento de la compra, abonan el    ticket de menor valor disponible.</p>",
+    "keywords": [
+      "master",
+      "stroke",
+      "estroke",
+      "stroque",
+      "stroqe",
+      "queen",
+      "quen",
+      "tributo",
+      "abril"
+    ],
     "links": {
       "href": "https://www.ticketek.com.ar/queen-por-master-stroke/teatro-gran-rex",
+      "nombreBoton": "Comprar",
       "path": "/shows/master-stroke/2"
     },
     "imagenes": {
@@ -116,9 +127,19 @@
         "estadoCalendario": "disponible"
       }
     ],
-    "keywords": ["damian", "damián", "cordoba", "cordova", "córdoba", "córdova", "abril"],
+    "informacionGeneral": "<p style={{ color: 'black' }}>El ingreso al establecimiento implica la autorización a la Productora y a Cordero, Cavallo y Lautaret S.A. a utilizar el     contenido filmado y /o fotografiado y el uso de imagen personal     sin compensación alguna. <br />    <br />    <strong> Entradas en venta </strong> <br />    En las boleterias del Teatro Gran Rex (Av. Corrientes 857 - Lunes a Sábado de 12 a 18 hs. Feriados Cerrado.) <br /> <br />    <strong>Personas con movilidad reducida</strong> <br />    Las sillas de ruedas se ubican en el espacio habilitado para las    mismas detrás de la fila 25 del sector derecho de la Platea. En    todos los casos abonan la entrada. Dichas localidades deben ser    adquiridas solo en la boleteria del Teatro, presentando certificado de discapacidad. Al momento de la compra, abonan el    ticket de menor valor disponible.</p>",
+    "keywords": [
+      "damian",
+      "damián",
+      "cordoba",
+      "cordova",
+      "córdoba",
+      "córdova",
+      "abril"
+    ],
     "links": {
       "href": "https://www.ticketek.com.ar/damian-cordoba/teatro-gran-rex",
+      "nombreBoton": "Comprar",
       "path": "/shows/damian-cordoba/3"
     },
     "imagenes": {
@@ -224,9 +245,19 @@
         "estadoCalendario": "cancelado"
       }
     ],
-    "keywords": ["festival", "ballet", "festibal", "balet", "valet", "vallet", "International"],
+    "informacionGeneral": "<p style={{ color: 'black' }}>El ingreso al establecimiento implica la autorización a la Productora y a Cordero, Cavallo y Lautaret S.A. a utilizar el     contenido filmado y /o fotografiado y el uso de imagen personal     sin compensación alguna. <br />    <br />    <strong> Entradas en venta </strong> <br />    En las boleterias del Teatro Gran Rex (Av. Corrientes 857 - Lunes a Sábado de 12 a 18 hs. Feriados Cerrado.) <br /> <br />    <strong>Personas con movilidad reducida</strong> <br />    Las sillas de ruedas se ubican en el espacio habilitado para las    mismas detrás de la fila 25 del sector derecho de la Platea. En    todos los casos abonan la entrada. Dichas localidades deben ser    adquiridas solo en la boleteria del Teatro, presentando certificado de discapacidad. Al momento de la compra, abonan el    ticket de menor valor disponible.</p>",
+    "keywords": [
+      "festival",
+      "ballet",
+      "festibal",
+      "balet",
+      "valet",
+      "vallet",
+      "International"
+    ],
     "links": {
       "href": "https://www.ticketek.com.ar/international-festival-ballet-peace/teatro-gran-rex",
+      "nombreBoton": "Comprar",
       "path": "/shows/festival-ballet/4"
     },
     "imagenes": {
@@ -325,9 +356,19 @@
         "estadoCalendario": "reprogramado"
       }
     ],
-    "keywords": ["sergio", "torres", "cergio", "serjio", "cerjio", "tores", "mayo"],
+    "informacionGeneral": "<p style={{ color: 'black' }}>El ingreso al establecimiento implica la autorización a la Productora y a Cordero, Cavallo y Lautaret S.A. a utilizar el     contenido filmado y /o fotografiado y el uso de imagen personal     sin compensación alguna. <br />    <br />    <strong> Entradas en venta </strong> <br />    En las boleterias del Teatro Gran Rex (Av. Corrientes 857 - Lunes a Sábado de 12 a 18 hs. Feriados Cerrado.) <br /> <br />    <strong>Personas con movilidad reducida</strong> <br />    Las sillas de ruedas se ubican en el espacio habilitado para las    mismas detrás de la fila 25 del sector derecho de la Platea. En    todos los casos abonan la entrada. Dichas localidades deben ser    adquiridas solo en la boleteria del Teatro, presentando certificado de discapacidad. Al momento de la compra, abonan el    ticket de menor valor disponible.</p>",
+    "keywords": [
+      "sergio",
+      "torres",
+      "cergio",
+      "serjio",
+      "cerjio",
+      "tores",
+      "mayo"
+    ],
     "links": {
       "href": "https://www.ticketek.com.ar/sergio-torres/teatro-gran-rex",
+      "nombreBoton": "Comprar",
       "path": "/shows/sergio-torres/5"
     },
     "imagenes": {
@@ -426,9 +467,20 @@
         "estadoCalendario": "disponible"
       }
     ],
-    "keywords": ["dale", "q", "va", "daleqva", "q'", "mayo", "Neno Aguirre", "David Ortiz"],
+    "informacionGeneral": "<p style={{ color: 'black' }}>El ingreso al establecimiento implica la autorización a la Productora y a Cordero, Cavallo y Lautaret S.A. a utilizar el     contenido filmado y /o fotografiado y el uso de imagen personal     sin compensación alguna. <br />    <br />    <strong> Entradas en venta </strong> <br />    En las boleterias del Teatro Gran Rex (Av. Corrientes 857 - Lunes a Sábado de 12 a 18 hs. Feriados Cerrado.) <br /> <br />    <strong>Personas con movilidad reducida</strong> <br />    Las sillas de ruedas se ubican en el espacio habilitado para las    mismas detrás de la fila 25 del sector derecho de la Platea. En    todos los casos abonan la entrada. Dichas localidades deben ser    adquiridas solo en la boleteria del Teatro, presentando certificado de discapacidad. Al momento de la compra, abonan el    ticket de menor valor disponible.</p>",
+    "keywords": [
+      "dale",
+      "q",
+      "va",
+      "daleqva",
+      "q'",
+      "mayo",
+      "Neno Aguirre",
+      "David Ortiz"
+    ],
     "links": {
       "href": "https://www.ticketek.com.ar/dale-qva/teatro-gran-rex",
+      "nombreBoton": "Comprar",
       "path": "/shows/daleqva/6"
     },
     "imagenes": {
@@ -527,9 +579,11 @@
         "estadoCalendario": "disponible"
       }
     ],
+    "informacionGeneral": "<p style={{ color: 'black' }}>El ingreso al establecimiento implica la autorización a la Productora y a Cordero, Cavallo y Lautaret S.A. a utilizar el     contenido filmado y /o fotografiado y el uso de imagen personal     sin compensación alguna. <br />    <br />    <strong> Entradas en venta </strong> <br />    En las boleterias del Teatro Gran Rex (Av. Corrientes 857 - Lunes a Sábado de 12 a 18 hs. Feriados Cerrado.) <br /> <br />    <strong>Personas con movilidad reducida</strong> <br />    Las sillas de ruedas se ubican en el espacio habilitado para las    mismas detrás de la fila 25 del sector derecho de la Platea. En    todos los casos abonan la entrada. Dichas localidades deben ser    adquiridas solo en la boleteria del Teatro, presentando certificado de discapacidad. Al momento de la compra, abonan el    ticket de menor valor disponible.</p>",
     "keywords": ["turf", "truf", "mayo"],
     "links": {
       "href": "https://www.ticketek.com.ar/turf/teatro-gran-rex",
+      "nombreBoton": "Comprar",
       "path": "/shows/turf/7"
     },
     "imagenes": {
@@ -628,9 +682,11 @@
         "estadoCalendario": "disponible"
       }
     ],
+    "informacionGeneral": "<p style={{ color: 'black' }}>El ingreso al establecimiento implica la autorización a la Productora y a Cordero, Cavallo y Lautaret S.A. a utilizar el     contenido filmado y /o fotografiado y el uso de imagen personal     sin compensación alguna. <br />    <br />    <strong> Entradas en venta </strong> <br />    En las boleterias del Teatro Gran Rex (Av. Corrientes 857 - Lunes a Sábado de 12 a 18 hs. Feriados Cerrado.) <br /> <br />    <strong>Personas con movilidad reducida</strong> <br />    Las sillas de ruedas se ubican en el espacio habilitado para las    mismas detrás de la fila 25 del sector derecho de la Platea. En    todos los casos abonan la entrada. Dichas localidades deben ser    adquiridas solo en la boleteria del Teatro, presentando certificado de discapacidad. Al momento de la compra, abonan el    ticket de menor valor disponible.</p>",
     "keywords": ["the", "beats", "veats", "bits", "vits", "mayo", "tributo"],
     "links": {
       "href": "https://www.ticketek.com.ar/beats/teatro-gran-rex",
+      "nombreBoton": "Comprar",
       "path": "/shows/the-beats/8"
     },
     "imagenes": {
@@ -729,9 +785,18 @@
         "estadoCalendario": "disponible"
       }
     ],
-    "keywords": ["massacre", "masacre", "masakre", "massakre", "riesgo", "mayo"],
+    "informacionGeneral": "<p style={{ color: 'black' }}>El ingreso al establecimiento implica la autorización a la Productora y a Cordero, Cavallo y Lautaret S.A. a utilizar el     contenido filmado y /o fotografiado y el uso de imagen personal     sin compensación alguna. <br />    <br />    <strong> Entradas en venta </strong> <br />    En las boleterias del Teatro Gran Rex (Av. Corrientes 857 - Lunes a Sábado de 12 a 18 hs. Feriados Cerrado.) <br /> <br />    <strong>Personas con movilidad reducida</strong> <br />    Las sillas de ruedas se ubican en el espacio habilitado para las    mismas detrás de la fila 25 del sector derecho de la Platea. En    todos los casos abonan la entrada. Dichas localidades deben ser    adquiridas solo en la boleteria del Teatro, presentando certificado de discapacidad. Al momento de la compra, abonan el    ticket de menor valor disponible.</p>",
+    "keywords": [
+      "massacre",
+      "masacre",
+      "masakre",
+      "massakre",
+      "riesgo",
+      "mayo"
+    ],
     "links": {
       "href": "https://www.ticketek.com.ar/massacre/teatro-gran-rex",
+      "nombreBoton": "Comprar",
       "path": "/shows/massacre/9"
     },
     "imagenes": {
@@ -837,9 +902,11 @@
         "estadoCalendario": "agotado"
       }
     ],
+    "informacionGeneral": "<p style={{ color: 'black' }}>El ingreso al establecimiento implica la autorización a la Productora y a Cordero, Cavallo y Lautaret S.A. a utilizar el     contenido filmado y /o fotografiado y el uso de imagen personal     sin compensación alguna. <br />    <br />    <strong> Entradas en venta </strong> <br />    En las boleterias del Teatro Gran Rex (Av. Corrientes 857 - Lunes a Sábado de 12 a 18 hs. Feriados Cerrado.) <br /> <br />    <strong>Personas con movilidad reducida</strong> <br />    Las sillas de ruedas se ubican en el espacio habilitado para las    mismas detrás de la fila 25 del sector derecho de la Platea. En    todos los casos abonan la entrada. Dichas localidades deben ser    adquiridas solo en la boleteria del Teatro, presentando certificado de discapacidad. Al momento de la compra, abonan el    ticket de menor valor disponible.</p>",
     "keywords": ["Loaiza", "Kim", "Pantoja", "jd", "mayo"],
     "links": {
       "href": "https://www.ticketek.com.ar/jd-pantoja-kim-loaiza/teatro-gran-rex",
+      "nombreBoton": "Comprar",
       "path": "/shows/jdpantoja-kimloaiza/10"
     },
     "imagenes": {
@@ -938,9 +1005,21 @@
         "estadoCalendario": "disponible"
       }
     ],
-    "keywords": ["sergio", "galleguillo", "cergio", "galeguilo", "gayeguillo", "galleguiyo", "gayeguiyo", "mayo", "la fiesta de la rioja"],
+    "informacionGeneral": "<p style={{ color: 'black' }}>El ingreso al establecimiento implica la autorización a la Productora y a Cordero, Cavallo y Lautaret S.A. a utilizar el     contenido filmado y /o fotografiado y el uso de imagen personal     sin compensación alguna. <br />    <br />    <strong> Entradas en venta </strong> <br />    En las boleterias del Teatro Gran Rex (Av. Corrientes 857 - Lunes a Sábado de 12 a 18 hs. Feriados Cerrado.) <br /> <br />    <strong>Personas con movilidad reducida</strong> <br />    Las sillas de ruedas se ubican en el espacio habilitado para las    mismas detrás de la fila 25 del sector derecho de la Platea. En    todos los casos abonan la entrada. Dichas localidades deben ser    adquiridas solo en la boleteria del Teatro, presentando certificado de discapacidad. Al momento de la compra, abonan el    ticket de menor valor disponible.</p>",
+    "keywords": [
+      "sergio",
+      "galleguillo",
+      "cergio",
+      "galeguilo",
+      "gayeguillo",
+      "galleguiyo",
+      "gayeguiyo",
+      "mayo",
+      "la fiesta de la rioja"
+    ],
     "links": {
       "href": "https://www.ticketek.com.ar/sergio-galleguillo/teatro-gran-rex",
+      "nombreBoton": "Comprar",
       "path": "/shows/sergio-galleguillo/11"
     },
     "imagenes": {
@@ -1543,9 +1622,19 @@
         "estadoCalendario": "disponible"
       }
     ],
-    "keywords": ["matilda", "junio", "julio", "laurita fernandez", "jose maria listorti", "agustin soy rada aristaran", "fernanda metilli"],
+    "informacionGeneral": "<p style={{ color: 'black' }}>El ingreso al establecimiento implica la autorización a la Productora y a Cordero, Cavallo y Lautaret S.A. a utilizar el     contenido filmado y /o fotografiado y el uso de imagen personal     sin compensación alguna. <br />    <br />    <strong> Entradas en venta </strong> <br />    En las boleterias del Teatro Gran Rex (Av. Corrientes 857 - Lunes a Sábado de 12 a 18 hs. Feriados Cerrado.) <br /> <br />    <strong>Personas con movilidad reducida</strong> <br />    Las sillas de ruedas se ubican en el espacio habilitado para las    mismas detrás de la fila 25 del sector derecho de la Platea. En    todos los casos abonan la entrada. Dichas localidades deben ser    adquiridas solo en la boleteria del Teatro, presentando certificado de discapacidad. Al momento de la compra, abonan el    ticket de menor valor disponible.</p>",
+    "keywords": [
+      "matilda",
+      "junio",
+      "julio",
+      "laurita fernandez",
+      "jose maria listorti",
+      "agustin soy rada aristaran",
+      "fernanda metilli"
+    ],
     "links": {
       "href": "https://www.ticketek.com.ar/matilda/teatro-gran-rex",
+      "nombreBoton": "Comprar",
       "path": "/shows/matilda/12"
     },
     "imagenes": {
@@ -1632,9 +1721,18 @@
         "estadoCalendario": "próximamente"
       }
     ],
-    "keywords": ["julieta", "venegas", "benegas", "venegaz", "benegaz", "agosto"],
+    "informacionGeneral": "<p style={{ color: 'black' }}>El ingreso al establecimiento implica la autorización a la Productora y a Cordero, Cavallo y Lautaret S.A. a utilizar el     contenido filmado y /o fotografiado y el uso de imagen personal     sin compensación alguna. <br />    <br />    <strong> Entradas en venta </strong> <br />    En las boleterias del Teatro Gran Rex (Av. Corrientes 857 - Lunes a Sábado de 12 a 18 hs. Feriados Cerrado.) <br /> <br />    <strong>Personas con movilidad reducida</strong> <br />    Las sillas de ruedas se ubican en el espacio habilitado para las    mismas detrás de la fila 25 del sector derecho de la Platea. En    todos los casos abonan la entrada. Dichas localidades deben ser    adquiridas solo en la boleteria del Teatro, presentando certificado de discapacidad. Al momento de la compra, abonan el    ticket de menor valor disponible.</p>",
+    "keywords": [
+      "julieta",
+      "venegas",
+      "benegas",
+      "venegaz",
+      "benegaz",
+      "agosto"
+    ],
     "links": {
       "href": "https://www.tuentrada.com/eventos/detalle/Julieta-Venegas/204421909437",
+      "nombreBoton": "Comprar",
       "path": "/shows/julieta-venegas/13"
     },
     "imagenes": {
@@ -1733,9 +1831,21 @@
         "estadoCalendario": "disponible"
       }
     ],
-    "keywords": ["bxs", "bryndis", "brindis", "agosto", "x siempre", "brindis por siempre", "brindis por siempre", "bryndis x siempre", "bryndis por siempre"],
+    "informacionGeneral": "<p style={{ color: 'black' }}>El ingreso al establecimiento implica la autorización a la Productora y a Cordero, Cavallo y Lautaret S.A. a utilizar el     contenido filmado y /o fotografiado y el uso de imagen personal     sin compensación alguna. <br />    <br />    <strong> Entradas en venta </strong> <br />    En las boleterias del Teatro Gran Rex (Av. Corrientes 857 - Lunes a Sábado de 12 a 18 hs. Feriados Cerrado.) <br /> <br />    <strong>Personas con movilidad reducida</strong> <br />    Las sillas de ruedas se ubican en el espacio habilitado para las    mismas detrás de la fila 25 del sector derecho de la Platea. En    todos los casos abonan la entrada. Dichas localidades deben ser    adquiridas solo en la boleteria del Teatro, presentando certificado de discapacidad. Al momento de la compra, abonan el    ticket de menor valor disponible.</p>",
+    "keywords": [
+      "bxs",
+      "bryndis",
+      "brindis",
+      "agosto",
+      "x siempre",
+      "brindis por siempre",
+      "brindis por siempre",
+      "bryndis x siempre",
+      "bryndis por siempre"
+    ],
     "links": {
       "href": "https://www.ticketek.com.ar/bryndis/teatro-gran-rex",
+      "nombreBoton": "Comprar",
       "path": "/shows/bxs/14"
     },
     "imagenes": {
@@ -1834,9 +1944,11 @@
         "estadoCalendario": "disponible"
       }
     ],
+    "informacionGeneral": "<p style={{ color: 'black' }}>El ingreso al establecimiento implica la autorización a la Productora y a Cordero, Cavallo y Lautaret S.A. a utilizar el     contenido filmado y /o fotografiado y el uso de imagen personal     sin compensación alguna. <br />    <br />    <strong> Entradas en venta </strong> <br />    En las boleterias del Teatro Gran Rex (Av. Corrientes 857 - Lunes a Sábado de 12 a 18 hs. Feriados Cerrado.) <br /> <br />    <strong>Personas con movilidad reducida</strong> <br />    Las sillas de ruedas se ubican en el espacio habilitado para las    mismas detrás de la fila 25 del sector derecho de la Platea. En    todos los casos abonan la entrada. Dichas localidades deben ser    adquiridas solo en la boleteria del Teatro, presentando certificado de discapacidad. Al momento de la compra, abonan el    ticket de menor valor disponible.</p>",
     "keywords": ["daniel", "agostini", "septiembre", "setiembre"],
     "links": {
       "href": "https://www.tuentrada.com/eventos/detalle/Daniel-Agostini/553776971040",
+      "nombreBoton": "Comprar",
       "path": "/shows/daniel-agostini/15"
     },
     "imagenes": {
@@ -1935,9 +2047,20 @@
         "estadoCalendario": "disponible"
       }
     ],
-    "keywords": ["chili", "fernandez", "fernandes", "septiembre", "setiembre", "noche magica", "noche mágica","fernández"],
+    "informacionGeneral": "<p style={{ color: 'black' }}>El ingreso al establecimiento implica la autorización a la Productora y a Cordero, Cavallo y Lautaret S.A. a utilizar el     contenido filmado y /o fotografiado y el uso de imagen personal     sin compensación alguna. <br />    <br />    <strong> Entradas en venta </strong> <br />    En las boleterias del Teatro Gran Rex (Av. Corrientes 857 - Lunes a Sábado de 12 a 18 hs. Feriados Cerrado.) <br /> <br />    <strong>Personas con movilidad reducida</strong> <br />    Las sillas de ruedas se ubican en el espacio habilitado para las    mismas detrás de la fila 25 del sector derecho de la Platea. En    todos los casos abonan la entrada. Dichas localidades deben ser    adquiridas solo en la boleteria del Teatro, presentando certificado de discapacidad. Al momento de la compra, abonan el    ticket de menor valor disponible.</p>",
+    "keywords": [
+      "chili",
+      "fernandez",
+      "fernandes",
+      "septiembre",
+      "setiembre",
+      "noche magica",
+      "noche mágica",
+      "fernández"
+    ],
     "links": {
       "href": "https://www.tuentrada.com/eventos/detalle/Chili-Fernandez/495716168868",
+      "nombreBoton": "Comprar",
       "path": "/shows/chili-fernandez/16"
     },
     "imagenes": {
@@ -2036,9 +2159,18 @@
         "estadoCalendario": "disponible"
       }
     ],
-    "keywords": ["perotá", "chingó", "perota", "chingo", "noviembre", "11 años tour"],
+    "informacionGeneral": "<p style={{ color: 'black' }}>El ingreso al establecimiento implica la autorización a la Productora y a Cordero, Cavallo y Lautaret S.A. a utilizar el     contenido filmado y /o fotografiado y el uso de imagen personal     sin compensación alguna. <br />    <br />    <strong> Entradas en venta </strong> <br />    En las boleterias del Teatro Gran Rex (Av. Corrientes 857 - Lunes a Sábado de 12 a 18 hs. Feriados Cerrado.) <br /> <br />    <strong>Personas con movilidad reducida</strong> <br />    Las sillas de ruedas se ubican en el espacio habilitado para las    mismas detrás de la fila 25 del sector derecho de la Platea. En    todos los casos abonan la entrada. Dichas localidades deben ser    adquiridas solo en la boleteria del Teatro, presentando certificado de discapacidad. Al momento de la compra, abonan el    ticket de menor valor disponible.</p>",
+    "keywords": [
+      "perotá",
+      "chingó",
+      "perota",
+      "chingo",
+      "noviembre",
+      "11 años tour"
+    ],
     "links": {
       "href": "https://www.tuentrada.com/eventos/detalle/Perota-Chingo/114421632871",
+      "nombreBoton": "Comprar",
       "path": "/shows/perota-chingo/17"
     },
     "imagenes": {

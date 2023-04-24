@@ -7,10 +7,9 @@ const eventosBusqueda = [];
 
 const EventosProvider = (props) => {
   const [evento, setEvento] = useState("");
-  const [listaEventosBusqueda, setListaEventosBusqueda] =
-    useState(eventosBusqueda);
-  // const urlTest = "/src/json/eventosTest.json";
-   const { VITE_JSON_EVENTOS } = getEnvVariables()
+  const [listaEventosBusqueda, setListaEventosBusqueda] = useState(eventosBusqueda);
+  const urlTest = "/src/json/eventosTest.json";
+  //  const { VITE_JSON_EVENTOS } = getEnvVariables()
 
   const handleEvento = (nombreEvento) => {
     if (!nombreEvento.trim()) {
@@ -20,10 +19,10 @@ const EventosProvider = (props) => {
     setEvento(nombreEvento);
   };
 
-  const { data, isLoading, hasError } = useFetch(VITE_JSON_EVENTOS);
+  const { data, isLoading, hasError } = useFetch(urlTest);
 
   const agregarEvento = (nombreEvento) => {
-    const resultadosExactos = data?.filter((item) =>
+    const resultadosExactos = data.eventos.filter((item) =>
       item.keywords.some((keyword) =>
         keyword.toLowerCase().includes(nombreEvento.toLowerCase())
       )

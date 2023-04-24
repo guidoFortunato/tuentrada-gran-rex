@@ -26,7 +26,7 @@ export const Home = () => {
         <div className="header-home">
           <h1 className="titulo-principal animate__animated animate__fadeInDown animate__fast	 ">
             {" "}
-            <strong> Gran Rex</strong>
+            <strong>Gran Rex</strong>
           </h1>
           <FormBusqueda />
         </div>

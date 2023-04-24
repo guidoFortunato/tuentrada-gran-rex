@@ -1,3 +1,9 @@
-//información general 
-//descripción "tiene que estar en todas"
-//descripción por evento "debería estar vacía solo para casos especificos"
+[
+  {
+    "titulos": {
+      "titulo": "información general",
+      "tituloSecundario": "Ubicaciones y precios"
+    },
+   
+  }
+]
