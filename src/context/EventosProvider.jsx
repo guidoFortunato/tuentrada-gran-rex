@@ -2265,9 +2265,6 @@ const EventosProvider = (props) => {
   const urlTest = "/src/json/eventosTest.json"
   // const { VITE_JSON_EVENTOS } = getEnvVariables()
 
-
- const { data, isLoading, hasError } = useFetch(urlTest)
-
   const handleEvento = (nombreEvento) => {
     if (!nombreEvento.trim()) {
       setEvento("");
@@ -2276,21 +2273,24 @@ const EventosProvider = (props) => {
     setEvento(nombreEvento);
   };
 
+ const { data, isLoading, hasError } = useFetch(urlTest)
+
+
   const agregarEvento = (nombreEvento) => {
 
     // Busca eventos que coincidan exactamente con la consulta
-    const resultadosExactos = data?.filter((item) => item.nombre.toLowerCase().includes(nombreEvento.toLowerCase()));
-
+    const resultadosExactos = data?.filter((item) => item.keywords.some(keyword => keyword.toLowerCase().includes(nombreEvento.toLowerCase())));
+    setListaEventosBusqueda(resultadosExactos);
     // Si no hay resultados exactos, buscar sugerencias
-    if (resultadosExactos?.length) {
-      const fuse = new Fuse(data, opciones);
-      const sugerencias = fuse
-        .search(nombreEvento)
-        .map((resultado) => resultado.item);
-      setListaEventosBusqueda(sugerencias);
-    } else {
-      setListaEventosBusqueda(resultadosExactos);
-    }
+    // if (resultadosExactos?.length) {
+    //   const fuse = new Fuse(data, opciones);
+    //   const sugerencias = fuse
+    //     .search(nombreEvento)
+    //     .map((resultado) => resultado.item);
+    //   setListaEventosBusqueda(sugerencias);
+    // } else {
+    //   setListaEventosBusqueda(resultadosExactos);
+    // }
   };
   return (
     <EventosContext.Provider
@@ -2299,7 +2299,7 @@ const EventosProvider = (props) => {
         agregarEvento,
         evento,
         handleEvento,
-        eventosTotales : data,
+        eventosTotales: data,
         isLoading,
         hasError
       }}

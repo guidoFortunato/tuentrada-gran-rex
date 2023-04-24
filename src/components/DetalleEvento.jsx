@@ -22,7 +22,7 @@ export const DetalleEvento = () => {
 
   useEffect(() => {
     if (eventosTotales?.length > 0) {
-      const data = eventosTotales.find((item) => item.id == id && item.nombrePath == name);
+      const data = eventosTotales.find((item) => (item.id == id) && (item.nombrePath == name) && (item.disabled === false));
       if (data) {
         setEvento(data);
       } else {
@@ -82,7 +82,7 @@ export const DetalleEvento = () => {
                 __html: DOMPurify.sanitize(evento?.descripcion),
               }}
             ></p>
-
+            
             <div className="d-flex justify-content-center flex-column align-items-center mt-4 ">
               <a
                 href={evento?.links.href}

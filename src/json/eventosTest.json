@@ -1,119 +1,5 @@
 [
-  {
-    "id": 1,
-    "descripcion": "<strong> Todo listo para la fiesta MIRANDA! </strong> <br /> La banda pop más icónica de la escena hispanoamericana, Miranda! cierra el año anunciando su nuevo álbum HOTEL MIRANDA! y las fechas de presentación para el 21 de abril en el imponente Teatro Gran Rex. Con más de 20 años de trayectoria, a la banda liderada por Ale Sergi y Juliana Gattas le sobran los motivos para celebrar y lo harán al mejor estilo Miranda! <br /> <br />     El Teatro Gran Rex informa que los eventos que se realizan en esta sala podrían ser fotografiados o filmados para su posterior difusión en medios y /o campañas publicitarias. <br /><br />    <strong>  Fechas:  </strong>     <ul>        <li> Viernes 21 de abril 20:30hs </li>       <li> Sábado 22 de abril 20:30hs </li>       <li> Domingo 23 de abril 20:00hs </li>    </ul> ",
-    "disabled": false,
-    "display": "block",
-    "estado": "agotado",
-    "fechas": [
-      {
-        "dia": "viernes 21 de abril",
-        "hora": "20:30HS",
-        "start": "2023-04-21T20:30:00",
-        "end": "",
-        "estadoCalendario": "agotado"
-      },
-      {
-        "dia": "sábado 22 de abril",
-        "hora": "20:30HS",
-        "start": "2023-04-22T20:30:00",
-        "end": "",
-        "estadoCalendario": "agotado"
-      },
-      {
-        "dia": "domingo 23 de abril",
-        "hora": "20:00HS",
-        "start": "2023-04-23T20:00:00",
-        "end": "",
-        "estadoCalendario": "agotado"
-      }
-    ],
-    "keywords": ["miranda", "miranda!", "hotel"],
-    "links": {
-      "href": "https://www.ticketek.com.ar/miranda/teatro-gran-rex",
-      "path": "/shows/miranda/1"
-    },
-    "imagenes": {
-      "evento": "https://www.tuentrada.com/teatro/gran-rex/imagenes/miranda.webp",
-      "plano": "https://www.tuentrada.com/teatro/gran-rex/imagenes/planos/tue1.webp"
-    },
-    "nombre": "miranda!",
-    "nombrePath": "miranda",
-    "ubicaciones": [
-      {
-        "id": 1,
-        "nombre": "PLATEA 1",
-        "color": "#970513",
-        "precio": "$11.500"
-      },
-      {
-        "id": 2,
-        "nombre": "PLATEA 2",
-        "color": "#79C8C3",
-        "precio": "$10.500"
-      },
-      {
-        "id": 3,
-        "nombre": "PLATEA 3",
-        "color": "#EDB63B",
-        "precio": "$9.500"
-      },
-      {
-        "id": 4,
-        "nombre": "PLATEA 4",
-        "color": "#86AA4D",
-        "precio": "$8.500"
-      },
-      {
-        "id": 5,
-        "nombre": "PLATEA 5",
-        "color": "#052748",
-        "precio": "$7.500"
-      },
-      {
-        "id": 6,
-        "nombre": "SUPER PULLMAN 1",
-        "color": "#035F89",
-        "precio": "$8.500"
-      },
-      {
-        "id": 7,
-        "nombre": "SUPER PULLMAN 2",
-        "color": "#A9167D",
-        "precio": "$7.500"
-      },
-      {
-        "id": 8,
-        "nombre": "PULLMAN 1",
-        "color": "#EE6E08",
-        "precio": "$6.500"
-      },
-      {
-        "id": 9,
-        "nombre": "PULLMAN 2",
-        "color": "#037366",
-        "precio": "$6.000"
-      },
-      {
-        "id": 10,
-        "nombre": "PULLMAN 3",
-        "color": "#D97B77",
-        "precio": "$5.500"
-      },
-      {
-        "id": 11,
-        "nombre": "PULLMAN 4",
-        "color": "#AF0657",
-        "precio": "$5.000"
-      },
-      {
-        "id": 12,
-        "nombre": "PULLMAN 5",
-        "color": "#5271FF",
-        "precio": "$4.500"
-      }
-    ]
-  },
+  
   {
     "id": 2,
     "descripcion": "<strong>Master Stroke</strong>, integrado por Ema Caradoso en voz, Brian Morua en guitarra, Manuel Olveira en bajo, Agustín Albertini en batería y Alberto Ludueña en teclados, es la banda tributo a Queen destacada por el mismo Brian May en sus redes sociales y la que Ángel Mahler sumó a sus espectáculos de Rapsodia Bohemia Sinfónico en 2020. <br /> <br />    El Teatro Gran Rex informa que los eventos que se realizan en esta sala podrían ser fotografiados o filmados para su posterior difusión en medios y /o campañas publicitarias. <br /><br />    <strong>  Fechas:  </strong>    <ul>      <li> Viernes 28 de abril 20:30hs </li>     </ul>   ",
@@ -129,7 +15,7 @@
         "estadoCalendario": "disponible"
       }
     ],
-    "keywords": ["master", "stroke", "estroke", "stroque", "stroqe", "queen", "quen"],
+    "keywords": ["master","stroke", "estroke", "stroque", "stroqe", "queen", "quen", "tributo", "abril"],
     "links": {
       "href": "https://www.ticketek.com.ar/queen-por-master-stroke/teatro-gran-rex",
       "path": "/shows/master-stroke/2"
@@ -230,7 +116,7 @@
         "estadoCalendario": "disponible"
       }
     ],
-    "keywords": ["damian", "damián", "cordoba", "cordova", "córdoba", "córdova"],
+    "keywords": ["damian", "damián", "cordoba", "cordova", "córdoba", "córdova", "abril"],
     "links": {
       "href": "https://www.ticketek.com.ar/damian-cordoba/teatro-gran-rex",
       "path": "/shows/damian-cordoba/3"
@@ -439,7 +325,7 @@
         "estadoCalendario": "reprogramado"
       }
     ],
-    "keywords": ["sergio", "torres", "cergio", "serjio", "cerjio", "tores"],
+    "keywords": ["sergio", "torres", "cergio", "serjio", "cerjio", "tores", "mayo"],
     "links": {
       "href": "https://www.ticketek.com.ar/sergio-torres/teatro-gran-rex",
       "path": "/shows/sergio-torres/5"
@@ -540,7 +426,7 @@
         "estadoCalendario": "disponible"
       }
     ],
-    "keywords": ["dale", "q", "va", "daleqva", "q'"],
+    "keywords": ["dale", "q", "va", "daleqva", "q'", "mayo", "Neno Aguirre", "David Ortiz"],
     "links": {
       "href": "https://www.ticketek.com.ar/dale-qva/teatro-gran-rex",
       "path": "/shows/daleqva/6"
@@ -641,7 +527,7 @@
         "estadoCalendario": "disponible"
       }
     ],
-    "keywords": ["turf", "truf", "tur"],
+    "keywords": ["turf", "truf", "mayo"],
     "links": {
       "href": "https://www.ticketek.com.ar/turf/teatro-gran-rex",
       "path": "/shows/turf/7"
@@ -742,7 +628,7 @@
         "estadoCalendario": "disponible"
       }
     ],
-    "keywords": ["the", "beats", "veats", "bits", "vits"],
+    "keywords": ["the", "beats", "veats", "bits", "vits", "mayo", "tributo"],
     "links": {
       "href": "https://www.ticketek.com.ar/beats/teatro-gran-rex",
       "path": "/shows/the-beats/8"
@@ -843,7 +729,7 @@
         "estadoCalendario": "disponible"
       }
     ],
-    "keywords": ["massacre", "masacre"],
+    "keywords": ["massacre", "masacre", "masakre", "massakre", "riesgo", "mayo"],
     "links": {
       "href": "https://www.ticketek.com.ar/massacre/teatro-gran-rex",
       "path": "/shows/massacre/9"
@@ -951,7 +837,7 @@
         "estadoCalendario": "agotado"
       }
     ],
-    "keywords": ["Loaiza", "Kim", "Pantoja", "jd"],
+    "keywords": ["Loaiza", "Kim", "Pantoja", "jd", "mayo"],
     "links": {
       "href": "https://www.ticketek.com.ar/jd-pantoja-kim-loaiza/teatro-gran-rex",
       "path": "/shows/jdpantoja-kimloaiza/10"
@@ -1052,7 +938,7 @@
         "estadoCalendario": "disponible"
       }
     ],
-    "keywords": ["sergio", "galleguillo", "cergio", "galeguilo"],
+    "keywords": ["sergio", "galleguillo", "cergio", "galeguilo", "gayeguillo", "galleguiyo", "gayeguiyo", "mayo", "la fiesta de la rioja"],
     "links": {
       "href": "https://www.ticketek.com.ar/sergio-galleguillo/teatro-gran-rex",
       "path": "/shows/sergio-galleguillo/11"
@@ -1657,7 +1543,7 @@
         "estadoCalendario": "disponible"
       }
     ],
-    "keywords": ["matilda"],
+    "keywords": ["matilda", "junio", "julio", "laurita fernandez", "jose maria listorti", "agustin soy rada aristaran", "fernanda metilli"],
     "links": {
       "href": "https://www.ticketek.com.ar/matilda/teatro-gran-rex",
       "path": "/shows/matilda/12"
@@ -1746,9 +1632,9 @@
         "estadoCalendario": "próximamente"
       }
     ],
-    "keywords": ["julieta", "venegas", "benegas"],
+    "keywords": ["julieta", "venegas", "benegas", "venegaz", "benegaz", "agosto"],
     "links": {
-      "href": "https://www.tuentrada.com/eventos/detalle/Julieta-Venegas/2044219094378",
+      "href": "https://www.tuentrada.com/eventos/detalle/Julieta-Venegas/204421909437",
       "path": "/shows/julieta-venegas/13"
     },
     "imagenes": {
@@ -1847,7 +1733,7 @@
         "estadoCalendario": "disponible"
       }
     ],
-    "keywords": ["bxs", "bryndis", "brindis"],
+    "keywords": ["bxs", "bryndis", "brindis", "agosto", "x siempre", "brindis por siempre", "brindis por siempre", "bryndis x siempre", "bryndis por siempre"],
     "links": {
       "href": "https://www.ticketek.com.ar/bryndis/teatro-gran-rex",
       "path": "/shows/bxs/14"
@@ -1948,7 +1834,7 @@
         "estadoCalendario": "disponible"
       }
     ],
-    "keywords": ["daniel", "agostini", "agostin", "agos", "dan"],
+    "keywords": ["daniel", "agostini", "septiembre", "setiembre"],
     "links": {
       "href": "https://www.tuentrada.com/eventos/detalle/Daniel-Agostini/553776971040",
       "path": "/shows/daniel-agostini/15"
@@ -2036,7 +1922,7 @@
   },
   {
     "id": 16,
-    "descripcion": "Chili Fernandez se presentará el día Sábado 16 de Septiembre en el Teatro Gran Rex.  <br /> <br />    El Teatro Gran Rex informa que los eventos que se realizan en esta sala podrían ser fotografiados o filmados para su posterior difusión en medios y /o campañas publicitarias. <br /><br />    <strong>  Fechas:  </strong>    <ul>     <li> ábado 16 de septiembre 20:30hs </li>    </ul>    ",
+    "descripcion": "Chili Fernandez se presentará el día Sábado 16 de Septiembre en el Teatro Gran Rex.  <br /> <br />    El Teatro Gran Rex informa que los eventos que se realizan en esta sala podrían ser fotografiados o filmados para su posterior difusión en medios y /o campañas publicitarias. <br /><br />    <strong>  Fechas:  </strong>    <ul>     <li> Sábado 16 de septiembre 20:30hs </li>    </ul>    ",
     "disabled": false,
     "display": "block",
     "estado": "disponible",
@@ -2049,7 +1935,7 @@
         "estadoCalendario": "disponible"
       }
     ],
-    "keywords": ["chili", "fernandez", "fernandes", "chil", "ferna"],
+    "keywords": ["chili", "fernandez", "fernandes", "septiembre", "setiembre", "noche magica", "noche mágica","fernández"],
     "links": {
       "href": "https://www.tuentrada.com/eventos/detalle/Chili-Fernandez/495716168868",
       "path": "/shows/chili-fernandez/16"
@@ -2150,7 +2036,7 @@
         "estadoCalendario": "disponible"
       }
     ],
-    "keywords": ["perotá", "chingó", "perota", "chingo"],
+    "keywords": ["perotá", "chingó", "perota", "chingo", "noviembre", "11 años tour"],
     "links": {
       "href": "https://www.tuentrada.com/eventos/detalle/Perota-Chingo/114421632871",
       "path": "/shows/perota-chingo/17"
@@ -2159,7 +2045,7 @@
       "evento": "https://www.tuentrada.com/teatro/gran-rex/imagenes/perota-chingo.webp",
       "plano": "https://www.tuentrada.com/teatro/gran-rex/imagenes/planos/tue1.webp"
     },
-    "nombre": "perota chingo",
+    "nombre": "perotá chingó",
     "nombrePath": "perota-chingo",
     "ubicaciones": [
       {
