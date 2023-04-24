@@ -19,7 +19,6 @@
     "@tippyjs/react": "^4.2.6",
     "animate.css": "^4.1.1",
     "dompurify": "^3.0.1",
-    "fuse.js": "^6.6.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-modal": "^3.16.1",
