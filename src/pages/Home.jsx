@@ -16,9 +16,8 @@ export const Home = () => {
   }, []);
 
   if (isLoading) {
-    return <Spinner/>
+    return <Spinner />;
   }
-
 
   return (
     <>
@@ -44,23 +43,26 @@ export const Home = () => {
             </div>
           </div>
 
-          {/*   <div className="row justify-content-center">
-           <SliderDestacado /> 
-           </div>
-           <div className="img-slider">
-            <div className="img-opacity" >
-          <h3>SOY UN COMUNICADO</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam aspernatur illo praesentium, dolore eos nostrum voluptatibus id obcaecati cum ad impedit velit eligendi voluptatem quisquam nam voluptate pariatur, enim deleniti.</p>
+          {/* <div className="row justify-content-center">
+            <SliderDestacado />
           </div>
-          </div>
-         */}
+          <div className="img-slider">
+            <div className="img-opacity">
+              <h3>SOY UN COMUNICADO</h3>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam
+                aspernatur illo praesentium, dolore eos nostrum voluptatibus id
+                obcaecati cum ad impedit velit eligendi voluptatem quisquam nam
+                voluptate pariatur, enim deleniti.
+              </p>
+            </div>
+          </div> */}
 
           <div className="row sin-padding-right-left animate__animated animate__fadeIn  animate__delay-1s ">
             {eventosTotales?.map((evento) => (
-
               <CardEvento
                 linkEvento={evento.links.path}
-                img={ evento.imagenes.evento }
+                img={evento.imagenes.evento}
                 status={evento.estado}
                 title={evento.nombre}
                 key={evento.id}

@@ -12,7 +12,7 @@ export const AppRouter = () => {
       <Route path="/como-llegar" element={<ComoLlegar />} />
       <Route path="/historia" element={<Historia />} />
       <Route path="/preguntas-frecuentes" element={<PreguntasFrecuentes />} />
-      <Route path="/shows/:name/:id" element={<DetalleEvento />} />
+      <Route path="/:name" element={<DetalleEvento />} />
       <Route path="/ubicaciones" element={<Ubicaciones />} />
       <Route path="/*" element={<Navigate to="/" />} />
     </Routes>

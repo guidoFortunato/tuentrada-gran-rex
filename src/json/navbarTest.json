@@ -7,48 +7,48 @@
         "name": "Home",
         "link": "/",
         "mostrar": true,
-        "titulo": "Gran Rex",
-        "tituloSecundario": "Próximos eventos"
+        "titulo1": "Gran Rex",
+        "titulo2": "Próximos eventos"
       },
       {
         "id": 2,
         "name": "Calendario",
         "link": "/calendario",
         "mostrar": true,
-        "titulo": "Temporada",
-        "tituloSecundario": ""
+        "titulo1": "Temporada",
+        "titulo2": ""
       },
       {
         "id": 3,
         "name": "Historia",
         "link": "/historia",
         "mostrar": true,
-        "titulo": "Historia: Un teatro con trayectoria",
-        "tituloSecundario": "Galería"
+        "titulo1": "Historia: Un teatro con trayectoria",
+        "titulo2": "Galería"
       },
       {
         "id": 5,
         "name": "Cómo llegar",
         "link": "/como-llegar",
         "mostrar": true,
-        "titulo": "Cómo llegar",
-        "tituloSecundario": ""
+        "titulo1": "Cómo llegar",
+        "titulo2": ""
       },
       {
         "id": 6,
         "name": "Preguntas frecuentes",
         "link": "/preguntas-frecuentes",
         "mostrar": false,
-        "titulo": "Preguntas frecuentes",
-        "tituloSecundario": ""
+        "titulo1": "Preguntas frecuentes",
+        "titulo2": ""
       },
       {
         "id": 7,
         "name": "Términos y condiciones",
         "link": "/terminos-condiciones",
         "mostrar": false,
-        "titulo": "Términos y condiciones",
-        "tituloSecundario": ""
+        "titulo1": "Términos y condiciones",
+        "titulo2": ""
       }
     ],
     "labelRedes": "Seguinos en nuestras redes",
