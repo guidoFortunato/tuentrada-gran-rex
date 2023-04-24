@@ -1,4 +1,4 @@
-[
+[ 
   {
     "id": 1,
     "name": "Home",
@@ -30,3 +30,17 @@
     "mostrar": false
   }
 ]
+
+// logo 
+// "logo": "storage/imagenes/logo_rex_negro.jpg,"
+
+//redes 
+//iconos editables 
+//contenido de iconos editable 
+
+
+
+//titulo h1 
+
+// Para segunda versión
+//editar color del navbar y todos los componentes (todos los li)
