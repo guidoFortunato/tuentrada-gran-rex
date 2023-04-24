@@ -1,6 +1,6 @@
 import { useContext, useEffect } from "react";
 import { EventosContext } from "../context/EventosProvider";
-import { CardEvento, FormBusqueda } from "../components/";
+import { CardEvento, FormBusqueda, Spinner } from "../components/";
 
 // import { SliderDestacado } from "../components/";
 
@@ -16,7 +16,7 @@ export const Home = () => {
   }, []);
 
   if (isLoading) {
-    return <p>cargando...</p>
+    return <Spinner/>
   }
 
 

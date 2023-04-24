@@ -3,7 +3,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import Modal from "react-modal";
 
 import { EventosContext } from "../context/EventosProvider";
-import { TablaPrecios } from "./";
+import { Spinner, TablaPrecios } from "./";
 
 import DOMPurify from "dompurify";
 
@@ -50,17 +50,17 @@ export const DetalleEvento = () => {
   };
 
   if (isLoading) {
-    return <p>cargando...</p>;
+    return <Spinner/>;
   }
   if (evento === null) {
-    return <p>cargando...</p>;
+    return <Spinner/>;
   }
 
   return (
     <>
       <div
         className={
-          "container my-5 px-5 animate__animated animate__fadeIn animate__fast"
+          "container my-5 px-5 animate_animated animatefadeIn animate_fast"
         }
         // ref={eventDetailRef}
       >
@@ -77,7 +77,7 @@ export const DetalleEvento = () => {
 
           <div className="col-12 col-lg-6 detalle-del-evento">
             <p
-              className="animate__animated animate__fadeIn"
+              className="animate_animated animate_fadeIn"
               dangerouslySetInnerHTML={{
                 __html: DOMPurify.sanitize(evento?.descripcion),
               }}
@@ -199,6 +199,6 @@ export const DetalleEvento = () => {
           </div>
         </div>
       </div>
-    </>
-  );
+    </>
+  );
 };
