@@ -24,7 +24,7 @@ export const TablaPrecios = ({ ubicaciones }) => {
               <span>{item.nombre}</span>
             </td>
             <td className="fw-bold">
-              $<span>{item.precio}</span>
+              <span>{item.precio}</span>
             </td>
           </tr>
         ))}

@@ -14,6 +14,7 @@ import 'tippy.js/animations/scale.css';
 import "../css/calendario.css";
 import { useContext } from "react";
 import { EventosContext } from "../context/EventosProvider";
+import { Spinner } from "../components";
 
 const month = [
   "Enero",
@@ -65,13 +66,13 @@ const eventTimeFormat = {
 };
 
 export const Calendario = () => {
-  const { eventosTotales } = useContext(EventosContext)
+  const { eventosTotales, isLoading } = useContext(EventosContext)
   const navigate = useNavigate();
   const { pathname } = useLocation();
   localStorage.setItem("lastPath", pathname);
   const newEvents = []
 
-  for (let i = 0; i < eventosTotales.length; i++) {
+  for (let i = 0; i < eventosTotales?.length; i++) {
     for (let j = 0; j < eventosTotales[i].fechas.length; j++) {
       newEvents.push({id: eventosTotales[i].id, start: eventosTotales[i].fechas[j].start, title: eventosTotales[i].nombre.toUpperCase(), url: eventosTotales[i].links.path, display: eventosTotales[i].display, status: eventosTotales[i].fechas[j].estadoCalendario})      
     }    
@@ -149,6 +150,10 @@ export const Calendario = () => {
         });
         return tooltip        
       }
+  }
+
+  if (isLoading) {
+    return <Spinner/>;
   }
 
   return (

@@ -1,117 +1,5 @@
 [
-  {
-    "id": 1,
-    "descripcion": "<strong> Todo listo para la fiesta MIRANDA! </strong> <br /> La banda pop más icónica de la escena hispanoamericana, Miranda! cierra el año anunciando su nuevo álbum HOTEL MIRANDA! y las fechas de presentación para el 21 de abril en el imponente Teatro Gran Rex. Con más de 20 años de trayectoria, a la banda liderada por Ale Sergi y Juliana Gattas le sobran los motivos para celebrar y lo harán al mejor estilo Miranda! <br /> <br />     El Teatro Gran Rex informa que los eventos que se realizan en esta sala podrían ser fotografiados o filmados para su posterior difusión en medios y /o campañas publicitarias. <br /><br />    <strong>  Fechas:  </strong>     <ul>        <li> Viernes 21 de abril 20:30hs </li>       <li> Sábado 22 de abril 20:30hs </li>       <li> Domingo 23 de abril 20:00hs </li>    </ul> ",
-    "disabled": false,
-    "display": "block",
-    "estado": "agotado",
-    "fechas": [
-      {
-        "dia": "viernes 21 de abril",
-        "hora": "20:30HS",
-        "start": "2023-04-21T20:30:00",
-        "end": "",
-        "estadoCalendario": "agotado"
-      },
-      {
-        "dia": "sábado 22 de abril",
-        "hora": "20:30HS",
-        "start": "2023-04-22T20:30:00",
-        "end": "",
-        "estadoCalendario": "agotado"
-      },
-      {
-        "dia": "domingo 23 de abril",
-        "hora": "20:00HS",
-        "start": "2023-04-23T20:00:00",
-        "end": "",
-        "estadoCalendario": "agotado"
-      }
-    ],
-    "links": {
-      "href": "https://www.ticketek.com.ar/miranda/teatro-gran-rex",
-      "path": "/shows/miranda/1"
-    },
-    "imagenes": {
-      "evento": "storage/imagenes/miranda.webp",
-      "plano": "storage/imagenes/planos/tue1.webp"
-    },
-    "nombre": "miranda!",
-    "ubicaciones": [
-      {
-        "id": 1,
-        "nombre": "PLATEA 1",
-        "color": "#970513",
-        "precio": 11.5
-      },
-      {
-        "id": 2,
-        "nombre": "PLATEA 2",
-        "color": "#79C8C3",
-        "precio": 10.5
-      },
-      {
-        "id": 3,
-        "nombre": "PLATEA 3",
-        "color": "#EDB63B",
-        "precio": 9.5
-      },
-      {
-        "id": 4,
-        "nombre": "PLATEA 4",
-        "color": "#86AA4D",
-        "precio": 8.5
-      },
-      {
-        "id": 5,
-        "nombre": "PLATEA 5",
-        "color": "#052748",
-        "precio": 7.5
-      },
-      {
-        "id": 6,
-        "nombre": "SUPER PULLMAN 1",
-        "color": "#035F89",
-        "precio": 8.5
-      },
-      {
-        "id": 7,
-        "nombre": "SUPER PULLMAN 2",
-        "color": "#A9167D",
-        "precio": 7.5
-      },
-      {
-        "id": 8,
-        "nombre": "PULLMAN 1",
-        "color": "#EE6E08",
-        "precio": 6.5
-      },
-      {
-        "id": 9,
-        "nombre": "PULLMAN 2",
-        "color": "#037366",
-        "precio": 6
-      },
-      {
-        "id": 10,
-        "nombre": "PULLMAN 3",
-        "color": "#D97B77",
-        "precio": 5.5
-      },
-      {
-        "id": 11,
-        "nombre": "PULLMAN 4",
-        "color": "#AF0657",
-        "precio": 5
-      },
-      {
-        "id": 12,
-        "nombre": "PULLMAN 5",
-        "color": "#5271FF",
-        "precio": 4.5
-      }
-    ]
-  },
+  
   {
     "id": 2,
     "descripcion": "<strong>Master Stroke</strong>, integrado por Ema Caradoso en voz, Brian Morua en guitarra, Manuel Olveira en bajo, Agustín Albertini en batería y Alberto Ludueña en teclados, es la banda tributo a Queen destacada por el mismo Brian May en sus redes sociales y la que Ángel Mahler sumó a sus espectáculos de Rapsodia Bohemia Sinfónico en 2020. <br /> <br />    El Teatro Gran Rex informa que los eventos que se realizan en esta sala podrían ser fotografiados o filmados para su posterior difusión en medios y /o campañas publicitarias. <br /><br />    <strong>  Fechas:  </strong>    <ul>      <li> Viernes 28 de abril 20:30hs </li>     </ul>   ",
@@ -127,87 +15,89 @@
         "estadoCalendario": "disponible"
       }
     ],
+    "keywords": ["master","stroke", "estroke", "stroque", "stroqe", "queen", "quen", "tributo", "abril"],
     "links": {
       "href": "https://www.ticketek.com.ar/queen-por-master-stroke/teatro-gran-rex",
-      "path": "/shows/queen/2"
+      "path": "/shows/master-stroke/2"
     },
     "imagenes": {
-      "evento": "storage/imagenes/queen.webp",
-      "plano": "storage/imagenes/planos/tue1.webp"
+      "evento": "https://www.tuentrada.com/teatro/gran-rex/imagenes/queen.webp",
+      "plano": "https://www.tuentrada.com/teatro/gran-rex/imagenes/planos/tue1.webp"
     },
     "nombre": "queen por master stroke",
+    "nombrePath": "master-stroke",
     "ubicaciones": [
       {
         "id": 1,
         "nombre": "PLATEA 1",
         "color": "#970513",
-        "precio": 7.5
+        "precio": "$7.500"
       },
       {
         "id": 2,
         "nombre": "PLATEA 2",
         "color": "#79C8C3",
-        "precio": 7
+        "precio": "$7.000"
       },
       {
         "id": 3,
         "nombre": "PLATEA 3",
         "color": "#EDB63B",
-        "precio": 6.5
+        "precio": "$6.500"
       },
       {
         "id": 4,
         "nombre": "PLATEA 4",
         "color": "#86AA4D",
-        "precio": 5.5
+        "precio": "$5.500"
       },
       {
         "id": 5,
         "nombre": "PLATEA 5",
         "color": "#052748",
-        "precio": 5
+        "precio": "$5.000"
       },
       {
         "id": 6,
         "nombre": "SUPER PULLMAN 1",
         "color": "#035F89",
-        "precio": 7
+        "precio": "$7.000"
       },
       {
         "id": 7,
         "nombre": "SUPER PULLMAN 2",
         "color": "#A9167D",
-        "precio": 6
+        "precio": "$6.000"
       },
       {
         "id": 8,
         "nombre": "PULLMAN 1",
         "color": "#EE6E08",
-        "precio": 5.5
+        "precio": "$5.500"
       },
       {
         "id": 9,
         "nombre": "PULLMAN 2",
         "color": "#037366",
-        "precio": 5
+        "precio": "$5.000"
       },
       {
         "id": 10,
         "nombre": "PULLMAN 3",
         "color": "#D97B77",
-        "precio": 4.5
+        "precio": "$4.500"
       },
       {
         "id": 11,
         "nombre": "PULLMAN 4",
         "color": "#AF0657",
-        "precio": 4
+        "precio": "$4.000"
       },
       {
         "id": 12,
         "nombre": "PULLMAN 5",
         "color": "#5271FF",
-        "precio": 3
+        "precio": "$3.000"
       }
     ]
   },
@@ -226,87 +116,89 @@
         "estadoCalendario": "disponible"
       }
     ],
+    "keywords": ["damian", "damián", "cordoba", "cordova", "córdoba", "córdova", "abril"],
     "links": {
       "href": "https://www.ticketek.com.ar/damian-cordoba/teatro-gran-rex",
       "path": "/shows/damian-cordoba/3"
     },
     "imagenes": {
-      "evento": "storage/imagenes/damian_cordoba.webp",
-      "plano": "storage/imagenes/planos/tue1.webp"
+      "evento": "https://www.tuentrada.com/teatro/gran-rex/imagenes/damian_cordoba.webp",
+      "plano": "https://www.tuentrada.com/teatro/gran-rex/imagenes/planos/tue1.webp"
     },
     "nombre": "damián córdoba",
+    "nombrePath": "damian-cordoba",
     "ubicaciones": [
       {
         "id": 1,
         "nombre": "PLATEA 1",
         "color": "#970513",
-        "precio": 8.5
+        "precio": "$8.500"
       },
       {
         "id": 2,
         "nombre": "PLATEA 2",
         "color": "#79C8C3",
-        "precio": 8
+        "precio": "$8.000"
       },
       {
         "id": 3,
         "nombre": "PLATEA 3",
         "color": "#EDB63B",
-        "precio": 7
+        "precio": "$7.000"
       },
       {
         "id": 4,
         "nombre": "PLATEA 4",
         "color": "#86AA4D",
-        "precio": 6.5
+        "precio": "$6.500"
       },
       {
         "id": 5,
         "nombre": "PLATEA 5",
         "color": "#052748",
-        "precio": 6
+        "precio": "$6.000"
       },
       {
         "id": 6,
         "nombre": "SUPER PULLMAN 1",
         "color": "#035F89",
-        "precio": 6.5
+        "precio": "$6.500"
       },
       {
         "id": 7,
         "nombre": "SUPER PULLMAN 2",
         "color": "#A9167D",
-        "precio": 6
+        "precio": "$6.000"
       },
       {
         "id": 8,
         "nombre": "PULLMAN 1",
         "color": "#EE6E08",
-        "precio": 5.5
+        "precio": "$5.500"
       },
       {
         "id": 9,
         "nombre": "PULLMAN 2",
         "color": "#037366",
-        "precio": 5
+        "precio": "$5.000"
       },
       {
         "id": 10,
         "nombre": "PULLMAN 3",
         "color": "#D97B77",
-        "precio": 4
+        "precio": "$4.000"
       },
       {
         "id": 11,
         "nombre": "PULLMAN 4",
         "color": "#AF0657",
-        "precio": 3
+        "precio": "$3.000"
       },
       {
         "id": 12,
         "nombre": "PULLMAN 5",
         "color": "#5271FF",
-        "precio": 2.5
+        "precio": "$2.500"
       }
     ]
   },
@@ -332,87 +224,89 @@
         "estadoCalendario": "cancelado"
       }
     ],
+    "keywords": ["festival", "ballet", "festibal", "balet", "valet", "vallet", "International"],
     "links": {
       "href": "https://www.ticketek.com.ar/international-festival-ballet-peace/teatro-gran-rex",
       "path": "/shows/festival-ballet/4"
     },
     "imagenes": {
-      "evento": "storage/imagenes/festival_ballet.webp",
-      "plano": "storage/imagenes/planos/tue1.webp"
+      "evento": "https://www.tuentrada.com/teatro/gran-rex/imagenes/festival_ballet.webp",
+      "plano": "https://www.tuentrada.com/teatro/gran-rex/imagenes/planos/tue1.webp"
     },
     "nombre": "international festival ballet",
+    "nombrePath": "festival-ballet",
     "ubicaciones": [
       {
         "id": 1,
         "nombre": "PLATEA 1",
         "color": "#970513",
-        "precio": 9
+        "precio": "$9.000"
       },
       {
         "id": 2,
         "nombre": "PLATEA 2",
         "color": "#79C8C3",
-        "precio": 8.5
+        "precio": "$8.500"
       },
       {
         "id": 3,
         "nombre": "PLATEA 3",
         "color": "#EDB63B",
-        "precio": 8
+        "precio": "$8.000"
       },
       {
         "id": 4,
         "nombre": "PLATEA 4",
         "color": "#86AA4D",
-        "precio": 7.5
+        "precio": "$7.500"
       },
       {
         "id": 5,
         "nombre": "PLATEA 5",
         "color": "#052748",
-        "precio": 6.5
+        "precio": "$6.500"
       },
       {
         "id": 6,
         "nombre": "SUPER PULLMAN 1",
         "color": "#035F89",
-        "precio": 7.5
+        "precio": "$7.500"
       },
       {
         "id": 7,
         "nombre": "SUPER PULLMAN 2",
         "color": "#A9167D",
-        "precio": 6.5
+        "precio": "$6.500"
       },
       {
         "id": 8,
         "nombre": "PULLMAN 1",
         "color": "#EE6E08",
-        "precio": 5
+        "precio": "$5.000"
       },
       {
         "id": 9,
         "nombre": "PULLMAN 2",
         "color": "#037366",
-        "precio": 4.5
+        "precio": "$4.500"
       },
       {
         "id": 10,
         "nombre": "PULLMAN 3",
         "color": "#D97B77",
-        "precio": 4.5
+        "precio": "$4.500"
       },
       {
         "id": 11,
         "nombre": "PULLMAN 4",
         "color": "#AF0657",
-        "precio": 4
+        "precio": "$4.000"
       },
       {
         "id": 12,
         "nombre": "PULLMAN 5",
         "color": "#5271FF",
-        "precio": 4
+        "precio": "$4.000"
       }
     ]
   },
@@ -431,87 +325,89 @@
         "estadoCalendario": "reprogramado"
       }
     ],
+    "keywords": ["sergio", "torres", "cergio", "serjio", "cerjio", "tores", "mayo"],
     "links": {
       "href": "https://www.ticketek.com.ar/sergio-torres/teatro-gran-rex",
       "path": "/shows/sergio-torres/5"
     },
     "imagenes": {
-      "evento": "storage/imagenes/sergio_torres.webp",
-      "plano": "storage/imagenes/planos/tue1.webp"
+      "evento": "https://www.tuentrada.com/teatro/gran-rex/imagenes/sergio_torres.webp",
+      "plano": "https://www.tuentrada.com/teatro/gran-rex/imagenes/planos/tue1.webp"
     },
     "nombre": "sergio torres",
+    "nombrePath": "sergio-torres",
     "ubicaciones": [
       {
         "id": 1,
         "nombre": "PLATEA 1",
         "color": "#970513",
-        "precio": 8
+        "precio": "$8.000"
       },
       {
         "id": 2,
         "nombre": "PLATEA 2",
         "color": "#79C8C3",
-        "precio": 7.5
+        "precio": "$7.500"
       },
       {
         "id": 3,
         "nombre": "PLATEA 3",
         "color": "#EDB63B",
-        "precio": 7
+        "precio": "$7.000"
       },
       {
         "id": 4,
         "nombre": "PLATEA 4",
         "color": "#86AA4D",
-        "precio": 6.5
+        "precio": "$6.500"
       },
       {
         "id": 5,
         "nombre": "PLATEA 5",
         "color": "#052748",
-        "precio": 6
+        "precio": "$6.000"
       },
       {
         "id": 6,
         "nombre": "SUPER PULLMAN 1",
         "color": "#035F89",
-        "precio": 6.5
+        "precio": "$6.500"
       },
       {
         "id": 7,
         "nombre": "SUPER PULLMAN 2",
         "color": "#A9167D",
-        "precio": 6
+        "precio": "$6.000"
       },
       {
         "id": 8,
         "nombre": "PULLMAN 1",
         "color": "#EE6E08",
-        "precio": 5.5
+        "precio": "$5.500"
       },
       {
         "id": 9,
         "nombre": "PULLMAN 2",
         "color": "#037366",
-        "precio": 5
+        "precio": "$5.000"
       },
       {
         "id": 10,
         "nombre": "PULLMAN 3",
         "color": "#D97B77",
-        "precio": 4.5
+        "precio": "$4.500"
       },
       {
         "id": 11,
         "nombre": "PULLMAN 4",
         "color": "#AF0657",
-        "precio": 4
+        "precio": "$4.000"
       },
       {
         "id": 12,
         "nombre": "PULLMAN 5",
         "color": "#5271FF",
-        "precio": 3.5
+        "precio": "$3.500"
       }
     ]
   },
@@ -530,87 +426,89 @@
         "estadoCalendario": "disponible"
       }
     ],
+    "keywords": ["dale", "q", "va", "daleqva", "q'", "mayo", "Neno Aguirre", "David Ortiz"],
     "links": {
       "href": "https://www.ticketek.com.ar/dale-qva/teatro-gran-rex",
       "path": "/shows/daleqva/6"
     },
     "imagenes": {
-      "evento": "storage/imagenes/dale_qva.webp",
-      "plano": "storage/imagenes/planos/tue1.webp"
+      "evento": "https://www.tuentrada.com/teatro/gran-rex/imagenes/dale_qva.webp",
+      "plano": "https://www.tuentrada.com/teatro/gran-rex/imagenes/planos/tue1.webp"
     },
     "nombre": "dale q’ va",
+    "nombrePath": "daleqva",
     "ubicaciones": [
       {
         "id": 1,
         "nombre": "PLATEA 1",
         "color": "#970513",
-        "precio": 8.5
+        "precio": "$8.500"
       },
       {
         "id": 2,
         "nombre": "PLATEA 2",
         "color": "#79C8C3",
-        "precio": 8.5
+        "precio": "$8.500"
       },
       {
         "id": 3,
         "nombre": "PLATEA 3",
         "color": "#EDB63B",
-        "precio": 7.5
+        "precio": "$7.500"
       },
       {
         "id": 4,
         "nombre": "PLATEA 4",
         "color": "#86AA4D",
-        "precio": 7.5
+        "precio": "$7.500"
       },
       {
         "id": 5,
         "nombre": "PLATEA 5",
         "color": "#052748",
-        "precio": 6
+        "precio": "$6.000"
       },
       {
         "id": 6,
         "nombre": "SUPER PULLMAN 1",
         "color": "#035F89",
-        "precio": 7.5
+        "precio": "$7.500"
       },
       {
         "id": 7,
         "nombre": "SUPER PULLMAN 2",
         "color": "#A9167D",
-        "precio": 7.5
+        "precio": "$7.500"
       },
       {
         "id": 8,
         "nombre": "PULLMAN 1",
         "color": "#EE6E08",
-        "precio": 5.5
+        "precio": "$5.500"
       },
       {
         "id": 9,
         "nombre": "PULLMAN 2",
         "color": "#037366",
-        "precio": 5
+        "precio": "$5.000"
       },
       {
         "id": 10,
         "nombre": "PULLMAN 3",
         "color": "#D97B77",
-        "precio": 4
+        "precio": "$4.000"
       },
       {
         "id": 11,
         "nombre": "PULLMAN 4",
         "color": "#AF0657",
-        "precio": 3
+        "precio": "$3.000"
       },
       {
         "id": 12,
         "nombre": "PULLMAN 5",
         "color": "#5271FF",
-        "precio": 3
+        "precio": "$3.000"
       }
     ]
   },
@@ -629,87 +527,89 @@
         "estadoCalendario": "disponible"
       }
     ],
+    "keywords": ["turf", "truf", "mayo"],
     "links": {
       "href": "https://www.ticketek.com.ar/turf/teatro-gran-rex",
       "path": "/shows/turf/7"
     },
     "imagenes": {
-      "evento": "storage/imagenes/turf.webp",
-      "plano": "storage/imagenes/planos/tue1.webp"
+      "evento": "https://www.tuentrada.com/teatro/gran-rex/imagenes/turf.webp",
+      "plano": "https://www.tuentrada.com/teatro/gran-rex/imagenes/planos/tue1.webp"
     },
     "nombre": "turf",
+    "nombrePath": "turf",
     "ubicaciones": [
       {
         "id": 1,
         "nombre": "PLATEA 1",
         "color": "#970513",
-        "precio": 7
+        "precio": "$7.000"
       },
       {
         "id": 2,
         "nombre": "PLATEA 2",
         "color": "#79C8C3",
-        "precio": 6.5
+        "precio": "$6.500"
       },
       {
         "id": 3,
         "nombre": "PLATEA 3",
         "color": "#EDB63B",
-        "precio": 6
+        "precio": "$6.000"
       },
       {
         "id": 4,
         "nombre": "PLATEA 4",
         "color": "#86AA4D",
-        "precio": 5.5
+        "precio": "$5.500"
       },
       {
         "id": 5,
         "nombre": "PLATEA 5",
         "color": "#052748",
-        "precio": 5
+        "precio": "$5.000"
       },
       {
         "id": 6,
         "nombre": "SUPER PULLMAN 1",
         "color": "#035F89",
-        "precio": 5.5
+        "precio": "$5.500"
       },
       {
         "id": 7,
         "nombre": "SUPER PULLMAN 2",
         "color": "#A9167D",
-        "precio": 5
+        "precio": "$5.000"
       },
       {
         "id": 8,
         "nombre": "PULLMAN 1",
         "color": "#EE6E08",
-        "precio": 4.5
+        "precio": "$4.500"
       },
       {
         "id": 9,
         "nombre": "PULLMAN 2",
         "color": "#037366",
-        "precio": 4.2
+        "precio": "$4.200"
       },
       {
         "id": 10,
         "nombre": "PULLMAN 3",
         "color": "#D97B77",
-        "precio": 4
+        "precio": "$4.000"
       },
       {
         "id": 11,
         "nombre": "PULLMAN 4",
         "color": "#AF0657",
-        "precio": 3.5
+        "precio": "$3.500"
       },
       {
         "id": 12,
         "nombre": "PULLMAN 5",
         "color": "#5271FF",
-        "precio": 3
+        "precio": "$3.000"
       }
     ]
   },
@@ -728,87 +628,89 @@
         "estadoCalendario": "disponible"
       }
     ],
+    "keywords": ["the", "beats", "veats", "bits", "vits", "mayo", "tributo"],
     "links": {
       "href": "https://www.ticketek.com.ar/beats/teatro-gran-rex",
       "path": "/shows/the-beats/8"
     },
     "imagenes": {
-      "evento": "storage/imagenes/the_beats.webp",
-      "plano": "storage/imagenes/planos/tue1.webp"
+      "evento": "https://www.tuentrada.com/teatro/gran-rex/imagenes/the_beats.webp",
+      "plano": "https://www.tuentrada.com/teatro/gran-rex/imagenes/planos/tue1.webp"
     },
     "nombre": "the beats",
+    "nombrePath": "the-beats",
     "ubicaciones": [
       {
         "id": 1,
         "nombre": "PLATEA 1",
         "color": "#970513",
-        "precio": 6.5
+        "precio": "$6.500"
       },
       {
         "id": 2,
         "nombre": "PLATEA 2",
         "color": "#79C8C3",
-        "precio": 6
+        "precio": "$6.000"
       },
       {
         "id": 3,
         "nombre": "PLATEA 3",
         "color": "#EDB63B",
-        "precio": 5.5
+        "precio": "$5.500"
       },
       {
         "id": 4,
         "nombre": "PLATEA 4",
         "color": "#86AA4D",
-        "precio": 4.5
+        "precio": "$4.500"
       },
       {
         "id": 5,
         "nombre": "PLATEA 5",
         "color": "#052748",
-        "precio": 4
+        "precio": "$4.000"
       },
       {
         "id": 6,
         "nombre": "SUPER PULLMAN 1",
         "color": "#035F89",
-        "precio": 4.5
+        "precio": "$4.500"
       },
       {
         "id": 7,
         "nombre": "SUPER PULLMAN 2",
         "color": "#A9167D",
-        "precio": 4
+        "precio": "$4.000"
       },
       {
         "id": 8,
         "nombre": "PULLMAN 1",
         "color": "#EE6E08",
-        "precio": 3.5
+        "precio": "$3.500"
       },
       {
         "id": 9,
         "nombre": "PULLMAN 2",
         "color": "#037366",
-        "precio": 3
+        "precio": "$3.000"
       },
       {
         "id": 10,
         "nombre": "PULLMAN 3",
         "color": "#D97B77",
-        "precio": 2.8
+        "precio": "$2.800"
       },
       {
         "id": 11,
         "nombre": "PULLMAN 4",
         "color": "#AF0657",
-        "precio": 2.8
+        "precio": "$2.800"
       },
       {
         "id": 12,
         "nombre": "PULLMAN 5",
         "color": "#5271FF",
-        "precio": 2.5
+        "precio": "$2.500"
       }
     ]
   },
@@ -827,87 +729,89 @@
         "estadoCalendario": "disponible"
       }
     ],
+    "keywords": ["massacre", "masacre", "masakre", "massakre", "riesgo", "mayo"],
     "links": {
       "href": "https://www.ticketek.com.ar/massacre/teatro-gran-rex",
       "path": "/shows/massacre/9"
     },
     "imagenes": {
-      "evento": "storage/imagenes/massacre.webp",
-      "plano": "storage/imagenes/planos/tue1.webp"
+      "evento": "https://www.tuentrada.com/teatro/gran-rex/imagenes/massacre.webp",
+      "plano": "https://www.tuentrada.com/teatro/gran-rex/imagenes/planos/tue1.webp"
     },
     "nombre": "massacre",
+    "nombrePath": "massacre",
     "ubicaciones": [
       {
         "id": 1,
         "nombre": "PLATEA 1",
         "color": "#970513",
-        "precio": 10
+        "precio": "$10.000"
       },
       {
         "id": 2,
         "nombre": "PLATEA 2",
         "color": "#79C8C3",
-        "precio": 8.5
+        "precio": "$8.500"
       },
       {
         "id": 3,
         "nombre": "PLATEA 3",
         "color": "#EDB63B",
-        "precio": 8
+        "precio": "$8.000"
       },
       {
         "id": 4,
         "nombre": "PLATEA 4",
         "color": "#86AA4D",
-        "precio": 6.5
+        "precio": "$6.500"
       },
       {
         "id": 5,
         "nombre": "PLATEA 5",
         "color": "#052748",
-        "precio": 5.5
+        "precio": "$5.500"
       },
       {
         "id": 6,
         "nombre": "SUPER PULLMAN 1",
         "color": "#035F89",
-        "precio": 5
+        "precio": "$5.000"
       },
       {
         "id": 7,
         "nombre": "SUPER PULLMAN 2",
         "color": "#A9167D",
-        "precio": 5.5
+        "precio": "$5.500"
       },
       {
         "id": 8,
         "nombre": "PULLMAN 1",
         "color": "#EE6E08",
-        "precio": 5
+        "precio": "$5.000"
       },
       {
         "id": 9,
         "nombre": "PULLMAN 2",
         "color": "#037366",
-        "pprecio": 4.3
+        "precio": "$4.300"
       },
       {
         "id": 10,
         "nombre": "PULLMAN 3",
         "color": "#D97B77",
-        "precio": 4
+        "precio": "$4.000"
       },
       {
         "id": 11,
         "nombre": "PULLMAN 4",
         "color": "#AF0657",
-        "precio": 3.7
+        "precio": "$3.700"
       },
       {
         "id": 12,
         "nombre": "PULLMAN 5",
         "color": "#5271FF",
-        "precio": 3.5
+        "precio": "$3.500"
       }
     ]
   },
@@ -933,87 +837,89 @@
         "estadoCalendario": "agotado"
       }
     ],
+    "keywords": ["Loaiza", "Kim", "Pantoja", "jd", "mayo"],
     "links": {
       "href": "https://www.ticketek.com.ar/jd-pantoja-kim-loaiza/teatro-gran-rex",
       "path": "/shows/jdpantoja-kimloaiza/10"
     },
     "imagenes": {
-      "evento": "storage/imagenes/jdpantoja_kimloaiza.webp",
-      "plano": "storage/imagenes/planos/tue1.webp"
+      "evento": "https://www.tuentrada.com/teatro/gran-rex/imagenes/jdpantoja_kimloaiza.webp",
+      "plano": "https://www.tuentrada.com/teatro/gran-rex/imagenes/planos/tue1.webp"
     },
     "nombre": "jd pantoja kim loaiza",
+    "nombrePath": "jdpantoja-kimloaiza",
     "ubicaciones": [
       {
         "id": 1,
         "nombre": "PLATEA 1",
         "color": "#970513",
-        "precio": 9.6
+        "precio": "$9.600"
       },
       {
         "id": 2,
         "nombre": "PLATEA 2",
         "color": "#79C8C3",
-        "pprecio": 8.4
+        "precio": "$8.400"
       },
       {
         "id": 3,
         "nombre": "PLATEA 3",
         "color": "#EDB63B",
-        "precio": 8
+        "precio": "$8.000"
       },
       {
         "id": 4,
         "nombre": "PLATEA 4",
         "color": "#86AA4D",
-        "precio": 7.2
+        "precio": "$7.200"
       },
       {
         "id": 5,
         "nombre": "PLATEA 5",
         "color": "#052748",
-        "precio": 6.4
+        "precio": "$6.400"
       },
       {
         "id": 6,
         "nombre": "SUPER PULLMAN 1",
         "color": "#035F89",
-        "pprecio": 8.4
+        "precio": "$8.400"
       },
       {
         "id": 7,
         "nombre": "SUPER PULLMAN 2",
         "color": "#A9167D",
-        "precio": 7.2
+        "precio": "$7.200"
       },
       {
         "id": 8,
         "nombre": "PULLMAN 1",
         "color": "#EE6E08",
-        "precio": 6.4
+        "precio": "$6.400"
       },
       {
         "id": 9,
         "nombre": "PULLMAN 2",
         "color": "#037366",
-        "precio": 5.6
+        "precio": "$5.600"
       },
       {
         "id": 10,
         "nombre": "PULLMAN 3",
         "color": "#D97B77",
-        "precio": 4.8
+        "precio": "$4.800"
       },
       {
         "id": 11,
         "nombre": "PULLMAN 4",
         "color": "#AF0657",
-        "precio": 3.6
+        "precio": "$3.600"
       },
       {
         "id": 12,
         "nombre": "PULLMAN 5",
         "color": "#5271FF",
-        "precio": 3.2
+        "precio": "$3.200"
       }
     ]
   },
@@ -1032,87 +938,89 @@
         "estadoCalendario": "disponible"
       }
     ],
+    "keywords": ["sergio", "galleguillo", "cergio", "galeguilo", "gayeguillo", "galleguiyo", "gayeguiyo", "mayo", "la fiesta de la rioja"],
     "links": {
       "href": "https://www.ticketek.com.ar/sergio-galleguillo/teatro-gran-rex",
       "path": "/shows/sergio-galleguillo/11"
     },
     "imagenes": {
-      "evento": "storage/imagenes/sergio_galleguillo.webp",
-      "plano": "storage/imagenes/planos/tue1.webp"
+      "evento": "https://www.tuentrada.com/teatro/gran-rex/imagenes/sergio_galleguillo.webp",
+      "plano": "https://www.tuentrada.com/teatro/gran-rex/imagenes/planos/tue1.webp"
     },
     "nombre": "sergio galleguillo",
+    "nombrePath": "sergio-galleguillo",
     "ubicaciones": [
       {
         "id": 1,
         "nombre": "PLATEA 1",
         "color": "#970513",
-        "precio": 7
+        "precio": "$7.000"
       },
       {
         "id": 2,
         "nombre": "PLATEA 2",
         "color": "#79C8C3",
-        "precio": 7
+        "precio": "$7.000"
       },
       {
         "id": 3,
         "nombre": "PLATEA 3",
         "color": "#EDB63B",
-        "precio": 6
+        "precio": "$6.000"
       },
       {
         "id": 4,
         "nombre": "PLATEA 4",
         "color": "#86AA4D",
-        "precio": 6
+        "precio": "$6.000"
       },
       {
         "id": 5,
         "nombre": "PLATEA 5",
         "color": "#052748",
-        "precio": 6
+        "precio": "$6.000"
       },
       {
         "id": 6,
         "nombre": "SUPER PULLMAN 1",
         "color": "#035F89",
-        "precio": 6.5
+        "precio": "$6.500"
       },
       {
         "id": 7,
         "nombre": "SUPER PULLMAN 2",
         "color": "#A9167D",
-        "precio": 6.5
+        "precio": "$6.500"
       },
       {
         "id": 8,
         "nombre": "PULLMAN 1",
         "color": "#EE6E08",
-        "precio": 5.5
+        "precio": "$5.500"
       },
       {
         "id": 9,
         "nombre": "PULLMAN 2",
         "color": "#037366",
-        "precio": 5
+        "precio": "$5.000"
       },
       {
         "id": 10,
         "nombre": "PULLMAN 3",
         "color": "#D97B77",
-        "precio": 4
+        "precio": "$4.000"
       },
       {
         "id": 11,
         "nombre": "PULLMAN 4",
         "color": "#AF0657",
-        "precio": 3
+        "precio": "$3.000"
       },
       {
         "id": 12,
         "nombre": "PULLMAN 5",
         "color": "#5271FF",
-        "precio": 3
+        "precio": "$3.000"
       }
     ]
   },
@@ -1635,75 +1543,77 @@
         "estadoCalendario": "disponible"
       }
     ],
+    "keywords": ["matilda", "junio", "julio", "laurita fernandez", "jose maria listorti", "agustin soy rada aristaran", "fernanda metilli"],
     "links": {
       "href": "https://www.ticketek.com.ar/matilda/teatro-gran-rex",
       "path": "/shows/matilda/12"
     },
     "imagenes": {
-      "evento": "storage/imagenes/matilda.webp",
-      "plano": "storage/imagenes/planos/tue1.webp"
+      "evento": "https://www.tuentrada.com/teatro/gran-rex/imagenes/matilda.webp",
+      "plano": "https://www.tuentrada.com/teatro/gran-rex/imagenes/planos/tue1.webp"
     },
     "nombre": "matilda",
+    "nombrePath": "matilda",
     "ubicaciones": [
       {
         "id": 1,
         "nombre": "PLATEA 1",
         "color": "#970513",
-        "precio": 10
+        "precio": "$10.000"
       },
       {
         "id": 2,
         "nombre": "PLATEA 2",
         "color": "#79C8C3",
-        "precio": 10
+        "precio": "$10.000"
       },
       {
         "id": 3,
         "nombre": "PLATEA 3",
         "color": "#EDB63B",
-        "precio": 10
+        "precio": "$10.000"
       },
       {
         "id": 4,
         "nombre": "PLATEA 4",
         "color": "#86AA4D",
-        "precio": 9.5
+        "precio": "$9.500"
       },
       {
         "id": 5,
         "nombre": "PLATEA 5",
         "color": "#052748",
-        "precio": 8.8
+        "precio": "$8.800"
       },
       {
         "id": 6,
         "nombre": "SUPER PULLMAN 1",
         "color": "#035F89",
-        "precio": 9.5
+        "precio": "$9.500"
       },
       {
         "id": 7,
         "nombre": "SUPER PULLMAN 2",
         "color": "#A9167D",
-        "precio": 8.8
+        "precio": "$8.800"
       },
       {
         "id": 8,
         "nombre": "PULLMAN 1",
         "color": "#EE6E08",
-        "precio": 6.5
+        "precio": "$6.500"
       },
       {
         "id": 9,
         "nombre": "PULLMAN 2",
         "color": "#037366",
-        "precio": 4.5
+        "precio": "$4.500"
       },
       {
         "id": 10,
         "nombre": "PULLMAN 3",
         "color": "#D97B77",
-        "precio": 3.9
+        "precio": "$3.900"
       }
     ]
   },
@@ -1722,87 +1632,89 @@
         "estadoCalendario": "próximamente"
       }
     ],
+    "keywords": ["julieta", "venegas", "benegas", "venegaz", "benegaz", "agosto"],
     "links": {
-      "href": "https://www.tuentrada.com/eventos/detalle/Julieta-Venegas/2044219094378",
+      "href": "https://www.tuentrada.com/eventos/detalle/Julieta-Venegas/204421909437",
       "path": "/shows/julieta-venegas/13"
     },
     "imagenes": {
-      "evento": "storage/imagenes/julieta-venegas.webp",
-      "plano": "storage/imagenes/planos/tue1.webp"
+      "evento": "https://www.tuentrada.com/teatro/gran-rex/imagenes/julieta-venegas.webp",
+      "plano": "https://www.tuentrada.com/teatro/gran-rex/imagenes/planos/tue1.webp"
     },
     "nombre": "julieta venegas",
+    "nombrePath": "julieta-venegas",
     "ubicaciones": [
       {
         "id": 1,
         "nombre": "PLATEA 1",
         "color": "#970513",
-        "precio": 17
+        "precio": "$17.000"
       },
       {
         "id": 2,
         "nombre": "PLATEA 2",
         "color": "#79C8C3",
-        "precio": 15
+        "precio": "$15.000"
       },
       {
         "id": 3,
         "nombre": "PLATEA 3",
         "color": "#EDB63B",
-        "precio": 12
+        "precio": "$12.000"
       },
       {
         "id": 4,
         "nombre": "PLATEA 4",
         "color": "#86AA4D",
-        "precio": 10
+        "precio": "$10.000"
       },
       {
         "id": 5,
         "nombre": "PLATEA 5",
         "color": "#052748",
-        "precio": 8
+        "precio": "$8.000"
       },
       {
         "id": 6,
         "nombre": "SUPER PULLMAN 1",
         "color": "#035F89",
-        "precio": 8
+        "precio": "$8.000"
       },
       {
         "id": 7,
         "nombre": "SUPER PULLMAN 2",
         "color": "#A9167D",
-        "precio": 6.5
+        "precio": "$6.500"
       },
       {
         "id": 8,
         "nombre": "PULLMAN 1",
         "color": "#EE6E08",
-        "precio": 6.5
+        "precio": "$6.500"
       },
       {
         "id": 9,
         "nombre": "PULLMAN 2",
         "color": "#037366",
-        "precio": 6
+        "precio": "$6.000"
       },
       {
         "id": 10,
         "nombre": "PULLMAN 3",
         "color": "#D97B77",
-        "precio": 5.5
+        "precio": "$5.500"
       },
       {
         "id": 11,
         "nombre": "PULLMAN 4",
         "color": "#AF0657",
-        "precio": 5
+        "precio": "$5.000"
       },
       {
         "id": 12,
         "nombre": "PULLMAN 5",
         "color": "#5271FF",
-        "precio": 4.5
+        "precio": "$4.500"
       }
     ]
   },
@@ -1821,87 +1733,89 @@
         "estadoCalendario": "disponible"
       }
     ],
+    "keywords": ["bxs", "bryndis", "brindis", "agosto", "x siempre", "brindis por siempre", "brindis por siempre", "bryndis x siempre", "bryndis por siempre"],
     "links": {
       "href": "https://www.ticketek.com.ar/bryndis/teatro-gran-rex",
       "path": "/shows/bxs/14"
     },
     "imagenes": {
-      "evento": "storage/imagenes/bxs.webp",
-      "plano": "storage/imagenes/planos/tue1.webp"
+      "evento": "https://www.tuentrada.com/teatro/gran-rex/imagenes/bxs.webp",
+      "plano": "https://www.tuentrada.com/teatro/gran-rex/imagenes/planos/tue1.webp"
     },
     "nombre": "bxs - bryndis x siempre",
+    "nombrePath": "bxs",
     "ubicaciones": [
       {
         "id": 1,
         "nombre": "PLATEA 1",
         "color": "#970513",
-        "precio": 14
+        "precio": "$14.000"
       },
       {
         "id": 2,
         "nombre": "PLATEA 2",
         "color": "#79C8C3",
-        "precio": 12.5
+        "precio": "$12.500"
       },
       {
         "id": 3,
         "nombre": "PLATEA 3",
         "color": "#EDB63B",
-        "precio": 11.5
+        "precio": "$11.500"
       },
       {
         "id": 4,
         "nombre": "PLATEA 4",
         "color": "#86AA4D",
-        "precio": 10
+        "precio": "$10.000"
       },
       {
         "id": 5,
         "nombre": "PLATEA 5",
         "color": "#052748",
-        "precio": 9.5
+        "precio": "$9.500"
       },
       {
         "id": 6,
         "nombre": "SUPER PULLMAN 1",
         "color": "#035F89",
-        "precio": 10
+        "precio": "$10.000"
       },
       {
         "id": 7,
         "nombre": "SUPER PULLMAN 2",
         "color": "#A9167D",
-        "precio": 9
+        "precio": "$9.000"
       },
       {
         "id": 8,
         "nombre": "PULLMAN 1",
         "color": "#EE6E08",
-        "precio": 8
+        "precio": "$8.000"
       },
       {
         "id": 9,
         "nombre": "PULLMAN 2",
         "color": "#037366",
-        "precio": 7
+        "precio": "$7.000"
       },
       {
         "id": 10,
         "nombre": "PULLMAN 3",
         "color": "#D97B77",
-        "precio": 6.5
+        "precio": "$6.500"
       },
       {
         "id": 11,
         "nombre": "PULLMAN 4",
         "color": "#AF0657",
-        "precio": 5
+        "precio": "$5.000"
       },
       {
         "id": 12,
         "nombre": "PULLMAN 5",
         "color": "#5271FF",
-        "precio": 5
+        "precio": "$5.000"
       }
     ]
   },
@@ -1920,93 +1834,95 @@
         "estadoCalendario": "disponible"
       }
     ],
+    "keywords": ["daniel", "agostini", "septiembre", "setiembre"],
     "links": {
       "href": "https://www.tuentrada.com/eventos/detalle/Daniel-Agostini/553776971040",
       "path": "/shows/daniel-agostini/15"
     },
     "imagenes": {
-      "evento": "storage/imagenes/daniel_agostini.webp",
-      "plano": "storage/imagenes/planos/tue1.webp"
+      "evento": "https://www.tuentrada.com/teatro/gran-rex/imagenes/daniel_agostini.webp",
+      "plano": "https://www.tuentrada.com/teatro/gran-rex/imagenes/planos/tue1.webp"
     },
     "nombre": "daniel agostini",
+    "nombrePath": "daniel-agostini",
     "ubicaciones": [
       {
         "id": 1,
         "nombre": "PLATEA 1",
         "color": "#970513",
-        "precio": 18
+        "precio": "$18.000"
       },
       {
         "id": 2,
         "nombre": "PLATEA 2",
         "color": "#79C8C3",
-        "precio": 16
+        "precio": "$16.000"
       },
       {
         "id": 3,
         "nombre": "PLATEA 3",
         "color": "#EDB63B",
-        "precio": 14
+        "precio": "$14.000"
       },
       {
         "id": 4,
         "nombre": "PLATEA 4",
         "color": "#86AA4D",
-        "precio": 12
+        "precio": "$12.000"
       },
       {
         "id": 5,
         "nombre": "PLATEA 5",
         "color": "#052748",
-        "precio": 11
+        "precio": "$11.000"
       },
       {
         "id": 6,
         "nombre": "SUPER PULLMAN 1",
         "color": "#035F89",
-        "precio": 12
+        "precio": "$12.000"
       },
       {
         "id": 7,
         "nombre": "SUPER PULLMAN 2",
         "color": "#A9167D",
-        "precio": 10
+        "precio": "$10.000"
       },
       {
         "id": 8,
         "nombre": "PULLMAN 1",
         "color": "#EE6E08",
-        "precio": 9
+        "precio": "$9.000"
       },
       {
         "id": 9,
         "nombre": "PULLMAN 2",
         "color": "#037366",
-        "precio": 8
+        "precio": "$8.000"
       },
       {
         "id": 10,
         "nombre": "PULLMAN 3",
         "color": "#D97B77",
-        "precio": 7
+        "precio": "$7.000"
       },
       {
         "id": 11,
         "nombre": "PULLMAN 4",
         "color": "#AF0657",
-        "precio": 6
+        "precio": "$6.000"
       },
       {
         "id": 12,
         "nombre": "PULLMAN 5",
         "color": "#5271FF",
-        "precio": 5.5
+        "precio": "$5.500"
       }
     ]
   },
   {
     "id": 16,
-    "descripcion": "Chili Fernandez se presentará el día Sábado 16 de Septiembre en el Teatro Gran Rex.  <br /> <br />    El Teatro Gran Rex informa que los eventos que se realizan en esta sala podrían ser fotografiados o filmados para su posterior difusión en medios y /o campañas publicitarias. <br /><br />    <strong>  Fechas:  </strong>    <ul>     <li> ábado 16 de septiembre 20:30hs </li>    </ul>    ",
+    "descripcion": "Chili Fernandez se presentará el día Sábado 16 de Septiembre en el Teatro Gran Rex.  <br /> <br />    El Teatro Gran Rex informa que los eventos que se realizan en esta sala podrían ser fotografiados o filmados para su posterior difusión en medios y /o campañas publicitarias. <br /><br />    <strong>  Fechas:  </strong>    <ul>     <li> Sábado 16 de septiembre 20:30hs </li>    </ul>    ",
     "disabled": false,
     "display": "block",
     "estado": "disponible",
@@ -2019,87 +1935,89 @@
         "estadoCalendario": "disponible"
       }
     ],
+    "keywords": ["chili", "fernandez", "fernandes", "septiembre", "setiembre", "noche magica", "noche mágica","fernández"],
     "links": {
       "href": "https://www.tuentrada.com/eventos/detalle/Chili-Fernandez/495716168868",
       "path": "/shows/chili-fernandez/16"
     },
     "imagenes": {
-      "evento": "storage/imagenes/chili-fernandez.webp",
-      "plano": "storage/imagenes/planos/tue1.webp"
+      "evento": "https://www.tuentrada.com/teatro/gran-rex/imagenes/chili-fernandez.webp",
+      "plano": "https://www.tuentrada.com/teatro/gran-rex/imagenes/planos/tue1.webp"
     },
     "nombre": "chili fernandez",
+    "nombrePath": "chili-fernandez",
     "ubicaciones": [
       {
         "id": 1,
         "nombre": "PLATEA 1",
         "color": "#970513",
-        "precio": 9.5
+        "precio": "9.500"
       },
       {
         "id": 2,
         "nombre": "PLATEA 2",
         "color": "#79C8C3",
-        "precio": 9
+        "precio": "$9.000"
       },
       {
         "id": 3,
         "nombre": "PLATEA 3",
         "color": "#EDB63B",
-        "precio": 8.5
+        "precio": "$8.500"
       },
       {
         "id": 4,
         "nombre": "PLATEA 4",
         "color": "#86AA4D",
-        "precio": 8
+        "precio": "$8.000"
       },
       {
         "id": 5,
         "nombre": "PLATEA 5",
         "color": "#052748",
-        "precio": 7
+        "precio": "$7.000"
       },
       {
         "id": 6,
         "nombre": "SUPER PULLMAN 1",
         "color": "#035F89",
-        "precio": 7
+        "precio": "$7.000"
       },
       {
         "id": 7,
         "nombre": "SUPER PULLMAN 2",
         "color": "#A9167D",
-        "precio": 6
+        "precio": "$6.000"
       },
       {
         "id": 8,
         "nombre": "PULLMAN 1",
         "color": "#EE6E08",
-        "precio": 5
+        "precio": "$5.000"
       },
       {
         "id": 9,
         "nombre": "PULLMAN 2",
         "color": "#037366",
-        "precio": 4
+        "precio": "$4.000"
       },
       {
         "id": 10,
         "nombre": "PULLMAN 3",
         "color": "#D97B77",
-        "precio": 3.5
+        "precio": "$3.500"
       },
       {
         "id": 11,
         "nombre": "PULLMAN 4",
         "color": "#AF0657",
-        "precio": 3
+        "precio": "$3.000"
       },
       {
         "id": 12,
         "nombre": "PULLMAN 5",
         "color": "#5271FF",
-        "precio": 3
+        "precio": "$3.000"
       }
     ]
   },
@@ -2118,87 +2036,89 @@
         "estadoCalendario": "disponible"
       }
     ],
+    "keywords": ["perotá", "chingó", "perota", "chingo", "noviembre", "11 años tour"],
     "links": {
       "href": "https://www.tuentrada.com/eventos/detalle/Perota-Chingo/114421632871",
       "path": "/shows/perota-chingo/17"
     },
     "imagenes": {
-      "evento": "storage/imagenes/perota-chingo.webp",
-      "plano": "storage/imagenes/planos/tue1.webp"
+      "evento": "https://www.tuentrada.com/teatro/gran-rex/imagenes/perota-chingo.webp",
+      "plano": "https://www.tuentrada.com/teatro/gran-rex/imagenes/planos/tue1.webp"
     },
     "nombre": "perotá chingó",
+    "nombrePath": "perota-chingo",
     "ubicaciones": [
       {
         "id": 1,
         "nombre": "PLATEA 1",
         "color": "#970513",
-        "precio": 8.5
+        "precio": "$8.500"
       },
       {
         "id": 2,
         "nombre": "PLATEA 2",
         "color": "#79C8C3",
-        "precio": 8
+        "precio": "$8.000"
       },
       {
         "id": 3,
         "nombre": "PLATEA 3",
         "color": "#EDB63B",
-        "precio": 7.5
+        "precio": "$7.500"
       },
       {
         "id": 4,
         "nombre": "PLATEA 4",
         "color": "#86AA4D",
-        "precio": 7
+        "precio": "$7.000"
       },
       {
         "id": 5,
         "nombre": "PLATEA 5",
         "color": "#052748",
-        "precio": 6
+        "precio": "$6.000"
       },
       {
         "id": 6,
         "nombre": "SUPER PULLMAN 1",
         "color": "#035F89",
-        "precio": 7
+        "precio": "$7.000"
       },
       {
         "id": 7,
         "nombre": "SUPER PULLMAN 2",
         "color": "#A9167D",
-        "precio": 6
+        "precio": "$6.000"
       },
       {
         "id": 8,
         "nombre": "PULLMAN 1",
         "color": "#EE6E08",
-        "precio": 5
+        "precio": "$5.000"
       },
       {
         "id": 9,
         "nombre": "PULLMAN 2",
         "color": "#037366",
-        "precio": 4.5
+        "precio": "$4.500"
       },
       {
         "id": 10,
         "nombre": "PULLMAN 3",
         "color": "#D97B77",
-        "precio": 3.5
+        "precio": "$3.500"
       },
       {
         "id": 11,
         "nombre": "PULLMAN 4",
         "color": "#AF0657",
-        "precio": 3
+        "precio": "$3.000"
       },
       {
         "id": 12,
         "nombre": "PULLMAN 5",
         "color": "#5271FF",
-        "precio": 3
+        "precio": "$3.000"
       }
     ]
   }
