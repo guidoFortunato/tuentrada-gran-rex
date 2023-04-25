@@ -1,51 +1,44 @@
+import { useContext } from "react";
+import { EventosContext } from "../context/EventosProvider";
+import { Spinner } from "./Spinner";
+import DOMPurify from "dompurify";
+
 import "../css/footer.css";
 
 export const Footer = () => {
+  const { eventosTotales, isLoading } = useContext(EventosContext);
+  console.log({ isLoading });
+  console.log({ eventosTotales });
+
+  if (isLoading) {
+    return <Spinner />;
+  }
   return (
     <footer>
       <div className="container">
-        {/* newsletter */}
-        {/* <div className="row mb-4">
-          Newsletter
-
-          
-        <div className="col-12 d-flex justify-content-center my-3">
-          <form onSubmit={handleSubmit}>
-            <h5 style={{fontSize:"16px"}} >Suscribite a nuestro newsletter</h5>
-            <div className="d-flex flex-column flex-sm-row w-100 gap-2" >
-              <label  htmlFor="newsletter1" className="visually-hidden">
-                Email
-              </label>
-              <input
-                id="newsletter1"
-                type="text"
-                className="form-control"
-                placeholder="Ingrese su Email" style={{fontSize:"14px"}}
-              />
-              <button style={{fontSize:"14px"}} className="btn btn-primary" type="submit">
-                Suscribirse
-              </button>
-            </div>
-          </form>
-        </div>
-        </div> */}
-
-        {/* <hr /> */}
-
         <div className="row mb-2 text-center">
           <div className="col-12 col-md-6 d-flex justify-content-center align-items-center mb-3 mb-md-0 pt-3">
             <div className="d-flex flex-column text-start parrafo-footer">
-              <p style={{ fontSize: "16px" }} className="mb-0">
-                <strong>Dirección:</strong> Av. Corrientes 857, Capital Federal.
-              </p>
-              <p style={{ fontSize: "16px" }}>
-                <strong>Boletería:</strong> Lunes a Sábado de 12:00 a 18:00hs.
-                Feriados Cerrado.
-              </p>
+              {eventosTotales?.footer.items.map((item) => (
+
+                item.mostrar &&
+                <p
+                  style={{ fontSize: "16px" }}
+                  className="mb-0"
+                  key={item.id}
+                  dangerouslySetInnerHTML={{
+                    __html: DOMPurify.sanitize(
+                      item.descripcion
+                    )
+                  }}
+                ></p>
+              ))}
             </div>
           </div>
           <div className="col-12 col-md-6 d-flex justify-content-center align-items-center my-2 my-lg-0">
-            <span style={{color:"white", fontSize:"15px"}}>Seguinos en nuestras redes:</span>
+            <span style={{ color: "white", fontSize: "15px" }}>
+              Seguinos en nuestras redes:
+            </span>
             <ul className="list-unstyled d-flex mb-0">
               <li className="me-3">
                 <a
@@ -59,8 +52,6 @@ export const Footer = () => {
                     x="0px"
                     y="0px"
                     style={{
-                      
-                  
                       padding: "5px",
                       fill: "#ffffff",
                     }}
@@ -84,8 +75,6 @@ export const Footer = () => {
                     x="0px"
                     y="0px"
                     style={{
-                  
-                      
                       padding: "5px",
                       fill: "#ffffff",
                     }}
@@ -109,8 +98,6 @@ export const Footer = () => {
                     x="0px"
                     y="0px"
                     style={{
-                     
-                      
                       padding: "5px",
                       fill: "#ffffff",
                     }}
