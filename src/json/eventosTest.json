@@ -226,7 +226,8 @@
         "botones": [
           {
             "id": 1,
-            "name": "comprar"
+            "name": "comprar",
+            "href": "https://www.ticketek.com.ar/damian-cordoba/teatro-gran-rex"
           },
           {
             "id": 2,
@@ -356,7 +357,8 @@
         "botones": [
           {
             "id": 1,
-            "name": "comprar"
+            "name": "comprar",
+            "href": "https://www.ticketek.com.ar/international-festival-ballet-peace/teatro-gran-rex"
           },
           {
             "id": 2,
@@ -479,7 +481,8 @@
         "botones": [
           {
             "id": 1,
-            "name": "comprar"
+            "name": "comprar",
+            "href": "https://www.ticketek.com.ar/sergio-torres/teatro-gran-rex"
           },
           {
             "id": 2,
@@ -603,7 +606,8 @@
         "botones": [
           {
             "id": 1,
-            "name": "comprar"
+            "name": "comprar",
+            "href": "https://www.ticketek.com.ar/dale-qva/teatro-gran-rex"
           },
           {
             "id": 2,
@@ -718,7 +722,8 @@
         "botones": [
           {
             "id": 1,
-            "name": "comprar"
+            "name": "comprar",
+            "href": "https://www.ticketek.com.ar/turf/teatro-gran-rex"
           },
           {
             "id": 2,
@@ -833,7 +838,8 @@
         "botones": [
           {
             "id": 1,
-            "name": "comprar"
+            "name": "comprar",
+            "href": "https://www.ticketek.com.ar/beats/teatro-gran-rex"
           },
           {
             "id": 2,
@@ -955,7 +961,8 @@
         "botones": [
           {
             "id": 1,
-            "name": "comprar"
+            "name": "comprar",
+            "href": "https://www.ticketek.com.ar/massacre/teatro-gran-rex"
           },
           {
             "id": 2,
@@ -1077,7 +1084,8 @@
         "botones": [
           {
             "id": 1,
-            "name": "comprar"
+            "name": "comprar",
+            "href": "https://www.ticketek.com.ar/jd-pantoja-kim-loaiza/teatro-gran-rex"
           },
           {
             "id": 2,
@@ -1202,7 +1210,8 @@
         "botones": [
           {
             "id": 1,
-            "name": "comprar"
+            "name": "comprar",
+            "href": "https://www.ticketek.com.ar/sergio-galleguillo/teatro-gran-rex"
           },
           {
             "id": 2,
@@ -1829,7 +1838,8 @@
         "botones": [
           {
             "id": 1,
-            "name": "comprar"
+            "name": "comprar",
+            "href": "https://www.ticketek.com.ar/matilda/teatro-gran-rex"
           },
           {
             "id": 2,
@@ -1939,7 +1949,8 @@
         "botones": [
           {
             "id": 1,
-            "name": "comprar"
+            "name": "comprar",
+            "href": "https://www.tuentrada.com/eventos/detalle/Julieta-Venegas/204421909437"
           },
           {
             "id": 2,
@@ -2064,7 +2075,8 @@
         "botones": [
           {
             "id": 1,
-            "name": "comprar"
+            "name": "comprar",
+            "href": "https://www.ticketek.com.ar/bryndis/teatro-gran-rex"
           },
           {
             "id": 2,
@@ -2179,7 +2191,8 @@
         "botones": [
           {
             "id": 1,
-            "name": "comprar"
+            "name": "comprar",
+            "href": "https://www.tuentrada.com/eventos/detalle/Daniel-Agostini/553776971040"
           },
           {
             "id": 2,
@@ -2303,7 +2316,8 @@
         "botones": [
           {
             "id": 1,
-            "name": "comprar"
+            "name": "comprar",
+            "href": "https://www.tuentrada.com/eventos/detalle/Chili-Fernandez/495716168868"
           },
           {
             "id": 2,
@@ -2425,7 +2439,8 @@
         "botones": [
           {
             "id": 1,
-            "name": "comprar"
+            "name": "comprar",
+            "href": "https://www.tuentrada.com/eventos/detalle/Perota-Chingo/114421632871"
           },
           {
             "id": 2,
