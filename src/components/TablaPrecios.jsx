@@ -1,4 +1,4 @@
-import "../css/tablaprecios.css";
+import "storage/css/tablaprecios.css";
 
 export const TablaPrecios = ({ ubicaciones }) => {
   return (

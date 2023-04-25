@@ -1,6 +1,6 @@
 import React, { useContext, useState } from "react";
 // import imgRex from "/assets/imagenes/logo_rex_negro.jpg";
-import "../css/navbar.css";
+import "storage/css/navbar.css";
 import { Link } from "react-router-dom";
 import { EventosContext } from "../context/EventosProvider";
 import { Spinner } from "./";

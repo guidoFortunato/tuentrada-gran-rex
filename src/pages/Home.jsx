@@ -4,8 +4,8 @@ import { CardEvento, FormBusqueda, Spinner } from "../components/";
 
 // import { SliderDestacado } from "../components/";
 
-import "../css/header.css";
-import "../css/footer.css";
+import "storage/css/header.css";
+import "storage/css/footer.css";
 
 
 export const Home = () => {

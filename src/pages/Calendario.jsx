@@ -15,7 +15,7 @@ import { Spinner } from "../components";
 import 'tippy.js/dist/tippy.css';
 import 'tippy.js/animations/scale.css';
 
-import "../css/calendario.css";
+import "storage/css/calendario.css";
 
 const month = [
   "Enero",

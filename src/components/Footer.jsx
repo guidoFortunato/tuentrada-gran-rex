@@ -1,9 +1,4 @@
-import { useContext } from "react";
-import { EventosContext } from "../context/EventosProvider";
-import { Spinner } from "./Spinner";
-import DOMPurify from "dompurify";
-
-import "../css/footer.css";
+import "storage/css/footer.css";
 
 export const Footer = () => {
   const { eventosTotales, isLoading } = useContext(EventosContext);
