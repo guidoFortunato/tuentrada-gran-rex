@@ -1,6 +1,6 @@
 import React from "react";
 
-import "../css/preguntasfrecuentes.css";
+import "/storage/css/preguntasfrecuentes.css";
 
 export const PreguntasFrecuentes = () => {
   return (
