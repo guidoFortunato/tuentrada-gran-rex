@@ -7,7 +7,7 @@ import { Spinner, TablaPrecios } from "./";
 
 import DOMPurify from "dompurify";
 
-import "storage/css/detalleevento.css";
+import "../css/detalleevento.css";
 
 export const DetalleEvento = () => {
   const { eventosTotales, isLoading } = useContext(EventosContext);
