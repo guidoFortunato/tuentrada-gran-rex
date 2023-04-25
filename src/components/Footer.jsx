@@ -1,4 +1,10 @@
-import "..s/css/footer.css";
+import { useContext } from "react";
+import { EventosContext } from "../context/EventosProvider";
+import { Spinner } from "./Spinner";
+
+import DOMPurify from "dompurify";
+
+import "../css/footer.css";
 
 export const Footer = () => {
   const { eventosTotales, isLoading } = useContext(EventosContext);
@@ -45,7 +51,7 @@ export const Footer = () => {
                     href={item.href}
                     target="_blank"
                   >
-                   {item.icon}
+                    <svg xmlns={item.xmlns} x={item.x}  y={item.y} style={item.style}  width={item.width} height={item.height} viewBox={item.viewBox}>  <path d={item.path}></path></svg>
                   </a>
                 </li>
                 ))
