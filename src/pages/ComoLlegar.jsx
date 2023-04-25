@@ -4,7 +4,7 @@ import { Spinner } from "../components";
 
 import DOMPurify from "dompurify";
 
-import "storage/css/comollegar.css";
+import "../css/comollegar.css";
 
 export const ComoLlegar = () => {
   const { eventosTotales } = useContext(EventosContext);

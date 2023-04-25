@@ -4,7 +4,7 @@ import { EventosContext } from "../context/EventosProvider";
 import { ImagenHistoria, Spinner } from "../components";
 import DOMPurify from "dompurify";
 
-import "storage/css/historia.css";
+import "../css/historia.css";
 
 export const Historia = () => {
   const { dataNavbar, eventosTotales } = useContext(EventosContext);

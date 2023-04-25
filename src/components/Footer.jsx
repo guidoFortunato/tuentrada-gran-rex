@@ -1,4 +1,4 @@
-import "storage/css/footer.css";
+import "..s/css/footer.css";
 
 export const Footer = () => {
   const { eventosTotales, isLoading } = useContext(EventosContext);

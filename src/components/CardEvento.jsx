@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import "storage/css/cardevento.css";
+import "../css/cardevento.css";
 
 export const CardEvento = ({ img = "", status = "disponible", title = "", linkEvento = "", disabled = false,}) => {
   const newStatus = status.charAt(0).toUpperCase() + status.slice(1).toLowerCase(); 
