@@ -2,7 +2,7 @@ import { useContext } from "react";
 import { EventosContext } from "../context/EventosProvider";
 import { useLocation, useNavigate } from "react-router-dom";
 
-export const FormBusqueda = () => {
+export const FormBusqueda = ({placeholder}) => {
   // const [evento, setEvento] = useState("");
   const { evento, handleEvento, agregarEvento } = useContext(EventosContext);
   let navigate = useNavigate();
@@ -34,7 +34,7 @@ export const FormBusqueda = () => {
       <div className="container-input">
         <input
           className="border-0"
-          placeholder="Buscar Evento"
+          placeholder={placeholder}
           value={evento}
           onChange={(e) => handleEvento(e.target.value)}
         />

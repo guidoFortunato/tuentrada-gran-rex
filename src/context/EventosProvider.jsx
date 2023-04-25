@@ -23,7 +23,7 @@ const EventosProvider = (props) => {
 
   const { data, isLoading, hasError } = useFetch(urlTestEventos);
   const { data: dataNavbar } = useFetch(urlTestNavbar);
-  
+  console.log('llamada api data')
 
   const agregarEvento = (nombreEvento) => {
     const resultadosExactos = data.eventos.filter((item) =>

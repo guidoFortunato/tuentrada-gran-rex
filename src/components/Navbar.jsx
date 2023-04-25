@@ -1,51 +1,25 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 // import imgRex from "/assets/imagenes/logo_rex_negro.jpg";
 import "../css/navbar.css";
 import { Link } from "react-router-dom";
-
-const itemsNavbar = [
-  {
-    id: 1,
-    name: "Home",
-    link: "/",
-    mostrar: true,
-  },
-  {
-    id: 2,
-    name: "Calendario",
-    link: "/calendario",
-    mostrar: true,
-  },
-  {
-    id: 3,
-    name: "Historia",
-    link: "/historia",
-    mostrar: true,
-  },
-  {
-    id: 5,
-    name: "Cómo llegar",
-    link: "/como-llegar",
-    mostrar: true,
-  },
-  {
-    id: 6,
-    name: "Preguntas frecuentes",
-    link: "/preguntas-frecuentes",
-    mostrar: false,
-  },
-];
+import { EventosContext } from "../context/EventosProvider";
+import { Spinner } from "./";
 
 export const Navbar = () => {
   const [isNavCollapsed, setIsNavCollapsed] = useState(true);
-
+  const { dataNavbar } = useContext(EventosContext);
+  console.log({dataNavbar})
   const handleNavCollapse = () => setIsNavCollapsed(!isNavCollapsed);
+
+  if (!dataNavbar) {
+    return <Spinner />
+  }
 
   return (
     <nav className="navbar navbar-dark navbar-expand-lg color-navbar sticky-top animate__animated animate__fadeIn animate__faster">
       <div className="container-fluid">
         <Link className="navbar-brand ms-lg-4" to="/">
-          <img src={"storage/imagenes/logo_rex_negro.jpg"} alt="logo gran rex" style={{ width: "75px" }} />
+          <img src={dataNavbar[0]?.logo} alt={ dataNavbar[0].altLogo } style={{ width: "75px" }} />
         </Link>
 
         <button
@@ -70,7 +44,7 @@ export const Navbar = () => {
           id="navbarNav"
         >
           <ul className="navbar-nav ms-auto" style={{ fontSize: "18px" }}>
-            {itemsNavbar.map(
+            {dataNavbar[0]?.items.map(
               (item) =>
                 item.mostrar && (
                   <li className="nav-item item-nav" key={item.id}>
@@ -87,7 +61,7 @@ export const Navbar = () => {
           </ul>
           <div className="d-flex flex-column ms-lg-auto me-lg-4">
             <div>
-              <span className="span-redes me-2">Seguinos en nuestras redes:</span>
+              <span className="span-redes me-2">{ dataNavbar[0]?.labelRedes }</span>
             </div>
             <div>
               <ul className="list-unstyled d-flex mb-0">

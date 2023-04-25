@@ -10,8 +10,8 @@ import "../css/footer.css";
 
 export const Home = () => {
   const { eventosTotales, isLoading, dataNavbar } = useContext(EventosContext);
-  // const titulo1 = dataNavbar[0].items[0].titulo1?.toUpperCase()
-  // const titulo2 = dataNavbar[0].items[0].titulo2?.toUpperCase()
+  // const titulo1 = dataNavbar[0]?.items[0].titulo1?.toUpperCase()
+  // const titulo2 = dataNavbar[0]?.items[0].titulo2?.toUpperCase()
 
   useEffect(() => {
     setTimeout(() => {
@@ -29,9 +29,9 @@ export const Home = () => {
         <div className="header-home">
           <h1 className="titulo-principal animate__animated animate__fadeInDown animate__fast	 ">
             {" "}
-            <strong>Gran rex</strong>
+            <strong>{ dataNavbar[0]?.items[0].titulo1.toUpperCase() }</strong>
           </h1>
-          <FormBusqueda />
+          <FormBusqueda placeholder={ dataNavbar[0]?.placeholderInput } />
         </div>
       </header>
       <main>
@@ -42,7 +42,7 @@ export const Home = () => {
                 style={{ fontSize: "30px" }}
                 className="my-3 animate__fadeIn animate__delay-1s tittle-h2"
               >
-                Próximos eventos
+                {dataNavbar[0]?.items[0].titulo2.toUpperCase()}
               </h2>
             </div>
           </div>
