@@ -4,70 +4,184 @@
     "titulo2": "ubicaciones y precios",
     "botonPlano": "ver ubicaciones"
   },
+  "navbar": {
+    "logo": "/storage/imagenes/logo_rex_negro.jpg",
+    "altLogo": "logo gran rex",
+    "placeholderInput": "Bucar Evento",
+    "iconInput": "",
+    "items": [
+      {
+        "id": 1,
+        "name": "Home",
+        "link": "/",
+        "mostrar": true,
+        "titulo1": "Gran Rex",
+        "titulo2": "Próximos eventos"
+      },
+      {
+        "id": 2,
+        "name": "Calendario",
+        "link": "/calendario",
+        "mostrar": true,
+        "titulo1": "Temporada",
+        "titulo2": ""
+      },
+      {
+        "id": 3,
+        "name": "Historia",
+        "link": "/historia",
+        "mostrar": true,
+        "titulo1": "Historia: Un teatro con trayectoria",
+        "titulo2": "Galería"
+      },
+      {
+        "id": 5,
+        "name": "Cómo llegar",
+        "link": "/como-llegar",
+        "mostrar": true,
+        "titulo1": "Cómo llegar",
+        "titulo2": ""
+      },
+      {
+        "id": 6,
+        "name": "Preguntas frecuentes",
+        "link": "/preguntas-frecuentes",
+        "mostrar": false,
+        "titulo1": "Preguntas frecuentes",
+        "titulo2": ""
+      },
+      {
+        "id": 7,
+        "name": "Términos y condiciones",
+        "link": "/terminos-condiciones",
+        "mostrar": false,
+        "titulo1": "Términos y condiciones",
+        "titulo2": ""
+      }
+    ],
+    "labelRedes": "Seguinos en nuestras redes:",
+    "itemsRedes": [
+      {
+        "id": 1,
+        "path": "M17.525,9H14V7c0-1.032,0.084-1.682,1.563-1.682h1.868v-3.18C16.522,2.044,15.608,1.998,14.693,2 C11.98,2,10,3.657,10,6.699V9H7v4l3-0.001V22h4v-9.003l3.066-0.001L17.525,9z",
+        "viewBox": "0 0 24 24",
+        "width": "30",
+        "height": "30",
+        "href": "https://www.facebook.com/profile.php?id=100057465485820",
+        "alt": "facebook",
+        "style": { "padding": "5px", "fill": "#ffffff" },
+        "x": "0px",
+        "xmlns": "http://www.w3.org/2000/svg",
+        "y": "0px"
+      },
+      {
+        "id": 2,
+        "path": "M22,3.999c-0.78,0.463-2.345,1.094-3.265,1.276c-0.027,0.007-0.049,0.016-0.075,0.023c-0.813-0.802-1.927-1.299-3.16-1.299 c-2.485,0-4.5,2.015-4.5,4.5c0,0.131-0.011,0.372,0,0.5c-3.353,0-5.905-1.756-7.735-4c-0.199,0.5-0.286,1.29-0.286,2.032 c0,1.401,1.095,2.777,2.8,3.63c-0.314,0.081-0.66,0.139-1.02,0.139c-0.581,0-1.196-0.153-1.759-0.617c0,0.017,0,0.033,0,0.051 c0,1.958,2.078,3.291,3.926,3.662c-0.375,0.221-1.131,0.243-1.5,0.243c-0.26,0-1.18-0.119-1.426-0.165 c0.514,1.605,2.368,2.507,4.135,2.539c-1.382,1.084-2.341,1.486-5.171,1.486H2C3.788,19.145,6.065,20,8.347,20 C15.777,20,20,14.337,20,8.999c0-0.086-0.002-0.266-0.005-0.447C19.995,8.534,20,8.517,20,8.499c0-0.027-0.008-0.053-0.008-0.08 c-0.003-0.136-0.006-0.263-0.009-0.329c0.79-0.57,1.475-1.281,2.017-2.091c-0.725,0.322-1.503,0.538-2.32,0.636 C20.514,6.135,21.699,4.943,22,3.999z",
+        "viewBox": "0 0 24 24",
+        "width": "30",
+        "height": "30",
+        "href": "https://twitter.com/teatrogranrex",
+        "alt": "twitter",
+        "style": { "padding": "5px", "fill": "#ffffff" },
+        "x": "0px",
+        "xmlns": "http://www.w3.org/2000/svg",
+        "y": "0px"
+      },
+      {
+        "id": 3,
+        "path": "M 9.9980469 3 C 6.1390469 3 3 6.1419531 3 10.001953 L 3 20.001953 C 3 23.860953 6.1419531 27 10.001953 27 L 20.001953 27 C 23.860953 27 27 23.858047 27 19.998047 L 27 9.9980469 C 27 6.1390469 23.858047 3 19.998047 3 L 9.9980469 3 z M 22 7 C 22.552 7 23 7.448 23 8 C 23 8.552 22.552 9 22 9 C 21.448 9 21 8.552 21 8 C 21 7.448 21.448 7 22 7 z M 15 9 C 18.309 9 21 11.691 21 15 C 21 18.309 18.309 21 15 21 C 11.691 21 9 18.309 9 15 C 9 11.691 11.691 9 15 9 z M 15 11 A 4 4 0 0 0 11 15 A 4 4 0 0 0 15 19 A 4 4 0 0 0 19 15 A 4 4 0 0 0 15 11 z",
+        "viewBox": "0 0 30 30",
+        "width": "30",
+        "height": "30",
+        "href": "https://www.instagram.com/teatro_granrex/",
+        "alt": "instagram",
+        "style": { "padding": "5px", "fill": "#ffffff" },
+        "x": "0px",
+        "xmlns": "http://www.w3.org/2000/svg",
+        "y": "0px"
+      }
+    ]
+  },
   "historia": {
     "descripcion": "Es el teatro de los grandes espectáculos musicales y recibe a los artistas más consagrados, nacional e internacionalmente. Su capacidad es para 3.262 espectadores.<br /> <br /> El edificio, propiedad de Cordero, Cavallo y Lautaret S.A. y terminado en 1937, después de tan solo siete meses, es un exponente arquitectónico del estilo racionalista, obra del arquitecto Alberto Prebisch, el mismo que creó el Obelisco de Buenos Aires, y del ingeniero civil Adolfo T. Moret. En sus inicios contaba con altoparlantes en el vestíbulo que permitían a los espectadores llamar a sus coches, que se encontraban en la estación de más de 200 coches situada en los dos subsuelos. También poseía un bar que ocupaba tres pisos, un bowling y billares en el subsuelo. <br /> <br /> <strong>Descripción arquitectónica</strong> <br /> Obra significativa de Alberto Prebisch, el Gran Rex representó un hito dentro de la historia de la arquitectura moderna argentina. Destaca  en su construcción el efecto de continuidad entre el exterior e interior, con su foyer o vestíbulo separados “del afuera” por una superficie vidriada, solo cortada por una marquesina lineal. Este magnífico espacio se destaca en forma ambivalente, con una grandiosa estructura resuelta con una simpleza formal y estética admirable. Su interior, de idénticas características espaciales y constructivas, destaca por su absoluta falta de decoración, alejándose definitivamente de todos aquellas típicas salas cargadas de metáforas a las antiguos palacios de música clásicos europeos.La estructura del edificio fue realizada en hormigón armado, y el techo de la sala en cabriadas metálicas. La imponente fachada es un sencillo rectángulo de gran volumen revestido en travertino romano sin lustrar y carente de motivos ornamentales, con una gran superficie vidriada que muestra los interiores del edificio a la gente que pasa por la vereda, y es cortada en mitades por una fina viga sostenida de arriba por tensores redondos de hierro recubiertos en bronce dorado. El interior es del mismo estilo racionalista, y el hall tiene un doble juego de escaleras pensadas para vaciar la sala rápidamente y un conjunto de ascensores que comunican con las cocheras. Posee una sala asimétrica, producto de haber sido construido en un terreno irregular. Por ello, la está dispuesta en forma oblicua a la línea del frente. <br /> Esta sala es una gran cáscara dividida en fajas encimadas, inspirada en el Radio City de New York. Los materiales son mármol Botticcino italiano, revoque, madera enchapada y bronce. Los espectadores se disponen en tres niveles: platea, primer balcón y segundo balcón. Tanto las butacas como los telones y alfombras originales fueron de color tierra siena quemada, y las paredes fueron pintadas a la témpera de color ocre ligeramente rojizo.",
     "imagenes": [
       {
         "id": 1,
-        "src": "https://www.tuentrada.com/teatro/gran-rex/imagenes/galeria/1.webp"
+        "src": "/storage/imagenes/galeria/1.webp"
       },
       {
         "id": 2,
-        "src": "https://www.tuentrada.com/teatro/gran-rex/imagenes/galeria/2.webp"
+        "src": "/storage/imagenes/galeria/2.webp"
       },
       {
         "id": 3,
-        "src": "https://www.tuentrada.com/teatro/gran-rex/imagenes/galeria/3.webp"
+        "src": "/storage/imagenes/galeria/3.webp"
       },
       {
         "id": 4,
-        "src": "https://www.tuentrada.com/teatro/gran-rex/imagenes/galeria/4.webp"
+        "src": "/storage/imagenes/galeria/4.webp"
       },
       {
         "id": 5,
-        "src": "https://www.tuentrada.com/teatro/gran-rex/imagenes/galeria/5.webp"
+        "src": "/storage/imagenes/galeria/5.webp"
       },
       {
         "id": 6,
-        "src": "https://www.tuentrada.com/teatro/gran-rex/imagenes/galeria/6.webp"
+        "src": "/storage/imagenes/galeria/6.webp"
       },
       {
         "id": 7,
-        "src": "https://www.tuentrada.com/teatro/gran-rex/imagenes/galeria/7.webp"
+        "src": "/storage/imagenes/galeria/7.webp"
       },
       {
         "id": 8,
-        "src": "https://www.tuentrada.com/teatro/gran-rex/imagenes/galeria/8.webp"
+        "src": "/storage/imagenes/galeria/8.webp"
       },
       {
         "id": 9,
-        "src": "https://www.tuentrada.com/teatro/gran-rex/imagenes/galeria/9.webp"
+        "src": "/storage/imagenes/galeria/9.webp"
       },
       {
         "id": 10,
-        "src": "https://www.tuentrada.com/teatro/gran-rex/imagenes/galeria/10.webp"
+        "src": "/storage/imagenes/galeria/10.webp"
       },
       {
         "id": 11,
-        "src": "https://www.tuentrada.com/teatro/gran-rex/imagenes/galeria/11.webp"
+        "src": "/storage/imagenes/galeria/11.webp"
       },
       {
         "id": 12,
-        "src": "https://www.tuentrada.com/teatro/gran-rex/imagenes/galeria/12.webp"
+        "src": "/storage/imagenes/galeria/12.webp"
       },
       {
         "id": 13,
-        "src": "https://www.tuentrada.com/teatro/gran-rex/imagenes/galeria/13.webp"
+        "src": "/storage/imagenes/galeria/13.webp"
       },
       {
         "id": 14,
-        "src": "https://www.tuentrada.com/teatro/gran-rex/imagenes/galeria/14.webp"
+        "src": "/storage/imagenes/galeria/14.webp"
       }
     ]
   },
   "comoLlegar": {
     "descripcion": "<strong> Av. Corrientes 857 <br /> Ciudad Autónoma de Buenos Aires, Argentina </strong> <br /> <br /> <strong>¿CÓMO LLEGAR? <br /> </strong> Al estar ubicado en pleno centro porteño a menos de dos cuadras del obelisco sobre la Avenida Corrientes, llegar al Teatro Gran Rex es muy fácil. Sin embargo, su ubicación puede ser un problema por la gran cantidad de tránsito en la zona y se recomienda ir con tiempo de sobra para evitar inconvenientes. <br /> <br /> <strong> EN SUBTE: <br /> </strong> Línea B (Estacion Carlos Pelegrini) <br /> Línea C (Estacion Diagonal Norte) <br /> Linea D (Estacion 9 de Julio) <br /> <br /> <br /> <strong>   EN COLECTIVO: <br /> </strong> Líneas 6, 7, 9, 10, 17, 23, 24, 26, 29, 45, 50, 59, 70, 99, 100, 109, 111, 142, 146, 155 <br /> <br /> <strong> ESTACIONAMIENTO <br /> </strong> El teatro cuenta con un estacionamiento contiguo.",
     "srcIframe": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.030792131673!2d-58.38105528527267!3d-34.60338286498632!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccaceed5746b9%3A0xf933ab84305babc0!2sTeatro%20Gran%20Rex!5e0!3m2!1ses!2sar!4v1681154982429!5m2!1ses!2sar"
+  },
+  "footer": {
+    "items": [
+      {
+        "id": 1,
+        "descripcion": "<strong>Dirección:</strong> Av. Corrientes 857, Capital Federal.",
+        "mostrar": true
+      },
+      {
+        "id": 2,
+        "descripcion": "<strong>Boletería:</strong> Lunes a Sábado de 12:00 a 18:00hs. Feriados Cerrado.",
+        "mostrar": true
+      }
+    ],
+    "copyright": "Copyright © 2023 tuentrada.com",
+    "derechosReservados": "Todos los derechos reservados"
   },
   "eventos": [
     {
@@ -115,8 +229,8 @@
         "path": "/master-stroke"
       },
       "imagenes": {
-        "evento": "https://www.tuentrada.com/teatro/gran-rex/imagenes/queen.webp",
-        "plano": "https://www.tuentrada.com/teatro/gran-rex/imagenes/planos/tue1.webp"
+        "evento": "/storage/imagenes/queen.webp",
+        "plano": "/storage/imagenes/planos/tue1.webp"
       },
       "nombre": "queen por master stroke",
       "nombrePath": "master-stroke",
@@ -226,7 +340,8 @@
         "botones": [
           {
             "id": 1,
-            "name": "comprar"
+            "name": "comprar",
+            "href": "https://www.ticketek.com.ar/damian-cordoba/teatro-gran-rex"
           },
           {
             "id": 2,
@@ -237,8 +352,8 @@
         "path": "/damian-cordoba"
       },
       "imagenes": {
-        "evento": "https://www.tuentrada.com/teatro/gran-rex/imagenes/damian_cordoba.webp",
-        "plano": "https://www.tuentrada.com/teatro/gran-rex/imagenes/planos/tue1.webp"
+        "evento": "/storage/imagenes/damian_cordoba.webp",
+        "plano": "/storage/imagenes/planos/tue1.webp"
       },
       "nombre": "damián córdoba",
       "nombrePath": "damian-cordoba",
@@ -356,7 +471,8 @@
         "botones": [
           {
             "id": 1,
-            "name": "comprar"
+            "name": "comprar",
+            "href": "https://www.ticketek.com.ar/international-festival-ballet-peace/teatro-gran-rex"
           },
           {
             "id": 2,
@@ -367,8 +483,8 @@
         "path": "/festival-ballet"
       },
       "imagenes": {
-        "evento": "https://www.tuentrada.com/teatro/gran-rex/imagenes/festival_ballet.webp",
-        "plano": "https://www.tuentrada.com/teatro/gran-rex/imagenes/planos/tue1.webp"
+        "evento": "/storage/imagenes/festival_ballet.webp",
+        "plano": "/storage/imagenes/planos/tue1.webp"
       },
       "nombre": "international festival ballet",
       "nombrePath": "festival-ballet",
@@ -479,7 +595,8 @@
         "botones": [
           {
             "id": 1,
-            "name": "comprar"
+            "name": "comprar",
+            "href": "https://www.ticketek.com.ar/sergio-torres/teatro-gran-rex"
           },
           {
             "id": 2,
@@ -490,8 +607,8 @@
         "path": "/sergio-torres"
       },
       "imagenes": {
-        "evento": "https://www.tuentrada.com/teatro/gran-rex/imagenes/sergio_torres.webp",
-        "plano": "https://www.tuentrada.com/teatro/gran-rex/imagenes/planos/tue1.webp"
+        "evento": "/storage/imagenes/sergio_torres.webp",
+        "plano": "/storage/imagenes/planos/tue1.webp"
       },
       "nombre": "sergio torres",
       "nombrePath": "sergio-torres",
@@ -603,7 +720,8 @@
         "botones": [
           {
             "id": 1,
-            "name": "comprar"
+            "name": "comprar",
+            "href": "https://www.ticketek.com.ar/dale-qva/teatro-gran-rex"
           },
           {
             "id": 2,
@@ -614,8 +732,8 @@
         "path": "/daleqva"
       },
       "imagenes": {
-        "evento": "https://www.tuentrada.com/teatro/gran-rex/imagenes/dale_qva.webp",
-        "plano": "https://www.tuentrada.com/teatro/gran-rex/imagenes/planos/tue1.webp"
+        "evento": "/storage/imagenes/dale_qva.webp",
+        "plano": "/storage/imagenes/planos/tue1.webp"
       },
       "nombre": "dale q’ va",
       "nombrePath": "daleqva",
@@ -718,7 +836,8 @@
         "botones": [
           {
             "id": 1,
-            "name": "comprar"
+            "name": "comprar",
+            "href": "https://www.ticketek.com.ar/turf/teatro-gran-rex"
           },
           {
             "id": 2,
@@ -729,8 +848,8 @@
         "path": "/turf"
       },
       "imagenes": {
-        "evento": "https://www.tuentrada.com/teatro/gran-rex/imagenes/turf.webp",
-        "plano": "https://www.tuentrada.com/teatro/gran-rex/imagenes/planos/tue1.webp"
+        "evento": "/storage/imagenes/turf.webp",
+        "plano": "/storage/imagenes/planos/tue1.webp"
       },
       "nombre": "turf",
       "nombrePath": "turf",
@@ -833,7 +952,8 @@
         "botones": [
           {
             "id": 1,
-            "name": "comprar"
+            "name": "comprar",
+            "href": "https://www.ticketek.com.ar/beats/teatro-gran-rex"
           },
           {
             "id": 2,
@@ -844,8 +964,8 @@
         "path": "/the-beats"
       },
       "imagenes": {
-        "evento": "https://www.tuentrada.com/teatro/gran-rex/imagenes/the_beats.webp",
-        "plano": "https://www.tuentrada.com/teatro/gran-rex/imagenes/planos/tue1.webp"
+        "evento": "/storage/imagenes/the_beats.webp",
+        "plano": "/storage/imagenes/planos/tue1.webp"
       },
       "nombre": "the beats",
       "nombrePath": "the-beats",
@@ -955,7 +1075,8 @@
         "botones": [
           {
             "id": 1,
-            "name": "comprar"
+            "name": "comprar",
+            "href": "https://www.ticketek.com.ar/massacre/teatro-gran-rex"
           },
           {
             "id": 2,
@@ -966,8 +1087,8 @@
         "path": "/massacre"
       },
       "imagenes": {
-        "evento": "https://www.tuentrada.com/teatro/gran-rex/imagenes/massacre.webp",
-        "plano": "https://www.tuentrada.com/teatro/gran-rex/imagenes/planos/tue1.webp"
+        "evento": "/storage/imagenes/massacre.webp",
+        "plano": "/storage/imagenes/planos/tue1.webp"
       },
       "nombre": "massacre",
       "nombrePath": "massacre",
@@ -1077,7 +1198,8 @@
         "botones": [
           {
             "id": 1,
-            "name": "comprar"
+            "name": "comprar",
+            "href": "https://www.ticketek.com.ar/jd-pantoja-kim-loaiza/teatro-gran-rex"
           },
           {
             "id": 2,
@@ -1088,8 +1210,8 @@
         "path": "/jdpantoja-kimloaiza"
       },
       "imagenes": {
-        "evento": "https://www.tuentrada.com/teatro/gran-rex/imagenes/jdpantoja_kimloaiza.webp",
-        "plano": "https://www.tuentrada.com/teatro/gran-rex/imagenes/planos/tue1.webp"
+        "evento": "/storage/imagenes/jdpantoja_kimloaiza.webp",
+        "plano": "/storage/imagenes/planos/tue1.webp"
       },
       "nombre": "jd pantoja kim loaiza",
       "nombrePath": "jdpantoja-kimloaiza",
@@ -1202,7 +1324,8 @@
         "botones": [
           {
             "id": 1,
-            "name": "comprar"
+            "name": "comprar",
+            "href": "https://www.ticketek.com.ar/sergio-galleguillo/teatro-gran-rex"
           },
           {
             "id": 2,
@@ -1213,8 +1336,8 @@
         "path": "/sergio-galleguillo"
       },
       "imagenes": {
-        "evento": "https://www.tuentrada.com/teatro/gran-rex/imagenes/sergio_galleguillo.webp",
-        "plano": "https://www.tuentrada.com/teatro/gran-rex/imagenes/planos/tue1.webp"
+        "evento": "/storage/imagenes/sergio_galleguillo.webp",
+        "plano": "/storage/imagenes/planos/tue1.webp"
       },
       "nombre": "sergio galleguillo",
       "nombrePath": "sergio-galleguillo",
@@ -1829,7 +1952,8 @@
         "botones": [
           {
             "id": 1,
-            "name": "comprar"
+            "name": "comprar",
+            "href": "https://www.ticketek.com.ar/matilda/teatro-gran-rex"
           },
           {
             "id": 2,
@@ -1840,8 +1964,8 @@
         "path": "/matilda"
       },
       "imagenes": {
-        "evento": "https://www.tuentrada.com/teatro/gran-rex/imagenes/matilda.webp",
-        "plano": "https://www.tuentrada.com/teatro/gran-rex/imagenes/planos/tue1.webp"
+        "evento": "/storage/imagenes/matilda.webp",
+        "plano": "/storage/imagenes/planos/tue1.webp"
       },
       "nombre": "matilda",
       "nombrePath": "matilda",
@@ -1939,7 +2063,8 @@
         "botones": [
           {
             "id": 1,
-            "name": "comprar"
+            "name": "comprar",
+            "href": "https://www.tuentrada.com/eventos/detalle/Julieta-Venegas/204421909437"
           },
           {
             "id": 2,
@@ -1950,8 +2075,8 @@
         "path": "/julieta-venegas"
       },
       "imagenes": {
-        "evento": "https://www.tuentrada.com/teatro/gran-rex/imagenes/julieta-venegas.webp",
-        "plano": "https://www.tuentrada.com/teatro/gran-rex/imagenes/planos/tue1.webp"
+        "evento": "/storage/imagenes/julieta-venegas.webp",
+        "plano": "/storage/imagenes/planos/tue1.webp"
       },
       "nombre": "julieta venegas",
       "nombrePath": "julieta-venegas",
@@ -2064,7 +2189,8 @@
         "botones": [
           {
             "id": 1,
-            "name": "comprar"
+            "name": "comprar",
+            "href": "https://www.ticketek.com.ar/bryndis/teatro-gran-rex"
           },
           {
             "id": 2,
@@ -2075,8 +2201,8 @@
         "path": "/bxs"
       },
       "imagenes": {
-        "evento": "https://www.tuentrada.com/teatro/gran-rex/imagenes/bxs.webp",
-        "plano": "https://www.tuentrada.com/teatro/gran-rex/imagenes/planos/tue1.webp"
+        "evento": "/storage/imagenes/bxs.webp",
+        "plano": "/storage/imagenes/planos/tue1.webp"
       },
       "nombre": "bxs - bryndis x siempre",
       "nombrePath": "bxs",
@@ -2179,7 +2305,8 @@
         "botones": [
           {
             "id": 1,
-            "name": "comprar"
+            "name": "comprar",
+            "href": "https://www.tuentrada.com/eventos/detalle/Daniel-Agostini/553776971040"
           },
           {
             "id": 2,
@@ -2190,8 +2317,8 @@
         "path": "/daniel-agostini"
       },
       "imagenes": {
-        "evento": "https://www.tuentrada.com/teatro/gran-rex/imagenes/daniel_agostini.webp",
-        "plano": "https://www.tuentrada.com/teatro/gran-rex/imagenes/planos/tue1.webp"
+        "evento": "/storage/imagenes/daniel_agostini.webp",
+        "plano": "/storage/imagenes/planos/tue1.webp"
       },
       "nombre": "daniel agostini",
       "nombrePath": "daniel-agostini",
@@ -2303,7 +2430,8 @@
         "botones": [
           {
             "id": 1,
-            "name": "comprar"
+            "name": "comprar",
+            "href": "https://www.tuentrada.com/eventos/detalle/Chili-Fernandez/495716168868"
           },
           {
             "id": 2,
@@ -2314,8 +2442,8 @@
         "path": "/chili-fernandez"
       },
       "imagenes": {
-        "evento": "https://www.tuentrada.com/teatro/gran-rex/imagenes/chili-fernandez.webp",
-        "plano": "https://www.tuentrada.com/teatro/gran-rex/imagenes/planos/tue1.webp"
+        "evento": "/storage/imagenes/chili-fernandez.webp",
+        "plano": "/storage/imagenes/planos/tue1.webp"
       },
       "nombre": "chili fernandez",
       "nombrePath": "chili-fernandez",
@@ -2425,7 +2553,8 @@
         "botones": [
           {
             "id": 1,
-            "name": "comprar"
+            "name": "comprar",
+            "href": "https://www.tuentrada.com/eventos/detalle/Perota-Chingo/114421632871"
           },
           {
             "id": 2,
@@ -2436,8 +2565,8 @@
         "path": "/perota-chingo"
       },
       "imagenes": {
-        "evento": "https://www.tuentrada.com/teatro/gran-rex/imagenes/perota-chingo.webp",
-        "plano": "https://www.tuentrada.com/teatro/gran-rex/imagenes/planos/tue1.webp"
+        "evento": "/storage/imagenes/perota-chingo.webp",
+        "plano": "/storage/imagenes/planos/tue1.webp"
       },
       "nombre": "perotá chingó",
       "nombrePath": "perota-chingo",

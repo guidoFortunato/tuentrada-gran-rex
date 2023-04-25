@@ -9,7 +9,7 @@ import "../css/footer.css";
 
 
 export const Home = () => {
-  const { eventosTotales, isLoading, dataNavbar, isLoadingNavbar } = useContext(EventosContext);
+  const { eventosTotales, isLoading } = useContext(EventosContext);
 
   useEffect(() => {
     setTimeout(() => {
@@ -20,9 +20,7 @@ export const Home = () => {
   if (isLoading) {
     return <Spinner />;
   }
-  if (isLoadingNavbar) {
-    return <Spinner />;
-  }
+
 
   return (
     <>
@@ -30,9 +28,9 @@ export const Home = () => {
         <div className="header-home">
           <h1 className="titulo-principal animate__animated animate__fadeInDown animate__fast	 ">
             {" "}
-            <strong>{ dataNavbar !== null && dataNavbar[0].items[0].titulo1.toUpperCase() }</strong>
+            <strong>{ eventosTotales?.navbar.items[0].titulo1.toUpperCase() }</strong>
           </h1>
-          <FormBusqueda placeholder={ dataNavbar[0].placeholderInput } />
+          <FormBusqueda placeholder={ eventosTotales?.navbar.placeholderInput } />
         </div>
       </header>
       <main>
@@ -43,7 +41,7 @@ export const Home = () => {
                 style={{ fontSize: "30px" }}
                 className="my-3 animate__fadeIn animate__delay-1s tittle-h2"
               >
-                {dataNavbar !== null && dataNavbar[0].items[0].titulo2.toUpperCase()}
+                {eventosTotales?.navbar.items[0].titulo2.toUpperCase()}
               </h2>
             </div>
           </div>

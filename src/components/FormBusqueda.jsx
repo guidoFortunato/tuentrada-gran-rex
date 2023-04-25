@@ -33,6 +33,7 @@ export const FormBusqueda = ({placeholder}) => {
       </div>
       <div className="container-input">
         <input
+          
           className="border-0"
           placeholder={placeholder}
           value={evento}
