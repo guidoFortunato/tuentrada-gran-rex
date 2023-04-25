@@ -61,7 +61,7 @@ export const Historia = () => {
       >
         <div className="row">
           {eventosTotales?.historia.imagenes.map((item) => (
-            <ImagenHistoria src={item.src} />
+            <ImagenHistoria src={item.src} key={ item.id } />
           ))}
         </div>
       </div>
