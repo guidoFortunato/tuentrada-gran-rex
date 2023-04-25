@@ -87,7 +87,7 @@ export const DetalleEvento = () => {
                 if (item.name !== "volver") {
                   return (
                     <a
-                      href={evento?.links.href}
+                      href={item.href}
                       className=" text-center"
                       target="_blank"
                       rel="noreferrer"
