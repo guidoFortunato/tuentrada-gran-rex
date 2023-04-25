@@ -2,7 +2,7 @@ import "../css/tablaprecios.css";
 
 export const TablaPrecios = ({ ubicaciones }) => {
   return (
-    <table className="table mt-4" style={{backgroundColor:"white"}} >
+    <table className="table mt-4" style={{backgroundColor:"white", fontSize:"12px"}} >
       <thead className="cabecera-tabla">
         <tr>
           <th scope="col" className="text-white">

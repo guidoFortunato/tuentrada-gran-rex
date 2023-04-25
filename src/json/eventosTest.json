@@ -4,7 +4,7 @@
     "titulo2": "ubicaciones y precios",
     "botonPlano": "ver ubicaciones"
   },
-  "redes": {
+  "navbar": {
     "logo": "https://tuentrada.com/teatro/gran-rex/imagenes/logo_rex_negro.jpg",
     "altLogo": "logo gran rex",
     "placeholderInput": "Bucar Evento",
