@@ -11,15 +11,17 @@ import "../css/detalleevento.css";
 
 export const DetalleEvento = () => {
   const { eventosTotales, isLoading } = useContext(EventosContext);
-  const [ evento, setEvento ] = useState(null);
-  const [ modalIsOpen, setModalIsOpen ] = useState(false);
+  const [evento, setEvento] = useState(null);
+  const [modalIsOpen, setModalIsOpen] = useState(false);
   const modalRef = useRef(null);
   const navigate = useNavigate();
   const { name, id } = useParams();
 
   useEffect(() => {
-    if (eventosTotales?.length > 0) {
-      const data = eventosTotales.find((item) => (item.nombrePath == name) && (item.disabled === false));
+    if (eventosTotales !== null) {
+      const data = eventosTotales.eventos.find(
+        (item) => item.nombrePath == name && item.disabled === false
+      );
       if (data) {
         setEvento(data);
       } else {
@@ -47,10 +49,10 @@ export const DetalleEvento = () => {
   };
 
   if (isLoading) {
-    return <Spinner/>;
+    return <Spinner />;
   }
   if (evento === null) {
-    return <Spinner/>;
+    return <Spinner />;
   }
 
   return (
@@ -79,30 +81,40 @@ export const DetalleEvento = () => {
                 __html: DOMPurify.sanitize(evento?.descripcion),
               }}
             ></p>
-            
+
             <div className="d-flex justify-content-center flex-column align-items-center mt-4 ">
-              <a
-                href={evento?.links.href}
-                className=" text-center"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <div
-                  className="btn-general mb-3"
-                  style={{ fontSize: "1.6rem", width: "150px" }}
-                >
-                  Comprar
-                </div>
-              </a>
-              <div className="text-center">
-                <div
-                  className="btn-general"
-                  onClick={returnLastPath}
-                  style={{ fontSize: "1.6rem", width: "150px" }}
-                >
-                  Volver
-                </div>
-              </div>
+              {evento?.links.botones.map((item) => {
+                if (item.name !== "volver") {
+                  return (
+                    <a
+                      href={evento?.links.href}
+                      className=" text-center"
+                      target="_blank"
+                      rel="noreferrer"
+                      key={item.id}
+                    >
+                      <div
+                        className="btn-general mb-3"
+                        style={{ fontSize: "1.6rem", width: "150px" }}
+                      >
+                        {item.name.charAt(0).toUpperCase() + item.name.slice(1).toLowerCase()}
+                      </div>
+                    </a>
+                  );
+                } else {
+                  return (
+                    <div className="text-center" key={item.id}>
+                      <div
+                        className="btn-general"
+                        onClick={returnLastPath}
+                        style={{ fontSize: "1.6rem", width: "150px" }}
+                      >
+                        {item.name.charAt(0).toUpperCase() + item.name.slice(1).toLowerCase()}
+                      </div>
+                    </div>
+                  );
+                }
+              })}
             </div>
           </div>
 
@@ -115,26 +127,15 @@ export const DetalleEvento = () => {
                 fontSize: "30px",
               }}
             >
-              INFORMACIÓN GENERAL
+              {eventosTotales?.detalle.titulo1}
             </h2>
+            <p
+              className="animate_animated animate_fadeIn"
+              dangerouslySetInnerHTML={{
+                __html: DOMPurify.sanitize(evento?.informacionGeneral),
+              }}
+            ></p>
 
-            <p style={{ color: "black" }}>
-              El ingreso al establecimiento implica la autorización a la
-              Productora y a Cordero, Cavallo y Lautaret S.A. a utilizar el
-              contenido filmado y /o fotografiado y el uso de imagen personal
-              sin compensación alguna. <br />
-              <br />
-              <strong> Entradas en venta </strong> <br />
-              En las boleterias del Teatro Gran Rex (Av. Corrientes 857 - Lunes
-              a Sábado de 12 a 18 hs. Feriados Cerrado.) <br /> <br />
-              <strong>Personas con movilidad reducida</strong> <br />
-              Las sillas de ruedas se ubican en el espacio habilitado para las
-              mismas detrás de la fila 25 del sector derecho de la Platea. En
-              todos los casos abonan la entrada. Dichas localidades deben ser
-              adquiridas solo en la boleteria del Teatro, presentando
-              certificado de discapacidad. Al momento de la compra, abonan el
-              ticket de menor valor disponible.
-            </p>
           </div>
           <div>
             <h2
@@ -145,7 +146,7 @@ export const DetalleEvento = () => {
                 fontSize: "30px",
               }}
             >
-              UBICACIONES Y PRECIOS
+              {eventosTotales?.detalle.titulo2}
             </h2>
           </div>
           <div className="row justify-content-center">
@@ -164,7 +165,7 @@ export const DetalleEvento = () => {
                 className="btn-general mt-3 ocultar-responsive"
                 onClick={handleOpenModal}
               >
-                Ver ubicaciones
+                {eventosTotales?.detalle.botonPlano.charAt(0).toUpperCase() + eventosTotales?.detalle.botonPlano.slice(1).toLowerCase()}
               </button>
               <div className="position-relative" onClick={handleCloseModal}>
                 <Modal
@@ -196,6 +197,7 @@ export const DetalleEvento = () => {
           </div>
         </div>
       </div>
-    </>
-  );
+          
+    </>
+  );
 };

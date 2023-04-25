@@ -8,7 +8,6 @@ import { Spinner } from "./";
 export const Navbar = () => {
   const [isNavCollapsed, setIsNavCollapsed] = useState(true);
   const { dataNavbar } = useContext(EventosContext);
-  console.log({dataNavbar})
   const handleNavCollapse = () => setIsNavCollapsed(!isNavCollapsed);
 
   if (!dataNavbar) {
@@ -19,7 +18,7 @@ export const Navbar = () => {
     <nav className="navbar navbar-dark navbar-expand-lg color-navbar sticky-top animate__animated animate__fadeIn animate__faster">
       <div className="container-fluid">
         <Link className="navbar-brand ms-lg-4" to="/">
-          <img src={dataNavbar[0]?.logo} alt={ dataNavbar[0].altLogo } style={{ width: "75px" }} />
+          <img src={dataNavbar !== null && dataNavbar[0].logo} alt={dataNavbar !== null && dataNavbar[0].altLogo } style={{ width: "75px" }} />
         </Link>
 
         <button
@@ -44,7 +43,7 @@ export const Navbar = () => {
           id="navbarNav"
         >
           <ul className="navbar-nav ms-auto" style={{ fontSize: "18px" }}>
-            {dataNavbar[0]?.items.map(
+            {dataNavbar !== null && dataNavbar[0].items.map(
               (item) =>
                 item.mostrar && (
                   <li className="nav-item item-nav" key={item.id}>
@@ -61,7 +60,7 @@ export const Navbar = () => {
           </ul>
           <div className="d-flex flex-column ms-lg-auto me-lg-4">
             <div>
-              <span className="span-redes me-2">{ dataNavbar[0]?.labelRedes }</span>
+              <span className="span-redes me-2">{ dataNavbar !== null && dataNavbar[0].labelRedes }</span>
             </div>
             <div>
               <ul className="list-unstyled d-flex mb-0">

@@ -8,13 +8,14 @@ import bootstrap5Plugin from "@fullcalendar/bootstrap5";
 import listViewPlugin from "@fullcalendar/list";
 import tippy from "tippy.js";
 
+import { useContext } from "react";
+import { EventosContext } from "../context/EventosProvider";
+import { Spinner } from "../components";
+
 import 'tippy.js/dist/tippy.css';
 import 'tippy.js/animations/scale.css';
 
 import "../css/calendario.css";
-import { useContext } from "react";
-import { EventosContext } from "../context/EventosProvider";
-import { Spinner } from "../components";
 
 const month = [
   "Enero",
@@ -66,47 +67,29 @@ const eventTimeFormat = {
 };
 
 export const Calendario = () => {
-  const { eventosTotales, isLoading } = useContext(EventosContext)
+  const { eventosTotales, isLoading, dataNavbar } = useContext(EventosContext)
   const navigate = useNavigate();
   const { pathname } = useLocation();
-  localStorage.setItem("lastPath", pathname);
   const newEvents = []
+  
+  localStorage.setItem("lastPath", pathname);
 
-  for (let i = 0; i < eventosTotales?.length; i++) {
-    for (let j = 0; j < eventosTotales[i].fechas.length; j++) {
-      newEvents.push({id: eventosTotales[i].id, start: eventosTotales[i].fechas[j].start, title: eventosTotales[i].nombre.toUpperCase(), url: eventosTotales[i].links.path, display: eventosTotales[i].display, status: eventosTotales[i].fechas[j].estadoCalendario})      
+  for (let i = 0; i < eventosTotales?.eventos.length; i++) {
+    for (let j = 0; j < eventosTotales?.eventos[i].fechas.length; j++) {
+      newEvents.push({id: eventosTotales?.eventos[i].id, start: eventosTotales?.eventos[i].fechas[j].start, title: eventosTotales?.eventos[i].nombre.toUpperCase(), url: eventosTotales?.eventos[i].links.path, display: eventosTotales?.eventos[i].display, status: eventosTotales?.eventos[i].fechas[j].estadoCalendario})      
     }    
   }
 
-  // console.log({newEvents})
-
-  // const eventClassNames = (arg) => {
-  //   let classNames = [""];
-  //   if (arg.event.extendedProps.status.toLowerCase() === "disponible") {
-  //     classNames.push("evento-disponible");
-  //   } else {
-  //     classNames.push("evento-no-disponible");
-  //   }
-  //   return classNames;
-  // };
-
   const handleClick = (info) => {
+
     info.jsEvent.preventDefault();
-    // const urlEvento = info.event.url?.split("/")[1].toLowerCase() === "shows";
     const statusEvento =  info.event.extendedProps.status?.toLowerCase() !== "próximamente";
 
     if (statusEvento) {
       navigate(info.event.url);
     }
     
-    
-    // if (urlEvento) {
-    //   if (statusEvento) {
-    //     navigate(info.event.url);
-    //   }
-    // } else {
-    //   window.open(info.event.url, "_blank");
-    // }
+
 
   };
 
@@ -162,7 +145,7 @@ export const Calendario = () => {
         <div className="row animate__animated animate__fadeIn ">
           <div className="col-12 text-center mt-3 ">
             <h2 style={{ fontSize: "30px" }} className="my-3 tittle-h2">
-              Temporada
+              {dataNavbar !== null && dataNavbar[0]?.items[1].titulo1}
             </h2>
           </div>
         </div>

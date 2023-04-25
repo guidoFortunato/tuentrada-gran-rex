@@ -9,9 +9,7 @@ import "../css/footer.css";
 
 
 export const Home = () => {
-  const { eventosTotales, isLoading, dataNavbar } = useContext(EventosContext);
-  // const titulo1 = dataNavbar[0]?.items[0].titulo1?.toUpperCase()
-  // const titulo2 = dataNavbar[0]?.items[0].titulo2?.toUpperCase()
+  const { eventosTotales, isLoading, dataNavbar, isLoadingNavbar } = useContext(EventosContext);
 
   useEffect(() => {
     setTimeout(() => {
@@ -22,6 +20,9 @@ export const Home = () => {
   if (isLoading) {
     return <Spinner />;
   }
+  if (isLoadingNavbar) {
+    return <Spinner />;
+  }
 
   return (
     <>
@@ -29,9 +30,9 @@ export const Home = () => {
         <div className="header-home">
           <h1 className="titulo-principal animate__animated animate__fadeInDown animate__fast	 ">
             {" "}
-            <strong>{ dataNavbar[0]?.items[0].titulo1.toUpperCase() }</strong>
+            <strong>{ dataNavbar !== null && dataNavbar[0].items[0].titulo1.toUpperCase() }</strong>
           </h1>
-          <FormBusqueda placeholder={ dataNavbar[0]?.placeholderInput } />
+          <FormBusqueda placeholder={ dataNavbar[0].placeholderInput } />
         </div>
       </header>
       <main>
@@ -42,7 +43,7 @@ export const Home = () => {
                 style={{ fontSize: "30px" }}
                 className="my-3 animate__fadeIn animate__delay-1s tittle-h2"
               >
-                {dataNavbar[0]?.items[0].titulo2.toUpperCase()}
+                {dataNavbar !== null && dataNavbar[0].items[0].titulo2.toUpperCase()}
               </h2>
             </div>
           </div>
@@ -63,7 +64,7 @@ export const Home = () => {
           </div> */}
 
           <div className="row sin-padding-right-left animate__animated animate__fadeIn  animate__delay-1s ">
-            {eventosTotales?.map((evento) => (
+            {eventosTotales?.eventos.map((evento) => (
               <CardEvento
                 linkEvento={evento.links.path}
                 img={evento.imagenes.evento}

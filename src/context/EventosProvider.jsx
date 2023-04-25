@@ -21,12 +21,11 @@ const EventosProvider = (props) => {
     setEvento(nombreEvento);
   };
 
-  const { data, isLoading, hasError } = useFetch(urlTestEventos);
-  const { data: dataNavbar } = useFetch(urlTestNavbar);
-  console.log('llamada api data')
+  const { data: dataEventos, isLoading, hasError } = useFetch(urlTestEventos);
+  const { data: dataNavbar, isLoading: isLoadingNavbar } = useFetch(urlTestNavbar);
 
   const agregarEvento = (nombreEvento) => {
-    const resultadosExactos = data.eventos.filter((item) =>
+    const resultadosExactos = dataEventos.eventos.filter((item) =>
       item.keywords.some((keyword) =>
         keyword.toLowerCase().includes(nombreEvento.toLowerCase())
       )
@@ -40,10 +39,11 @@ const EventosProvider = (props) => {
         agregarEvento,
         dataNavbar,
         evento,
-        eventosTotales: data,
+        eventosTotales: dataEventos,
         handleEvento,
         hasError,
         isLoading,
+        isLoadingNavbar,
         listaEventosBusqueda,
       }}
     >
