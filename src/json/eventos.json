@@ -9,9 +9,65 @@
     "imagenes": [
       {
         "id": 1,
-        "url": ""
+        "src": "https://www.tuentrada.com/teatro/gran-rex/imagenes/galeria/1.webp"
+      },
+      {
+        "id": 2,
+        "src": "https://www.tuentrada.com/teatro/gran-rex/imagenes/galeria/2.webp"
+      },
+      {
+        "id": 3,
+        "src": "https://www.tuentrada.com/teatro/gran-rex/imagenes/galeria/3.webp"
+      },
+      {
+        "id": 4,
+        "src": "https://www.tuentrada.com/teatro/gran-rex/imagenes/galeria/4.webp"
+      },
+      {
+        "id": 5,
+        "src": "https://www.tuentrada.com/teatro/gran-rex/imagenes/galeria/5.webp"
+      },
+      {
+        "id": 6,
+        "src": "https://www.tuentrada.com/teatro/gran-rex/imagenes/galeria/6.webp"
+      },
+      {
+        "id": 7,
+        "src": "https://www.tuentrada.com/teatro/gran-rex/imagenes/galeria/7.webp"
+      },
+      {
+        "id": 8,
+        "src": "https://www.tuentrada.com/teatro/gran-rex/imagenes/galeria/8.webp"
+      },
+      {
+        "id": 9,
+        "src": "https://www.tuentrada.com/teatro/gran-rex/imagenes/galeria/9.webp"
+      },
+      {
+        "id": 10,
+        "src": "https://www.tuentrada.com/teatro/gran-rex/imagenes/galeria/10.webp"
+      },
+      {
+        "id": 11,
+        "src": "https://www.tuentrada.com/teatro/gran-rex/imagenes/galeria/11.webp"
+      },
+      {
+        "id": 12,
+        "src": "https://www.tuentrada.com/teatro/gran-rex/imagenes/galeria/12.webp"
+      },
+      {
+        "id": 13,
+        "src": "https://www.tuentrada.com/teatro/gran-rex/imagenes/galeria/13.webp"
+      },
+      {
+        "id": 14,
+        "src": "https://www.tuentrada.com/teatro/gran-rex/imagenes/galeria/14.webp"
       }
     ]
+  },
+  "comoLlegar": {
+    "descripcion": "<strong> Av. Corrientes 857 <br /> Ciudad Autónoma de Buenos Aires, Argentina </strong> <br /> <br /> <strong>¿CÓMO LLEGAR? <br /> </strong> Al estar ubicado en pleno centro porteño a menos de dos cuadras del obelisco sobre la Avenida Corrientes, llegar al Teatro Gran Rex es muy fácil. Sin embargo, su ubicación puede ser un problema por la gran cantidad de tránsito en la zona y se recomienda ir con tiempo de sobra para evitar inconvenientes. <br /> <br /> <strong> EN SUBTE: <br /> </strong> Línea B (Estacion Carlos Pelegrini) <br /> Línea C (Estacion Diagonal Norte) <br /> Linea D (Estacion 9 de Julio) <br /> <br /> <br /> <strong>   EN COLECTIVO: <br /> </strong> Líneas 6, 7, 9, 10, 17, 23, 24, 26, 29, 45, 50, 59, 70, 99, 100, 109, 111, 142, 146, 155 <br /> <br /> <strong> ESTACIONAMIENTO <br /> </strong> El teatro cuenta con un estacionamiento contiguo.",
+    "srcIframe": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.030792131673!2d-58.38105528527267!3d-34.60338286498632!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccaceed5746b9%3A0xf933ab84305babc0!2sTeatro%20Gran%20Rex!5e0!3m2!1ses!2sar!4v1681154982429!5m2!1ses!2sar"
   },
   "eventos": [
     {
@@ -174,7 +230,8 @@
           },
           {
             "id": 2,
-            "name": "volver","href": "/"
+            "name": "volver",
+            "href": "/"
           }
         ],
         "path": "/damian-cordoba"
@@ -303,7 +360,8 @@
           },
           {
             "id": 2,
-            "name": "volver","href": "/"
+            "name": "volver",
+            "href": "/"
           }
         ],
         "path": "/festival-ballet"
@@ -425,7 +483,8 @@
           },
           {
             "id": 2,
-            "name": "volver","href": "/"
+            "name": "volver",
+            "href": "/"
           }
         ],
         "path": "/sergio-torres"
@@ -548,7 +607,8 @@
           },
           {
             "id": 2,
-            "name": "volver","href": "/"
+            "name": "volver",
+            "href": "/"
           }
         ],
         "path": "/daleqva"
@@ -662,7 +722,8 @@
           },
           {
             "id": 2,
-            "name": "volver","href": "/"
+            "name": "volver",
+            "href": "/"
           }
         ],
         "path": "/turf"
@@ -776,7 +837,8 @@
           },
           {
             "id": 2,
-            "name": "volver","href": "/"
+            "name": "volver",
+            "href": "/"
           }
         ],
         "path": "/the-beats"
@@ -897,7 +959,8 @@
           },
           {
             "id": 2,
-            "name": "volver","href": "/"
+            "name": "volver",
+            "href": "/"
           }
         ],
         "path": "/massacre"
@@ -1018,7 +1081,8 @@
           },
           {
             "id": 2,
-            "name": "volver","href": "/"
+            "name": "volver",
+            "href": "/"
           }
         ],
         "path": "/jdpantoja-kimloaiza"
@@ -1142,7 +1206,8 @@
           },
           {
             "id": 2,
-            "name": "volver","href": "/"
+            "name": "volver",
+            "href": "/"
           }
         ],
         "path": "/sergio-galleguillo"
@@ -1768,7 +1833,8 @@
           },
           {
             "id": 2,
-            "name": "volver","href": "/"
+            "name": "volver",
+            "href": "/"
           }
         ],
         "path": "/matilda"
@@ -1877,7 +1943,8 @@
           },
           {
             "id": 2,
-            "name": "volver","href": "/"
+            "name": "volver",
+            "href": "/"
           }
         ],
         "path": "/julieta-venegas"
@@ -2001,7 +2068,8 @@
           },
           {
             "id": 2,
-            "name": "volver","href": "/"
+            "name": "volver",
+            "href": "/"
           }
         ],
         "path": "/bxs"
@@ -2115,7 +2183,8 @@
           },
           {
             "id": 2,
-            "name": "volver","href": "/"
+            "name": "volver",
+            "href": "/"
           }
         ],
         "path": "/daniel-agostini"
@@ -2238,7 +2307,8 @@
           },
           {
             "id": 2,
-            "name": "volver","href": "/"
+            "name": "volver",
+            "href": "/"
           }
         ],
         "path": "/chili-fernandez"
@@ -2359,7 +2429,8 @@
           },
           {
             "id": 2,
-            "name": "volver","href": "/"
+            "name": "volver",
+            "href": "/"
           }
         ],
         "path": "/perota-chingo"
