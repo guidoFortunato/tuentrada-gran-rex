@@ -68,7 +68,7 @@ export const DetalleEvento = () => {
         }
         // ref={eventDetailRef}
       >
-        <h2 className="titleDetalle">{evento?.nombre.toUpperCase()}</h2>
+        <h2 className="titleDetalle">{evento?.nombre.toUpperCase()} style</h2>
         <hr />
         <div className="row">
           <div className="col-12 col-lg-6 mb-5 mb-lg-0 text-center">
