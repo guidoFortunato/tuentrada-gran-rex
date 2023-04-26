@@ -1,39 +1,46 @@
 import { useContext } from "react";
 import { EventosContext } from "../context/EventosProvider";
 import { useLocation, useNavigate } from "react-router-dom";
+import { Spinner } from "./";
 
 export const FormBusqueda = ({placeholder}) => {
-  // const [evento, setEvento] = useState("");
-  const { evento, handleEvento, agregarEvento } = useContext(EventosContext);
+
+  const { evento, handleEvento, agregarEvento, dataNavbar, isLoadingNavbar } = useContext(EventosContext);
   let navigate = useNavigate();
   const { pathname } = useLocation();
+
   localStorage.setItem("lastPath", pathname);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e) => {  
+
     e.preventDefault();
-    if (evento?.length === 0) return;
+    if (evento.length === 0) return;
     agregarEvento(evento);
     navigate(`/busqueda-eventos/${evento}`);
     handleEvento("");
   };
 
+  if (isLoadingNavbar) {
+    return <Spinner />;
+  }
+
   return (
     <form className="d-flex form-buscar animate__animated animate__fadeIn animate__delay-1s" onSubmit={handleSubmit}>
       <div>
         <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="16"
-          height="16"
-          fill="gray"
+          xmlns={dataNavbar?.formBusqueda.xmlns}
+          width={dataNavbar?.formBusqueda.width}
+          height={dataNavbar?.formBusqueda.height}
+          fill={dataNavbar?.formBusqueda.fill}
           className="bi bi-search"
-          viewBox="0 0 16 16"
+          viewBox={dataNavbar?.formBusqueda.viewBox}
         >
-          <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+          <path d={dataNavbar?.formBusqueda.path} />
         </svg>
       </div>
       <div className="container-input">
         <input
-          style={{ padding:"0 2px", fontSize:"14px"}}
+          style={dataNavbar?.inputBusqueda.style}
           className="border-0 input"
           placeholder={placeholder}
           value={evento}
