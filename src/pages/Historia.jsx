@@ -1,18 +1,28 @@
 // import { GaleriaHistoria } from "../components";
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { EventosContext } from "../context/EventosProvider";
+import { useFetch } from "../helpers";
 import { ImagenHistoria, Spinner } from "../components";
 import DOMPurify from "dompurify";
 
 import "../css/historia.css";
 
-export const Historia = () => {
-  const { dataNavbar, eventosTotales } = useContext(EventosContext);
+const urlTestHistoria = "/src/json/historiaTest.json";
 
-  if (!dataNavbar) {
+export const Historia = () => {
+  const { dataNavbar, isLoadingNavbar } = useContext(EventosContext);
+  const { data: dataHistoria, isLoading: isLoadingHistoria } = useFetch(urlTestHistoria);
+
+  useEffect(() => {
+    setTimeout(() => {
+      window.scrollTo(0, 0);
+    }, 100);
+  }, []);
+
+  if (isLoadingNavbar) {
     return <Spinner />;
   }
-  if (!eventosTotales) {
+  if (isLoadingHistoria) {
     return <Spinner />;
   }
 
@@ -25,7 +35,7 @@ export const Historia = () => {
               style={{ fontSize: "30px" }}
               className="my-3 animate__fadeIn animate__delay-1s tittle-h2"
             >
-              {dataNavbar !== null && dataNavbar[0].items[2].titulo1}
+              { dataNavbar?.items[2].titulo1}
             </h2>
           </div>
 
@@ -33,7 +43,7 @@ export const Historia = () => {
             <p
               className="parrafo-historia"
               dangerouslySetInnerHTML={{
-                __html: DOMPurify.sanitize(eventosTotales.historia.descripcion),
+                __html: DOMPurify.sanitize(dataHistoria?.descripcion),
               }}
             ></p>
           </div>
@@ -47,7 +57,7 @@ export const Historia = () => {
               style={{ fontSize: "30px" }}
               className="my-3 animate__fadeIn animate__delay-1s tittle-h2"
             >
-              {dataNavbar !== null && dataNavbar[0].items[2].titulo2}
+              {dataNavbar?.items[2].titulo2}
             </h2>
           </div>
 
@@ -56,7 +66,7 @@ export const Historia = () => {
             style={{ textAlign: "center", padding: "20px" }}
           >
             <div className="row">
-              {eventosTotales?.historia.imagenes.map((item) => (
+              {dataHistoria?.imagenes.map((item) => (
                 <ImagenHistoria src={item.src} key={item.id} />
               ))}
             </div>

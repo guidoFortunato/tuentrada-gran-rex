@@ -1,5 +1,6 @@
 import { useContext, useEffect } from "react";
 import { EventosContext } from "../context/EventosProvider";
+import { useFetch } from "../helpers";
 import { CardEvento, FormBusqueda, Spinner } from "../components/";
 
 // import { SliderDestacado } from "../components/";
@@ -7,9 +8,12 @@ import { CardEvento, FormBusqueda, Spinner } from "../components/";
 import "../css/header.css";
 import "../css/footer.css";
 
+const urlTestEventos = "/src/json/eventosTest.json";
+
 
 export const Home = () => {
-  const { eventosTotales, isLoading } = useContext(EventosContext);
+  const { dataNavbar, isLoadingNavbar } = useContext(EventosContext);
+  const { data: dataEventos, isLoading: isLoadingEventos } = useFetch(urlTestEventos);
 
   useEffect(() => {
     setTimeout(() => {
@@ -17,7 +21,10 @@ export const Home = () => {
     }, 100);
   }, []);
 
-  if (isLoading) {
+  if (isLoadingNavbar) {
+    return <Spinner />;
+  }
+  if (isLoadingEventos) {
     return <Spinner />;
   }
 
@@ -27,10 +34,9 @@ export const Home = () => {
       <header className="animate__animated animate__fadeIn animate__fast">
         <div className="header-home">
           <h1 className="titulo-principal animate__animated animate__fadeInDown animate__fast	 ">
-            {" "}
-            <strong>{ eventosTotales?.navbar.items[0].titulo1.toUpperCase() }</strong>
+            <strong>{ dataNavbar?.items[0].titulo1.toUpperCase() }</strong>
           </h1>
-          <FormBusqueda placeholder={ eventosTotales?.navbar.placeholderInput } />
+          <FormBusqueda placeholder={ dataNavbar?.placeholderInput } />
         </div>
       </header>
       <main>
@@ -41,7 +47,7 @@ export const Home = () => {
                 style={{ fontSize: "30px" }}
                 className="my-3 animate__fadeIn animate__delay-1s tittle-h2"
               >
-                {eventosTotales?.navbar.items[0].titulo2.toUpperCase()}
+                {dataNavbar?.items[0].titulo2.toUpperCase()}
               </h2>
             </div>
           </div>
@@ -62,7 +68,7 @@ export const Home = () => {
           </div> */}
 
           <div className="row sin-padding-right-left animate__animated animate__fadeIn  animate__delay-1s ">
-            {eventosTotales?.eventos.map((evento) => (
+            {dataEventos?.eventos.map((evento) => (
               <CardEvento
                 linkEvento={evento.links.path}
                 img={evento.imagenes.evento}

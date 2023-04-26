@@ -1,4 +1,9 @@
+import { useContext, useEffect } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
+
+import { EventosContext } from "../context/EventosProvider";
+import { Spinner } from "../components";
+import { useFetch } from "../helpers";
 
 import FullCalendar from "@fullcalendar/react"; // must go before plugins
 import dayGridPlugin from "@fullcalendar/daygrid";
@@ -8,9 +13,6 @@ import bootstrap5Plugin from "@fullcalendar/bootstrap5";
 import listViewPlugin from "@fullcalendar/list";
 import tippy from "tippy.js";
 
-import { useContext } from "react";
-import { EventosContext } from "../context/EventosProvider";
-import { Spinner } from "../components";
 
 import 'tippy.js/dist/tippy.css';
 import 'tippy.js/animations/scale.css';
@@ -66,17 +68,21 @@ const eventTimeFormat = {
   minute: "2-digit",
 };
 
+const urlTestEventos = "/src/json/eventosTest.json";
+
 export const Calendario = () => {
-  const { eventosTotales, isLoading, dataNavbar } = useContext(EventosContext)
+  const { dataNavbar, isLoadingNavbar } = useContext(EventosContext)
+  const { data: dataEventos, isLoading: isLoadingEventos } = useFetch(urlTestEventos);
+
   const navigate = useNavigate();
   const { pathname } = useLocation();
   const newEvents = []
   
   localStorage.setItem("lastPath", pathname);
 
-  for (let i = 0; i < eventosTotales?.eventos.length; i++) {
-    for (let j = 0; j < eventosTotales?.eventos[i].fechas.length; j++) {
-      newEvents.push({id: eventosTotales?.eventos[i].id, start: eventosTotales?.eventos[i].fechas[j].start, title: eventosTotales?.eventos[i].nombre.toUpperCase(), url: eventosTotales?.eventos[i].links.path, display: eventosTotales?.eventos[i].display, status: eventosTotales?.eventos[i].fechas[j].estadoCalendario})      
+  for (let i = 0; i < dataEventos?.eventos.length; i++) {
+    for (let j = 0; j < dataEventos?.eventos[i].fechas.length; j++) {
+      newEvents.push({id: dataEventos?.eventos[i].id, start: dataEventos?.eventos[i].fechas[j].start, title: dataEventos?.eventos[i].nombre.toUpperCase(), url: dataEventos?.eventos[i].links.path, display: dataEventos?.eventos[i].display, status: dataEventos?.eventos[i].fechas[j].estadoCalendario})      
     }    
   }
 
@@ -135,7 +141,16 @@ export const Calendario = () => {
       }
   }
 
-  if (isLoading) {
+  useEffect(() => {
+    setTimeout(() => {
+      window.scrollTo(0, 0);
+    }, 100);
+  }, []);
+
+  if (isLoadingNavbar) {
+    return <Spinner/>;
+  }
+  if (isLoadingEventos) {
     return <Spinner/>;
   }
 
@@ -145,7 +160,7 @@ export const Calendario = () => {
         <div className="row animate__animated animate__fadeIn ">
           <div className="col-12 text-center mt-3 ">
             <h2 style={{ fontSize: "30px" }} className="my-3 tittle-h2">
-              {dataNavbar !== null && dataNavbar[0]?.items[1].titulo1}
+              { dataNavbar?.items[1].titulo1}
             </h2>
           </div>
         </div>

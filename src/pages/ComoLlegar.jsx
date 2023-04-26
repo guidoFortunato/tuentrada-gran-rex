@@ -1,15 +1,23 @@
-import { EventosContext } from "../context/EventosProvider";
-import { useContext } from "react";
+import { useEffect } from "react";
+import { useFetch } from "../helpers";
 import { Spinner } from "../components";
 
 import DOMPurify from "dompurify";
 
 import "../css/comollegar.css";
 
-export const ComoLlegar = () => {
-  const { eventosTotales } = useContext(EventosContext);
+const urlTestLlegar = "/src/json/comoLlegarTest.json";
 
-  if (!eventosTotales) {
+export const ComoLlegar = () => {
+  const { data: dataLlegar, isLoading: isLoadingLlegar } = useFetch(urlTestLlegar);
+
+  useEffect(() => {
+    setTimeout(() => {
+      window.scrollTo(0, 0);
+    }, 100);
+  }, []);
+
+  if (isLoadingLlegar) {
     return <Spinner />;
   }
   return (
@@ -18,7 +26,7 @@ export const ComoLlegar = () => {
         <div className="row animate__animated animate__fadeIn ">
           <div className="col-12 text-center mt-3 ">
             <h2 style={{ fontSize: "30px" }} className="my-3 tittle-h2">
-              Cómo llegar
+              {dataLlegar?.titulo.toUpperCase()}
             </h2>
           </div>
         </div>
@@ -29,9 +37,7 @@ export const ComoLlegar = () => {
               <p
                 className="parrafo-historia"
                 dangerouslySetInnerHTML={{
-                  __html: DOMPurify.sanitize(
-                    eventosTotales?.comoLlegar.descripcion
-                  ),
+                  __html: DOMPurify.sanitize(dataLlegar?.descripcion),
                 }}
               ></p>
             </div>
@@ -43,7 +49,7 @@ export const ComoLlegar = () => {
                   border: "0",
                   boxShadow: "5px 5px 6px 1px rgb(227, 227, 227)",
                 }}
-                src={eventosTotales?.comoLlegar.srcIframe}
+                src={dataLlegar?.srcIframe}
                 // frameBorder="0"
                 allowFullScreen=""
                 title="mapa gran rex"

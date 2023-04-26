@@ -7,11 +7,12 @@ import DOMPurify from "dompurify";
 import "../css/footer.css";
 
 export const Footer = () => {
-  const { eventosTotales, isLoading } = useContext(EventosContext);
-  console.log({ isLoading });
-  console.log({ eventosTotales });
+  const { isLoadingFooter, dataFooter, dataNavbar, isLoadingNavbar } = useContext(EventosContext);
 
-  if (isLoading) {
+  if (isLoadingNavbar) {
+    return <Spinner />;
+  }
+  if (isLoadingFooter) {
     return <Spinner />;
   }
   return (
@@ -20,7 +21,7 @@ export const Footer = () => {
         <div className="row mb-2 text-center">
           <div className="col-12 col-md-6 d-flex justify-content-center align-items-center mb-3 mb-md-0 pt-3">
             <div className="d-flex flex-column text-start parrafo-footer">
-              {eventosTotales?.footer.items.map((item) => (
+              {dataFooter?.items.map((item) => (
 
                 item.mostrar &&
                 <p
@@ -38,12 +39,12 @@ export const Footer = () => {
           </div>
           <div className="col-12 col-md-6 d-flex justify-content-center align-items-center my-2 my-lg-0">
             <span style={{ color: "white", fontSize: "15px" }}>
-              {eventosTotales?.navbar.labelRedes}
+              {dataNavbar?.labelRedes}
             </span>
             <ul className="list-unstyled d-flex mb-0">
 
               {
-                eventosTotales?.navbar.itemsRedes.map( item => (
+                dataNavbar?.itemsRedes.map( item => (
                   <li className="me-3" key={item.id}>
                   <a
                     className="link-dark"
@@ -62,7 +63,7 @@ export const Footer = () => {
           </div>
           <div className="col-12 mt-5 mt-lg-3">
             <p className="mb-0 parrafo-footer" style={{ fontSize: "16px" }}>
-              {eventosTotales?.footer.copyright} <br /> {eventosTotales?.footer.derechosReservados}
+              {dataFooter?.copyright} <br /> {dataFooter?.derechosReservados}
             </p>
           </div>
         </div>

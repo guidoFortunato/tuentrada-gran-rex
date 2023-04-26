@@ -1,16 +1,18 @@
-import { useContext, useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import Modal from "react-modal";
 
-import { EventosContext } from "../context/EventosProvider";
+import { useFetch } from "../helpers";
 import { Spinner, TablaPrecios } from "./";
 
 import DOMPurify from "dompurify";
 
 import "../css/detalleevento.css";
 
+const urlTestEventos = "/src/json/eventosTest.json";
+
 export const DetalleEvento = () => {
-  const { eventosTotales, isLoading } = useContext(EventosContext);
+  const { data: dataEventos, isLoading: isLoadingEventos } = useFetch(urlTestEventos);
   const [evento, setEvento] = useState(null);
   const [modalIsOpen, setModalIsOpen] = useState(false);
   const modalRef = useRef(null);
@@ -18,8 +20,8 @@ export const DetalleEvento = () => {
   const { name, id } = useParams();
 
   useEffect(() => {
-    if (eventosTotales !== null) {
-      const data = eventosTotales.eventos.find(
+    if (dataEventos !== null) {
+      const data = dataEventos.eventos.find(
         (item) => item.nombrePath == name && item.disabled === false
       );
       if (data) {
@@ -28,12 +30,14 @@ export const DetalleEvento = () => {
         navigate("/");
       }
     }
-  }, [name, id, eventosTotales]);
+  }, [name, id, dataEventos]);
 
   const lastPath = localStorage.getItem("lastPath") || "/";
 
   useEffect(() => {
-    window.scrollTo(0, 0);
+    setTimeout(() => {
+      window.scrollTo(0, 0);
+    }, 100);
   }, []);
 
   const returnLastPath = () => {
@@ -48,12 +52,13 @@ export const DetalleEvento = () => {
     setModalIsOpen(false);
   };
 
-  if (isLoading) {
+  if (isLoadingEventos) {
     return <Spinner />;
   }
   if (evento === null) {
     return <Spinner />;
   }
+
 
   return (
     <>
@@ -127,7 +132,7 @@ export const DetalleEvento = () => {
                 fontSize: "30px",
               }}
             >
-              {eventosTotales?.detalle.titulo1}
+              {dataEventos?.detalle.titulo1}
             </h2>
             <p
               className="animate_animated animate_fadeIn"
@@ -146,7 +151,7 @@ export const DetalleEvento = () => {
                 fontSize: "30px",
               }}
             >
-              {eventosTotales?.detalle.titulo2}
+              {dataEventos?.detalle.titulo2}
             </h2>
           </div>
           <div className="row justify-content-center">
@@ -165,7 +170,7 @@ export const DetalleEvento = () => {
                 className="btn-general mt-3 ocultar-responsive"
                 onClick={handleOpenModal}
               >
-                {eventosTotales?.detalle.botonPlano.charAt(0).toUpperCase() + eventosTotales?.detalle.botonPlano.slice(1).toLowerCase()}
+                {dataEventos?.detalle.botonPlano.charAt(0).toUpperCase() + dataEventos?.detalle.botonPlano.slice(1).toLowerCase()}
               </button>
               <div className="position-relative" onClick={handleCloseModal}>
                 <Modal

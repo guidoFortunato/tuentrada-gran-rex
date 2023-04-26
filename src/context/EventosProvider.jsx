@@ -6,12 +6,15 @@ export const EventosContext = createContext();
 const eventosBusqueda = [];
 const urlTestEventos = "/src/json/eventosTest.json";
 const urlTestNavbar = "/src/json/navbarTest.json";
+const urlTestFooter = "/src/json/footerTest.json";
 
 const EventosProvider = (props) => {
   const [evento, setEvento] = useState("");
   const [listaEventosBusqueda, setListaEventosBusqueda] = useState(eventosBusqueda);
   
-  //  const { VITE_JSON_EVENTOS } = getEnvVariables()
+   const { VITE_JSON_EVENTOS } = getEnvVariables()
+   const { VITE_JSON_FOOTER } = getEnvVariables()
+   const { VITE_JSON_NAVBAR } = getEnvVariables()
 
   const handleEvento = (nombreEvento) => {
     if (!nombreEvento.trim()) {
@@ -23,6 +26,7 @@ const EventosProvider = (props) => {
 
   const { data: dataEventos, isLoading, hasError } = useFetch(urlTestEventos);
   const { data: dataNavbar, isLoading: isLoadingNavbar } = useFetch(urlTestNavbar);
+  const { data: dataFooter, isLoading: isLoadingFooter } = useFetch(urlTestFooter);
 
   const agregarEvento = (nombreEvento) => {
     const resultadosExactos = dataEventos.eventos.filter((item) =>
@@ -38,12 +42,14 @@ const EventosProvider = (props) => {
       value={{
         agregarEvento,
         dataNavbar,
+        dataFooter,
         evento,
         eventosTotales: dataEventos,
         handleEvento,
         hasError,
         isLoading,
         isLoadingNavbar,
+        isLoadingFooter,
         listaEventosBusqueda,
       }}
     >
