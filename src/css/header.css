@@ -57,12 +57,12 @@ header {
   width: 100%;
 }
 
-input {
+.input {
   border: none;
   width: 100%;
   margin-left: 5px;
 }
 
-input:focus {
+.input:focus {
   outline: none;
 }

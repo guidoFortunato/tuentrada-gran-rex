@@ -24,7 +24,7 @@ export const FormBusqueda = ({placeholder}) => {
           xmlns="http://www.w3.org/2000/svg"
           width="16"
           height="16"
-          fill="currentColor"
+          fill="gray"
           className="bi bi-search"
           viewBox="0 0 16 16"
         >
@@ -33,8 +33,8 @@ export const FormBusqueda = ({placeholder}) => {
       </div>
       <div className="container-input">
         <input
-          
-          className="border-0"
+          style={{ padding:"0 2px", fontSize:"14px"}}
+          className="border-0 input"
           placeholder={placeholder}
           value={evento}
           onChange={(e) => handleEvento(e.target.value)}
