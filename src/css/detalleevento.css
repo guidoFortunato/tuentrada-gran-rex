@@ -53,3 +53,6 @@
   transition: opacity 0.3s ease-in-out;
 } */
 
+.alert-danger{ 
+  font-size: 14px!important;
+}
