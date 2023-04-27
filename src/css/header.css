@@ -22,7 +22,7 @@ header {
 }
 
 form{
-  width: 300px;
+  width: 300px!important;
 }
 .form-buscar {
   width: 80%;
@@ -46,7 +46,7 @@ form{
     font-size: 85px;
   }
   form{
-    width: 400px;
+    width: 400px!important;
   }
 }
 .form-buscar input {
@@ -91,7 +91,7 @@ input {
 }
 input:focus {
   outline: none;
-  
+  border-radius: 0;
 }
 .form-buscar:focus-within {
   border-color: #BA2828;
