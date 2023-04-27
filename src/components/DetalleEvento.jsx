@@ -7,7 +7,7 @@ import { Spinner, TablaPrecios } from "./";
 
 import DOMPurify from "dompurify";
 
-import "../css/detalleevento.css";
+import "/storage/css/detalleevento.css";
 
 const urlTestEventos = "/src/json/eventosTest.json";
 
