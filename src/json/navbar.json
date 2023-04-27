@@ -1,5 +1,5 @@
 {
-  "logo": "https://tuentrada.com/teatro/gran-rex/imagenes/logo_rex_negro.jpg",
+  "logo": "/storage/imagenes/logo_rex_negro.jpg",
   "altLogo": "logo gran rex",
   "placeholderInput": "Buscar Evento",
   "resultadoBusqueda": "Resultados de tu búsqueda",

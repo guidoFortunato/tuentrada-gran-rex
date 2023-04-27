@@ -27,7 +27,7 @@ export const BusquedaEventos = () => {
   return (
     <>
       <div className="container animate__animated animate__fadeIn animate__fast">
-        <div className="row justify-content-center my-5">
+        <div className="row justify-content-center my-5 form">
           <FormBusqueda placeholder={dataNavbar?.placeholderInput} />
         </div>
         <div className="row justify-content-center py-5">

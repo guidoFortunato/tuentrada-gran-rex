@@ -3,7 +3,7 @@ import { useLocation, useNavigate } from "react-router-dom";
 
 import { EventosContext } from "../context/EventosProvider";
 import { Spinner } from "../components";
-import { useFetch } from "../helpers";
+import { getEnvVariables, useFetch } from "../helpers";
 
 import FullCalendar from "@fullcalendar/react"; // must go before plugins
 import dayGridPlugin from "@fullcalendar/daygrid";
@@ -68,11 +68,13 @@ const eventTimeFormat = {
   minute: "2-digit",
 };
 
-const urlTestEventos = "/src/json/eventosTest.json";
+// const urlTestEventos = "/src/json/eventosTest.json";
+const { VITE_JSON_EVENTOS } = getEnvVariables();
+
 
 export const Calendario = () => {
   const { dataNavbar, isLoadingNavbar } = useContext(EventosContext)
-  const { data: dataEventos, isLoading: isLoadingEventos } = useFetch(urlTestEventos);
+  const { data: dataEventos, isLoading: isLoadingEventos } = useFetch(VITE_JSON_EVENTOS);
 
   const navigate = useNavigate();
   const { pathname } = useLocation();

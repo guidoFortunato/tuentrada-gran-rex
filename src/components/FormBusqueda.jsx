@@ -4,12 +4,12 @@ import { useLocation, useNavigate, useParams } from "react-router-dom";
 import { Spinner } from "./";
 
 export const FormBusqueda = ({ placeholder }) => {
-  const { evento, handleEvento, agregarEvento, dataNavbar, isLoadingNavbar } = useContext(EventosContext);
+  const { evento, handleEvento, agregarEvento, dataNavbar, isLoadingNavbar } =
+    useContext(EventosContext);
   let { name } = useParams();
   let navigate = useNavigate();
   const { pathname } = useLocation();
   const busquedaEventos = pathname.split("/")[1] || "/";
-
 
   localStorage.setItem("lastPath", pathname);
 
@@ -33,31 +33,55 @@ export const FormBusqueda = ({ placeholder }) => {
 
   return (
     <form
-      className="d-flex form-buscar animate__animated animate__fadeIn animate__delay-1s"
+      className="d-flex  animate__animated animate__fadeIn animate__delay-1s"
       onSubmit={handleSubmit}
     >
-      <div>
-        <svg
-          xmlns={dataNavbar?.formBusqueda.xmlns}
-          width={dataNavbar?.formBusqueda.width}
-          height={dataNavbar?.formBusqueda.height}
-          fill={dataNavbar?.formBusqueda.fill}
-          className="bi bi-search"
-          viewBox={dataNavbar?.formBusqueda.viewBox}
-        >
-          <path d={dataNavbar?.formBusqueda.path} />
-        </svg>
-      </div>
-      <div className="container-input">
+      <div className="container-input form-buscar">
         <input
-          style={dataNavbar?.inputBusqueda.style}
-          className="border-0 input"
-          placeholder={placeholder}
+          className="border-0 form-label"
+          placeholder="Buscar Evento"
           value={evento}
           onChange={(e) => handleEvento(e.target.value)}
         />
       </div>
-      {/* <button className="btn btn-outline-success" type="submit">Buscar</button> */}
+      <button className="btn-lupa btn-outline-success search" type="submit">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="16"
+          height="16"
+          fill="white"
+          className="bi bi-search"
+          viewBox="0 0 16 16"
+        >
+          <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+        </svg>
+      </button>
     </form>
+    // <form
+    //   className="d-flex form-buscar animate__animated animate__fadeIn animate__delay-1s"
+    //   onSubmit={handleSubmit}
+    // >
+    //   <div>
+    //     <svg
+    //       xmlns={dataNavbar?.formBusqueda.xmlns}
+    //       width={dataNavbar?.formBusqueda.width}
+    //       height={dataNavbar?.formBusqueda.height}
+    //       fill={dataNavbar?.formBusqueda.fill}
+    //       className="bi bi-search"
+    //       viewBox={dataNavbar?.formBusqueda.viewBox}
+    //     >
+    //       <path d={dataNavbar?.formBusqueda.path} />
+    //     </svg>
+    //   </div>
+    //   <div className="container-input">
+    //     <input
+    //       style={dataNavbar?.inputBusqueda.style}
+    //       className="border-0 input"
+    //       placeholder={placeholder}
+    //       value={evento}
+    //       onChange={(e) => handleEvento(e.target.value)}
+    //     />
+    //   </div>
+    // </form>
   );
 };
