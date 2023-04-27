@@ -7,7 +7,7 @@ import { Spinner, TablaPrecios } from "./";
 
 import DOMPurify from "dompurify";
 
-import "/storage/css/detalleevento.css";
+import "../css/detalleevento.css";
 
 // const urlTestEventos = "/src/json/eventosTest.json";
 const { VITE_JSON_EVENTOS } = getEnvVariables();

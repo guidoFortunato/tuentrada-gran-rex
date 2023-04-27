@@ -4,7 +4,7 @@ import { Spinner } from "./Spinner";
 
 import DOMPurify from "dompurify";
 
-import "/storage/css/footer.css";
+import "../css/footer.css";
 
 export const Footer = () => {
   const { isLoadingFooter, dataFooter, dataNavbar, isLoadingNavbar } = useContext(EventosContext);

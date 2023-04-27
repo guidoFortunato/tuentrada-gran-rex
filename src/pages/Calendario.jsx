@@ -3,7 +3,7 @@ import { useLocation, useNavigate } from "react-router-dom";
 
 import { EventosContext } from "../context/EventosProvider";
 import { Spinner } from "../components";
-import { useFetch } from "../helpers";
+import { getEnvVariables, useFetch } from "../helpers";
 
 import FullCalendar from "@fullcalendar/react"; // must go before plugins
 import dayGridPlugin from "@fullcalendar/daygrid";
@@ -17,7 +17,7 @@ import tippy from "tippy.js";
 import 'tippy.js/dist/tippy.css';
 import 'tippy.js/animations/scale.css';
 
-import "/storage/css/calendario.css";
+import "../css/calendario.css";
 
 const month = [
   "Enero",

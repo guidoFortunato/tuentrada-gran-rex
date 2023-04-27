@@ -1,11 +1,11 @@
 // import { GaleriaHistoria } from "../components";
 import { useContext, useEffect } from "react";
 import { EventosContext } from "../context/EventosProvider";
-import { useFetch } from "../helpers";
+import { getEnvVariables, useFetch } from "../helpers";
 import { ImagenHistoria, Spinner } from "../components";
 import DOMPurify from "dompurify";
 
-import "/storage/css/historia.css";
+import "../css/historia.css";
 
 // const urlTestHistoria = "/src/json/historiaTest.json";
 const { VITE_JSON_HISTORIA } = getEnvVariables();
