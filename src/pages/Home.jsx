@@ -1,6 +1,6 @@
 import { useContext, useEffect } from "react";
 import { EventosContext } from "../context/EventosProvider";
-import { useFetch } from "../helpers";
+import { getEnvVariables, useFetch } from "../helpers";
 import { CardEvento, FormBusqueda, Spinner } from "../components/";
 
 // import { SliderDestacado } from "../components/";
