@@ -1,5 +1,5 @@
 import { createContext, useState } from "react";
-import Fuse from "fuse.js";
+
 import anuel1 from "../assets/images/anuel1.jpg";
 import anuel2 from "../assets/images/anuel2.jpg";
 import chano500 from "../assets/images/chano.jpg";
@@ -84,8 +84,8 @@ const EventosProvider = (props) => {
 
     // Si no hay resultados exactos, buscar sugerencias
     if (resultadosExactos.length === 0) {
-      const fuse = new Fuse(eventosTotales, opciones);
-      const sugerencias = fuse.search(nombreEvento).map(resultado => resultado.item);
+      // const fuse = new Fuse(eventosTotales, opciones);
+      // const sugerencias = fuse.search(nombreEvento).map(resultado => resultado.item);
       setListaEventosBusqueda(sugerencias);
     } else {
       setListaEventosBusqueda(resultadosExactos);
