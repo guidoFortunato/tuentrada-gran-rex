@@ -1,4 +1,4 @@
-import "/storage/css/tablaprecios.css";
+import "https://www.tuentrada.com/teatro/gran-rex/css/tablaprecios.css";
 
 export const TablaPrecios = ({ ubicaciones }) => {
   return (

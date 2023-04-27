@@ -1,6 +1,6 @@
 import React from "react";
 
-import "/storage/css/sliderdestacado.css";
+import "https://www.tuentrada.com/teatro/gran-rex/css/sliderdestacado.css";
 
 export const SliderDestacado = () => {
   return (

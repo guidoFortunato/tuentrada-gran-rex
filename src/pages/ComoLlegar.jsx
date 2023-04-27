@@ -4,7 +4,7 @@ import { Spinner } from "../components";
 
 import DOMPurify from "dompurify";
 
-import "/storage/css/comollegar.css";
+import "https://www.tuentrada.com/teatro/gran-rex/css/comollegar.css";
 
 // const urlTestLlegar = "/src/json/comoLlegarTest.json";
 const { VITE_JSON_LLEGAR } = getEnvVariables();

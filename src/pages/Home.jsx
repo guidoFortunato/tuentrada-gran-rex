@@ -5,8 +5,8 @@ import { CardEvento, FormBusqueda, Spinner } from "../components/";
 
 // import { SliderDestacado } from "../components/";
 
-import "/storage/css/header.css";
-import "/storage/css/footer.css";
+import "https://www.tuentrada.com/teatro/gran-rex/css/header.css";
+import "https://www.tuentrada.com/teatro/gran-rex/css/footer.css";
 
 // const urlTestEventos = "/src/json/eventosTest.json";
 const { VITE_JSON_EVENTOS } = getEnvVariables();

@@ -5,7 +5,7 @@ import { useFetch } from "../helpers";
 import { ImagenHistoria, Spinner } from "../components";
 import DOMPurify from "dompurify";
 
-import "/storage/css/historia.css";
+import "https://www.tuentrada.com/teatro/gran-rex/css/historia.css";
 
 // const urlTestHistoria = "/src/json/historiaTest.json";
 const { VITE_JSON_HISTORIA } = getEnvVariables();
