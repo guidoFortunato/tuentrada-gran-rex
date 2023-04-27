@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import "https://www.tuentrada.com/teatro/gran-rex/css/cardevento.css";
+import "/storage/css/cardevento.css";
 
 export const CardEvento = ({ img = "", status = "disponible", title = "", linkEvento = "", disabled = false,}) => {
   const newStatus = status.charAt(0).toUpperCase() + status.slice(1).toLowerCase(); 

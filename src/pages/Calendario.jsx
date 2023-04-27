@@ -17,7 +17,7 @@ import tippy from "tippy.js";
 import 'tippy.js/dist/tippy.css';
 import 'tippy.js/animations/scale.css';
 
-import "https://www.tuentrada.com/teatro/gran-rex/css/calendario.css";
+import "/storage/css/calendario.css";
 
 const month = [
   "Enero",

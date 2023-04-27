@@ -7,7 +7,7 @@ import { Spinner, TablaPrecios } from "./";
 
 import DOMPurify from "dompurify";
 
-import "https://www.tuentrada.com/teatro/gran-rex/css/detalleevento.css";
+import "/storage/css/detalleevento.css";
 
 // const urlTestEventos = "/src/json/eventosTest.json";
 const { VITE_JSON_EVENTOS } = getEnvVariables();
