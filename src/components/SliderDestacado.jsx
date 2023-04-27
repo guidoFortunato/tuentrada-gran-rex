@@ -1,6 +1,6 @@
 import React from "react";
 
-import "../css/sliderdestacado.css";
+import "/storage/css/sliderdestacado.css";
 
 export const SliderDestacado = () => {
   return (

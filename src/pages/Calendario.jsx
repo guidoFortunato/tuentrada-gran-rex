@@ -17,7 +17,7 @@ import tippy from "tippy.js";
 import 'tippy.js/dist/tippy.css';
 import 'tippy.js/animations/scale.css';
 
-import "../css/calendario.css";
+import "/storage/css/calendario.css";
 
 const month = [
   "Enero",
@@ -68,11 +68,13 @@ const eventTimeFormat = {
   minute: "2-digit",
 };
 
-const urlTestEventos = "/src/json/eventosTest.json";
+// const urlTestEventos = "/src/json/eventosTest.json";
+const { VITE_JSON_EVENTOS } = getEnvVariables();
+
 
 export const Calendario = () => {
   const { dataNavbar, isLoadingNavbar } = useContext(EventosContext)
-  const { data: dataEventos, isLoading: isLoadingEventos } = useFetch(urlTestEventos);
+  const { data: dataEventos, isLoading: isLoadingEventos } = useFetch(VITE_JSON_EVENTOS);
 
   const navigate = useNavigate();
   const { pathname } = useLocation();

@@ -5,13 +5,14 @@ import { useFetch } from "../helpers";
 import { ImagenHistoria, Spinner } from "../components";
 import DOMPurify from "dompurify";
 
-import "../css/historia.css";
+import "/storage/css/historia.css";
 
-const urlTestHistoria = "/src/json/historiaTest.json";
+// const urlTestHistoria = "/src/json/historiaTest.json";
+const { VITE_JSON_HISTORIA } = getEnvVariables();
 
 export const Historia = () => {
   const { dataNavbar, isLoadingNavbar } = useContext(EventosContext);
-  const { data: dataHistoria, isLoading: isLoadingHistoria } = useFetch(urlTestHistoria);
+  const { data: dataHistoria, isLoading: isLoadingHistoria } = useFetch(VITE_JSON_HISTORIA);
 
   useEffect(() => {
     setTimeout(() => {
