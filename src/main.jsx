@@ -8,11 +8,11 @@ import { BrowserRouter, HashRouter } from "react-router-dom";
 import EventosProvider from "./context/EventosProvider";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-  <React.StrictMode>
+  // <React.StrictMode>
     <HashRouter>
       <EventosProvider>
         <App />
       </EventosProvider>
     </HashRouter>
-  </React.StrictMode>
+  // </React.StrictMode>
 );

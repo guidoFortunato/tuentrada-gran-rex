@@ -1,31 +1,41 @@
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { EventosContext } from "../context/EventosProvider";
-import { useLocation, useNavigate } from "react-router-dom";
+import { useLocation, useNavigate, useParams } from "react-router-dom";
 import { Spinner } from "./";
 
-export const FormBusqueda = ({placeholder}) => {
-
+export const FormBusqueda = ({ placeholder }) => {
   const { evento, handleEvento, agregarEvento, dataNavbar, isLoadingNavbar } = useContext(EventosContext);
+  let { name } = useParams();
   let navigate = useNavigate();
   const { pathname } = useLocation();
+  const busquedaEventos = pathname.split("/")[1] || "/";
+
 
   localStorage.setItem("lastPath", pathname);
 
-  const handleSubmit = (e) => {  
-
+  const handleSubmit = (e) => {
     e.preventDefault();
     if (evento.length === 0) return;
-    agregarEvento(evento);
+    // agregarEvento(evento);
     navigate(`/busqueda-eventos/${evento}`);
     handleEvento("");
   };
+
+  useEffect(() => {
+    if (busquedaEventos == "busqueda-eventos") {
+      agregarEvento(name);
+    }
+  }, [name]);
 
   if (isLoadingNavbar) {
     return <Spinner />;
   }
 
   return (
-    <form className="d-flex form-buscar animate__animated animate__fadeIn animate__delay-1s" onSubmit={handleSubmit}>
+    <form
+      className="d-flex form-buscar animate__animated animate__fadeIn animate__delay-1s"
+      onSubmit={handleSubmit}
+    >
       <div>
         <svg
           xmlns={dataNavbar?.formBusqueda.xmlns}

@@ -12,7 +12,10 @@ export const BusquedaEventos = () => {
   
 
   useEffect(() => {
-    agregarEvento(name);
+
+
+      agregarEvento(name);
+
   }, [name]);
 
   useEffect(() => {
