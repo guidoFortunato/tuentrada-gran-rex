@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App";
-import "normalize.css"
+import 'normalize.css'
 import "/storage/css/index.css";
 
 import { BrowserRouter, HashRouter } from "react-router-dom";
