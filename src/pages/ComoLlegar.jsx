@@ -6,11 +6,11 @@ import DOMPurify from "dompurify";
 
 import "../css/comollegar.css";
 
-// const urlTestLlegar = "/src/json/comoLlegarTest.json";
-const { VITE_JSON_LLEGAR } = getEnvVariables();
+const urlTestLlegar = "/src/json/comoLlegarTest.json";
+// const { VITE_JSON_LLEGAR } = getEnvVariables();
 
 export const ComoLlegar = () => {
-  const { data: dataLlegar, isLoading: isLoadingLlegar } = useFetch( VITE_JSON_LLEGAR );
+  const { data: dataLlegar, isLoading: isLoadingLlegar } = useFetch( urlTestLlegar );
 
   useEffect(() => {
     setTimeout(() => {

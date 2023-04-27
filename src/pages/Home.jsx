@@ -8,13 +8,13 @@ import { CardEvento, FormBusqueda, Spinner } from "../components/";
 import "../css/header.css";
 import "../css/footer.css";
 
-// const urlTestEventos = "/src/json/eventosTest.json";
-const { VITE_JSON_EVENTOS } = getEnvVariables();
+const urlTestEventos = "/src/json/eventosTest.json";
+// const { VITE_JSON_EVENTOS } = getEnvVariables();
 
 
 export const Home = () => {
   const { dataNavbar, isLoadingNavbar } = useContext(EventosContext);
-  const { data: dataEventos, isLoading: isLoadingEventos } = useFetch( VITE_JSON_EVENTOS);
+  const { data: dataEventos, isLoading: isLoadingEventos } = useFetch( urlTestEventos );
 
   useEffect(() => {
     setTimeout(() => {

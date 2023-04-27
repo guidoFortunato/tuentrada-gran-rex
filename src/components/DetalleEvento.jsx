@@ -9,11 +9,11 @@ import DOMPurify from "dompurify";
 
 import "../css/detalleevento.css";
 
-// const urlTestEventos = "/src/json/eventosTest.json";
-const { VITE_JSON_EVENTOS } = getEnvVariables();
+const urlTestEventos = "/src/json/eventosTest.json";
+// const { VITE_JSON_EVENTOS } = getEnvVariables();
 
 export const DetalleEvento = () => {
-  const { data: dataEventos, isLoading: isLoadingEventos } = useFetch(VITE_JSON_EVENTOS);
+  const { data: dataEventos, isLoading: isLoadingEventos } = useFetch(urlTestEventos);
   const [evento, setEvento] = useState(null);
   const [modalIsOpen, setModalIsOpen] = useState(false);
   const modalRef = useRef(null);
@@ -69,7 +69,7 @@ export const DetalleEvento = () => {
         }
         // ref={eventDetailRef}
       >
-        <h2 className="titleDetalle">{evento?.nombre.toUpperCase()} style</h2>
+        <h2 className="titleDetalle">{evento?.nombre.toUpperCase()}</h2>
         <hr />
         <div className="row">
           <div className="col-12 col-lg-6 mb-5 mb-lg-0 text-center">

@@ -4,19 +4,19 @@ import { getEnvVariables, useFetch } from "../helpers";
 export const EventosContext = createContext();
 
 const eventosBusqueda = [];
-// const urlTestEventos = "/src/json/eventosTest.json";
-// const urlTestNavbar = "/src/json/navbarTest.json";
-// const urlTestFooter = "/src/json/footerTest.json";
-const { VITE_JSON_EVENTOS } = getEnvVariables();
-const { VITE_JSON_FOOTER } = getEnvVariables();
-const { VITE_JSON_NAVBAR } = getEnvVariables();
+const urlTestEventos = "/src/json/eventosTest.json";
+const urlTestNavbar = "/src/json/navbarTest.json";
+const urlTestFooter = "/src/json/footerTest.json";
+// const { VITE_JSON_EVENTOS } = getEnvVariables();
+// const { VITE_JSON_FOOTER } = getEnvVariables();
+// const { VITE_JSON_NAVBAR } = getEnvVariables();
 
 const EventosProvider = (props) => {
   const [evento, setEvento] = useState("");
   const [listaEventosBusqueda, setListaEventosBusqueda] =  useState(eventosBusqueda);
-  const { data: dataEventos, isLoading, hasError } = useFetch(VITE_JSON_EVENTOS);
-  const { data: dataNavbar, isLoading: isLoadingNavbar } =  useFetch( VITE_JSON_NAVBAR);
-  const { data: dataFooter, isLoading: isLoadingFooter } =  useFetch( VITE_JSON_FOOTER);
+  const { data: dataEventos, isLoading, hasError } = useFetch(urlTestEventos);
+  const { data: dataNavbar, isLoading: isLoadingNavbar } =  useFetch( urlTestNavbar );
+  const { data: dataFooter, isLoading: isLoadingFooter } =  useFetch( urlTestFooter );
 
   const handleEvento = (nombreEvento) => {
     if (!nombreEvento.trim()) {
