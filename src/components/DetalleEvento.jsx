@@ -2,17 +2,18 @@ import { useEffect, useRef, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import Modal from "react-modal";
 
-import { useFetch } from "../helpers";
+import { getEnvVariables, useFetch } from "../helpers";
 import { Spinner, TablaPrecios } from "./";
 
 import DOMPurify from "dompurify";
 
 import "/storage/css/detalleevento.css";
 
-const urlTestEventos = "/src/json/eventosTest.json";
+// const urlTestEventos = "/src/json/eventosTest.json";
+const { VITE_JSON_EVENTOS } = getEnvVariables();
 
 export const DetalleEvento = () => {
-  const { data: dataEventos, isLoading: isLoadingEventos } = useFetch(urlTestEventos);
+  const { data: dataEventos, isLoading: isLoadingEventos } = useFetch(VITE_JSON_EVENTOS);
   const [evento, setEvento] = useState(null);
   const [modalIsOpen, setModalIsOpen] = useState(false);
   const modalRef = useRef(null);
