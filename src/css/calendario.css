@@ -1,12 +1,12 @@
-.btn{
-    font-size: 1.6rem;
-  }
-  
-  .fc-event-title{
-    font-size: 1.6rem;
-  }
+.btn {
+  font-size: 1.6rem;
+}
 
-  /* .fc-toolbar-title {
+.fc-event-title {
+  font-size: 1.6rem;
+}
+
+/* .fc-toolbar-title {
     text-transform: lowercase;
   }
   
@@ -14,20 +14,76 @@
     text-transform: uppercase;
   } */
 
-  .btn-check:checked+.btn, .btn.active, .btn.show, .btn:first-child:active, :not(.btn-check)+.btn:active {
-    color: var(--bs-btn-active-color);
-    background-color: black;
-    border-color: black;
+.btn-check:checked + .btn,
+.btn.active,
+.btn.show,
+.btn:first-child:active,
+:not(.btn-check) + .btn:active {
+  color: #fff;
+  background-color: #ba2828;
+  border-color: #ba2828;
 }
 
-.btn.disabled, .btn:disabled, fieldset:disabled .btn {
-  color: var(--bs-btn-disabled-color);
+.btn.disabled,
+.btn:disabled,
+fieldset:disabled .btn {
+  color: #fff;
   pointer-events: none;
- background-color:#000000;
-border-color: #000000; 
-  opacity: var(--bs-btn-disabled-opacity);
+  background-color: #000000;
+  border-color: #000000;
 }
 
 .container-calendar {
   background-color: white;
+  padding: 10px;
 }
+
+.fc-next-button,
+.fc-prev-button {
+  border-color: #ba2828;
+  color: #f5f2f0 !important;
+  background-color: #ba2828 !important;
+}
+
+.fc-next-button:hover,
+.fc-prev-button:hover {
+  border-color: #ba2828;
+  color: #ba2828 !important;
+  background-color: #f5f2f0 !important;
+}
+/* .fc-dayGridMonth-button{
+  cursor: auto !important;
+}
+.fc-dayGridMonth-button:hover{
+  background-color: #000000 !important;
+  border-color: #000000 !important;
+  color: #fff !important;
+} */
+.fc-event-main-frame {
+  align-items: center;
+}
+.fc-event-title,
+.fc-event-time {
+  color: #fff !important;
+}
+
+/* .evento-disponible > .fc-list-event-graphic > .fc-list-event-dot {
+  border: 5px solid #ba2828;
+}
+.evento-no-disponible > .fc-list-event-graphic > .fc-list-event-dot {
+  border: 5px solid rgb(114, 110, 110);
+} */
+
+
+/* @media screen and (min-width: 1023px) {
+  .evento-disponible {
+    background-color: #ba2828;
+    border-color: #ba2828;
+  }
+  
+
+  .evento-no-disponible {
+    background-color: rgb(114, 110, 110);
+    border-color: rgb(114, 110, 110);
+  }
+}  */

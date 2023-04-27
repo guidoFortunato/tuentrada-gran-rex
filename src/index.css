@@ -2,7 +2,8 @@ body {
   font-family: "Montserrat", "Roboto", sans-serif;
   min-height: 100vh;
   position: relative;
-  background-color: #f5f2f0;
+  background-color: #f4f1f1b5;
+  padding-bottom: 320px;
 }
 
 /* .row > * {
@@ -11,9 +12,13 @@ body {
 } */
 
 .card {
-  margin: 20px;
+  margin: 5px;
   box-shadow: 5px 5px 6px 1px rgb(227, 227, 227);
   width: 80%; /* width: 70%; */
+}
+
+.h3-card {
+  font-size: 20px;
 }
 
 img {
@@ -21,6 +26,9 @@ img {
   cursor: pointer;
 }
 
+hr {
+  border: 1px solid #000;
+}
 
 article {
   display: flex;
@@ -35,6 +43,12 @@ article {
 }
 .desktop {
   display: none;
+}
+
+@media screen and (min-width: 400px) {
+  body {
+    padding-bottom: 250px;
+  }
 }
 
 @media screen and (min-width: 768px) and (max-width: 991px) {
@@ -53,7 +67,34 @@ article {
   .mobile {
     display: none;
   }
+  body {
+    padding-bottom: 220px;
+  }
+
+  .card {
+    margin: 5px;
+    box-shadow: 5px 5px 6px 1px rgb(227, 227, 227);
+    width: 80%;
+  }
+  .h3-card {
+    font-size: 16px;
+  }
 }
+
+/*navbar*/
+.container-redes-nav{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.item-nav{
+  margin-right: 30px;
+}
+
+
+/******/
+
 
 @media screen and (min-width: 992px) {
   .mobile {
@@ -66,17 +107,130 @@ article {
     display: flex;
   }
   .size-destacado {
-    width: 95%;  /* width: 92.5%; */
+    width: 95%; /* width: 92.5%; */
+  }
+  body {
+    padding-bottom: 190px;
+  }
+  .card {
+    margin: 5px;
+    box-shadow: 5px 5px 6px 1px rgb(227, 227, 227);
+    width: 100%; /* width: 70%; */
+  }
+
+  .h3-card {
+    font-size: 16px;
+  }
+  .container-redes-nav{
+    justify-content: flex-end;
   }
 }
-
-.btn {
-  background-color: #ba2828 ;
+@media screen and (min-width: 2000px) {
+  body {
+    padding-bottom: 230px;
+  }
+}
+.btn-general {
+  background-color: #ba2828;
   border-color: #ba2828;
+  border-radius: 0.375rem;
+  border-width: 1px;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15),
+    0 1px 1px rgba(0, 0, 0, 0.075);
+  color: #f5f2f0;
+  display: inline-block;
+  font-size: 14px !important;
+  font-weight: 400;
+  line-height: 1.5;
+  padding: 0.375rem 0.75rem;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  vertical-align: middle;
+  cursor: pointer;
+  border: 1px solid #ba2828;
+  /* font-weight: 700; */
 }
 
-.btn:hover{
-  border-color: #ba2828;
-  color: #ba2828!important;
-  background-color: #f5f2f0!important;
+.btn-general:hover {
+  background-color: #f5f2f0;
+  color: #ba2828;
+}
+
+.btn-status {
+  border-radius: 0.375rem;
+  border-width: 1px;
+  display: inline-block;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  padding: 0.375rem 0.75rem;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  vertical-align: middle;
+}
+
+.detalle-del-evento {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.fc-event-time {
+  color: black;
+}
+
+.fc-event-title {
+  color: black;
+}
+
+body {
+  font-family: "Hind Madurai", sans-serif;
+}
+
+.tittle-h2 {
+  margin-top: 20px;
+  text-transform: uppercase;
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  position: relative;
+}
+
+.tittle-h2::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 120px;
+  height: 1px;
+  background: #cac9c8;
+  bottom: 1px;
+  left: calc(50% - 60px);
+}
+
+.tittle-h2::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 40px;
+  height: 3px;
+  background: #ba2828;
+  bottom: 0;
+  left: calc(50% - 20px);
+}
+
+.row {
+  margin-top: 20px;
+}
+
+.ocultar-responsive {
+  display: none;
+}
+
+@media screen and (min-width: 992px) {
+  .ocultar-responsive {
+    display: inline;
+  }
 }
