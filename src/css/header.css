@@ -50,6 +50,12 @@ form{
     width: 400px!important;
   }
 }
+@media screen and (max-width: 300px) {
+  form{
+    width: 90%!important;
+  }
+}
+
 
 .container-input {
   width: 100%;
