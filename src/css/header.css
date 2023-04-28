@@ -49,9 +49,7 @@ form{
     width: 400px!important;
   }
 }
-.form-buscar input {
-  border-radius: 20px;
-}
+
 .container-input {
   width: 100%;
 }
@@ -60,7 +58,7 @@ input {
   width: 100%;
   margin-left: 5px;
   background-color: rgba(255, 0, 0, 0);
-
+  padding-left: 1px;
 }
 .btn-lupa {
   border-radius: 0 3px 3px 0!important;
