@@ -4,7 +4,7 @@ import { getEnvVariables, useFetch } from "../helpers";
 export const EventosContext = createContext();
 
 const eventosBusqueda = [];
-// const urlEventos = "/storage/json/eventos.json";
+const urlEventos = "/storage/json/eventos.json";
 const urlNavbar = "/storage/json/navbar.json";
 const urlFooter = "/storage/json/footer.json";
 // const urlTestEventos = "/src/json/eventosTest.json";
