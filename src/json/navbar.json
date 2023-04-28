@@ -30,7 +30,8 @@
       "left": "10px",
       "fontSize": "10px"
     },
-    "styleDivTitle": { "padding": "5px", "color":"gray" },
+    "styleDivTitleDisabled": { "padding": "5px", "color":"gray" },
+    "styleDivTitle": { "padding": "5px" },
     "styleTitle": { "fontWeight": "bold", "padding": "5px" }
   },
   "formBusqueda": {
