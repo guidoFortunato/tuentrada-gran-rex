@@ -9,11 +9,12 @@ import DOMPurify from "dompurify";
 
 import "../css/detalleevento.css";
 
-const urlTestEventos = "/src/json/eventosTest.json";
+const urlEventos = "/storage/json/eventos.json";
+// const urlTestEventos = "/src/json/eventosTest.json";
 // const { VITE_JSON_EVENTOS } = getEnvVariables();
 
 export const DetalleEvento = () => {
-  const { data: dataEventos, isLoading: isLoadingEventos } = useFetch(urlTestEventos);
+  const { data: dataEventos, isLoading: isLoadingEventos } = useFetch(urlEventos);
   const [evento, setEvento] = useState(null);
   const [modalIsOpen, setModalIsOpen] = useState(false);
   const modalRef = useRef(null);

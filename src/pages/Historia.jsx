@@ -7,12 +7,13 @@ import DOMPurify from "dompurify";
 
 import "../css/historia.css";
 
-const urlTestHistoria = "/src/json/historiaTest.json";
+const urlHistoria = "/storage/json/historia.json";
+// const urlTestHistoria = "/src/json/historiaTest.json";
 // const { VITE_JSON_HISTORIA } = getEnvVariables();
 
 export const Historia = () => {
   const { dataNavbar, isLoadingNavbar } = useContext(EventosContext);
-  const { data: dataHistoria, isLoading: isLoadingHistoria } = useFetch(urlTestHistoria);
+  const { data: dataHistoria, isLoading: isLoadingHistoria } = useFetch(urlHistoria);
 
   useEffect(() => {
     setTimeout(() => {
