@@ -16,6 +16,7 @@ header {
   background-position: center center;
 }
 .titulo-principal {
+  margin: 0!important;
   font-size: 55px;
   /* font-weight: bold; */
   color: #fff;
