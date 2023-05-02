@@ -23,9 +23,7 @@ export const DetalleEvento = () => {
 
   useEffect(() => {
     if (dataEventos !== null) {
-      const data = dataEventos.eventos.find(
-        (item) => item.nombrePath == name && item.disabled === false
-      );
+      const data = dataEventos.eventos.find( (item) => item.nombrePath == name && item.disabled === false );
       if (data) {
         setEvento(data);
       } else {
