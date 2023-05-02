@@ -1,5 +1,6 @@
 import { useContext, useEffect } from "react";
 import { EventosContext } from "../context/EventosProvider";
+import { getEnvVariables, useFetch } from "../helpers";
 import { CardEvento, FormBusqueda, Spinner } from "../components/";
 
 // import { SliderDestacado } from "../components/";
@@ -7,16 +8,26 @@ import { CardEvento, FormBusqueda, Spinner } from "../components/";
 import "../css/header.css";
 import "../css/footer.css";
 
+const urlEventos = "/storage/json/eventos.json";
+// const urlTestEventos = "/src/json/eventosTest.json";
+// const { VITE_JSON_EVENTOS } = getEnvVariables();
+
+
 export const Home = () => {
-  const { eventosTotales, isLoading } = useContext(EventosContext);
+  const { dataNavbar, isLoadingNavbar } = useContext(EventosContext);
+  const { data: dataEventos, isLoading: isLoadingEventos } = useFetch( urlEventos );
+
   useEffect(() => {
     setTimeout(() => {
       window.scrollTo(0, 0);
     }, 100);
   }, []);
 
-  if (isLoading) {
-    return <Spinner/>
+  if (isLoadingNavbar) {
+    return <Spinner />;
+  }
+  if (isLoadingEventos) {
+    return <Spinner />;
   }
 
 
@@ -25,10 +36,9 @@ export const Home = () => {
       <header className="animate__animated animate__fadeIn animate__fast">
         <div className="header-home">
           <h1 className="titulo-principal animate__animated animate__fadeInDown animate__fast	 ">
-            {" "}
-            <strong> Gran Rex</strong>
+            <strong>{ dataNavbar?.items[0].titulo1.toUpperCase() }</strong>
           </h1>
-          <FormBusqueda />
+          <FormBusqueda placeholder={ dataNavbar?.placeholderInput } />
         </div>
       </header>
       <main>
@@ -39,28 +49,31 @@ export const Home = () => {
                 style={{ fontSize: "30px" }}
                 className="my-3 animate__fadeIn animate__delay-1s tittle-h2"
               >
-                Próximos eventos
+                {dataNavbar?.items[0].titulo2.toUpperCase()}
               </h2>
             </div>
           </div>
 
-          {/*   <div className="row justify-content-center">
-           <SliderDestacado /> 
-           </div>
-           <div className="img-slider">
-            <div className="img-opacity" >
-          <h3>SOY UN COMUNICADO</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam aspernatur illo praesentium, dolore eos nostrum voluptatibus id obcaecati cum ad impedit velit eligendi voluptatem quisquam nam voluptate pariatur, enim deleniti.</p>
+          {/* <div className="row justify-content-center">
+            <SliderDestacado />
           </div>
-          </div>
-         */}
+          <div className="img-slider">
+            <div className="img-opacity">
+              <h3>SOY UN COMUNICADO</h3>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam
+                aspernatur illo praesentium, dolore eos nostrum voluptatibus id
+                obcaecati cum ad impedit velit eligendi voluptatem quisquam nam
+                voluptate pariatur, enim deleniti.
+              </p>
+            </div>
+          </div> */}
 
           <div className="row sin-padding-right-left animate__animated animate__fadeIn  animate__delay-1s ">
-            {eventosTotales?.map((evento) => (
-
+            {dataEventos?.eventos.map((evento) => (
               <CardEvento
                 linkEvento={evento.links.path}
-                img={ evento.imagenes.evento }
+                img={evento.imagenes.evento}
                 status={evento.estado}
                 title={evento.nombre}
                 key={evento.id}

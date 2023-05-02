@@ -3,39 +3,48 @@ import { EventosContext } from "../context/EventosProvider";
 import { useParams } from "react-router-dom";
 
 import { Link } from "react-router-dom";
-import { CardEvento, FormBusqueda } from "../components";
+import { CardEvento, FormBusqueda, Spinner } from "../components";
 
 export const BusquedaEventos = () => {
-  const { listaEventosBusqueda, agregarEvento } = useContext(EventosContext);
+  const { listaEventosBusqueda, agregarEvento, dataNavbar, isLoadingNavbar } = useContext(EventosContext);
+
   let { name } = useParams();
-  
 
   useEffect(() => {
     agregarEvento(name);
   }, [name]);
 
+  useEffect(() => {
+    setTimeout(() => {
+      window.scrollTo(0, 0);
+    }, 100);
+  }, []);
+
+  if (isLoadingNavbar) {
+    return <Spinner />;
+  }
+
   return (
     <>
       <div className="container animate__animated animate__fadeIn animate__fast">
-        <div className="row justify-content-center my-5">
-          <FormBusqueda />
+        <div className="row justify-content-center my-5 form">
+          <FormBusqueda placeholder={dataNavbar?.placeholderInput} />
         </div>
         <div className="row justify-content-center py-5">
           <h2 className="text-center">
-            Resultados de tu búsqueda <strong>"{name}"</strong>
+            {dataNavbar?.resultadoBusqueda} <strong>"{name}"</strong>
           </h2>
         </div>
         <div className="row justify-content-center">
           {listaEventosBusqueda?.length > 0 ? (
             listaEventosBusqueda?.map((evento) => (
               <CardEvento
-              linkEvento={evento.links.path}
-              img={ evento.imagenes.evento }
-              status={evento.estado}
-              title={evento.nombre}
-              key={evento.id}
-              disabled={evento.disabled}
-                
+                linkEvento={evento.links.path}
+                img={evento.imagenes.evento}
+                status={evento.estado}
+                title={evento.nombre}
+                key={evento.id}
+                disabled={evento.disabled}
               />
             ))
           ) : (
@@ -43,7 +52,7 @@ export const BusquedaEventos = () => {
               className="d-flex justify-content-center alert alert-danger my-5 w-50"
               role="alert"
             >
-              No existen eventos para tu búsqueda
+              {dataNavbar?.noHayEventos}
             </div>
           )}
         </div>
@@ -53,7 +62,7 @@ export const BusquedaEventos = () => {
               style={{ fontSize: "14px", padding: "3px 20px" }}
               className="btn-general"
             >
-              Home
+              {dataNavbar?.botonHomeBusqueda}
             </div>
           </Link>
         </div>

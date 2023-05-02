@@ -1,0 +1,16 @@
+{
+  "items": [
+    {
+      "id": 1,
+      "descripcion": "<strong>Dirección:</strong> Av. Corrientes 857, Capital Federal.",
+      "mostrar": true
+    },
+    {
+      "id": 2,
+      "descripcion": "<strong>Boletería:</strong> Lunes a Sábado de 12:00 a 18:00hs. Feriados Cerrado.",
+      "mostrar": true
+    }
+  ],
+  "copyright": "Copyright © 2023 tuentrada.com",
+  "derechosReservados": "Todos los derechos reservados"
+}

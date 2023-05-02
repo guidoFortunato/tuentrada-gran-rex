@@ -1,19 +1,24 @@
+import { useContext } from "react";
 import { Link } from "react-router-dom";
+import { EventosContext } from "../context/EventosProvider";
+import { Spinner } from "./Spinner";
+
 import "../css/cardevento.css";
 
 export const CardEvento = ({ img = "", status = "disponible", title = "", linkEvento = "", disabled = false,}) => {
-  const urlEvento = linkEvento?.split("/")[1] !== "shows";
-  // const newDate = date.charAt(0).toUpperCase() + date.slice(1).toLowerCase();
-  // const newTime = time.charAt(0).toUpperCase() + time.slice(1).toLowerCase();
+  const { dataNavbar, isLoadingNavbar } = useContext(EventosContext);
   const newStatus = status.charAt(0).toUpperCase() + status.slice(1).toLowerCase();
-  
+
+  if (isLoadingNavbar) {
+    return <Spinner />;
+  }
 
   return (
     <article
       className="col-12 col-md-6 col-lg-4 col-xl-3 cursor-default"
-      style={{ textAlign: "center" }}
+      style={dataNavbar?.cardEvento.styleGeneral}
     >
-      <div className="card" style={{ position: "relative" }}>
+      <div className="card" style={dataNavbar?.cardEvento.styleCard}>
         {disabled ? (
           <div
             className={`${"linkEvento cursor-default"}`}
@@ -29,38 +34,38 @@ export const CardEvento = ({ img = "", status = "disponible", title = "", linkEv
                 style={{
                   border: `1px solid ${
                     status.toLowerCase() === "agotado"
-                      ? "orange"
+                      ? dataNavbar?.cardEvento.h5.border.agotado
                       : status.toLowerCase() === "reprogramado"
-                      ? "blue"
+                      ? dataNavbar?.cardEvento.h5.border.reprogramado
                       : status.toLowerCase() === "cancelado"
-                      ? "red"
+                      ? dataNavbar?.cardEvento.h5.border.cancelado
                       : status.toLowerCase() === "próximamente"
-                      ? "#484545"
-                      : "green"
+                      ? dataNavbar?.cardEvento.h5.border.proximamente
+                      : dataNavbar?.cardEvento.h5.border.disponible
                   }`,
                   background: `${
                     status.toLowerCase() === "agotado"
-                      ? "orange"
-                      : status.toLowerCase() === "reprogramado"
-                      ? "blue"
-                      : status.toLowerCase() === "cancelado"
-                      ? "red"
-                      : status.toLowerCase() === "próximamente"
-                      ? "#484545"
-                      : "green"
+                    ? dataNavbar?.cardEvento.h5.border.agotado
+                    : status.toLowerCase() === "reprogramado"
+                    ? dataNavbar?.cardEvento.h5.border.reprogramado
+                    : status.toLowerCase() === "cancelado"
+                    ? dataNavbar?.cardEvento.h5.border.cancelado
+                    : status.toLowerCase() === "próximamente"
+                    ? dataNavbar?.cardEvento.h5.border.proximamente
+                    : dataNavbar?.cardEvento.h5.border.disponible
                   }`,
-                  color: "white",
-                  position: "absolute",
-                  top: "10px",
-                  left: "10px",
-                  fontSize: "10px",
+                  color: dataNavbar?.cardEvento.h5.color,
+                  position: dataNavbar?.cardEvento.h5.position,
+                  top: dataNavbar?.cardEvento.h5.top,
+                  left: dataNavbar?.cardEvento.h5.left,
+                  fontSize: dataNavbar?.cardEvento.h5.fontSize,
                 }}
               >
                 {newStatus}
               </h5>
             </div>
-            <div style={{ padding: "5px", color:"gray" }}>
-              <h3 className="h3-card" style={{ fontWeight: "bold", padding: "5px" }}>
+            <div style={dataNavbar?.cardEvento.styleDivTitleDisabled}>
+              <h3 className="h3-card" style={dataNavbar?.cardEvento.styleTitle}>
                 {title.toUpperCase()}
               </h3>
               {/* <h4 style={{ padding: "5px 0", fontSize: "15px",   color:"gray"}}>
@@ -72,7 +77,6 @@ export const CardEvento = ({ img = "", status = "disponible", title = "", linkEv
           <Link
             to={linkEvento}
             className={`${"linkEvento"}`}
-            target={urlEvento ? "_blank" : null}
           >
             <img
               src={img}
@@ -85,38 +89,38 @@ export const CardEvento = ({ img = "", status = "disponible", title = "", linkEv
                 style={{
                   border: `1px solid ${
                     status.toLowerCase() === "agotado"
-                      ? "orange"
+                      ? dataNavbar?.cardEvento.h5.border.agotado
                       : status.toLowerCase() === "reprogramado"
-                      ? "blue"
+                      ? dataNavbar?.cardEvento.h5.border.reprogramado
                       : status.toLowerCase() === "cancelado"
-                      ? "red"
+                      ? dataNavbar?.cardEvento.h5.border.cancelado
                       : status.toLowerCase() === "próximamente"
-                      ? "#484545"
-                      : "green"
+                      ? dataNavbar?.cardEvento.h5.border.proximamente
+                      : dataNavbar?.cardEvento.h5.border.disponible
                   }`,
                   background: `${
                     status.toLowerCase() === "agotado"
-                      ? "orange"
+                      ? dataNavbar?.cardEvento.h5.border.agotado
                       : status.toLowerCase() === "reprogramado"
-                      ? "blue"
+                      ? dataNavbar?.cardEvento.h5.border.reprogramado
                       : status.toLowerCase() === "cancelado"
-                      ? "red"
+                      ? dataNavbar?.cardEvento.h5.border.cancelado
                       : status.toLowerCase() === "próximamente"
-                      ? "#484545"
-                      : "green"
+                      ? dataNavbar?.cardEvento.h5.border.proximamente
+                      : dataNavbar?.cardEvento.h5.border.disponible
                   }`,
-                  color: "white",
-                  position: "absolute",
-                  top: "10px",
-                  left: "10px",
-                  fontSize: "10px",
+                  color: dataNavbar?.cardEvento.h5.color,
+                  position: dataNavbar?.cardEvento.h5.position,
+                  top: dataNavbar?.cardEvento.h5.top,
+                  left: dataNavbar?.cardEvento.h5.left,
+                  fontSize: dataNavbar?.cardEvento.h5.fontSize,
                 }}
               >
                 {newStatus}
               </h5>
             </div>
-            <div style={{ padding: "5px" }}>
-              <h3 className="h3-card" style={{ fontWeight: "bold", padding: "5px" }}>
+            <div style={dataNavbar?.cardEvento.styleDivTitle}>
+              <h3 className="h3-card" style={dataNavbar?.cardEvento.styleTitle}>
                 {title.toUpperCase()}
               </h3>
               {/* <h4 style={{ padding: "5px 0", fontSize: "15px" }}>
