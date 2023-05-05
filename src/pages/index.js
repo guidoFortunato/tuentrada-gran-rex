@@ -1,3 +1,4 @@
+export * from "./BasesCondiciones";
 export * from "./Beneficios";
 export * from "./BusquedaEventos";
 export * from "./Calendario";

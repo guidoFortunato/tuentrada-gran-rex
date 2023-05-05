@@ -1,5 +1,5 @@
 import { Navigate, Route, Routes } from "react-router-dom";
-import { Beneficios, BusquedaEventos, Calendario, ComoLlegar, Historia, Home, PreguntasFrecuentes, Ubicaciones } from "../pages/";
+import { BasesCondiciones, Beneficios, BusquedaEventos, Calendario, ComoLlegar, Historia, Home, PreguntasFrecuentes, Ubicaciones } from "../pages/";
 import { DetalleEvento } from "../components";
 
 export const AppRouter = () => {
@@ -14,6 +14,7 @@ export const AppRouter = () => {
       <Route path="/preguntas-frecuentes" element={<PreguntasFrecuentes />} />
       <Route path="/:name" element={<DetalleEvento />} />
       <Route path="/ubicaciones" element={<Ubicaciones />} />
+      <Route path="/bases-y-condiciones" element={<BasesCondiciones />} />
       <Route path="/*" element={<Navigate to="/" />} />
     </Routes>
   );
