@@ -9,7 +9,6 @@ const urlBases = "/storage/json/bases.json";
 
 export const BasesCondiciones = () => {
   const { data: dataBases, isLoading: isLoadingBases } = useFetch(urlBases);
-    console.log({isLoadingBases})
 
   useEffect(() => {
     setTimeout(() => {
@@ -34,17 +33,17 @@ export const BasesCondiciones = () => {
         </div>
 
         <div className="col-12 mb-4">
-            <p
-              className="parrafo-historia"
-              dangerouslySetInnerHTML={{
-                __html: DOMPurify.sanitize(dataBases?.descripcion),
-              }}
-            ></p>
-          </div>
+          <p
+            className="parrafo-historia"
+            dangerouslySetInnerHTML={{
+              __html: DOMPurify.sanitize(dataBases?.descripcion),
+            }}
+          ></p>
+        </div>
 
         <div className="col-12 mb-4">
           <p className="parrafo-historia">
-            <strong>{dataBases?.movilidadReducida.titulo}</strong> 
+            <strong>{dataBases?.movilidadReducida.titulo}</strong>
           </p>
           <p className="parrafo-historia">
             {dataBases?.movilidadReducida.descripcion}
@@ -52,18 +51,19 @@ export const BasesCondiciones = () => {
         </div>
         <div className="col-12 mb-4">
           <p className="parrafo-historia">
-            <strong>{dataBases?.menores.titulo}</strong> 
+            <strong>{dataBases?.menores.titulo}</strong>
           </p>
-          <p className="parrafo-historia">
-            {dataBases?.menores.descripcion}
-          </p>
+          <p className="parrafo-historia">{dataBases?.menores.descripcion}</p>
         </div>
         <div className="col-12 ">
           <p className="parrafo-historia">
-            <strong>{dataBases?.terminos.titulo}</strong> 
+            <strong>{dataBases?.terminos.titulo}</strong>
           </p>
           <p className="parrafo-historia">
-            {dataBases?.terminos.descripcion} <a target="_blank" href={dataBases?.terminos.link.href}>{dataBases?.terminos.link.titulo}</a>
+            {dataBases?.terminos.descripcion}{" "}
+            <a target="_blank" href={dataBases?.terminos.link.href}>
+              {dataBases?.terminos.link.titulo}
+            </a>
           </p>
         </div>
       </div>
