@@ -1,5 +1,5 @@
 import { Navigate, Route, Routes } from "react-router-dom";
-import { BusquedaEventos, Calendario, ComoLlegar, Historia, Home, PreguntasFrecuentes } from "../pages/";
+import { BasesCondiciones, BusquedaEventos, Calendario, ComoLlegar, Historia, Home, PreguntasFrecuentes } from "../pages/";
 import { DetalleEvento } from "../components";
 
 export const AppRouter = () => {
@@ -12,6 +12,7 @@ export const AppRouter = () => {
       <Route path="/historia" element={<Historia />} />
       <Route path="/preguntas-frecuentes" element={<PreguntasFrecuentes />} />
       <Route path="/:name" element={<DetalleEvento />} />
+      <Route path="/bases-y-condiciones" element={<BasesCondiciones />} />
       <Route path="/*" element={<Navigate to="/" />} />
     </Routes>
   );
