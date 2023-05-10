@@ -1,19 +1,41 @@
 // import { GaleriaHistoria } from "../components";
-import { useContext, useEffect } from "react";
+import { useContext, useEffect, useState } from "react";
 import { EventosContext } from "../context/EventosProvider";
-import { getEnvVariables, useFetch } from "../helpers";
+// import { getEnvVariables, useFetch } from "../helpers";
 import { ImagenHistoria, Spinner } from "../components";
 import DOMPurify from "dompurify";
 
 import "../css/historia.css";
 
-const urlHistoria = "/storage/json/historia.json";
-// const urlTestHistoria = "/src/json/historiaTest.json";
+// const urlHistoria = "/storage/json/historia.json";
+const urlTestHistoria = "/src/json/historiaTest.json";
 // const { VITE_JSON_HISTORIA } = getEnvVariables();
 
 export const Historia = () => {
-  const { dataNavbar, isLoadingNavbar } = useContext(EventosContext);
-  const { data: dataHistoria, isLoading: isLoadingHistoria } = useFetch(urlHistoria);
+  const { dataNavbar, isLoadingNavbar } = useContext( EventosContext );
+  const [dataHistoria, setDataHistoria] = useState(null);
+  const [isLoadingHistoria, setIsLoadingHistoria] = useState(true);
+
+  
+  useEffect(() => {
+    if (localStorage.getItem('dataHistoria')) {
+      setDataHistoria(JSON.parse(localStorage.getItem('dataHistoria')))
+      setIsLoadingHistoria(false)
+    } else {
+      fetch(urlTestHistoria)
+        .then(response => response.json())
+        .then(data => {
+          localStorage.setItem('dataHistoria', JSON.stringify(data))
+          console.log(data)
+          setDataHistoria(data)
+          setIsLoadingHistoria(false)
+        })
+        .catch(error => {
+          throw new Error(error)
+        })
+    }
+  }, [])
+
 
   useEffect(() => {
     setTimeout(() => {

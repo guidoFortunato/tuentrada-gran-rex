@@ -1,6 +1,6 @@
 import { useContext, useEffect } from "react";
 import { EventosContext } from "../context/EventosProvider";
-import { getEnvVariables, useFetch } from "../helpers";
+// import { getEnvVariables, useFetch } from "../helpers";
 import { CardEvento, FormBusqueda, Spinner } from "../components/";
 
 // import { SliderDestacado } from "../components/";
@@ -8,14 +8,14 @@ import { CardEvento, FormBusqueda, Spinner } from "../components/";
 import "../css/header.css";
 import "../css/footer.css";
 
-const urlEventos = "/storage/json/eventos.json";
+// const urlEventos = "/storage/json/eventos.json";
 // const urlTestEventos = "/src/json/eventosTest.json";
 // const { VITE_JSON_EVENTOS } = getEnvVariables();
 
 
 export const Home = () => {
-  const { dataNavbar, isLoadingNavbar } = useContext(EventosContext);
-  const { data: dataEventos, isLoading: isLoadingEventos } = useFetch( urlEventos );
+  const { dataEventos, isLoadingEventos, dataNavbar, isLoadingNavbar } = useContext( EventosContext );
+  // const { data: dataEventos, isLoading: isLoadingEventos } = useFetch( urlTestEventos );
 
   useEffect(() => {
     setTimeout(() => {

@@ -6,9 +6,9 @@ import { EventosContext } from "../context/EventosProvider";
 import { Spinner } from "./";
 
 export const Navbar = () => {
-  const [ isNavCollapsed, setIsNavCollapsed ] = useState(true);
-  const { dataNavbar, isLoadingNavbar } = useContext(EventosContext);
-  const handleNavCollapse = () => setIsNavCollapsed(!isNavCollapsed);
+  const [ isNavCollapsed, setIsNavCollapsed ] = useState( true );
+  const { dataNavbar, isLoadingNavbar } = useContext( EventosContext );
+  const handleNavCollapse = () => setIsNavCollapsed( !isNavCollapsed );
 
   if ( isLoadingNavbar ) {
     return <Spinner />

@@ -68,14 +68,14 @@ const eventTimeFormat = {
   minute: "2-digit",
 };
 
-const urlEventos = "/storage/json/eventos.json";
+// const urlEventos = "/storage/json/eventos.json";
 // const urlTestEventos = "/src/json/eventosTest.json";
 // const { VITE_JSON_EVENTOS } = getEnvVariables();
 
 
 export const Calendario = () => {
-  const { dataNavbar, isLoadingNavbar } = useContext(EventosContext)
-  const { data: dataEventos, isLoading: isLoadingEventos } = useFetch(urlEventos);
+  const { dataEventos, isLoadingEventos, dataNavbar, isLoadingNavbar } = useContext(EventosContext)
+  // const { data: dataEventos, isLoading: isLoadingEventos } = useFetch(urlTestEventos);
 
   const navigate = useNavigate();
   const { pathname } = useLocation();
