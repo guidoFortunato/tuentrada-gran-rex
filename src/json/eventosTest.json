@@ -5,265 +5,6 @@
     "botonPlano": "ver ubicaciones"
   },
   "eventos": [
-<<<<<<< HEAD
-=======
-    
-    {
-      "id": 4,
-      "descripcion": "International Festival Ballet for the Peace se llevará a cabo los días Viernes 5 y Sabado 6 de Mayo de 2023 en el Teatro Gran Rex. <br /> <br />    El Teatro Gran Rex informa que los eventos que se realizan en esta sala podrían ser fotografiados o filmados para su posterior difusión en medios y /o campañas publicitarias. <br /><br />    <strong>  Fechas:  </strong>    <ul>      <li style='list-style: inside;'>Cancelado: Viernes 5 de mayo 20:30hs </li>      <li style='list-style: inside;'> Cancelado: Sábado 6 de mayo 20:30hs </li>       </ul>      ",
-      "disabled": false,
-      "display": "block",
-      "estado": "cancelado",
-      "fechas": [
-        {
-          "dia": "viernes 5 de mayo",
-          "hora": "20:30HS",
-          "start": "2023-05-05T20:30:00",
-          "end": "",
-          "estadoCalendario": "cancelado"
-        },
-        {
-          "dia": "sábado 6 de mayo",
-          "hora": "20:30HS",
-          "start": "2023-05-06T20:30:00",
-          "end": "",
-          "estadoCalendario": "cancelado"
-        }
-      ],
-      "informacionGeneral": "El ingreso al establecimiento implica la autorización a la Productora y a Cordero, Cavallo y Lautaret S.A. a utilizar el     contenido filmado y /o fotografiado y el uso de imagen personal     sin compensación alguna. <br />    <br />    <strong> Entradas en venta </strong> <br />    En las boleterias del Teatro Gran Rex (Av. Corrientes 857 - Lunes a Sábado de 12 a 18 hs. Feriados Cerrado.) <br /> <br />    <strong>Personas con movilidad reducida</strong> <br />    Las sillas de ruedas se ubican en el espacio habilitado para las    mismas detrás de la fila 25 del sector derecho de la Platea. En    todos los casos abonan la entrada. Dichas localidades deben ser    adquiridas solo en la boleteria del Teatro, presentando certificado de discapacidad. Al momento de la compra, abonan el    ticket de menor valor disponible.",
-
-      "keywords": [
-        "festival",
-        "ballet",
-        "festibal",
-        "balet",
-        "valet",
-        "vallet",
-        "International"
-      ],
-      "links": {
-        "href": "https://www.ticketek.com.ar/international-festival-ballet-peace/teatro-gran-rex",
-
-        "botones": [
-          {
-            "id": 1,
-            "name": "comprar",
-            "href": "https://www.ticketek.com.ar/international-festival-ballet-peace/teatro-gran-rex"
-          },
-          {
-            "id": 2,
-            "name": "volver",
-            "href": "/"
-          }
-        ],
-        "path": "/festival-ballet"
-      },
-      "imagenes": {
-        "evento": "https://www.tuentrada.com/teatro/gran-rex/imagenes/festival_ballet.webp",
-        "plano": "https://www.tuentrada.com/teatro/gran-rex/imagenes/planos/tue1.webp"
-      },
-      "nombre": "international festival ballet",
-      "nombrePath": "festival-ballet",
-      "ubicaciones": [
-        {
-          "id": 1,
-          "nombre": "PLATEA 1",
-          "color": "#970513",
-          "precio": "$9.000"
-        },
-        {
-          "id": 2,
-          "nombre": "PLATEA 2",
-          "color": "#79C8C3",
-          "precio": "$8.500"
-        },
-        {
-          "id": 3,
-          "nombre": "PLATEA 3",
-          "color": "#EDB63B",
-          "precio": "$8.000"
-        },
-        {
-          "id": 4,
-          "nombre": "PLATEA 4",
-          "color": "#86AA4D",
-          "precio": "$7.500"
-        },
-        {
-          "id": 5,
-          "nombre": "PLATEA 5",
-          "color": "#052748",
-          "precio": "$6.500"
-        },
-        {
-          "id": 6,
-          "nombre": "SUPER PULLMAN 1",
-          "color": "#035F89",
-          "precio": "$7.500"
-        },
-        {
-          "id": 7,
-          "nombre": "SUPER PULLMAN 2",
-          "color": "#A9167D",
-          "precio": "$6.500"
-        },
-        {
-          "id": 8,
-          "nombre": "PULLMAN 1",
-          "color": "#EE6E08",
-          "precio": "$5.000"
-        },
-        {
-          "id": 9,
-          "nombre": "PULLMAN 2",
-          "color": "#037366",
-          "precio": "$4.500"
-        },
-        {
-          "id": 10,
-          "nombre": "PULLMAN 3",
-          "color": "#D97B77",
-          "precio": "$4.500"
-        },
-        {
-          "id": 11,
-          "nombre": "PULLMAN 4",
-          "color": "#AF0657",
-          "precio": "$4.000"
-        },
-        {
-          "id": 12,
-          "nombre": "PULLMAN 5",
-          "color": "#5271FF",
-          "precio": "$4.000"
-        }
-      ]
-    },
-    {
-      "id": 5,
-      "descripcion": "Vuelve al Gran Rex el máximo exponente de la cumbia santafecina, Sergio Torres 'LA VOZ' y esta vez vamos a festejarsu cumpleaños en el Rex, en una noche única y especial. Vuelve el Negro al Gran Rex y no te lo podes perder. <br /> <br />    El Teatro Gran Rex informa que los eventos que se realizan en esta sala podrían ser fotografiados o filmados para su posterior difusión en medios y /o campañas publicitarias. <br /><br />    <strong>  Fechas:  </strong>    <ul> <li style='list-style: inside;'> Reprogramado: Domingo 7 de mayo 21:30hs </li>       </ul>      ",
-      "disabled": false,
-      "display": "block",
-      "estado": "reprogramado",
-      "fechas": [
-        {
-          "dia": "domingo 7 de mayo",
-          "hora": "21:30HS",
-          "start": "2023-05-07T21:30:00",
-          "end": "",
-          "estadoCalendario": "reprogramado"
-        }
-      ],
-      "informacionGeneral": "El ingreso al establecimiento implica la autorización a la Productora y a Cordero, Cavallo y Lautaret S.A. a utilizar el     contenido filmado y /o fotografiado y el uso de imagen personal     sin compensación alguna. <br />    <br />    <strong> Entradas en venta </strong> <br />    En las boleterias del Teatro Gran Rex (Av. Corrientes 857 - Lunes a Sábado de 12 a 18 hs. Feriados Cerrado.) <br /> <br />    <strong>Personas con movilidad reducida</strong> <br />    Las sillas de ruedas se ubican en el espacio habilitado para las    mismas detrás de la fila 25 del sector derecho de la Platea. En    todos los casos abonan la entrada. Dichas localidades deben ser    adquiridas solo en la boleteria del Teatro, presentando certificado de discapacidad. Al momento de la compra, abonan el    ticket de menor valor disponible.",
-
-      "keywords": [
-        "sergio",
-        "torres",
-        "cergio",
-        "serjio",
-        "cerjio",
-        "tores",
-        "mayo"
-      ],
-      "links": {
-        "href": "https://www.ticketek.com.ar/sergio-torres/teatro-gran-rex",
-
-        "botones": [
-          {
-            "id": 1,
-            "name": "comprar",
-            "href": "https://www.ticketek.com.ar/sergio-torres/teatro-gran-rex"
-          },
-          {
-            "id": 2,
-            "name": "volver",
-            "href": "/"
-          }
-        ],
-        "path": "/sergio-torres"
-      },
-      "imagenes": {
-        "evento": "https://www.tuentrada.com/teatro/gran-rex/imagenes/sergio_torres.webp",
-        "plano": "https://www.tuentrada.com/teatro/gran-rex/imagenes/planos/tue1.webp"
-      },
-      "nombre": "sergio torres",
-      "nombrePath": "sergio-torres",
-      "ubicaciones": [
-        {
-          "id": 1,
-          "nombre": "PLATEA 1",
-          "color": "#970513",
-          "precio": "$8.000"
-        },
-        {
-          "id": 2,
-          "nombre": "PLATEA 2",
-          "color": "#79C8C3",
-          "precio": "$7.500"
-        },
-        {
-          "id": 3,
-          "nombre": "PLATEA 3",
-          "color": "#EDB63B",
-          "precio": "$7.000"
-        },
-        {
-          "id": 4,
-          "nombre": "PLATEA 4",
-          "color": "#86AA4D",
-          "precio": "$6.500"
-        },
-        {
-          "id": 5,
-          "nombre": "PLATEA 5",
-          "color": "#052748",
-          "precio": "$6.000"
-        },
-        {
-          "id": 6,
-          "nombre": "SUPER PULLMAN 1",
-          "color": "#035F89",
-          "precio": "$6.500"
-        },
-        {
-          "id": 7,
-          "nombre": "SUPER PULLMAN 2",
-          "color": "#A9167D",
-          "precio": "$6.000"
-        },
-        {
-          "id": 8,
-          "nombre": "PULLMAN 1",
-          "color": "#EE6E08",
-          "precio": "$5.500"
-        },
-        {
-          "id": 9,
-          "nombre": "PULLMAN 2",
-          "color": "#037366",
-          "precio": "$5.000"
-        },
-        {
-          "id": 10,
-          "nombre": "PULLMAN 3",
-          "color": "#D97B77",
-          "precio": "$4.500"
-        },
-        {
-          "id": 11,
-          "nombre": "PULLMAN 4",
-          "color": "#AF0657",
-          "precio": "$4.000"
-        },
-        {
-          "id": 12,
-          "nombre": "PULLMAN 5",
-          "color": "#5271FF",
-          "precio": "$3.500"
-        }
-      ]
-    },
->>>>>>> 2e8f9d7d5de1abc2ab0d8d28c7c3fd3a0a536d12
     {
       "id": 6,
       "descripcion": "Dale Q’ Va es, sin dudas, uno de los grupos cuarteteros del momento, se encuentran viviendo un presente excelente a lo largo y ancho de todo el país.  <br /> <br />    Está prohibido el ingreso a la sala a menores de 1 año. A partir de los 3 años de edad se debe abonar la entrada.<br /><br />    <strong>  Fechas:  </strong>    <ul>      <li style='list-style: inside;'> Viernes 12 de mayo 20:30hs </li>      </ul>      ",
@@ -1610,11 +1351,7 @@
     },
     {
       "id": 13,
-<<<<<<< HEAD
       "descripcion": "Julieta Venegas se presentará el día Domingo 26 de Agosto en el Teatro Gran Rex.  <br /> <br />    Está prohibido el ingreso a la sala a menores de 1 año. A partir de los 3 años de edad se debe abonar la entrada.<br /><br />     <strong>  Fechas:  </strong>    <ul>      <li style='list-style: inside;'> Sábado 26 de agosto 20:30hs </li>    </ul>    ",
-=======
-      "descripcion": "Julieta Venegas se presentará el día Domingo 26 de Agosto en el Teatro Gran Rex.  <br /> <br />    El Teatro Gran Rex informa que los eventos que se realizan en esta sala podrían ser fotografiados o filmados para su posterior difusión en medios y /o campañas publicitarias. <br /><br />     <strong>  Fechas:  </strong>    <ul>      <li style='list-style: inside;'> Sábado 26 de agosto 20:30hs </li>    </ul>    ",
->>>>>>> 2e8f9d7d5de1abc2ab0d8d28c7c3fd3a0a536d12
       "disabled": false,
       "display": "block",
       "estado": "disponible",
@@ -1862,26 +1599,17 @@
       ]
     },
     {
-<<<<<<< HEAD
       "id": 19,
       "descripcion": "Natalie Perez se presentará el día Sábado 9 de Septiembre en el Teatro Gran Rex.  <br /> <br />    Está prohibido el ingreso a la sala a menores de 1 año. A partir de los 3 años de edad se debe abonar la entrada.<br /><br />    <strong>  Fechas:  </strong>    <ul>     <li style='list-style: inside;'>      Sábado 9 de Septiembre 20:30hs     </li>    </ul>",
       "disabled": false,
       "display": "block",
       "estado": "disponible",
-=======
-      "id": 18,
-      "descripcion": "Natalie Perez se presentará el día Sábado 9 de Septiembre en el Teatro Gran Rex.  <br /> <br />    El Teatro Gran Rex informa que los eventos que se realizan en esta sala podrían ser fotografiados o filmados para su posterior difusión en medios y /o campañas publicitarias. <br /><br />    <strong>  Fechas:  </strong>    <ul>     <li style='list-style: inside;'>      Sábado 9 de Septiembre 20:30hs     </li>    </ul>",
-      "disabled": true,
-      "display": "block",
-      "estado": "próximamente",
->>>>>>> 2e8f9d7d5de1abc2ab0d8d28c7c3fd3a0a536d12
       "fechas": [
         {
           "dia": "sábado 9 de septiembre",
           "hora": "20:30hs",
           "start": "2023-09-09T20:30:00",
           "end": "",
-<<<<<<< HEAD
           "estadoCalendario": "disponible"
         }
       ],
@@ -1892,18 +1620,6 @@
         "natalie perez",
         "septiembre",
         "setiembre"
-=======
-          "estadoCalendario": "próximamente"
-        }
-      ],
-      "informacionGeneral": "El ingreso al establecimiento implica la autorización a la Productora y a Cordero, Cavallo y Lautaret S.A. a utilizar el     contenido filmado y /o fotografiado y el uso de imagen personal     sin compensación alguna. <br />    <br />    <strong> Entradas en venta </strong> <br />    En las boleterias del Teatro Gran Rex (Av. Corrientes 857 - Lunes a Sábado de 12 a 18 hs. Feriados Cerrado.) <br /> <br />    <strong>Personas con movilidad reducida</strong> <br />    Las sillas de ruedas se ubican en el espacio habilitado para las    mismas detrás de la fila 25 del sector derecho de la Platea. En    todos los casos abonan la entrada. Dichas localidades deben ser    adquiridas solo en la boleteria del Teatro, presentando certificado de discapacidad. Al momento de la compra, abonan el    ticket de menor valor disponible.",
-
-      "keywords": [
-        "natalie",
-        "peres",
-        "perez",
-        "natalia"
->>>>>>> 2e8f9d7d5de1abc2ab0d8d28c7c3fd3a0a536d12
       ],
       "links": {
         "href": "https://www.tuentrada.com/eventos/detalle/Natalie-Perez/879637696638",
@@ -1933,111 +1649,67 @@
           "id": 1,
           "nombre": "PLATEA 1",
           "color": "#970513",
-<<<<<<< HEAD
           "precio": "$10.000"
-=======
-          "precio": "$14.000"
->>>>>>> 2e8f9d7d5de1abc2ab0d8d28c7c3fd3a0a536d12
         },
         {
           "id": 2,
           "nombre": "PLATEA 2",
           "color": "#79C8C3",
-<<<<<<< HEAD
           "precio": "$9.500"
-=======
-          "precio": "$12.500"
->>>>>>> 2e8f9d7d5de1abc2ab0d8d28c7c3fd3a0a536d12
         },
         {
           "id": 3,
           "nombre": "PLATEA 3",
           "color": "#EDB63B",
-<<<<<<< HEAD
           "precio": "$9.000"
-=======
-          "precio": "$11.500"
->>>>>>> 2e8f9d7d5de1abc2ab0d8d28c7c3fd3a0a536d12
         },
         {
           "id": 4,
           "nombre": "PLATEA 4",
           "color": "#86AA4D",
-<<<<<<< HEAD
           "precio": "$8.500"
-=======
-          "precio": "$10.000"
->>>>>>> 2e8f9d7d5de1abc2ab0d8d28c7c3fd3a0a536d12
         },
         {
           "id": 5,
           "nombre": "PLATEA 5",
           "color": "#052748",
-<<<<<<< HEAD
           "precio": "$8.000"
-=======
-          "precio": "$9.500"
->>>>>>> 2e8f9d7d5de1abc2ab0d8d28c7c3fd3a0a536d12
         },
         {
           "id": 6,
           "nombre": "SUPER PULLMAN 1",
           "color": "#035F89",
-<<<<<<< HEAD
           "precio": "$8.500"
-=======
-          "precio": "$10.000"
->>>>>>> 2e8f9d7d5de1abc2ab0d8d28c7c3fd3a0a536d12
         },
         {
           "id": 7,
           "nombre": "SUPER PULLMAN 2",
           "color": "#A9167D",
-<<<<<<< HEAD
           "precio": "$8.000"
-=======
-          "precio": "$9.000"
->>>>>>> 2e8f9d7d5de1abc2ab0d8d28c7c3fd3a0a536d12
         },
         {
           "id": 8,
           "nombre": "PULLMAN 1",
           "color": "#EE6E08",
-<<<<<<< HEAD
           "precio": "$7.000"
-=======
-          "precio": "$8.000"
->>>>>>> 2e8f9d7d5de1abc2ab0d8d28c7c3fd3a0a536d12
         },
         {
           "id": 9,
           "nombre": "PULLMAN 2",
           "color": "#037366",
-<<<<<<< HEAD
           "precio": "$6.500"
-=======
-          "precio": "$7.000"
->>>>>>> 2e8f9d7d5de1abc2ab0d8d28c7c3fd3a0a536d12
         },
         {
           "id": 10,
           "nombre": "PULLMAN 3",
           "color": "#D97B77",
-<<<<<<< HEAD
           "precio": "$6.000"
-=======
-          "precio": "$6.500"
->>>>>>> 2e8f9d7d5de1abc2ab0d8d28c7c3fd3a0a536d12
         },
         {
           "id": 11,
           "nombre": "PULLMAN 4",
           "color": "#AF0657",
-<<<<<<< HEAD
           "precio": "$5.500"
-=======
-          "precio": "$5.000"
->>>>>>> 2e8f9d7d5de1abc2ab0d8d28c7c3fd3a0a536d12
         },
         {
           "id": 12,
@@ -2289,11 +1961,7 @@
     },
     {
       "id": 18,
-<<<<<<< HEAD
       "descripcion": "Conociendo Rusia se llevará a cabo los días Viernes 27, Sabado 28 y Domingo 29 de Octubre de 2023 en el Teatro Gran Rex. <br /> <br />    Está prohibido el ingreso a la sala a menores de 1 año. A partir de los 3 años de edad se debe abonar la entrada.<br /><br />    <strong>  Fechas:  </strong>    <ul>      <li style='list-style: inside;'>Viernes 27 de Octubre 20:30hs </li>      <li style='list-style: inside;'>Sábado 28 de Octubre 20:30hs </li>  <li style='list-style: inside;'>Domingo 29 de Octubre 20:30hs </li>     </ul>      ",
-=======
-      "descripcion": "Conociendo Rusia se llevará a cabo los días Viernes 27, Sabado 28 y Domingo 29 de Octubre de 2023 en el Teatro Gran Rex. <br /> <br />    El Teatro Gran Rex informa que los eventos que se realizan en esta sala podrían ser fotografiados o filmados para su posterior difusión en medios y /o campañas publicitarias. <br /><br />    <strong>  Fechas:  </strong>    <ul>      <li style='list-style: inside;'>Viernes 27 de Octubre 20:30hs </li>      <li style='list-style: inside;'>Sábado 28 de Octubre 20:30hs </li>  <li style='list-style: inside;'>Domingo 29 de Octubre 20:30hs </li>     </ul>      ",
->>>>>>> 2e8f9d7d5de1abc2ab0d8d28c7c3fd3a0a536d12
       "disabled": false,
       "display": "block",
       "estado": "disponible",
@@ -2320,7 +1988,6 @@
           "estadoCalendario": "disponible"
         }
       ],
-<<<<<<< HEAD
       "informacionGeneral": "El Teatro Gran Rex informa que los eventos que se realizan en esta sala podrían ser fotografiados o filmados para su posterior difusión en medios y /o campañas publicitarias. <br /> El ingreso al establecimiento implica la autorización a la Productora y a Cordero, Cavallo y Lautaret S.A. a utilizar el contenido filmado y /o fotografiado y el uso de imagen personal sin compensación alguna. <br />    <br />    <strong> Entradas en venta </strong> <br />    En las boleterias del Teatro Gran Rex (Av. Corrientes 857 - Lunes a Sábado de 12 a 18 hs. Feriados Cerrado.) <br /> <br />    <strong>Personas con movilidad reducida</strong> <br />    Las sillas de ruedas se ubican en el espacio habilitado para las    mismas detrás de la fila 25 del sector derecho de la Platea. En    todos los casos abonan la entrada. Dichas localidades deben ser    adquiridas solo en la boleteria del Teatro, presentando certificado de discapacidad. Al momento de la compra, abonan el    ticket de menor valor disponible.",
 
       "keywords": [
@@ -2329,16 +1996,6 @@
         "conosiendo rusia solo",
         "conociendo rucia solo",
         "octubre"
-=======
-      "informacionGeneral": "El ingreso al establecimiento implica la autorización a la Productora y a Cordero, Cavallo y Lautaret S.A. a utilizar el     contenido filmado y /o fotografiado y el uso de imagen personal     sin compensación alguna. <br />    <br />    <strong> Entradas en venta </strong> <br />    En las boleterias del Teatro Gran Rex (Av. Corrientes 857 - Lunes a Sábado de 12 a 18 hs. Feriados Cerrado.) <br /> <br />    <strong>Personas con movilidad reducida</strong> <br />    Las sillas de ruedas se ubican en el espacio habilitado para las    mismas detrás de la fila 25 del sector derecho de la Platea. En    todos los casos abonan la entrada. Dichas localidades deben ser    adquiridas solo en la boleteria del Teatro, presentando certificado de discapacidad. Al momento de la compra, abonan el    ticket de menor valor disponible.",
-
-      "keywords": [
-        "conociendo",
-        "rusia",
-        "conosiendo",
-        "rucia",
-        "solo"
->>>>>>> 2e8f9d7d5de1abc2ab0d8d28c7c3fd3a0a536d12
        
       ],
       "links": {
@@ -2551,6 +2208,127 @@
           "nombre": "PULLMAN 4",
           "color": "#AF0657",
           "precio": "$3.000"
+        },
+        {
+          "id": 12,
+          "nombre": "PULLMAN 5",
+          "color": "#5271FF",
+          "precio": "$3.000"
+        }
+      ]
+    },
+    {
+      "id": 21,
+      "descripcion": "El Polaco regresa a la Calle Corrientes en el marco de la GRAN celebración por sus más de 17 años de carrera como solista. Haremos un recorrido por toda su trayectoria y sus mejores éxitos como En este mundo, Deja de llorar, Por qué te fuiste, Ya no quiero verte, su último lanzamiento junto a La China Suarez que alcanzó puestos número 1 en tendencias y ya lleva más de 78M de reproducciones. <br /> <br /> No te podes perder EL POLACO, el 06 de diciembre una noche INOLVIDABLE En el Teatro Gran Rex.   <br /> <br />    Está prohibido el ingreso a la sala a menores de 1 año. A partir de los 3 años de edad se debe abonar la entrada.<br /><br />     <strong>  Fechas:  </strong>    <ul>    <li style='list-style: inside;'>     Miércoles 6 de diciembre 20:30hs    </li>    </ul>    ",
+      "disabled": true,
+      "display": "block",
+      "estado": "próximamente",
+      "fechas": [
+        {
+          "dia": "miércoles 6 de diciembre",
+          "hora": "20:30hs",
+          "start": "2023-12-06T20:30:00",
+          "end": "",
+          "estadoCalendario": "próximamente"
+        }
+      ],
+      "informacionGeneral": "El Teatro Gran Rex informa que los eventos que se realizan en esta sala podrían ser fotografiados o filmados para su posterior difusión en medios y /o campañas publicitarias. <br /> El ingreso al establecimiento implica la autorización a la Productora y a Cordero, Cavallo y Lautaret S.A. a utilizar el contenido filmado y /o fotografiado y el uso de imagen personal sin compensación alguna. <br />    <br />    <strong> Entradas en venta </strong> <br />    En las boleterias del Teatro Gran Rex (Av. Corrientes 857 - Lunes a Sábado de 12 a 18 hs. Feriados Cerrado.) <br /> <br />    <strong>Personas con movilidad reducida</strong> <br />    Las sillas de ruedas se ubican en el espacio habilitado para las    mismas detrás de la fila 25 del sector derecho de la Platea. En    todos los casos abonan la entrada. Dichas localidades deben ser    adquiridas solo en la boleteria del Teatro, presentando certificado de discapacidad. Al momento de la compra, abonan el    ticket de menor valor disponible.",
+
+      "keywords": [
+        "el polaco",
+        "polaco",
+        "polako",
+        "diciembre"
+      ],
+      "links": {
+        "href": "https://www.tuentrada.com/eventos/detalle/ElPolaco/842840678615",
+
+        "botones": [
+          {
+            "id": 1,
+            "name": "comprar",
+            "href": "https://www.tuentrada.com/eventos/detalle/ElPolaco/842840678615"
+          },
+          {
+            "id": 2,
+            "name": "volver",
+            "href": "/"
+          }
+        ],
+        "path": "/el-polaco"
+      },
+      "imagenes": {
+        "evento": "https://www.tuentrada.com/teatro/gran-rex/imagenes/el-polaco.webp",
+        "plano": "https://www.tuentrada.com/teatro/gran-rex/imagenes/planos/tue1.webp"
+      },
+      "nombre": "el polaco",
+      "nombrePath": "el-polaco",
+      "ubicaciones": [
+        {
+          "id": 1,
+          "nombre": "PLATEA 1",
+          "color": "#970513",
+          "precio": "$10.000"
+        },
+        {
+          "id": 2,
+          "nombre": "PLATEA 2",
+          "color": "#79C8C3",
+          "precio": "$10.000"
+        },
+        {
+          "id": 3,
+          "nombre": "PLATEA 3",
+          "color": "#EDB63B",
+          "precio": "$10.000"
+        },
+        {
+          "id": 4,
+          "nombre": "PLATEA 4",
+          "color": "#86AA4D",
+          "precio": "$9.500"
+        },
+        {
+          "id": 5,
+          "nombre": "PLATEA 5",
+          "color": "#052748",
+          "precio": "$8.500"
+        },
+        {
+          "id": 6,
+          "nombre": "SUPER PULLMAN 1",
+          "color": "#035F89",
+          "precio": "$9.500"
+        },
+        {
+          "id": 7,
+          "nombre": "SUPER PULLMAN 2",
+          "color": "#A9167D",
+          "precio": "$8.500"
+        },
+        {
+          "id": 8,
+          "nombre": "PULLMAN 1",
+          "color": "#EE6E08",
+          "precio": "$7.500"
+        },
+        {
+          "id": 9,
+          "nombre": "PULLMAN 2",
+          "color": "#037366",
+          "precio": "$7.000"
+        },
+        {
+          "id": 10,
+          "nombre": "PULLMAN 3",
+          "color": "#D97B77",
+          "precio": "$6.000"
+        },
+        {
+          "id": 11,
+          "nombre": "PULLMAN 4",
+          "color": "#AF0657",
+          "precio": "$4.500"
         },
         {
           "id": 12,
