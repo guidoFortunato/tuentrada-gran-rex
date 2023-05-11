@@ -5,8 +5,6 @@
     "botonPlano": "ver ubicaciones"
   },
   "eventos": [
-<<<<<<< HEAD
-=======
     
     {
       "id": 4,
@@ -267,7 +265,6 @@
         }
       ]
     },
->>>>>>> 2e8f9d7d5de1abc2ab0d8d28c7c3fd3a0a536d12
     {
       "id": 6,
       "descripcion": "Dale Q’ Va es, sin dudas, uno de los grupos cuarteteros del momento, se encuentran viviendo un presente excelente a lo largo y ancho de todo el país.  <br /> <br />    Está prohibido el ingreso a la sala a menores de 1 año. A partir de los 3 años de edad se debe abonar la entrada.<br /><br />    <strong>  Fechas:  </strong>    <ul>      <li style='list-style: inside;'> Viernes 12 de mayo 20:30hs </li>      </ul>      ",
@@ -1614,11 +1611,7 @@
     },
     {
       "id": 13,
-<<<<<<< HEAD
-      "descripcion": "Julieta Venegas se presentará el día Domingo 26 de Agosto en el Teatro Gran Rex.  <br /> <br />    Está prohibido el ingreso a la sala a menores de 1 año. A partir de los 3 años de edad se debe abonar la entrada.<br /><br />     <strong>  Fechas:  </strong>    <ul>      <li style='list-style: inside;'> Sábado 26 de agosto 20:30hs </li>    </ul>    ",
-=======
       "descripcion": "Julieta Venegas se presentará el día Domingo 26 de Agosto en el Teatro Gran Rex.  <br /> <br />    El Teatro Gran Rex informa que los eventos que se realizan en esta sala podrían ser fotografiados o filmados para su posterior difusión en medios y /o campañas publicitarias. <br /><br />     <strong>  Fechas:  </strong>    <ul>      <li style='list-style: inside;'> Sábado 26 de agosto 20:30hs </li>    </ul>    ",
->>>>>>> 2e8f9d7d5de1abc2ab0d8d28c7c3fd3a0a536d12
       "disabled": false,
       "display": "block",
       "estado": "disponible",
@@ -1867,11 +1860,7 @@
     },
     {
       "id": 19,
-<<<<<<< HEAD
-      "descripcion": "Natalie Perez se presentará el día Sábado 9 de Septiembre en el Teatro Gran Rex.  <br /> <br />    Está prohibido el ingreso a la sala a menores de 1 año. A partir de los 3 años de edad se debe abonar la entrada.<br /><br />    <strong>  Fechas:  </strong>    <ul>     <li style='list-style: inside;'>      Sábado 9 de Septiembre 20:30hs     </li>    </ul>",
-=======
       "descripcion": "Natalie Perez se presentará el día Sábado 9 de Septiembre en el Teatro Gran Rex.  <br /> <br />    El Teatro Gran Rex informa que los eventos que se realizan en esta sala podrían ser fotografiados o filmados para su posterior difusión en medios y /o campañas publicitarias. <br /><br />    <strong>  Fechas:  </strong>    <ul>     <li style='list-style: inside;'>      Sábado 9 de Septiembre 20:30hs     </li>    </ul>",
->>>>>>> 2e8f9d7d5de1abc2ab0d8d28c7c3fd3a0a536d12
       "disabled": false,
       "display": "block",
       "estado": "disponible",
@@ -1884,11 +1873,7 @@
           "estadoCalendario": "disponible"
         }
       ],
-<<<<<<< HEAD
-      "informacionGeneral": "El Teatro Gran Rex informa que los eventos que se realizan en esta sala podrían ser fotografiados o filmados para su posterior difusión en medios y /o campañas publicitarias. <br /> El ingreso al establecimiento implica la autorización a la Productora y a Cordero, Cavallo y Lautaret S.A. a utilizar el contenido filmado y /o fotografiado y el uso de imagen personal sin compensación alguna. <br />    <br />    <strong> Entradas en venta </strong> <br />    En las boleterias del Teatro Gran Rex (Av. Corrientes 857 - Lunes a Sábado de 12 a 18 hs. Feriados Cerrado.) <br /> <br />    <strong>Personas con movilidad reducida</strong> <br />    Las sillas de ruedas se ubican en el espacio habilitado para las    mismas detrás de la fila 25 del sector derecho de la Platea. En    todos los casos abonan la entrada. Dichas localidades deben ser    adquiridas solo en la boleteria del Teatro, presentando certificado de discapacidad. Al momento de la compra, abonan el    ticket de menor valor disponible.",
-=======
       "informacionGeneral": "El ingreso al establecimiento implica la autorización a la Productora y a Cordero, Cavallo y Lautaret S.A. a utilizar el     contenido filmado y /o fotografiado y el uso de imagen personal     sin compensación alguna. <br />    <br />    <strong> Entradas en venta </strong> <br />    En las boleterias del Teatro Gran Rex (Av. Corrientes 857 - Lunes a Sábado de 12 a 18 hs. Feriados Cerrado.) <br /> <br />    <strong>Personas con movilidad reducida</strong> <br />    Las sillas de ruedas se ubican en el espacio habilitado para las    mismas detrás de la fila 25 del sector derecho de la Platea. En    todos los casos abonan la entrada. Dichas localidades deben ser    adquiridas solo en la boleteria del Teatro, presentando certificado de discapacidad. Al momento de la compra, abonan el    ticket de menor valor disponible.",
->>>>>>> 2e8f9d7d5de1abc2ab0d8d28c7c3fd3a0a536d12
 
       "keywords": [
         "natalie peres",
@@ -2236,11 +2221,7 @@
     },
     {
       "id": 18,
-<<<<<<< HEAD
-      "descripcion": "Conociendo Rusia se llevará a cabo los días Viernes 27, Sabado 28 y Domingo 29 de Octubre de 2023 en el Teatro Gran Rex. <br /> <br />    Está prohibido el ingreso a la sala a menores de 1 año. A partir de los 3 años de edad se debe abonar la entrada.<br /><br />    <strong>  Fechas:  </strong>    <ul>      <li style='list-style: inside;'>Viernes 27 de Octubre 20:30hs </li>      <li style='list-style: inside;'>Sábado 28 de Octubre 20:30hs </li>  <li style='list-style: inside;'>Domingo 29 de Octubre 20:30hs </li>     </ul>      ",
-=======
       "descripcion": "Conociendo Rusia se llevará a cabo los días Viernes 27, Sabado 28 y Domingo 29 de Octubre de 2023 en el Teatro Gran Rex. <br /> <br />    El Teatro Gran Rex informa que los eventos que se realizan en esta sala podrían ser fotografiados o filmados para su posterior difusión en medios y /o campañas publicitarias. <br /><br />    <strong>  Fechas:  </strong>    <ul>      <li style='list-style: inside;'>Viernes 27 de Octubre 20:30hs </li>      <li style='list-style: inside;'>Sábado 28 de Octubre 20:30hs </li>  <li style='list-style: inside;'>Domingo 29 de Octubre 20:30hs </li>     </ul>      ",
->>>>>>> 2e8f9d7d5de1abc2ab0d8d28c7c3fd3a0a536d12
       "disabled": false,
       "display": "block",
       "estado": "disponible",
@@ -2267,11 +2248,7 @@
           "estadoCalendario": "disponible"
         }
       ],
-<<<<<<< HEAD
-      "informacionGeneral": "El Teatro Gran Rex informa que los eventos que se realizan en esta sala podrían ser fotografiados o filmados para su posterior difusión en medios y /o campañas publicitarias. <br /> El ingreso al establecimiento implica la autorización a la Productora y a Cordero, Cavallo y Lautaret S.A. a utilizar el contenido filmado y /o fotografiado y el uso de imagen personal sin compensación alguna. <br />    <br />    <strong> Entradas en venta </strong> <br />    En las boleterias del Teatro Gran Rex (Av. Corrientes 857 - Lunes a Sábado de 12 a 18 hs. Feriados Cerrado.) <br /> <br />    <strong>Personas con movilidad reducida</strong> <br />    Las sillas de ruedas se ubican en el espacio habilitado para las    mismas detrás de la fila 25 del sector derecho de la Platea. En    todos los casos abonan la entrada. Dichas localidades deben ser    adquiridas solo en la boleteria del Teatro, presentando certificado de discapacidad. Al momento de la compra, abonan el    ticket de menor valor disponible.",
-=======
       "informacionGeneral": "El ingreso al establecimiento implica la autorización a la Productora y a Cordero, Cavallo y Lautaret S.A. a utilizar el     contenido filmado y /o fotografiado y el uso de imagen personal     sin compensación alguna. <br />    <br />    <strong> Entradas en venta </strong> <br />    En las boleterias del Teatro Gran Rex (Av. Corrientes 857 - Lunes a Sábado de 12 a 18 hs. Feriados Cerrado.) <br /> <br />    <strong>Personas con movilidad reducida</strong> <br />    Las sillas de ruedas se ubican en el espacio habilitado para las    mismas detrás de la fila 25 del sector derecho de la Platea. En    todos los casos abonan la entrada. Dichas localidades deben ser    adquiridas solo en la boleteria del Teatro, presentando certificado de discapacidad. Al momento de la compra, abonan el    ticket de menor valor disponible.",
->>>>>>> 2e8f9d7d5de1abc2ab0d8d28c7c3fd3a0a536d12
 
       "keywords": [
         "conociendo rusia solo",
@@ -2502,11 +2479,7 @@
     },
     {
       "id": 20,
-<<<<<<< HEAD
-      "descripcion": "Matias Valdez se presentará el día Jueves 7 de Diciembre en el Teatro Gran Rex.  <br /> <br />    Está prohibido el ingreso a la sala a menores de 1 año. A partir de los 3 años de edad se debe abonar la entrada.<br /><br />     <strong>  Fechas:  </strong>    <ul>    <li style='list-style: inside;'>     Jueves 7 de diciembre 20:30hs    </li>    </ul>    ",
-=======
       "descripcion": "Matias Valdez se presentará el día Jueves 7 de Diciembre en el Teatro Gran Rex.  <br /> <br />    El Teatro Gran Rex informa que los eventos que se realizan en esta sala podrían ser fotografiados o filmados para su posterior difusión en medios y /o campañas publicitarias. <br /><br />     <strong>  Fechas:  </strong>    <ul>    <li style='list-style: inside;'>     Jueves 7 de diciembre 20:30hs    </li>    </ul>    ",
->>>>>>> 2e8f9d7d5de1abc2ab0d8d28c7c3fd3a0a536d12
       "disabled": true,
       "display": "block",
       "estado": "próximamente",
@@ -2519,11 +2492,7 @@
           "estadoCalendario": "próximamente"
         }
       ],
-<<<<<<< HEAD
-      "informacionGeneral": "El Teatro Gran Rex informa que los eventos que se realizan en esta sala podrían ser fotografiados o filmados para su posterior difusión en medios y /o campañas publicitarias. <br /> El ingreso al establecimiento implica la autorización a la Productora y a Cordero, Cavallo y Lautaret S.A. a utilizar el contenido filmado y /o fotografiado y el uso de imagen personal sin compensación alguna. <br />    <br />    <strong> Entradas en venta </strong> <br />    En las boleterias del Teatro Gran Rex (Av. Corrientes 857 - Lunes a Sábado de 12 a 18 hs. Feriados Cerrado.) <br /> <br />    <strong>Personas con movilidad reducida</strong> <br />    Las sillas de ruedas se ubican en el espacio habilitado para las    mismas detrás de la fila 25 del sector derecho de la Platea. En    todos los casos abonan la entrada. Dichas localidades deben ser    adquiridas solo en la boleteria del Teatro, presentando certificado de discapacidad. Al momento de la compra, abonan el    ticket de menor valor disponible.",
-=======
       "informacionGeneral": "El ingreso al establecimiento implica la autorización a la Productora y a Cordero, Cavallo y Lautaret S.A. a utilizar el     contenido filmado y /o fotografiado y el uso de imagen personal     sin compensación alguna. <br />    <br />    <strong> Entradas en venta </strong> <br />    En las boleterias del Teatro Gran Rex (Av. Corrientes 857 - Lunes a Sábado de 12 a 18 hs. Feriados Cerrado.) <br /> <br />    <strong>Personas con movilidad reducida</strong> <br />    Las sillas de ruedas se ubican en el espacio habilitado para las    mismas detrás de la fila 25 del sector derecho de la Platea. En    todos los casos abonan la entrada. Dichas localidades deben ser    adquiridas solo en la boleteria del Teatro, presentando certificado de discapacidad. Al momento de la compra, abonan el    ticket de menor valor disponible.",
->>>>>>> 2e8f9d7d5de1abc2ab0d8d28c7c3fd3a0a536d12
 
       "keywords": [
         "matias valdez",

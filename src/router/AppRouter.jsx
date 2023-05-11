@@ -6,13 +6,13 @@ export const AppRouter = () => {
   return (
     <Routes>
       <Route path="/" element={<Home />} />
+      <Route path="/:name" element={<DetalleEvento />} />
+      <Route path="/bases-y-condiciones" element={<BasesCondiciones />} />
       <Route path="/busqueda-eventos/:name" element={<BusquedaEventos />} />
       <Route path="/calendario" element={<Calendario />} />
       <Route path="/como-llegar" element={<ComoLlegar />} />
       <Route path="/historia" element={<Historia />} />
       <Route path="/preguntas-frecuentes" element={<PreguntasFrecuentes />} />
-      <Route path="/:name" element={<DetalleEvento />} />
-      <Route path="/bases-y-condiciones" element={<BasesCondiciones />} />
       <Route path="/*" element={<Navigate to="/" />} />
     </Routes>
   );
