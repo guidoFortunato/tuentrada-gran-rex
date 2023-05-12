@@ -4,7 +4,7 @@ import { getEnvVariables } from "./getEnvVariables";
 const { VITE_API_EVENTOS, VITE_JSON_EMAIL, VITE_JSON_PASS } = getEnvVariables();
 
 
-export const getEvents = async (id) => {
+export const getEvents = async (id = 5) => {
 	const URL = VITE_API_EVENTOS + id;
 	const email = VITE_JSON_EMAIL;
 	const password = VITE_JSON_PASS;

@@ -25,11 +25,12 @@ const EventosProvider = (props) => {
   const location = useLocation();
   console.log(location)
   useEffect(() => {
-    const getDataEvents = async()=>{
+    const getDataInfoGeneral = async()=>{
       const { data } = await getInfoGeneral()
+      console.log(data.physicalConfiguration.id)
       setIdVenue(data.physicalConfiguration.id)
     }
-    getDataEvents()
+    getDataInfoGeneral()
   }, []);
 
   const handleEvento = (nombreEvento) => {
