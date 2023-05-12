@@ -1,13 +1,14 @@
 import { getToken } from "./getToken";
 import { getEnvVariables } from "./getEnvVariables";
 
-const { VITE_API_EVENTOS, VITE_JSON_EMAIL, VITE_JSON_PASS } = getEnvVariables();
+const { VITE_API_INFO_GENERAL, VITE_EMAIL, VITE_PASS } = getEnvVariables();
 
 
-export const getEvents = async (id) => {
-	const URL = VITE_API_EVENTOS + id;
-	const email = VITE_JSON_EMAIL;
-	const password = VITE_JSON_PASS;
+export const getInfoGeneral = async (venue) => {
+
+	const URL = VITE_API_INFO_GENERAL + venue;
+	const email = VITE_EMAIL;
+	const password = VITE_PASS;
 	const timeNow = Date.now();
 	const tokenStorage = localStorage.getItem('tokenStorage');
 	const expiresTokenStorage = localStorage.getItem('expiresTokenStorage');
@@ -30,7 +31,7 @@ export const getEvents = async (id) => {
 			// console.log({response});
 
 			if (!response.ok) {
-				throw new Error(`Error: ${response.status}. ${response.statusText}`);
+				throw new Error(`${response.status} - ${response.statusText}`);
 			}
 
 			localStorage.setItem('tokenStorage', token);

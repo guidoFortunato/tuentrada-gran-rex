@@ -1,5 +1,6 @@
-import { createContext, useState } from "react";
-import { getEnvVariables, useFetch } from "../helpers";
+import { createContext, useEffect, useState } from "react";
+import { useLocation } from "react-router-dom";
+import { getEnvVariables, getInfoGeneral, useFetch } from "../helpers";
 
 export const EventosContext = createContext();
 
@@ -16,10 +17,20 @@ const urlTestFooter = "/src/json/footerTest.json";
 
 const EventosProvider = (props) => {
   const [ evento, setEvento ] = useState("");
+  const [ idVenue, setIdVenue ] = useState("");
   const [ listaEventosBusqueda, setListaEventosBusqueda ] =  useState( eventosBusqueda );
   const { data: dataEventos, isLoading: isLoadingEventos } = useFetch( urlTestEventos );
   const { data: dataNavbar, isLoading: isLoadingNavbar } =  useFetch( urlTestNavbar );
   const { data: dataFooter, isLoading: isLoadingFooter } =  useFetch( urlTestFooter );
+  const location = useLocation();
+  console.log(location)
+  useEffect(() => {
+    const getDataEvents = async()=>{
+      const { data } = await getInfoGeneral()
+      setIdVenue(data.physicalConfiguration.id)
+    }
+    getDataEvents()
+  }, []);
 
   const handleEvento = (nombreEvento) => {
     if (!nombreEvento.trim()) {
@@ -49,6 +60,7 @@ const EventosProvider = (props) => {
         dataNavbar,
         evento,
         handleEvento,
+        idVenue,
         isLoadingEventos,
         isLoadingFooter,
         isLoadingNavbar,

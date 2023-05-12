@@ -2,7 +2,7 @@ import { useContext, useEffect } from "react";
 import { EventosContext } from "../context/EventosProvider";
 // import { getEnvVariables, useFetch } from "../helpers";
 import { CardEvento, FormBusqueda, Spinner } from "../components/";
-import { getEvents } from "../helpers";
+
 
 // import { SliderDestacado } from "../components/";
 
@@ -24,13 +24,7 @@ export const Home = () => {
     }, 100);
   }, []);
 
-  useEffect(() => {
-    const getDataEvents = async()=>{
-      const { data } = await getEvents()
-      console.log({data})
-    }
-    getDataEvents()
-  }, []);
+  
 
   if (isLoadingNavbar) {
     return <Spinner />;

@@ -1,9 +1,9 @@
 import { getEnvVariables } from "./getEnvVariables";
 
 export const getToken = async (email, password) => {
-	const { VITE_JSON_LOGIN } = getEnvVariables();
+	const { VITE_LOGIN } = getEnvVariables();
 	try {
-		const response = await fetch(VITE_JSON_LOGIN, {
+		const response = await fetch(VITE_LOGIN, {
 			method: 'POST',
 			headers: {
 				'Content-Type': 'application/json',
