@@ -1,9 +1,9 @@
-import { useContext, useEffect } from "react";
+import { useContext, useEffect, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 
 import { EventosContext } from "../context/EventosProvider";
 import { Spinner } from "../components";
-import { getEnvVariables, useFetch } from "../helpers";
+import { getEnvVariables, getToken, useFetch } from "../helpers";
 
 import FullCalendar from "@fullcalendar/react"; // must go before plugins
 import dayGridPlugin from "@fullcalendar/daygrid";
@@ -88,6 +88,7 @@ export const Calendario = () => {
       newEvents.push({id: dataEventos?.eventos[i].id, start: dataEventos?.eventos[i].fechas[j].start, title: dataEventos?.eventos[i].nombre.toUpperCase(), url: dataEventos?.eventos[i].links.path, display: dataEventos?.eventos[i].display, status: dataEventos?.eventos[i].fechas[j].estadoCalendario})      
     }    
   }
+  // console.log({newEvents})
 
   const handleClick = (info) => {
 
