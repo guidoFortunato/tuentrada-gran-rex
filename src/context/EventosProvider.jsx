@@ -1,6 +1,6 @@
 import { createContext, useEffect, useState } from "react";
-import { useLocation } from "react-router-dom";
-import { getEnvVariables, getInfoGeneral, useFetch } from "../helpers";
+// import { useLocation } from "react-router-dom";
+import { getEnvVariables, getEvents, getInfoGeneral, useFetch } from "../helpers";
 
 export const EventosContext = createContext();
 
@@ -22,16 +22,19 @@ const EventosProvider = (props) => {
   const { data: dataEventos, isLoading: isLoadingEventos } = useFetch( urlTestEventos );
   const { data: dataNavbar, isLoading: isLoadingNavbar } =  useFetch( urlTestNavbar );
   const { data: dataFooter, isLoading: isLoadingFooter } =  useFetch( urlTestFooter );
-  const location = useLocation();
-  console.log(location)
+  // const location = useLocation();
+  // console.log(location)
+  // console.log(window.location.hostname)
   useEffect(() => {
     const getDataInfoGeneral = async()=>{
-      const { data } = await getInfoGeneral()
-      console.log(data.physicalConfiguration.id)
+      const { data } = await getInfoGeneral()//window.location.hostname
       setIdVenue(data.physicalConfiguration.id)
     }
     getDataInfoGeneral()
   }, []);
+
+  
+
 
   const handleEvento = (nombreEvento) => {
     if (!nombreEvento.trim()) {

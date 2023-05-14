@@ -4,7 +4,6 @@ import { EventosContext } from "../context/EventosProvider";
 import { CardEvento, FormBusqueda, Spinner } from "../components/";
 import { getEvents } from "../helpers";
 
-
 // import { SliderDestacado } from "../components/";
 
 import "../css/header.css";
@@ -14,9 +13,14 @@ import "../css/footer.css";
 // const urlTestEventos = "/src/json/eventosTest.json";
 // const { VITE_JSON_EVENTOS } = getEnvVariables();
 
-
 export const Home = () => {
-  const { dataEventos, isLoadingEventos, dataNavbar, isLoadingNavbar } = useContext( EventosContext );
+  const {
+    dataEventos,
+    isLoadingEventos,
+    dataNavbar,
+    isLoadingNavbar,
+    idVenue,
+  } = useContext(EventosContext);
   // const { data: dataEventos, isLoading: isLoadingEventos } = useFetch( urlTestEventos );
 
   useEffect(() => {
@@ -26,15 +30,15 @@ export const Home = () => {
   }, []);
 
   useEffect(() => {
-    const getDataEvents = async()=>{
-      const { data } = await getEvents()
-      console.log({data})
+    if (idVenue !== "") {
+      const getDataEvents = async () => {
+        const { data } = await getEvents(idVenue);
+        console.log({ data });
+        console.log({ idVenue });
+      };
+      getDataEvents();
     }
-    getDataEvents()
-  }, []);
-
-
-  
+  }, [idVenue]);
 
   if (isLoadingNavbar) {
     return <Spinner />;
@@ -43,15 +47,14 @@ export const Home = () => {
     return <Spinner />;
   }
 
-
   return (
     <>
       <header className="animate__animated animate__fadeIn animate__fast">
         <div className="header-home">
           <h1 className="titulo-principal animate__animated animate__fadeInDown animate__fast	 ">
-            <strong>{ dataNavbar?.items[0].titulo1.toUpperCase() }</strong>
+            <strong>{dataNavbar?.items[0].titulo1.toUpperCase()}</strong>
           </h1>
-          <FormBusqueda placeholder={ dataNavbar?.placeholderInput } />
+          <FormBusqueda placeholder={dataNavbar?.placeholderInput} />
         </div>
       </header>
       <main>
