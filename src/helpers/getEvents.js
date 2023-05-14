@@ -14,6 +14,12 @@ export const getEvents = async (id = 5) => {
 	console.log('timeNow: ' + timeNow);
 	console.log('expiresTokenStorage: ' + expiresTokenStorage);
 
+	/**
+	 * TODO: ver si es necesario crear nuevos tokenStorage y expiresTokenStorage, mepa que no
+	 * 
+	 */
+	
+
 	if (!tokenStorage) {
 		const { token, tokenExpires } = await getToken(email, password);
 		console.log('tokenStorage no existe');
