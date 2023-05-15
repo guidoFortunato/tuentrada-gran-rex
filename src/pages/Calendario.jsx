@@ -1,9 +1,9 @@
-import { useContext, useEffect, useState } from "react";
+import { useContext, useEffect } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 
 import { EventosContext } from "../context/EventosProvider";
 import { Spinner } from "../components";
-import { getEnvVariables, getToken, useFetch } from "../helpers";
+import { getEventsCalendar } from "../helpers";
 
 import FullCalendar from "@fullcalendar/react"; // must go before plugins
 import dayGridPlugin from "@fullcalendar/daygrid";
@@ -74,7 +74,7 @@ const eventTimeFormat = {
 
 
 export const Calendario = () => {
-  const { dataEventos, isLoadingEventos, dataNavbar, isLoadingNavbar } = useContext(EventosContext)
+  const { dataEventos, isLoadingEventos, dataNavbar, isLoadingNavbar, idVenue } = useContext(EventosContext)
   // const { data: dataEventos, isLoading: isLoadingEventos } = useFetch(urlTestEventos);
 
   const navigate = useNavigate();
@@ -88,7 +88,19 @@ export const Calendario = () => {
       newEvents.push({id: dataEventos?.eventos[i].id, start: dataEventos?.eventos[i].fechas[j].start, title: dataEventos?.eventos[i].nombre.toUpperCase(), url: dataEventos?.eventos[i].links.path, display: dataEventos?.eventos[i].display, status: dataEventos?.eventos[i].fechas[j].estadoCalendario})      
     }    
   }
-  // console.log({newEvents})
+
+  console.log(newEvents[82])
+  
+  useEffect(() => {
+    if (idVenue !== "") {
+      const getDataEvents = async () => {
+        const { data } = await getEventsCalendar(idVenue);
+        console.log({ data });
+        console.log({ idVenue });
+      };
+      getDataEvents();
+    }
+  }, [idVenue]);
 
   const handleClick = (info) => {
 

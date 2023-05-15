@@ -25,6 +25,6 @@ export const getToken = async (email, password) => {
 		const tokenExpires = new Date(data.expired_at).getTime();
 		return {token, tokenExpires};
 	} catch (error) {
-		console.error({error});
+		throw new Error(error);
 	}
 };

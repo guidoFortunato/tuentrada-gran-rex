@@ -10,7 +10,7 @@ export const getInfoGeneral = async (venue = "Ituzaingo") => {
   const timeNow = Date.now();
   const tokenStorage = localStorage.getItem("tokenStorage");
   const expiresTokenStorage = localStorage.getItem("expiresTokenStorage");
-	console.log('--------------------GetInfoGeneral--------------------------------')
+	console.log('-------------GetInfoGeneral----------------')
   console.log("timeNow: " + timeNow);
   console.log("expiresTokenStorage: " + expiresTokenStorage);
 
@@ -36,6 +36,8 @@ export const getInfoGeneral = async (venue = "Ituzaingo") => {
       localStorage.setItem("tokenStorage", token);
       localStorage.setItem("expiresTokenStorage", tokenExpires);
       const data = await response.json();
+
+			console.log('data si tokenStorage no existe',{data})
       return data;
     } catch (error) {
       throw new Error(error);
@@ -63,6 +65,7 @@ export const getInfoGeneral = async (venue = "Ituzaingo") => {
           localStorage.setItem("tokenStorage", token);
           localStorage.setItem("expiresTokenStorage", tokenExpires);
           const data = await response.json();
+					console.log('data si tokenStorage existe y expiró',{data})
           return data;
         } catch (error) {
           throw new Error(error);
@@ -88,6 +91,7 @@ export const getInfoGeneral = async (venue = "Ituzaingo") => {
           }
 
           const data = await response.json();
+					console.log('tokenStorage existe y NO expiró',{data})
           return data;
         } catch (error) {
           throw new Error(error);

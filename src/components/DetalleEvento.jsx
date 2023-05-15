@@ -5,6 +5,7 @@ import Modal from "react-modal";
 import { EventosContext } from "../context/EventosProvider";
 // import { getEnvVariables, useFetch } from "../helpers";
 import { Spinner, TablaPrecios } from "./";
+import { getDataEvent } from "../helpers";
 
 import DOMPurify from "dompurify";
 
@@ -14,14 +15,29 @@ import "../css/detalleevento.css";
 // const urlTestEventos = "/src/json/eventosTest.json";
 // const { VITE_JSON_EVENTOS } = getEnvVariables();
 
+
+
 export const DetalleEvento = () => {
-  const { dataEventos, isLoadingEventos } = useContext(EventosContext);
+  const { dataEventos, isLoadingEventos, idVenue } = useContext(EventosContext);
   // const { data: dataEventos, isLoading: isLoadingEventos } = useFetch(urlTestEventos);
   const [evento, setEvento] = useState(null);
   const [modalIsOpen, setModalIsOpen] = useState(false);
   const modalRef = useRef(null);
   const navigate = useNavigate();
-  const { name, id } = useParams();
+  const { name } = useParams();
+
+  // console.log({name, id})
+
+  useEffect(() => {
+    if (idVenue !== "") {
+      const getDataEvents = async () => {
+        const { data } = await getDataEvent(idVenue, 28);
+        console.log({ data });
+        console.log({ idVenue });
+      };
+      getDataEvents();
+    }
+  }, [idVenue]);
 
   useEffect(() => {
     if (dataEventos !== null) {
@@ -32,7 +48,7 @@ export const DetalleEvento = () => {
         navigate("/");
       }
     }
-  }, [name, id, dataEventos]);
+  }, [name, dataEventos]);
 
   const lastPath = localStorage.getItem("lastPath") || "/";
 

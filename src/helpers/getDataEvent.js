@@ -1,11 +1,14 @@
 import { getEnvVariables } from "./getEnvVariables";
 
 const { VITE_API_EVENTOS } = getEnvVariables();
+//https://testapi.tuentrada.com/api/v1/site/list-products/{id}/details/{productId}
 
-export const getEvents = async (id = 5) => {
-  const URL = VITE_API_EVENTOS + id;
+
+
+export const getDataEvent = async (idVenue = 5, productId = 1) => {
+  const URL = VITE_API_EVENTOS + idVenue + "/details/" + productId;
   const tokenStorage = localStorage.getItem("tokenStorage");
-	console.log('--------------------GetEvents--------------------------------')
+	console.log('--------------------getDataEvent--------------------------------')
   console.log("realizo la solicitud con el tokenStorage: " + tokenStorage);
   try {
     const response = await fetch(URL, {

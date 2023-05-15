@@ -2,7 +2,7 @@ import { useContext, useEffect } from "react";
 import { EventosContext } from "../context/EventosProvider";
 // import { getEnvVariables, useFetch } from "../helpers";
 import { CardEvento, FormBusqueda, Spinner } from "../components/";
-import { getEvents } from "../helpers";
+import { getEventsHome } from "../helpers";
 
 // import { SliderDestacado } from "../components/";
 
@@ -32,7 +32,7 @@ export const Home = () => {
   useEffect(() => {
     if (idVenue !== "") {
       const getDataEvents = async () => {
-        const { data } = await getEvents(idVenue);
+        const data = await getEventsHome(idVenue);
         console.log({ data });
         console.log({ idVenue });
       };

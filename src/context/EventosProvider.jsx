@@ -1,6 +1,6 @@
 import { createContext, useEffect, useState } from "react";
 // import { useLocation } from "react-router-dom";
-import { getEnvVariables, getEvents, getInfoGeneral, useFetch } from "../helpers";
+import { getEnvVariables, getInfoGeneral, useFetch } from "../helpers";
 
 export const EventosContext = createContext();
 
