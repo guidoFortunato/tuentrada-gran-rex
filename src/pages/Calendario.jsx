@@ -89,14 +89,13 @@ export const Calendario = () => {
     }    
   }
 
-  console.log(newEvents[82])
+
   
   useEffect(() => {
     if (idVenue !== "") {
       const getDataEvents = async () => {
-        const { data } = await getEventsCalendar(idVenue);
-        console.log({ data });
-        console.log({ idVenue });
+        const {data} = await getEventsCalendar(idVenue);
+        console.log( data );
       };
       getDataEvents();
     }

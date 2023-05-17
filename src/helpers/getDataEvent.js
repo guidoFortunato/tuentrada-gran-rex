@@ -15,6 +15,7 @@ export const getDataEvent = async (idVenue = 5, productId = 1) => {
       method: "GET",
       headers: {
         Authorization: `Bearer ${tokenStorage}`,
+        accept: "application/json",
       },
     });
     // console.log({response});
