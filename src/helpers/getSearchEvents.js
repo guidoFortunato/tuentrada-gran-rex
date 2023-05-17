@@ -3,13 +3,13 @@ import { getToken } from ".";
 
 const { VITE_API_EVENTOS, VITE_EMAIL, VITE_PASS } = getEnvVariables();
 
-export const getEventsSearch = async (id = 5, name) => {
+export const getSearchEvents = async (id = 5, name) => {
   const URL = VITE_API_EVENTOS + id + "/search/" + name
   const email = VITE_EMAIL;
   const password = VITE_PASS;
   const tokenSessionStorage = sessionStorage.getItem("tokenSessionStorage");
 
-  // console.log("-------------GetInfoGeneral----------------");
+  // console.log("-------------getSearchEvents----------------");
   if (tokenSessionStorage) {
     try {
       const response = await fetch(URL, {

@@ -4,7 +4,7 @@ import { useParams } from "react-router-dom";
 
 import { Link } from "react-router-dom";
 import { CardEvento, FormBusqueda, Spinner } from "../components";
-import { getEventsSearch } from "../helpers";
+import { getSearchEvents } from "../helpers";
 
 export const BusquedaEventos = () => {
   const { listaEventosBusqueda, agregarEvento, dataNavbar, isLoadingNavbar, idVenue } = useContext(EventosContext);
@@ -24,7 +24,7 @@ export const BusquedaEventos = () => {
   useEffect(() => {
     if (idVenue !== "") {
       const getDataSearch = async () => {
-        const data = await getEventsSearch(idVenue, name);
+        const data = await getSearchEvents(idVenue, name);
         console.log({ data });
       };
       getDataSearch();
