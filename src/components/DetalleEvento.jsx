@@ -26,11 +26,17 @@ export const DetalleEvento = () => {
   const navigate = useNavigate();
   const { name, id } = useParams();
 
+  /**
+   * 
+   * TODO: falta que si cambio la url a mano y no coincide el name con el id, que me redirija al home
+   * 
+   */
+
 
   useEffect(() => {
     if (idVenue !== "") {
       const getDataEvents = async () => {
-        const { data } = await getDataEvent(idVenue, id);
+        const data = await getDataEvent(idVenue, id);
         console.log({ data });
       };
       getDataEvents();

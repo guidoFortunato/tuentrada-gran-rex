@@ -56,31 +56,6 @@ export const FormBusqueda = ({ placeholder = "Buscar Evento" }) => {
         </svg>
       </button>
     </form>
-    // <form
-    //   className="d-flex form-buscar animate__animated animate__fadeIn animate__delay-1s"
-    //   onSubmit={handleSubmit}
-    // >
-    //   <div>
-    //     <svg
-    //       xmlns={dataNavbar?.formBusqueda.xmlns}
-    //       width={dataNavbar?.formBusqueda.width}
-    //       height={dataNavbar?.formBusqueda.height}
-    //       fill={dataNavbar?.formBusqueda.fill}
-    //       className="bi bi-search"
-    //       viewBox={dataNavbar?.formBusqueda.viewBox}
-    //     >
-    //       <path d={dataNavbar?.formBusqueda.path} />
-    //     </svg>
-    //   </div>
-    //   <div className="container-input">
-    //     <input
-    //       style={dataNavbar?.inputBusqueda.style}
-    //       className="border-0 input"
-    //       placeholder={placeholder}
-    //       value={evento}
-    //       onChange={(e) => handleEvento(e.target.value)}
-    //     />
-    //   </div>
-    // </form>
+
   );
 };

@@ -1,4 +1,5 @@
 import { getEnvVariables } from "./getEnvVariables";
+import { getToken } from "./";
 
 const { VITE_API_INFO_GENERAL, VITE_EMAIL, VITE_PASS } = getEnvVariables();
 

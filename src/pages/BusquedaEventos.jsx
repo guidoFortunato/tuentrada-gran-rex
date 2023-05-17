@@ -4,9 +4,10 @@ import { useParams } from "react-router-dom";
 
 import { Link } from "react-router-dom";
 import { CardEvento, FormBusqueda, Spinner } from "../components";
+import { getEventsSearch } from "../helpers";
 
 export const BusquedaEventos = () => {
-  const { listaEventosBusqueda, agregarEvento, dataNavbar, isLoadingNavbar } = useContext(EventosContext);
+  const { listaEventosBusqueda, agregarEvento, dataNavbar, isLoadingNavbar, idVenue } = useContext(EventosContext);
 
   let { name } = useParams();
 
@@ -19,6 +20,16 @@ export const BusquedaEventos = () => {
       window.scrollTo(0, 0);
     }, 100);
   }, []);
+
+  useEffect(() => {
+    if (idVenue !== "") {
+      const getDataSearch = async () => {
+        const data = await getEventsSearch(idVenue, name);
+        console.log({ data });
+      };
+      getDataSearch();
+    }
+  }, [idVenue, name]);
 
   if (isLoadingNavbar) {
     return <Spinner />;
