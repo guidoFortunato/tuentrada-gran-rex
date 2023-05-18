@@ -32,7 +32,7 @@ export const Home = () => {
   useEffect(() => {
     if (idVenue !== "") {
       const getDataEvents = async () => {
-        const data = await getEventsHome(idVenue);
+        const {data} = await getEventsHome(idVenue);
         console.log({ data });
         console.log({ idVenue });
       };
