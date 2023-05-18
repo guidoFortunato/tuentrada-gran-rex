@@ -34,7 +34,6 @@ export const Home = () => {
       const getDataEvents = async () => {
         const {data} = await getEventsHome(idVenue);
         console.log({ data });
-        console.log({ idVenue });
       };
       getDataEvents();
     }
@@ -88,7 +87,7 @@ export const Home = () => {
           <div className="row sin-padding-right-left animate__animated animate__fadeIn  animate__delay-1s ">
             {dataEventos?.eventos.map((evento) => (
               <CardEvento
-                linkEvento={evento.links.path}
+                linkEvento={evento.links.path + "/" + evento.id}
                 img={evento.imagenes.evento}
                 status={evento.estado}
                 title={evento.nombre}

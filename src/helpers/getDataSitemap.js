@@ -1,13 +1,10 @@
 import { getEnvVariables } from "./getEnvVariables";
-import { getToken } from "./";
+import { getToken } from ".";
 
-const { VITE_API_EVENTOS, VITE_EMAIL, VITE_PASS } = getEnvVariables();
-//https://testapi.tuentrada.com/api/v1/site/list-products/{id}/details/{productId}
+const { VITE_API_INFO_GENERAL, VITE_EMAIL, VITE_PASS } = getEnvVariables();
 
-
-
-export const getDataEvent = async (idVenue = 5, productId = 1) => {
-  const URL = VITE_API_EVENTOS + idVenue + "/details/" + productId;
+export const getDataSitemap = async (venue = 'Ituzaingo') => {
+  const URL = VITE_API_INFO_GENERAL + venue + "/sitemap"
   const email = VITE_EMAIL;
   const password = VITE_PASS;
   const tokenSessionStorage = sessionStorage.getItem("tokenSessionStorage");
@@ -72,5 +69,3 @@ export const getDataEvent = async (idVenue = 5, productId = 1) => {
     return data;
   }
 };
-
-

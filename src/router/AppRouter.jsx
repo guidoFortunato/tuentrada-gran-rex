@@ -6,7 +6,7 @@ export const AppRouter = () => {
   return (
     <Routes>
       <Route path="/" element={<Home />} />
-      <Route path="/:name" element={<DetalleEvento />} />
+      <Route path="/:name/:id" element={<DetalleEvento />} />
       <Route path="/bases-y-condiciones" element={<BasesCondiciones />} />
       <Route path="/busqueda-eventos/:name" element={<BusquedaEventos />} />
       <Route path="/calendario" element={<Calendario />} />

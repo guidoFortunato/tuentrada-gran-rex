@@ -1,18 +1,15 @@
 import { getEnvVariables } from "./getEnvVariables";
-import { getToken } from "./";
+import { getToken } from ".";
 
 const { VITE_API_EVENTOS, VITE_EMAIL, VITE_PASS } = getEnvVariables();
-//https://testapi.tuentrada.com/api/v1/site/list-products/{id}/details/{productId}
 
-
-
-export const getDataEvent = async (idVenue = 5, productId = 1) => {
-  const URL = VITE_API_EVENTOS + idVenue + "/details/" + productId;
+export const getSearchEvents = async (id = 5, name) => {
+  const URL = VITE_API_EVENTOS + id + "/search/" + name
   const email = VITE_EMAIL;
   const password = VITE_PASS;
   const tokenSessionStorage = sessionStorage.getItem("tokenSessionStorage");
 
-  // console.log("-------------GetInfoGeneral----------------");
+  // console.log("-------------getSearchEvents----------------");
   if (tokenSessionStorage) {
     try {
       const response = await fetch(URL, {
@@ -72,5 +69,3 @@ export const getDataEvent = async (idVenue = 5, productId = 1) => {
     return data;
   }
 };
-
-

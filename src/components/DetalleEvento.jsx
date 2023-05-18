@@ -24,20 +24,24 @@ export const DetalleEvento = () => {
   const [modalIsOpen, setModalIsOpen] = useState(false);
   const modalRef = useRef(null);
   const navigate = useNavigate();
-  const { name } = useParams();
+  const { name, id } = useParams();
 
-  // console.log({name, id})
+  /**
+   * 
+   * TODO: falta que si cambio la url a mano y no coincide el name con el id, que me redirija al home
+   * 
+   */
+
 
   useEffect(() => {
     if (idVenue !== "") {
       const getDataEvents = async () => {
-        const { data } = await getDataEvent(idVenue, 28);
+        const data = await getDataEvent(idVenue, id);
         console.log({ data });
-        console.log({ idVenue });
       };
       getDataEvents();
     }
-  }, [idVenue]);
+  }, [idVenue, id]);
 
   useEffect(() => {
     if (dataEventos !== null) {

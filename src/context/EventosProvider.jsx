@@ -1,6 +1,11 @@
 import { createContext, useEffect, useState } from "react";
 // import { useLocation } from "react-router-dom";
-import { getEnvVariables, getInfoGeneral, useFetch } from "../helpers";
+import {
+  getEnvVariables,
+  getInfoGeneralLocalStorage,
+  useFetch,
+} from "../helpers";
+import { getInfoGeneral } from "../helpers/getInfoGeneral";
 
 export const EventosContext = createContext();
 
@@ -16,24 +21,30 @@ const urlTestFooter = "/src/json/footerTest.json";
 // const { VITE_JSON_NAVBAR } = getEnvVariables();
 
 const EventosProvider = (props) => {
-  const [ evento, setEvento ] = useState("");
-  const [ idVenue, setIdVenue ] = useState("");
-  const [ listaEventosBusqueda, setListaEventosBusqueda ] =  useState( eventosBusqueda );
-  const { data: dataEventos, isLoading: isLoadingEventos } = useFetch( urlTestEventos );
-  const { data: dataNavbar, isLoading: isLoadingNavbar } =  useFetch( urlTestNavbar );
-  const { data: dataFooter, isLoading: isLoadingFooter } =  useFetch( urlTestFooter );
-  // const location = useLocation();
-  // console.log(location)
+  const [evento, setEvento] = useState("");
+  const [idVenue, setIdVenue] = useState("");
+  const [listaEventosBusqueda, setListaEventosBusqueda] = useState(eventosBusqueda);
+  const { data: dataEventos, isLoading: isLoadingEventos } = useFetch(urlTestEventos);
+  const { data: dataNavbar, isLoading: isLoadingNavbar } = useFetch(urlTestNavbar);
+  const { data: dataFooter, isLoading: isLoadingFooter } = useFetch(urlTestFooter);
+
   // console.log(window.location.hostname)
+  // useEffect(() => {
+  //   const getDataInfoGeneral = async()=>{
+  //     const { data } = await getInfoGeneralLocalStorage()
+  //     setIdVenue(data.physicalConfiguration.id)
+  //   }
+  //   getDataInfoGeneral()
+  // }, []);
+
   useEffect(() => {
-    const getDataInfoGeneral = async()=>{
-      const { data } = await getInfoGeneral()//window.location.hostname
+    const getDataInfoGeneral = async () => {
+      const data = await getInfoGeneral("Ituzaingo"); //window.location.hostname
       setIdVenue(data.physicalConfiguration.id)
-    }
-    getDataInfoGeneral()
+    };
+    getDataInfoGeneral();
   }, []);
 
-  
 
 
   const handleEvento = (nombreEvento) => {
@@ -45,7 +56,6 @@ const EventosProvider = (props) => {
   };
 
   const agregarEvento = (nombreEvento) => {
-
     const resultadosExactos = dataEventos?.eventos.filter((item) =>
       item.keywords.some((keyword) =>
         keyword.toLowerCase().includes(nombreEvento.toLowerCase())
