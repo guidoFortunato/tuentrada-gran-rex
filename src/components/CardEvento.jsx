@@ -5,9 +5,9 @@ import { Spinner } from "./Spinner";
 
 import "../css/cardevento.css";
 
-export const CardEvento = ({ img = "", status = "disponible", title = "", linkEvento = "", disabled = false,}) => {
+export const CardEvento = ({ img = "", status , title = "", linkEvento = "", disabled = false, reason }) => {
   const { dataNavbar, isLoadingNavbar } = useContext(EventosContext);
-  const newStatus = status.charAt(0).toUpperCase() + status.slice(1).toLowerCase();
+
 
   if (isLoadingNavbar) {
     return <Spinner />;
@@ -19,7 +19,7 @@ export const CardEvento = ({ img = "", status = "disponible", title = "", linkEv
       style={dataNavbar?.cardEvento.styleGeneral}
     >
       <div className="card" style={dataNavbar?.cardEvento.styleCard}>
-        {disabled ? (
+        {status !==  'RUNNING' ? (
           <div
             className={`${"linkEvento cursor-default"}`}
           >
@@ -37,31 +37,31 @@ export const CardEvento = ({ img = "", status = "disponible", title = "", linkEv
                       ? dataNavbar?.cardEvento.h5.border.agotado
                       : status.toLowerCase() === "reprogramado"
                       ? dataNavbar?.cardEvento.h5.border.reprogramado
-                      : status.toLowerCase() === "cancelado"
-                      ? dataNavbar?.cardEvento.h5.border.cancelado
+                      : status.toLowerCase() === "CANCELED"
+                      ? "red"
                       : status.toLowerCase() === "próximamente"
                       ? dataNavbar?.cardEvento.h5.border.proximamente
-                      : dataNavbar?.cardEvento.h5.border.disponible
+                      : "green"
                   }`,
                   background: `${
                     status.toLowerCase() === "agotado"
-                    ? dataNavbar?.cardEvento.h5.border.agotado
-                    : status.toLowerCase() === "reprogramado"
-                    ? dataNavbar?.cardEvento.h5.border.reprogramado
-                    : status.toLowerCase() === "cancelado"
-                    ? dataNavbar?.cardEvento.h5.border.cancelado
-                    : status.toLowerCase() === "próximamente"
-                    ? dataNavbar?.cardEvento.h5.border.proximamente
-                    : dataNavbar?.cardEvento.h5.border.disponible
+                      ? dataNavbar?.cardEvento.h5.border.agotado
+                      : status.toLowerCase() === "reprogramado"
+                      ? dataNavbar?.cardEvento.h5.border.reprogramado
+                      : status.toLowerCase() === "CANCELED"
+                      ? "red"
+                      : status.toLowerCase() === "próximamente"
+                      ? dataNavbar?.cardEvento.h5.border.proximamente
+                      : "green"
                   }`,
-                  color: dataNavbar?.cardEvento.h5.color,
-                  position: dataNavbar?.cardEvento.h5.position,
-                  top: dataNavbar?.cardEvento.h5.top,
-                  left: dataNavbar?.cardEvento.h5.left,
-                  fontSize: dataNavbar?.cardEvento.h5.fontSize,
+                  color: "#fff",
+                  position: "absolute",
+                  top: "10px",
+                  left: "10px",
+                  fontSize: "10px",
                 }}
               >
-                {newStatus}
+                {status}
               </h5>
             </div>
             <div style={dataNavbar?.cardEvento.styleDivTitleDisabled}>
@@ -92,31 +92,31 @@ export const CardEvento = ({ img = "", status = "disponible", title = "", linkEv
                       ? dataNavbar?.cardEvento.h5.border.agotado
                       : status.toLowerCase() === "reprogramado"
                       ? dataNavbar?.cardEvento.h5.border.reprogramado
-                      : status.toLowerCase() === "cancelado"
-                      ? dataNavbar?.cardEvento.h5.border.cancelado
+                      : status.toLowerCase() === "CANCELED"
+                      ? "red"
                       : status.toLowerCase() === "próximamente"
                       ? dataNavbar?.cardEvento.h5.border.proximamente
-                      : dataNavbar?.cardEvento.h5.border.disponible
+                      : "green"
                   }`,
                   background: `${
                     status.toLowerCase() === "agotado"
                       ? dataNavbar?.cardEvento.h5.border.agotado
                       : status.toLowerCase() === "reprogramado"
                       ? dataNavbar?.cardEvento.h5.border.reprogramado
-                      : status.toLowerCase() === "cancelado"
-                      ? dataNavbar?.cardEvento.h5.border.cancelado
+                      : status.toLowerCase() === "CANCELED"
+                      ? "red"
                       : status.toLowerCase() === "próximamente"
                       ? dataNavbar?.cardEvento.h5.border.proximamente
-                      : dataNavbar?.cardEvento.h5.border.disponible
+                      : "green"
                   }`,
-                  color: dataNavbar?.cardEvento.h5.color,
-                  position: dataNavbar?.cardEvento.h5.position,
-                  top: dataNavbar?.cardEvento.h5.top,
-                  left: dataNavbar?.cardEvento.h5.left,
-                  fontSize: dataNavbar?.cardEvento.h5.fontSize,
+                  color: "#fff",
+                  position: "absolute",
+                  top: "10px",
+                  left: "10px",
+                  fontSize: "10px",
                 }}
               >
-                {newStatus}
+                {status}
               </h5>
             </div>
             <div style={dataNavbar?.cardEvento.styleDivTitle}>

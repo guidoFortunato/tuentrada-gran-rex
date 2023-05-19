@@ -1,4 +1,4 @@
-import { useContext, useEffect } from "react";
+import { useContext, useEffect, useState } from "react";
 import { EventosContext } from "../context/EventosProvider";
 // import { getEnvVariables, useFetch } from "../helpers";
 import { CardEvento, FormBusqueda, Spinner } from "../components/";
@@ -15,12 +15,13 @@ import "../css/footer.css";
 
 export const Home = () => {
   const {
-    dataEventos,
+    // dataEventos,
     isLoadingEventos,
     dataNavbar,
     isLoadingNavbar,
     idVenue,
   } = useContext(EventosContext);
+  const [dataEventos, setDataEventos] = useState(null);
   // const { data: dataEventos, isLoading: isLoadingEventos } = useFetch( urlTestEventos );
 
   useEffect(() => {
@@ -32,8 +33,9 @@ export const Home = () => {
   useEffect(() => {
     if (idVenue !== "") {
       const getDataEvents = async () => {
-        const {data} = await getEventsHome(idVenue);
-        console.log({ data });
+        const data = await getEventsHome(idVenue);
+        console.log(data)
+        setDataEventos(data );
       };
       getDataEvents();
     }
@@ -85,14 +87,15 @@ export const Home = () => {
           </div> */}
 
           <div className="row sin-padding-right-left animate__animated animate__fadeIn  animate__delay-1s ">
-            {dataEventos?.eventos.map((evento) => (
+            {dataEventos?.map((evento) => (
               <CardEvento
-                linkEvento={evento.links.path + "/" + evento.id}
-                img={evento.imagenes.evento}
-                status={evento.estado}
-                title={evento.nombre}
+                linkEvento={evento.slug + "/" + evento.id}
+                img={evento.image}
+                status={evento.state}
+                title={evento.name}
                 key={evento.id}
                 disabled={evento.disabled}
+                reason={evento.reason}
               />
             ))}
           </div>

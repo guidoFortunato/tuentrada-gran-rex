@@ -50,22 +50,27 @@ export const getInfoGeneral = async (venue = "Ituzaingo") => {
       throw new Error(error);
     }
   } else {
-    const { token } = await getToken(email, password);
-    // console.log("Uso token de getToken para hacer la peticion: " + token);
-    const response = await fetch(URL, {
-      credentials: "include",
-      method: "GET",
-      headers: {
-        Authorization: `Bearer ${token}`,
-        accept: "application/json",
-      },
-    });
-    // console.log(response);
-    if (!response.ok) {
-      throw new Error(`${response.status}: ${response.statusText} `);
+    try {
+      const { token } = await getToken(email, password);
+      // console.log("Uso token de getToken para hacer la peticion: " + token);
+      const response = await fetch(URL, {
+        credentials: "include",
+        method: "GET",
+        headers: {
+          Authorization: `Bearer ${token}`,
+          accept: "application/json",
+        },
+      });
+      // console.log(response);
+      if (!response.ok) {
+        throw new Error(`${response.status}: ${response.statusText} `);
+      }
+      sessionStorage.setItem("tokenSessionStorage", token);
+      const { data } = await response.json();
+      return data;
+      
+    } catch (error) {
+      throw new Error(error);
     }
-    sessionStorage.setItem("tokenSessionStorage", token);
-    const { data } = await response.json();
-    return data;
   }
 };
