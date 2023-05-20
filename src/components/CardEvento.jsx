@@ -3,55 +3,73 @@ import { Link } from "react-router-dom";
 import { EventosContext } from "../context/EventosProvider";
 import { Spinner } from "./Spinner";
 
-import { EventAvailable, EventNotAvailable, EventNotForSale } from "./disponibility";
+import {
+  EventAvailable,
+  EventNotAvailable,
+  EventNotForSale,
+} from "./disponibility";
 
 import "../css/cardevento.css";
 
-
-export const CardEvento = ({ img = "", title = "", linkEvento = "", disponibility = [] }) => {
+export const CardEvento = ({
+  img = "",
+  title = "",
+  linkEvento = "",
+  disponibility = [],
+}) => {
   const { dataNavbar, isLoadingNavbar } = useContext(EventosContext);
   const [availabilityGood, setAvailabilityGood] = useState(false);
   const [reasonSoldOut, setReasonSoldOut] = useState(false);
   const [reasonCanceled, setReasonCanceled] = useState(false);
   const [reasonSuspended, setReasonSuspended] = useState(false);
   const [reasonNotAvailable, setReasonNotAvailable] = useState(false);
- 
 
   useEffect(() => {
     const EventAvailability = (disponibilidad) => {
-
       // Verificar si alguna fecha tiene availabilitLevel "GOOD"
       const hasGoodAvailability = disponibilidad.some(
-        fecha => fecha.availabilitLevel === 'GOOD'
+        (fecha) => fecha.availabilitLevel === "GOOD"
       );
-      setAvailabilityGood(hasGoodAvailability)
-    
+      setAvailabilityGood(hasGoodAvailability);
+
       // Verificar los reasons en caso de que no haya disponibilidad "GOOD"
       const hasSoldOut = disponibilidad.every(
-        fecha => (fecha.availabilitLevel === 'NONE' || fecha.availabilitLevel === 'LIMITED') && fecha.reason === 'SOLD_OUT'
+        (fecha) =>
+          (fecha.availabilitLevel === "NONE" ||
+            fecha.availabilitLevel === "LIMITED") &&
+          fecha.reason === "SOLD_OUT"
       );
-      setReasonSoldOut(hasSoldOut)
-    
+      setReasonSoldOut(hasSoldOut);
+
       const hasCanceled = disponibilidad.every(
-        fecha => (fecha.availabilitLevel === 'NONE' || fecha.availabilitLevel === 'LIMITED') && fecha.reason === 'CANCELED'
+        (fecha) =>
+          (fecha.availabilitLevel === "NONE" ||
+            fecha.availabilitLevel === "LIMITED") &&
+          fecha.reason === "CANCELED"
       );
-      setReasonCanceled(hasCanceled)
-    
+      setReasonCanceled(hasCanceled);
+
       const hasSuspended = disponibilidad.every(
-        fecha => (fecha.availabilitLevel === 'NONE' || fecha.availabilitLevel === 'LIMITED') && fecha.reason === 'SUSPENDED'
+        (fecha) =>
+          (fecha.availabilitLevel === "NONE" ||
+            fecha.availabilitLevel === "LIMITED") &&
+          fecha.reason === "SUSPENDED"
       );
-      setReasonSuspended(hasSuspended)
+      setReasonSuspended(hasSuspended);
 
       const hasNotAvailable = disponibilidad.every(
-        fecha => (fecha.availabilitLevel === 'NONE' || fecha.availabilitLevel === 'LIMITED') && (fecha.reason !== 'SUSPENDED' || fecha.reason === 'CANCELED' || fecha.reason === 'SOLD_OUT')
+        (fecha) =>
+          (fecha.availabilitLevel === "NONE" ||
+            fecha.availabilitLevel === "LIMITED") &&
+          (fecha.reason !== "SUSPENDED" ||
+            fecha.reason === "CANCELED" ||
+            fecha.reason === "SOLD_OUT")
       );
-      setReasonNotAvailable(hasNotAvailable)
-    }
-    EventAvailability(disponibility)
-    console.log(disponibility)
+      setReasonNotAvailable(hasNotAvailable);
+    };
+    EventAvailability(disponibility);
+
   }, []);
-
-
 
   if (isLoadingNavbar) {
     return <Spinner />;
@@ -63,35 +81,30 @@ export const CardEvento = ({ img = "", title = "", linkEvento = "", disponibilit
       style={dataNavbar?.cardEvento.styleGeneral}
     >
       <div className="card" style={dataNavbar?.cardEvento.styleCard}>
-
-        {
-          disponibility.length === 1 
-          ? 
-          disponibility[0].availabilitLevel === "GOOD" 
-          ? (
-           <EventAvailable linkEvento={linkEvento} img={img} title={title} />
-          ) 
-          : disponibility[0].availabilitLevel === "LIMITED" || disponibility[0].availabilitLevel === "NONE"
-          ? (
-           <EventNotAvailable img={img} title={title}/>
-          ) 
-          : disponibility.length > 1 
-          ? availabilityGood ? (
-           <EventAvailable linkEvento={linkEvento} img={img} title={title} />
-          ) 
-          : reasonNotAvailable ? (
-            <EventNotAvailable img={img} title={title}/>
-          ) 
-          : (
-           <EventNotForSale linkEvento={linkEvento} img={img} title={title} disponibility={disponibility} />
-            )
-          : null
-          : null
-
-           
-        }
         
-       
+        {availabilityGood ? (
+
+          <EventAvailable linkEvento={linkEvento} img={img} title={title} />
+
+        ) : reasonNotAvailable ? (
+
+          <EventNotAvailable img={img} title={title} />
+
+        ) : (!availabilityGood && !reasonSoldOut && !reasonCanceled && !reasonSuspended && !reasonNotAvailable) ? (
+          <EventNotAvailable img={img} title={title} />
+        )
+        : (
+          <EventNotForSale
+            linkEvento={linkEvento}
+            img={img}
+            title={title}
+            disponibility={disponibility}
+            reasonSuspended={reasonSuspended}
+            reasonCanceled={reasonCanceled}
+            reasonSoldOut={reasonSoldOut}
+          />
+        )
+        }
       </div>
     </article>
   );

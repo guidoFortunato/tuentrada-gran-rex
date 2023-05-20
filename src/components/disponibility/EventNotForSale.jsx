@@ -1,4 +1,6 @@
-export const EventNotForSale = ({img, title, disponibility, linkEvento}) => {
+import { Link } from "react-router-dom"
+
+export const EventNotForSale = ({img, title, reasonSoldOut, linkEvento, reasonCanceled, reasonSuspended}) => {
   return (
     <Link to={linkEvento} className={`${"linkEvento"}`}>
       <img
@@ -11,22 +13,22 @@ export const EventNotForSale = ({img, title, disponibility, linkEvento}) => {
           className="btn-status"
           style={{
             border: `1px solid ${
-              disponibility[0].reason === "SUSPENDED"
-                ? "grey"
-                : disponibility[0].reason === "CANCELED"
-                ? "grey" 
-                : disponibility[0].reason === "SOLD_OUT"
+              reasonSoldOut
                 ? "red"
-                : "black"
+                : reasonCanceled
+                ? "grey" 
+                : reasonSuspended
+                ? "grey"
+                : "grey"
             }`,
             background: `${
-              disponibility[0].reason === "SUSPENDED"
-                ? "grey"
-                : disponibility[0].reason === "CANCELED"
-                ? "grey" 
-                : disponibility[0].reason === "SOLD_OUT"
+              reasonSoldOut
                 ? "red"
-                : "black"
+                : reasonCanceled
+                ? "grey" 
+                : reasonSuspended
+                ? "grey"
+                : "grey"
             }`,
             color: "#fff",
             position: "absolute",
@@ -35,13 +37,15 @@ export const EventNotForSale = ({img, title, disponibility, linkEvento}) => {
             fontSize: "10px",
           }}
         >
-          {reasonSoldOut
-            ? "Agotado"
-            : reasonCanceled
-            ? "Cancelado"
-            : reasonSuspended
-            ? "Suspendido"
-            : "No disponible"}
+          {
+            reasonSoldOut
+              ? "Agotado"
+              : reasonCanceled
+              ? "Cancelado"
+              : reasonSuspended
+              ? "Suspendido"
+              : "No disponible"
+          }
         </h5>
       </div>
       <div style={{ padding: "5px" }}>
