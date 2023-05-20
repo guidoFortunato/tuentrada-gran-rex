@@ -96,6 +96,7 @@ export const Home = () => {
                 key={evento.id}
                 disabled={evento.disabled}
                 reason={evento.reason}
+                disponibility={evento.disponibility}
               />
             ))}
           </div>
