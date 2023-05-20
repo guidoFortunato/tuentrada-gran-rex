@@ -34,7 +34,7 @@ export const Home = () => {
     if (idVenue !== "") {
       const getDataEvents = async () => {
         const data = await getEventsHome(idVenue);
-        console.log(data)
+        // console.log(data)
         setDataEventos(data );
       };
       getDataEvents();
