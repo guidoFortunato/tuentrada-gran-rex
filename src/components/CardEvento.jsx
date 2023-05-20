@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 import { EventosContext } from "../context/EventosProvider";
 import { Spinner } from "./Spinner";
 
+import { EventAvailable, EventNotAvailable, EventNotForSale } from "./disponibility";
+
 import "../css/cardevento.css";
 
 
@@ -67,203 +69,21 @@ export const CardEvento = ({ img = "", title = "", linkEvento = "", disponibilit
           ? 
           disponibility[0].availabilitLevel === "GOOD" 
           ? (
-            <Link
-            to={linkEvento}
-            className={`${"linkEvento"}`}
-          >
-            <img
-              src={img}
-              className={`${"card-img-top card-img-bottom"}`}
-              alt="img logo"
-            />
-            <div>
-              <h5
-                className="btn-status"
-                style={{
-                  border: "1px solid green",
-                  background: "green",
-                  color: "#fff",
-                  position: "absolute",
-                  top: "10px",
-                  left: "10px",
-                  fontSize: "10px",
-                }}
-              >
-                Disponible
-              </h5>
-            </div>
-            <div style={{ padding: "5px" }}>
-              <h3 className="h3-card" style={{fontWeight: "bold", padding: "5px"}}>
-                {title.toUpperCase()}
-              </h3>
-              {/* <h4 style={{ padding: "5px 0", fontSize: "15px" }}>
-                {newDate} <br /> {newTime}
-              </h4> */}
-            </div>
-            </Link>
+           <EventAvailable linkEvento={linkEvento} img={img} title={title} />
           ) 
           : disponibility[0].availabilitLevel === "LIMITED" || disponibility[0].availabilitLevel === "NONE"
           ? (
-            <div
-           
-            className={"linkEvento cursor-default"}
-          >
-            <img
-              src={img}
-              className={"card-img-top card-img-bottom cursor-default img-disabled"}
-              alt="img logo"
-            />
-            <div>
-              <h5
-                className="btn-status"
-                style={{
-                  border: `1px solid ${
-                    disponibility[0].reason === "SUSPENDED"
-                      ? "grey"
-                      : disponibility[0].reason === "CANCELED"
-                      ? "grey" 
-                      : disponibility[0].reason === "SOLD_OUT"
-                      ? "red"
-                      : "black"
-                  }`,
-                  background: `${
-                    disponibility[0].reason === "SUSPENDED"
-                      ? "grey"
-                      : disponibility[0].reason === "CANCELED"
-                      ? "grey" 
-                      : disponibility[0].reason === "SOLD_OUT"
-                      ? "red"
-                      : "black"
-                  }`,
-                  color: "#fff",
-                  position: "absolute",
-                  top: "10px",
-                  left: "10px",
-                  fontSize: "10px",
-                }}
-              >
-                {
-                  disponibility[0].reason === "SUSPENDED"
-                  ? "Suspendido"
-                  : disponibility[0].reason === "CANCELED"
-                  ? "Cancelado"
-                  : disponibility[0].reason === "SOLD_OUT"
-                  ? "Agotado"
-                  : "No disponible"
-                }
-              </h5>
-            </div>
-            <div style={ (disponibility[0].reason !== "SUSPENDED" && disponibility[0].reason !== "CANCELED" && disponibility[0].reason !== "SOLD_OUT") ? {color: "gray"} : null }>
-              <h3 className="h3-card" style={{fontWeight: "bold", padding: "5px"}}>
-                {title.toUpperCase()}
-              </h3>
-            </div>
-            </div>
+           <EventNotAvailable img={img} title={title}/>
           ) 
           : disponibility.length > 1 
           ? availabilityGood ? (
-            <Link
-            to={linkEvento}
-            className={`${"linkEvento"}`}
-          >
-            <img
-              src={img}
-              className={`${"card-img-top card-img-bottom"}`}
-              alt="img logo"
-            />
-            <div>
-              <h5
-                className="btn-status"
-                style={{
-                  border: "1px solid green",
-                  background: "green",
-                  color: "#fff",
-                  position: "absolute",
-                  top: "10px",
-                  left: "10px",
-                  fontSize: "10px",
-                }}
-              >
-                Disponible
-              </h5>
-            </div>
-            <div style={{ padding: "5px" }}>
-              <h3 className="h3-card" style={{fontWeight: "bold", padding: "5px"}}>
-                {title.toUpperCase()}
-              </h3>
-              {/* <h4 style={{ padding: "5px 0", fontSize: "15px" }}>
-                {newDate} <br /> {newTime}
-              </h4> */}
-            </div>
-            </Link>
+           <EventAvailable linkEvento={linkEvento} img={img} title={title} />
           ) 
           : reasonNotAvailable ? (
-            <div
-           
-            className={"linkEvento cursor-default"}
-          >
-            <img
-              src={img}
-              className={"card-img-top card-img-bottom cursor-default img-disabled"}
-              alt="img logo"
-            />
-            <div>
-              <h5
-                className="btn-status"
-                style={{
-                  border: `1px solid grey`,
-                  background: "gray",
-                  color: "#fff",
-                  position: "absolute",
-                  top: "10px",
-                  left: "10px",
-                  fontSize: "10px",
-                }}
-              >
-                
-                  No disponible
-                
-              </h5>
-            </div>
-            <div style={{color: "gray"}}>
-              <h3 className="h3-card" >
-                {title.toUpperCase()}
-              </h3>
-            </div>
-            </div>
+            <EventNotAvailable img={img} title={title}/>
           ) 
           : (
-            <Link
-              to={linkEvento}
-              className={`${"linkEvento"}`}
-          >
-            <img
-              src={img}
-              className={`${"card-img-top card-img-bottom"}`}
-              alt="img logo"
-            />
-            <div>
-              <h5
-                className="btn-status"
-                style={{
-                  border: "1px solid green",
-                  background: "green",
-                  color: "#fff",
-                  position: "absolute",
-                  top: "10px",
-                  left: "10px",
-                  fontSize: "10px",
-                }}
-              >
-                { reasonSoldOut ? "Agotado" :  reasonCanceled ? "Cancelado" : reasonSuspended ? "Suspendido" : "No disponible"}
-              </h5>
-            </div>
-            <div style={{ padding: "5px" }}>
-              <h3 className="h3-card" style={{fontWeight: "bold", padding: "5px"}}>
-                {title.toUpperCase()}
-              </h3>
-            </div>
-            </Link>
+           <EventNotForSale linkEvento={linkEvento} img={img} title={title} disponibility={disponibility} />
             )
           : null
           : null
