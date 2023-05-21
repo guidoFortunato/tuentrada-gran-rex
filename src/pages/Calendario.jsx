@@ -1,4 +1,4 @@
-import { useContext, useEffect } from "react";
+import { useContext, useEffect, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 
 import { EventosContext } from "../context/EventosProvider";
@@ -74,7 +74,8 @@ const eventTimeFormat = {
 
 
 export const Calendario = () => {
-  const { dataEventos, isLoadingEventos, dataNavbar, isLoadingNavbar, idVenue } = useContext(EventosContext)
+  const { isLoadingEventos, isLoadingNavbar, idVenue, dataInfoGeneral } = useContext(EventosContext)
+  const [dataEventos, setDataEventos] = useState(null);
   // const { data: dataEventos, isLoading: isLoadingEventos } = useFetch(urlTestEventos);
 
   const navigate = useNavigate();
@@ -83,19 +84,21 @@ export const Calendario = () => {
   
   localStorage.setItem("lastPath", pathname);
 
-  for (let i = 0; i < dataEventos?.eventos.length; i++) {
-    for (let j = 0; j < dataEventos?.eventos[i].fechas.length; j++) {
-      newEvents.push({id: dataEventos?.eventos[i].id, start: dataEventos?.eventos[i].fechas[j].start, title: dataEventos?.eventos[i].nombre.toUpperCase(), url: dataEventos?.eventos[i].links.path, display: dataEventos?.eventos[i].display, status: dataEventos?.eventos[i].fechas[j].estadoCalendario})      
+  for (let i = 0; i < dataEventos?.length; i++) {
+    for (let j = 0; j < dataEventos[i].performances.length; j++) {
+      newEvents.push({id: dataEventos[i].id, start: dataEventos[i].performances[j].start, title: dataEventos[i].title.toUpperCase(), url: `${dataEventos[i].url}/${dataEventos[i].id}`, display: dataEventos[i].display, status: dataEventos[i].performances[j].disponibility})      
     }    
   }
 
+  console.log({newEvents})
 
   
   useEffect(() => {
     if (idVenue !== "") {
       const getDataEvents = async () => {
         const {data} = await getEventsCalendar(idVenue);
-        console.log( data );
+        console.log(data)
+        setDataEventos( data );
       };
       getDataEvents();
     }
@@ -168,6 +171,9 @@ export const Calendario = () => {
   if (isLoadingEventos) {
     return <Spinner/>;
   }
+  if (dataInfoGeneral.length === 0) {
+    return <Spinner />;
+  }
 
   return (
     <>
@@ -175,7 +181,7 @@ export const Calendario = () => {
         <div className="row animate__animated animate__fadeIn ">
           <div className="col-12 text-center mt-3 ">
             <h2 style={{ fontSize: "30px" }} className="my-3 tittle-h2">
-              { dataNavbar?.items[1].titulo1}
+              { dataInfoGeneral?.pages[0].title}
             </h2>
           </div>
         </div>

@@ -8,33 +8,33 @@ import DOMPurify from "dompurify";
 import "../css/historia.css";
 
 // const urlHistoria = "/storage/json/historia.json";
-const urlTestHistoria = "/src/json/historiaTest.json";
+// const urlTestHistoria = "/src/json/historiaTest.json";
 // const { VITE_JSON_HISTORIA } = getEnvVariables();
 
 export const Historia = () => {
-  const { dataNavbar, isLoadingNavbar } = useContext( EventosContext );
-  const [dataHistoria, setDataHistoria] = useState(null);
-  const [isLoadingHistoria, setIsLoadingHistoria] = useState(true);
+  const { dataNavbar, isLoadingNavbar, dataInfoGeneral } = useContext( EventosContext );
+  // const [dataHistoria, setDataHistoria] = useState(null);
+  // const [isLoadingHistoria, setIsLoadingHistoria] = useState(true);
 
   
-  useEffect(() => {
-    if (localStorage.getItem('dataHistoria')) {
-      setDataHistoria(JSON.parse(localStorage.getItem('dataHistoria')))
-      setIsLoadingHistoria(false)
-    } else {
-      fetch(urlTestHistoria)
-        .then(response => response.json())
-        .then(data => {
-          localStorage.setItem('dataHistoria', JSON.stringify(data))
-          console.log(data)
-          setDataHistoria(data)
-          setIsLoadingHistoria(false)
-        })
-        .catch(error => {
-          throw new Error(error)
-        })
-    }
-  }, [])
+  // useEffect(() => {
+  //   if (localStorage.getItem('dataHistoria')) {
+  //     setDataHistoria(JSON.parse(localStorage.getItem('dataHistoria')))
+  //     setIsLoadingHistoria(false)
+  //   } else {
+  //     fetch(urlTestHistoria)
+  //       .then(response => response.json())
+  //       .then(data => {
+  //         localStorage.setItem('dataHistoria', JSON.stringify(data))
+  //         console.log(data)
+  //         setDataHistoria(data)
+  //         setIsLoadingHistoria(false)
+  //       })
+  //       .catch(error => {
+  //         throw new Error(error)
+  //       })
+  //   }
+  // }, [])
 
 
   useEffect(() => {
@@ -46,7 +46,11 @@ export const Historia = () => {
   if (isLoadingNavbar) {
     return <Spinner />;
   }
-  if (isLoadingHistoria) {
+  // if (isLoadingHistoria) {
+  //   return <Spinner />;
+  // }
+
+  if (dataInfoGeneral.length === 0) {
     return <Spinner />;
   }
 
@@ -59,7 +63,7 @@ export const Historia = () => {
               style={{ fontSize: "30px" }}
               className="my-3 animate__fadeIn animate__delay-1s tittle-h2"
             >
-              { dataNavbar?.items[2].titulo1}
+              { dataInfoGeneral?.pages[1].title }
             </h2>
           </div>
 
@@ -67,7 +71,7 @@ export const Historia = () => {
             <p
               className="parrafo-historia"
               dangerouslySetInnerHTML={{
-                __html: DOMPurify.sanitize(dataHistoria?.descripcion),
+                __html: DOMPurify.sanitize(dataInfoGeneral?.pages[1].text),
               }}
             ></p>
           </div>
@@ -81,11 +85,11 @@ export const Historia = () => {
               style={{ fontSize: "30px" }}
               className="my-3 animate__fadeIn animate__delay-1s tittle-h2"
             >
-              {dataNavbar?.items[2].titulo2}
+              Galería
             </h2>
           </div>
 
-          <div
+          {/* <div
             className="container"
             style={{ textAlign: "center", padding: "20px" }}
           >
@@ -94,7 +98,7 @@ export const Historia = () => {
                 <ImagenHistoria src={item.src} key={item.id} />
               ))}
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </>

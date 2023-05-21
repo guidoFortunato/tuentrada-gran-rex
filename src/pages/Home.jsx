@@ -17,12 +17,14 @@ export const Home = () => {
   const {
     // dataEventos,
     isLoadingEventos,
-    dataNavbar,
+    // dataNavbar,
     isLoadingNavbar,
     idVenue,
+    dataInfoGeneral
   } = useContext(EventosContext);
   const [dataEventos, setDataEventos] = useState(null);
   // const { data: dataEventos, isLoading: isLoadingEventos } = useFetch( urlTestEventos );
+  // console.log(dataInfoGeneral)
 
   useEffect(() => {
     setTimeout(() => {
@@ -41,10 +43,13 @@ export const Home = () => {
     }
   }, [idVenue]);
 
-  if (isLoadingNavbar) {
+  // if (isLoadingNavbar) {
+  //   return <Spinner />;
+  // }
+  if (isLoadingEventos) {
     return <Spinner />;
   }
-  if (isLoadingEventos) {
+  if (dataInfoGeneral.length === 0) {
     return <Spinner />;
   }
 
@@ -53,9 +58,9 @@ export const Home = () => {
       <header className="animate__animated animate__fadeIn animate__fast">
         <div className="header-home">
           <h1 className="titulo-principal animate__animated animate__fadeInDown animate__fast	 ">
-            <strong>{dataNavbar?.items[0].titulo1.toUpperCase()}</strong>
+            <strong>{dataInfoGeneral?.physicalConfiguration.name.toUpperCase()}</strong>
           </h1>
-          <FormBusqueda placeholder={dataNavbar?.placeholderInput} />
+          <FormBusqueda placeholder={"Buscar evento"} />
         </div>
       </header>
       <main>
@@ -66,7 +71,7 @@ export const Home = () => {
                 style={{ fontSize: "30px" }}
                 className="my-3 animate__fadeIn animate__delay-1s tittle-h2"
               >
-                {dataNavbar?.items[0].titulo2.toUpperCase()}
+                Próximos Eventos
               </h2>
             </div>
           </div>

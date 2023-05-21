@@ -24,23 +24,15 @@ const EventosProvider = (props) => {
   const [evento, setEvento] = useState("");
   const [idVenue, setIdVenue] = useState("");
   const [listaEventosBusqueda, setListaEventosBusqueda] = useState(eventosBusqueda);
+  const [dataInfoGeneral, setDataInfoGeneral] = useState(eventosBusqueda);
   const { data: dataEventos, isLoading: isLoadingEventos } = useFetch(urlTestEventos);
-  const { data: dataNavbar, isLoading: isLoadingNavbar } = useFetch(urlTestNavbar);
-  const { data: dataFooter, isLoading: isLoadingFooter } = useFetch(urlTestFooter);
-
-  // console.log(window.location.hostname)
-  // useEffect(() => {
-  //   const getDataInfoGeneral = async()=>{
-  //     const { data } = await getInfoGeneralLocalStorage()
-  //     setIdVenue(data.physicalConfiguration.id)
-  //   }
-  //   getDataInfoGeneral()
-  // }, []);
+  // const { data: dataNavbar, isLoading: isLoadingNavbar } = useFetch(urlTestNavbar);
+  // const { data: dataFooter, isLoading: isLoadingFooter } = useFetch(urlTestFooter);
 
   useEffect(() => {
     const getDataInfoGeneral = async () => {
       const data = await getInfoGeneral("Ituzaingo"); //window.location.hostname
-      console.log(data)
+      setDataInfoGeneral(data)
       setIdVenue(data.physicalConfiguration.id)
     };
     getDataInfoGeneral();
@@ -71,14 +63,15 @@ const EventosProvider = (props) => {
       value={{
         agregarEvento,
         dataEventos,
-        dataFooter,
-        dataNavbar,
+        // dataFooter,
+        dataInfoGeneral,
+        // dataNavbar,
         evento,
         handleEvento,
         idVenue,
         isLoadingEventos,
-        isLoadingFooter,
-        isLoadingNavbar,
+        // isLoadingFooter,
+        // isLoadingNavbar,
         listaEventosBusqueda,
       }}
     >
