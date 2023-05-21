@@ -18,7 +18,7 @@ import "../css/detalleevento.css";
 
 
 export const DetalleEvento = () => {
-  const { dataEventos, isLoadingEventos, idVenue } = useContext(EventosContext);
+  const { isLoadingEventos, idVenue } = useContext(EventosContext);
   // const { data: dataEventos, isLoading: isLoadingEventos } = useFetch(urlTestEventos);
   const [evento, setEvento] = useState(null);
   const [modalIsOpen, setModalIsOpen] = useState(false);
@@ -32,27 +32,28 @@ export const DetalleEvento = () => {
    * 
    */
 
+  console.log({evento})
 
   useEffect(() => {
     if (idVenue !== "") {
       const getDataEvents = async () => {
         const data = await getDataEvent(idVenue, id);
-        console.log({ data });
+        setEvento(data);
       };
       getDataEvents();
     }
   }, [idVenue, id]);
 
-  useEffect(() => {
-    if (dataEventos !== null) {
-      const data = dataEventos.eventos.find( (item) => item.nombrePath == name && item.disabled === false );
-      if (data) {
-        setEvento(data);
-      } else {
-        navigate("/");
-      }
-    }
-  }, [name, dataEventos]);
+  // useEffect(() => {
+  //   if (dataEventos !== null) {
+  //     const data = dataEventos.find( (item) => item.nombrePath == name  );
+  //     if (data) {
+  //       setEvento(data);
+  //     } else {
+  //       navigate("/");
+  //     }
+  //   }
+  // }, [name, dataEventos]);
 
   const lastPath = localStorage.getItem("lastPath") || "/";
 
@@ -90,13 +91,13 @@ export const DetalleEvento = () => {
         }
         // ref={eventDetailRef}
       >
-        <h2 className="titleDetalle">{evento?.nombre.toUpperCase()}</h2>
+        <h2 className="titleDetalle">{evento?.name.toUpperCase()}</h2>
         <hr />
         <div className="row">
           <div className="col-12 col-lg-6 mb-5 mb-lg-0 text-center">
             <img
-              src={evento?.imagenes.evento}
-              alt={`imagen ${evento?.nombre}`}
+              src={evento?.image}
+              alt={`imagen ${evento?.name}`}
               className="img-fluid"
             />
           </div>
@@ -105,11 +106,11 @@ export const DetalleEvento = () => {
             <p
               className="animate_animated animate_fadeIn"
               dangerouslySetInnerHTML={{
-                __html: DOMPurify.sanitize(evento?.descripcion),
+                __html: DOMPurify.sanitize(evento?.extraInformation.detalle),
               }}
             ></p>
 
-            <div className="d-flex justify-content-center flex-column align-items-center mt-4 ">
+            {/* <div className="d-flex justify-content-center flex-column align-items-center mt-4 ">
               {evento?.links.botones.map((item) => {
                 if (item.name !== "volver") {
                   return (
@@ -142,7 +143,7 @@ export const DetalleEvento = () => {
                   );
                 }
               })}
-            </div>
+            </div> */}
           </div>
 
           <div className="d-flex justify-content-center flex-column align-items-center mt-4 detalle-del-evento">
@@ -154,12 +155,12 @@ export const DetalleEvento = () => {
                 fontSize: "30px",
               }}
             >
-              {dataEventos?.detalle.titulo1}
+              Info General
             </h2>
             <p
               className="animate_animated animate_fadeIn"
               dangerouslySetInnerHTML={{
-                __html: DOMPurify.sanitize(evento?.informacionGeneral),
+                __html: DOMPurify.sanitize(evento?.extraInformation.infoGeneral),
               }}
             ></p>
 
@@ -173,15 +174,16 @@ export const DetalleEvento = () => {
                 fontSize: "30px",
               }}
             >
-              {dataEventos?.detalle.titulo2}
+              Ubicaciones y precios
+              
             </h2>
           </div>
           <div className="row justify-content-center">
             <div className="col-12 col-lg-8 my-5">
               {/* <hr /> */}
-              <TablaPrecios ubicaciones={evento?.ubicaciones} />
+              {/* <TablaPrecios ubicaciones={evento?.ubicaciones} /> */}
             </div>
-            <div className="col-12 col-lg-4 my-5 text-center">
+            {/* <div className="col-12 col-lg-4 my-5 text-center">
               <img
                 src={evento?.imagenes.plano}
                 alt="ubicaciones gran rex"
@@ -220,7 +222,7 @@ export const DetalleEvento = () => {
                   />
                 </Modal>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

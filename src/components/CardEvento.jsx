@@ -1,5 +1,4 @@
 import { useContext, useEffect, useState } from "react";
-import { Link } from "react-router-dom";
 import { EventosContext } from "../context/EventosProvider";
 import { Spinner } from "./Spinner";
 
@@ -24,8 +23,9 @@ export const CardEvento = ({
   const [reasonSuspended, setReasonSuspended] = useState(false);
   const [reasonNotAvailable, setReasonNotAvailable] = useState(false);
 
+
   useEffect(() => {
-    const EventAvailability = (disponibilidad) => {
+    const eventAvailability = (disponibilidad) => {
       // Verificar si alguna fecha tiene availabilitLevel "GOOD"
       const hasGoodAvailability = disponibilidad.some(
         (fecha) => fecha.availabilitLevel === "GOOD"
@@ -67,8 +67,7 @@ export const CardEvento = ({
       );
       setReasonNotAvailable(hasNotAvailable);
     };
-    EventAvailability(disponibility);
-
+    eventAvailability(disponibility);
   }, []);
 
   if (isLoadingNavbar) {
@@ -81,19 +80,18 @@ export const CardEvento = ({
       style={dataNavbar?.cardEvento.styleGeneral}
     >
       <div className="card" style={dataNavbar?.cardEvento.styleCard}>
-        
         {availabilityGood ? (
-
           <EventAvailable linkEvento={linkEvento} img={img} title={title} />
-
         ) : reasonNotAvailable ? (
-
           <EventNotAvailable img={img} title={title} />
-
-        ) : (!availabilityGood && !reasonSoldOut && !reasonCanceled && !reasonSuspended && !reasonNotAvailable) ? (
+        ) : 
+          !availabilityGood &&
+          !reasonSoldOut &&
+          !reasonCanceled &&
+          !reasonSuspended &&
+          !reasonNotAvailable ? (
           <EventNotAvailable img={img} title={title} />
-        )
-        : (
+        ) : (
           <EventNotForSale
             linkEvento={linkEvento}
             img={img}
@@ -103,8 +101,7 @@ export const CardEvento = ({
             reasonCanceled={reasonCanceled}
             reasonSoldOut={reasonSoldOut}
           />
-        )
-        }
+        )}
       </div>
     </article>
   );

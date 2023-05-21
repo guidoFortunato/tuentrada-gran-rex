@@ -40,6 +40,7 @@ const EventosProvider = (props) => {
   useEffect(() => {
     const getDataInfoGeneral = async () => {
       const data = await getInfoGeneral("Ituzaingo"); //window.location.hostname
+      console.log(data)
       setIdVenue(data.physicalConfiguration.id)
     };
     getDataInfoGeneral();
