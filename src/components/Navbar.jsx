@@ -7,16 +7,16 @@ import { Spinner } from "./";
 import "../css/navbar.css";
 
 export const Navbar = () => {
-  const { dataNavbar, isLoadingNavbar, dataInfoGeneral } =
+  const { dataInfoGeneral } =
     useContext(EventosContext);
   const [isNavCollapsed, setIsNavCollapsed] = useState(true);
   const handleNavCollapse = () => setIsNavCollapsed(!isNavCollapsed);
 
   console.log(dataInfoGeneral);
 
-  if (isLoadingNavbar) {
-    return <Spinner />;
-  }
+  // if (isLoadingNavbar) {
+  //   return <Spinner />;
+  // }
 
   if (dataInfoGeneral.length === 0) {
     return <Spinner />;
@@ -55,16 +55,16 @@ export const Navbar = () => {
           id="navbarNav"
         >
           <ul className="navbar-nav ms-auto" style={{ fontSize: "18px" }}>
-            {dataNavbar?.items.map(
+            {dataInfoGeneral?.pages.map(
               (item) =>
-                item.mostrar && (
+                (
                   <li className="nav-item item-nav" key={item.id}>
                     <Link
                       className="nav-link border-navbar-color border-navbar"
-                      to={item.link}
+                      to={'/'}
                       onClick={handleNavCollapse}
                     >
-                      <span className="size-item-nav">{item.name}</span>
+                      <span className="size-item-nav">{item.type.name}</span>
                     </Link>
                   </li>
                 )
