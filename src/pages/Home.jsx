@@ -71,7 +71,7 @@ export const Home = () => {
                 style={{ fontSize: "30px" }}
                 className="my-3 animate__fadeIn animate__delay-1s tittle-h2"
               >
-                Próximos Eventos
+                Próximos eventos
               </h2>
             </div>
           </div>

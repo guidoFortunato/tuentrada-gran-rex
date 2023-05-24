@@ -1,5 +1,4 @@
 import React, { useContext, useState } from "react";
-// import imgRex from "/assets/imagenes/logo_rex_negro.jpg";
 import { Link } from "react-router-dom";
 import { EventosContext } from "../context/EventosProvider";
 import { Spinner } from "./";
@@ -7,12 +6,9 @@ import { Spinner } from "./";
 import "../css/navbar.css";
 
 export const Navbar = () => {
-  const { dataInfoGeneral } =
-    useContext(EventosContext);
+  const { dataInfoGeneral } = useContext(EventosContext);
   const [isNavCollapsed, setIsNavCollapsed] = useState(true);
   const handleNavCollapse = () => setIsNavCollapsed(!isNavCollapsed);
-
-  console.log(dataInfoGeneral);
 
   // if (isLoadingNavbar) {
   //   return <Spinner />;
@@ -61,7 +57,7 @@ export const Navbar = () => {
                   <li className="nav-item item-nav" key={item.id}>
                     <Link
                       className="nav-link border-navbar-color border-navbar"
-                      to={'/'}
+                      to={item.path}
                       onClick={handleNavCollapse}
                     >
                       <span className="size-item-nav">{item.type.name}</span>
@@ -106,7 +102,6 @@ export const Navbar = () => {
           </div>
         </div>
       </div>
-        
     </nav>
   );
 };

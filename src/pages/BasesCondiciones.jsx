@@ -1,14 +1,16 @@
-import { useEffect } from "react";
-import { useFetch } from "../helpers";
+import { useContext, useEffect } from "react";
+// import { useFetch } from "../helpers";
+import { EventosContext } from "../context/EventosProvider";
 import { Spinner } from "../components";
 
 import DOMPurify from "dompurify";
 
-const urlBases = "/storage/json/bases.json";
+// const urlBases = "/storage/json/bases.json";
 // const urlTestBases = "/src/json/basesTest.json";
 
 export const BasesCondiciones = () => {
-  const { data: dataBases, isLoading: isLoadingBases } = useFetch(urlBases);
+  // const { data: dataBases, isLoading: isLoadingBases } = useFetch(urlBases);
+  const { dataInfoGeneral } = useContext(EventosContext);
 
   useEffect(() => {
     setTimeout(() => {
@@ -16,7 +18,7 @@ export const BasesCondiciones = () => {
     }, 100);
   }, []);
 
-  if (isLoadingBases) {
+  if (dataInfoGeneral.length === 0) {
     return <Spinner />;
   }
 
@@ -28,7 +30,7 @@ export const BasesCondiciones = () => {
             style={{ fontSize: "30px" }}
             className="my-3 animate__fadeIn animate__delay-1s tittle-h2"
           >
-            {dataBases?.titulo}
+            {dataInfoGeneral.pages[4].title}
           </h2>
         </div>
 
@@ -36,35 +38,9 @@ export const BasesCondiciones = () => {
           <p
             className="parrafo-historia"
             dangerouslySetInnerHTML={{
-              __html: DOMPurify.sanitize(dataBases?.descripcion),
+              __html: DOMPurify.sanitize(dataInfoGeneral.pages[4].text),
             }}
           ></p>
-        </div>
-
-        <div className="col-12 mb-4">
-          <p className="parrafo-historia">
-            <strong>{dataBases?.movilidadReducida.titulo}</strong>
-          </p>
-          <p className="parrafo-historia">
-            {dataBases?.movilidadReducida.descripcion}
-          </p>
-        </div>
-        <div className="col-12 mb-4">
-          <p className="parrafo-historia">
-            <strong>{dataBases?.menores.titulo}</strong>
-          </p>
-          <p className="parrafo-historia">{dataBases?.menores.descripcion}</p>
-        </div>
-        <div className="col-12 ">
-          <p className="parrafo-historia">
-            <strong>{dataBases?.terminos.titulo}</strong>
-          </p>
-          <p className="parrafo-historia">
-            {dataBases?.terminos.descripcion}{" "}
-            <a target="_blank" href={dataBases?.terminos.link.href}>
-              {dataBases?.terminos.link.titulo}
-            </a>
-          </p>
         </div>
       </div>
     </div>

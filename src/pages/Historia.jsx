@@ -1,5 +1,5 @@
 // import { GaleriaHistoria } from "../components";
-import { useContext, useEffect, useState } from "react";
+import { useContext, useEffect } from "react";
 import { EventosContext } from "../context/EventosProvider";
 // import { getEnvVariables, useFetch } from "../helpers";
 import { ImagenHistoria, Spinner } from "../components";
@@ -12,7 +12,7 @@ import "../css/historia.css";
 // const { VITE_JSON_HISTORIA } = getEnvVariables();
 
 export const Historia = () => {
-  const { dataNavbar, isLoadingNavbar, dataInfoGeneral } = useContext( EventosContext );
+  const { dataInfoGeneral } = useContext( EventosContext );
   // const [dataHistoria, setDataHistoria] = useState(null);
   // const [isLoadingHistoria, setIsLoadingHistoria] = useState(true);
 
@@ -43,9 +43,9 @@ export const Historia = () => {
     }, 100);
   }, []);
 
-  if (isLoadingNavbar) {
-    return <Spinner />;
-  }
+  // if (isLoadingNavbar) {
+  //   return <Spinner />;
+  // }
   // if (isLoadingHistoria) {
   //   return <Spinner />;
   // }
@@ -63,7 +63,7 @@ export const Historia = () => {
               style={{ fontSize: "30px" }}
               className="my-3 animate__fadeIn animate__delay-1s tittle-h2"
             >
-              { dataInfoGeneral?.pages[1].title }
+              { dataInfoGeneral?.pages[2].title }
             </h2>
           </div>
 
@@ -71,7 +71,7 @@ export const Historia = () => {
             <p
               className="parrafo-historia"
               dangerouslySetInnerHTML={{
-                __html: DOMPurify.sanitize(dataInfoGeneral?.pages[1].text),
+                __html: DOMPurify.sanitize(dataInfoGeneral?.pages[2].text),
               }}
             ></p>
           </div>

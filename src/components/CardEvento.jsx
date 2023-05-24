@@ -1,22 +1,13 @@
-import { useContext, useEffect, useState } from "react";
-import { EventosContext } from "../context/EventosProvider";
+import { useEffect, useState } from "react";
+
 import { Spinner } from "./Spinner";
 
-import {
-  EventAvailable,
-  EventNotAvailable,
-  EventNotForSale,
-} from "./disponibility";
+import { EventAvailable, EventNotAvailable, EventNotForSale } from "./disponibility";
 
 import "../css/cardevento.css";
 
-export const CardEvento = ({
-  img = "",
-  title = "",
-  linkEvento = "",
-  disponibility = [],
-}) => {
-  const { dataNavbar, isLoadingNavbar } = useContext(EventosContext);
+export const CardEvento = ({ img = "", title = "", linkEvento = "", disponibility = [], }) => {
+  // const { dataNavbar, isLoadingNavbar } = useContext(EventosContext);
   const [availabilityGood, setAvailabilityGood] = useState(false);
   const [availabilityLimited, setAvailabilityLimited] = useState(false);
   const [reasonSoldOut, setReasonSoldOut] = useState(false);
@@ -24,58 +15,41 @@ export const CardEvento = ({
   const [reasonSuspended, setReasonSuspended] = useState(false);
   const [reasonNotAvailable, setReasonNotAvailable] = useState(false);
 
- 
-
 
   useEffect(() => {
     console.log(disponibility)
     const eventAvailability = (disponibilidad) => {
       // Verificar si alguna fecha tiene availabilitLevel "GOOD"
-      const hasGoodAvailability = disponibilidad.some(
-        (fecha) => fecha.availabilitLevel === "GOOD"
-      );
+      const hasGoodAvailability = disponibilidad.some( (fecha) => fecha.availabilitLevel === "GOOD" );
       setAvailabilityGood(hasGoodAvailability);
 
       // Verificar si alguna fecha tiene availabilitLevel "LIMITED"
-      const hasLimitedAvailability = disponibilidad.every(
-        (fecha) => fecha.availabilitLevel === "LIMITED"
-      );
+      const hasLimitedAvailability = disponibilidad.every( (fecha) => fecha.availabilitLevel === "LIMITED" );
       setAvailabilityLimited(hasLimitedAvailability);
 
       // Verificar los reasons en caso de que no haya disponibilidad "GOOD"
-      const hasSoldOut = disponibilidad.every(
-        (fecha) => (fecha.availabilitLevel === "NONE" && fecha.reason === "SOLD_OUT" ))
+      const hasSoldOut = disponibilidad.every( (fecha) => (fecha.availabilitLevel === "NONE" && fecha.reason === "SOLD_OUT" ) )
       setReasonSoldOut(hasSoldOut)
 
-      const hasCanceled = disponibilidad.every(
-        (fecha) =>
-          (fecha.availabilitLevel === "NONE" ) && fecha.reason === "CANCELED"
-      );
+      const hasCanceled = disponibilidad.every( (fecha) => (fecha.availabilitLevel === "NONE" ) && fecha.reason === "CANCELED" );
       setReasonCanceled(hasCanceled);
 
-      const hasSuspended = disponibilidad.every(
-        (fecha) =>  (fecha.availabilitLevel === "NONE" && fecha.reason === "SUSPENDED")
-      );
+      const hasSuspended = disponibilidad.every( (fecha) =>  (fecha.availabilitLevel === "NONE" && fecha.reason === "SUSPENDED") );
       setReasonSuspended(hasSuspended);
 
-      const hasNotAvailable = disponibilidad.every(
-        (fecha) => (fecha.availabilitLevel === "NONE" ) && (fecha.reason !== "SUSPENDED" || fecha.reason !== "CANCELED" || fecha.reason !== "SOLD_OUT")
-      );
+      const hasNotAvailable = disponibilidad.every( (fecha) => (fecha.availabilitLevel === "NONE" ) && (fecha.reason !== "SUSPENDED" || fecha.reason !== "CANCELED" || fecha.reason !== "SOLD_OUT"));
       setReasonNotAvailable(hasNotAvailable);
     };
     eventAvailability(disponibility);
   }, []);
 
-  if (isLoadingNavbar) {
-    return <Spinner />;
-  }
 
   return (
     <article
       className="col-12 col-md-6 col-lg-4 col-xl-3 cursor-default"
-      style={dataNavbar?.cardEvento.styleGeneral}
+      style={{ textAlign: "center" }}
     >
-      <div className="card" style={dataNavbar?.cardEvento.styleCard}>
+      <div className="card" style={{ position: "relative" }}>
         {availabilityGood ? (
           <EventAvailable linkEvento={linkEvento} img={img} title={title} />
         ) : reasonNotAvailable ? (
