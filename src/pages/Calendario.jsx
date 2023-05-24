@@ -3,7 +3,7 @@ import { useLocation, useNavigate } from "react-router-dom";
 
 import { EventosContext } from "../context/EventosProvider";
 import { Spinner } from "../components";
-import { getEventsCalendar } from "../helpers";
+import { getEnvVariables, getEventsCalendar, useFetchNew } from "../helpers";
 
 import FullCalendar from "@fullcalendar/react"; // must go before plugins
 import dayGridPlugin from "@fullcalendar/daygrid";
@@ -68,15 +68,17 @@ const eventTimeFormat = {
   minute: "2-digit",
 };
 
+const { VITE_API_INFO_GENERAL, VITE_EMAIL, VITE_PASS } = getEnvVariables();
+
 // const urlEventos = "/storage/json/eventos.json";
 // const urlTestEventos = "/src/json/eventosTest.json";
 // const { VITE_JSON_EVENTOS } = getEnvVariables();
 
 
 export const Calendario = () => {
-  const { isLoadingEventos, isLoadingNavbar, idVenue, dataInfoGeneral } = useContext(EventosContext)
-  const [dataEventos, setDataEventos] = useState(null);
-  // const { data: dataEventos, isLoading: isLoadingEventos } = useFetch(urlTestEventos);
+  const { idVenue, dataInfoGeneral } = useContext(EventosContext)
+
+  const { data, isLoading } = useFetchNew( VITE_API_INFO_GENERAL + idVenue + "/calendar", VITE_EMAIL, VITE_PASS);
 
   const navigate = useNavigate();
   const { pathname } = useLocation();
@@ -84,25 +86,23 @@ export const Calendario = () => {
   
   localStorage.setItem("lastPath", pathname);
 
-  for (let i = 0; i < dataEventos?.length; i++) {
-    for (let j = 0; j < dataEventos[i].performances.length; j++) {
-      newEvents.push({id: dataEventos[i].id, start: dataEventos[i].performances[j].start, title: dataEventos[i].title.toUpperCase(), url: `${dataEventos[i].url}/${dataEventos[i].id}`, display: dataEventos[i].display, status: dataEventos[i].performances[j].disponibility})      
+  for (let i = 0; i < data?.length; i++) {
+    for (let j = 0; j < data[i].performances.length; j++) {
+      newEvents.push({id: data[i].id, start: data[i].performances[j].start, title: data[i].title.toUpperCase(), url: `${data[i].url}/${data[i].id}`, display: data[i].display, status: data[i].performances[j].disponibility})      
     }    
   }
 
-  console.log({newEvents})
-
   
-  useEffect(() => {
-    if (idVenue !== "") {
-      const getDataEvents = async () => {
-        const {data} = await getEventsCalendar(idVenue);
-        console.log(data)
-        setDataEventos( data );
-      };
-      getDataEvents();
-    }
-  }, [idVenue]);
+  // useEffect(() => {
+  //   if (idVenue !== "") {
+  //     const getDataEvents = async () => {
+  //       const {data} = await getEventsCalendar(idVenue);
+  //       console.log(data)
+  //       setdata( data );
+  //     };
+  //     getDataEvents();
+  //   }
+  // }, [idVenue]);
 
   const handleClick = (info) => {
 
@@ -165,11 +165,11 @@ export const Calendario = () => {
     }, 100);
   }, []);
 
-  if (isLoadingNavbar) {
-    return <Spinner/>;
+  if (isLoading && (data === null || data === undefined || data.length === 0  )) {
+    return <Spinner />;
   }
-  if (isLoadingEventos) {
-    return <Spinner/>;
+  if (!isLoading && (data === null || data === undefined || data.length === 0  )) {
+    return <Spinner />
   }
   if (dataInfoGeneral.length === 0) {
     return <Spinner />;
@@ -181,7 +181,7 @@ export const Calendario = () => {
         <div className="row animate__animated animate__fadeIn ">
           <div className="col-12 text-center mt-3 ">
             <h2 style={{ fontSize: "30px" }} className="my-3 tittle-h2">
-              { dataInfoGeneral?.pages[0].title}
+              { dataInfoGeneral?.pages[1].title}
             </h2>
           </div>
         </div>

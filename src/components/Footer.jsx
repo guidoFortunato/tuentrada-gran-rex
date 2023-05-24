@@ -39,7 +39,7 @@ export const Footer = () => {
           </div>
           <div className="col-12 col-md-6 d-flex justify-content-center align-items-center my-2 my-lg-0">
             <span style={{ color: "white", fontSize: "15px" }}>
-              Seguinos en nuestras redes
+              Seguinos en nuestras redes:
             </span>
             <ul className="list-unstyled d-flex mb-0">
               {dataInfoGeneral?.socialNetworks &&

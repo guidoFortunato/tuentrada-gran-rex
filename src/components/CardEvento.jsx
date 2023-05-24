@@ -17,7 +17,7 @@ export const CardEvento = ({ img = "", title = "", linkEvento = "", disponibilit
 
 
   useEffect(() => {
-    console.log(disponibility)
+    // console.log(disponibility)
     const eventAvailability = (disponibilidad) => {
       // Verificar si alguna fecha tiene availabilitLevel "GOOD"
       const hasGoodAvailability = disponibilidad.some( (fecha) => fecha.availabilitLevel === "GOOD" );
