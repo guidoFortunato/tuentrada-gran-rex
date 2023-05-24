@@ -7,7 +7,7 @@ import { CardEvento, FormBusqueda, Spinner } from "../components";
 import { getSearchEvents } from "../helpers";
 
 export const BusquedaEventos = () => {
-  const { listaEventosBusqueda, agregarEvento, dataNavbar, isLoadingNavbar, idVenue } = useContext(EventosContext);
+  const { listaEventosBusqueda, agregarEvento, idVenue } = useContext(EventosContext);
 
   let { name } = useParams();
 
@@ -31,9 +31,9 @@ export const BusquedaEventos = () => {
     }
   }, [idVenue, name]);
 
-  if (isLoadingNavbar) {
-    return <Spinner />;
-  }
+  // if (isLoadingNavbar) {
+  //   return <Spinner />;
+  // }
 
   return (
     <>

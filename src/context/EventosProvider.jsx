@@ -1,10 +1,6 @@
 import { createContext, useEffect, useState } from "react";
 // import { useLocation } from "react-router-dom";
-import {
-  getEnvVariables,
-  getInfoGeneralLocalStorage,
-  useFetch,
-} from "../helpers";
+import { getEnvVariables, getInfoGeneralLocalStorage, useFetch } from "../helpers";
 import { getInfoGeneral } from "../helpers/getInfoGeneral";
 
 export const EventosContext = createContext();
@@ -20,7 +16,7 @@ const urlTestFooter = "/src/json/footerTest.json";
 // const { VITE_JSON_FOOTER } = getEnvVariables();
 // const { VITE_JSON_NAVBAR } = getEnvVariables();
 
-const EventosProvider = (props) => {
+const EventosProvider = ( props ) => {
   const [evento, setEvento] = useState("");
   const [idVenue, setIdVenue] = useState("");
   const [listaEventosBusqueda, setListaEventosBusqueda] = useState(eventosBusqueda);
@@ -50,12 +46,7 @@ const EventosProvider = (props) => {
   };
 
   const agregarEvento = (nombreEvento) => {
-    const resultadosExactos = dataEventos?.eventos.filter((item) =>
-      item.keywords.some((keyword) =>
-        keyword.toLowerCase().includes(nombreEvento.toLowerCase())
-      )
-    );
-
+    const resultadosExactos = dataEventos?.eventos.filter( (item) => item.keywords.some((keyword) => keyword.toLowerCase().includes(nombreEvento.toLowerCase())) );
     setListaEventosBusqueda(resultadosExactos);
   };
 

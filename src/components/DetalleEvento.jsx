@@ -75,9 +75,7 @@ export const DetalleEvento = () => {
     setModalIsOpen(false);
   };
 
-  if (isLoadingEventos) {
-    return <Spinner />;
-  }
+  
   if (evento === null) {
     return <Spinner />;
   }
