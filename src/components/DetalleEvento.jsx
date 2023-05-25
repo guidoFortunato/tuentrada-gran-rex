@@ -15,8 +15,6 @@ import "../css/detalleevento.css";
 // const urlTestEventos = "/src/json/eventosTest.json";
 // const { VITE_JSON_EVENTOS } = getEnvVariables();
 
-
-
 export const DetalleEvento = () => {
   const { isLoadingEventos, idVenue } = useContext(EventosContext);
   // const { data: dataEventos, isLoading: isLoadingEventos } = useFetch(urlTestEventos);
@@ -27,12 +25,12 @@ export const DetalleEvento = () => {
   const { name, id } = useParams();
 
   /**
-   * 
+   *
    * TODO: falta que si cambio la url a mano y no coincide el name con el id, que me redirija al home
-   * 
+   *
    */
 
-  console.log({evento})
+  console.log({ evento });
 
   useEffect(() => {
     if (idVenue !== "") {
@@ -75,11 +73,9 @@ export const DetalleEvento = () => {
     setModalIsOpen(false);
   };
 
-  
   if (evento === null) {
     return <Spinner />;
   }
-
 
   return (
     <>
@@ -108,8 +104,28 @@ export const DetalleEvento = () => {
               }}
             ></p>
 
-            {/* <div className="d-flex justify-content-center flex-column align-items-center mt-4 ">
-              {evento?.links.botones.map((item) => {
+            <div className="d-flex justify-content-center flex-column align-items-center mt-4 ">
+              <div className="text-center mb-3">
+                <div
+                  className="btn-general"
+                  onClick={returnLastPath}
+                  style={{ fontSize: "1.6rem", width: "150px" }}
+                >
+                 Comprar
+                </div>
+              </div>
+
+              <div className="text-center">
+                <div
+                  className="btn-general"
+                  onClick={returnLastPath}
+                  style={{ fontSize: "1.6rem", width: "150px" }}
+                >
+                  Volver
+                </div>
+              </div>
+
+              {/* {evento?.links.botones.map((item) => {
                 if (item.name !== "volver") {
                   return (
                     <a
@@ -140,8 +156,8 @@ export const DetalleEvento = () => {
                     </div>
                   );
                 }
-              })}
-            </div> */}
+              })} */}
+            </div>
           </div>
 
           <div className="d-flex justify-content-center flex-column align-items-center mt-4 detalle-del-evento">
@@ -158,10 +174,11 @@ export const DetalleEvento = () => {
             <p
               className="animate_animated animate_fadeIn"
               dangerouslySetInnerHTML={{
-                __html: DOMPurify.sanitize(evento?.extraInformation.infoGeneral),
+                __html: DOMPurify.sanitize(
+                  evento?.extraInformation.infoGeneral
+                ),
               }}
             ></p>
-
           </div>
           <div>
             <h2
@@ -173,7 +190,6 @@ export const DetalleEvento = () => {
               }}
             >
               Ubicaciones y precios
-              
             </h2>
           </div>
           <div className="row justify-content-center">

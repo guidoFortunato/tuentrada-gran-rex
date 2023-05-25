@@ -1,6 +1,6 @@
-import { FormBusqueda } from "./FormBusqueda"
+import { FormBusqueda } from "./FormBusqueda";
 
-export const NoHayEventosDisponibles = ({title}) => {
+export const EventosNoDisponibles = ({ title }) => {
   return (
     <>
       <header className="animate__animated animate__fadeIn animate__fast">
@@ -23,11 +23,8 @@ export const NoHayEventosDisponibles = ({title}) => {
               </h2>
             </div>
           </div>
-
-
-        
         </div>
       </main>
     </>
-  )
-}
+  );
+};

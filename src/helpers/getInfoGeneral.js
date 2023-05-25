@@ -38,6 +38,7 @@ export const getInfoGeneral = async (venue = "Ituzaingo") => {
           throw new Error(`${response.status}: ${response.statusText} `);
         }
         sessionStorage.setItem("tokenSessionStorage", token);
+        // console.log(data)
         const { data } = await response.json();
         return data;
       }
@@ -45,6 +46,7 @@ export const getInfoGeneral = async (venue = "Ituzaingo") => {
       //   "Uso tokenSessionStorage para hacer la peticion: " + tokenSessionStorage
       // );
       const { data } = await response.json();
+      // console.log(data)
       return data;
     } catch (error) {
       throw new Error(error);

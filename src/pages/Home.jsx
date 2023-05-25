@@ -1,7 +1,7 @@
 import { useContext, useEffect } from "react";
 import { EventosContext } from "../context/EventosProvider";
 import { getEnvVariables, useFetchNew } from "../helpers";
-import { EventosDisponibles, NoHayEventosDisponibles, Spinner } from "../components/";
+import { EventosDisponibles, EventosNoDisponibles, Spinner } from "../components/";
 
 // import { SliderDestacado } from "../components/";
 
@@ -33,11 +33,11 @@ export const Home = () => {
   //   }
   // }, [idVenue]);
 
-  if (isLoading && (data === null || data === undefined || data.length === 0  )) {
+  if (isLoading) {
     return <Spinner />;
   }
-  if (!isLoading && (data === null || data === undefined || data.length === 0  )) {
-    return <NoHayEventosDisponibles  title={dataInfoGeneral?.physicalConfiguration?.name?.toUpperCase()} />
+  if (!isLoading && (data === null || data === undefined )) {
+    return <EventosNoDisponibles  title={dataInfoGeneral?.physicalConfiguration?.name?.toUpperCase()} />
   }
   if (dataInfoGeneral.length === 0) {
     return <Spinner />;

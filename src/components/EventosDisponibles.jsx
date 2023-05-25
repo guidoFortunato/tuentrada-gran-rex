@@ -1,7 +1,6 @@
-import { CardEvento, FormBusqueda } from "./"
+import { CardEvento, FormBusqueda } from "./";
 
-
-export const EventosDisponibles = ({title, data}) => {
+export const EventosDisponibles = ({ title, data }) => {
   return (
     <>
       <header className="animate__animated animate__fadeIn animate__fast">
@@ -57,5 +56,5 @@ export const EventosDisponibles = ({title, data}) => {
         </div>
       </main>
     </>
-  )
-}
+  );
+};

@@ -10,6 +10,7 @@ export const BusquedaEventos = () => {
   const { listaEventosBusqueda, agregarEvento, idVenue } = useContext(EventosContext);
 
   let { name } = useParams();
+  
 
   useEffect(() => {
     agregarEvento(name);
@@ -39,23 +40,25 @@ export const BusquedaEventos = () => {
     <>
       <div className="container animate__animated animate__fadeIn animate__fast">
         <div className="row justify-content-center my-5 form">
-          <FormBusqueda placeholder={dataNavbar?.placeholderInput} />
+          <FormBusqueda placeholder={"Buscar evento"} />
         </div>
         <div className="row justify-content-center py-5">
           <h2 className="text-center">
-            {dataNavbar?.resultadoBusqueda} <strong>"{name}"</strong>
+          Resultados de tu búsqueda <strong>"{name}"</strong>
           </h2>
         </div>
         <div className="row justify-content-center">
           {listaEventosBusqueda?.length > 0 ? (
             listaEventosBusqueda?.map((evento) => (
               <CardEvento
-                linkEvento={evento.links.path}
-                img={evento.imagenes.evento}
-                status={evento.estado}
-                title={evento.nombre}
-                key={evento.id}
-                disabled={evento.disabled}
+              linkEvento={evento.slug + "/" + evento.id}
+              img={evento.image}
+              status={evento.state}
+              title={evento.name}
+              key={evento.id}
+              disabled={evento.disabled}
+              reason={evento.reason}
+              disponibility={evento.disponibility}
               />
             ))
           ) : (
@@ -63,7 +66,7 @@ export const BusquedaEventos = () => {
               className="d-flex justify-content-center alert alert-danger my-5 w-50"
               role="alert"
             >
-              {dataNavbar?.noHayEventos}
+              No existen eventos para tu búsqueda
             </div>
           )}
         </div>
@@ -73,7 +76,7 @@ export const BusquedaEventos = () => {
               style={{ fontSize: "14px", padding: "3px 20px" }}
               className="btn-general"
             >
-              {dataNavbar?.botonHomeBusqueda}
+              Home
             </div>
           </Link>
         </div>

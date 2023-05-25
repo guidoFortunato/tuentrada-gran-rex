@@ -79,6 +79,7 @@ export const Calendario = () => {
   const { idVenue, dataInfoGeneral } = useContext(EventosContext)
 
   const { data, isLoading } = useFetchNew( VITE_API_INFO_GENERAL + idVenue + "/calendar", VITE_EMAIL, VITE_PASS);
+ 
 
   const navigate = useNavigate();
   const { pathname } = useLocation();
@@ -92,7 +93,7 @@ export const Calendario = () => {
     }    
   }
 
-  
+
   // useEffect(() => {
   //   if (idVenue !== "") {
   //     const getDataEvents = async () => {
@@ -165,7 +166,7 @@ export const Calendario = () => {
     }, 100);
   }, []);
 
-  if (isLoading && (data === null || data === undefined || data.length === 0  )) {
+  if (isLoading) {
     return <Spinner />;
   }
   if (!isLoading && (data === null || data === undefined || data.length === 0  )) {

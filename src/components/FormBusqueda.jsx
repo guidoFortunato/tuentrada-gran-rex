@@ -4,7 +4,7 @@ import { useLocation, useNavigate, useParams } from "react-router-dom";
 import { Spinner } from "./";
 
 export const FormBusqueda = ({ placeholder = "Buscar Evento" }) => {
-  const { evento, handleEvento, agregarEvento, dataNavbar, isLoadingNavbar } = useContext( EventosContext );
+  const { evento, handleEvento, agregarEvento } = useContext( EventosContext );
   let { name } = useParams();
   let navigate = useNavigate();
   const { pathname } = useLocation();
@@ -26,9 +26,9 @@ export const FormBusqueda = ({ placeholder = "Buscar Evento" }) => {
     }
   }, [name]);
 
-  if (isLoadingNavbar) {
-    return <Spinner />;
-  }
+  // if (isLoadingNavbar) {
+  //   return <Spinner />;
+  // }
 
   return (
     <form
