@@ -1,10 +1,11 @@
-import { useContext, useEffect } from "react";
+import { useContext, useEffect, useState } from "react";
 import { EventosContext } from "../context/EventosProvider";
 import { useLocation, useNavigate, useParams } from "react-router-dom";
 import { Spinner } from "./";
 
-export const FormBusqueda = ({ placeholder = "Buscar Evento" }) => {
-  const { evento, handleEvento, agregarEvento } = useContext( EventosContext );
+export const FormBusqueda = ({ placeholder = "Buscar Evento", data, listaEventosBusqueda, setListaEventosBusqueda }) => {
+  const { agregarEvento } = useContext( EventosContext );
+  const [evento, setEvento] = useState("");
   let { name } = useParams();
   let navigate = useNavigate();
   const { pathname } = useLocation();
@@ -12,17 +13,27 @@ export const FormBusqueda = ({ placeholder = "Buscar Evento" }) => {
 
   localStorage.setItem("lastPath", pathname);
 
+  const handleEvento = (nombreEvento) => {
+    if (!nombreEvento.trim()) {
+      setEvento("");
+      return;
+    }
+    setEvento(nombreEvento);
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (evento.length === 0) return;
-    // agregarEvento(evento);
+    if (evento.length === 0) return; // sweet alert
+    const eventos = agregarEvento(evento, data);
+    setListaEventosBusqueda(eventos)
     navigate(`/busqueda-eventos/${evento}`);
     handleEvento("");
   };
 
   useEffect(() => {
     if (busquedaEventos == "busqueda-eventos") {
-      agregarEvento(name);
+      const eventos = agregarEvento(evento, data);
+      setListaEventosBusqueda(eventos)
     }
   }, [name]);
 

@@ -18,9 +18,9 @@ const eventosGeneral = [];
 // const { VITE_JSON_NAVBAR } = getEnvVariables();
 
 const EventosProvider = ( props ) => {
-  const [evento, setEvento] = useState("");
+  // const [evento, setEvento] = useState("");
   const [idVenue, setIdVenue] = useState("");
-  const [listaEventosBusqueda, setListaEventosBusqueda] = useState(eventosBusqueda);
+  // const [listaEventosBusqueda, setListaEventosBusqueda] = useState(eventosBusqueda);
   const [dataInfoGeneral, setDataInfoGeneral] = useState(eventosGeneral);
   // const { data: dataEventos, isLoading: isLoadingEventos } = useFetch(urlTestEventos);
   // const { data: dataNavbar, isLoading: isLoadingNavbar } = useFetch(urlTestNavbar);
@@ -38,34 +38,34 @@ const EventosProvider = ( props ) => {
 
 
 
-  const handleEvento = (nombreEvento) => {
-    if (!nombreEvento.trim()) {
-      setEvento("");
-      return;
-    }
-    setEvento(nombreEvento);
-  };
+  // const handleEvento = (nombreEvento) => {
+  //   if (!nombreEvento.trim()) {
+  //     setEvento("");
+  //     return;
+  //   }
+  //   setEvento(nombreEvento);
+  // };
 
-  const agregarEvento = (nombreEvento) => {
-    const resultadosExactos = dataEventos?.eventos.filter( (item) => item.keywords.some((keyword) => keyword.toLowerCase().includes(nombreEvento.toLowerCase())) );
-    setListaEventosBusqueda(resultadosExactos);
-  };
+  // const agregarEvento = (nombreEvento, dataEventos = []) => {
+  //   const resultadosExactos = dataEventos.filter( (item) => item.keywords.some((keyword) => keyword.toLowerCase().includes(nombreEvento.toLowerCase())) );
+  //   return resultadosExactos
+  // };
 
   return (
     <EventosContext.Provider
       value={{
-        agregarEvento,
+        // agregarEvento,
         // dataEventos,
         // dataFooter,
         dataInfoGeneral,
         // dataNavbar,
-        evento,
-        handleEvento,
+        // evento,
+        // handleEvento,
         idVenue,
         // isLoadingEventos,
         // isLoadingFooter,
         // isLoadingNavbar,
-        listaEventosBusqueda,
+        // listaEventosBusqueda,
       }}
     >
       {props.children}
