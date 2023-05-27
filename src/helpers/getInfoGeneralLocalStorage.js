@@ -1,5 +1,3 @@
-import { useContext } from "react";
-import { EventosContext } from "../context/EventosProvider";
 import { getToken } from ".";
 import { getEnvVariables } from "./getEnvVariables";
 

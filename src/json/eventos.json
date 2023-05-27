@@ -5,260 +5,6 @@
     "botonPlano": "ver ubicaciones"
   },
   "eventos": [
-   
-    
-    
-    
-    {
-      "id": 10,
-      "descripcion": "Kim Loaiza y JD Pantoja, los Youtubers y Cantantes más populares del momento, anuncian su último tour juntos el cual lleva por nombre “BYE BYE”, quiénes cantarán por última vez juntos en un mismo escenario su mayores éxitos.<br /><br />  <strong>  Después de recorrer diferentes países, mañana se presenta en Argentina para llevar alegría y diversión a sus seguidores.<br />Kim Loaiza y JD Pantoja presentan una combinación de música, baile y entretenimiento en vivo prometiendo un espectáculo inolvidable lleno de energía y emociones.</strong> <br /><br />    <strong>  Fechas:  </strong>    <ul>      <li style='list-style: inside;'> Sábado 20 de mayo 16:00hs - Apertura de puertas: 14:30hs</li>      <li style='list-style: inside;'> Domingo 21 de mayo 19:00hs - Apertura de puertas: 17:30hs</li>   </ul>    ",
-      "disabled": false,
-      "display": "block",
-      "estado": "agotado",
-      "fechas": [
-        {
-          "dia": "sábado 20 de mayo",
-          "hora": "16:00HS",
-          "start": "2023-05-20T16:00:00",
-          "end": "",
-          "estadoCalendario": "agotado"
-        },
-        {
-          "dia": "domingo 21 de mayo",
-          "hora": "19:00HS",
-          "start": "2023-05-21T19:00:00",
-          "end": "",
-          "estadoCalendario": "agotado"
-        }
-      ],
-      "informacionGeneral": " Está prohibido el ingreso a la sala a menores de 1 año. A partir de los 3 años de edad se debe abonar la entrada.<br /><br />  El Teatro Gran Rex informa que los eventos que se realizan en esta sala podrían ser fotografiados o filmados para su posterior difusión en medios y /o campañas publicitarias. <br /> El ingreso al establecimiento implica la autorización a la Productora y a Cordero, Cavallo y Lautaret S.A. a utilizar el contenido filmado y /o fotografiado y el uso de imagen personal sin compensación alguna. <br />    <br />    <strong> Entradas en venta </strong> <br />    En las boleterias del Teatro Gran Rex (Av. Corrientes 857 - Lunes a Sábado de 12 a 18 hs. Feriados Cerrado.) <br /> <br />    <strong>Personas con movilidad reducida</strong> <br />    Las sillas de ruedas se ubican en el espacio habilitado para las    mismas detrás de la fila 25 del sector derecho de la Platea. En    todos los casos abonan la entrada. Dichas localidades deben ser    adquiridas solo en la boleteria del Teatro, presentando certificado de discapacidad. Al momento de la compra, abonan el    ticket de menor valor disponible.",
-
-      "keywords": ["jd Pantoja Kim Loaiza", "mayo"],
-      "links": {
-        "href": "https://www.ticketek.com.ar/jd-pantoja-kim-loaiza/teatro-gran-rex",
-
-        "botones": [
-          {
-            "id": 1,
-            "name": "comprar",
-            "href": "https://www.ticketek.com.ar/jd-pantoja-kim-loaiza/teatro-gran-rex"
-          },
-          {
-            "id": 2,
-            "name": "volver",
-            "href": "/"
-          }
-        ],
-        "path": "/jdpantoja-kimloaiza"
-      },
-      "imagenes": {
-        "evento": "/storage/imagenes/jdpantoja_kimloaiza.webp",
-        "plano": "/storage/imagenes/planos/tue1.webp"
-      },
-      "nombre": "jd pantoja kim loaiza",
-      "nombrePath": "jdpantoja-kimloaiza",
-      "ubicaciones": [
-        {
-          "id": 1,
-          "nombre": "PLATEA 1",
-          "color": "#970513",
-          "precio": "$9.600"
-        },
-        {
-          "id": 2,
-          "nombre": "PLATEA 2",
-          "color": "#79C8C3",
-          "precio": "$8.400"
-        },
-        {
-          "id": 3,
-          "nombre": "PLATEA 3",
-          "color": "#EDB63B",
-          "precio": "$8.000"
-        },
-        {
-          "id": 4,
-          "nombre": "PLATEA 4",
-          "color": "#86AA4D",
-          "precio": "$7.200"
-        },
-        {
-          "id": 5,
-          "nombre": "PLATEA 5",
-          "color": "#052748",
-          "precio": "$6.400"
-        },
-        {
-          "id": 6,
-          "nombre": "SUPER PULLMAN 1",
-          "color": "#035F89",
-          "precio": "$8.400"
-        },
-        {
-          "id": 7,
-          "nombre": "SUPER PULLMAN 2",
-          "color": "#A9167D",
-          "precio": "$7.200"
-        },
-        {
-          "id": 8,
-          "nombre": "PULLMAN 1",
-          "color": "#EE6E08",
-          "precio": "$6.400"
-        },
-        {
-          "id": 9,
-          "nombre": "PULLMAN 2",
-          "color": "#037366",
-          "precio": "$5.600"
-        },
-        {
-          "id": 10,
-          "nombre": "PULLMAN 3",
-          "color": "#D97B77",
-          "precio": "$4.800"
-        },
-        {
-          "id": 11,
-          "nombre": "PULLMAN 4",
-          "color": "#AF0657",
-          "precio": "$3.600"
-        },
-        {
-          "id": 12,
-          "nombre": "PULLMAN 5",
-          "color": "#5271FF",
-          "precio": "$3.200"
-        }
-      ]
-    },
-    {
-      "id": 11,
-      "descripcion": "Sergio Galleguillo lleva “La fiesta de La Rioja” al Gran Rex.    <br />    El hoy reconocido Embajador Artístico y Cultural de La Rioja llega al Gran Rex para celebrar el aniversario de La Rioja. “Yo soy nacido en La Rioja señores… La Tierra del Carnaval”, es la lírica que lo abraza a su terruño y a su esencia de folklorista.<br />    Sergio Galleguillo fue conquistando cada escenario del país donde llevo su música contagiada de alegría, logrando instaurar en los lugares más recónditos de nuestro país y del mundo, el juego y la mística de una ancestral fiesta llamada CHAYA. En sus inicios, conformó grupos como Tiahuanaco y Arahuanco pero, su máxima explosión y aceptación en el folklore fue con “Sergio Galleguillo y Los Amigos”, banda formada en 1997 con la cual editó 6 discos. En 1998 editan su álbum debut “Agitando Pañuelos”. Ese mismo año se presentan en la peña de Los Nocheros en Cosquín, lo cual les da un lugar luego en el escenario de la Plaza Próspero Molina. <br /><br />    <strong>  Fechas:  </strong>    <ul>     <li style='list-style: inside;'> Sábado 20 de mayo 21:00hs </li>    </ul>    ",
-      "disabled": false,
-      "display": "block",
-      "estado": "disponible",
-      "fechas": [
-        {
-          "dia": "sábado 20 de mayo",
-          "hora": "21:00hs",
-          "start": "2023-05-20T21:00:00",
-          "end": "",
-          "estadoCalendario": "disponible"
-        }
-      ],
-      "informacionGeneral": "El Teatro Gran Rex informa que los eventos que se realizan en esta sala podrían ser fotografiados o filmados para su posterior difusión en medios y /o campañas publicitarias. <br /> El ingreso al establecimiento implica la autorización a la Productora y a Cordero, Cavallo y Lautaret S.A. a utilizar el contenido filmado y /o fotografiado y el uso de imagen personal sin compensación alguna. <br />    <br />    <strong> Entradas en venta </strong> <br />    En las boleterias del Teatro Gran Rex (Av. Corrientes 857 - Lunes a Sábado de 12 a 18 hs. Feriados Cerrado.) <br /> <br />    <strong>Personas con movilidad reducida</strong> <br />    Las sillas de ruedas se ubican en el espacio habilitado para las    mismas detrás de la fila 25 del sector derecho de la Platea. En    todos los casos abonan la entrada. Dichas localidades deben ser    adquiridas solo en la boleteria del Teatro, presentando certificado de discapacidad. Al momento de la compra, abonan el    ticket de menor valor disponible.",
-
-      "keywords": [
-        "sergio galleguillo",
-        "cergio galleguillo",
-        "sergio galeguilo",
-        "cergio galeguilo",
-        "sergio gayeguillo",
-        "cergio gayeguillo",
-        "sergio galleguiyo",
-        "sergio gayeguiyo",
-        "mayo",
-        "la fiesta de la rioja"
-      ],
-      "links": {
-        "href": "https://www.ticketek.com.ar/sergio-galleguillo/teatro-gran-rex",
-
-        "botones": [
-          {
-            "id": 1,
-            "name": "comprar",
-            "href": "https://www.ticketek.com.ar/sergio-galleguillo/teatro-gran-rex"
-          },
-          {
-            "id": 2,
-            "name": "volver",
-            "href": "/"
-          }
-        ],
-        "path": "/sergio-galleguillo"
-      },
-      "imagenes": {
-        "evento": "/storage/imagenes/sergio_galleguillo.webp",
-        "plano": "/storage/imagenes/planos/tue1.webp"
-      },
-      "nombre": "sergio galleguillo",
-      "nombrePath": "sergio-galleguillo",
-      "ubicaciones": [
-        {
-          "id": 1,
-          "nombre": "PLATEA 1",
-          "color": "#970513",
-          "precio": "$7.000"
-        },
-        {
-          "id": 2,
-          "nombre": "PLATEA 2",
-          "color": "#79C8C3",
-          "precio": "$7.000"
-        },
-        {
-          "id": 3,
-          "nombre": "PLATEA 3",
-          "color": "#EDB63B",
-          "precio": "$6.000"
-        },
-        {
-          "id": 4,
-          "nombre": "PLATEA 4",
-          "color": "#86AA4D",
-          "precio": "$6.000"
-        },
-        {
-          "id": 5,
-          "nombre": "PLATEA 5",
-          "color": "#052748",
-          "precio": "$6.000"
-        },
-        {
-          "id": 6,
-          "nombre": "SUPER PULLMAN 1",
-          "color": "#035F89",
-          "precio": "$6.500"
-        },
-        {
-          "id": 7,
-          "nombre": "SUPER PULLMAN 2",
-          "color": "#A9167D",
-          "precio": "$6.500"
-        },
-        {
-          "id": 8,
-          "nombre": "PULLMAN 1",
-          "color": "#EE6E08",
-          "precio": "$5.500"
-        },
-        {
-          "id": 9,
-          "nombre": "PULLMAN 2",
-          "color": "#037366",
-          "precio": "$5.000"
-        },
-        {
-          "id": 10,
-          "nombre": "PULLMAN 3",
-          "color": "#D97B77",
-          "precio": "$4.000"
-        },
-        {
-          "id": 11,
-          "nombre": "PULLMAN 4",
-          "color": "#AF0657",
-          "precio": "$3.000"
-        },
-        {
-          "id": 12,
-          "nombre": "PULLMAN 5",
-          "color": "#5271FF",
-          "precio": "$3.000"
-        }
-      ]
-    },
     {
       "id": 12,
       "descripcion": "La obra éxito de Broadway y el West End Londinense llega al Teatro Gran Rex por 8 únicas semanas en Junio 2023.    <br />    Basado en la homónima novela de Roald Dahl, autor que ha vendido más de 250 millones de libros, y que ha inspirado la icónica película infantil de los 90 es una megaproducción que lleva presentándose, con gran éxito mundialmente: 12 años en Londres y 4 años en cartel en Broadway con más de 1.500 representaciones, 99 premios internacionales y más de 10 millones de espectadores que ya la vieron. <br /> <br />    Está prohibido el ingreso a la sala a menores de 1 año. A partir de los 3 años de edad se debe abonar la entrada.<br /><br />    <strong>  Fechas:  </strong>    <ul>     <li style='list-style: inside;'> Del 1 de junio al 30 de julio </li>    </ul>    ",
@@ -876,6 +622,131 @@
       ]
     },
     {
+      "id": 24,
+      "descripcion": "Gladys inicio su carrera en la música tropical hace 35 años, en los cuales ha editado mas de 20 álbumes, y ganado varios premios. <br /> <br /> A finales del año 1989 se edita su álbum “La Bomba Tucumana” que marcó un hito en su carrera al incluir su mega éxito “La Pollera Amarilla”. Este disco vendió más de un millón y medio de copias, lo cual la ubicó en el primer lugar del ranking en todo el país y también en países limítrofes. En 1991 se edita el álbum “La Número 1” por el sello Magenta, obteniendo un éxito muy grande en Argentina. Ese mismo año participa de un disco editado por Magenta con temas inéditos de los grandes artistas de la compañía, “Increíble Vol II”, donde comparte ese disco con Miguel “Conejito” Alejandro, Rodrigo, Daniel Lezica, Pocho La Pantera e Isabelita “La Diosa Tucumana”. En este trabajo participa con los temas “Suavecito, suavecito” y “El fiestón llegó”. A partir de ese momento su carrera musical evoluciona hasta la actualidad, entrando al mundo de la televisión en el año 2018 de la mano de Pol-Ka Producciones para participar de Showmatch, esto provocaría un cambio radical en su carrera. En 2021 - 2022 Gladys protagoniza la obra de teatro “Cocodrilisima” de Omar Suárez en el Teatro Holiday de Villa Carlos Paz PREMIOS PREMIOS CARLOS GARDEL 2002/2014/2017 – Mejor álbum Artista Femenina Tropical.  <br /> <br />    <strong>  Fechas:  </strong> <ul>     <li style='list-style: inside;'> Viernes 25 de agosto 20:30hs </li>    </ul>",
+      "disabled": true,
+      "display": "block",
+      "estado": "próximamente",
+      "fechas": [
+        {
+          "dia": "viernes 25 de agosto",
+          "hora": "20:30hs",
+          "start": "2023-08-25T20:30:00",
+          "end": "",
+          "estadoCalendario": "próximamente"
+        }
+      ],
+      "informacionGeneral": "Está prohibido el ingreso a la sala a menores de 1 año. A partir de los 3 años de edad se debe abonar la entrada.<br /><br />  El Teatro Gran Rex informa que los eventos que se realizan en esta sala podrían ser fotografiados o filmados para su posterior difusión en medios y /o campañas publicitarias. <br /> El ingreso al establecimiento implica la autorización a la Productora y a Cordero, Cavallo y Lautaret S.A. a utilizar el contenido filmado y /o fotografiado y el uso de imagen personal sin compensación alguna. <br />    <br />    <strong> Entradas en venta </strong> <br />    En las boleterias del Teatro Gran Rex (Av. Corrientes 857 - Lunes a Sábado de 12 a 18 hs. Feriados Cerrado.) <br /> <br />    <strong>Personas con movilidad reducida</strong> <br />    Las sillas de ruedas se ubican en el espacio habilitado para las    mismas detrás de la fila 25 del sector derecho de la Platea. En    todos los casos abonan la entrada. Dichas localidades deben ser    adquiridas solo en la boleteria del Teatro, presentando certificado de discapacidad. Al momento de la compra, abonan el    ticket de menor valor disponible.",
+
+      "keywords": [
+        "gladis la bomba tucumana",
+        "gladys la bomba tucumana",
+        "gladis la vomva tucumana",
+        "gladis la bomva",
+        "bonva",
+        "vomva",
+        "agosto",
+        "vonba"
+      ],
+      "links": {
+        "href": "https://www.tuentrada.com/eventos/detalle/Gladys-La-Bomba-Tucumana/170881059241",
+
+        "botones": [
+          {
+            "id": 1,
+            "name": "comprar",
+            "href": "https://www.tuentrada.com/eventos/detalle/Gladys-La-Bomba-Tucumana/170881059241"
+          },
+          {
+            "id": 2,
+            "name": "volver",
+            "href": "/"
+          }
+        ],
+        "path": "/gladys-la-bomba-tucumana"
+      },
+      "imagenes": {
+        "evento": "/storage/imagenes/la-bomba-tucumana.webp",
+        "plano": "/storage/imagenes/planos/tue1.webp"
+      },
+      "nombre": "gladys la bomba tucumana",
+      "nombrePath": "gladys-la-bomba-tucumana",
+      "ubicaciones": [
+        {
+          "id": 1,
+          "nombre": "PLATEA 1",
+          "color": "#970513",
+          "precio": "$9.800"
+        },
+        {
+          "id": 2,
+          "nombre": "PLATEA 2",
+          "color": "#79C8C3",
+          "precio": "$9.300"
+        },
+        {
+          "id": 3,
+          "nombre": "PLATEA 3",
+          "color": "#EDB63B",
+          "precio": "$8.800"
+        },
+        {
+          "id": 4,
+          "nombre": "PLATEA 4",
+          "color": "#86AA4D",
+          "precio": "$8.800"
+        },
+        {
+          "id": 5,
+          "nombre": "PLATEA 5",
+          "color": "#052748",
+          "precio": "$7.500"
+        },
+        {
+          "id": 6,
+          "nombre": "SUPER PULLMAN 1",
+          "color": "#035F89",
+          "precio": "$8.200"
+        },
+        {
+          "id": 7,
+          "nombre": "SUPER PULLMAN 2",
+          "color": "#A9167D",
+          "precio": "$7.800"
+        },
+        {
+          "id": 8,
+          "nombre": "PULLMAN 1",
+          "color": "#EE6E08",
+          "precio": "$6.500"
+        },
+        {
+          "id": 9,
+          "nombre": "PULLMAN 2",
+          "color": "#037366",
+          "precio": "$5.500"
+        },
+        {
+          "id": 10,
+          "nombre": "PULLMAN 3",
+          "color": "#D97B77",
+          "precio": "$5.000"
+        },
+        {
+          "id": 11,
+          "nombre": "PULLMAN 4",
+          "color": "#AF0657",
+          "precio": "$4.500"
+        },
+        {
+          "id": 12,
+          "nombre": "PULLMAN 5",
+          "color": "#5271FF",
+          "precio": "$3.500"
+        }
+      ]
+    },
+    {
       "id": 13,
       "descripcion": "<strong>NUEVO DISCO “TU HISTORIA” <br /><a href='https://links.altafonte.com/JulietaVenegas_TuHistoria'> Disponible en todas las Plataformas Digitales </a></strong><br /><br />“Mismo Amor”, ”Caminar Sola”, “En Tu Orilla” y “Te Encontré”, se posicionaron como canciones destacadas y portadas de las principales Playlists en Plataformas Digitales. <br /><br />“La Nostalgia”, su quinto sencillo y video lanzado recientemente en exclusiva para Facebook, ha acumulado 50 millones de vistas en la semana de su estreno. <br /><br />Luego de una gira por Estados Unidos, México, Colombia, España, Uruguay, Argentina y Chile, Julieta ha agota localidades y se ha presentando en los festivales más convocados como el Vive Latino y el Primavera Sound, Julieta Venegas presenta su nuevo álbum discográfico: TU HISTORIA <br /><br />TU HISTORIA llega acompañado de un video homónimo que da título a este nuevo disco producido por Alex Anwandter. <br /><br /><strong>  Fechas:  </strong>    <ul>      <li style='list-style: inside;'> Sábado 26 de agosto 20:30hs </li>    </ul>   ",
       "disabled": false,
@@ -1249,7 +1120,7 @@
     },
     {
       "id": 15,
-      "descripcion": "Daniel Agostini se presentará el día Domingo 10 de Septiembre en el Teatro Gran Rex.  <br /> <br />    Está prohibido el ingreso a la sala a menores de 1 año. A partir de los 3 años de edad se debe abonar la entrada.<br /><br />    <strong>  Fechas:  </strong>    <ul>     <li style='list-style: inside;'> Domingo 10 de septiemnre 20:00hs </li>    </ul>",
+      "descripcion": "Daniel Agostini se presentará el día Domingo 10 de Septiembre en el Teatro Gran Rex.  <br /> <br />    Está prohibido el ingreso a la sala a menores de 1 año. A partir de los 3 años de edad se debe abonar la entrada.<br /><br />    <strong>  Fechas:  </strong>    <ul>     <li style='list-style: inside;'> Domingo 10 de septiembre 20:00hs </li>    </ul>",
       "disabled": false,
       "display": "block",
       "estado": "disponible",
@@ -1488,18 +1359,141 @@
       ]
     },
     {
-      "id": 23,
-      "descripcion": "Fabiana Cantilo se presentará el día 30 de Septiembre en el Teatro Gran Rex.  <br /> <br />    Está prohibido el ingreso a la sala a menores de 1 año. A partir de los 3 años de edad se debe abonar la entrada.<br /><br />    <strong>  Fechas:  </strong>    <ul>     <li style='list-style: inside;'> Sábado de septiemnre 20:00hs </li>    </ul>",
-      "disabled": true,
+      "id": 25,
+      "descripcion": "Paz Martínez nació en San Miguel de Tucumán. Es músico, cantante, autor y compositor, con más de 500 temas de su autoría, grabados por él y por grandes artistas de nivel internacional, tiene ganado un lugar de privilegio en el gusto popular, avalando esto con Discos de Oro, de Platino y Doble Platino. Con premios otorgados como autor y compositor en Argentina y Estados Unidos, no es novedad el talento de este creador a quien le grabaron canciones: Paloma San Basilio , Gilberto Santa Rosa , Maria Marta Serra Lima , Manuela Bravo , Estela Raval , Lupita Dalesio, Valeria Lynch , Miranda, Madonna, que a la hora de grabar en español, convocó a Paz Martínez para que escriba la versión de “You´ll See” que quedó registrada como “Verás”. <br /> El cantante español Dyango ha grabado sus temas y la historia se repite con su hijo Jordi que se colocó en los primeros puestos en España, Estados Unidos y Latinoamérica con su “Desesperadamente Enamorado”. Resulta sobresaliente el hecho de que uno de los más grandes compositores de habla hispana, Armando Manzanero , haya grabado y tenga en su repertorio “Te Propongo Algo”, una canción de Paz Martínez, porque esto afirma una vez más lo importante que es nuestro autor y compositor en el mundo de la música.<br /> Este Sábado 23 de Septiembre llega por primera vez al Teatro Gran Rex.<br /> <br />   <strong>  Fechas:  </strong> <ul>     <li style='list-style: inside;'> Sábado 23 de septiembre 20:30hs </li>    </ul>",
+      "disabled": false,
       "display": "block",
-      "estado": "próximamente",
+      "estado": "disponible",
+      "fechas": [
+        {
+          "dia": "sábado 23 de septiembre",
+          "hora": "20:30hs",
+          "start": "2023-09-23T20:30:00",
+          "end": "",
+          "estadoCalendario": "disponible"
+        }
+      ],
+      "informacionGeneral": "Está prohibido el ingreso a la sala a menores de 1 año. A partir de los 3 años de edad se debe abonar la entrada.<br /><br />  El Teatro Gran Rex informa que los eventos que se realizan en esta sala podrían ser fotografiados o filmados para su posterior difusión en medios y /o campañas publicitarias. <br /> El ingreso al establecimiento implica la autorización a la Productora y a Cordero, Cavallo y Lautaret S.A. a utilizar el contenido filmado y /o fotografiado y el uso de imagen personal sin compensación alguna. <br />    <br />    <strong> Entradas en venta </strong> <br />    En las boleterias del Teatro Gran Rex (Av. Corrientes 857 - Lunes a Sábado de 12 a 18 hs. Feriados Cerrado.) <br /> <br />    <strong>Personas con movilidad reducida</strong> <br />    Las sillas de ruedas se ubican en el espacio habilitado para las    mismas detrás de la fila 25 del sector derecho de la Platea. En    todos los casos abonan la entrada. Dichas localidades deben ser    adquiridas solo en la boleteria del Teatro, presentando certificado de discapacidad. Al momento de la compra, abonan el    ticket de menor valor disponible.",
+
+      "keywords": [
+        "paz martinez",
+        "paz martínez",
+        "pas martines",
+        "paz martines",
+        "pas martínez",
+        "septiembre"
+      ],
+      "links": {
+        "href": "https://www.tuentrada.com/eventos/detalle/Paz-Martinez/230057131852",
+
+        "botones": [
+          {
+            "id": 1,
+            "name": "comprar",
+            "href": "https://www.tuentrada.com/eventos/detalle/Paz-Martinez/230057131852"
+          },
+          {
+            "id": 2,
+            "name": "volver",
+            "href": "/"
+          }
+        ],
+        "path": "/paz-martinez"
+      },
+      "imagenes": {
+        "evento": "/storage/imagenes/paz-martinez.webp",
+        "plano": "/storage/imagenes/planos/tue1.webp"
+      },
+      "nombre": "paz martinez",
+      "nombrePath": "paz-martinez",
+      "ubicaciones": [
+        {
+          "id": 1,
+          "nombre": "PLATEA 1",
+          "color": "#970513",
+          "precio": "$18.000"
+        },
+        {
+          "id": 2,
+          "nombre": "PLATEA 2",
+          "color": "#79C8C3",
+          "precio": "$17.000"
+        },
+        {
+          "id": 3,
+          "nombre": "PLATEA 3",
+          "color": "#EDB63B",
+          "precio": "$15.500"
+        },
+        {
+          "id": 4,
+          "nombre": "PLATEA 4",
+          "color": "#86AA4D",
+          "precio": "$13.500"
+        },
+        {
+          "id": 5,
+          "nombre": "PLATEA 5",
+          "color": "#052748",
+          "precio": "$12.500"
+        },
+        {
+          "id": 6,
+          "nombre": "SUPER PULLMAN 1",
+          "color": "#035F89",
+          "precio": "$16.500"
+        },
+        {
+          "id": 7,
+          "nombre": "SUPER PULLMAN 2",
+          "color": "#A9167D",
+          "precio": "$14.500"
+        },
+        {
+          "id": 8,
+          "nombre": "PULLMAN 1",
+          "color": "#EE6E08",
+          "precio": "$14.000"
+        },
+        {
+          "id": 9,
+          "nombre": "PULLMAN 2",
+          "color": "#037366",
+          "precio": "$12.000"
+        },
+        {
+          "id": 10,
+          "nombre": "PULLMAN 3",
+          "color": "#D97B77",
+          "precio": "$10.000"
+        },
+        {
+          "id": 11,
+          "nombre": "PULLMAN 4",
+          "color": "#AF0657",
+          "precio": "$8.000"
+        },
+        {
+          "id": 12,
+          "nombre": "PULLMAN 5",
+          "color": "#5271FF",
+          "precio": "$6.000"
+        }
+      ]
+    },
+    {
+      "id": 23,
+      "descripcion": "Fabiana Cantilo se presentará el día 30 de Septiembre en el Teatro Gran Rex.  <br /> <br />    Está prohibido el ingreso a la sala a menores de 1 año. A partir de los 3 años de edad se debe abonar la entrada.<br /><br />    <strong>  Fechas:  </strong>    <ul>     <li style='list-style: inside;'> Sábado de 30 septiembre 20:30hs </li>    </ul>",
+      "disabled": false,
+      "display": "block",
+      "estado": "disponible",
       "fechas": [
         {
           "dia": "sábado 30 de septiembre",
           "hora": "20:30hs",
           "start": "2023-09-30T20:30:00",
           "end": "",
-          "estadoCalendario": "próximamente"
+          "estadoCalendario": "disponible"
         }
       ],
       "informacionGeneral": "El Teatro Gran Rex informa que los eventos que se realizan en esta sala podrían ser fotografiados o filmados para su posterior difusión en medios y /o campañas publicitarias. <br /> El ingreso al establecimiento implica la autorización a la Productora y a Cordero, Cavallo y Lautaret S.A. a utilizar el contenido filmado y /o fotografiado y el uso de imagen personal sin compensación alguna. <br />    <br />    <strong> Entradas en venta </strong> <br />    En las boleterias del Teatro Gran Rex (Av. Corrientes 857 - Lunes a Sábado de 12 a 18 hs. Feriados Cerrado.) <br /> <br />    <strong>Personas con movilidad reducida</strong> <br />    Las sillas de ruedas se ubican en el espacio habilitado para las    mismas detrás de la fila 25 del sector derecho de la Platea. En    todos los casos abonan la entrada. Dichas localidades deben ser    adquiridas solo en la boleteria del Teatro, presentando certificado de discapacidad. Al momento de la compra, abonan el    ticket de menor valor disponible.",
@@ -1995,16 +1989,16 @@
     {
       "id": 21,
       "descripcion": "<strong> El Polaco </strong> regresa a la <strong> Calle Corrientes</strong>  en el marco de la GRAN celebración por sus más de 17 años de carrera como solista. Haremos un recorrido por toda su trayectoria y sus mejores éxitos como En este mundo, Deja de llorar, Por qué te fuiste, Ya no quiero verte, su último lanzamiento junto a La China Suarez que alcanzó puestos <strong> número 1 en tendencias </strong> y ya lleva más de <strong> 78M</strong>  de reproducciones. <br />    <br />    No te podés perder EL POLACO, el 06 de diciembre una noche INOLVIDABLE En el Teatro Gran Rex. <br />    <br />    LINK VIDEO: <a href='https://www.youtube.com/watch?v=OVa3Wm-bJJo&feature=youtu.be'> No te confundas El Polaco - Los Totora</a><br /> <br />    Está prohibido el ingreso a la sala a menores de 1 año. A partir de los 3 años de edad se debe abonar la entrada.<br /><br />     <strong>  Fechas:  </strong>    <ul>    <li style='list-style: inside;'>     Miércoles 6 de diciembre 20:30hs    </li>    </ul>",
-      "disabled": true,
+      "disabled": false,
       "display": "block",
-      "estado": "próximamente",
+      "estado": "disponible",
       "fechas": [
         {
           "dia": "miércoles 6 de diciembre",
           "hora": "20:30hs",
           "start": "2023-12-06T20:30:00",
           "end": "",
-          "estadoCalendario": "próximamente"
+          "estadoCalendario": "disponible"
         }
       ],
       "informacionGeneral": "El Teatro Gran Rex informa que los eventos que se realizan en esta sala podrían ser fotografiados o filmados para su posterior difusión en medios y /o campañas publicitarias. <br /> El ingreso al establecimiento implica la autorización a la Productora y a Cordero, Cavallo y Lautaret S.A. a utilizar el contenido filmado y /o fotografiado y el uso de imagen personal sin compensación alguna. <br />    <br />    <strong> Entradas en venta </strong> <br />    En las boleterias del Teatro Gran Rex (Av. Corrientes 857 - Lunes a Sábado de 12 a 18 hs. Feriados Cerrado.) <br /> <br />    <strong>Personas con movilidad reducida</strong> <br />    Las sillas de ruedas se ubican en el espacio habilitado para las    mismas detrás de la fila 25 del sector derecho de la Platea. En    todos los casos abonan la entrada. Dichas localidades deben ser    adquiridas solo en la boleteria del Teatro, presentando certificado de discapacidad. Al momento de la compra, abonan el    ticket de menor valor disponible.",

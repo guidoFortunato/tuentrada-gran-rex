@@ -10,10 +10,6 @@ export const Navbar = () => {
   const [isNavCollapsed, setIsNavCollapsed] = useState(true);
   const handleNavCollapse = () => setIsNavCollapsed(!isNavCollapsed);
 
-  // if (isLoadingNavbar) {
-  //   return <Spinner />;
-  // }
-
   if (dataInfoGeneral.length === 0) {
     return <Spinner />;
   }
@@ -25,7 +21,7 @@ export const Navbar = () => {
           <img
             src={dataInfoGeneral?.logo}
             alt={dataInfoGeneral?.altLogo}
-            style={{ width: "75px" }}
+            style={{ width: "180px" }}
           />
         </Link>
 

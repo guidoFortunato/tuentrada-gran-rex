@@ -1,15 +1,15 @@
 import { useContext, useEffect, useState } from "react";
-import { EventosContext } from "../context/EventosProvider";
+// import { EventosContext } from "../context/EventosProvider";
 import { useLocation, useNavigate, useParams } from "react-router-dom";
 import { Spinner } from "./";
 
-export const FormBusqueda = ({ placeholder = "Buscar Evento", data, listaEventosBusqueda, setListaEventosBusqueda }) => {
-  const { agregarEvento } = useContext( EventosContext );
+export const FormBusqueda = () => {
+
   const [evento, setEvento] = useState("");
-  let { name } = useParams();
+  // let { name } = useParams();
   let navigate = useNavigate();
   const { pathname } = useLocation();
-  const busquedaEventos = pathname.split("/")[1] || "/";
+  // const busquedaEventos = pathname.split("/")[1] || "/";
 
   localStorage.setItem("lastPath", pathname);
 
@@ -23,19 +23,16 @@ export const FormBusqueda = ({ placeholder = "Buscar Evento", data, listaEventos
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (evento.length === 0) return; // sweet alert
-    const eventos = agregarEvento(evento, data);
-    setListaEventosBusqueda(eventos)
+    if (evento.length === 0) return; // sweet alert    
     navigate(`/busqueda-eventos/${evento}`);
     handleEvento("");
   };
 
-  useEffect(() => {
-    if (busquedaEventos == "busqueda-eventos") {
-      const eventos = agregarEvento(evento, data);
-      setListaEventosBusqueda(eventos)
-    }
-  }, [name]);
+  // useEffect(() => {
+  //   if (busquedaEventos == "busqueda-eventos") {
+  //     agregarEvento(evento, data);
+  //   }
+  // }, [name]);
 
   // if (isLoadingNavbar) {
   //   return <Spinner />;
@@ -49,7 +46,7 @@ export const FormBusqueda = ({ placeholder = "Buscar Evento", data, listaEventos
       <div className="container-input form-buscar">
         <input
           className="border-0 form-label"
-          placeholder={placeholder}
+          placeholder={"Buscar evento"}
           value={evento}
           onChange={(e) => handleEvento(e.target.value)}
         />

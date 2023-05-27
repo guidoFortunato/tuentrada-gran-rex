@@ -8,7 +8,7 @@ export const EventosDisponibles = ({ title, data }) => {
           <h1 className="titulo-principal animate__animated animate__fadeInDown animate__fast	 ">
             <strong>{title}</strong>
           </h1>
-          <FormBusqueda placeholder={"Buscar evento"} />
+          <FormBusqueda />
         </div>
       </header>
       <main>

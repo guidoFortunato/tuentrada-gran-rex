@@ -1,11 +1,11 @@
 import { useContext, useEffect, useRef, useState } from "react";
-import { useNavigate, useParams } from "react-router-dom";
+import { Navigate, useNavigate, useParams } from "react-router-dom";
 import Modal from "react-modal";
 
 import { EventosContext } from "../context/EventosProvider";
 // import { getEnvVariables, useFetch } from "../helpers";
 import { Spinner, TablaPrecios } from "./";
-import { getDataEvent } from "../helpers";
+import { getEnvVariables, useFetchNew } from "../helpers";
 
 import DOMPurify from "dompurify";
 
@@ -15,43 +15,19 @@ import "../css/detalleevento.css";
 // const urlTestEventos = "/src/json/eventosTest.json";
 // const { VITE_JSON_EVENTOS } = getEnvVariables();
 
+const { VITE_API_EVENTOS, VITE_EMAIL, VITE_PASS } = getEnvVariables();
+
 export const DetalleEvento = () => {
-  const { isLoadingEventos, idVenue } = useContext(EventosContext);
-  // const { data: dataEventos, isLoading: isLoadingEventos } = useFetch(urlTestEventos);
-  const [evento, setEvento] = useState(null);
+  const { idVenue, dataInfoGeneral } = useContext(EventosContext);
+  const { url } = dataInfoGeneral;
+  const { id } = useParams();
+  const { data, isLoading } = useFetchNew( VITE_API_EVENTOS + idVenue + "/details/" + id, VITE_EMAIL, VITE_PASS );
+  // console.log({ data, isLoading });
+
+  // const [evento, setEvento] = useState(null);
   const [modalIsOpen, setModalIsOpen] = useState(false);
   const modalRef = useRef(null);
   const navigate = useNavigate();
-  const { name, id } = useParams();
-
-  /**
-   *
-   * TODO: falta que si cambio la url a mano y no coincide el name con el id, que me redirija al home
-   *
-   */
-
-  console.log({ evento });
-
-  useEffect(() => {
-    if (idVenue !== "") {
-      const getDataEvents = async () => {
-        const data = await getDataEvent(idVenue, id);
-        setEvento(data);
-      };
-      getDataEvents();
-    }
-  }, [idVenue, id]);
-
-  // useEffect(() => {
-  //   if (dataEventos !== null) {
-  //     const data = dataEventos.find( (item) => item.nombrePath == name  );
-  //     if (data) {
-  //       setEvento(data);
-  //     } else {
-  //       navigate("/");
-  //     }
-  //   }
-  // }, [name, dataEventos]);
 
   const lastPath = localStorage.getItem("lastPath") || "/";
 
@@ -73,9 +49,13 @@ export const DetalleEvento = () => {
     setModalIsOpen(false);
   };
 
-  if (evento === null) {
-    return <Spinner />;
-  }
+  if (isLoading) return <Spinner />;
+
+  if (data === null) return <Spinner />;
+
+  if (!isLoading && data === undefined) return <Navigate to="/" />;
+
+  if (dataInfoGeneral.length === 0) return <Spinner />;
 
   return (
     <>
@@ -85,13 +65,13 @@ export const DetalleEvento = () => {
         }
         // ref={eventDetailRef}
       >
-        <h2 className="titleDetalle">{evento?.name.toUpperCase()}</h2>
+        <h2 className="titleDetalle">{data?.name.toUpperCase()}</h2>
         <hr />
         <div className="row">
           <div className="col-12 col-lg-6 mb-5 mb-lg-0 text-center">
             <img
-              src={evento?.image}
-              alt={`imagen ${evento?.name}`}
+              src={data?.image}
+              alt={`imagen ${data?.name}`}
               className="img-fluid"
             />
           </div>
@@ -100,19 +80,25 @@ export const DetalleEvento = () => {
             <p
               className="animate_animated animate_fadeIn"
               dangerouslySetInnerHTML={{
-                __html: DOMPurify.sanitize(evento?.extraInformation.detalle),
+                __html: DOMPurify.sanitize(data?.extraInformation.detalle),
               }}
             ></p>
 
             <div className="d-flex justify-content-center flex-column align-items-center mt-4 ">
               <div className="text-center mb-3">
-                <div
-                  className="btn-general"
-                  onClick={returnLastPath}
-                  style={{ fontSize: "1.6rem", width: "150px" }}
+                <a
+                  href={url}
+                  className=" text-center"
+                  target="_blank"
+                  rel="noreferrer"
                 >
-                 Comprar
-                </div>
+                  <div
+                    className="btn-general mb-3"
+                    style={{ fontSize: "1.6rem", width: "150px" }}
+                  >
+                    Comprar
+                  </div>
+                </a>
               </div>
 
               <div className="text-center">
@@ -124,39 +110,6 @@ export const DetalleEvento = () => {
                   Volver
                 </div>
               </div>
-
-              {/* {evento?.links.botones.map((item) => {
-                if (item.name !== "volver") {
-                  return (
-                    <a
-                      href={item.href}
-                      className=" text-center"
-                      target="_blank"
-                      rel="noreferrer"
-                      key={item.id}
-                    >
-                      <div
-                        className="btn-general mb-3"
-                        style={{ fontSize: "1.6rem", width: "150px" }}
-                      >
-                        {item.name.charAt(0).toUpperCase() + item.name.slice(1).toLowerCase()}
-                      </div>
-                    </a>
-                  );
-                } else {
-                  return (
-                    <div className="text-center" key={item.id}>
-                      <div
-                        className="btn-general"
-                        onClick={returnLastPath}
-                        style={{ fontSize: "1.6rem", width: "150px" }}
-                      >
-                        {item.name.charAt(0).toUpperCase() + item.name.slice(1).toLowerCase()}
-                      </div>
-                    </div>
-                  );
-                }
-              })} */}
             </div>
           </div>
 
@@ -174,9 +127,7 @@ export const DetalleEvento = () => {
             <p
               className="animate_animated animate_fadeIn"
               dangerouslySetInnerHTML={{
-                __html: DOMPurify.sanitize(
-                  evento?.extraInformation.infoGeneral
-                ),
+                __html: DOMPurify.sanitize(data?.extraInformation.infoGeneral),
               }}
             ></p>
           </div>
@@ -195,7 +146,7 @@ export const DetalleEvento = () => {
           <div className="row justify-content-center">
             <div className="col-12 col-lg-8 my-5">
               {/* <hr /> */}
-              {/* <TablaPrecios ubicaciones={evento?.ubicaciones} /> */}
+              <TablaPrecios precios={data?.performances[0].prices} />
             </div>
             {/* <div className="col-12 col-lg-4 my-5 text-center">
               <img

@@ -1,6 +1,7 @@
 import "../css/tablaprecios.css";
 
-export const TablaPrecios = ({ ubicaciones }) => {
+export const TablaPrecios = ({ precios }) => {
+  // console.log(precios)
   return (
     <table className="table mt-4" style={{backgroundColor:"white", fontSize:"12px"}} >
       <thead className="cabecera-tabla">
@@ -14,17 +15,17 @@ export const TablaPrecios = ({ ubicaciones }) => {
         </tr>
       </thead>
       <tbody>
-        {ubicaciones.map((item) => (
+        {precios.map((item) => (
           <tr key={item.id}>
             <td className="fw-bold">
               <span
-                style={{ background: `${item.color}` }}
+                style={{ background: `#${item.seatCategory.bgColor}` }}
                 className="cuadrado-ubicacion me-2"
               ></span>
-              <span>{item.nombre}</span>
+              <span>{item.seatCategory.name}</span>
             </td>
             <td className="fw-bold">
-              <span>{item.precio}</span>
+              <span>{item.amount}</span>
             </td>
           </tr>
         ))}
