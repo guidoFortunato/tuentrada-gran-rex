@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 
 export const EventAvailable = ({ linkEvento, img, title }) => {
+  // console.log({linkEvento})
   return (
     <Link to={linkEvento} className={"linkEvento"}>
       <img
