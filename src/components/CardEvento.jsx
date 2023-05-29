@@ -1,12 +1,9 @@
 import { useEffect, useState } from "react";
-
-import { Spinner } from "./Spinner";
-
 import { EventAvailable, EventNotAvailable, EventNotForSale } from "./disponibility";
 
 import "../css/cardevento.css";
 
-export const CardEvento = ({ img = "", title = "", linkEvento = "", disponibility = [], }) => {
+export const CardEvento = ({ img = "", title = "", linkEvento = "", disponibility = [], data }) => {
   // const { dataNavbar, isLoadingNavbar } = useContext(EventosContext);
   const [availabilityGood, setAvailabilityGood] = useState(false);
   const [availabilityLimited, setAvailabilityLimited] = useState(false);
@@ -14,7 +11,7 @@ export const CardEvento = ({ img = "", title = "", linkEvento = "", disponibilit
   const [reasonCanceled, setReasonCanceled] = useState(false);
   const [reasonSuspended, setReasonSuspended] = useState(false);
   const [reasonNotAvailable, setReasonNotAvailable] = useState(false);
-
+  // console.log({data})
 
   useEffect(() => {
     // console.log(disponibility)

@@ -1,15 +1,10 @@
 import { useContext, useEffect } from "react";
-// import { useFetch } from "../helpers";
 import { EventosContext } from "../context/EventosProvider";
 import { Spinner } from "../components";
 
 import DOMPurify from "dompurify";
 
-// const urlBases = "/storage/json/bases.json";
-// const urlTestBases = "/src/json/basesTest.json";
-
 export const BasesCondiciones = () => {
-  // const { data: dataBases, isLoading: isLoadingBases } = useFetch(urlBases);
   const { dataInfoGeneral } = useContext(EventosContext);
 
   useEffect(() => {

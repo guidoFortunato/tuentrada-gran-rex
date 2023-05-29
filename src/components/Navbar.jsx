@@ -10,9 +10,7 @@ export const Navbar = () => {
   const [isNavCollapsed, setIsNavCollapsed] = useState(true);
   const handleNavCollapse = () => setIsNavCollapsed(!isNavCollapsed);
 
-  if (dataInfoGeneral.length === 0) {
-    return <Spinner />;
-  }
+  if (dataInfoGeneral.length === 0) return <Spinner />;
 
   return (
     <nav className="navbar navbar-dark navbar-expand-lg color-navbar sticky-top animate__animated animate__fadeIn animate__faster">
@@ -47,20 +45,17 @@ export const Navbar = () => {
           id="navbarNav"
         >
           <ul className="navbar-nav ms-auto" style={{ fontSize: "18px" }}>
-            {dataInfoGeneral?.pages.map(
-              (item) =>
-                (
-                  <li className="nav-item item-nav" key={item.id}>
-                    <Link
-                      className="nav-link border-navbar-color border-navbar"
-                      to={item.path}
-                      onClick={handleNavCollapse}
-                    >
-                      <span className="size-item-nav">{item.type.name}</span>
-                    </Link>
-                  </li>
-                )
-            )}
+            {dataInfoGeneral?.pages.map((item) => (
+              <li className="nav-item item-nav" key={item.id}>
+                <Link
+                  className="nav-link border-navbar-color border-navbar"
+                  to={item.path}
+                  onClick={handleNavCollapse}
+                >
+                  <span className="size-item-nav">{item.type.name}</span>
+                </Link>
+              </li>
+            ))}
           </ul>
           <div className="d-flex flex-column ms-lg-auto me-lg-4">
             <div>

@@ -6,12 +6,7 @@ import DOMPurify from "dompurify";
 
 import "../css/comollegar.css";
 
-// const urlLlegar = "/storage/json/comoLlegar.json";
-// const urlTestLlegar = "/src/json/comoLlegarTest.json";
-// const { VITE_JSON_LLEGAR } = getEnvVariables();
-
 export const ComoLlegar = () => {
-  // const { data: dataLlegar } = useFetch( urlTestLlegar );
   const { dataInfoGeneral } = useContext(EventosContext);
 
   useEffect(() => {
@@ -46,20 +41,20 @@ export const ComoLlegar = () => {
               ></p>
             </div>
           </article>
-          {/* <article className="col-12 col-lg-6 ">
+          <article className="col-12 col-lg-6 ">
             <div className="contenedor-map">
               <iframe
                 style={{
                   border: "0",
                   boxShadow: "5px 5px 6px 1px rgb(227, 227, 227)",
                 }}
-                src={dataInfoGeneral.pages[3].text}
+                src={dataInfoGeneral.urlGoogleMaps}
                 allowFullScreen=""
                 title="mapa gran rex"
                 className="iframe"
               ></iframe>
             </div>
-          </article> */}
+          </article>
         </div>
       </div>
     </>

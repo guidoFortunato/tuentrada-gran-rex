@@ -1,17 +1,18 @@
-import { useContext, useEffect } from "react";
+import { useContext, useEffect, useState } from "react";
 import { EventosContext } from "../context/EventosProvider";
-import { useParams } from "react-router-dom";
+import { Navigate, useParams } from "react-router-dom";
 
 import { Link } from "react-router-dom";
 import { CardEvento, FormBusqueda, Spinner } from "../components";
-import { getEnvVariables, useFetchNew } from "../helpers";
+import { getData, getEnvVariables } from "../helpers";
 
 const { VITE_API_EVENTOS, VITE_EMAIL, VITE_PASS } = getEnvVariables();
 
 export const BusquedaEventos = () => {
+  const [data, setData] = useState(null);
   const { idVenue } = useContext(EventosContext);
   let { name } = useParams();
-  const { data, isLoading } = useFetchNew( VITE_API_EVENTOS + idVenue + "/search/" + name, VITE_EMAIL, VITE_PASS );
+  // const { data, isLoading } = useFetchNew( VITE_API_EVENTOS + idVenue + "/search/" + name, VITE_EMAIL, VITE_PASS );
   // console.log({data, isLoading})
 
   useEffect(() => {
@@ -20,12 +21,22 @@ export const BusquedaEventos = () => {
     }, 100);
   }, []);
 
-  if (isLoading) {
-    return <Spinner />;
-  }
-  if (data === null || data === undefined) {
-    return <Spinner />;
-  }
+  useEffect(() => {
+    if (idVenue !== "") {
+      const getInfo = async () => {
+        const data = await getData(VITE_API_EVENTOS + idVenue + "/search/" + name, VITE_EMAIL, VITE_PASS );
+        console.log({data})
+        setData(data);
+      };
+      getInfo();
+    }
+  }, [idVenue, name]);
+
+
+  if (data === null) return <Spinner />;
+  
+  if (data === undefined) return <Navigate to="/" />;
+
 
   return (
     <>
@@ -50,6 +61,7 @@ export const BusquedaEventos = () => {
                 disabled={item.disabled}
                 reason={item.reason}
                 disponibility={item.disponibility}
+                data={item}
               />
             ))
           ) : (

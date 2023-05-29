@@ -1,16 +1,9 @@
-import { CardEvento, FormBusqueda } from "./";
+import { CardEvento } from "./";
 
-export const EventosDisponibles = ({ title, data }) => {
+export const EventosDisponibles = ({ data }) => {
   return (
     <>
-      <header className="animate__animated animate__fadeIn animate__fast">
-        <div className="header-home">
-          <h1 className="titulo-principal animate__animated animate__fadeInDown animate__fast	 ">
-            <strong>{title}</strong>
-          </h1>
-          <FormBusqueda />
-        </div>
-      </header>
+     
       <main>
         <div className="container">
           <div className="row animate__animated animate__fadeIn animate__fast	 ">
@@ -50,6 +43,7 @@ export const EventosDisponibles = ({ title, data }) => {
                 disabled={evento.disabled}
                 reason={evento.reason}
                 disponibility={evento.disponibility}
+                data={evento}
               />
             ))}
           </div>

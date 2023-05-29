@@ -1,53 +1,19 @@
-// import { GaleriaHistoria } from "../components";
 import { useContext, useEffect } from "react";
 import { EventosContext } from "../context/EventosProvider";
-// import { getEnvVariables, useFetch } from "../helpers";
 import { ImagenHistoria, Spinner } from "../components";
 import DOMPurify from "dompurify";
 
 import "../css/historia.css";
 
-// const urlHistoria = "/storage/json/historia.json";
-// const urlTestHistoria = "/src/json/historiaTest.json";
-// const { VITE_JSON_HISTORIA } = getEnvVariables();
-
 export const Historia = () => {
   const { dataInfoGeneral } = useContext(EventosContext);
-
-  // const [dataHistoria, setDataHistoria] = useState(null);
-  // const [isLoadingHistoria, setIsLoadingHistoria] = useState(true);
-
-  // useEffect(() => {
-  //   if (localStorage.getItem('dataHistoria')) {
-  //     setDataHistoria(JSON.parse(localStorage.getItem('dataHistoria')))
-  //     setIsLoadingHistoria(false)
-  //   } else {
-  //     fetch(urlTestHistoria)
-  //       .then(response => response.json())
-  //       .then(data => {
-  //         localStorage.setItem('dataHistoria', JSON.stringify(data))
-  //         console.log(data)
-  //         setDataHistoria(data)
-  //         setIsLoadingHistoria(false)
-  //       })
-  //       .catch(error => {
-  //         throw new Error(error)
-  //       })
-  //   }
-  // }, [])
+  // console.log({dataInfoGeneral})
 
   useEffect(() => {
     setTimeout(() => {
       window.scrollTo(0, 0);
     }, 100);
   }, []);
-
-  // if (isLoadingNavbar) {
-  //   return <Spinner />;
-  // }
-  // if (isLoadingHistoria) {
-  //   return <Spinner />;
-  // }
 
   if (dataInfoGeneral.length === 0) {
     return <Spinner />;
@@ -75,8 +41,8 @@ export const Historia = () => {
             ></p>
           </div>
 
-          {( dataInfoGeneral.pages[2].images &&
-            dataInfoGeneral.pages[2].images[0].image !== "") && (
+          {dataInfoGeneral.pages[2].images &&
+            dataInfoGeneral.pages[2].images[0].image !== "" && (
               <>
                 <div className="col-12 text-center mt-3 ">
                   <h2

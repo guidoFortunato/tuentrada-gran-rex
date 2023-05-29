@@ -1,9 +1,9 @@
-import { useContext, useEffect } from "react";
-import { useLocation, useNavigate } from "react-router-dom";
+import { useContext, useEffect, useState } from "react";
+import { Navigate, useLocation, useNavigate } from "react-router-dom";
 
 import { EventosContext } from "../context/EventosProvider";
-import { Spinner } from "../components";
-import { getEnvVariables, useFetchNew } from "../helpers";
+import { EventosNoDisponibles, Spinner } from "../components";
+import { getData, getEnvVariables } from "../helpers";
 
 import FullCalendar from "@fullcalendar/react"; // must go before plugins
 import dayGridPlugin from "@fullcalendar/daygrid";
@@ -17,6 +17,9 @@ import "tippy.js/dist/tippy.css";
 import "tippy.js/animations/scale.css";
 
 import "../css/calendario.css";
+
+const { VITE_API_INFO_GENERAL, VITE_EMAIL, VITE_PASS } = getEnvVariables();
+const newEvents = [];
 
 const month = [
   "Enero",
@@ -66,16 +69,12 @@ const eventTimeFormat = {
   minute: "2-digit",
 };
 
-const { VITE_API_INFO_GENERAL, VITE_EMAIL, VITE_PASS } = getEnvVariables();
-
 export const Calendario = () => {
   const { idVenue, dataInfoGeneral } = useContext(EventosContext);
-
-  const { data, isLoading } = useFetchNew( VITE_API_INFO_GENERAL + idVenue + "/calendar", VITE_EMAIL, VITE_PASS );
-  // console.log({data, isLoading});
+  const [data, setData] = useState(null);
   const navigate = useNavigate();
   const { pathname } = useLocation();
-  const newEvents = [];
+  // console.log({data});
 
   localStorage.setItem("lastPath", pathname);
 
@@ -149,12 +148,19 @@ export const Calendario = () => {
     }, 100);
   }, []);
 
-  if (isLoading) return <Spinner />;
+  useEffect(() => {
+    if (idVenue !== "") {
+      const getInfo = async () => {
+        const data = await getData( VITE_API_INFO_GENERAL + idVenue + "/calendar", VITE_EMAIL, VITE_PASS);
+        setData(data);
+      };
+      getInfo();
+    }
+  }, [idVenue]);
 
-  if (data === null || data === undefined ) return <Spinner />; 
-   
+  if (data === null) return <Spinner />;
+
   if (dataInfoGeneral.length === 0) return <Spinner />;
-
 
   return (
     <>
@@ -180,15 +186,9 @@ export const Calendario = () => {
               eventDidMount={handleEventMount}
               events={newEvents}
               eventTimeFormat={eventTimeFormat}
-              headerToolbar={
-                window.innerWidth < 1023
-                  ? headerToolbarOptionsResponsive
-                  : headerToolbarOptionsDesktop
-              }
+              headerToolbar={window.innerWidth < 1023? headerToolbarOptionsResponsive: headerToolbarOptionsDesktop }
               height={"70vh"}
-              initialView={
-                window.innerWidth < 1023 ? "listMonth" : "dayGridMonth"
-              }
+              initialView={window.innerWidth < 1023 ? "listMonth" : "dayGridMonth"}
               locale={"es"}
               noEventsContent={"No hay eventos disponibles"}
               plugins={fullPlugins}

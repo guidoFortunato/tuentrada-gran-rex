@@ -1,11 +1,10 @@
 import { useContext, useEffect, useRef, useState } from "react";
 import { Navigate, useNavigate, useParams } from "react-router-dom";
-import Modal from "react-modal";
+// import Modal from "react-modal";
 
 import { EventosContext } from "../context/EventosProvider";
-// import { getEnvVariables, useFetch } from "../helpers";
 import { Spinner, TablaPrecios } from "./";
-import { getEnvVariables, useFetchNew } from "../helpers";
+import { getData, getEnvVariables } from "../helpers";
 
 import DOMPurify from "dompurify";
 
@@ -18,10 +17,11 @@ import "../css/detalleevento.css";
 const { VITE_API_EVENTOS, VITE_EMAIL, VITE_PASS } = getEnvVariables();
 
 export const DetalleEvento = () => {
+  const [data, setData] = useState(null);
   const { idVenue, dataInfoGeneral } = useContext(EventosContext);
   const { url } = dataInfoGeneral;
   const { id } = useParams();
-  const { data, isLoading } = useFetchNew( VITE_API_EVENTOS + idVenue + "/details/" + id, VITE_EMAIL, VITE_PASS );
+  // const { data, isLoading } = useFetchNew( VITE_API_EVENTOS + idVenue + "/details/" + id, VITE_EMAIL, VITE_PASS );
   // console.log({ data, isLoading });
 
   // const [evento, setEvento] = useState(null);
@@ -48,14 +48,25 @@ export const DetalleEvento = () => {
   const handleCloseModal = () => {
     setModalIsOpen(false);
   };
-
-  if (isLoading) return <Spinner />;
+ 
+  useEffect(() => {
+    if (idVenue !== "") {
+      const getInfo = async () => {
+        const data = await getData(VITE_API_EVENTOS + idVenue + "/details/" + id, VITE_EMAIL, VITE_PASS );
+        setData(data);
+      };
+      getInfo();
+    }
+  }, [idVenue, id]);
 
   if (data === null) return <Spinner />;
 
-  if (!isLoading && data === undefined) return <Navigate to="/" />;
-
   if (dataInfoGeneral.length === 0) return <Spinner />;
+  
+  if (data === undefined) return <Navigate to="/" />;  
+
+  if (data.length === 0) return <Navigate to="/" />;
+
 
   return (
     <>
@@ -87,7 +98,7 @@ export const DetalleEvento = () => {
             <div className="d-flex justify-content-center flex-column align-items-center mt-4 ">
               <div className="text-center mb-3">
                 <a
-                  href={url}
+                  href={url + data.stxId}
                   className=" text-center"
                   target="_blank"
                   rel="noreferrer"

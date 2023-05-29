@@ -1,16 +1,6 @@
-import { FormBusqueda } from "./FormBusqueda";
-
-export const EventosNoDisponibles = ({ title }) => {
+export const EventosNoDisponibles = () => {
   return (
     <>
-      <header className="animate__animated animate__fadeIn animate__fast">
-        <div className="header-home">
-          <h1 className="titulo-principal animate__animated animate__fadeInDown animate__fast	 ">
-            <strong>{title}</strong>
-          </h1>
-          <FormBusqueda placeholder={"Buscar evento"} />
-        </div>
-      </header>
       <main>
         <div className="container">
           <div className="row animate__animated animate__fadeIn animate__fast	 ">

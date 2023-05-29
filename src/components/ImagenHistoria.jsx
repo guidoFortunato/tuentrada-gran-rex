@@ -1,4 +1,4 @@
-export const ImagenHistoria = ({src}) => {
+export const ImagenHistoria = ({ src }) => {
   return (
     <div className="col-12 col-md-6 col-lg-4 col-xl-3 mb-5 p-2 galeria-img">
       <img
