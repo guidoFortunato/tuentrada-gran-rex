@@ -26,6 +26,7 @@ export const Home = () => {
     if (idVenue !== "") {
       const getInfo = async () => {
         const data = await getData( VITE_API_EVENTOS + idVenue, VITE_EMAIL, VITE_PASS);
+        console.log({data})
         setData(data);
       };
       getInfo();

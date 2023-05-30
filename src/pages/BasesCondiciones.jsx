@@ -13,10 +13,8 @@ export const BasesCondiciones = () => {
     }, 100);
   }, []);
 
-  if (dataInfoGeneral.length === 0) {
-    return <Spinner />;
-  }
-
+  if (dataInfoGeneral.length === 0) return <Spinner />;
+  
   return (
     <div className="container">
       <div className="row animate__animated animate__fadeIn animate__fast	">

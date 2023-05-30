@@ -1,7 +1,6 @@
 import { createContext, useEffect, useState } from "react";
-// import { useLocation } from "react-router-dom";
-// import { getEnvVariables, getInfoGeneralLocalStorage, useFetch } from "../helpers";
-import { getInfoGeneral } from "../helpers";
+import { getData, getEnvVariables } from "../helpers";
+const { VITE_API_INFO_GENERAL, VITE_EMAIL, VITE_PASS } = getEnvVariables();
 
 export const EventosContext = createContext();
 
@@ -9,12 +8,16 @@ const eventosGeneral = [];
 
 const EventosProvider = (props) => {
   const [idVenue, setIdVenue] = useState("");
+  const [idProducto, setIdProducto] = useState(null);
   const [dataInfoGeneral, setDataInfoGeneral] = useState(eventosGeneral);
-  // console.log({dataInfoGeneral})
+
+  // const handleIdProducto = (id) => {
+  //   setIdProducto(idProducto)
+  // }
 
   useEffect(() => {
     const getDataInfoGeneral = async () => {
-      const data = await getInfoGeneral("Ituzaingo"); //window.location.hostname
+      const data = await getData(VITE_API_INFO_GENERAL + "Ituzaingo", VITE_EMAIL, VITE_PASS); //window.location.hostname
       setDataInfoGeneral(data);
       setIdVenue(data.physicalConfiguration.id);
     };
@@ -25,7 +28,10 @@ const EventosProvider = (props) => {
     <EventosContext.Provider
       value={{
         dataInfoGeneral,
+        // handleIdProducto,
+        idProducto,
         idVenue,
+        setIdProducto
       }}
     >
       {props.children}

@@ -25,7 +25,7 @@ export const BusquedaEventos = () => {
     if (idVenue !== "") {
       const getInfo = async () => {
         const data = await getData(VITE_API_EVENTOS + idVenue + "/search/" + name, VITE_EMAIL, VITE_PASS );
-        console.log({data})
+        // console.log({data})
         setData(data);
       };
       getInfo();

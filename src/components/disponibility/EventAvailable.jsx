@@ -1,13 +1,16 @@
+import { useContext } from "react";
 import { Link } from "react-router-dom";
+import { EventosContext } from "../../context/EventosProvider";
 
-export const EventAvailable = ({ linkEvento, img, title }) => {
-  // console.log({linkEvento})
+export const EventAvailable = ({ linkEvento, img, title, data }) => {
+  const { setIdProducto } = useContext(EventosContext);
+  
   return (
-    <Link to={linkEvento} className={"linkEvento"}>
+    <Link to={linkEvento} className={"linkEvento"} onClick={()=>setIdProducto(data.id)} >
       <img
         src={img}
         className={"card-img-top card-img-bottom"}
-        alt="img logo"
+        alt={title}
       />
       <div>
         <h5

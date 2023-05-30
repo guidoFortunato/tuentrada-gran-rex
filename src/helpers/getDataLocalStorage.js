@@ -1,17 +1,10 @@
 import { getToken } from ".";
-import { getEnvVariables } from "./getEnvVariables";
 
-const { VITE_API_INFO_GENERAL, VITE_EMAIL, VITE_PASS } = getEnvVariables();
-
-export const getInfoGeneralLocalStorage = async (venue = "Ituzaingo") => {
-  // const { tokenGlobal, handleToken } = useContext(EventosContext);
-  const URL = VITE_API_INFO_GENERAL + venue;
-  const email = VITE_EMAIL;
-  const password = VITE_PASS;
+export const getDataLocalStorage = async (URL, email, password) => {
   const timeNow = Date.now();
   const tokenStorage = localStorage.getItem("tokenStorage");
   const expiresTokenStorage = localStorage.getItem("expiresTokenStorage");
-	console.log('-------------getInfoGeneralLocalStorage----------------')
+	console.log('-------------getDataLocalStorage----------------')
   console.log("timeNow: " + timeNow);
   console.log("expiresTokenStorage: " + expiresTokenStorage);
 

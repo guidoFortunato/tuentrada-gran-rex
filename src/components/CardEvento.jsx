@@ -4,7 +4,6 @@ import { EventAvailable, EventNotAvailable, EventNotForSale } from "./disponibil
 import "../css/cardevento.css";
 
 export const CardEvento = ({ img = "", title = "", linkEvento = "", disponibility = [], data }) => {
-  // const { dataNavbar, isLoadingNavbar } = useContext(EventosContext);
   const [availabilityGood, setAvailabilityGood] = useState(false);
   const [availabilityLimited, setAvailabilityLimited] = useState(false);
   const [reasonSoldOut, setReasonSoldOut] = useState(false);
@@ -48,7 +47,7 @@ export const CardEvento = ({ img = "", title = "", linkEvento = "", disponibilit
     >
       <div className="card" style={{ position: "relative" }}>
         {availabilityGood ? (
-          <EventAvailable linkEvento={linkEvento} img={img} title={title} />
+          <EventAvailable linkEvento={linkEvento} img={img} title={title} data={data}/>
         ) : reasonNotAvailable ? (
           <EventNotAvailable img={img} title={title} />
         ) : 
@@ -67,6 +66,7 @@ export const CardEvento = ({ img = "", title = "", linkEvento = "", disponibilit
             reasonSuspended={reasonSuspended}
             reasonCanceled={reasonCanceled}
             reasonSoldOut={reasonSoldOut}
+            data={data}
           />
         )}
       </div>

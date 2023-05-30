@@ -15,9 +15,7 @@ export const ComoLlegar = () => {
     }, 100);
   }, []);
 
-  if (dataInfoGeneral.length === 0) {
-    return <Spinner />;
-  }
+  if (dataInfoGeneral.length === 0) return <Spinner />;  
 
   return (
     <>

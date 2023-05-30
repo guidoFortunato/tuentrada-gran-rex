@@ -1,8 +1,11 @@
+import { useContext } from "react";
 import { Link } from "react-router-dom"
+import { EventosContext } from "../../context/EventosProvider";
 
-export const EventNotForSale = ({img, title, reasonSoldOut, linkEvento, reasonCanceled, reasonSuspended}) => {
+export const EventNotForSale = ({img, title, reasonSoldOut, linkEvento, reasonCanceled, reasonSuspended, data}) => {
+  const { handleIdProducto } = useContext(EventosContext);
   return (
-    <Link to={linkEvento} className={`${"linkEvento"}`}>
+    <Link to={linkEvento} className={`${"linkEvento"}`} onClick={()=>handleIdProducto(data.id)}>
       <img
         src={img}
         className={`${"card-img-top card-img-bottom"}`}

@@ -10,24 +10,19 @@ import DOMPurify from "dompurify";
 
 import "../css/detalleevento.css";
 
-// const urlEventos = "/storage/json/eventos.json";
-// const urlTestEventos = "/src/json/eventosTest.json";
-// const { VITE_JSON_EVENTOS } = getEnvVariables();
-
 const { VITE_API_EVENTOS, VITE_EMAIL, VITE_PASS } = getEnvVariables();
 
 export const DetalleEvento = () => {
   const [data, setData] = useState(null);
-  const { idVenue, dataInfoGeneral } = useContext(EventosContext);
+  const { idVenue, dataInfoGeneral, idProducto } = useContext(EventosContext);
   const { url } = dataInfoGeneral;
-  const { id } = useParams();
-  // const { data, isLoading } = useFetchNew( VITE_API_EVENTOS + idVenue + "/details/" + id, VITE_EMAIL, VITE_PASS );
-  // console.log({ data, isLoading });
-
-  // const [evento, setEvento] = useState(null);
+  const { name, id } = useParams();
   const [modalIsOpen, setModalIsOpen] = useState(false);
   const modalRef = useRef(null);
   const navigate = useNavigate();
+  // console.log({ data });
+  // console.log({name})
+  console.log({idProducto})
 
   const lastPath = localStorage.getItem("lastPath") || "/";
 
@@ -53,11 +48,12 @@ export const DetalleEvento = () => {
     if (idVenue !== "") {
       const getInfo = async () => {
         const data = await getData(VITE_API_EVENTOS + idVenue + "/details/" + id, VITE_EMAIL, VITE_PASS );
+        console.log({data})
         setData(data);
       };
       getInfo();
     }
-  }, [idVenue, id]);
+  }, [idVenue, id, name]);
 
   if (data === null) return <Spinner />;
 

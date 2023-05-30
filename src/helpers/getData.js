@@ -15,7 +15,7 @@ export const getData = async (URL, email, password) => {
           accept: "application/json",
         },
       });
-      // console.log(response);
+      console.log(response);
 
       if (response.status === 401) {
         const { token } = await getToken(email, password);
@@ -33,15 +33,15 @@ export const getData = async (URL, email, password) => {
           throw new Error(`${response.status}: ${response.statusText} `);
         }
         sessionStorage.setItem("tokenSessionStorage", token);
-        // console.log(data)
         const { data } = await response.json();
+        console.log('401', {response});
         return data;
       }
       // console.log(
       //   "Uso tokenSessionStorage para hacer la peticion: " + tokenSessionStorage
       // );
       const { data } = await response.json();
-      // console.log(data)
+      console.log('200', {response});
       return data;
     } catch (error) {
       throw new Error(error);
