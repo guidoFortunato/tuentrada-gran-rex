@@ -1,6 +1,6 @@
-import { useContext, useEffect } from "react";
+import { useContext, useEffect, useState } from "react";
 import { EventosContext } from "../context/EventosProvider";
-// import { getData, getEnvVariables } from "../helpers";
+import { getData, getEnvVariables } from "../helpers";
 import { EventosDisponibles, EventosNoDisponibles, FormBusqueda, Spinner } from "../components/";
 
 // import { SliderDestacado } from "../components/";
@@ -8,11 +8,11 @@ import { EventosDisponibles, EventosNoDisponibles, FormBusqueda, Spinner } from 
 import "../css/header.css";
 import "../css/footer.css";
 
-// const { VITE_API_EVENTOS, VITE_EMAIL, VITE_PASS } = getEnvVariables();
+const { VITE_API_EVENTOS, VITE_EMAIL, VITE_PASS } = getEnvVariables();
 
 export const Home = () => {
-  const { dataInfoGeneral, eventosGenerales } = useContext(EventosContext);
-  // const [data, setData] = useState(null);
+  const { idVenue, dataInfoGeneral } = useContext(EventosContext);
+  const [data, setData] = useState(null);
   // console.log({data});
   // console.log({dataInfoGeneral})
 
@@ -22,20 +22,22 @@ export const Home = () => {
     }, 100);
   }, []);
 
-  // useEffect(() => {
-  //   if (idVenue !== "") {
-  //     const getInfo = async () => {
-  //       const info = await getData( VITE_API_EVENTOS + idVenue, VITE_EMAIL, VITE_PASS);
-  //       console.log({info})
-  //       setData(info.data);
-  //     };
-  //     getInfo();
-  //   }
-  // }, [idVenue]);
+  useEffect(() => {
+    if (idVenue !== "") {
+      const getInfo = async () => {
+        const {data} = await getData( VITE_API_EVENTOS + idVenue, VITE_EMAIL, VITE_PASS);
+        console.log(data)
+        setData(data);
+      };
+      getInfo();
+    }
+  }, [idVenue]);
 
-  if (eventosGenerales.length === 0 || dataInfoGeneral.length === 0) return <Spinner />;
+  if (data === null) return <Spinner />;
 
-  if (eventosGenerales === undefined || eventosGenerales.length === 0) {
+  if (dataInfoGeneral.length === 0) return <Spinner />;
+
+  if (data === undefined || data.length === 0) {
     return (
       <>
         <header className="animate__animated animate__fadeIn animate__fast">
@@ -61,7 +63,7 @@ export const Home = () => {
           <FormBusqueda />
         </div>
       </header>
-      <EventosDisponibles data={eventosGenerales} />
+      <EventosDisponibles data={data} />
     </>
   );
 };
