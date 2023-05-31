@@ -33,14 +33,14 @@ export const getData = async (URL, email, password) => {
           throw new Error(`${response.status}: ${response.statusText} `);
         }
         sessionStorage.setItem("tokenSessionStorage", token);
-        const { data } = await response.json();
+        const data  = await response.json();
         console.log('401', {response});
         return data;
       }
       // console.log(
       //   "Uso tokenSessionStorage para hacer la peticion: " + tokenSessionStorage
       // );
-      const { data } = await response.json();
+      const data = await response.json();
       console.log('200', {response});
       return data;
     } catch (error) {
@@ -63,7 +63,7 @@ export const getData = async (URL, email, password) => {
         throw new Error(`${response.status}: ${response.statusText} `);
       }
       sessionStorage.setItem("tokenSessionStorage", token);
-      const { data } = await response.json();
+      const data = await response.json();
       return data;
       
     } catch (error) {

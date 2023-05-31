@@ -70,23 +70,23 @@ const eventTimeFormat = {
 };
 
 export const Calendario = () => {
-  const { idVenue, dataInfoGeneral } = useContext(EventosContext);
-  const [data, setData] = useState(null);
+  const { dataInfoGeneral, eventosCalendario } = useContext(EventosContext);
+  // const [data, setData] = useState(null);
   const navigate = useNavigate();
   const { pathname } = useLocation();
   // console.log({data});
 
   localStorage.setItem("lastPath", pathname);
 
-  for (let i = 0; i < data?.length; i++) {
-    for (let j = 0; j < data[i].performances.length; j++) {
+  for (let i = 0; i < eventosCalendario.length; i++) {
+    for (let j = 0; j < eventosCalendario[i].performances.length; j++) {
       newEvents.push({
-        id: data[i].id,
-        start: data[i].performances[j].start,
-        title: data[i].title.toUpperCase(),
-        url: `${data[i].url}/${data[i].id}`,
-        display: data[i].display,
-        status: data[i].performances[j].disponibility,
+        id: eventosCalendario[i].id,
+        start: eventosCalendario[i].performances[j].start,
+        title: eventosCalendario[i].title.toUpperCase(),
+        url: `${eventosCalendario[i].url}/${eventosCalendario[i].id}`,
+        display: eventosCalendario[i].display,
+        status: eventosCalendario[i].performances[j].disponibility,
       });
     }
   }
@@ -148,19 +148,17 @@ export const Calendario = () => {
     }, 100);
   }, []);
 
-  useEffect(() => {
-    if (idVenue !== "") {
-      const getInfo = async () => {
-        const data = await getData( VITE_API_INFO_GENERAL + idVenue + "/calendar", VITE_EMAIL, VITE_PASS);
-        setData(data);
-      };
-      getInfo();
-    }
-  }, [idVenue]);
+  // useEffect(() => {
+  //   if (idVenue !== "") {
+  //     const getInfo = async () => {
+  //       const {data} = await getData( VITE_API_INFO_GENERAL + idVenue + "/calendar", VITE_EMAIL, VITE_PASS);
+  //       setData(data);
+  //     };
+  //     getInfo();
+  //   }
+  // }, [idVenue]);
 
-  if (data === null) return <Spinner />;
-
-  if (dataInfoGeneral.length === 0) return <Spinner />;
+  if (eventosCalendario.length === 0 || dataInfoGeneral.length === 0) return <Spinner />;
 
   return (
     <>

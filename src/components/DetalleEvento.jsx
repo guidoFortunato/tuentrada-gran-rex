@@ -47,7 +47,7 @@ export const DetalleEvento = () => {
   useEffect(() => {
     if (idVenue !== "") {
       const getInfo = async () => {
-        const data = await getData(VITE_API_EVENTOS + idVenue + "/details/" + id, VITE_EMAIL, VITE_PASS );
+        const {data} = await getData(VITE_API_EVENTOS + idVenue + "/details/" + id, VITE_EMAIL, VITE_PASS );
         console.log({data})
         setData(data);
       };
