@@ -55,9 +55,7 @@ export const DetalleEvento = () => {
     }
   }, [idVenue, id, name]);
 
-  if (data === null) return <Spinner />;
-
-  if (dataInfoGeneral.length === 0) return <Spinner />;
+  if (data === null || dataInfoGeneral.length === 0) return <Spinner />;
   
   if (data === undefined) return <Navigate to="/" />;  
 

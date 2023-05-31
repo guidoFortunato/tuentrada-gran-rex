@@ -31,13 +31,13 @@ export const Home = () => {
         const info = await getData( VITE_API_EVENTOS + idVenue + `?page=${page}`, VITE_EMAIL, VITE_PASS);
         console.log({info})
         setInfo(info);
-        setEventos( (prevEventos)=> eventos.concat(info.data))
+        setEventos( (prevEventos)=> prevEventos.concat(info.data))
       };
       getInfo();
     }
   }, [idVenue, page]);
 
-  if (info === null || dataInfoGeneral.length === 0) return <Spinner />;
+  if (info === null ) return <Spinner />;
 
   if (eventos === undefined || eventos.length === 0) {
 
@@ -110,7 +110,7 @@ export const Home = () => {
           <InfiniteScroll
             dataLength={eventos.length}
             next={()=>setPage( prevPage => prevPage + 1 )}
-            hasMore={info.links.next !== null }
+            hasMore={ info.links.next !== null }
             loader={<Spinner />}
           >
             <div className="row sin-padding-right-left animate__animated animate__fadeIn  animate__delay-1s ">

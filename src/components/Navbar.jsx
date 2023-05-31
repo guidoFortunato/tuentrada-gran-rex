@@ -1,7 +1,7 @@
 import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { EventosContext } from "../context/EventosProvider";
-import { Spinner } from "./";
+// import { Spinner } from "./";
 
 import "../css/navbar.css";
 
@@ -10,7 +10,7 @@ export const Navbar = () => {
   const [isNavCollapsed, setIsNavCollapsed] = useState(true);
   const handleNavCollapse = () => setIsNavCollapsed(!isNavCollapsed);
 
-  if (dataInfoGeneral.length === 0) return <Spinner />;
+  // if (dataInfoGeneral.length === 0) return <Spinner />;
 
   return (
     <nav className="navbar navbar-dark navbar-expand-lg color-navbar sticky-top animate__animated animate__fadeIn animate__faster">

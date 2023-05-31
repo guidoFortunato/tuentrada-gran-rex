@@ -7,18 +7,10 @@ import DOMPurify from "dompurify";
 import "../css/footer.css";
 
 export const Footer = () => {
-  const { isLoadingFooter, dataFooter, isLoadingNavbar, dataInfoGeneral } =
-    useContext(EventosContext);
+  const { dataInfoGeneral } = useContext(EventosContext);
 
-  // if (isLoadingNavbar) {
-  //   return <Spinner />;
-  // }
-  // if (isLoadingFooter) {
-  //   return <Spinner />;
-  // }
-  if (dataInfoGeneral.length === 0) {
-    return <Spinner />;
-  }
+  // if (dataInfoGeneral.length === 0) return <Spinner />;
+
   return (
     <footer>
       <div className="container">
@@ -30,11 +22,11 @@ export const Footer = () => {
                 {dataInfoGeneral?.physicalConfiguration?.street}
               </p>
               <span
-              className="texto-boleteria"
-              dangerouslySetInnerHTML={{
-                __html: DOMPurify.sanitize(dataInfoGeneral?.openSchedule),
-              }}
-            ></span>
+                className="texto-boleteria"
+                dangerouslySetInnerHTML={{
+                  __html: DOMPurify.sanitize(dataInfoGeneral?.openSchedule),
+                }}
+              ></span>
             </div>
           </div>
           <div className="col-12 col-md-6 d-flex justify-content-center align-items-center my-2 my-lg-0">
@@ -69,8 +61,8 @@ export const Footer = () => {
           </div>
           <div className="col-12 mt-5 mt-lg-3">
             <p className="mb-0 parrafo-footer" style={{ fontSize: "16px" }}>
-            Copyright © {new Date().getFullYear()} tuentrada.com <br />
-            Todos los derechos reservados
+              Copyright © {new Date().getFullYear()} tuentrada.com <br />
+              Todos los derechos reservados
             </p>
           </div>
         </div>

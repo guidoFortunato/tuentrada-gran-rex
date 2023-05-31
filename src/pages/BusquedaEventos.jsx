@@ -1,6 +1,6 @@
 import { useContext, useEffect, useState } from "react";
 import { EventosContext } from "../context/EventosProvider";
-import { Navigate, useParams } from "react-router-dom";
+import { Navigate, useLocation, useParams } from "react-router-dom";
 
 import { Link } from "react-router-dom";
 import { CardEvento, FormBusqueda, Spinner } from "../components";
@@ -11,10 +11,11 @@ const { VITE_API_EVENTOS, VITE_EMAIL, VITE_PASS } = getEnvVariables();
 export const BusquedaEventos = () => {
   const [data, setData] = useState(null);
   const { idVenue } = useContext(EventosContext);
-  let { name } = useParams();
-  // const { data, isLoading } = useFetchNew( VITE_API_EVENTOS + idVenue + "/search/" + name, VITE_EMAIL, VITE_PASS );
-  // console.log({data, isLoading})
+  const { search }  = useLocation();
+  const query = search.split('=')[1] 
+  // console.log(query)
 
+  
   useEffect(() => {
     setTimeout(() => {
       window.scrollTo(0, 0);
@@ -24,13 +25,13 @@ export const BusquedaEventos = () => {
   useEffect(() => {
     if (idVenue !== "") {
       const getInfo = async () => {
-        const {data} = await getData(VITE_API_EVENTOS + idVenue + "/search/" + name, VITE_EMAIL, VITE_PASS );
+        const {data} = await getData(VITE_API_EVENTOS + idVenue + "/search/" + query, VITE_EMAIL, VITE_PASS );
         // console.log({data})
         setData(data);
       };
       getInfo();
     }
-  }, [idVenue, name]);
+  }, [idVenue, query]);
 
 
   if (data === null) return <Spinner />;
@@ -46,7 +47,7 @@ export const BusquedaEventos = () => {
         </div>
         <div className="row justify-content-center py-5">
           <h2 className="text-center">
-            Resultados de tu búsqueda <strong>"{name}"</strong>
+            Resultados de tu búsqueda <strong>"{query.split('%20').join(' ')}"</strong>
           </h2>
         </div>
         <div className="row justify-content-center">
