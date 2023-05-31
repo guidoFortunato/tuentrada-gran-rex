@@ -1,7 +1,5 @@
 export * from "./CardEvento";
 export * from "./DetalleEvento";
-export * from "./EventosDisponibles";
-export * from "./EventosNoDisponibles";
 export * from "./Footer";
 export * from "./FormBusqueda";
 export * from "./GaleriaHistoria";

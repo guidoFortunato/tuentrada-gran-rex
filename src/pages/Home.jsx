@@ -1,7 +1,8 @@
 import { useContext, useEffect, useState } from "react";
+import InfiniteScroll from "react-infinite-scroll-component";
 import { EventosContext } from "../context/EventosProvider";
+import { CardEvento, FormBusqueda, Spinner } from "../components";
 import { getData, getEnvVariables } from "../helpers";
-import { EventosDisponibles, EventosNoDisponibles, FormBusqueda, Spinner } from "../components/";
 
 // import { SliderDestacado } from "../components/";
 
@@ -12,7 +13,9 @@ const { VITE_API_EVENTOS, VITE_EMAIL, VITE_PASS } = getEnvVariables();
 
 export const Home = () => {
   const { idVenue, dataInfoGeneral } = useContext(EventosContext);
-  const [data, setData] = useState(null);
+  const [info, setInfo] = useState(null);
+  const [eventos, setEventos] = useState([]);
+  const [page, setPage] = useState(1);
   // console.log({data});
   // console.log({dataInfoGeneral})
 
@@ -25,19 +28,19 @@ export const Home = () => {
   useEffect(() => {
     if (idVenue !== "") {
       const getInfo = async () => {
-        const {data} = await getData( VITE_API_EVENTOS + idVenue, VITE_EMAIL, VITE_PASS);
-        console.log(data)
-        setData(data);
+        const info = await getData( VITE_API_EVENTOS + idVenue + `?page=${page}`, VITE_EMAIL, VITE_PASS);
+        console.log({info})
+        setInfo(info);
+        setEventos( (prevEventos)=> eventos.concat(info.data))
       };
       getInfo();
     }
-  }, [idVenue]);
+  }, [idVenue, page]);
 
-  if (data === null) return <Spinner />;
+  if (info === null || dataInfoGeneral.length === 0) return <Spinner />;
 
-  if (dataInfoGeneral.length === 0) return <Spinner />;
+  if (eventos === undefined || eventos.length === 0) {
 
-  if (data === undefined || data.length === 0) {
     return (
       <>
         <header className="animate__animated animate__fadeIn animate__fast">
@@ -48,7 +51,20 @@ export const Home = () => {
             <FormBusqueda />
           </div>
         </header>
-        <EventosNoDisponibles />
+        <main>
+        <div className="container">
+          <div className="row animate__animated animate__fadeIn animate__fast	 ">
+            <div className="col-12 text-center mt-3 ">
+              <h2
+                style={{ fontSize: "30px" }}
+                className="my-3 animate__fadeIn animate__delay-1s tittle-h2"
+              >
+                No hay eventos disponibles
+              </h2>
+            </div>
+          </div>
+        </div>
+      </main>
       </>
     );
   }
@@ -63,7 +79,58 @@ export const Home = () => {
           <FormBusqueda />
         </div>
       </header>
-      <EventosDisponibles data={data} />
+      <main>
+        <div className="container">
+          <div className="row animate__animated animate__fadeIn animate__fast	 ">
+            <div className="col-12 text-center mt-3 ">
+              <h2
+                style={{ fontSize: "30px" }}
+                className="my-3 animate__fadeIn animate__delay-1s tittle-h2"
+              >
+                Próximos eventos
+              </h2>
+            </div>
+          </div>
+
+          {/* <div className="row justify-content-center">
+            <SliderDestacado />
+          </div>
+          <div className="img-slider">
+            <div className="img-opacity">
+              <h3>SOY UN COMUNICADO</h3>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam
+                aspernatur illo praesentium, dolore eos nostrum voluptatibus id
+                obcaecati cum ad impedit velit eligendi voluptatem quisquam nam
+                voluptate pariatur, enim deleniti.
+              </p>
+            </div>
+          </div> */}
+
+          <InfiniteScroll
+            dataLength={eventos.length}
+            next={()=>setPage( prevPage => prevPage + 1 )}
+            hasMore={info.links.next !== null }
+            loader={<Spinner />}
+          >
+            <div className="row sin-padding-right-left animate__animated animate__fadeIn  animate__delay-1s ">
+              {eventos.map((item) => (
+                <CardEvento
+                  linkEvento={item.slug + "/" + item.id}
+                  img={item.image}
+                  status={item.state}
+                  title={item.name}
+                  key={item.id}
+                  disabled={item.disabled}
+                  reason={item.reason}
+                  disponibility={item.disponibility}
+                  data={item}
+                />
+              ))}
+            </div>
+          </InfiniteScroll>
+        </div>
+      </main>
     </>
   );
 };

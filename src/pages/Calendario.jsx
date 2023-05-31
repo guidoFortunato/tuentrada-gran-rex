@@ -1,8 +1,8 @@
 import { useContext, useEffect, useState } from "react";
-import { Navigate, useLocation, useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
 import { EventosContext } from "../context/EventosProvider";
-import { EventosNoDisponibles, Spinner } from "../components";
+import { Spinner } from "../components";
 import { getData, getEnvVariables } from "../helpers";
 
 import FullCalendar from "@fullcalendar/react"; // must go before plugins
@@ -160,10 +160,8 @@ export const Calendario = () => {
     }
   }, [idVenue]);
 
-  if (data === null) return <Spinner />;
-
-  if (dataInfoGeneral.length === 0) return <Spinner />;
-
+  if (data === null || dataInfoGeneral.length === 0) return <Spinner />;
+  
   return (
     <>
       <div className="container animate__animated animate__fadeIn animate__fast">

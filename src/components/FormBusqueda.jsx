@@ -1,15 +1,11 @@
-import { useContext, useEffect, useState } from "react";
-// import { EventosContext } from "../context/EventosProvider";
-import { useLocation, useNavigate, useParams } from "react-router-dom";
-import { Spinner } from "./";
+import { useState } from "react";
+import { useLocation, useNavigate } from "react-router-dom";
 
 export const FormBusqueda = () => {
 
   const [evento, setEvento] = useState("");
-  // let { name } = useParams();
   let navigate = useNavigate();
   const { pathname } = useLocation();
-  // const busquedaEventos = pathname.split("/")[1] || "/";
 
   localStorage.setItem("lastPath", pathname);
 
