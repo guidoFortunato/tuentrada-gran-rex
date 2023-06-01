@@ -1,6 +1,6 @@
 import { useContext, useEffect, useState } from "react";
 import { EventosContext } from "../context/EventosProvider";
-import { Navigate, useLocation, useParams } from "react-router-dom";
+import { Navigate, useLocation } from "react-router-dom";
 
 import { Link } from "react-router-dom";
 import { CardEvento, FormBusqueda, Spinner } from "../components";
@@ -11,9 +11,12 @@ const { VITE_API_EVENTOS, VITE_EMAIL, VITE_PASS } = getEnvVariables();
 export const BusquedaEventos = () => {
   const [data, setData] = useState(null);
   const { idVenue } = useContext(EventosContext);
-  const { search }  = useLocation();
+  const { pathname, search }  = useLocation();
   const query = search.split('=')[1] 
-  // console.log(query)
+  const paramSearch = (pathname.split('/')[2] + search).split('=')[0] + "="
+  console.log(paramSearch)
+  // console.log({pathname,search})
+  // console.log({pathname,search})
 
   
   useEffect(() => {
@@ -26,17 +29,19 @@ export const BusquedaEventos = () => {
     if (idVenue !== "") {
       const getInfo = async () => {
         const {data} = await getData(VITE_API_EVENTOS + idVenue + "/search/" + query, VITE_EMAIL, VITE_PASS );
-        // console.log({data})
+        console.log({data})
         setData(data);
       };
       getInfo();
     }
-  }, [idVenue, query]);
+  }, [idVenue, query, search]);
 
 
   if (data === null) return <Spinner />;
   
   if (data === undefined) return <Navigate to="/" />;
+
+  if (paramSearch !== 'search?q=') return <Navigate to="/" />;  
 
 
   return (

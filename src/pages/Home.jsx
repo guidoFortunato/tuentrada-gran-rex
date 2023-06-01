@@ -19,6 +19,28 @@ export const Home = () => {
   // console.log({data});
   // console.log({dataInfoGeneral})
 
+  /**
+   * 
+   * TODO: 
+   * a) disponibilidad
+
+      b) busqueda:
+      -tiene que coincidir exactamente el nombre del evento, sino no busca nada. Keywords marian
+
+      c) detalle:
+      -seccion fecha de detalle
+      -plano
+      -si cambio el nombre de la url no hace nada
+      -que no se vea el id en la url
+
+      d) si borro algo de la parte de search en busqueda eventos rompe
+
+      e) agregar alguna alerta si dan enter y el form busqueda está vacio, deben ingresar si o si algo
+   * 
+   * 
+   * 
+   */
+
   useEffect(() => {
     setTimeout(() => {
       window.scrollTo(0, 0);

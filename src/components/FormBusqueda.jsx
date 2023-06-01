@@ -4,9 +4,10 @@ import { useLocation, useNavigate } from "react-router-dom";
 export const FormBusqueda = () => {
   const [evento, setEvento] = useState("");
   let navigate = useNavigate();
-  const { pathname } = useLocation();
+  const {pathname , search}  = useLocation();
+  // console.log({pathname})
   
-  localStorage.setItem("lastPath", pathname);
+  localStorage.setItem("lastPath", pathname + search);
 
   const handleEvento = (nombreEvento) => {
     if (!nombreEvento.trim()) {
