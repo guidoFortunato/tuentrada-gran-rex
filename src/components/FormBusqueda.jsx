@@ -32,6 +32,7 @@ export const FormBusqueda = () => {
         <input
           className="border-0 form-label"
           placeholder={"Buscar evento"}
+          aria-label="Búsqueda de eventos"
           value={evento}
           onChange={(e) => handleEvento(e.target.value)}
         />

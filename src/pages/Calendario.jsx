@@ -153,7 +153,7 @@ export const Calendario = () => {
     if (idVenue !== "") {
       const getInfo = async () => {
         const {data} = await getData( VITE_API_INFO_GENERAL + idVenue + "/calendar", VITE_EMAIL, VITE_PASS);
-        console.log({data})
+        // console.log({data})
         setData(data);
       };
       getInfo();

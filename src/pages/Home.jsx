@@ -13,7 +13,7 @@ const { VITE_API_EVENTOS, VITE_EMAIL, VITE_PASS } = getEnvVariables();
 
 export const Home = () => {
   const { idVenue, dataInfoGeneral } = useContext(EventosContext);
-  const [info, setInfo] = useState(null);
+  const [data, setData] = useState(null);
   const [eventos, setEventos] = useState([]);
   const [page, setPage] = useState(1);
   // console.log({data});
@@ -28,16 +28,17 @@ export const Home = () => {
   useEffect(() => {
     if (idVenue !== "") {
       const getInfo = async () => {
-        const info = await getData( VITE_API_EVENTOS + idVenue + `?page=${page}`, VITE_EMAIL, VITE_PASS);
-        console.log({info})
-        setInfo(info);
+        const newLocal = `${VITE_API_EVENTOS + idVenue}?page=${page}`;
+        const info = await getData( newLocal, VITE_EMAIL, VITE_PASS);
+        // console.log({info})
+        setData(info);
         setEventos( (prevEventos)=> prevEventos.concat(info.data))
       };
       getInfo();
     }
   }, [idVenue, page]);
 
-  if (info === null ) return <Spinner />;
+  if (data === null ) return <Spinner />;
 
   if (eventos === undefined || eventos.length === 0) {
 
@@ -45,7 +46,7 @@ export const Home = () => {
       <>
         <header className="animate__animated animate__fadeIn animate__fast">
           <div className="header-home">
-            <h1 className="titulo-principal animate__animated animate__fadeInDown animate__fast	 ">
+            <h1 className="titulo-principal animate__animated animate__fadeInDown animate__fast	">
               <strong>{dataInfoGeneral.physicalConfiguration.name}</strong>
             </h1>
             <FormBusqueda />
@@ -53,7 +54,7 @@ export const Home = () => {
         </header>
         <main>
         <div className="container">
-          <div className="row animate__animated animate__fadeIn animate__fast	 ">
+          <div className="row animate__animated animate__fadeIn animate__fast">
             <div className="col-12 text-center mt-3 ">
               <h2
                 style={{ fontSize: "30px" }}
@@ -73,7 +74,7 @@ export const Home = () => {
     <>
       <header className="animate__animated animate__fadeIn animate__fast">
         <div className="header-home">
-          <h1 className="titulo-principal animate__animated animate__fadeInDown animate__fast	 ">
+          <h1 className="titulo-principal animate__animated animate__fadeInDown animate__fast">
             <strong>{dataInfoGeneral.physicalConfiguration.name}</strong>
           </h1>
           <FormBusqueda />
@@ -110,7 +111,7 @@ export const Home = () => {
           <InfiniteScroll
             dataLength={eventos.length}
             next={()=>setPage( prevPage => prevPage + 1 )}
-            hasMore={ info.links.next !== null }
+            hasMore={ data.links.next !== null }
             loader={<Spinner />}
           >
             <div className="row sin-padding-right-left animate__animated animate__fadeIn  animate__delay-1s ">
