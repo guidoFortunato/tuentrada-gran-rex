@@ -47,9 +47,9 @@ export const DetalleEvento = () => {
   useEffect(() => {
     if (idVenue !== "") {
       const getInfo = async () => {
-        const {data} = await getData(VITE_API_EVENTOS + idVenue + "/details/" + id, VITE_EMAIL, VITE_PASS );
+        const data = await getData(VITE_API_EVENTOS + idVenue + "/details/" + id, VITE_EMAIL, VITE_PASS );
         console.log({data})
-        setData(data);
+        setData(data.data);
       };
       getInfo();
     }
@@ -60,6 +60,8 @@ export const DetalleEvento = () => {
   if (data === undefined) return <Navigate to="/" />;  
 
   if (data.length === 0) return <Navigate to="/" />;
+
+  <iframe src="" frameborder="0"></iframe>
 
 
   return (
