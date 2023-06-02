@@ -33,7 +33,6 @@ export const Home = () => {
       -si cambio el nombre de la url no hace nada
       -que no se vea el id en la url
 
-      d) si borro algo de la parte de search en busqueda eventos rompe
 
       e) agregar alguna alerta si dan enter y el form busqueda está vacio, deben ingresar si o si algo
    * 
@@ -52,7 +51,7 @@ export const Home = () => {
       const getInfo = async () => {
         const newLocal = `${VITE_API_EVENTOS + idVenue}?page=${page}`;
         const info = await getData( newLocal, VITE_EMAIL, VITE_PASS);
-        // console.log({info})
+        console.log(info.data)
         setData(info);
         setEventos( (prevEventos)=> prevEventos.concat(info.data))
       };
@@ -97,7 +96,7 @@ export const Home = () => {
       <header className="animate__animated animate__fadeIn animate__fast">
         <div className="header-home">
           <h1 className="titulo-principal animate__animated animate__fadeInDown animate__fast">
-            <strong>{dataInfoGeneral.physicalConfiguration.name}</strong>
+            <strong>{dataInfoGeneral.pages[0].title}</strong>
           </h1>
           <FormBusqueda />
         </div>

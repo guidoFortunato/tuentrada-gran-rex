@@ -22,7 +22,7 @@ export const DetalleEvento = () => {
   const navigate = useNavigate();
   // console.log({ data });
   // console.log({name})
-  console.log({idProducto})
+  // console.log({idProducto})
 
   const lastPath = localStorage.getItem("lastPath") || "/";
 
@@ -47,9 +47,9 @@ export const DetalleEvento = () => {
   useEffect(() => {
     if (idVenue !== "") {
       const getInfo = async () => {
-        const data = await getData(VITE_API_EVENTOS + idVenue + "/details/" + id, VITE_EMAIL, VITE_PASS );
-        console.log({data})
-        setData(data.data);
+        const {data} = await getData(VITE_API_EVENTOS + idVenue + "/details/" + id, VITE_EMAIL, VITE_PASS );
+        console.log(data)
+        setData(data);
       };
       getInfo();
     }
@@ -57,20 +57,12 @@ export const DetalleEvento = () => {
 
   if (data === null || dataInfoGeneral.length === 0) return <Spinner />;
   
-  if (data === undefined) return <Navigate to="/" />;  
-
-  if (data.length === 0) return <Navigate to="/" />;
-
-  <iframe src="" frameborder="0"></iframe>
-
+  if (data === undefined || data.length === 0) return <Navigate to="/" />;
 
   return (
     <>
       <div
-        className={
-          "container my-5 px-5 animate_animated animatefadeIn animate_fast"
-        }
-        // ref={eventDetailRef}
+        className="container my-5 px-5 animate_animated animatefadeIn animate_fast"
       >
         <h2 className="titleDetalle">{data?.name.toUpperCase()}</h2>
         <hr />
@@ -87,7 +79,7 @@ export const DetalleEvento = () => {
             <p
               className="animate_animated animate_fadeIn"
               dangerouslySetInnerHTML={{
-                __html: DOMPurify.sanitize(data?.extraInformation.detalle),
+                __html: DOMPurify.sanitize(data?.description),
               }}
             ></p>
 
@@ -134,7 +126,7 @@ export const DetalleEvento = () => {
             <p
               className="animate_animated animate_fadeIn"
               dangerouslySetInnerHTML={{
-                __html: DOMPurify.sanitize(data?.extraInformation.infoGeneral),
+                __html: DOMPurify.sanitize(data?.recomendation),
               }}
             ></p>
           </div>
