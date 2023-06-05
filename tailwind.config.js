@@ -11,7 +11,7 @@ export default {
     extend: {
       boxShadow: {
         'light': '0 1px 6px 0 rgba(32, 33, 36, 0.28)',
-      }
+      },
     },
   },
   plugins: [require("flowbite/plugin")],

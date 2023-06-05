@@ -1,4 +1,4 @@
-.titleDetalle {
+/* .titleDetalle {
   font-size: 30px;
   color: #ba2828;
   font-weight: bold;
@@ -12,7 +12,6 @@
   font-size: 17px;
 }
 
-/*Modal*/
 
 .ReactModal__Overlay {
   transition: opacity 0.5s ease-in-out;
@@ -44,15 +43,6 @@
   height: 80vh;
 }
 
-/* .modal-transition {
-  opacity: 0;
-  transition: opacity 0.3s ease-in-out;
-}
-.modal-open {
-  opacity: 1;
-  transition: opacity 0.3s ease-in-out;
-} */
-
 .alert-danger{ 
   font-size: 14px!important;
-}
+} */

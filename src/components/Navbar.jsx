@@ -8,11 +8,18 @@ import { FormBusqueda2 } from "./FormBusqueda2";
 
 export const NavBar = () => {
   const { dataInfoGeneral } = useContext(EventosContext);
-  const [isNavCollapsed, setIsNavCollapsed] = useState(false);
+  const [isSearchCollapsed, setIsSearchCollapsed] = useState(false);
+  const [isButtonCollapsed, setIsButtonCollapsed] = useState(false);
   const [isDropdownCollapsed, setIsDropdownCollapsed] = useState(false);
-  const handleNavCollapse = () => setIsNavCollapsed((prevState) => !prevState);
-  const handleDropdown = () =>
-    setIsDropdownCollapsed((prevState) => !prevState);
+  
+  const handleSearchCollapse = () => setIsSearchCollapsed((prevState) => !prevState);
+  const handleButtonCollapse = () => setIsButtonCollapsed((prevState) => !prevState);
+
+  const handleButtonsCollapse = () => {
+    setIsButtonCollapsed(false);
+    setIsSearchCollapsed(false);
+  }
+  const handleDropdown = () => setIsDropdownCollapsed((prevState) => !prevState);
 
   console.log({ dataInfoGeneral });
 
@@ -20,13 +27,13 @@ export const NavBar = () => {
 
   return (
     <>
-      <nav className="shadow-light bg-white border-gray-200 sticky top-0 z-30">
+      <nav style={{ backgroundColor: `${dataInfoGeneral.backgroundNavbar}`, fontFamily: "Raleway" }} className={`shadow-light border-gray-200 sticky top-0 z-30`}>
         <div className="max-w-screen-2xl flex flex-wrap items-center justify-between mx-auto p-4">
           <Link to="/" className="flex items-center">
             <img
-              src="https://flowbite.com/docs/images/logo.svg"
+              src={dataInfoGeneral.logo}
               className="h-8 mr-3"
-              alt="Flowbite Logo"
+              alt={dataInfoGeneral.altLogo}
             />
             <span className="self-center text-xl font-semibold whitespace-nowrap">
               {dataInfoGeneral.name}
@@ -40,7 +47,7 @@ export const NavBar = () => {
               aria-controls="navbar-search"
               aria-expanded="false"
               className="lg:hidden text-gray-500 hover:bg-gray-100  focus:outline-none focus:ring-4 focus:ring-gray-200 rounded-lg text-sm p-2.5 mr-1"
-              onClick={handleNavCollapse}
+              onClick={handleSearchCollapse}
             >
               <svg
                 className="w-5 h-5"
@@ -67,7 +74,7 @@ export const NavBar = () => {
               className="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
               aria-controls="navbar-search"
               aria-expanded="false"
-              onClick={handleNavCollapse}
+              onClick={handleButtonCollapse}
             >
               <span className="sr-only">Menu abrir</span>
               <svg
@@ -86,19 +93,19 @@ export const NavBar = () => {
             </button>
           </div>
           <div
-            className={`items-center justify-between ${!isNavCollapsed ? "hidden" : ""} w-full lg:flex lg:w-auto lg:order-1`}
+            className={`items-center justify-between ${isSearchCollapsed || isButtonCollapsed ? "" : "hidden"  } w-full lg:flex lg:w-auto lg:order-1`}
             id="navbar-search"
           >
-            <div className="relative mt-3 lg:hidden">
+            <div className={`relative mt-3 ${isSearchCollapsed ? "" : "hidden"  } lg:hidden`}>
               <FormBusqueda2 />
               
             </div>
-            <ul className="flex flex-col font-medium border border-transparent lg:flex-row lg:space-x-8 mt-2 space-y-1 lg:space-y-0 lg:mt-0 lg:border-0 lg:bg-white">
+            <ul style={{ backgroundColor: `${dataInfoGeneral.backgroundNavbar}` }} className={`flex flex-col font-medium border border-transparent lg:flex-row lg:space-x-8 mt-2 space-y-1 lg:space-y-0 lg:mt-0 lg:border-0 lg:bg-white ${isButtonCollapsed ? "" : "hidden"  } lg:flex `}>
               <li>
                 <Link
                   to="/"
-                  onClick={() => setIsNavCollapsed(false)}
-                  className="text-[#855F35] font-semibold"
+                  onClick={() => handleButtonsCollapse()}
+                  className={`text-[${dataInfoGeneral.colorSiteName}] font-semibold`}
                 >
                   Home
                 </Link>
@@ -106,7 +113,7 @@ export const NavBar = () => {
               <li>
                 <Link
                   to="/calendario"
-                  onClick={() => setIsNavCollapsed(false)}
+                  onClick={() => handleButtonsCollapse()}
                   className="text-[#855F35] font-semibold"
                 >
                   Calendario
@@ -115,7 +122,7 @@ export const NavBar = () => {
               <li>
                 <Link
                   to="/historia"
-                  onClick={() => setIsNavCollapsed(false)}
+                  onClick={() => handleButtonsCollapse()}
                   className="text-[#855F35] font-semibold"
                 >
                   Historia

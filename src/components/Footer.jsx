@@ -5,6 +5,7 @@ import { Spinner } from "./Spinner";
 import DOMPurify from "dompurify";
 
 import "../css/footer.css";
+import { Link } from "react-router-dom";
 
 export const Footer = () => {
   const { dataInfoGeneral } = useContext(EventosContext);
@@ -12,22 +13,22 @@ export const Footer = () => {
   // if (dataInfoGeneral.length === 0) return <Spinner />;
 
   return (
-    <footer className="shadow text-[#fff] absolute bottom-0 w-full bg-[#000]">
+    <footer style={{ backgroundColor: dataInfoGeneral.backgroundFooter, fontFamily: "Raleway", color: dataInfoGeneral.colorFooter }} className={`shadow absolute bottom-0 w-full`}>
       <div className="w-full max-w-screen-xl mx-auto p-4 md:py-8">
         <div className="sm:flex sm:items-center sm:justify-between">
-          <a
-            href="https://flowbite.com/"
+          <Link
+            to="/"
             className="flex items-center mb-4 sm:mb-0"
           >
             <img
-              src="https://flowbite.com/docs/images/logo.svg"
+              src={dataInfoGeneral.logo}
               className="h-8 mr-3"
-              alt="Flowbite Logo"
+              alt={dataInfoGeneral.altLogo}
             />
-            <span className="self-center text-2xl font-semibold whitespace-nowrap ">
-              Gran Rex
+            <span className="self-center text-xl font-semibold whitespace-nowrap ">
+              {dataInfoGeneral.name}
             </span>
-          </a>
+          </Link>
           <ul className="flex flex-wrap items-center mb-6 text-sm font-medium  sm:mb-0 ">
             <li>
               <a href="#" className="mr-4 hover:underline md:mr-6 ">
