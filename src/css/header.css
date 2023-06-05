@@ -1,6 +1,5 @@
-.header-home {
+/* .header-home {
   min-height: 50vh;
-  /* max-height: 900px; */
   background-color: antiquewhite;
   display: flex;
   justify-content: center;
@@ -18,7 +17,6 @@ header {
 .titulo-principal {
   margin: 0!important;
   font-size: 55px;
-  /* font-weight: bold; */
   color: #fff;
 }
 
@@ -89,7 +87,6 @@ form{
   vertical-align: middle;
   cursor: pointer;
   border: 1px solid #BA2828;
-  /* font-weight: 700; */
 }
 .search{
   padding: 0 20px!important;
@@ -107,4 +104,4 @@ form{
     transition: all .1s linear;
     box-shadow: none;
     
-}
+} */

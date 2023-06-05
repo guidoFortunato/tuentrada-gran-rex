@@ -19,27 +19,6 @@ export const Home = () => {
   // console.log({data});
   // console.log({dataInfoGeneral})
 
-  /**
-   * 
-   * TODO: 
-   * a) disponibilidad
-
-      b) busqueda:
-      -tiene que coincidir exactamente el nombre del evento, sino no busca nada. Keywords marian
-
-      c) detalle:
-      -seccion fecha de detalle
-      -plano
-      -si cambio el nombre de la url no hace nada
-      -que no se vea el id en la url
-
-
-      e) agregar alguna alerta si dan enter y el form busqueda está vacio, deben ingresar si o si algo
-   * 
-   * 
-   * 
-   */
-
   useEffect(() => {
     setTimeout(() => {
       window.scrollTo(0, 0);
@@ -51,7 +30,7 @@ export const Home = () => {
       const getInfo = async () => {
         const newLocal = `${VITE_API_EVENTOS + idVenue}?page=${page}`;
         const info = await getData( newLocal, VITE_EMAIL, VITE_PASS);
-        console.log(info.data)
+        // console.log(info.data)
         setData(info);
         setEventos( (prevEventos)=> prevEventos.concat(info.data))
       };
@@ -71,6 +50,7 @@ export const Home = () => {
               <strong>{dataInfoGeneral.physicalConfiguration.name}</strong>
             </h1>
             <FormBusqueda />
+            
           </div>
         </header>
         <main>
@@ -99,6 +79,7 @@ export const Home = () => {
             <strong>{dataInfoGeneral.pages[0].title}</strong>
           </h1>
           <FormBusqueda />
+          
         </div>
       </header>
       <main>

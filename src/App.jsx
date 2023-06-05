@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import { EventosContext } from "./context/EventosProvider";
-import { Footer, Navbar, Spinner } from "./components";
+import { Footer, NavBar, Spinner } from "./components";
 import { AppRouter } from "./router/AppRouter";
 
 import "animate.css";
@@ -12,7 +12,7 @@ function App() {
 
   return (
     <>
-      <Navbar />
+      <NavBar />
       <AppRouter />
       <Footer />
     </>

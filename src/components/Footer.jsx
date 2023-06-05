@@ -12,61 +12,111 @@ export const Footer = () => {
   // if (dataInfoGeneral.length === 0) return <Spinner />;
 
   return (
-    <footer>
-      <div className="container">
-        <div className="row mb-2 text-center">
-          <div className="col-12 col-md-6 d-flex justify-content-center align-items-center mb-3 mb-md-0 pt-3">
-            <div className="d-flex flex-column text-start parrafo-footer">
-              <p style={{ fontSize: "16px" }} className="mb-0">
-                <strong>Dirección:</strong>{" "}
-                {dataInfoGeneral?.physicalConfiguration?.street}
-              </p>
-              <span
-                className="texto-boleteria"
-                dangerouslySetInnerHTML={{
-                  __html: DOMPurify.sanitize(dataInfoGeneral?.openSchedule),
-                }}
-              ></span>
-            </div>
-          </div>
-          <div className="col-12 col-md-6 d-flex justify-content-center align-items-center my-2 my-lg-0">
-            <span style={{ color: "white", fontSize: "15px" }}>
-              Seguinos en nuestras redes:
+    <footer className="shadow text-[#fff] absolute bottom-0 w-full bg-[#000]">
+      <div className="w-full max-w-screen-xl mx-auto p-4 md:py-8">
+        <div className="sm:flex sm:items-center sm:justify-between">
+          <a
+            href="https://flowbite.com/"
+            className="flex items-center mb-4 sm:mb-0"
+          >
+            <img
+              src="https://flowbite.com/docs/images/logo.svg"
+              className="h-8 mr-3"
+              alt="Flowbite Logo"
+            />
+            <span className="self-center text-2xl font-semibold whitespace-nowrap ">
+              Gran Rex
             </span>
-            <ul className="list-unstyled d-flex mb-0">
-              {dataInfoGeneral?.socialNetworks &&
-                dataInfoGeneral?.socialNetworks?.map((item) => (
-                  <li className="me-3" key={item.id}>
-                    <a
-                      className="link-dark"
-                      rel="noreferrer"
-                      href={item.href}
-                      target="_blank"
-                    >
-                      <svg
-                        xmlns={item.xmlns}
-                        x={"0px"}
-                        y={"0px"}
-                        style={{ padding: "5px", fill: "#ffffff" }}
-                        width={item.width}
-                        height={item.height}
-                        viewBox={item.viewBox}
-                      >
-                        <path d={item.path}></path>
-                      </svg>
-                    </a>
-                  </li>
-                ))}
-            </ul>
-          </div>
-          <div className="col-12 mt-5 mt-lg-3">
-            <p className="mb-0 parrafo-footer" style={{ fontSize: "16px" }}>
-              Copyright © {new Date().getFullYear()} tuentrada.com <br />
-              Todos los derechos reservados
-            </p>
-          </div>
+          </a>
+          <ul className="flex flex-wrap items-center mb-6 text-sm font-medium  sm:mb-0 ">
+            <li>
+              <a href="#" className="mr-4 hover:underline md:mr-6 ">
+                Bases y condiciones
+              </a>
+            </li>
+            <li>
+              <a href="#" className="mr-4 hover:underline md:mr-6">
+                Cómo llegar
+              </a>
+            </li>
+            <li>
+              <a href="#" className="mr-4 hover:underline md:mr-6 ">
+                Dirección
+              </a>
+            </li>
+            <li>
+              <a href="#" className="hover:underline">
+                Boletería
+              </a>
+            </li>
+          </ul>
         </div>
+        <hr className="my-6 border-gray-200 sm:mx-auto  lg:my-8" />
+        <span className="block text-sm  sm:text-center ">
+          © 2023{" "}
+          <a href="https://tuentrada.com/" className="hover:underline ">
+            <span className="mr-1">TuEntrada</span>-<span className="ml-1">Todos los derechos reservados</span>
+          </a>
+          
+        </span>
       </div>
     </footer>
+
+    // <footer>
+    //   <div className="container">
+    //     <div className="row mb-2 text-center">
+    //       <div className="col-12 col-md-6 d-flex justify-content-center align-items-center mb-3 mb-md-0 pt-3">
+    //         <div className="d-flex flex-column text-start parrafo-footer">
+    //           <p style={{ fontSize: "16px" }} className="mb-0">
+    //             <strong>Dirección:</strong>{" "}
+    //             {dataInfoGeneral?.physicalConfiguration?.street}
+    //           </p>
+    //           <span
+    //             className="texto-boleteria"
+    //             dangerouslySetInnerHTML={{
+    //               __html: DOMPurify.sanitize(dataInfoGeneral?.openSchedule),
+    //             }}
+    //           ></span>
+    //         </div>
+    //       </div>
+    //       <div className="col-12 col-md-6 d-flex justify-content-center align-items-center my-2 my-lg-0">
+    //         <span style={{ color: "white", fontSize: "15px" }}>
+    //           Seguinos en nuestras redes:
+    //         </span>
+    //         <ul className="list-unstyled d-flex mb-0">
+    //           {dataInfoGeneral?.socialNetworks &&
+    //             dataInfoGeneral?.socialNetworks?.map((item) => (
+    //               <li className="me-3" key={item.id}>
+    //                 <a
+    //                   className="link-dark"
+    //                   rel="noreferrer"
+    //                   href={item.href}
+    //                   target="_blank"
+    //                 >
+    //                   <svg
+    //                     xmlns={item.xmlns}
+    //                     x={"0px"}
+    //                     y={"0px"}
+    //                     style={{ padding: "5px", fill: "#ffffff" }}
+    //                     width={item.width}
+    //                     height={item.height}
+    //                     viewBox={item.viewBox}
+    //                   >
+    //                     <path d={item.path}></path>
+    //                   </svg>
+    //                 </a>
+    //               </li>
+    //             ))}
+    //         </ul>
+    //       </div>
+    //       <div className="col-12 mt-5 mt-lg-3">
+    //         <p className="mb-0 parrafo-footer" style={{ fontSize: "16px" }}>
+    //           Copyright © {new Date().getFullYear()} tuentrada.com <br />
+    //           Todos los derechos reservados
+    //         </p>
+    //       </div>
+    //     </div>
+    //   </div>
+    // </footer>
   );
 };

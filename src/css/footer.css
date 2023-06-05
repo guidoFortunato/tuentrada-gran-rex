@@ -1,13 +1,9 @@
-footer{
+/* footer{
   position: absolute;
   bottom: 0;
   width: 100%;
    background-color: #000; 
-  /* background-color: #5f5d49; */
 }
-/* footer p{
-  color: #fff;
-} */
 
 .parrafo-footer{
   color: white;
@@ -26,4 +22,4 @@ border: 1px solid black;
 
 .texto-boleteria p{
   font-size: 16px;
-}
+} */

@@ -6,14 +6,6 @@
   font-size: 1.6rem;
 }
 
-/* .fc-toolbar-title {
-    text-transform: lowercase;
-  }
-  
-  .fc-toolbar-title::first-letter {
-    text-transform: uppercase;
-  } */
-
 .btn-check:checked + .btn,
 .btn.active,
 .btn.show,
@@ -51,14 +43,6 @@ fieldset:disabled .btn {
   color: #ba2828 !important;
   background-color: #f5f2f0 !important;
 }
-/* .fc-dayGridMonth-button{
-  cursor: auto !important;
-}
-.fc-dayGridMonth-button:hover{
-  background-color: #000000 !important;
-  border-color: #000000 !important;
-  color: #fff !important;
-} */
 
 .fc-event-title,
 .fc-event-time {
@@ -86,23 +70,3 @@ fieldset:disabled .btn {
     white-space: pre-wrap;
   }
 }
-/* .evento-disponible > .fc-list-event-graphic > .fc-list-event-dot {
-  border: 5px solid #ba2828;
-}
-.evento-no-disponible > .fc-list-event-graphic > .fc-list-event-dot {
-  border: 5px solid rgb(114, 110, 110);
-} */
-
-
-/* @media screen and (min-width: 1023px) {
-  .evento-disponible {
-    background-color: #ba2828;
-    border-color: #ba2828;
-  }
-  
-
-  .evento-no-disponible {
-    background-color: rgb(114, 110, 110);
-    border-color: rgb(114, 110, 110);
-  }
-}  */
