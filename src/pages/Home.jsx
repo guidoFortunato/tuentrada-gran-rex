@@ -42,9 +42,9 @@ export const Home = () => {
   if (eventos === undefined || eventos.length === 0) {
     return (
       <>
-        <header className="animate__animated animate__fadeIn animate__fast">
+        <header>
           <div className="header-home">
-            <h1 className="titulo-principal animate__animated animate__fadeInDown animate__fast	">
+            <h1 className="titulo-principal">
               <strong>{dataInfoGeneral.physicalConfiguration.name}</strong>
             </h1>
             <FormBusqueda />
@@ -52,11 +52,11 @@ export const Home = () => {
         </header>
         <main>
           <div className="container">
-            <div className="row animate__animated animate__fadeIn animate__fast">
+            <div>
               <div className="col-12 text-center mt-3 ">
                 <h2
                   style={{ fontSize: "30px" }}
-                  className="my-3 animate__fadeIn animate__delay-1s tittle-h2"
+                  className="my-3 tittle-h2"
                 >
                   No hay eventos disponibles
                 </h2>
@@ -77,8 +77,9 @@ export const Home = () => {
         <div
           className={`min-h-[50vh] flex justify-center items-center flex-col`}
         >
-          <h1
-            className={`m-0 text-5xl text-[${dataInfoGeneral.colorH1}] titulo-principal`}
+          <h1 
+            style={{color:dataInfoGeneral.colorH1}}
+            className={`m-0 text-5xl titulo-principal`}
           >
             <strong>{dataInfoGeneral.pages[0].title}</strong>
           </h1>
