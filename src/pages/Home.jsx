@@ -75,46 +75,165 @@ export const Home = () => {
         className={`bg-no-repeat bg-cover bg-center`}
       >
         <div
-          className={`min-h-[50vh] flex justify-center items-center flex-col`}
+          className={`min-h-[50vh] flex justify-center items-start flex-col ps-4`}
         >
           <h1
             className={`m-0 text-5xl text-[${dataInfoGeneral.colorH1}] titulo-principal`}
           >
             <strong>{dataInfoGeneral.pages[0].title}</strong>
           </h1>
+        <button type="button" className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 focus:outline-none inline-block">Calendario</button>
         </div>
-      </header>
-      <main>
-        <div className="container mx-auto">
-          <div className="grid-grid-cols-1">
-            <h2 className="text-3xl my-3">Próximos eventos</h2>
-          </div>
+        
+        
 
-         
-            <InfiniteScroll
-              dataLength={eventos.length}
-              next={() => setPage((prevPage) => prevPage + 1)}
-              hasMore={data.links.next !== null}
-              loader={<Spinner />}
-            >
-             
-                {eventos.map((item) => (
-                  <CardEvento
-                    linkEvento={item.slug + "/" + item.id}
-                    img={item.image}
-                    status={item.state}
-                    title={item.name}
-                    key={item.id}
-                    disabled={item.disabled}
-                    reason={item.reason}
-                    disponibility={item.disponibility}
-                    data={item}
-                  />
-                ))}
-            
-            </InfiniteScroll>
-          
+      </header>
+      <main className="container mx-auto my-14 px-3 lg:px-10 xl:px-3">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6 lg:gap-10">
+          <figure className="relative max-w-sm cursor-pointer">
+            <a href="#">
+              <img
+                className="rounded-lg"
+                src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/content/content-gallery-3.png"
+                alt="image description"
+              />
+            </a>
+            {/* <figcaption className="absolute px-4 text-lg text-white bottom-6">
+              <p>
+                Do you want to get notified when a new component is added to
+                Flowbite?
+              </p>
+            </figcaption> */}
+          </figure>
+          <figure className="relative max-w-sm cursor-pointer">
+            <a href="#">
+              <img
+                className="rounded-lg"
+                src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/content/content-gallery-3.png"
+                alt="image description"
+              />
+            </a>
+            {/* <figcaption className="absolute px-4 text-lg text-white bottom-6">
+              <p>
+                Do you want to get notified when a new component is added to
+                Flowbite?
+              </p>
+            </figcaption> */}
+          </figure>
+          <figure className="relative max-w-sm cursor-pointer">
+            <a href="#">
+              <img
+                className="rounded-lg"
+                src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/content/content-gallery-3.png"
+                alt="image description"
+              />
+            </a>
+            {/* <figcaption className="absolute px-4 text-lg text-white bottom-6">
+              <p>
+                Do you want to get notified when a new component is added to
+                Flowbite?
+              </p>
+            </figcaption> */}
+          </figure>
+          <figure className="relative max-w-sm cursor-pointer">
+            <a href="#">
+              <img
+                className="rounded-lg"
+                src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/content/content-gallery-3.png"
+                alt="image description"
+              />
+            </a>
+            {/* <figcaption className="absolute px-4 text-lg text-white bottom-6">
+              <p>
+                Do you want to get notified when a new component is added to
+                Flowbite?
+              </p>
+            </figcaption> */}
+          </figure>
+          <figure className="relative max-w-sm cursor-pointer">
+            <a href="#">
+              <img
+                className="rounded-lg"
+                src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/content/content-gallery-3.png"
+                alt="image description"
+              />
+            </a>
+            {/* <figcaption className="absolute px-4 text-lg text-white bottom-6">
+              <p>
+                Do you want to get notified when a new component is added to
+                Flowbite?
+              </p>
+            </figcaption> */}
+          </figure>
+          <figure className="relative max-w-sm cursor-pointer">
+            <a href="#">
+              <img
+                className="rounded-lg"
+                src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/content/content-gallery-3.png"
+                alt="image description"
+              />
+            </a>
+            {/* <figcaption className="absolute px-4 text-lg text-white bottom-6">
+              <p>
+                Do you want to get notified when a new component is added to
+                Flowbite?
+              </p>
+            </figcaption> */}
+          </figure>
+          <figure className="relative max-w-sm cursor-pointer">
+            <a href="#">
+              <img
+                className="rounded-lg"
+                src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/content/content-gallery-3.png"
+                alt="image description"
+              />
+            </a>
+            {/* <figcaption className="absolute px-4 text-lg text-white bottom-6">
+              <p>
+                Do you want to get notified when a new component is added to
+                Flowbite?
+              </p>
+            </figcaption> */}
+          </figure>
+          <figure className="relative max-w-sm cursor-pointer">
+            <a href="#">
+              <img
+                className="rounded-lg"
+                src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/content/content-gallery-3.png"
+                alt="image description"
+              />
+            </a>
+            {/* <figcaption className="absolute px-4 text-lg text-white bottom-6">
+              <p>
+                Do you want to get notified when a new component is added to
+                Flowbite?
+              </p>
+            </figcaption> */}
+          </figure>
         </div>
+
+        {/* <InfiniteScroll
+          dataLength={eventos.length}
+          next={() => setPage((prevPage) => prevPage + 1)}
+          hasMore={data.links.next !== null}
+          loader={<Spinner />}
+        >
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+            {eventos.map((item) => (
+              <CardEvento
+                linkEvento={item.slug + "/" + item.id}
+                img={item.image}
+                status={item.state}
+                title={item.name}
+                key={item.id}
+                disabled={item.disabled}
+                reason={item.reason}
+                disponibility={item.disponibility}
+                data={item}
+              />
+            ))}
+          </div>
+        </InfiniteScroll> */}
       </main>
     </>
   );
