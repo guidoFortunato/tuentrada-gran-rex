@@ -39,7 +39,7 @@ export const NavBar = () => {
               {dataInfoGeneral.name}
             </span>
           </Link>
-          <div className="flex lg:w-2/5">
+          <div className="flex lg:w-1/3">
          
             <button
               type="button"
@@ -100,12 +100,12 @@ export const NavBar = () => {
               <FormBusqueda2 />
               
             </div>
-            <ul style={{ backgroundColor: `${dataInfoGeneral.backgroundNavbar}` }} className={`flex flex-col font-medium border border-transparent lg:flex-row lg:space-x-8 mt-2 space-y-1 lg:space-y-0 lg:mt-0 lg:border-0 lg:bg-white ${isButtonCollapsed ? "" : "hidden"  } lg:flex `}>
+            <ul style={{ backgroundColor: `${dataInfoGeneral.backgroundNavbar}` }} className={`flex flex-col font-medium  lg:flex-row lg:space-x-8 mt-2 space-y-1 lg:space-y-0 lg:mt-0 lg:border-2 lg:border-transparent lg:bg-white ${isButtonCollapsed ? "" : "hidden"  } lg:flex `}>
               <li>
                 <Link
                   to="/"
                   onClick={() => handleButtonsCollapse()}
-                  className={`text-[${dataInfoGeneral.colorSiteName}] font-semibold`}
+                  className={`text-[${dataInfoGeneral.colorSiteName}] font-semibold border-b-2 border-transparent lg:hover:border-b-[#855F35] transition-all duration-300 ease-in-out`}
                 >
                   Home
                 </Link>
@@ -114,7 +114,7 @@ export const NavBar = () => {
                 <Link
                   to="/calendario"
                   onClick={() => handleButtonsCollapse()}
-                  className="text-[#855F35] font-semibold"
+                  className="text-[#855F35] font-semibold border-b-2 border-transparent lg:hover:border-b-[#855F35] transition-all duration-300 ease-in-out"
                 >
                   Calendario
                 </Link>
@@ -123,7 +123,7 @@ export const NavBar = () => {
                 <Link
                   to="/historia"
                   onClick={() => handleButtonsCollapse()}
-                  className="text-[#855F35] font-semibold"
+                  className="text-[#855F35] font-semibold border-b-2 border-transparent lg:hover:border-b-[#855F35] transition-all duration-300 ease-in-out"
                 >
                   Historia
                 </Link>
@@ -132,7 +132,7 @@ export const NavBar = () => {
                 <button
                   id="dropdownNavbarLink"
                   data-dropdown-toggle="dropdownNavbar"
-                  className="flex items-center font-semibold justify-between     text-[#855F35] rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0  md:p-0 md:w-auto"
+                  className="flex items-center font-semibold justify-between text-[#855F35] rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0  md:p-0 md:w-auto"
                   onClick={handleDropdown}
                 >
                   Seguinos

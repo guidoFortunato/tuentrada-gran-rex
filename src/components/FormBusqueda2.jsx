@@ -61,7 +61,7 @@ export const FormBusqueda2 = () => {
             type="search"
             id="default-search"
             className={`focus:ring-[${dataInfoGeneral.backgroundButton}] focus:border-[${dataInfoGeneral.backgroundButton}] block w-full p-4 pl-10 text-sm text-gray-900 border border-gray-300 rounded-3xl bg-gray-50`}
-            placeholder="Buscar evento"
+            placeholder="Ingrese un evento..."
             required
           />
           <button
