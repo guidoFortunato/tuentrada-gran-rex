@@ -7,7 +7,6 @@ import { getData, getEnvVariables } from "../helpers";
 // import { SliderDestacado } from "../components/";
 
 import "../css/header.css";
-import "../css/footer.css";
 
 const { VITE_API_EVENTOS, VITE_EMAIL, VITE_PASS } = getEnvVariables();
 
