@@ -12,6 +12,7 @@ export const BusquedaEventos = () => {
   const [data, setData] = useState(null);
   const { idVenue, dataInfoGeneral } = useContext(EventosContext);
   const { pathname, search } = useLocation();
+  const [isLoading, setIsLoading] = useState(false);
   const query = search.split("=")[1];
   const paramSearch = (pathname.split("/")[2] + search).split("=")[0] + "=";
   // console.log(paramSearch);
@@ -27,6 +28,7 @@ export const BusquedaEventos = () => {
   useEffect(() => {
     if (idVenue !== "") {
       const getInfo = async () => {
+        setIsLoading(true)
         const { data } = await getData(
           VITE_API_EVENTOS + idVenue + "/search/" + query,
           VITE_EMAIL,
@@ -34,16 +36,22 @@ export const BusquedaEventos = () => {
         );
         console.log({ data });
         setData(data);
+        setIsLoading(false)
       };
       getInfo();
     }
   }, [idVenue, query, search]);
 
+  console.log({isLoading})
+  
   if (data === null) return <Spinner />;
-
+  
+  if (isLoading === true) return <Spinner />;
+  
   if (data === undefined) return <Navigate to="/" />;
-
+  
   if (paramSearch !== "search?q=") return <Navigate to="/" />;
+  console.log({isLoading})
 
   return (
     <>
@@ -54,7 +62,7 @@ export const BusquedaEventos = () => {
             <strong className="mx-1">"{query.split("%20").join(" ")}"</strong>:
           </h2>
         </div>
-        <div className="flex justify-center items-center text-center mt-10">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6 lg:gap-10 mt-10 px-3 lg:px-0">
           {data.length > 0 ? (
             data.map((item) => (
               <CardEvento
@@ -90,7 +98,7 @@ export const BusquedaEventos = () => {
               <span className="sr-only">Info</span>
               <div>
                 <span className="font-medium">
-                  No existen eventos para tu búsqueda
+                  No se encontraron eventos para tu búsqueda
                 </span>
               </div>
             </div>
@@ -101,7 +109,7 @@ export const BusquedaEventos = () => {
             <button
               style={{ color: dataInfoGeneral.colorButton, backgroundColor: dataInfoGeneral.backgroundButton}}
               type="button"
-              className="text-white bg-blue-700 hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+              className="text-white bg-blue-700 hover:bg-blue-800 focus:outline-none font-medium rounded-full text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
             >
               Home
             </button>

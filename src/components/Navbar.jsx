@@ -63,7 +63,7 @@ export const NavBar = () => {
               className="h-8 mr-3"
               alt={dataInfoGeneral.altLogo}
             />
-            <span className="self-center text-xl font-semibold whitespace-nowrap">
+            <span className="self-center text-xl font-bold whitespace-nowrap">
               {dataInfoGeneral.name}
             </span>
           </Link>
@@ -142,7 +142,7 @@ export const NavBar = () => {
                 <Link
                   to="/"
                   onClick={() => handleButtonsCollapse()}
-                  className={`text-[${dataInfoGeneral.colorSiteName}] font-semibold border-b-2 border-transparent lg:hover:border-b-[#855F35] transition-all duration-300 ease-in-out`}
+                  className={`text-[${dataInfoGeneral.colorSiteName}] font-bold border-b-2 border-transparent lg:hover:border-b-[#855F35] transition-all duration-300 ease-in-out`}
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -161,7 +161,7 @@ export const NavBar = () => {
                 <Link
                   to="/calendario"
                   onClick={() => handleButtonsCollapse()}
-                  className="text-[#855F35] font-semibold border-b-2 border-transparent lg:hover:border-b-[#855F35] transition-all duration-300 ease-in-out"
+                  className="text-[#855F35] font-bold border-b-2 border-transparent lg:hover:border-b-[#855F35] transition-all duration-300 ease-in-out"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -180,7 +180,7 @@ export const NavBar = () => {
                 <Link
                   to="/historia"
                   onClick={() => handleButtonsCollapse()}
-                  className="text-[#855F35] font-semibold border-b-2 border-transparent lg:hover:border-b-[#855F35] transition-all duration-300 ease-in-out"
+                  className="text-[#855F35] font-bold border-b-2 border-transparent lg:hover:border-b-[#855F35] transition-all duration-300 ease-in-out"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -214,7 +214,7 @@ export const NavBar = () => {
                 <Link
                   to="/"
                   onClick={() => handleButtonsCollapse()}
-                  className={`text-[${dataInfoGeneral.colorSiteName}] font-semibold border-b-2 border-transparent lg:hover:border-b-[#855F35] transition-all duration-300 ease-in-out`}
+                  className={`text-[${dataInfoGeneral.colorSiteName}] font-bold border-b-2 border-transparent lg:hover:border-b-[#855F35] transition-all duration-300 ease-in-out`}
                 >
                   Home
                 </Link>
@@ -223,7 +223,7 @@ export const NavBar = () => {
                 <Link
                   to="/"
                   onClick={() => handleButtonsCollapse()}
-                  className={`text-[${dataInfoGeneral.colorSiteName}] font-semibold border-b-2 border-transparent lg:hover:border-b-[#855F35] transition-all duration-300 ease-in-out`}
+                  className={`text-[${dataInfoGeneral.colorSiteName}] font-bold border-b-2 border-transparent lg:hover:border-b-[#855F35] transition-all duration-300 ease-in-out`}
                 >
                   Calendario
                 </Link>
@@ -232,7 +232,7 @@ export const NavBar = () => {
                 <Link
                   to="/"
                   onClick={() => handleButtonsCollapse()}
-                  className={`text-[${dataInfoGeneral.colorSiteName}] font-semibold border-b-2 border-transparent lg:hover:border-b-[#855F35] transition-all duration-300 ease-in-out`}
+                  className={`text-[${dataInfoGeneral.colorSiteName}] font-bold border-b-2 border-transparent lg:hover:border-b-[#855F35] transition-all duration-300 ease-in-out`}
                 >
                   Historia
                 </Link>
@@ -241,7 +241,7 @@ export const NavBar = () => {
                 <Link
                   to="/calendario"
                   onClick={() => handleButtonsCollapse()}
-                  className="text-[#855F35] font-semibold border-b-2 border-transparent lg:hover:border-b-[#855F35] transition-all duration-300 ease-in-out"
+                  className="text-[#855F35] font-bold border-b-2 border-transparent lg:hover:border-b-[#855F35] transition-all duration-300 ease-in-out"
                 >
                   Horarios y Llegada
                 </Link>
@@ -250,7 +250,7 @@ export const NavBar = () => {
                 <Link
                   to="/historia"
                   onClick={() => handleButtonsCollapse()}
-                  className="text-[#855F35] font-semibold border-b-2 border-transparent lg:hover:border-b-[#855F35] transition-all duration-300 ease-in-out"
+                  className="text-[#855F35] font-bold border-b-2 border-transparent lg:hover:border-b-[#855F35] transition-all duration-300 ease-in-out"
                 >
                   Bases y condiciones
                 </Link>
