@@ -54,10 +54,7 @@ export const Home = () => {
           <div className="container">
             <div>
               <div className="col-12 text-center mt-3 ">
-                <h2
-                  style={{ fontSize: "30px" }}
-                  className="my-3 tittle-h2"
-                >
+                <h2 style={{ fontSize: "30px" }} className="my-3 tittle-h2">
                   No hay eventos disponibles
                 </h2>
               </div>
@@ -72,33 +69,52 @@ export const Home = () => {
     <>
       <header
         style={{ backgroundImage: `url(${dataInfoGeneral.backgroundImage})` }}
-        className={`bg-no-repeat bg-cover bg-center`}
+        className={`bg-no-repeat bg-cover bg-center container mx-auto `}
       >
         <div
-          className={`min-h-[50vh] flex justify-center items-start flex-col ps-4`}
+          className={`min-h-[50vh] flex justify-center items-start flex-col ps-4 ` }
         >
-          <h1 
-            style={{color:dataInfoGeneral.colorH1}}
+          <h1
+            style={{ color: dataInfoGeneral.colorH1, paddingBottom: "20px" }}
             className={`m-0 text-5xl titulo-principal`}
           >
             <strong>{dataInfoGeneral.pages[0].title}</strong>
           </h1>
-        <button type="button" className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 focus:outline-none inline-block">Calendario</button>
+          <div className="flex flex-col md:flex-row">
+            <p
+              style={{ color: dataInfoGeneral.colorButton }}
+              className="md:w-4/5 md:mr-6 mt-6 md:mt-0 text-[dataInfoGeneral.colorButton]"
+            >
+              ¡No te pierdas ni un solo evento! Encontrá toda la programación
+              completa en el siguiente enlace y preparate para vivir
+              experiencias únicas. ¡Descubrí tus próximos momentos inolvidables
+              aquí!
+            </p>
+            <div style={{ display: "flex", alignItems: "center" }}>
+              <button
+                style={{
+                  color: dataInfoGeneral.colorButton,
+                  background: dataInfoGeneral.backgroundButton,
+                  width: "auto",
+                }}
+                type="button"
+                className="w-full md:w-auto mt-6 md:mt-0 bg-[dataInfoGeneral.backgroundButton] hover:bg-[#5c452c] hover:border-[dataInfoGeneral.colorHoverButton] text-[dataInfoGeneral.colorButton] font-medium rounded-3xl text-sm px-4 py-2"
+              >
+                Calendario
+              </button>
+            </div>
+          </div>
         </div>
-        
-        
-
       </header>
-      <main className="container mx-auto my-14 px-3 lg:px-10 xl:px-3">
-      <InfiniteScroll
+      <main className="container mx-auto my-14 px-3 lg:px-0 ">
+        <InfiniteScroll
           dataLength={eventos.length}
           next={() => setPage((prevPage) => prevPage + 1)}
           hasMore={data.links.next !== null}
           loader={<Spinner />}
         >
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6 lg:gap-10">
-          
-        
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6 lg:gap-10">
+            {/*         
             {eventos.map((item) => (
               <CardEvento
                 linkEvento={item.slug + "/" + item.id}
@@ -111,12 +127,49 @@ export const Home = () => {
                 disponibility={item.disponibility}
                 data={item}
               />
-            ))}
-         
-          
-        </div>
+            ))} */}
 
-        
+            <figure className="relative max-w-sm cursor-pointer">
+              <a href="#">
+                <img
+                  className="rounded-lg md:rounded-none"
+                  src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/content/content-gallery-3.png"
+                  alt="image description"
+                />
+              </a>
+         
+            </figure>
+            <figure className="relative max-w-sm cursor-pointer">
+              <a href="#">
+                <img
+                  className="rounded-lg md:rounded-none"
+                  src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/content/content-gallery-3.png"
+                  alt="image description"
+                />
+              </a>
+            
+            </figure>
+            <figure className="relative max-w-sm cursor-pointer">
+              <a href="#">
+                <img
+                  className="rounded-lg md:rounded-none"
+                  src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/content/content-gallery-3.png"
+                  alt="image description"
+                />
+              </a>
+           
+            </figure>
+            <figure className="relative max-w-sm cursor-pointer">
+              <a href="#">
+                <img
+                  className="rounded-lg md:rounded-none"
+                  src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/content/content-gallery-3.png"
+                  alt="image description"
+                />
+              </a>
+             
+            </figure>
+          </div>
         </InfiniteScroll>
       </main>
     </>
