@@ -1,11 +1,24 @@
 export const EventNotAvailable = ({ img, title }) => {
   return (
-    <div className={"linkEvento cursor-default"}>
+    <>
+    <figure className="relative max-w-sm cursor-default">
+        <div>
+          <img className="rounded-lg md:rounded-none opacity-40" src={img} alt={title} />
+        </div>
+        <button type="button" className="absolute top-1 left-1 text-white bg-red-600 cursor-default rounded-2xl text-xs px-3 py-1.5 text-center mr-2 mb-2">No disponible</button>
+        {/* <figcaption className="absolute px-4 text-lg text-white bottom-6">
+              <p>
+                Do you want to get notified when a new component is added to
+                Flowbite?
+              </p>
+            </figcaption> */}
+      </figure>
+    {/* <div className={"linkEvento cursor-default"}>
       <img
         src={img}
         className={"card-img-top card-img-bottom cursor-default img-disabled"}
         alt="img logo"
-      />
+        />
       <div>
         <h5
           className="btn-status"
@@ -18,7 +31,7 @@ export const EventNotAvailable = ({ img, title }) => {
             left: "10px",
             fontSize: "10px",
           }}
-        >
+          >
           No disponible
         </h5>
       </div>
@@ -27,6 +40,7 @@ export const EventNotAvailable = ({ img, title }) => {
           {title.toUpperCase()}
         </h3>
       </div>
-    </div>
+    </div> */}
+          </>
   );
 };

@@ -4,14 +4,27 @@ import { EventosContext } from "../../context/EventosProvider";
 
 export const EventAvailable = ({ linkEvento, img, title, data }) => {
   const { setIdProducto } = useContext(EventosContext);
-  
+
   return (
-    <Link to={linkEvento} className={"linkEvento"} onClick={()=>setIdProducto(data.id)} >
+    <>
+      <figure className="relative max-w-sm cursor-pointer">
+        <Link to={linkEvento}>
+          <img className="rounded-lg md:rounded-none" src={img} alt={title} />
+        </Link>
+        <button type="button" className="absolute top-1 left-1 text-white bg-green-600 rounded-2xl text-xs px-3 py-1.5 text-center mr-2 mb-2">Disponible</button>
+        {/* <figcaption className="absolute px-4 text-lg text-white bottom-6">
+              <p>
+                Do you want to get notified when a new component is added to
+                Flowbite?
+              </p>
+            </figcaption> */}
+      </figure>
+      {/* <Link to={linkEvento} className={"linkEvento"} onClick={()=>setIdProducto(data.id)} >
       <img
         src={img}
         className={"card-img-top card-img-bottom"}
         alt={title}
-      />
+        />
       <div>
         <h5
           className="btn-status"
@@ -24,7 +37,7 @@ export const EventAvailable = ({ linkEvento, img, title, data }) => {
             left: "10px",
             fontSize: "10px",
           }}
-        >
+          >
           Disponible
         </h5>
       </div>
@@ -33,6 +46,7 @@ export const EventAvailable = ({ linkEvento, img, title, data }) => {
           {title.toUpperCase()}
         </h3>
       </div>
-    </Link>
+    </Link> */}
+    </>
   );
 };
