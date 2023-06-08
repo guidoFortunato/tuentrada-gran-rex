@@ -1,24 +1,24 @@
 import { useContext, useEffect, useState } from "react";
-import { EventosContext } from "../context/EventosProvider";
+import { Link } from "react-router-dom";
 import { Navigate, useLocation } from "react-router-dom";
 
-import { Link } from "react-router-dom";
-import { CardEvento, FormBusqueda, Spinner } from "../components";
+import { EventosContext } from "../context/EventosProvider";
+import { CardEvento, Spinner } from "../components";
 import { getData, getEnvVariables } from "../helpers";
 
 const { VITE_API_EVENTOS, VITE_EMAIL, VITE_PASS } = getEnvVariables();
 
 export const BusquedaEventos = () => {
   const [data, setData] = useState(null);
-  const { idVenue } = useContext(EventosContext);
-  const { pathname, search }  = useLocation();
-  const query = search.split('=')[1] 
-  const paramSearch = (pathname.split('/')[2] + search).split('=')[0] + "="
-  console.log(paramSearch)
+  const { idVenue, dataInfoGeneral } = useContext(EventosContext);
+  const { pathname, search } = useLocation();
+  const [isLoading, setIsLoading] = useState(false);
+  const query = search.split("=")[1];
+  const paramSearch = (pathname.split("/")[2] + search).split("=")[0] + "=";
+  // console.log(paramSearch);
   // console.log({pathname,search})
   // console.log({pathname,search})
 
-  
   useEffect(() => {
     setTimeout(() => {
       window.scrollTo(0, 0);
@@ -28,38 +28,46 @@ export const BusquedaEventos = () => {
   useEffect(() => {
     if (idVenue !== "") {
       const getInfo = async () => {
-        const {data} = await getData(VITE_API_EVENTOS + idVenue + "/search/" + query, VITE_EMAIL, VITE_PASS );
-        console.log({data})
+        setIsLoading(true)
+        const { data } = await getData(
+          VITE_API_EVENTOS + idVenue + "/search/" + query,
+          VITE_EMAIL,
+          VITE_PASS
+        );
+        console.log({ data });
         setData(data);
+        setIsLoading(false)
       };
       getInfo();
     }
   }, [idVenue, query, search]);
 
-
+  // console.log({isLoading})
+  
   if (data === null) return <Spinner />;
   
+  if (isLoading === true) return <Spinner />;
+  
   if (data === undefined) return <Navigate to="/" />;
-
-  if (paramSearch !== 'search?q=') return <Navigate to="/" />;  
-
+  
+  if (paramSearch !== "search?q=") return <Navigate to="/" />;
+  console.log({isLoading})
 
   return (
     <>
-      <div className="container animate__animated animate__fadeIn animate__fast">
-        <div className="row justify-content-center my-5 form">
-          <FormBusqueda />
-        </div>
-        <div className="row justify-content-center py-5">
-          <h2 className="text-center">
-            Resultados de tu búsqueda <strong>"{query.split('%20').join(' ')}"</strong>
+      <div className="container mx-auto">
+        <div className="flex justify-center mt-10">
+          <h2>
+            Resultados de tu búsqueda
+            <strong className="mx-1">"{query.split("%20").join(" ")}"</strong>:
           </h2>
         </div>
-        <div className="row justify-content-center">
+        
           {data.length > 0 ? (
-            data.map((item) => (
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6 lg:gap-10 mt-10 px-3 lg:px-0">
+           { data.map((item) => (
               <CardEvento
-                linkEvento={'/' + item.slug + "/" + item.id}
+                linkEvento={"/" + item.slug + "/" + item.id}
                 img={item.image}
                 status={item.state}
                 title={item.name}
@@ -69,24 +77,44 @@ export const BusquedaEventos = () => {
                 disponibility={item.disponibility}
                 data={item}
               />
-            ))
+            ))}
+            </div>
           ) : (
             <div
-              className="d-flex justify-content-center alert alert-danger my-5 w-50"
+              className="mt-10 flex justify-center mx-auto w-1/2 p-4 mb-4 text-sm text-red-800 border border-red-300 rounded-lg bg-red-50 dark:bg-gray-800 dark:text-red-400 dark:border-red-800"
               role="alert"
             >
-              No existen eventos para tu búsqueda
+              <svg
+                aria-hidden="true"
+                className="flex-shrink-0 inline w-5 h-5 mr-3"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fillRule="evenodd"
+                  d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z"
+                  clipRule="evenodd"
+                ></path>
+              </svg>
+              <span className="sr-only">Info</span>
+              <div>
+                <span className="font-medium">
+                  No se encontraron eventos para tu búsqueda
+                </span>
+              </div>
             </div>
           )}
-        </div>
-        <div className="row">
-          <Link to="/" className="text-center">
-            <div
-              style={{ fontSize: "14px", padding: "3px 20px" }}
-              className="btn-general"
+        
+        <div className="flex justify-center mt-10">
+          <Link to="/">
+            <button
+              style={{ color: dataInfoGeneral.colorButton, backgroundColor: dataInfoGeneral.backgroundButton}}
+              type="button"
+              className="text-white bg-blue-700 hover:bg-blue-800 focus:outline-none font-medium rounded-full text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
             >
               Home
-            </div>
+            </button>
           </Link>
         </div>
       </div>
