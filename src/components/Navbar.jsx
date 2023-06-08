@@ -37,7 +37,7 @@ export const NavBar = () => {
         }}
         className={`shadow-light border-gray-200 sticky top-0 z-30`}
       >
-        <div className="max-w-screen-2xl flex flex-wrap items-center justify-between mx-auto p-4">
+        <div className="max-w-screen-2xl flex flex-wrap items-center justify-between mx-auto pt-4 pb-4 lg:px-4 lg:pb-0 ">
           <Link to="/" className="flex items-center">
             <img
               src={dataInfoGeneral.logo}
