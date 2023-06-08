@@ -14,6 +14,9 @@ const { VITE_API_EVENTOS, VITE_EMAIL, VITE_PASS } = getEnvVariables();
 
 export const DetalleEvento = () => {
   const [data, setData] = useState(null);
+  const [fechas, setFechas] = useState(true);
+  const [descripcion, setDescripcion] = useState(false);
+  const [redes, setRedes] = useState(false);
   const { idVenue, dataInfoGeneral, idProducto } = useContext(EventosContext);
   const { url } = dataInfoGeneral;
   const { name, id } = useParams();
@@ -36,13 +39,6 @@ export const DetalleEvento = () => {
     navigate(lastPath);
   };
 
-  const handleOpenModal = () => {
-    setModalIsOpen(true);
-  };
-
-  const handleCloseModal = () => {
-    setModalIsOpen(false);
-  };
 
   useEffect(() => {
     if (idVenue !== "") {
@@ -74,7 +70,7 @@ export const DetalleEvento = () => {
           ></div>
         </section>
         <h2
-          style={{ color: dataInfoGeneral.colorSiteName }}
+          // style={{ color: dataInfoGeneral.colorSiteName }}
           className="text-3xl font-bold mt-4"
         >
           {data?.name.toUpperCase()}
@@ -88,103 +84,164 @@ export const DetalleEvento = () => {
           ></p>
         </div>
 
-        <Accordion data-accordion="open">
-          <Accordion.Panel >
-            <Accordion.Title>Fechas</Accordion.Title>
-            <Accordion.Content>
+        <div id="accordion-open" data-accordion="open">
+          <h2 id="accordion-open-heading-1">
+            <button
+              type="button"
+              className="flex items-center justify-between w-full p-5 font-medium text-left text-gray-500 border-b-2 border-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800"
+              data-accordion-target="#accordion-open-body-1"
+              aria-expanded="true"
+              aria-controls="accordion-open-body-1"
+              onClick={ ()=>setFechas(prevState => !prevState) }
+            >
+              <span className="flex items-center text-base">
+                
+                Fechas
+              </span>
+              <svg
+                data-accordion-icon
+                className={`w-6 h-6 ${fechas ? "rotate-180" : ""} shrink-0`}
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fillRule="evenodd"
+                  d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                  clipRule="evenodd"
+                ></path>
+              </svg>
+            </button>
+          </h2>
+          <div
+            id="accordion-open-body-1"
+            className={ fechas ? "" : "hidden" }
+            aria-labelledby="accordion-open-heading-1"
+          >
+            <div className="p-5 border border-b-0 border-gray-200 dark:border-gray-700 dark:bg-gray-900">
               <p className="mb-2 text-gray-500 dark:text-gray-400">
-                
-                  Flowbite is an open-source library of interactive components
-                  built on top of Tailwind CSS including buttons, dropdowns,
-                  modals, navbars, and more.
-                
+                Flowbite is an open-source library of interactive components
+                built on top of Tailwind CSS including buttons, dropdowns,
+                modals, navbars, and more.
               </p>
               <p className="text-gray-500 dark:text-gray-400">
-                Check out this guide to learn how to
+                Check out this guide to learn how to{" "}
                 <a
-                  className="text-cyan-600 hover:underline dark:text-cyan-500"
-                  href="https://flowbite.com/docs/getting-started/introduction/"
+                  href="/docs/getting-started/introduction/"
+                  className="text-blue-600 dark:text-blue-500 hover:underline"
                 >
                   get started
-                </a>
-               
-                  and start developing websites even faster with components on
-                  top of Tailwind CSS.
-               
+                </a>{" "}
+                and start developing websites even faster with components on top
+                of Tailwind CSS.
               </p>
-            </Accordion.Content>
-          </Accordion.Panel>
-          <Accordion.Panel>
-            <Accordion.Title>Is there a Figma file available?</Accordion.Title>
-            <Accordion.Content>
+            </div>
+          </div>
+          <h2 id="accordion-open-heading-2">
+            <button
+              type="button"
+              className="flex items-center justify-between w-full p-5 font-medium text-left text-gray-500 border-b-2 border-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800"
+              data-accordion-target="#accordion-open-body-2"
+              aria-expanded="false"
+              aria-controls="accordion-open-body-2"
+              onClick={ ()=>setDescripcion(prevState => !prevState) }
+            >
+              <span className="flex items-center">
+                
+                Descripción
+              </span>
+              <svg
+                data-accordion-icon
+                className={`w-6 h-6 ${ descripcion ? "rotate-180" : ""} shrink-0`}
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fillRule="evenodd"
+                  d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                  clipRule="evenodd"
+                ></path>
+              </svg>
+            </button>
+          </h2>
+          <div
+            id="accordion-open-body-2"
+            className={ descripcion ? "" : "hidden" }
+            aria-labelledby="accordion-open-heading-2"
+          >
+            <div className="p-5 border border-b-0 border-gray-200 dark:border-gray-700">
               <p className="mb-2 text-gray-500 dark:text-gray-400">
-                
-                  Flowbite is first conceptualized and designed using the Figma
-                  software so everything you see in the library has a design
-                  equivalent in our Figma file.
-                
+                Flowbite is first conceptualized and designed using the Figma
+                software so everything you see in the library has a design
+                equivalent in our Figma file.
               </p>
               <p className="text-gray-500 dark:text-gray-400">
-                Check out the
+                Check out the{" "}
                 <a
-                  className="text-cyan-600 hover:underline dark:text-cyan-500"
                   href="https://flowbite.com/figma/"
+                  className="text-blue-600 dark:text-blue-500 hover:underline"
                 >
                   Figma design system
-                </a>
-                
-                  based on the utility classes from Tailwind CSS and components
-                  from Flowbite.
-              
+                </a>{" "}
+                based on the utility classes from Tailwind CSS and components
+                from Flowbite.
               </p>
-            </Accordion.Content>
-          </Accordion.Panel>
-          <Accordion.Panel>
-            <Accordion.Title>
-              What are the differences between Flowbite and Tailwind UI?
-            </Accordion.Title>
-            <Accordion.Content>
-              <p className="mb-2 text-gray-500 dark:text-gray-400">
-                
-                  The main difference is that the core components from Flowbite
-                  are open source under the MIT license, whereas Tailwind UI is
-                  a paid product. Another difference is that Flowbite relies on
-                  smaller and standalone components, whereas Tailwind UI offers
-                  sections of pages.
-                
-              </p>
-              <p className="mb-2 text-gray-500 dark:text-gray-400">
-                
-                  However, we actually recommend using both Flowbite, Flowbite
-                  Pro, and even Tailwind UI as there is no technical reason
-                  stopping you from using the best of two worlds.
+            </div>
+          </div>
+          <h2 id="accordion-open-heading-3">
+            <button
+              type="button"
+              className="flex items-center justify-between w-full p-5 font-medium text-left text-gray-500 border-b-2 border-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800"
+              data-accordion-target="#accordion-open-body-3"
+              aria-expanded="false"
+              aria-controls="accordion-open-body-3"
+              onClick={ ()=>setRedes(prevState => !prevState) }
+            >
+              <span className="flex items-center">
                
+                Redes
+              </span>
+              <svg
+                data-accordion-icon
+                className={`w-6 h-6 ${redes ? "rotate-180" : ""} shrink-0`}
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fillRule="evenodd"
+                  d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                  clipRule="evenodd"
+                ></path>
+              </svg>
+            </button>
+          </h2>
+          <div
+            id="accordion-open-body-3"
+            className={ redes ? "" : "hidden" }
+            aria-labelledby="accordion-open-heading-3"
+          >
+            <div className="p-5 border border-t-0 border-gray-200 dark:border-gray-700">
+              <p className="mb-2 text-gray-500 dark:text-gray-400">
+                The main difference is that the core components from Flowbite
+                are open source under the MIT license, whereas Tailwind UI is a
+                paid product. Another difference is that Flowbite relies on
+                smaller and standalone components, whereas Tailwind UI offers
+                sections of pages.
+              </p>
+              <p className="mb-2 text-gray-500 dark:text-gray-400">
+                However, we actually recommend using both Flowbite, Flowbite
+                Pro, and even Tailwind UI as there is no technical reason
+                stopping you from using the best of two worlds.
               </p>
               <p className="mb-2 text-gray-500 dark:text-gray-400">
                 Learn more about these technologies:
               </p>
-              <ul className="list-disc pl-5 text-gray-500 dark:text-gray-400">
-                <li>
-                  <a
-                    className="text-cyan-600 hover:underline dark:text-cyan-500"
-                    href="https://flowbite.com/pro/"
-                  >
-                    <p>Flowbite Pro</p>
-                  </a>
-                </li>
-                <li>
-                  <a
-                    className="text-cyan-600 hover:underline dark:text-cyan-500"
-                    href="https://tailwindui.com/"
-                    rel="nofollow"
-                  >
-                    <p>Tailwind UI</p>
-                  </a>
-                </li>
-              </ul>
-            </Accordion.Content>
-          </Accordion.Panel>
-        </Accordion>
+            
+            </div>
+          </div>
+        </div>
       </div>
       {/* <div
         className="container my-5 px-5 animate_animated animatefadeIn animate_fast"
