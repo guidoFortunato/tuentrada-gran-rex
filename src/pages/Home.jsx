@@ -148,7 +148,7 @@ export const Home = () => {
       
         }}
         type="button"
-        className="w-full mt-6 md:mt-0 bg-[dataInfoGeneral.backgroundButton] hover:bg-[#5c452c] hover:border-[dataInfoGeneral.colorHoverButton] text-[dataInfoGeneral.colorButton] font-medium rounded-3xl text-sm px-4 py-2 text-base lg:text-lg md:text-base"
+        className="w-full mt-6 md:mt-0 bg-[dataInfoGeneral.backgroundButton] hover:bg-[#5c452c] hover:border-[dataInfoGeneral.colorHoverButton] text-[dataInfoGeneral.colorButton] font-medium rounded-3xl  px-4 py-2 text-base lg:text-lg md:text-base"
       >
         Calendario
       </button>

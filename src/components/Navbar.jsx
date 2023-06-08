@@ -54,7 +54,7 @@ export const NavBar = () => {
           backgroundColor: `${dataInfoGeneral.backgroundNavbar}`,
           fontFamily: "Raleway",
         }}
-        className={`shadow-light border-gray-200 sticky top-0 z-30`}
+        className={`shadow-light border-gray-200 sticky top-0 z-30 pb-3 lg:pb-0`}
       >
         <div className="max-w-screen-2xl flex flex-wrap items-center justify-between mx-auto px-4 pt-4">
           <Link to="/" className="flex items-center">
@@ -134,15 +134,15 @@ export const NavBar = () => {
             </div>
             <ul
               style={{ backgroundColor: `${dataInfoGeneral.backgroundNavbar}` }}
-              className={`flex flex-col font-medium  lg:flex-row lg:space-x-8 mt-2 space-y-1 lg:space-y-0 lg:mt-0 lg:border-2 lg:border-transparent lg:bg-white ${
+              className={`flex  font-medium  flex-row lg:space-x-8 justify-end space-x-4 lg:bg-white mt-4 lg:mt-0 ${
                 isButtonCollapsed ? "" : "hidden"
               } lg:flex `}
             >
               <li>
-                <Link
-                  to="/"
+              <Link
+                  to="/calendario"
                   onClick={() => handleButtonsCollapse()}
-                  className={`text-[${dataInfoGeneral.colorSiteName}] font-bold border-b-2 border-transparent lg:hover:border-b-[#855F35] transition-all duration-300 ease-in-out`}
+                  className="text-[#855F35] font-bold border-b-2 border-transparent lg:hover:border-b-[#855F35] transition-all duration-300 ease-in-out"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -206,7 +206,7 @@ export const NavBar = () => {
           >
             <ul
               style={{ backgroundColor: `${dataInfoGeneral.backgroundNavbar}` }}
-              className={`flex flex-col font-medium  lg:flex-row lg:space-x-8 space-y-1 lg:space-y-0 lg:mt-0 lg:border-2 lg:border-transparent lg:bg-white ${
+              className={`flex flex-col font-medium  lg:flex-row lg:space-x-8 lg:mt-0 lg:border-2 lg:border-transparent lg:bg-white space-y-2 lg:space-y-0 ${
                 isButtonCollapsed ? "" : "hidden"
               } lg:flex `}
             >
