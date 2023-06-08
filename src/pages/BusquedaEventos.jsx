@@ -62,9 +62,10 @@ export const BusquedaEventos = () => {
             <strong className="mx-1">"{query.split("%20").join(" ")}"</strong>:
           </h2>
         </div>
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6 lg:gap-10 mt-10 px-3 lg:px-0">
+        
           {data.length > 0 ? (
-            data.map((item) => (
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6 lg:gap-10 mt-10 px-3 lg:px-0">
+           { data.map((item) => (
               <CardEvento
                 linkEvento={"/" + item.slug + "/" + item.id}
                 img={item.image}
@@ -76,10 +77,11 @@ export const BusquedaEventos = () => {
                 disponibility={item.disponibility}
                 data={item}
               />
-            ))
+            ))}
+            </div>
           ) : (
             <div
-              className="flex p-4 mb-4 text-sm text-red-800 border border-red-300 rounded-lg bg-red-50 dark:bg-gray-800 dark:text-red-400 dark:border-red-800"
+              className="mt-10 flex justify-center mx-auto w-1/2 p-4 mb-4 text-sm text-red-800 border border-red-300 rounded-lg bg-red-50 dark:bg-gray-800 dark:text-red-400 dark:border-red-800"
               role="alert"
             >
               <svg
@@ -103,7 +105,7 @@ export const BusquedaEventos = () => {
               </div>
             </div>
           )}
-        </div>
+        
         <div className="flex justify-center mt-10">
           <Link to="/">
             <button
