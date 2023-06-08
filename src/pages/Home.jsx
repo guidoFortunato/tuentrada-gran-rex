@@ -118,9 +118,8 @@ export const Home = () => {
         style={{ backgroundImage: `url(${dataInfoGeneral.backgroundImage})` }}
         className={`bg-no-repeat bg-cover bg-center container mx-auto `}
       >
-<<<<<<< HEAD
         
-       <div className={`min-h-[50vh] flex justify-center items-start flex-col `} >
+       <div className={`min-h-[50vh] flex justify-center items-start flex-col `}>
         <div style={{display:"flex", justifyContent:"center", width:"100%"}}>
   <h1
     style={{ color: dataInfoGeneral.colorH1, fontSize:"2.5em", width:"92%", }}
@@ -157,42 +156,6 @@ export const Home = () => {
   </div>
 </div>
 
-=======
-        <div
-          className={`min-h-[50vh] flex justify-center items-start flex-col ps-4 `}
-        >
-          <h1
-            style={{ color: dataInfoGeneral.colorH1, paddingBottom: "20px" }}
-            className={`m-0 text-5xl titulo-principal`}
-          >
-            <strong>{dataInfoGeneral.pages[0].title}</strong>
-          </h1>
-          <div className="flex flex-col md:flex-row">
-            <p
-              style={{ color: dataInfoGeneral.colorButton }}
-              className="md:w-4/5 md:mr-6 mt-6 md:mt-0 text-[dataInfoGeneral.colorButton]"
-            >
-              ¡No te pierdas ni un solo evento! Encontrá toda la programación
-              completa en el siguiente enlace y preparate para vivir
-              experiencias únicas. ¡Descubrí tus próximos momentos inolvidables
-              aquí!
-            </p>
-            <div style={{ display: "flex", alignItems: "center" }}>
-              <button
-                style={{
-                  color: dataInfoGeneral.colorButton,
-                  background: dataInfoGeneral.backgroundButton,
-                  width: "auto",
-                }}
-                type="button"
-                className="w-full md:w-auto mt-6 md:mt-0 bg-[dataInfoGeneral.backgroundButton] hover:bg-[#5c452c] hover:border-[dataInfoGeneral.colorHoverButton] text-[dataInfoGeneral.colorButton] font-medium rounded-3xl text-sm px-4 py-2"
-              >
-                Calendario
-              </button>
-            </div>
-          </div>
-        </div>
->>>>>>> c3b259ba504062edb003872b39b920723113125f
       </header>
       <main className="container mx-auto my-14 px-3 lg:px-0 ">
         <InfiniteScroll
@@ -252,11 +215,7 @@ export const Home = () => {
                   alt="image description"
                 />
               </a>
-<<<<<<< HEAD
-            </figure>
-=======
             </figure> */}
->>>>>>> c3b259ba504062edb003872b39b920723113125f
           </div>
         </InfiniteScroll>
       </main>
