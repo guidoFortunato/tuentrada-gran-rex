@@ -11,27 +11,27 @@ export const NavBar = () => {
   const [isSearchCollapsed, setIsSearchCollapsed] = useState(false);
   const [isButtonCollapsed, setIsButtonCollapsed] = useState(false);
   const [isDropdownCollapsed, setIsDropdownCollapsed] = useState(false);
-  // const [navbar, setNavbar] = useState(false);
+  const [navbar, setNavbar] = useState(false);
 
 
-	// const changeBackground = () => {
-	// 	if (window.scrollY >= 1) {
-	// 		setNavbar(true);
-	// 	} else {
-	// 		setNavbar(false);
-	// 	}
-	// };
+	const changeBackground = () => {
+		if (window.scrollY >= 1) {
+			setNavbar(true);
+		} else {
+			setNavbar(false);
+		}
+	};
 
-	// useEffect(() => {
-	// 	window.addEventListener('scroll', changeBackground);
-  //   console.log('escucha scroll')
+	useEffect(() => {
+		window.addEventListener('scroll', changeBackground);
 
-	// 	return () => {
-	// 		window.removeEventListener('scroll', changeBackground);
-	// 	};
-	// }, []);
+		return () => {
+			window.removeEventListener('scroll', changeBackground);
+		};
+	}, []);
 
-  console.log({ dataInfoGeneral });
+  // console.log({ dataInfoGeneral });
+  console.log('se renderiza todo el componente')
 
   const handleSearchCollapse = () =>
     setIsSearchCollapsed((prevState) => !prevState);
@@ -54,7 +54,7 @@ export const NavBar = () => {
           backgroundColor: `${dataInfoGeneral.backgroundNavbar}`,
           fontFamily: "Raleway",
         }}
-        className={`shadow-light border-gray-200 sticky top-0 z-30 pb-3 lg:pb-0`}
+        className={`${ navbar ? "shadow-light" : ""} border-gray-200 sticky top-0 z-30 pb-3 lg:pb-0`}
       >
         <div className="max-w-screen-2xl flex flex-wrap items-center justify-between mx-auto px-4 pt-4">
           <Link to="/" className="flex items-center">

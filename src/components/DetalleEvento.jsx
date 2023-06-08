@@ -61,7 +61,7 @@ export const DetalleEvento = () => {
 
   return (
     <>
-      <div className="container mx-auto my-5 px-3 ">
+      <div className="container mx-auto mb-5 px-3 ">
         <section
           className={`bg-[url("assets/images/responsive.jpg")]  lg:bg-[url("assets/images/desktop.jpg")]  bg-no-repeat bg-cover bg-center mx-auto`}
         >
@@ -71,9 +71,9 @@ export const DetalleEvento = () => {
         </section>
         <h2
           // style={{ color: dataInfoGeneral.colorSiteName }}
-          className="text-3xl font-bold mt-4"
+          className="text-3xl  mt-4 mb-2"
         >
-          {data?.name.toUpperCase()}
+          {data?.name}
         </h2>
         <div className="grid grid-cols-1">
           <p
@@ -118,23 +118,25 @@ export const DetalleEvento = () => {
             className={ fechas ? "" : "hidden" }
             aria-labelledby="accordion-open-heading-1"
           >
-            <div className="p-5 border border-b-0 border-gray-200 dark:border-gray-700 dark:bg-gray-900">
-              <p className="mb-2 text-gray-500 dark:text-gray-400">
-                Flowbite is an open-source library of interactive components
-                built on top of Tailwind CSS including buttons, dropdowns,
-                modals, navbars, and more.
-              </p>
-              <p className="text-gray-500 dark:text-gray-400">
-                Check out this guide to learn how to{" "}
-                <a
-                  href="/docs/getting-started/introduction/"
-                  className="text-blue-600 dark:text-blue-500 hover:underline"
-                >
-                  get started
-                </a>{" "}
-                and start developing websites even faster with components on top
-                of Tailwind CSS.
-              </p>
+            <div className="grid grid-cols-3 p-3 lg:p-5 border border-b-0 border-gray-200 dark:border-gray-700 dark:bg-gray-900 text-sm">
+              <div className="flex flex-col lg:flex-row lg:items-center">
+                {/* <div className="mr-2">Viernes</div> */}
+                <div className="mr-2">2 de junio</div>
+                <div>20:00hs</div>
+              </div>
+              <div className="flex flex-col lg:flex-row  justify-center">
+                <div className="mr-2">Precios y </div>
+                <div>Ubicaciones</div>
+              </div>
+              <div className="flex  items-center mx-auto">
+              <button
+                style={{ color: dataInfoGeneral.colorButton, backgroundColor: dataInfoGeneral.backgroundButton}}
+                type="button"
+                className="text-white bg-blue-700 hover:bg-blue-800 focus:outline-none font-medium rounded-full text-sm px-3 py-2.5 text-center  dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+            >
+              Comprar
+            </button>
+              </div>
             </div>
           </div>
           <h2 id="accordion-open-heading-2">
