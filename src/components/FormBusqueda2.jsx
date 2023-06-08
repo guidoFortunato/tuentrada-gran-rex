@@ -1,7 +1,7 @@
 import { useContext, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import { EventosContext } from "../context/EventosProvider"; 
-import { Spinner } from "./Spinner";
+// import { Spinner } from "./Spinner";
 
 export const FormBusqueda2 = () => {
   const { dataInfoGeneral } = useContext(EventosContext);
@@ -9,7 +9,7 @@ export const FormBusqueda2 = () => {
   let navigate = useNavigate();
   const { pathname, search } = useLocation();
   // console.log({pathname})
-  console.log({dataInfoGeneral})
+  // console.log({dataInfoGeneral})
 
   localStorage.setItem("lastPath", pathname + search);
 
@@ -23,10 +23,9 @@ export const FormBusqueda2 = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log('click')
-    // if (evento.length === 0) return; // sweet alert
-    // navigate(`/busqueda-eventos/search?q=${evento}`);
-    // handleEvento("");
+    if (evento.length === 0) return; // sweet alert
+    navigate(`/busqueda-eventos/search?q=${evento}`);
+    handleEvento("");
   };
 
 
@@ -62,8 +61,10 @@ export const FormBusqueda2 = () => {
             id="default-search"
             // className={`focus:ring-[${dataInfoGeneral.backgroundButton}] focus:border-[${dataInfoGeneral.backgroundButton}] block w-full p-4 pl-10 text-sm text-gray-900 border border-gray-300 rounded-3xl bg-gray-50`}
             className={`focus:ring-[#5c452c] focus:border-[#5c452c] block w-full p-4 pl-10 text-sm text-gray-900 border border-gray-300 rounded-3xl bg-gray-50`}
-            placeholder="Ingrese un evento..."
+            placeholder="Buscar un evento..."
             required
+            value={evento}
+            onChange={(e) => handleEvento(e.target.value)}
           />
           <button
             type="submit"

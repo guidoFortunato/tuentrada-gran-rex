@@ -29,7 +29,7 @@ export const Home = () => {
       const getInfo = async () => {
         const newLocal = `${VITE_API_EVENTOS + idVenue}?page=${page}`;
         const info = await getData(newLocal, VITE_EMAIL, VITE_PASS);
-        // console.log(info.data)
+        console.log(info);
         setData(info);
         setEventos((prevEventos) => prevEventos.concat(info.data));
       };
@@ -42,24 +42,71 @@ export const Home = () => {
   if (eventos === undefined || eventos.length === 0) {
     return (
       <>
-        <header>
-          <div className="header-home">
-            <h1 className="titulo-principal">
-              <strong>{dataInfoGeneral.physicalConfiguration.name}</strong>
-            </h1>
-            <FormBusqueda />
-          </div>
-        </header>
-        <main>
-          <div className="container">
-            <div>
-              <div className="col-12 text-center mt-3 ">
-                <h2 style={{ fontSize: "30px" }} className="my-3 tittle-h2">
-                  No hay eventos disponibles
-                </h2>
-              </div>
+        <header
+          style={{ backgroundImage: `url(${dataInfoGeneral.backgroundImage})` }}
+          className={`bg-no-repeat bg-cover bg-center container mx-auto `}
+        >
+         <div
+          className={`min-h-[50vh] flex justify-center items-start flex-col ps-4 `}
+        >
+          <h1
+            style={{ color: dataInfoGeneral.colorH1, paddingBottom: "20px" }}
+            className={`m-0 text-5xl titulo-principal`}
+          >
+            <strong>{dataInfoGeneral.pages[0].title}</strong>
+          </h1>
+          <div className="flex flex-col md:flex-row">
+            <p
+              style={{ color: dataInfoGeneral.colorButton }}
+              className="md:w-4/5 md:mr-6 mt-6 md:mt-0 text-[dataInfoGeneral.colorButton]"
+            >
+              ¡No te pierdas ni un solo evento! Encontrá toda la programación
+              completa en el siguiente enlace y preparate para vivir
+              experiencias únicas. ¡Descubrí tus próximos momentos inolvidables
+              aquí!
+            </p>
+            <div style={{ display: "flex", alignItems: "center" }}>
+              <button
+                style={{
+                  color: dataInfoGeneral.colorButton,
+                  background: dataInfoGeneral.backgroundButton,
+                  width: "auto",
+                }}
+                type="button"
+                className="w-full md:w-auto mt-6 md:mt-0 bg-[dataInfoGeneral.backgroundButton] hover:bg-[#5c452c] hover:border-[dataInfoGeneral.colorHoverButton] text-[dataInfoGeneral.colorButton] font-medium rounded-3xl text-sm px-4 py-2"
+              >
+                Calendario
+              </button>
             </div>
           </div>
+        </div>
+        </header>
+        <main className="container mx-auto my-14 px-3 lg:px-0">
+          
+            <div
+              className="w-1/2 flex justify-center mx-auto p-4 mb-4 text-md text-blue-900 rounded-lg bg-blue-300 dark:bg-gray-800 dark:text-blue-400"
+              role="alert"
+            >
+              <svg
+                aria-hidden="true"
+                className="flex-shrink-0 inline w-5 h-5 mr-3"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fillRule="evenodd"
+                  d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z"
+                  clipRule="evenodd"
+                ></path>
+              </svg>
+              <span className="sr-only">Info</span>
+              <div>
+                <span className="font-medium"></span>
+                No hay eventos disponibles
+              </div>
+            </div>
+         
         </main>
       </>
     );
@@ -71,6 +118,7 @@ export const Home = () => {
         style={{ backgroundImage: `url(${dataInfoGeneral.backgroundImage})` }}
         className={`bg-no-repeat bg-cover bg-center container mx-auto `}
       >
+<<<<<<< HEAD
         
        <div className={`min-h-[50vh] flex justify-center items-start flex-col `} >
         <div style={{display:"flex", justifyContent:"center", width:"100%"}}>
@@ -109,6 +157,42 @@ export const Home = () => {
   </div>
 </div>
 
+=======
+        <div
+          className={`min-h-[50vh] flex justify-center items-start flex-col ps-4 `}
+        >
+          <h1
+            style={{ color: dataInfoGeneral.colorH1, paddingBottom: "20px" }}
+            className={`m-0 text-5xl titulo-principal`}
+          >
+            <strong>{dataInfoGeneral.pages[0].title}</strong>
+          </h1>
+          <div className="flex flex-col md:flex-row">
+            <p
+              style={{ color: dataInfoGeneral.colorButton }}
+              className="md:w-4/5 md:mr-6 mt-6 md:mt-0 text-[dataInfoGeneral.colorButton]"
+            >
+              ¡No te pierdas ni un solo evento! Encontrá toda la programación
+              completa en el siguiente enlace y preparate para vivir
+              experiencias únicas. ¡Descubrí tus próximos momentos inolvidables
+              aquí!
+            </p>
+            <div style={{ display: "flex", alignItems: "center" }}>
+              <button
+                style={{
+                  color: dataInfoGeneral.colorButton,
+                  background: dataInfoGeneral.backgroundButton,
+                  width: "auto",
+                }}
+                type="button"
+                className="w-full md:w-auto mt-6 md:mt-0 bg-[dataInfoGeneral.backgroundButton] hover:bg-[#5c452c] hover:border-[dataInfoGeneral.colorHoverButton] text-[dataInfoGeneral.colorButton] font-medium rounded-3xl text-sm px-4 py-2"
+              >
+                Calendario
+              </button>
+            </div>
+          </div>
+        </div>
+>>>>>>> c3b259ba504062edb003872b39b920723113125f
       </header>
       <main className="container mx-auto my-14 px-3 lg:px-0 ">
         <InfiniteScroll
@@ -118,7 +202,7 @@ export const Home = () => {
           loader={<Spinner />}
         >
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6 lg:gap-10">
-            {/*         
+                    
             {eventos.map((item) => (
               <CardEvento
                 linkEvento={item.slug + "/" + item.id}
@@ -131,9 +215,9 @@ export const Home = () => {
                 disponibility={item.disponibility}
                 data={item}
               />
-            ))} */}
+            ))}
 
-            <figure className="relative max-w-sm cursor-pointer">
+            {/* <figure className="relative max-w-sm cursor-pointer">
               <a href="#">
                 <img
                   className="rounded-lg md:rounded-none"
@@ -168,7 +252,11 @@ export const Home = () => {
                   alt="image description"
                 />
               </a>
+<<<<<<< HEAD
             </figure>
+=======
+            </figure> */}
+>>>>>>> c3b259ba504062edb003872b39b920723113125f
           </div>
         </InfiniteScroll>
       </main>

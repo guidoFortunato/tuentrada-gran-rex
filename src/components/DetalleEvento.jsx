@@ -5,7 +5,6 @@ import { Navigate, useNavigate, useParams } from "react-router-dom";
 import { EventosContext } from "../context/EventosProvider";
 import { Spinner, TablaPrecios } from "./";
 import { getData, getEnvVariables } from "../helpers";
-
 import DOMPurify from "dompurify";
 
 import "../css/detalleevento.css";
@@ -43,12 +42,16 @@ export const DetalleEvento = () => {
   const handleCloseModal = () => {
     setModalIsOpen(false);
   };
- 
+
   useEffect(() => {
     if (idVenue !== "") {
       const getInfo = async () => {
-        const {data} = await getData(VITE_API_EVENTOS + idVenue + "/details/" + id, VITE_EMAIL, VITE_PASS );
-        console.log(data)
+        const { data } = await getData(
+          VITE_API_EVENTOS + idVenue + "/details/" + id,
+          VITE_EMAIL,
+          VITE_PASS
+        );
+        console.log(data);
         setData(data);
       };
       getInfo();
@@ -56,12 +59,35 @@ export const DetalleEvento = () => {
   }, [idVenue, id, name]);
 
   if (data === null || dataInfoGeneral.length === 0) return <Spinner />;
-  
+
   if (data === undefined || data.length === 0) return <Navigate to="/" />;
 
   return (
     <>
-      <div
+      <div className="container mx-auto my-5 px-3 lg:px-0">
+        <section
+          className={`bg-[url("assets/images/responsive.jpg")]  lg:bg-[url("assets/images/desktop.jpg")]  bg-no-repeat bg-cover bg-center mx-auto`}
+        >
+          <div
+            className={`min-h-[40vh] flex justify-center items-start flex-col`}
+          ></div>
+        </section>
+        <h2
+          style={{ color: dataInfoGeneral.colorSiteName }}
+          className="text-3xl font-bold mt-4"
+        >
+          {data?.name.toUpperCase()}
+        </h2>
+        <div className="grid grid-cols-1">
+          <p
+            className="text-base"
+            dangerouslySetInnerHTML={{
+              __html: DOMPurify.sanitize(data?.description),
+            }}
+          ></p>
+        </div>
+      </div>
+      {/* <div
         className="container my-5 px-5 animate_animated animatefadeIn animate_fast"
       >
         <h2 className="titleDetalle">{data?.name.toUpperCase()}</h2>
@@ -144,52 +170,12 @@ export const DetalleEvento = () => {
           </div>
           <div className="row justify-content-center">
             <div className="col-12 col-lg-8 my-5">
-              {/* <hr /> */}
+            
               <TablaPrecios precios={data?.performances[0].prices} />
             </div>
-            {/* <div className="col-12 col-lg-4 my-5 text-center">
-              <img
-                src={evento?.imagenes.plano}
-                alt="ubicaciones gran rex"
-                className="img-fluid"
-                style={{ cursor: "default" }}
-              />
-              <button
-                className="btn-general mt-3 ocultar-responsive"
-                onClick={handleOpenModal}
-              >
-                {dataEventos?.detalle.botonPlano.charAt(0).toUpperCase() + dataEventos?.detalle.botonPlano.slice(1).toLowerCase()}
-              </button>
-              <div className="position-relative" onClick={handleCloseModal}>
-                <Modal
-                  isOpen={modalIsOpen}
-                  onRequestClose={handleCloseModal}
-                  appElement={document.getElementById("root")}
-                  // className={`${modalIsOpen ? "modal-open" : "modal-transition"}`}
-                  style={{
-                    opacity: "0",
-                    transition: "opacity 0.7s ease-in-out",
-                  }}
-                  ref={modalRef}
-                >
-                  <img
-                    src={evento?.imagenes.plano}
-                    alt="ubicaciones gran rex"
-                    className="img-modal"
-                  />
-
-                  <img
-                    src={"storage/imagenes/close.svg"}
-                    alt="icono cerrar"
-                    className="icono-close"
-                    onClick={handleCloseModal}
-                  />
-                </Modal>
-              </div>
-            </div> */}
           </div>
         </div>
-      </div>
+      </div> */}
           
     </>
   );
