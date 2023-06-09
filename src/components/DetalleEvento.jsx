@@ -1,10 +1,9 @@
 import { useContext, useEffect, useRef, useState } from "react";
 import { Navigate, useNavigate, useParams } from "react-router-dom";
-import { Accordion } from "flowbite-react";
 // import Modal from "react-modal";
 
 import { EventosContext } from "../context/EventosProvider";
-import { Spinner, TablaPrecios } from "./";
+import { FechaEvento, ModalPrecios, Spinner, TablaPrecios } from "./";
 import { getData, getEnvVariables } from "../helpers";
 import DOMPurify from "dompurify";
 
@@ -39,7 +38,6 @@ export const DetalleEvento = () => {
     navigate(lastPath);
   };
 
-
   useEffect(() => {
     if (idVenue !== "") {
       const getInfo = async () => {
@@ -54,6 +52,8 @@ export const DetalleEvento = () => {
       getInfo();
     }
   }, [idVenue, id, name]);
+
+  // console.log({dataInfoGeneral})
 
   if (data === null || dataInfoGeneral.length === 0) return <Spinner />;
 
@@ -82,9 +82,14 @@ export const DetalleEvento = () => {
               __html: DOMPurify.sanitize(data?.description),
             }}
           ></p>
+          <ModalPrecios />
         </div>
 
-        <div id="accordion-open" data-accordion="open">
+        <div
+          id="accordion-open"
+          data-accordion="open"
+          className=""
+        >
           <h2 id="accordion-open-heading-1">
             <button
               type="button"
@@ -92,12 +97,9 @@ export const DetalleEvento = () => {
               data-accordion-target="#accordion-open-body-1"
               aria-expanded="true"
               aria-controls="accordion-open-body-1"
-              onClick={ ()=>setFechas(prevState => !prevState) }
+              onClick={() => setFechas((prevState) => !prevState)}
             >
-              <span className="flex items-center text-base">
-                
-                Fechas
-              </span>
+              <span className="flex items-center text-base">Fechas</span>
               <svg
                 data-accordion-icon
                 className={`w-6 h-6 ${fechas ? "rotate-180" : ""} shrink-0`}
@@ -115,28 +117,13 @@ export const DetalleEvento = () => {
           </h2>
           <div
             id="accordion-open-body-1"
-            className={ fechas ? "" : "hidden" }
+            className={fechas ? "" : "hidden"}
             aria-labelledby="accordion-open-heading-1"
           >
             <div className="grid grid-cols-3 p-3 lg:p-5 border border-b-0 border-gray-200 dark:border-gray-700 dark:bg-gray-900 text-sm">
-              <div className="flex flex-col lg:flex-row lg:items-center">
-                {/* <div className="mr-2">Viernes</div> */}
-                <div className="mr-2">2 de junio</div>
-                <div>20:00hs</div>
-              </div>
-              <div className="flex flex-col lg:flex-row  justify-center">
-                <div className="mr-2">Precios y </div>
-                <div>Ubicaciones</div>
-              </div>
-              <div className="flex  items-center mx-auto">
-              <button
-                style={{ color: dataInfoGeneral.colorButton, backgroundColor: dataInfoGeneral.backgroundButton}}
-                type="button"
-                className="text-white bg-blue-700 hover:bg-blue-800 focus:outline-none font-medium rounded-full text-sm px-3 py-2.5 text-center  dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-            >
-              Comprar
-            </button>
-              </div>
+              {data.performances.map((item) => (
+                <FechaEvento data={item} key={item.id} />
+              ))}
             </div>
           </div>
           <h2 id="accordion-open-heading-2">
@@ -146,15 +133,14 @@ export const DetalleEvento = () => {
               data-accordion-target="#accordion-open-body-2"
               aria-expanded="false"
               aria-controls="accordion-open-body-2"
-              onClick={ ()=>setDescripcion(prevState => !prevState) }
+              onClick={() => setDescripcion((prevState) => !prevState)}
             >
-              <span className="flex items-center">
-                
-                Descripción
-              </span>
+              <span className="flex items-center">Descripción</span>
               <svg
                 data-accordion-icon
-                className={`w-6 h-6 ${ descripcion ? "rotate-180" : ""} shrink-0`}
+                className={`w-6 h-6 ${
+                  descripcion ? "rotate-180" : ""
+                } shrink-0`}
                 fill="currentColor"
                 viewBox="0 0 20 20"
                 xmlns="http://www.w3.org/2000/svg"
@@ -169,7 +155,7 @@ export const DetalleEvento = () => {
           </h2>
           <div
             id="accordion-open-body-2"
-            className={ descripcion ? "" : "hidden" }
+            className={descripcion ? "" : "hidden"}
             aria-labelledby="accordion-open-heading-2"
           >
             <div className="p-5 border border-b-0 border-gray-200 dark:border-gray-700">
@@ -198,12 +184,9 @@ export const DetalleEvento = () => {
               data-accordion-target="#accordion-open-body-3"
               aria-expanded="false"
               aria-controls="accordion-open-body-3"
-              onClick={ ()=>setRedes(prevState => !prevState) }
+              onClick={() => setRedes((prevState) => !prevState)}
             >
-              <span className="flex items-center">
-               
-                Redes
-              </span>
+              <span className="flex items-center">Redes</span>
               <svg
                 data-accordion-icon
                 className={`w-6 h-6 ${redes ? "rotate-180" : ""} shrink-0`}
@@ -221,7 +204,7 @@ export const DetalleEvento = () => {
           </h2>
           <div
             id="accordion-open-body-3"
-            className={ redes ? "" : "hidden" }
+            className={redes ? "" : "hidden"}
             aria-labelledby="accordion-open-heading-3"
           >
             <div className="p-5 border border-t-0 border-gray-200 dark:border-gray-700">
@@ -240,7 +223,6 @@ export const DetalleEvento = () => {
               <p className="mb-2 text-gray-500 dark:text-gray-400">
                 Learn more about these technologies:
               </p>
-            
             </div>
           </div>
         </div>
