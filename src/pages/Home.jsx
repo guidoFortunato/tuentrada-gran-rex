@@ -131,7 +131,7 @@ export const Home = () => {
   <div className="flex flex-col md:flex-row" style={{justifyContent:"center", alignItems:"center"}}>
     <p
       style={{ color: dataInfoGeneral.colorButton, }}
-      className={`md:w-3/5 md:mr-6 pl-10 pr-10 md:pl-0 md:pr-0 text-base md:text-base lg:text-lg`}
+      className={`md:w-3/5 md:mr-6 pl-10 pr-10 md:pl-0 md:pr-0 text-base md:text-base lg:text-lg text-center md:text-start`}
     >
       ¡No te pierdas ni un solo evento! Encontrá toda la programación
       completa en el siguiente enlace y preparate para vivir
