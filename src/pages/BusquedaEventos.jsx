@@ -9,10 +9,10 @@ import { getData, getEnvVariables } from "../helpers";
 const { VITE_API_EVENTOS, VITE_EMAIL, VITE_PASS } = getEnvVariables();
 
 export const BusquedaEventos = () => {
-  const [data, setData] = useState(null);
+  const [ data, setData ] = useState(null);
   const { idVenue, dataInfoGeneral } = useContext(EventosContext);
   const { pathname, search } = useLocation();
-  const [isLoading, setIsLoading] = useState(false);
+  const [ isLoading, setIsLoading ] = useState(false);
   const query = search.split("=")[1];
   const paramSearch = (pathname.split("/")[2] + search).split("=")[0] + "=";
   // console.log(paramSearch);
@@ -51,7 +51,7 @@ export const BusquedaEventos = () => {
   if (data === undefined) return <Navigate to="/" />;
   
   if (paramSearch !== "search?q=") return <Navigate to="/" />;
-  console.log({isLoading})
+ 
 
   return (
     <>
