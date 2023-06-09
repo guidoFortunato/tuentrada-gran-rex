@@ -3,7 +3,13 @@ import { Navigate, useNavigate, useParams } from "react-router-dom";
 // import Modal from "react-modal";
 
 import { EventosContext } from "../context/EventosProvider";
-import { FechaEvento, ModalPrecios, Spinner, TablaPrecios } from "./";
+import {
+  FechaEvento,
+  ModalPrecios,
+  Spinner,
+  TablaPrecios,
+  TablaPrecios2,
+} from "./";
 import { getData, getEnvVariables } from "../helpers";
 import DOMPurify from "dompurify";
 
@@ -85,11 +91,7 @@ export const DetalleEvento = () => {
           <ModalPrecios />
         </div>
 
-        <div
-          id="accordion-open"
-          data-accordion="open"
-          className=""
-        >
+        <div id="accordion-open" data-accordion="open" className="">
           <h2 id="accordion-open-heading-1">
             <button
               type="button"
@@ -99,7 +101,9 @@ export const DetalleEvento = () => {
               aria-controls="accordion-open-body-1"
               onClick={() => setFechas((prevState) => !prevState)}
             >
-              <span className="flex items-center text-base">Fechas</span>
+              <span className="flex items-center text-xl font-semibold">
+                {data.performances.length > 1 ? "Fechas" : "Fecha"}
+              </span>
               <svg
                 data-accordion-icon
                 className={`w-6 h-6 ${fechas ? "rotate-180" : ""} shrink-0`}
@@ -135,7 +139,9 @@ export const DetalleEvento = () => {
               aria-controls="accordion-open-body-2"
               onClick={() => setDescripcion((prevState) => !prevState)}
             >
-              <span className="flex items-center">Descripción</span>
+              <span className="flex items-center text-xl font-semibold">
+                Descripción
+              </span>
               <svg
                 data-accordion-icon
                 className={`w-6 h-6 ${
@@ -159,22 +165,12 @@ export const DetalleEvento = () => {
             aria-labelledby="accordion-open-heading-2"
           >
             <div className="p-5 border border-b-0 border-gray-200 dark:border-gray-700">
-              <p className="mb-2 text-gray-500 dark:text-gray-400">
-                Flowbite is first conceptualized and designed using the Figma
-                software so everything you see in the library has a design
-                equivalent in our Figma file.
-              </p>
-              <p className="text-gray-500 dark:text-gray-400">
-                Check out the{" "}
-                <a
-                  href="https://flowbite.com/figma/"
-                  className="text-blue-600 dark:text-blue-500 hover:underline"
-                >
-                  Figma design system
-                </a>{" "}
-                based on the utility classes from Tailwind CSS and components
-                from Flowbite.
-              </p>
+              <p
+                className="text-base"
+                dangerouslySetInnerHTML={{
+                  __html: DOMPurify.sanitize(data?.history),
+                }}
+              ></p>
             </div>
           </div>
           <h2 id="accordion-open-heading-3">
@@ -186,7 +182,9 @@ export const DetalleEvento = () => {
               aria-controls="accordion-open-body-3"
               onClick={() => setRedes((prevState) => !prevState)}
             >
-              <span className="flex items-center">Redes</span>
+              <span className="flex items-center text-xl font-semibold">
+                Redes
+              </span>
               <svg
                 data-accordion-icon
                 className={`w-6 h-6 ${redes ? "rotate-180" : ""} shrink-0`}
@@ -225,6 +223,9 @@ export const DetalleEvento = () => {
               </p>
             </div>
           </div>
+        </div>
+        <div>
+          <TablaPrecios2 />
         </div>
       </div>
       {/* <div

@@ -11,3 +11,4 @@ export * from "./NavBar";
 export * from "./SliderDestacado";
 export * from "./Spinner";
 export * from "./TablaPrecios";
+export * from "./TablaPrecios2";
