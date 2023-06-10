@@ -9,10 +9,10 @@ import { getData, getEnvVariables } from "../helpers";
 const { VITE_API_EVENTOS, VITE_EMAIL, VITE_PASS } = getEnvVariables();
 
 export const BusquedaEventos = () => {
-  const [data, setData] = useState(null);
+  const [ data, setData ] = useState(null);
   const { idVenue, dataInfoGeneral } = useContext(EventosContext);
   const { pathname, search } = useLocation();
-  const [isLoading, setIsLoading] = useState(false);
+  const [ isLoading, setIsLoading ] = useState(false);
   const query = search.split("=")[1];
   const paramSearch = (pathname.split("/")[2] + search).split("=")[0] + "=";
   // console.log(paramSearch);
@@ -51,12 +51,12 @@ export const BusquedaEventos = () => {
   if (data === undefined) return <Navigate to="/" />;
   
   if (paramSearch !== "search?q=") return <Navigate to="/" />;
-  console.log({isLoading})
+ 
 
   return (
     <>
       <div className="container mx-auto">
-        <div className="flex justify-center mt-10">
+        <div className="flex justify-center mt-10 text-center">
           <h2>
             Resultados de tu búsqueda
             <strong className="mx-1">"{query.split("%20").join(" ")}"</strong>:
@@ -81,25 +81,27 @@ export const BusquedaEventos = () => {
             </div>
           ) : (
             <div
-              className="mt-10 flex justify-center mx-auto w-1/2 p-4 mb-4 text-sm text-red-800 border border-red-300 rounded-lg bg-red-50 dark:bg-gray-800 dark:text-red-400 dark:border-red-800"
+              className="mt-10 flex justify-center mx-auto  p-4 mb-4 text-sm   }"
               role="alert"
             >
-              <svg
-                aria-hidden="true"
-                className="flex-shrink-0 inline w-5 h-5 mr-3"
-                fill="currentColor"
-                viewBox="0 0 20 20"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  fillRule="evenodd"
-                  d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z"
-                  clipRule="evenodd"
-                ></path>
-              </svg>
+                {/* <svg
+                  aria-hidden="true"
+                  className="flex-shrink-0 inline w-5 h-5 mr-3"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    // fillRule="evenodd"
+                    // d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z"
+                    clipRule="evenodd"
+                  ></path>
+                </svg> */}
               <span className="sr-only">Info</span>
               <div>
-                <span className="font-medium">
+                <span className="font-medium" style={{display:"flex", justifyContent:"center", alignItems:"center", flexDirection:"column",}}>
+                  <img className="w-60 lg:w-1/2" src="https://www.tuentrada.com/teatro/gran-rex/imagenes/error.png" alt="" />
+                 
                   No se encontraron eventos para tu búsqueda
                 </span>
               </div>
