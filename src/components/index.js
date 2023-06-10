@@ -6,6 +6,5 @@ export * from "./FormBusqueda2";
 export * from "./GaleriaHistoria";
 export * from "./ImagenHistoria";
 export * from "./NavBar";
-export * from "./SliderDestacado";
 export * from "./Spinner";
 export * from "./TablaPrecios";

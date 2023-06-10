@@ -120,9 +120,7 @@ export const Home = () => {
           className={`min-h-[50vh] flex justify-center items-start flex-col `}
           style={{ background: "rgba(0,0,0,.40)" }}
         >
-          <div
-            className="flex justify-center w-full"
-          >
+          <div className="flex justify-center w-full">
             <h1
               style={{
                 color: dataInfoGeneral.colorH1,
@@ -159,7 +157,7 @@ export const Home = () => {
                   padding: "10px 45px",
                 }}
                 type="button"
-                className="w-full mt-6 md:mt-0 bg-[dataInfoGeneral.backgroundButton] hover:bg-[#5c452c] hover:border-[dataInfoGeneral.colorHoverButton] text-[dataInfoGeneral.colorButton] font-medium rounded-3xl  px-4 py-2 text-base lg:text-lg md:text-base"
+                className="w-full mt-6 md:mt-0 hover:bg-[#5c452c] font-medium rounded-3xl px-4 py-2 text-base lg:text-lg md:text-base"
               >
                 Calendario
               </button>
