@@ -1,6 +1,5 @@
 import React, { useContext, useState } from "react";
 import { EventosContext } from "../context/EventosProvider";
-import { Button } from "flowbite-react";
 import { ModalPrecios } from "./";
 
 const opciones = {
@@ -12,7 +11,7 @@ const opciones = {
   hour12: false,
 };
 
-export const FechaEvento = ({ data }) => {
+export const FechaEvento = ({ data, performances }) => {
   const { dataInfoGeneral } = useContext(EventosContext);
   const [openModal, setOpenModal] = useState(false);
   // console.log({dataInfoGeneral})
@@ -41,7 +40,7 @@ export const FechaEvento = ({ data }) => {
         {/* <Button onClick={() => setOpenModal( prevstate => !prevstate )}>
           Toggle modal
         </Button> */}
-        <ModalPrecios openModal={openModal} setOpenModal={setOpenModal} />
+        <ModalPrecios performances={performances} openModal={openModal} setOpenModal={setOpenModal} />
       </div>
       <div className="ml-auto my-auto">
         <button

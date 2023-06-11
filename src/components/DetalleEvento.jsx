@@ -52,7 +52,7 @@ export const DetalleEvento = () => {
           VITE_EMAIL,
           VITE_PASS
         );
-        console.log(data);
+        console.log({data});
         setData(data);
       };
       getInfo();
@@ -87,8 +87,7 @@ export const DetalleEvento = () => {
             dangerouslySetInnerHTML={{
               __html: DOMPurify.sanitize(data?.description),
             }}
-          ></p>
-          <ModalPrecios />
+          ></p>          
         </div>
 
         <div id="accordion-open" data-accordion="open" className="">
@@ -126,7 +125,7 @@ export const DetalleEvento = () => {
           >
             <div className="grid grid-cols-3 p-3 lg:p-5 border border-b-0 border-gray-200 dark:border-gray-700 dark:bg-gray-900 text-sm">
               {data.performances.map((item) => (
-                <FechaEvento data={item} key={item.id} />
+                <FechaEvento performances={data.performances} data={item} key={item.id} />
               ))}
             </div>
           </div>
@@ -224,9 +223,7 @@ export const DetalleEvento = () => {
             </div>
           </div>
         </div>
-        <div>
-          <TablaPrecios2 />
-        </div>
+        
       </div>
       {/* <div
         className="container my-5 px-5 animate_animated animatefadeIn animate_fast"
