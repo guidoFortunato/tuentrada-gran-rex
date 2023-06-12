@@ -221,7 +221,7 @@ export const NavBar = () => {
               </li>
               <li>
                 <Link
-                  to="/"
+                  to="/calendario"
                   onClick={() => handleButtonsCollapse()}
                   className={`text-[${dataInfoGeneral.colorSiteName}] font-bold border-b-2 border-transparent lg:hover:border-b-[#855F35] transition-all duration-300 ease-in-out`}
                 >
@@ -230,7 +230,7 @@ export const NavBar = () => {
               </li>
               <li>
                 <Link
-                  to="/"
+                  to="/historia"
                   onClick={() => handleButtonsCollapse()}
                   className={`text-[${dataInfoGeneral.colorSiteName}] font-bold border-b-2 border-transparent lg:hover:border-b-[#855F35] transition-all duration-300 ease-in-out`}
                 >
@@ -239,7 +239,7 @@ export const NavBar = () => {
               </li>
               <li>
                 <Link
-                  to="/calendario"
+                  to="/como-llegar"
                   onClick={() => handleButtonsCollapse()}
                   className="text-[#855F35] font-bold border-b-2 border-transparent lg:hover:border-b-[#855F35] transition-all duration-300 ease-in-out"
                 >
@@ -248,7 +248,7 @@ export const NavBar = () => {
               </li>
               <li>
                 <Link
-                  to="/historia"
+                  to="/bases-y-condiciones"
                   onClick={() => handleButtonsCollapse()}
                   className="text-[#855F35] font-bold border-b-2 border-transparent lg:hover:border-b-[#855F35] transition-all duration-300 ease-in-out"
                 >
