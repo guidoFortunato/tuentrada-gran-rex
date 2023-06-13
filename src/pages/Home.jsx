@@ -44,7 +44,7 @@ export const Home = () => {
       <>
         <header
           style={{ backgroundImage: `url(${dataInfoGeneral.backgroundImage})` }}
-          className={`bg-no-repeat bg-cover bg-center container mx-auto `}
+          className={`bg-no-repeat bg-cover bg-center container mx-auto mb-5 `}
         >
           <div
             className={`min-h-[50vh] flex justify-center items-start flex-col ps-4 `}
@@ -81,7 +81,7 @@ export const Home = () => {
             </div>
           </div>
         </header>
-        <main className="container mx-auto my-14 px-3 lg:px-0">
+        <main className="container mx-auto mb-5">
           <div
             className="w-1/2 flex justify-center mx-auto p-4 mb-4 text-md text-blue-900 rounded-lg bg-blue-300 dark:bg-gray-800 dark:text-blue-400"
             role="alert"
@@ -114,7 +114,7 @@ export const Home = () => {
     <>
       <header
         style={{ backgroundImage: `url(${dataInfoGeneral.backgroundImage})` }}
-        className={`bg-no-repeat bg-cover bg-center container mx-auto `}
+        className={`bg-no-repeat bg-cover bg-center container mx-auto mb-5 `}
       >
         <div
           className={`min-h-[50vh] flex justify-center items-start flex-col `}
@@ -165,7 +165,7 @@ export const Home = () => {
           </div>
         </div>
       </header>
-      <main className="container mx-auto my-14 px-3 lg:px-0 ">
+      <main className="container mx-auto mb-5 ">
         <InfiniteScroll
           dataLength={eventos.length}
           next={() => setPage((prevPage) => prevPage + 1)}
