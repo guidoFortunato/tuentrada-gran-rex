@@ -1,3 +1,5 @@
+export * from "./Accordion";
+export * from "./AccordionItem";
 export * from "./CardEvento";
 export * from "./DetalleEvento";
 export * from "./FechaEvento";
