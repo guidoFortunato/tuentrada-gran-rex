@@ -15,6 +15,7 @@ export const FechaEvento = ({ dataFechas, dataEvento, performances }) => {
   const { dataInfoGeneral } = useContext(EventosContext);
   const [openModal, setOpenModal] = useState(false);
   // console.log({dataInfoGeneral})
+  // console.log({dataEvento})
 
 
   const fecha = new Date(dataFechas.start);
@@ -23,14 +24,14 @@ export const FechaEvento = ({ dataFechas, dataEvento, performances }) => {
   const numDia = formatoFecha.split(',')[1]
   const hora = formatoFecha.split(',')[2]
 
-  // console.log(data)
+
 
   return (
     <>
       <div className="flex flex-col md:flex-row md:items-center">
         <div className="md:mr-1">{dia}</div>
         <div className="hidden md:block md:mr-1">-</div>
-        <div className="md:mr-1">{numDia}</div>
+        <div className="md:mr-1 whitespace-nowrap">{numDia}</div>
         <div className="hidden md:block md:mr-1">-</div>
         <div>{hora}hs</div>
       </div>
@@ -40,7 +41,7 @@ export const FechaEvento = ({ dataFechas, dataEvento, performances }) => {
         </div>
         <ModalPrecios performances={performances} openModal={openModal} setOpenModal={setOpenModal} />
       </div>
-      <div className="ml-auto my-auto">
+      <div className="ml-auto my-5 md:my-3">
         <button
           style={{
             color: dataInfoGeneral.colorButton,
@@ -49,8 +50,7 @@ export const FechaEvento = ({ dataFechas, dataEvento, performances }) => {
           type="button"
           className="text-white focus:outline-none font-medium rounded-full text-sm px-3 py-2.5 text-center  dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
         >
-          <a href={ dataInfoGeneral.url + dataEvento.productId } target="_blank">
-             {/* https://eventos.tuentrada.com/selection/event/seat?perfId=10228788603539&table=1&productId=10228788601877 */}
+          <a href={ ` ${dataInfoGeneral.url}perfId=${dataFechas.performanceId}&productId=${dataEvento.productId} ` } target="_blank">
             Comprar
           </a>
         </button>

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import DOMPurify from "dompurify";
 
-import { FechaEvento } from "./";
+import { FechaEvento, MediaEvento } from "./";
 
 export const Accordion = ({ itemsAccordion, dataEvento }) => {
   const [performances, setPerformances] = useState(true);
@@ -219,7 +219,7 @@ export const Accordion = ({ itemsAccordion, dataEvento }) => {
           </div>
         </>
       )}
-      {/* {itemsAccordion.mediaJson.length > 0 && (
+      {itemsAccordion.mediaJson.length > 0 && (
         <>
           <h2 id="accordion-open-heading-5">
             <button
@@ -254,19 +254,20 @@ export const Accordion = ({ itemsAccordion, dataEvento }) => {
             aria-labelledby="accordion-open-heading-5"
           >
             {itemsAccordion.mediaJson.map((item, index) => (
-              <iframe
-                key={index}
-                width="1280"
-                height="720"
-                src={item.media_json}
-                title="Video del apriete de la barra de Colón al plantel (@sinese.info)."
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowFullScreen
-              ></iframe>
+
+              <MediaEvento key={index} item={item} />
+              // <iframe
+              //   key={index}
+              //   width="425"
+              //   height="425"
+              //   src={item.media_json}
+              //   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              //   allowFullScreen
+              // ></iframe>
             ))}
           </div>
         </>
-      )} */}
+      )}
 
       {itemsAccordion.recomendation && (
         <>

@@ -3,6 +3,7 @@ import InfiniteScroll from "react-infinite-scroll-component";
 import { EventosContext } from "../context/EventosProvider";
 import { CardEvento, FormBusqueda, Spinner } from "../components";
 import { getData, getEnvVariables } from "../helpers";
+import { Link } from "react-router-dom";
 
 // import { SliderDestacado } from "../components/";
 
@@ -16,7 +17,7 @@ export const Home = () => {
   const [eventos, setEventos] = useState([]);
   const [page, setPage] = useState(1);
   // console.log({data});
-  // console.log({dataInfoGeneral})
+  console.log({ dataInfoGeneral });
 
   useEffect(() => {
     setTimeout(() => {
@@ -152,14 +153,14 @@ export const Home = () => {
               <button
                 style={{
                   color: dataInfoGeneral.colorButton,
-                  background: dataInfoGeneral.backgroundButton,
-                  width: "auto",
-                  padding: "10px 45px",
+                  // background: dataInfoGeneral.backgroundButton,
                 }}
                 type="button"
-                className="w-full mt-6 md:mt-0 hover:bg-[#5c452c] font-medium rounded-3xl px-4 py-2 text-base lg:text-lg md:text-base"
+                className={`w-auto py-2.5 px-11 mt-6 md:mt-0 bg-[#855F35] hover:bg-[#5c452c] font-medium rounded-3xl text-base lg:text-lg md:text-base`}
               >
-                Calendario
+                <Link to={"/calendario"}>
+                  Calendario
+                </Link>
               </button>
             </div>
           </div>
@@ -186,43 +187,6 @@ export const Home = () => {
                 data={item}
               />
             ))}
-
-            {/* <figure className="relative max-w-sm cursor-pointer">
-              <a href="#">
-                <img
-                  className="rounded-lg md:rounded-none"
-                  src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/content/content-gallery-3.png"
-                  alt="image description"
-                />
-              </a>
-            </figure>
-            <figure className="relative max-w-sm cursor-pointer">
-              <a href="#">
-                <img
-                  className="rounded-lg md:rounded-none"
-                  src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/content/content-gallery-3.png"
-                  alt="image description"
-                />
-              </a>
-            </figure>
-            <figure className="relative max-w-sm cursor-pointer">
-              <a href="#">
-                <img
-                  className="rounded-lg md:rounded-none"
-                  src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/content/content-gallery-3.png"
-                  alt="image description"
-                />
-              </a>
-            </figure>
-            <figure className="relative max-w-sm cursor-pointer">
-              <a href="#">
-                <img
-                  className="rounded-lg md:rounded-none"
-                  src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/content/content-gallery-3.png"
-                  alt="image description"
-                />
-              </a>
-            </figure> */}
           </div>
         </InfiniteScroll>
       </main>

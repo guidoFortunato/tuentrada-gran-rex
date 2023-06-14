@@ -69,7 +69,7 @@ export const FormBusqueda2 = () => {
           <button
             type="submit"
           
-            className={`text-[${dataInfoGeneral.colorButton}] text-white font-semibold absolute right-2.5 bottom-2.5 bg-[${dataInfoGeneral.backgroundButton}] hover:bg-[#5c452c] hover:border[${dataInfoGeneral.colorHoverButton}] font-medium rounded-3xl text-sm px-4 py-2`}
+            className={`text-[${dataInfoGeneral.colorButton}] text-white font-semibold absolute right-2.5 bottom-2.5 bg-[${dataInfoGeneral.backgroundButton}] hover:bg-[${dataInfoGeneral.colorHoverButton}] hover:border[${dataInfoGeneral.colorHoverButton}] font-medium rounded-3xl text-sm px-4 py-2`}
           >
             Buscar
           </button>

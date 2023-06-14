@@ -4,9 +4,9 @@ import { EventosContext } from "../context/EventosProvider";
 
 import DOMPurify from "dompurify";
 
-import "../css/comollegar.css";
+// import "../css/comollegar.css";
 
-export const ComoLlegar = () => {
+export const HorariosLlegada = () => {
   const { dataInfoGeneral } = useContext(EventosContext);
 
   useEffect(() => {
