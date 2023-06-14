@@ -59,14 +59,16 @@ export const Accordion = ({ itemsAccordion, dataEvento }) => {
             aria-labelledby="accordion-open-heading-1"
           >
             <div className="grid grid-cols-3 p-3 lg:p-5 border border-b-0 border-gray-200 dark:border-gray-700 dark:bg-gray-900 text-sm">
-              {itemsAccordion.performances.map((item) => (
-                <FechaEvento
-                  performances={itemsAccordion.performances}
-                  dataFechas={item}
-                  dataEvento={dataEvento}
-                  key={item.id}
-                />
-              ))}
+              {itemsAccordion.performances.map((item) => {
+                if (item.state === "RUNNING"){
+                  return <FechaEvento
+                    performances={itemsAccordion.performances}
+                    dataFechas={item}
+                    dataEvento={dataEvento}
+                    key={item.id}
+                  />
+                }
+              })}
             </div>
           </div>
         </>
@@ -254,7 +256,6 @@ export const Accordion = ({ itemsAccordion, dataEvento }) => {
             aria-labelledby="accordion-open-heading-5"
           >
             {itemsAccordion.mediaJson.map((item, index) => (
-
               <MediaEvento key={index} item={item} />
               // <iframe
               //   key={index}

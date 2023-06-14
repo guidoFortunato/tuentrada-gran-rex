@@ -15,7 +15,7 @@ export const FechaEvento = ({ dataFechas, dataEvento, performances }) => {
   const { dataInfoGeneral } = useContext(EventosContext);
   const [openModal, setOpenModal] = useState(false);
   // console.log({dataInfoGeneral})
-  // console.log({dataEvento})
+  console.log({dataEvento})
 
 
   const fecha = new Date(dataFechas.start);

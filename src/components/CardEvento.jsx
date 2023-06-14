@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { EventAvailable, EventNotAvailable, EventNotForSale } from "./disponibility";
+import { EventAvailable, EventLimited, EventNotAvailable, EventNotForSale } from "./disponibility";
 
 import "../css/cardevento.css";
 
@@ -11,6 +11,7 @@ export const CardEvento = ({ img = "", title = "", linkEvento = "", disponibilit
   const [reasonSuspended, setReasonSuspended] = useState(false);
   const [reasonNotAvailable, setReasonNotAvailable] = useState(false);
   // console.log({data})
+  console.log({disponibility})
 
   useEffect(() => {
     // console.log(disponibility)
@@ -20,7 +21,7 @@ export const CardEvento = ({ img = "", title = "", linkEvento = "", disponibilit
       setAvailabilityGood(hasGoodAvailability);
 
       // Verificar si alguna fecha tiene availabilitLevel "LIMITED"
-      const hasLimitedAvailability = disponibilidad.every( (fecha) => fecha.availabilitLevel === "LIMITED" );
+      const hasLimitedAvailability = disponibilidad.some( (fecha) => fecha.availabilitLevel === "LIMITED" );
       setAvailabilityLimited(hasLimitedAvailability);
 
       // Verificar los reasons en caso de que no haya disponibilidad "GOOD"
@@ -45,9 +46,15 @@ export const CardEvento = ({ img = "", title = "", linkEvento = "", disponibilit
       className="text-center"
     >
       
-        {availabilityGood ? (
+        {
+        availabilityGood ? (
           <EventAvailable linkEvento={linkEvento} img={img} title={title} data={data}/>
-        ) : reasonNotAvailable ? (
+        ) : 
+        availabilityLimited ? (
+          <EventLimited linkEvento={linkEvento} img={img} title={title} data={data} />
+        ) :       
+        
+        reasonNotAvailable ? (
           <EventNotAvailable img={img} title={title} />
         ) : 
           !availabilityGood &&
