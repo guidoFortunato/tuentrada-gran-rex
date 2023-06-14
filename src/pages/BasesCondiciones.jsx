@@ -73,7 +73,7 @@ export const BasesCondiciones = () => {
       <div className="row">
       
 
-        <div className="col-12 mb-4">
+        <div className="col-12 mb-4 px-4 lg:px-0">
           <div
             className="parrafo-historia"
             dangerouslySetInnerHTML={{

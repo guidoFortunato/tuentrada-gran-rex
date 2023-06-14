@@ -377,7 +377,7 @@ export const Calendario = () => {
             >
               <h2
                 style={{ height: "40vh" }}
-                className="text-3xl flex lg:justify-start justify-center items-center lg:items-end text-white p-10 my-3 tittle-h2"
+                className=" text-3xl flex lg:justify-start justify-center items-center lg:items-end text-white p-10 my-3 tittle-h2"
               >
                 {dataInfoGeneral.pages[1].title}
               </h2>
@@ -386,7 +386,7 @@ export const Calendario = () => {
         </div>
 
         <div className="container mx-auto mb-5">
-          <div className="row mt-5 container-calendar">
+          <div className="row mt-5 container-calendar px-4 lg:px-0">
             <div className="col-12">
               <FullCalendar
                 buttonText={buttonTextOptions}
