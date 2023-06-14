@@ -129,7 +129,7 @@ export const NavBar = () => {
             </div>
             <ul
               style={{ backgroundColor: `${dataInfoGeneral.backgroundNavbar}` }}
-              className={`flex  font-medium  flex-row lg:space-x-8 justify-end space-x-4 lg:bg-white mt-4 lg:mt-0 ${
+              className={`flex font-medium flex-row space-x-4 lg:space-x-5 justify-end lg:bg-white mt-4 lg:mt-0 ${
                 isButtonCollapsed ? "" : "hidden"
               } lg:flex `}
             >
@@ -152,7 +152,7 @@ export const NavBar = () => {
               } lg:flex `}
             >
               {dataInfoGeneral.pages.map((item) => (
-                <ItemsNavBar key={item.id} item={item} />
+                <ItemsNavBar handleButtonsCollapse={handleButtonsCollapse} key={item.id} item={item} />
               ))}
             </ul>
           </div>

@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { EventosContext } from "../context/EventosProvider";
 
 
-export const ItemsNavBar = ({item}) => {
+export const ItemsNavBar = ({item, handleButtonsCollapse}) => {
   
   const { dataInfoGeneral } = useContext(EventosContext);
 
