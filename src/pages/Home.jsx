@@ -31,6 +31,7 @@ export const Home = () => {
         const newLocal = `${VITE_API_EVENTOS + idVenue}?page=${page}`;
         const info = await getData(newLocal, VITE_EMAIL, VITE_PASS);
         // console.log(info);
+        console.log(info.data);
         setData(info);
         setEventos((prevEventos) => prevEventos.concat(info.data));
       };
