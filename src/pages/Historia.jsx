@@ -242,20 +242,23 @@
 //     </>
 //   );
 // };
-
 import { useContext, useEffect, useState } from "react";
 import { EventosContext } from "../context/EventosProvider";
 import { ImagenHistoria, Spinner } from "../components";
 import DOMPurify from "dompurify";
 
-// import "../css/historia.css";
-
 export const Historia = () => {
   const { dataInfoGeneral } = useContext(EventosContext);
   const [showMoreText, setShowMoreText] = useState(false);
   const [showMoreImages, setShowMoreImages] = useState(false);
-  const maxWords = 350;
-  const maxImagesToShow = 4;
+  const maxWordsMobile = 200;
+  const maxWordsDesktop = 350;
+  const maxImagesToShowMobile = 4;
+  const maxImagesToShowTablet = 6;
+  const maxImagesToShowDesktop = 8;
+  const imagesPerRowMobile = 2;
+  const imagesPerRowTablet = 3;
+  const imagesPerRowDesktop = 4;
 
   useEffect(() => {
     setTimeout(() => {
@@ -280,36 +283,31 @@ export const Historia = () => {
     const text = dataInfoGeneral?.pages[2].text;
     if (text) {
       const words = text.split(" ");
-      if (words.length > maxWords && !showMoreText) {
-        const truncatedText = words.slice(0, maxWords).join(" ");
-        return (
-          <>
-            <p
-              className="parrafo-historia"
-              dangerouslySetInnerHTML={{
-                __html: DOMPurify.sanitize(truncatedText),
-              }}
-            ></p>
+
+      let maxWords = maxWordsMobile;
+      if (window.innerWidth >= 1024) {
+        maxWords = maxWordsDesktop;
+      }
+
+      if (words.length < maxWords) {
+        return null;
+      }
+
+      const truncatedText = showMoreText ? words.join(" ") : words.slice(0, maxWords).join(" ");
+
+      return (
+        <>
+          <p
+            className="parrafo-historia"
+            dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(truncatedText) }}
+          ></p>
+          {words.length > maxWords && (
             <button className="text-blue-500" onClick={toggleShowMoreText}>
               {toggleButtonTextText}
             </button>
-          </>
-        );
-      } else {
-        return (
-          <>
-            <p
-              className="parrafo-historia"
-              dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(text) }}
-            ></p>
-            {words.length > maxWords && (
-              <button className="text-blue-500" onClick={toggleShowMoreText}>
-                {toggleButtonTextText}
-              </button>
-            )}
-          </>
-        );
-      }
+          )}
+        </>
+      );
     }
     return null;
   };
@@ -317,50 +315,46 @@ export const Historia = () => {
   const renderImages = () => {
     const images = dataInfoGeneral.pages[2].images;
     if (images && images.length > 0) {
-      if (
-        !showMoreImages &&
-        images.length > maxImagesToShow &&
-        window.innerWidth <= 768
-      ) {
-        const limitedImages = images.slice(0, maxImagesToShow);
-        return (
-          <>
-            <div className="grid grid-cols-2 gap-4">
-              {limitedImages.map((item) => (
-                <ImagenHistoria src={item.image} key={item.id} />
-              ))}
-            </div>
-            <div className="flex justify-center mt-4">
-              <button
-                className={`text-[${dataInfoGeneral.colorButton}] text-white font-semibold bg-[${dataInfoGeneral.backgroundButton}] hover:bg-[#5c452c] hover:border[${dataInfoGeneral.colorHoverButton}] font-medium rounded-3xl text-sm px-4 py-2`}
-                onClick={toggleShowMoreImages}
-              >
-                {toggleButtonTextImages}
-              </button>
-            </div>
-          </>
-        );
-      } else {
-        return (
-          <>
-            <div className="grid grid-cols-2 gap-4">
-              {images.map((item) => (
-                <ImagenHistoria src={item.image} key={item.id} />
-              ))}
-            </div>
-            {images.length > maxImagesToShow && window.innerWidth <= 768 && (
-              <div className="flex justify-center mt-4">
-                <button
-                  className={`text-[${dataInfoGeneral.colorButton}] text-white font-semibold bg-[${dataInfoGeneral.backgroundButton}] hover:bg-[#5c452c] hover:border[${dataInfoGeneral.colorHoverButton}] font-medium rounded-3xl text-sm px-4 py-2`}
-                  onClick={toggleShowMoreImages}
-                >
-                  {toggleButtonTextImages}
-                </button>
-              </div>
-            )}
-          </>
-        );
+      let maxImagesToShow = maxImagesToShowMobile;
+      let imagesPerRow = imagesPerRowMobile;
+
+      if (window.innerWidth >= 768) {
+        maxImagesToShow = maxImagesToShowTablet;
+        imagesPerRow = imagesPerRowTablet;
       }
+
+      if (window.innerWidth >= 1024) {
+        maxImagesToShow = maxImagesToShowDesktop;
+        imagesPerRow = imagesPerRowDesktop;
+      }
+
+      const displayedImages = showMoreImages ? images : images.slice(0, maxImagesToShow);
+
+      const rows = Math.ceil(displayedImages.length / imagesPerRow);
+
+      return (
+        <>
+          {displayedImages.length > 0 && (
+            <>
+              <div className={`grid grid-cols-${imagesPerRow} gap-4`}>
+                {displayedImages.map((item) => (
+                  <ImagenHistoria src={item.image} key={item.id} />
+                ))}
+              </div>
+              {images.length > maxImagesToShow && (
+                <div className="flex justify-center mt-4">
+                  <button
+                    className={`text-[${dataInfoGeneral.colorButton}] text-white font-semibold bg-[${dataInfoGeneral.backgroundButton}] hover:bg-[#5c452c] hover:border[${dataInfoGeneral.colorHoverButton}] font-medium rounded-3xl text-sm px-4 py-2`}
+                    onClick={toggleShowMoreImages}
+                  >
+                    {toggleButtonTextImages}
+                  </button>
+                </div>
+              )}
+            </>
+          )}
+        </>
+      );
     }
     return null;
   };
@@ -379,10 +373,10 @@ export const Historia = () => {
         </h2>
       </section>
       <div className="row">
-        <div className="col-12">
+        <div className="col-12 px-4 lg:px-0">
           <div className="flex flex-wrap">
-            <div className="w-full lg:w-1/2">{renderText()}</div>
-            <div className="w-full lg:w-1/2">{renderImages()}</div>
+            <div className="w-full">{renderText()}</div>
+            <div className="w-full">{renderImages()}</div>
           </div>
         </div>
       </div>

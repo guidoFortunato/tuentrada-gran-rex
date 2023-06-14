@@ -29,7 +29,7 @@ export const HorariosLlegada = () => {
       </section>
   
       <div className="row">
-        <article className="col-12 col-lg-6">
+        <article className="col-12 col-lg-6 px-4 lg:px-0">
           <div>
             <p
               className="parrafo-historia"

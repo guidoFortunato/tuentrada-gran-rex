@@ -56,10 +56,10 @@ export const Home = () => {
             >
               <strong>{dataInfoGeneral.pages[0].title}</strong>
             </h1>
-            <div className="flex flex-col md:flex-row">
+            <div className="flex flex-col md:flex-row ">
               <p
                 style={{ color: dataInfoGeneral.colorButton }}
-                className="md:w-4/5 md:mr-6 mt-6 md:mt-0 text-[dataInfoGeneral.colorButton]"
+                className="md:w-4/5 md:mr-6 mt-6 md:mt-0 text-[dataInfoGeneral.colorButton] "
               >
                 ¡No te pierdas ni un solo evento! Encontrá toda la programación
                 completa en el siguiente enlace y preparate para vivir
@@ -134,7 +134,7 @@ export const Home = () => {
             </h1>
           </div>
           <div
-            className="flex flex-col md:flex-row"
+            className="flex flex-col md:flex-row "
             style={{ justifyContent: "center", alignItems: "center" }}
           >
             <p
@@ -173,7 +173,7 @@ export const Home = () => {
           hasMore={data.links.next !== null}
           loader={<Spinner />}
         >
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6 lg:gap-10">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6 lg:gap-10 px-4 lg:px-0">
             {eventos.map((item) => (
               <CardEvento
                 linkEvento={item.slug + "/" + item.id}
