@@ -12,12 +12,9 @@ export const EventLimited = ({ linkEvento, img, title, data }) => {
           <img className="rounded-lg md:rounded-none" src={img} alt={title} />
         </Link>
         <button type="button" className="absolute top-1 left-1 text-white bg-orange-500 rounded-2xl text-xs px-3 py-1.5 text-center mr-2 mb-2">Últimas entradas</button>
-        {/* <figcaption className="absolute px-4 text-lg text-white bottom-6">
-              <p>
-                Do you want to get notified when a new component is added to
-                Flowbite?
-              </p>
-            </figcaption> */}
+        <figcaption className="hidden md:block bg-[#000]  bg-opacity-70 absolute text-md text-white bottom-2 right-0 left-0">
+          <p>{title}</p>
+        </figcaption>
       </figure>
     </>
   );

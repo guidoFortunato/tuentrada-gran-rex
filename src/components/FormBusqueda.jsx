@@ -1,7 +1,7 @@
 import { useContext, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import { EventosContext } from "../context/EventosProvider"; 
-// import { Spinner } from "./Spinner";
+import Swal from "sweetalert2";
 
 export const FormBusqueda = () => {
   const { dataInfoGeneral } = useContext(EventosContext);
@@ -10,6 +10,7 @@ export const FormBusqueda = () => {
   const { pathname, search } = useLocation();
   // console.log({pathname})
   // console.log({dataInfoGeneral})
+  // console.log({activeToast})
 
   localStorage.setItem("lastPath", pathname + search);
 
@@ -21,9 +22,20 @@ export const FormBusqueda = () => {
     setEvento(nombreEvento);
   };
 
+
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (evento.length === 0) return; // sweet alert
+    if (evento.length === 0) {
+      Swal.fire({
+        icon: 'warning',
+        html: '<b>Debe ingresar un evento</b>',
+        timer: 2500,
+        confirmButtonColor: "#3c2c1b", // dataInfoGeneral.backgroundButton
+      })
+      return 
+
+    }
     navigate(`/busqueda-eventos/search?q=${evento}`);
     handleEvento("");
   };
@@ -62,7 +74,6 @@ export const FormBusqueda = () => {
             // className={`focus:ring-[${dataInfoGeneral.backgroundButton}] focus:border-[${dataInfoGeneral.backgroundButton}] block w-full p-4 pl-10 text-sm text-gray-900 border border-gray-300 rounded-3xl bg-gray-50`}
             className={`focus:ring-[#5c452c] focus:border-[#5c452c] block w-full p-4 pl-10 text-sm text-gray-900 border border-gray-300 rounded-3xl bg-gray-50`}
             placeholder="Buscar un evento..."
-            required
             value={evento}
             onChange={(e) => handleEvento(e.target.value)}
           />
@@ -73,8 +84,10 @@ export const FormBusqueda = () => {
           >
             Buscar
           </button>
+          
         </div>
       </form>
+     
     </>
   );
 };

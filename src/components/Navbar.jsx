@@ -26,7 +26,7 @@ export const NavBar = () => {
   }, []);
 
   // console.log({ dataInfoGeneral });
-  console.log("se renderiza el navbar");
+  // console.log("se renderiza el navbar");
 
   const handleSearchCollapse = () =>
     setIsSearchCollapsed((prevState) => !prevState);

@@ -16,6 +16,10 @@
 .active{
   border-bottom-color: #855F35
 }
+.swal2-confirm:focus {
+  outline: none; /* Desactiva el contorno predeterminado del enfoque */
+  box-shadow: 0 0 0 3px #d1bda8 !important; /* Cambia el color del contorno del enfoque */
+}
 /*
 
 
