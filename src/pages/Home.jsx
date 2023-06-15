@@ -120,7 +120,7 @@ export const Home = () => {
       >
         <div
           className={`min-h-[50vh] flex justify-center items-start flex-col `}
-          style={{ background: "rgba(0,0,0,.40)" }}
+          style={{ background: "rgba(0,0,0,.50)" }}
         >
           <div className="flex justify-center w-full">
             <h1
@@ -140,7 +140,7 @@ export const Home = () => {
           >
             <p
               style={{ color: dataInfoGeneral.colorButton }}
-              className={`md:w-3/5 md:mr-6 pl-10 pr-10 md:pl-0 md:pr-0 text-base md:text-base lg:text-lg`}
+              className={`md:w-3/5 md:mr-6 text-justify pl-10 pr-10 md:pl-0 md:pr-0 text-base md:text-base lg:text-lg`}
             >
               ¡No te pierdas ni un solo evento! Encontrá toda la programación
               completa en el siguiente enlace y preparate para vivir
