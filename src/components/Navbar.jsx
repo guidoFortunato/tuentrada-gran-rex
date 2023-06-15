@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { EventosContext } from "../context/EventosProvider";
-import { FormBusqueda, ItemRedes, ItemsNavBar } from "./";
+import { FormBusqueda, ItemRedes, ItemsNavBar } from ".";
 
 export const NavBar = () => {
   const { dataInfoGeneral } = useContext(EventosContext);
