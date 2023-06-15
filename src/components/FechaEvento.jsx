@@ -30,9 +30,9 @@ export const FechaEvento = ({ dataFechas, dataEvento }) => {
   return (
     <>
       <div className="flex flex-col md:flex-row md:items-center">
-        <div className="md:mr-1">{dia}</div>
+        <div className="md:mr-1 text-sm">{dia}</div>
         <div className="hidden md:block md:mr-1">-</div>
-        <div className="md:mr-1 whitespace-nowrap">{numDia}</div>
+        <div className="md:mr-1 md:whitespace-nowrap">{numDia}</div>
         <div className="hidden md:block md:mr-1">-</div>
         <div>{hora}hs</div>
       </div>
@@ -56,6 +56,9 @@ export const FechaEvento = ({ dataFechas, dataEvento }) => {
           </a>
         </button>
       </div>
+
+     
+      
     </>
   );
 };

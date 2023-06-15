@@ -15,7 +15,7 @@ export const Accordion = ({ itemsAccordion, dataEvento }) => {
   // console.log({ itemsAccordion });
 
   return (
-    <div id="accordion-open" data-accordion="open">
+    <div id="accordion-open" data-accordion="open" className="mt-5">
       {/* {Object.keys(itemsAccordion).forEach((item) => {
         if (itemsAccordion[item] !== null) {
           return <AccordionItem item={item} itemsAccordion={itemsAccordion} />;
@@ -58,7 +58,7 @@ export const Accordion = ({ itemsAccordion, dataEvento }) => {
             className={performances ? "" : "hidden"}
             aria-labelledby="accordion-open-heading-1"
           >
-            <div className="grid grid-cols-3 p-3 lg:p-5 border border-b-0 border-gray-200 dark:border-gray-700 dark:bg-gray-900 text-sm">
+            <div className="grid grid-cols-3 p-3 max-h-80 overflow-y-auto lg:p-5 border border-b-0 border-gray-200 dark:border-gray-700 dark:bg-gray-900 text-sm">
               {itemsAccordion.performances.map((item) => {
                 if (item.state === "RUNNING"){
                   return <FechaEvento
