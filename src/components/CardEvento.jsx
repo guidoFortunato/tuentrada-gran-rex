@@ -11,7 +11,7 @@ export const CardEvento = ({ img = "", title = "", linkEvento = "", disponibilit
   const [reasonSuspended, setReasonSuspended] = useState(false);
   const [reasonNotAvailable, setReasonNotAvailable] = useState(false);
   // console.log({data})
-  console.log({disponibility})
+  // console.log({disponibility})
 
   useEffect(() => {
     // console.log(disponibility)
@@ -52,8 +52,7 @@ export const CardEvento = ({ img = "", title = "", linkEvento = "", disponibilit
         ) : 
         availabilityLimited ? (
           <EventLimited linkEvento={linkEvento} img={img} title={title} data={data} />
-        ) :       
-        
+        ) :        
         reasonNotAvailable ? (
           <EventNotAvailable img={img} title={title} />
         ) : 

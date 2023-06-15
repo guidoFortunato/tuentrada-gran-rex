@@ -11,11 +11,12 @@ const opciones = {
   hour12: false,
 };
 
-export const FechaEvento = ({ dataFechas, dataEvento, performances }) => {
+export const FechaEvento = ({ dataFechas, dataEvento }) => {
   const { dataInfoGeneral } = useContext(EventosContext);
   const [openModal, setOpenModal] = useState(false);
   // console.log({dataInfoGeneral})
-  console.log({dataEvento})
+  // console.log({dataEvento})
+  // console.log({dataFechas})
 
 
   const fecha = new Date(dataFechas.start);
@@ -39,7 +40,7 @@ export const FechaEvento = ({ dataFechas, dataEvento, performances }) => {
         <div className={`underline text-[${dataInfoGeneral.colorSiteName}] cursor-pointer`} onClick={() => setOpenModal( prevstate => !prevstate )}>
           Precios y Ubicaciones
         </div>
-        <ModalPrecios performances={performances} openModal={openModal} setOpenModal={setOpenModal} />
+        <ModalPrecios performances={dataFechas} openModal={openModal} setOpenModal={setOpenModal} />
       </div>
       <div className="ml-auto my-5 md:my-3">
         <button
@@ -50,7 +51,7 @@ export const FechaEvento = ({ dataFechas, dataEvento, performances }) => {
           type="button"
           className="text-white focus:outline-none font-medium rounded-full text-sm px-3 py-2.5 text-center  dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
         >
-          <a href={ ` ${dataInfoGeneral.url}perfId=${dataFechas.performanceId}&productId=${dataEvento.productId} ` } target="_blank">
+          <a href={ `${dataInfoGeneral.url}perfId=${dataFechas.performanceId}&productId=${dataEvento.productId}` } target="_blank">
             Comprar
           </a>
         </button>

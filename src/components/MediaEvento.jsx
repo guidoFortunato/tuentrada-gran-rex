@@ -15,7 +15,7 @@ const opts = {
 
 
 export const MediaEvento = ({item, index}) => {
-  console.log(item)
+  // console.log(item)
   return (
     <>
       {/* <YouTube videoId={item.media_json} opts={opts}  /> */}

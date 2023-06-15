@@ -26,7 +26,7 @@ export const Footer = () => {
               alt={dataInfoGeneral.altLogo}
             />
             <span className="self-center text-xl font-semibold whitespace-nowrap ">
-              {dataInfoGeneral.name}
+            {dataInfoGeneral.pages[0].title}
             </span>
           </Link>
           <ul className="flex flex-wrap items-center mb-6 text-sm font-medium  sm:mb-0 ">

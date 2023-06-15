@@ -12,7 +12,7 @@ export const Accordion = ({ itemsAccordion, dataEvento }) => {
   const [promotion, setPromotion] = useState(false);
   const [recomendation, setRecomendation] = useState(false);
 
-  console.log({ itemsAccordion });
+  // console.log({ itemsAccordion });
 
   return (
     <div id="accordion-open" data-accordion="open">
@@ -62,7 +62,6 @@ export const Accordion = ({ itemsAccordion, dataEvento }) => {
               {itemsAccordion.performances.map((item) => {
                 if (item.state === "RUNNING"){
                   return <FechaEvento
-                    performances={itemsAccordion.performances}
                     dataFechas={item}
                     dataEvento={dataEvento}
                     key={item.id}

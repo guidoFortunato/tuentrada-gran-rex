@@ -41,7 +41,7 @@ export const DetalleEvento = () => {
           VITE_EMAIL,
           VITE_PASS
         );
-        console.log({ data });
+        // console.log({ data });
         setData(data);
         setItemsAccordion({
           performances: data.performances,

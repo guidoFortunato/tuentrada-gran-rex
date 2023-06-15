@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { EventosContext } from "../context/EventosProvider";
-import { FormBusqueda2, ItemRedes, ItemsNavBar } from "./";
+import { FormBusqueda, ItemRedes, ItemsNavBar } from "./";
 
 export const NavBar = () => {
   const { dataInfoGeneral } = useContext(EventosContext);
@@ -87,7 +87,7 @@ export const NavBar = () => {
               <span className="sr-only">Buscar evento</span>
             </button>
             <div className="relative hidden lg:block lg:w-full">
-              <FormBusqueda2 />
+              <FormBusqueda />
             </div>
 
             <button
@@ -125,7 +125,7 @@ export const NavBar = () => {
                 isSearchCollapsed ? "" : "hidden"
               } lg:hidden`}
             >
-              <FormBusqueda2 />
+              <FormBusqueda />
             </div>
             <ul
               style={{ backgroundColor: `${dataInfoGeneral.backgroundNavbar}` }}
@@ -152,7 +152,11 @@ export const NavBar = () => {
               } lg:flex `}
             >
               {dataInfoGeneral.pages.map((item) => (
-                <ItemsNavBar handleButtonsCollapse={handleButtonsCollapse} key={item.id} item={item} />
+                <ItemsNavBar
+                  handleButtonsCollapse={handleButtonsCollapse}
+                  key={item.id}
+                  item={item}
+                />
               ))}
             </ul>
           </div>

@@ -1,6 +1,6 @@
 import React from "react";
 import { Modal } from "flowbite-react";
-import { TablaPrecios2 } from "./";
+import { TablaPrecios } from "./";
 
 export const ModalPrecios = ({ performances, openModal, setOpenModal }) => {
   return (
@@ -10,7 +10,7 @@ export const ModalPrecios = ({ performances, openModal, setOpenModal }) => {
         <Modal.Body>
           <div className="space-y-6">
             <div className="relative overflow-x-auto">
-              <TablaPrecios2 performances={performances} />
+              <TablaPrecios performances={performances} />
             </div>
           </div>
         </Modal.Body>

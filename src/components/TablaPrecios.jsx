@@ -1,34 +1,58 @@
-import "../css/tablaprecios.css";
+import React from "react";
 
-export const TablaPrecios = ({ precios }) => {
-  // console.log(precios)
+export const TablaPrecios = ({ performances }) => {
+  // console.log({performances})
   return (
-    <table className="table mt-4" style={{backgroundColor:"white", fontSize:"12px"}} >
-      <thead className="cabecera-tabla">
+    <table className="w-full text-sm text-left text-gray-500 dark:text-gray-400 border">
+      <thead className="text-xs text-gray-700 uppercase bg-gray-100 dark:bg-gray-700 dark:text-gray-400">
         <tr>
-          <th scope="col" className="text-white">
-            Ubicación
+          <th scope="col" className="px-6 py-3">
+            Ubicaciones
           </th>
-          <th scope="col" className="text-white">
-            Precio
+          <th scope="col" className="px-6 py-3">
+            Precios
           </th>
         </tr>
       </thead>
       <tbody>
-        {precios.map((item) => (
-          <tr key={item.id}>
-            <td className="fw-bold">
-              <span
-                style={{ background: `#${item.seatCategory.bgColor}` }}
-                className="cuadrado-ubicacion me-2"
-              ></span>
-              <span>{item.seatCategory.name}</span>
-            </td>
-            <td className="fw-bold">
-              <span>{item.amount}</span>
-            </td>
-          </tr>
+        {performances.prices.map((item) => (
+         
+           
+              <tr
+                key={item.id}
+                className="bg-white border-b dark:bg-gray-800 dark:border-gray-700"
+              >
+                <th
+                  scope="row"
+                  className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+                >
+                  <span style={{ backgroundColor: `#${item.seatCategory.bgColor}`  }} className={`px-[10px] mr-2`}></span>
+                  <span>{item.seatCategory.name}</span> 
+                </th>
+                <td className="px-6 py-4">{item.amount}</td>
+              </tr>
+          
+        
         ))}
+        {/* {performances.map((item) => (
+          <Fragment key={item.id}>
+            {item.prices.map((price) => (
+              <tr
+                key={price.id}
+                className="bg-white border-b dark:bg-gray-800 dark:border-gray-700"
+              >
+                <th
+                  scope="row"
+                  className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+                >
+                  <span style={{ backgroundColor: `#${price.seatCategory.bgColor}`  }} className={`px-[10px] mr-2`}></span>
+                  <span>{price.seatCategory.name}</span> 
+                </th>
+                <td className="px-6 py-4">{price.amount}</td>
+              </tr>
+            ))}
+          </Fragment>
+        ))} */}
       </tbody>
     </table>
   );

@@ -17,7 +17,7 @@ export const Home = () => {
   const [eventos, setEventos] = useState([]);
   const [page, setPage] = useState(1);
   // console.log({data});
-  console.log({ dataInfoGeneral });
+  // console.log({ dataInfoGeneral });
 
   useEffect(() => {
     setTimeout(() => {
