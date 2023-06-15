@@ -23,7 +23,7 @@ export const Home = () => {
     setTimeout(() => {
       window.scrollTo(0, 0);
     }, 100);
-  }, []);
+  }, [])
 
   useEffect(() => {
     if (idVenue !== "") {

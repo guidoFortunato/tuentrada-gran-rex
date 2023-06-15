@@ -34,7 +34,7 @@ export const Accordion = ({ itemsAccordion, dataEvento }) => {
               onClick={() => setPerformances((prevState) => !prevState)}
             >
               <span className="flex items-center text-xl font-semibold">
-                {itemsAccordion.performances.length > 1 ? "Fechas" : "Fecha"}
+                {itemsAccordion.performances.length > 1 ? "Fechas disponibles" : "Fecha disponible"}
               </span>
               <svg
                 data-accordion-icon
@@ -58,7 +58,7 @@ export const Accordion = ({ itemsAccordion, dataEvento }) => {
             className={performances ? "" : "hidden"}
             aria-labelledby="accordion-open-heading-1"
           >
-            <div className="grid grid-cols-3 p-3 max-h-80 overflow-y-auto lg:p-5 border border-b-0 border-gray-200 dark:border-gray-700 dark:bg-gray-900 text-sm">
+            <div className="flex flex-col max-h-90 overflow-y-auto border border-b-0 border-gray-200 dark:border-gray-700 dark:bg-gray-900 text-sm">
               {itemsAccordion.performances.map((item) => {
                 if (item.state === "RUNNING"){
                   return <FechaEvento
