@@ -72,7 +72,7 @@ export const FormBusqueda = () => {
             type="search"
             id="default-search"
             // className={`focus:ring-[${dataInfoGeneral.backgroundButton}] focus:border-[${dataInfoGeneral.backgroundButton}] block w-full p-4 pl-10 text-sm text-gray-900 border border-gray-300 rounded-3xl bg-gray-50`}
-            className={`focus:ring-[#5c452c] focus:border-[#5c452c] block w-full p-4 pl-10 text-sm text-gray-900 border border-gray-300 rounded-3xl bg-gray-50`}
+            className={`focus:ring-[#5c452c] focus:border-[#5c452c] block w-full p-4 pl-10 text-sm text-gray-900 border border-gray-300 rounded bg-gray-50`}
             placeholder="Buscar un evento..."
             value={evento}
             onChange={(e) => handleEvento(e.target.value)}
@@ -80,7 +80,7 @@ export const FormBusqueda = () => {
           <button
             type="submit"
           
-            className={`text-[${dataInfoGeneral.colorButton}] text-white font-semibold absolute right-2.5 bottom-2.5 bg-[${dataInfoGeneral.backgroundButton}] hover:bg-[${dataInfoGeneral.colorHoverButton}] hover:border[${dataInfoGeneral.colorHoverButton}] font-medium rounded-3xl text-sm px-4 py-2`}
+            className={`text-[${dataInfoGeneral.colorButton}] text-white font-semibold absolute right-2.5 bottom-2.5 bg-[${dataInfoGeneral.backgroundButton}] hover:bg-[${dataInfoGeneral.colorHoverButton}] hover:border[${dataInfoGeneral.colorHoverButton}] font-medium rounded text-sm px-4 py-2`}
           >
             Buscar
           </button>

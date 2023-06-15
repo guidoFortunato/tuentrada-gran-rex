@@ -75,7 +75,7 @@ export const Home = () => {
                     width: "auto",
                   }}
                   type="button"
-                  className="w-full md:w-auto mt-6 md:mt-0 bg-[dataInfoGeneral.backgroundButton] hover:bg-[#5c452c] hover:border-[dataInfoGeneral.colorHoverButton] text-[dataInfoGeneral.colorButton] font-medium rounded-3xl text-sm px-4 py-2"
+                  className="w-full md:w-auto mt-6 md:mt-0 bg-[dataInfoGeneral.backgroundButton] hover:bg-[#5c452c] hover:border-[dataInfoGeneral.colorHoverButton] text-[dataInfoGeneral.colorButton] font-medium rounded text-sm px-4 py-2"
                 >
                   Calendario
                 </button>
@@ -157,7 +157,7 @@ export const Home = () => {
                   // background: dataInfoGeneral.backgroundButton,
                 }}
                 type="button"
-                className={`w-auto py-2.5 px-11 mt-6 md:mt-0 bg-[#855F35] hover:bg-[#5c452c] font-medium rounded-3xl text-base lg:text-lg md:text-base`}
+                className={`w-auto py-2.5 px-11 mt-6 md:mt-0 bg-[#855F35] hover:bg-[#5c452c] font-medium rounded text-base lg:text-lg md:text-base`}
               >
                 <Link to={"/calendario"}>
                   Calendario

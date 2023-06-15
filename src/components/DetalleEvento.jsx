@@ -51,6 +51,7 @@ export const DetalleEvento = () => {
           extra: data.extra,
           mediaJson: data.mediaJson,
           socialNetworks: data.socialNetworks,
+          disponibility: data.disponibility
         });
       };
       getInfo();
@@ -69,7 +70,7 @@ export const DetalleEvento = () => {
 
   return (
     <>
-      <div className="container mx-auto mb-5 px-3 ">
+      <div className="container mx-auto mb-5 px-3 xl:w-2/3">
         <section
           className={`bg-[url("assets/images/responsive.jpg")]  lg:bg-[url("assets/images/desktop.jpg")]  bg-no-repeat bg-cover bg-center mx-auto`}
         >

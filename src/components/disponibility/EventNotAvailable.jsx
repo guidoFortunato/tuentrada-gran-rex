@@ -11,7 +11,7 @@ export const EventNotAvailable = ({ img, title }) => {
         </div>
         <button
           type="button"
-          className="absolute top-1 left-1 text-white bg-red-600 cursor-default rounded-2xl text-xs px-3 py-1.5 text-center mr-2 mb-2"
+          className="absolute top-1 left-1 text-white bg-red-600 cursor-default rounded text-xs px-3 py-1.5 text-center mr-2 mb-2"
         >
           No disponible
         </button>
