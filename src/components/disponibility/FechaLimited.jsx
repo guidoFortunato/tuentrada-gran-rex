@@ -2,17 +2,10 @@ import React, { useContext } from "react";
 import { ModalPrecios } from "../";
 import { EventosContext } from "../../context/EventosProvider";
 
-export const FechaLimited = ({
-  dia,
-  hora,
-  mesFormateado,
-  anio,
-  openModal,
-  setOpenModal,
-  dataFechas,
-  dataEvento,
-}) => {
+export const FechaLimited = ({ dia, hora, mesFormateado, anio, openModal, setOpenModal, dataFechas, dataEvento }) => {
   const { dataInfoGeneral } = useContext(EventosContext);
+  // console.log({dataFechas})
+  // console.log({dataInfoGeneral})
   return (
     <>
       <div className="flex flex-row">
@@ -33,7 +26,7 @@ export const FechaLimited = ({
 
         <div className="flex flex-col justify-center ml-4">
           <div
-            className={`text-base text-gray-500 cursor-pointer uppercase font-semibold`}
+            className={`text-base text-gray-500 hover:text-gray-800 cursor-pointer uppercase font-semibold`}
             onClick={() => setOpenModal((prevstate) => !prevstate)}
           >
             Ver precios y ubicaciones
@@ -57,10 +50,9 @@ export const FechaLimited = ({
       <div className="text-end mt-4 lg:my-auto">
         <button
           type="button"
-          className="text-white bg-gray-300 focus:outline-none font-medium rounded text-sm px-3 py-2.5 text-center"
+          className={`bg-[${dataInfoGeneral.backgroundButton}] hover:bg-[${dataInfoGeneral.colorHoverButton}] hover:border[${dataInfoGeneral.colorHoverButton}] focus:outline-none font-medium rounded text-sm px-3 py-2.5 text-center`}
           style={{
             color: dataInfoGeneral.colorButton,
-            backgroundColor: dataInfoGeneral.backgroundButton,
           }}
         >
           <a

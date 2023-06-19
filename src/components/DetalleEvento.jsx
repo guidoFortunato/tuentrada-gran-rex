@@ -51,7 +51,7 @@ export const DetalleEvento = () => {
           extra: data.extra,
           mediaJson: data.mediaJson,
           socialNetworks: data.socialNetworks,
-          disponibility: data.disponibility
+          disponibility: data.disponibility,
         });
       };
       getInfo();

@@ -18,17 +18,17 @@ export const Accordion = ({ itemsAccordion, dataEvento }) => {
   // console.log({newPerformances})
 
   useEffect(() => {
-    
-    const updatedPerformances = itemsAccordion.performances.map((performance, index) => ({
-      ...performance,
-      availabilitLevel: itemsAccordion.disponibility[index].availabilitLevel,
-      reason: itemsAccordion.disponibility[index].reason
-    }));
-    setNewPerformances(updatedPerformances)
-    
+    const updatedPerformances = itemsAccordion.performances.map(
+      (performance, index) => ({
+        ...performance,
+        availabilitLevel: itemsAccordion.disponibility[index].availabilitLevel,
+        reason: itemsAccordion.disponibility[index].reason,
+      })
+    );
+    setNewPerformances(updatedPerformances);
   }, []);
 
-  if (newPerformances.length === 0) return <Spinner />
+  if (newPerformances.length === 0) return <Spinner />;
 
   return (
     <div id="accordion-open" data-accordion="open" className="mt-5">
@@ -303,7 +303,7 @@ export const Accordion = ({ itemsAccordion, dataEvento }) => {
               onClick={() => setRecomendation((prevState) => !prevState)}
             >
               <span className="flex items-center text-xl font-semibold">
-                Recomendaciones
+                Información general
               </span>
               <svg
                 data-accordion-icon
