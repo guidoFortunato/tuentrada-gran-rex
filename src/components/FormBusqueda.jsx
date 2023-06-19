@@ -1,7 +1,7 @@
 import { useContext, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
-import { EventosContext } from "../context/EventosProvider"; 
-import Swal from "sweetalert2";
+import { EventosContext } from "../context/EventosProvider";
+import { alertaWarning } from "../helpers";
 
 export const FormBusqueda = () => {
   const { dataInfoGeneral } = useContext(EventosContext);
@@ -22,24 +22,15 @@ export const FormBusqueda = () => {
     setEvento(nombreEvento);
   };
 
-
-
   const handleSubmit = (e) => {
     e.preventDefault();
     if (evento.length === 0) {
-      Swal.fire({
-        icon: 'warning',
-        html: '<b>Debe ingresar un evento</b>',
-        timer: 2500,
-        confirmButtonColor: "#3c2c1b", // dataInfoGeneral.backgroundButton
-      })
-      return 
-
+      alertaWarning("Debe ingresar un evento");
+      return;
     }
     navigate(`/busqueda-eventos/search?q=${evento}`);
     handleEvento("");
   };
-
 
   return (
     <>
@@ -79,15 +70,12 @@ export const FormBusqueda = () => {
           />
           <button
             type="submit"
-          
             className={`text-[${dataInfoGeneral.colorButton}] text-white font-semibold absolute right-2.5 bottom-2.5 bg-[${dataInfoGeneral.backgroundButton}] hover:bg-[${dataInfoGeneral.colorHoverButton}] hover:border[${dataInfoGeneral.colorHoverButton}] font-medium rounded text-sm px-4 py-2`}
           >
             Buscar
           </button>
-          
         </div>
       </form>
-     
     </>
   );
 };
