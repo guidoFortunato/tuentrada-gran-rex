@@ -5,8 +5,8 @@ import { EventosContext } from "../context/EventosProvider";
 
 export const ModalPrecios = ({ performances, openModal, setOpenModal }) => {
   const { dataInfoGeneral } = useContext(EventosContext);
-  console.log({ dataInfoGeneral });
-  console.log({ performances });
+  // console.log({ dataInfoGeneral });
+  // console.log({ performances });
   return (
     <>
       <Modal dismissible show={openModal} size={"4xl"} onClose={() => setOpenModal(false)}>
