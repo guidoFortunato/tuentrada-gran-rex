@@ -8,7 +8,7 @@ import "animate.css";
 function App() {
 
   const { dataInfoGeneral } = useContext(EventosContext);
-  if (dataInfoGeneral.length === 0) return <Spinner />;
+  if (dataInfoGeneral.length === 0) return <span></span>;
 
   return (
     <>

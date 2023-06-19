@@ -39,7 +39,7 @@ export const Home = () => {
     }
   }, [idVenue, page]);
 
-  if (data === null) return <Spinner />;
+  if (data === null) return <span></span>;
 
   if (eventos === undefined || eventos.length === 0) {
     return (
