@@ -52,7 +52,7 @@ export const CardEvento = ({ img = "", title = "", linkEvento = "", disponibilit
         ) : 
         availabilityLimited ? (
           <EventLimited linkEvento={linkEvento} img={img} title={title} data={data} />
-        ) :        
+        ) :     
         reasonNotAvailable ? (
           <EventNotAvailable img={img} title={title} />
         ) : 

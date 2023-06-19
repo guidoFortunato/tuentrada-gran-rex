@@ -11,7 +11,7 @@ export const HeaderEventos = () => {
   >
     <div
       className={`min-h-[50vh] flex justify-center items-start flex-col `}
-      style={{ background: "rgba(0,0,0,.50)" }}
+      style={{ background: "rgba(0,0,0,.6)" }}
     >
       <div className="flex justify-center w-full">
         <h1

@@ -2,8 +2,8 @@ import { useContext } from "react";
 import { Link } from "react-router-dom";
 import { EventosContext } from "../../context/EventosProvider";
 
-export const EventLimited = ({ linkEvento, img, title, data }) => {
-  const { setIdProducto } = useContext(EventosContext);
+export const EventLimited = ({ linkEvento, img, title }) => {
+  // const { setIdProducto } = useContext(EventosContext);
 
   return (
     <>

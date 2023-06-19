@@ -20,9 +20,8 @@ export const EventNotForSale = ({
         </Link>
         <button
           type="button"
-          className="absolute top-1 left-1 text-white bg-gray-600 rounded text-xs px-3 py-1.5 text-center mr-2 mb-2"
+          className="absolute top-1 left-1 text-white rounded text-xs px-3 py-1.5 text-center mr-2 mb-2"
           style={{
-            border: `1px solid ${reasonSoldOut ? "#E02424" : "#4B5563"}`,
             background: `${reasonSoldOut ? "#E02424" : "#4B5563"}`,
           }}
         >
