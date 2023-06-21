@@ -19,7 +19,7 @@ export const EventAvailable = ({ linkEvento, img, title, data }) => {
           Disponible
         </button>
         <figcaption className="hidden md:block bg-[#000]  bg-opacity-90 absolute text-md text-white bottom-2 right-0 left-0">
-          <p>{title}</p>
+          <p className="caption">{title}</p>
         </figcaption>
       </figure>
     </>

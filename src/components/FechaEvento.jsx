@@ -13,7 +13,7 @@ const opciones = {
 export const FechaEvento = ({ dataFechas, dataEvento, availabilitLevel, reason }) => {
   const [openModal, setOpenModal] = useState(false);
   // console.log({dataInfoGeneral})
-  // console.log({dataEvento})
+  console.log({dataEvento})
   // console.log({dataFechas})
   // console.log({ availabilitLevel });
   // console.log({ reason });

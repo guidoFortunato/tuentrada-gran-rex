@@ -4,6 +4,7 @@ import { EventosContext } from "../../context/EventosProvider";
 
 export const HeaderEventos = () => {
   const { dataInfoGeneral } = useContext(EventosContext);
+  console.log({dataInfoGeneral})
   return (
     <header
     style={{ backgroundImage: `url(${dataInfoGeneral.backgroundImage})` }}
