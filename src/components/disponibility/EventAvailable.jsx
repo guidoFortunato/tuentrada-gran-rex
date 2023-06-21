@@ -18,8 +18,8 @@ export const EventAvailable = ({ linkEvento, img, title, data }) => {
         >
           Disponible
         </button>
-        <figcaption className="hidden md:block bg-[#000]  bg-opacity-90 absolute text-md text-white bottom-2 right-0 left-0">
-          <p className="caption">{title}</p>
+        <figcaption className=" transition duration-300 ease-in-out text-transparent hover:text-white h-full bg-gradient-to-r  hover:from-[rgba(34,12,2,0.22)] hover:to-[rgba(68,40,9,0.6951155462184874)] hover:bg-gradient-to-r bg-opacity-90 absolute text-md text-white bottom-0 right-0 left-0">
+          <p className="transition flex justify-end">{title}</p>
         </figcaption>
       </figure>
     </>
