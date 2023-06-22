@@ -28,10 +28,8 @@ export const NavBar = () => {
   // console.log({ dataInfoGeneral });
   // console.log("se renderiza el navbar");
 
-  const handleSearchCollapse = () =>
-    setIsSearchCollapsed((prevState) => !prevState);
-  const handleButtonCollapse = () =>
-    setIsButtonCollapsed((prevState) => !prevState);
+  const handleSearchCollapse = () => setIsSearchCollapsed((prevState) => !prevState);
+  const handleButtonCollapse = () => setIsButtonCollapsed((prevState) => !prevState);
 
   const handleButtonsCollapse = () => {
     setIsButtonCollapsed(false);
@@ -59,7 +57,7 @@ export const NavBar = () => {
               alt={dataInfoGeneral.altLogo}
             />
             <span className="self-center text-xl font-bold whitespace-nowrap">
-              {dataInfoGeneral.pages[0].title}
+              {dataInfoGeneral.name}
             </span>
           </Link>
           <div className="flex lg:w-1/3">

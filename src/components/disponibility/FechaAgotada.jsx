@@ -1,40 +1,33 @@
-
-export const FechaAgotada = ({
-  dia,
-  hora,
-  mesFormateado,
-  anio,
-}) => {
-
+export const FechaAgotada = ({ dia, hora, mesFormateado, anio }) => {
   return (
     <>
       <div className="flex flex-row">
-        <div className="flex flex-col justify-center">
-          <div
-            className="lg:mr-1 lg:whitespace-nowrap text-base font-semibold text-gray-300"
-          >
-            {dia} {mesFormateado}
+        <div className="flex flex-col justify-center w-12">
+          <div className="lg:mr-1 lg:whitespace-nowrap text-md font-semibold text-gray-300">
+            <span>
+              {dia} {mesFormateado}
+            </span>
           </div>
-          <div
-            className="md:mr-1 text-left text-lg font-semibold text-gray-300"
-          >
-            {anio}
+          <div className="md:mr-1 text-left text-md font-semibold text-gray-300">
+            <span>{anio}</span>
           </div>
         </div>
 
         <div className="flex flex-col justify-center ml-4">
-          <div
-            className={`text-base text-gray-300 uppercase font-semibold`}
-          >
-            Ver precios y ubicaciones
+          <div>
+            <span className={`text-md text-gray-300 uppercase font-semibold`}>
+              Ver precios y ubicaciones
+            </span>
           </div>
 
-          <div className="uppercase text-red-700  font-bold">
-            entradas agotadas
+          <div>
+            <span className="uppercase text-gray-300 text-xs font-semibold">
+              entradas agotadas
+            </span>
           </div>
 
-          <div className="md:mr-1 text-left text-lg text-gray-300 font-semibold ">
-            {hora}hs
+          <div className="md:mr-1 text-left text-sm text-gray-300 font-semibold ">
+            <span>{hora}hs</span>
           </div>
           {/* <ModalPrecios
             performances={dataFechas}

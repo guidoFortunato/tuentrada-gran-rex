@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import DOMPurify from "dompurify";
 
-import { FechaEvento, MediaEvento, Spinner } from "./";
+import { FechaEvento, MediaEvento, Spinner, IconAccordion } from "./";
 
 export const Accordion = ({ itemsAccordion, dataEvento }) => {
   const [performances, setPerformances] = useState(true);
@@ -54,21 +54,7 @@ export const Accordion = ({ itemsAccordion, dataEvento }) => {
                   ? "Fechas disponibles"
                   : "Fecha disponible"}
               </span>
-              <svg
-                data-accordion-icon
-                className={`w-6 h-6 ${
-                  performances ? "rotate-180" : ""
-                } shrink-0`}
-                fill="currentColor"
-                viewBox="0 0 20 20"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  fillRule="evenodd"
-                  d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                  clipRule="evenodd"
-                ></path>
-              </svg>
+              <IconAccordion item={performances} />
             </button>
           </h2>
           <div
@@ -109,19 +95,7 @@ export const Accordion = ({ itemsAccordion, dataEvento }) => {
               <span className="flex items-center text-xl font-semibold">
                 Descripción
               </span>
-              <svg
-                data-accordion-icon
-                className={`w-6 h-6 ${history ? "rotate-180" : ""} shrink-0`}
-                fill="currentColor"
-                viewBox="0 0 20 20"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  fillRule="evenodd"
-                  d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                  clipRule="evenodd"
-                ></path>
-              </svg>
+              <IconAccordion item={history} />
             </button>
           </h2>
           <div
@@ -154,19 +128,7 @@ export const Accordion = ({ itemsAccordion, dataEvento }) => {
               <span className="flex items-center text-xl font-semibold">
                 Promociones
               </span>
-              <svg
-                data-accordion-icon
-                className={`w-6 h-6 ${promotion ? "rotate-180" : ""} shrink-0`}
-                fill="currentColor"
-                viewBox="0 0 20 20"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  fillRule="evenodd"
-                  d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                  clipRule="evenodd"
-                ></path>
-              </svg>
+              <IconAccordion item={promotion} />
             </button>
           </h2>
           <div
@@ -200,21 +162,7 @@ export const Accordion = ({ itemsAccordion, dataEvento }) => {
               <span className="flex items-center text-xl font-semibold">
                 Redes
               </span>
-              <svg
-                data-accordion-icon
-                className={`w-6 h-6 ${
-                  socialNetworks ? "rotate-180" : ""
-                } shrink-0`}
-                fill="currentColor"
-                viewBox="0 0 20 20"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  fillRule="evenodd"
-                  d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                  clipRule="evenodd"
-                ></path>
-              </svg>
+              <IconAccordion item={socialNetworks} />
             </button>
           </h2>
           <div
@@ -256,19 +204,7 @@ export const Accordion = ({ itemsAccordion, dataEvento }) => {
               <span className="flex items-center text-xl font-semibold">
                 Media
               </span>
-              <svg
-                data-accordion-icon
-                className={`w-6 h-6 ${mediaJson ? "rotate-180" : ""} shrink-0`}
-                fill="currentColor"
-                viewBox="0 0 20 20"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  fillRule="evenodd"
-                  d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                  clipRule="evenodd"
-                ></path>
-              </svg>
+              <IconAccordion item={mediaJson} />
             </button>
           </h2>
           <div
@@ -305,21 +241,7 @@ export const Accordion = ({ itemsAccordion, dataEvento }) => {
               <span className="flex items-center text-xl font-semibold">
                 Información general
               </span>
-              <svg
-                data-accordion-icon
-                className={`w-6 h-6 ${
-                  recomendation ? "rotate-180" : ""
-                } shrink-0`}
-                fill="currentColor"
-                viewBox="0 0 20 20"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  fillRule="evenodd"
-                  d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                  clipRule="evenodd"
-                ></path>
-              </svg>
+              <IconAccordion item={recomendation} />
             </button>
           </h2>
           <div
@@ -352,19 +274,7 @@ export const Accordion = ({ itemsAccordion, dataEvento }) => {
               <span className="flex items-center text-xl font-semibold">
                 Extra
               </span>
-              <svg
-                data-accordion-icon
-                className={`w-6 h-6 ${extra ? "rotate-180" : ""} shrink-0`}
-                fill="currentColor"
-                viewBox="0 0 20 20"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  fillRule="evenodd"
-                  d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                  clipRule="evenodd"
-                ></path>
-              </svg>
+              <IconAccordion item={extra} />
             </button>
           </h2>
           <div

@@ -4,8 +4,8 @@ import { EventosContext } from "../../context/EventosProvider";
 
 export const EventAvailable = ({ linkEvento, img, title, data }) => {
   const { setIdProducto } = useContext(EventosContext);
-  // console.log({title})
-
+  // console.log({data})
+  // console.log({linkEvento})
   return (
     <>
       <figure className="relative max-w-sm cursor-pointer">
@@ -18,9 +18,11 @@ export const EventAvailable = ({ linkEvento, img, title, data }) => {
         >
           Disponible
         </button>
-        <figcaption className=" transition duration-300 ease-in-out text-transparent hover:text-white h-full bg-gradient-to-r  hover:from-[rgba(34,12,2,0.22)] hover:to-[rgba(68,40,9,0.6951155462184874)] hover:bg-gradient-to-r bg-opacity-90 absolute text-md text-white bottom-0 right-0 left-0">
-          <p className="transition flex justify-end">{title}</p>
-        </figcaption>
+        <Link to={linkEvento}>
+          <figcaption className=" transition duration-300 ease-in-out text-transparent hover:text-white h-full bg-gradient-to-r  hover:from-[rgba(34,12,2,0.22)] hover:to-[rgba(68,40,9,0.6951155462184874)] hover:bg-gradient-to-r bg-opacity-90 absolute text-md text-white bottom-0 right-0 left-0">
+            <p className="transition flex justify-end">{title}</p>
+          </figcaption>
+        </Link>
       </figure>
     </>
   );

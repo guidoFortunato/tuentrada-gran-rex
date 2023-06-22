@@ -13,7 +13,7 @@ const opciones = {
 export const FechaEvento = ({ dataFechas, dataEvento, availabilitLevel, reason }) => {
   const [openModal, setOpenModal] = useState(false);
   // console.log({dataInfoGeneral})
-  console.log({dataEvento})
+  // console.log({dataEvento})
   // console.log({dataFechas})
   // console.log({ availabilitLevel });
   // console.log({ reason });
@@ -21,10 +21,8 @@ export const FechaEvento = ({ dataFechas, dataEvento, availabilitLevel, reason }
   const fecha = new Date(dataFechas.start);
   const formatoFecha = fecha.toLocaleDateString("es-ES", opciones);
   const dia = formatoFecha.split(",")[0].split(" ")[0];
-  const mes =
-    formatoFecha.split(",")[0].split(" ")[2].charAt(0).toUpperCase() +
-    formatoFecha.split(",")[0].split(" ")[2].slice(1);
-  const mesFormateado = mes.length > 6 ? mes.slice(0, 3) : mes;
+  const mes = formatoFecha.split(",")[0].split(" ")[2].charAt(0).toUpperCase() + formatoFecha.split(",")[0].split(" ")[2].slice(1);
+  const mesFormateado = mes.slice(0, 3);
   const anio = formatoFecha.split(",")[0].split(" ")[4];
   const hora = formatoFecha.split(",")[1].trim();
 

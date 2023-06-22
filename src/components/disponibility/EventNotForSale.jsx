@@ -33,9 +33,11 @@ export const EventNotForSale = ({
             ? "Suspendido"
             : "No disponible"}
         </button>
-        <figcaption className="hidden md:block bg-[#000]  bg-opacity-90 absolute text-md text-white bottom-2 right-0 left-0">
-          <p>{title}</p>
-        </figcaption>
+        <Link to={linkEvento}>
+          <figcaption className="hidden md:block bg-[#000]  bg-opacity-90 absolute text-md text-white bottom-2 right-0 left-0">
+            <p>{title}</p>
+          </figcaption>
+        </Link>
       </figure>
     </>
   );

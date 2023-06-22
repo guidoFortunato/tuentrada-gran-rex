@@ -2,42 +2,57 @@ import React, { useContext } from "react";
 import { ModalPrecios } from "../";
 import { EventosContext } from "../../context/EventosProvider";
 
-export const FechaLimited = ({ dia, hora, mesFormateado, anio, openModal, setOpenModal, dataFechas, dataEvento }) => {
+export const FechaLimited = ({
+  dia,
+  hora,
+  mesFormateado,
+  anio,
+  openModal,
+  setOpenModal,
+  dataFechas,
+  dataEvento,
+}) => {
   const { dataInfoGeneral } = useContext(EventosContext);
   // console.log({dataFechas})
   // console.log({dataInfoGeneral})
   return (
     <>
       <div className="flex flex-row">
-        <div className="flex flex-col justify-center">
+        <div className="flex flex-col justify-center w-12">
           <div
             style={{ color: dataInfoGeneral.colorSiteName }}
-            className="lg:mr-1 lg:whitespace-nowrap text-base font-semibold "
+            className="lg:mr-1 lg:whitespace-nowrap text-md font-semibold "
           >
-            {dia} {mesFormateado}
+            <span>
+              {" "}
+              {dia} {mesFormateado}
+            </span>
           </div>
           <div
             style={{ color: dataInfoGeneral.colorSiteName }}
-            className="md:mr-1 text-left text-lg font-semibold"
+            className="md:mr-1 text-left text-base font-semibold"
           >
-            {anio}
+            <span>{anio}</span>
           </div>
         </div>
 
         <div className="flex flex-col justify-center ml-4">
-          <div
-            className={`text-base text-gray-500 hover:text-gray-800 cursor-pointer uppercase font-semibold`}
-            onClick={() => setOpenModal((prevstate) => !prevstate)}
-          >
-            Ver precios y ubicaciones
+          <div onClick={() => setOpenModal((prevstate) => !prevstate)}>
+            <span
+              className={`text-md text-gray-500 hover:text-gray-800 cursor-pointer uppercase font-semibold`}
+            >
+              Ver precios y ubicaciones
+            </span>
           </div>
 
-          <div className="uppercase text-pink-800  font-bold">
-            ¡últimas entradas!
+          <div>
+            <span className="uppercase text-pink-800 text-xs font-semibold">
+              ¡últimas entradas!
+            </span>
           </div>
 
-          <div className="md:mr-1 text-left text-lg text-black font-semibold">
-            {hora}hs
+          <div className="md:mr-1 text-left text-sm text-black font-semibold">
+            <span>{hora}hs</span>
           </div>
           <ModalPrecios
             performances={dataFechas}

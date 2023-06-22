@@ -4,38 +4,44 @@ import { EventosContext } from "../../context/EventosProvider";
 
 export const FechaDisponible = ({ dia, hora, mesFormateado, anio, openModal, setOpenModal, dataFechas, dataEvento }) => {
   const { dataInfoGeneral } = useContext(EventosContext);
+  // console.log({dataInfoGeneral})
   return (
     <>
       <div className="flex flex-row">
-        <div className="flex flex-col justify-center">
+        <div className="flex flex-col justify-center w-12">
           <div
             style={{ color: dataInfoGeneral.colorSiteName }}
-            className="lg:mr-1 lg:whitespace-nowrap text-base font-semibold "
+            className="lg:mr-1 lg:whitespace-nowrap text-sm font-semibold "
           >
-            {dia} {mesFormateado}
+            <span>
+              {dia} {mesFormateado}
+            </span>
           </div>
           <div
             style={{ color: dataInfoGeneral.colorSiteName }}
-            className="md:mr-1 text-left text-lg font-semibold"
+            className="md:mr-1 text-left text-base font-semibold"
           >
-            {anio}
+            <span>{anio}</span>
           </div>
         </div>
 
         <div className="flex flex-col justify-center ml-4">
-          <div
-            className={`text-base text-gray-500 hover:text-gray-800 cursor-pointer uppercase font-semibold`}
-            onClick={() => setOpenModal((prevstate) => !prevstate)}
-          >
-            Ver precios y ubicaciones
+          <div onClick={() => setOpenModal((prevstate) => !prevstate)}>
+            <span
+              className={`text-sm text-gray-500 hover:text-gray-800 cursor-pointer uppercase font-semibold`}
+            >
+              Ver precios y ubicaciones
+            </span>
           </div>
 
-          <div className="uppercase text-green-700  font-bold">
-            entradas disponibles
+          <div>
+            <span className="uppercase text-green-700  text-xs font-bold">
+              entradas disponibles
+            </span>
           </div>
 
-          <div className="md:mr-1 text-left text-lg text-black font-semibold">
-            {hora}hs
+          <div className="md:mr-1 text-left text-sm text-black font-semibold">
+            <span>{hora}hs</span>
           </div>
           <ModalPrecios
             performances={dataFechas}

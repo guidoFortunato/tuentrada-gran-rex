@@ -28,10 +28,10 @@ export const Home = () => {
     
   // }, [page]);
 
-  if (eventosGenerales.length === 0) return <span></span>;
+  if (data === null) return <span></span>;
   // if (eventosGenerales.length === 0) return <Spinner />;
 
-  if (eventosGenerales === undefined || eventosGenerales.length === 0) {
+  if (eventosGenerales === undefined || eventosGenerales.length === 0 || data.data.length === 0) {
     return (
       <>
         <HeaderNoEventos />

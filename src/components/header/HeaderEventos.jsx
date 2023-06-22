@@ -1,10 +1,11 @@
 import { useContext } from "react";
 import { Link } from "react-router-dom";
+import DOMPurify from "dompurify"; 
 import { EventosContext } from "../../context/EventosProvider";
 
 export const HeaderEventos = () => {
   const { dataInfoGeneral } = useContext(EventosContext);
-  console.log({dataInfoGeneral})
+  // console.log({dataInfoGeneral})
   return (
     <header
     style={{ backgroundImage: `url(${dataInfoGeneral.backgroundImage})` }}
@@ -33,12 +34,10 @@ export const HeaderEventos = () => {
         <p
           style={{ color: dataInfoGeneral.colorButton }}
           className={`md:w-3/5 md:mr-6 text-justify pl-10 pr-10 md:pl-0 md:pr-0 text-base md:text-base lg:text-lg`}
-        >
-          ¡No te pierdas ni un solo evento! Encontrá toda la programación
-          completa en el siguiente enlace y preparate para vivir
-          experiencias únicas. ¡Descubrí tus próximos momentos inolvidables
-          aquí!
-        </p>
+          dangerouslySetInnerHTML={{
+            __html: DOMPurify.sanitize(dataInfoGeneral.description),
+          }}
+        ></p>
         <div
           className="flex md:flex-col md:items-center md:justify-center mb-10 "
           style={{ width: "30%", justifyContent: "center" }}

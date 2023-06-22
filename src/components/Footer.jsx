@@ -1,11 +1,7 @@
 import { useContext } from "react";
-import { EventosContext } from "../context/EventosProvider";
-import { Spinner } from "./Spinner";
-
-import DOMPurify from "dompurify";
-
-import "../css/footer.css";
 import { Link } from "react-router-dom";
+import { EventosContext } from "../context/EventosProvider";
+import DOMPurify from "dompurify";
 
 export const Footer = () => {
   const { dataInfoGeneral } = useContext(EventosContext);
@@ -13,14 +9,18 @@ export const Footer = () => {
   // if (dataInfoGeneral.length === 0) return <Spinner />;
 
   return (
-    <footer style={{ backgroundColor: dataInfoGeneral.backgroundFooter, fontFamily: "Raleway", color: dataInfoGeneral.colorFooter }} className={`shadow absolute bottom-0 w-full`}>
+    <footer
+      style={{
+        backgroundColor: dataInfoGeneral.backgroundFooter,
+        fontFamily: "Raleway",
+        color: dataInfoGeneral.colorFooter,
+      }}
+      className={`shadow absolute bottom-0 w-full`}
+    >
       <div className="w-full max-w-screen-xl mx-auto p-4 md:py-8">
-      {/* <div className="flex flex-col lg:flex-row lg:justify-between space-y-2 lg:space-y-0"> */}
+        {/* <div className="flex flex-col lg:flex-row lg:justify-between space-y-2 lg:space-y-0"> */}
         <div className="sm:flex sm:items-center sm:justify-between">
-          <Link
-            to="/"
-            className="flex items-center mb-4 sm:mb-0"
-          >
+          <Link to="/" className="flex items-center mb-4 sm:mb-0">
             <img
               src={dataInfoGeneral.logo}
               className="h-8 mr-3"
@@ -55,70 +55,10 @@ export const Footer = () => {
         </div>
         <hr className="my-6 border-gray-200 sm:mx-auto  lg:my-8" />
         <span className="block text-sm  sm:text-center ">
-          © 2023{" "}
-          <a href="https://tuentrada.com/" className="hover:underline ">
-            <span className="mr-1">TuEntrada</span>-<span className="ml-1">Todos los derechos reservados</span>
-          </a>
-          
+          © 2023 <span className="mr-1">TuEntrada</span>-
+          <span className="ml-1">Todos los derechos reservados</span>
         </span>
       </div>
     </footer>
-
-    // <footer>
-    //   <div className="container">
-    //     <div className="row mb-2 text-center">
-    //       <div className="col-12 col-md-6 d-flex justify-content-center align-items-center mb-3 mb-md-0 pt-3">
-    //         <div className="d-flex flex-column text-start parrafo-footer">
-    //           <p style={{ fontSize: "16px" }} className="mb-0">
-    //             <strong>Dirección:</strong>{" "}
-    //             {dataInfoGeneral?.physicalConfiguration?.street}
-    //           </p>
-    //           <span
-    //             className="texto-boleteria"
-    //             dangerouslySetInnerHTML={{
-    //               __html: DOMPurify.sanitize(dataInfoGeneral?.openSchedule),
-    //             }}
-    //           ></span>
-    //         </div>
-    //       </div>
-    //       <div className="col-12 col-md-6 d-flex justify-content-center align-items-center my-2 my-lg-0">
-    //         <span style={{ color: "white", fontSize: "15px" }}>
-    //           Seguinos en nuestras redes:
-    //         </span>
-    //         <ul className="list-unstyled d-flex mb-0">
-    //           {dataInfoGeneral?.socialNetworks &&
-    //             dataInfoGeneral?.socialNetworks?.map((item) => (
-    //               <li className="me-3" key={item.id}>
-    //                 <a
-    //                   className="link-dark"
-    //                   rel="noreferrer"
-    //                   href={item.href}
-    //                   target="_blank"
-    //                 >
-    //                   <svg
-    //                     xmlns={item.xmlns}
-    //                     x={"0px"}
-    //                     y={"0px"}
-    //                     style={{ padding: "5px", fill: "#ffffff" }}
-    //                     width={item.width}
-    //                     height={item.height}
-    //                     viewBox={item.viewBox}
-    //                   >
-    //                     <path d={item.path}></path>
-    //                   </svg>
-    //                 </a>
-    //               </li>
-    //             ))}
-    //         </ul>
-    //       </div>
-    //       <div className="col-12 mt-5 mt-lg-3">
-    //         <p className="mb-0 parrafo-footer" style={{ fontSize: "16px" }}>
-    //           Copyright © {new Date().getFullYear()} tuentrada.com <br />
-    //           Todos los derechos reservados
-    //         </p>
-    //       </div>
-    //     </div>
-    //   </div>
-    // </footer>
   );
 };

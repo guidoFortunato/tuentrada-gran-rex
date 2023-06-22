@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import { EventosContext } from "../../context/EventosProvider";
+import DOMPurify from "dompurify";
 
 export const HeaderNoEventos = () => {
   const { dataInfoGeneral } = useContext(EventosContext);
@@ -28,14 +29,13 @@ export const HeaderNoEventos = () => {
           className="flex flex-col md:flex-row "
           style={{ justifyContent: "center", alignItems: "center" }}
         >
-          <p
-            style={{ color: dataInfoGeneral.colorButton }}
-            className={`md:w-3/5 md:mr-6 text-justify pl-10 pr-10 md:pl-0 md:pr-0 text-base md:text-base lg:text-lg`}
-          >
-            ¡No te pierdas ni un solo evento! Encontrá toda la programación
-            completa en el siguiente enlace y preparate para vivir experiencias
-            únicas. ¡Descubrí tus próximos momentos inolvidables aquí!
-          </p>
+         <p
+          style={{ color: dataInfoGeneral.colorButton }}
+          className={`md:w-3/5 md:mr-6 text-justify pl-10 pr-10 md:pl-0 md:pr-0 text-base md:text-base lg:text-lg`}
+          dangerouslySetInnerHTML={{
+            __html: DOMPurify.sanitize(dataInfoGeneral.description),
+          }}
+        ></p>
           <div
             className="flex md:flex-col md:items-center md:justify-center mb-10 "
             style={{ width: "30%", justifyContent: "center" }}

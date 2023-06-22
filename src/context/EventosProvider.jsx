@@ -21,9 +21,11 @@ const EventosProvider = (props) => {
   //   setIdProducto(idProducto)
   // }
 
+  // console.log({dataInfoGeneral})
+
   useEffect(() => {
     const getDataInfoGeneral = async () => {
-      const {data} = await getData(VITE_API_INFO_GENERAL + "teatro-granrex", VITE_EMAIL, VITE_PASS); //window.location.hostname
+      const {data} = await getData(VITE_API_INFO_GENERAL + "teatro-granrex.com.ar", VITE_EMAIL, VITE_PASS); //window.location.hostname
       // console.log({data})
       setDataInfoGeneral(data);
       setIdVenue(data.venueId);
@@ -36,7 +38,7 @@ const EventosProvider = (props) => {
       const getDataEventosGenerales = async () => {
         const newLocal = `${VITE_API_EVENTOS + idVenue}?page=${page}`;
         const info = await getData( newLocal, VITE_EMAIL, VITE_PASS );
-        // console.log(info)
+        // console.log({info})
         setData(info);
         setEventosGenerales((prevEventos) => prevEventos.concat(info.data));
       };
