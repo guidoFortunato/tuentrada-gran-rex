@@ -362,7 +362,7 @@ export const Historia = () => {
   return (
     <div className="container mx-auto mb-5 lg:px-0">
       <section
-        style={{ backgroundImage: `url(${dataInfoGeneral.backgroundImage})` }}
+        style={{ backgroundImage: `url(${dataInfoGeneral.pages[2].images[10].image})` }}
         className="bg-no-repeat bg-cover bg-center container mx-auto"
       >
         <h2
