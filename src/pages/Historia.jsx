@@ -298,7 +298,7 @@ export const Historia = () => {
       return (
         <>
           <p
-            className="parrafo-historia"
+            className="parrafo-historia text-sm text-gray-500"
             dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(truncatedText) }}
           ></p>
           {words.length > maxWords && (
@@ -367,7 +367,7 @@ export const Historia = () => {
       >
         <h2
           style={{ height: "40vh" }}
-          className="text-3xl flex lg:justify-start justify-center items-center lg:items-end text-white p-10 my-3 tittle-h2"
+          className="text-3xl text-center flex lg:justify-start justify-center items-center lg:items-end text-white p-10 my-3 tittle-h2"
         >
           {dataInfoGeneral.pages[2].title}
         </h2>
