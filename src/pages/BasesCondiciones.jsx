@@ -75,7 +75,7 @@ export const BasesCondiciones = () => {
 
         <div className="col-12 mb-4 px-4 lg:px-0">
           <div
-            className="parrafo-historia"
+            className="parrafo-historia text-sm text-gray-500"
             dangerouslySetInnerHTML={{
               __html: DOMPurify.sanitize(dataInfoGeneral.pages[4].text),
             }}

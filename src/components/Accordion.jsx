@@ -43,7 +43,7 @@ export const Accordion = ({ itemsAccordion, dataEvento }) => {
           <h2 id="accordion-open-heading-1">
             <button
               type="button"
-              className="flex items-center justify-between w-full p-5 font-medium text-left text-gray-500 border-b-2 border-gray-200 bg-gray-100 hover:bg-gray-200 dark:hover:bg-gray-800"
+              className="flex items-center justify-between w-full p-5 font-medium text-left text-gray-500 border-b-2 bg-gray-100  border-gray-200  hover:bg-gray-200 dark:hover:bg-gray-800"
               data-accordion-target="#accordion-open-body-1"
               aria-expanded="true"
               aria-controls="accordion-open-body-1"
@@ -62,7 +62,7 @@ export const Accordion = ({ itemsAccordion, dataEvento }) => {
             className={performances ? "" : "hidden"}
             aria-labelledby="accordion-open-heading-1"
           >
-            <div className="flex flex-col max-h-90 overflow-y-auto border border-b-0 border-gray-200 dark:border-gray-700 dark:bg-gray-900 text-sm">
+            <div className="flex flex-col max-h-90 overflow-y-auto border-0 border-gray-200 dark:border-gray-700 dark:bg-gray-900 text-sm">
               {newPerformances.map((item) => {
                 return (
                   <FechaEvento
@@ -84,7 +84,7 @@ export const Accordion = ({ itemsAccordion, dataEvento }) => {
           <h2 id="accordion-open-heading-2">
             <button
               type="button"
-              className="flex items-center justify-between w-full p-5 font-medium text-left text-gray-500 border-b-2 border-gray-200 bg-gray-100 hover:bg-gray-200 dark:hover:bg-gray-800"
+              className="flex items-center justify-between w-full p-5 font-medium text-left text-gray-500 border-b-2 bg-gray-100  border-gray-200  hover:bg-gray-200 dark:hover:bg-gray-800"
               data-accordion-target="#accordion-open-body-2"
               aria-expanded="false"
               aria-controls="accordion-open-body-2"
@@ -101,9 +101,9 @@ export const Accordion = ({ itemsAccordion, dataEvento }) => {
             className={history ? "" : "hidden"}
             aria-labelledby="accordion-open-heading-2"
           >
-            <div className="p-5 border border-b-0 border-gray-200 dark:border-gray-700">
+            <div className="p-5 border-0 border-gray-200 dark:border-gray-700">
               <p
-                className="text-base"
+                className="text-base  text-gray-500"
                 dangerouslySetInnerHTML={{
                   __html: DOMPurify.sanitize(itemsAccordion.history),
                 }}
@@ -117,7 +117,7 @@ export const Accordion = ({ itemsAccordion, dataEvento }) => {
           <h2 id="accordion-open-heading-3">
             <button
               type="button"
-              className="flex items-center justify-between w-full p-5 font-medium text-left text-gray-500 border-b-2 border-gray-200 bg-gray-100 hover:bg-gray-200 dark:hover:bg-gray-800"
+              className="flex items-center justify-between w-full p-5 font-medium text-left text-gray-500 border-b-2 bg-gray-100  border-gray-200  hover:bg-gray-200 dark:hover:bg-gray-800"
               data-accordion-target="#accordion-open-body-3"
               aria-expanded="false"
               aria-controls="accordion-open-body-3"
@@ -134,9 +134,9 @@ export const Accordion = ({ itemsAccordion, dataEvento }) => {
             className={promotion ? "" : "hidden"}
             aria-labelledby="accordion-open-heading-3"
           >
-            <div className="p-5 border border-b-0 border-gray-200 dark:border-gray-700">
+            <div className="p-5 border-0 border-gray-200 dark:border-gray-700">
               <p
-                className="text-base"
+                className="text-base  text-gray-500"
                 dangerouslySetInnerHTML={{
                   __html: DOMPurify.sanitize(itemsAccordion.promotion),
                 }}
@@ -151,7 +151,7 @@ export const Accordion = ({ itemsAccordion, dataEvento }) => {
           <h2 id="accordion-open-heading-4">
             <button
               type="button"
-              className="flex items-center justify-between w-full p-5 font-medium text-left text-gray-500 border-b-2 border-gray-200 bg-gray-100 hover:bg-gray-200 dark:hover:bg-gray-800"
+              className="flex items-center justify-between w-full p-5 font-medium text-left text-gray-500 border-b-2 bg-gray-100  border-gray-200  hover:bg-gray-200 dark:hover:bg-gray-800"
               data-accordion-target="#accordion-open-body-4"
               aria-expanded="false"
               aria-controls="accordion-open-body-4"
@@ -168,7 +168,7 @@ export const Accordion = ({ itemsAccordion, dataEvento }) => {
             className={socialNetworks ? "" : "hidden"}
             aria-labelledby="accordion-open-heading-4"
           >
-            <div className="p-5 border border-t-0 border-gray-200 dark:border-gray-700">
+            <div className="p-5 border-t-0 border-gray-200 dark:border-gray-700">
               <p className="mb-2 text-gray-500 dark:text-gray-400">
                 The main difference is that the core components from Flowbite
                 are open source under the MIT license, whereas Tailwind UI is a
@@ -193,7 +193,7 @@ export const Accordion = ({ itemsAccordion, dataEvento }) => {
           <h2 id="accordion-open-heading-5">
             <button
               type="button"
-              className="flex items-center justify-between w-full p-5 font-medium text-left text-gray-500 border-b-2 border-gray-200 bg-gray-100 hover:bg-gray-200 dark:hover:bg-gray-800"
+              className="flex items-center justify-between w-full p-5 font-medium text-left text-gray-500 border-b-2 bg-gray-100  border-gray-200  hover:bg-gray-200 dark:hover:bg-gray-800"
               data-accordion-target="#accordion-open-body-5"
               aria-expanded="false"
               aria-controls="accordion-open-body-5"
@@ -230,7 +230,7 @@ export const Accordion = ({ itemsAccordion, dataEvento }) => {
           <h2 id="accordion-open-heading-6">
             <button
               type="button"
-              className="flex items-center justify-between w-full p-5 font-medium text-left text-gray-500 border-b-2 border-gray-200 bg-gray-100 hover:bg-gray-200 dark:hover:bg-gray-800"
+              className="flex items-center justify-between w-full p-5 font-medium text-left text-gray-500 border-b-2 bg-gray-100  border-gray-200  hover:bg-gray-200 dark:hover:bg-gray-800"
               data-accordion-target="#accordion-open-body-6"
               aria-expanded="false"
               aria-controls="accordion-open-body-6"
@@ -247,9 +247,9 @@ export const Accordion = ({ itemsAccordion, dataEvento }) => {
             className={recomendation ? "" : "hidden"}
             aria-labelledby="accordion-open-heading-6"
           >
-            <div className="p-5 border border-b-0 border-gray-200 dark:border-gray-700">
+            <div className="p-5 border-0 border-gray-200 dark:border-gray-700">
               <p
-                className="text-base"
+                className="text-base  text-gray-500"
                 dangerouslySetInnerHTML={{
                   __html: DOMPurify.sanitize(itemsAccordion.recomendation),
                 }}
@@ -263,7 +263,7 @@ export const Accordion = ({ itemsAccordion, dataEvento }) => {
           <h2 id="accordion-open-heading-7">
             <button
               type="button"
-              className="flex items-center justify-between w-full p-5 font-medium text-left text-gray-500 border-b-2 border-gray-200 bg-gray-100 hover:bg-gray-200 dark:hover:bg-gray-800"
+              className="flex items-center justify-between w-full p-5 font-medium text-left text-gray-500 border-b-2 bg-gray-100  border-gray-200  hover:bg-gray-200 dark:hover:bg-gray-800"
               data-accordion-target="#accordion-open-body-7"
               aria-expanded="false"
               aria-controls="accordion-open-body-7"
@@ -280,9 +280,9 @@ export const Accordion = ({ itemsAccordion, dataEvento }) => {
             className={extra ? "" : "hidden"}
             aria-labelledby="accordion-open-heading-7"
           >
-            <div className="p-5 border border-b-0 border-gray-200 dark:border-gray-700">
+            <div className="p-5 border-0 border-gray-200 dark:border-gray-700">
               <p
-                className="text-base"
+                className="text-base  text-gray-500"
                 dangerouslySetInnerHTML={{
                   __html: DOMPurify.sanitize(itemsAccordion.extra),
                 }}

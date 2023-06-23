@@ -20,7 +20,7 @@ export const HorariosLlegada = () => {
   return (
     <div className="container mx-auto mb-5">
       <section
-        style={{ backgroundImage: `url(${dataInfoGeneral.backgroundImage})` }}
+        style={{ backgroundImage: `url(${dataInfoGeneral.pages[3].images[0].image}` }}
         className="bg-no-repeat bg-cover bg-center container mx-auto"
       >
         <h2 style={{height:"40vh"}} className="text-3xl flex lg:justify-start justify-center items-center lg:items-end text-white p-10 my-3 tittle-h2">
@@ -32,7 +32,7 @@ export const HorariosLlegada = () => {
         <article className="col-12 col-lg-6 px-4 lg:px-0">
           <div>
             <p
-              className="parrafo-historia"
+              className="parrafo-historia text-sm text-gray-500"
               dangerouslySetInnerHTML={{
                 __html: DOMPurify.sanitize(dataInfoGeneral.pages[3].text),
               }}

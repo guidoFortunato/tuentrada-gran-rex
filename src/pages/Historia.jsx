@@ -300,10 +300,8 @@ export const Historia = () => {
       return (
         <>
           <p
-            className="parrafo-historia"
-            dangerouslySetInnerHTML={{
-              __html: DOMPurify.sanitize(truncatedText),
-            }}
+            className="parrafo-historia  text-sm text-gray-500"
+            dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(truncatedText) }}
           ></p>
           {words.length > maxWords && (
             <button className="text-blue-500" onClick={toggleShowMoreText}>
@@ -380,7 +378,7 @@ export const Historia = () => {
         className="bg-no-repeat bg-cover bg-center container mx-auto"
       >
         <h2
-          style={{ height: "40vh", background: "rgba(0,0,0,.50)" }}
+          style={{ height: "40vh" }}
           className="text-3xl flex lg:justify-start justify-center items-center lg:items-end text-white p-10 my-3 tittle-h2"
         >
           {dataInfoGeneral.pages[2].title}
