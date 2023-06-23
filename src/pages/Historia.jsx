@@ -300,7 +300,7 @@ export const Historia = () => {
       return (
         <>
           <p
-            className="parrafo-historia"
+            className="parrafo-historia  text-sm text-gray-500"
             dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(truncatedText) }}
           ></p>
           {words.length > maxWords && (
