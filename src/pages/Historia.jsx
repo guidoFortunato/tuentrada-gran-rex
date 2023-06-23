@@ -349,7 +349,6 @@ export const Historia = () => {
                       src={item.image}
                       key={item.id}
                       alt={item.alt}
-                      item={item}
                     />;
                   }
                 })}

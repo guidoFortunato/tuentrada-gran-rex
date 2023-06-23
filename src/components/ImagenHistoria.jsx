@@ -1,4 +1,4 @@
-export const ImagenHistoria = ({ src, alt, item }) => {
+export const ImagenHistoria = ({ src, alt }) => {
   // console.log({item})
   return (
     <div className="mb-5 p-2">
