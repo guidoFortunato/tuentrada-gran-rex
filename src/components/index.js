@@ -12,6 +12,7 @@ export * from "./IconAccordion";
 export * from "./ImagenHistoria";
 export * from "./ItemsNavBar";
 export * from "./ItemsRedes";
+export * from "./LoadingVacio";
 export * from "./main/MainEventos";
 export * from "./main/MainNoEventos";
 export * from "./MediaEvento";

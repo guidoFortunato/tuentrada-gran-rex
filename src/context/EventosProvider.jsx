@@ -7,7 +7,7 @@ export const EventosContext = createContext();
 
 const initialStateGeneral = [];
 const initialStateEventosGenerales = [];
-// const initialStateEventosCalendario = [];
+const initialStateEventosCalendario = [];
 
 const EventosProvider = (props) => {
   const [idVenue, setIdVenue] = useState("");
@@ -16,7 +16,7 @@ const EventosProvider = (props) => {
   const [eventosGenerales, setEventosGenerales] = useState(initialStateEventosGenerales);
   const [data, setData] = useState(null);
   const [page, setPage] = useState(1);
-  // const [eventosCalendario, setEventosCalendario] = useState(initialStateEventosCalendario);
+  const [eventosCalendario, setEventosCalendario] = useState(null);
 
   // const handleIdProducto = (id) => {
   //   setIdProducto(idProducto)
@@ -51,15 +51,15 @@ const EventosProvider = (props) => {
     }
   }, [idVenue, page]);
 
-  // useEffect(() => {
-  //   if (idVenue !== "") {
-  //     const getDataEventosCalendario = async () => {
-  //       const {data} = await getData( VITE_API_INFO_GENERAL + idVenue + "/calendar", VITE_EMAIL, VITE_PASS);
-  //       setEventosCalendario(data);
-  //     };
-  //     getDataEventosCalendario();
-  //   }
-  // }, [idVenue]);
+  useEffect(() => {
+    if (idVenue !== "") {
+      const getDataEventosCalendario = async () => {
+        const {data} = await getData( VITE_API_INFO_GENERAL + idVenue + "/calendar", VITE_EMAIL, VITE_PASS);
+        setEventosCalendario(data);
+      };
+      getDataEventosCalendario();
+    }
+  }, [idVenue]);
 
   return (
     <EventosContext.Provider
@@ -72,7 +72,7 @@ const EventosProvider = (props) => {
         idVenue,
         setIdProducto,
         eventosGenerales,
-        // eventosCalendario,
+        eventosCalendario,
       }}
     >
       {props.children}

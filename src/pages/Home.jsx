@@ -1,6 +1,6 @@
 import { useContext, useEffect } from "react";
 import { EventosContext } from "../context/EventosProvider";
-import { HeaderEventos, HeaderNoEventos, MainEventos, MainNoEventos, Spinner } from "../components";
+import { HeaderEventos, HeaderNoEventos, LoadingVacio, MainEventos, MainNoEventos } from "../components";
 
 export const Home = () => {
   const { eventosGenerales, setPage, data } = useContext(EventosContext);
@@ -28,7 +28,7 @@ export const Home = () => {
     
   // }, [page]);
 
-  if (data === null) return <span></span>;
+  if (data === null) return <LoadingVacio />;
   // if (eventosGenerales.length === 0) return <Spinner />;
 
   if (eventosGenerales === undefined || eventosGenerales.length === 0 || data.data.length === 0) {
