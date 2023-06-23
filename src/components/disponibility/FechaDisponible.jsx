@@ -5,6 +5,8 @@ import { EventosContext } from "../../context/EventosProvider";
 export const FechaDisponible = ({ dia, hora, mesFormateado, anio, openModal, setOpenModal, dataFechas, dataEvento }) => {
   const { dataInfoGeneral } = useContext(EventosContext);
   // console.log({dataInfoGeneral})
+  // console.log({dataFechas})
+  // console.log({dataEvento})
   return (
     <>
       <div className="flex flex-row">
@@ -60,7 +62,7 @@ export const FechaDisponible = ({ dia, hora, mesFormateado, anio, openModal, set
           }}
         >
           <a
-            href={`${dataInfoGeneral.url}perfId=${dataFechas.performanceId}&productId=${dataEvento.productId}`}
+            href={`${dataEvento.url}selection/event/seat?perfId=${dataFechas.performanceId}&productId=${dataEvento.productId}`}
             target="_blank"
           >
             Comprar entradas
