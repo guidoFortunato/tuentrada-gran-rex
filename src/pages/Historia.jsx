@@ -293,13 +293,17 @@ export const Historia = () => {
         return null;
       }
 
-      const truncatedText = showMoreText ? words.join(" ") : words.slice(0, maxWords).join(" ");
+      const truncatedText = showMoreText
+        ? words.join(" ")
+        : words.slice(0, maxWords).join(" ");
 
       return (
         <>
           <p
             className="parrafo-historia"
-            dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(truncatedText) }}
+            dangerouslySetInnerHTML={{
+              __html: DOMPurify.sanitize(truncatedText),
+            }}
           ></p>
           {words.length > maxWords && (
             <button className="text-blue-500" onClick={toggleShowMoreText}>
@@ -328,7 +332,9 @@ export const Historia = () => {
         imagesPerRow = imagesPerRowDesktop;
       }
 
-      const displayedImages = showMoreImages ? images : images.slice(0, maxImagesToShow);
+      const displayedImages = showMoreImages
+        ? images
+        : images.slice(0, maxImagesToShow);
 
       const rows = Math.ceil(displayedImages.length / imagesPerRow);
 
@@ -337,9 +343,16 @@ export const Historia = () => {
           {displayedImages.length > 0 && (
             <>
               <div className={`grid grid-cols-${imagesPerRow} gap-4`}>
-                {displayedImages.map((item) => (
-                  <ImagenHistoria src={item.image} key={item.id} />
-                ))}
+                {displayedImages.map((item) => {
+                  if (item.alt !== "teatro gran rex") {
+                    return <ImagenHistoria
+                      src={item.image}
+                      key={item.id}
+                      alt={item.alt}
+                      item={item}
+                    />;
+                  }
+                })}
               </div>
               {images.length > maxImagesToShow && (
                 <div className="flex justify-center mt-4">
@@ -362,11 +375,13 @@ export const Historia = () => {
   return (
     <div className="container mx-auto mb-5 lg:px-0">
       <section
-        style={{ backgroundImage: `url(${dataInfoGeneral.pages[2].images[10].image})` }}
+        style={{
+          backgroundImage: `url(${dataInfoGeneral.pages[2].images[10].image})`,
+        }}
         className="bg-no-repeat bg-cover bg-center container mx-auto"
       >
         <h2
-          style={{ height: "40vh" }}
+          style={{ height: "40vh", background: "rgba(0,0,0,.50)" }}
           className="text-3xl flex lg:justify-start justify-center items-center lg:items-end text-white p-10 my-3 tittle-h2"
         >
           {dataInfoGeneral.pages[2].title}
