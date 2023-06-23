@@ -205,8 +205,8 @@
 import { useContext, useEffect, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import { EventosContext } from "../context/EventosProvider";
-import { Spinner } from "../components";
-import { getData, getEnvVariables } from "../helpers";
+import { LoadingVacio } from "../components";
+import { getEnvVariables } from "../helpers";
 import FullCalendar from "@fullcalendar/react"; // must go before plugins
 import dayGridPlugin from "@fullcalendar/daygrid";
 import timeGridPlugin from "@fullcalendar/timegrid";
@@ -218,7 +218,7 @@ import "tippy.js/dist/tippy.css";
 import "tippy.js/animations/scale.css";
 import "../css/calendario.css";
 
-const { VITE_API_INFO_GENERAL, VITE_EMAIL, VITE_PASS } = getEnvVariables();
+// const { VITE_API_INFO_GENERAL, VITE_EMAIL, VITE_PASS } = getEnvVariables();
 const month = [
   "Enero",
   "Febrero",
@@ -268,31 +268,30 @@ const eventTimeFormat = {
 };
 
 export const Calendario = () => {
-  const { idVenue, dataInfoGeneral } = useContext(EventosContext);
-  const [data, setData] = useState(null);
+  const { idVenue, dataInfoGeneral, eventosCalendario } = useContext(EventosContext);
+  // const [data, setData] = useState(null);
   const navigate = useNavigate();
   const { pathname } = useLocation();
   const newEvents = [];
 
   localStorage.setItem("lastPath", pathname);
 
-  for (let i = 0; i < data?.length; i++) {
-    for (let j = 0; j < data[i].performances.length; j++) {
+  for (let i = 0; i < eventosCalendario?.length; i++) {
+    for (let j = 0; j < eventosCalendario[i].performances.length; j++) {
       newEvents.push({
-        id: data[i].id,
-        start: data[i].performances[j].start,
-        title: data[i].title.toUpperCase(),
-        url: `${data[i].url}/${data[i].id}`,
-        display: data[i].display,
-        status: data[i].performances[j].disponibility,
+        id: eventosCalendario[i].id,
+        start: eventosCalendario[i].performances[j].start,
+        title: eventosCalendario[i].title.toUpperCase(),
+        url: `${eventosCalendario[i].url}/${eventosCalendario[i].id}`,
+        display: eventosCalendario[i].display,
+        status: eventosCalendario[i].performances[j].disponibility,
       });
     }
   }
 
   const handleClick = (info) => {
     info.jsEvent.preventDefault();
-    const statusEvento =
-      info.event.extendedProps.status?.toLowerCase() !== "próximamente";
+    const statusEvento = info.event.extendedProps.status?.toLowerCase() !== "próximamente";
 
     if (statusEvento) {
       navigate(info.event.url);
@@ -346,21 +345,21 @@ export const Calendario = () => {
     }, 100);
   }, []);
 
-  useEffect(() => {
-    if (idVenue !== "") {
-      const getInfo = async () => {
-        const { data } = await getData(
-          VITE_API_INFO_GENERAL + idVenue + "/calendar",
-          VITE_EMAIL,
-          VITE_PASS
-        );
-        setData(data);
-      };
-      getInfo();
-    }
-  }, [idVenue]);
+  // useEffect(() => {
+  //   if (idVenue !== "") {
+  //     const getInfo = async () => {
+  //       const { data } = await getData(
+  //         VITE_API_INFO_GENERAL + idVenue + "/calendar",
+  //         VITE_EMAIL,
+  //         VITE_PASS
+  //       );
+  //       setData(data);
+  //     };
+  //     getInfo();
+  //   }
+  // }, [idVenue]);
 
-  if (data === null || dataInfoGeneral.length === 0) return <Spinner />;
+  if (eventosCalendario === null || dataInfoGeneral.length === 0) return <LoadingVacio />;
 
   return (
     <>

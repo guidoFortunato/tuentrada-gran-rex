@@ -43,7 +43,7 @@ export const CardEvento = ({ img = "", title = "", linkEvento = "", disponibilit
 
   return (
     <article
-      className="text-center"
+      className="text-center pt-4"
     >
       
         {

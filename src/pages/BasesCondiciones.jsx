@@ -41,7 +41,7 @@
 // };
 
 import { useContext, useEffect } from "react";
-import { Spinner } from "../components";
+import { LoadingVacio } from "../components";
 import { EventosContext } from "../context/EventosProvider";
 import DOMPurify from "dompurify";
 
@@ -54,7 +54,7 @@ export const BasesCondiciones = () => {
     }, 100);
   }, []);
 
-  if (dataInfoGeneral.length === 0) return <Spinner />;
+  if (dataInfoGeneral.length === 0) return <LoadingVacio />;
 
   return (
     <div className="container mx-auto mb-5 ">
