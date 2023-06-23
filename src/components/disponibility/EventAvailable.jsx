@@ -14,13 +14,14 @@ export const EventAvailable = ({ linkEvento, img, title, data }) => {
         </Link>
         <button
           type="button"
-          className="absolute top-1 left-1 text-white bg-green-600 rounded text-xs px-3 py-1.5 text-center mr-2 mb-2"
+          className="z-50 absolute -right-0 -top-4 text-white bg-green-600 rounded text-xs p-1.5 text-center mr-2 mb-2"
+          // className="absolute top-1 left-1 text-white bg-green-600 rounded-3xl text-xs w-4 h-4 text-center mr-2 mb-2"
         >
           Disponible
         </button>
         <Link to={linkEvento}>
-          <figcaption className=" transition duration-300 ease-in-out text-transparent hover:text-white h-full bg-gradient-to-r  hover:from-[rgba(34,12,2,0.22)] hover:to-[rgba(68,40,9,0.6951155462184874)] hover:bg-gradient-to-r bg-opacity-90 absolute text-md text-white bottom-0 right-0 left-0">
-            <p className="transition flex justify-end">{title}</p>
+          <figcaption className=" opacity-0 hover:opacity-100 transition duration-300 ease-in-out h-full bg-gradient-to-r hover:from-[rgb(17,6,1)] hover:to-[rgba(49,28,3,0.57)] hover:bg-gradient-to-r absolute bottom-0 right-0 left-0 top-0">
+            <p className="flex items-end text-lg text-white h-full p-5 font-bold">{title}</p>
           </figcaption>
         </Link>
       </figure>

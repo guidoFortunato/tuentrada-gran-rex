@@ -9,7 +9,7 @@ export const HeaderEventos = () => {
   return (
     <header
     style={{ backgroundImage: `url(${dataInfoGeneral.backgroundImage})` }}
-    className={`bg-no-repeat bg-cover bg-center container mx-auto mb-5 `}
+    className={`bg-no-repeat bg-cover bg-center container mx-auto mb-5 z-40`}
   >
     <div
       className={`min-h-[50vh] flex justify-center items-start flex-col `}
