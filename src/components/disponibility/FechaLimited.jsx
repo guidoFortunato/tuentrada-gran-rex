@@ -71,7 +71,7 @@ export const FechaLimited = ({
           }}
         >
           <a
-            href={`${dataInfoGeneral.url}perfId=${dataFechas.performanceId}&productId=${dataEvento.productId}`}
+            href={`${dataEvento.url}selection/event/seat?perfId=${dataFechas.performanceId}&productId=${dataEvento.productId}`}
             target="_blank"
           >
             Comprar entradas

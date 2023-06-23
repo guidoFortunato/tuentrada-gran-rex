@@ -42,7 +42,7 @@ export const DetalleEvento = () => {
         // console.log({ data });
         setData(data);
         setItemsAccordion({
-          performances: data.performances,
+          performances: data.performances.filter( item => item.state === "RUNNING" ),
           history: data.history,
           promotion: data.promotion,
           recomendation: data.recomendation,

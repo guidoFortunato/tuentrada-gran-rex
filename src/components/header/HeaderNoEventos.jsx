@@ -48,7 +48,7 @@ export const HeaderNoEventos = () => {
               type="button"
               className={`w-auto py-2.5 px-11 mt-6 md:mt-0 bg-[#855F35] hover:bg-[#5c452c] font-medium rounded text-base lg:text-lg md:text-base cursor-default`}
             >
-              Calendario
+              {dataInfoGeneral.buttonLabel}
             </button>
           </div>
         </div>

@@ -22,12 +22,12 @@ export const Footer = () => {
         <div className="sm:flex sm:items-center sm:justify-between">
           <Link to="/" className="flex items-center mb-4 sm:mb-0">
             <img
-              src={dataInfoGeneral.logo}
+              src={dataInfoGeneral.logoFooter}
               className="h-8 mr-3"
-              alt={dataInfoGeneral.altLogo}
+              alt={dataInfoGeneral.altLogoFooter}
             />
             <span className="self-center text-xl font-semibold whitespace-nowrap ">
-              {dataInfoGeneral.pages[0].title}
+              {dataInfoGeneral.name}
             </span>
           </Link>
           <ul className="flex flex-wrap items-center mb-6 text-sm font-medium  sm:mb-0 ">

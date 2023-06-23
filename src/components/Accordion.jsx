@@ -64,17 +64,15 @@ export const Accordion = ({ itemsAccordion, dataEvento }) => {
           >
             <div className="flex flex-col max-h-90 overflow-y-auto border border-b-0 border-gray-200 dark:border-gray-700 dark:bg-gray-900 text-sm">
               {newPerformances.map((item) => {
-                if (item.state === "RUNNING") {
-                  return (
-                    <FechaEvento
-                      dataFechas={item}
-                      dataEvento={dataEvento}
-                      key={item.id}
-                      availabilitLevel={item.availabilitLevel}
-                      reason={item.reason}
-                    />
-                  );
-                }
+                return (
+                  <FechaEvento
+                    dataFechas={item}
+                    dataEvento={dataEvento}
+                    key={item.id}
+                    availabilitLevel={item.availabilitLevel}
+                    reason={item.reason}
+                  />
+                );
               })}
             </div>
           </div>
