@@ -102,7 +102,7 @@ export const BusquedaEventos = () => {
           </div>
         )}
 
-        <div className="flex justify-center mt-10">
+        {/* <div className="flex justify-center mt-10">
           <Link to="/">
             <button
               style={{
@@ -115,7 +115,7 @@ export const BusquedaEventos = () => {
               Home
             </button>
           </Link>
-        </div>
+        </div> */}
       </div>
     </>
   );
