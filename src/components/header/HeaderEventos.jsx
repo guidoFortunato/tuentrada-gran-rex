@@ -50,8 +50,8 @@ export const HeaderEventos = () => {
             type="button"
             className={`w-auto py-2.5 px-11 mt-6 md:mt-0 bg-[#855F35] hover:bg-[#5c452c] font-medium rounded text-base lg:text-lg md:text-base`}
           >
-            <Link to={"/calendario"}>
-              Calendario
+            <Link to={dataInfoGeneral.buttonLink}>
+            {dataInfoGeneral.buttonLabel}
             </Link>
           </button>
         </div>

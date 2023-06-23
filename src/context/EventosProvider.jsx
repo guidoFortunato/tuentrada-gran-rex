@@ -9,11 +9,11 @@ const initialStateEventosGenerales = [];
 // const initialStateEventosCalendario = [];
 
 const EventosProvider = (props) => {
-  const [idVenue, setIdVenue] = useState("");
-  const [idProducto, setIdProducto] = useState(null);
-  const [dataInfoGeneral, setDataInfoGeneral] = useState(initialStateGeneral);
-  const [eventosGenerales, setEventosGenerales] = useState(initialStateEventosGenerales);
-  const [data, setData] = useState(null);
+  const [ idVenue, setIdVenue ] = useState("");
+  const [ idProducto, setIdProducto ] = useState(null);
+  const [ dataInfoGeneral, setDataInfoGeneral ] = useState(initialStateGeneral);
+  const [ eventosGenerales, setEventosGenerales ] = useState(initialStateEventosGenerales);
+  const [ data, setData ] = useState(null);
   const [ page, setPage ] = useState(1);
   // const [eventosCalendario, setEventosCalendario] = useState(initialStateEventosCalendario);
 
@@ -21,7 +21,7 @@ const EventosProvider = (props) => {
   //   setIdProducto(idProducto)
   // }
 
-  // console.log({dataInfoGeneral})
+  console.log({dataInfoGeneral})
 
   useEffect(() => {
     const getDataInfoGeneral = async () => {
