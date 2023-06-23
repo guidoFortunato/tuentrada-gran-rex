@@ -14,7 +14,7 @@ export const EventAvailable = ({ linkEvento, img, title, data }) => {
         </Link>
         <button
           type="button"
-          className="z-50 absolute -right-0 -top-4 text-white bg-green-600 rounded text-xs px-2 py-1 text-center mr-2 mb-2"
+          className="z-50 absolute -right-0 -top-4 text-white bg-green-600 rounded text-xs px-2 py-1 lg:py-1.5 text-center mr-2 mb-2"
           // className="absolute top-1 left-1 text-white bg-green-600 rounded-3xl text-xs w-4 h-4 text-center mr-2 mb-2"
         >
           Disponible
