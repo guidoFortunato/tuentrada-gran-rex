@@ -69,31 +69,28 @@ export const DetalleEvento = () => {
   return (
     <>
       <div className="container mx-auto mb-5 px-3 xl:w-2/3">
-        <section
-          className={`bg-[url("assets/images/responsive.jpg")]  lg:bg-[url("assets/images/desktop.jpg")]  bg-no-repeat bg-cover bg-center mx-auto`}
-        >
-          <div
-            className={`min-h-[40vh] flex justify-center items-start flex-col`}
-          ></div>
-        </section>
-        <h2
-          // style={{ color: dataInfoGeneral.colorSiteName }}
-          className="text-3xl  mt-4 mb-2"
-        >
-          {data?.name}
-        </h2>
-        <div className="grid grid-cols-1">
-          <p
-            className="text-base"
-            dangerouslySetInnerHTML={{
-              __html: DOMPurify.sanitize(data?.description),
-            }}
-          ></p>
+        <div className="flex flex-wrap">
+          <div className="w-full lg:w-1/2 p-4">
+            <section
+              className="bg-[url('assets/images/responsive.jpg')] lg:bg-[url('assets/images/desktop.jpg')] bg-no-repeat bg-cover bg-center mx-auto h-96"
+            ></section>
+          </div>
+          <div className="w-full lg:w-1/2 p-4">
+            <h2 className="text-3xl mt-4 mb-2">{data?.name}</h2>
+            <div className="grid grid-cols-1">
+              <p
+                className="text-sm text-gray-500"
+                dangerouslySetInnerHTML={{
+                  __html: DOMPurify.sanitize(data?.description),
+                }}
+              ></p>
+            </div>
+          </div>
         </div>
-
+  
         <Accordion itemsAccordion={itemsAccordion} dataEvento={data} />
       </div>
-          
     </>
   );
+
 };
