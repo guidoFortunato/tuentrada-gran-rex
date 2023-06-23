@@ -13,7 +13,7 @@ export const EventLimited = ({ linkEvento, img, title, data }) => {
         </Link>
         <button
           type="button"
-          className="absolute -right-0 -top-4 text-white bg-orange-500 rounded text-xs px-2 py-1 lg:py-1.5 text-center mr-2 mb-2"
+          className="z-10 absolute -right-0 -top-4 text-white bg-orange-500 rounded text-xs px-2 py-1 lg:py-1.5 text-center mr-2 mb-2"
         >
           Últimas entradas
         </button>
