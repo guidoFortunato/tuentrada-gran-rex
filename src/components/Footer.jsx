@@ -1,10 +1,11 @@
 import { useContext } from "react";
 import { Link } from "react-router-dom";
 import { EventosContext } from "../context/EventosProvider";
-import DOMPurify from "dompurify";
+import { ItemsFooter } from "./";
 
 export const Footer = () => {
   const { dataInfoGeneral } = useContext(EventosContext);
+  const anio = new Date().getFullYear();
 
   // if (dataInfoGeneral.length === 0) return <Spinner />;
 
@@ -31,31 +32,16 @@ export const Footer = () => {
             </span>
           </Link>
           <ul className="flex flex-wrap items-center mb-6 text-sm font-medium  sm:mb-0 ">
-            <li>
-              <a href="#" className="mr-4 hover:underline md:mr-6 ">
-                Bases y condiciones
-              </a>
-            </li>
-            <li>
-              <a href="#" className="mr-4 hover:underline md:mr-6">
-                Cómo llegar
-              </a>
-            </li>
-            <li>
-              <a href="#" className="mr-4 hover:underline md:mr-6 ">
-                Dirección
-              </a>
-            </li>
-            <li>
-              <a href="#" className="hover:underline">
-                Boletería
-              </a>
-            </li>
+            {dataInfoGeneral.pages.map((item) => {
+              if (item.where === "footer" || item.where === "both") {
+                return <ItemsFooter key={item.id} item={item} />;
+              }
+            })}
           </ul>
         </div>
         <hr className="my-6 border-gray-200 sm:mx-auto  lg:my-8" />
         <span className="block text-sm  sm:text-center ">
-          © 2023 <span className="mr-1">TuEntrada</span>-
+          © {anio} <span className="mr-1">TuEntrada</span>-
           <span className="ml-1">Todos los derechos reservados</span>
         </span>
       </div>

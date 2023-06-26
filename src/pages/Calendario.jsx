@@ -370,12 +370,12 @@ export const Calendario = () => {
           <div className="col-12">
             <section
               style={{
-                backgroundImage: `url(${dataInfoGeneral.backgroundImage})`,
+                backgroundImage: `url(${dataInfoGeneral.pages[1].image})`,
               }}
               className="bg-no-repeat bg-cover bg-center container mx-auto"
             >
               <h2
-                style={{ height: "40vh" }}
+                style={{ height: "40vh", background: 'rgba(0, 0, 0, 0.6)' }}
                 className=" text-3xl flex lg:justify-start justify-center items-center lg:items-end text-white p-10 my-3 tittle-h2"
               >
                 {dataInfoGeneral.pages[1].title}

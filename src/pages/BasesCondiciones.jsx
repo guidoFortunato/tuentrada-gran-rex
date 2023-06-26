@@ -59,11 +59,11 @@ export const BasesCondiciones = () => {
   return (
     <div className="container mx-auto mb-5 ">
       <section
-        style={{ backgroundImage: `url(${dataInfoGeneral.backgroundImage})` }}
+        style={{ backgroundImage: `url(${dataInfoGeneral.pages[4].image})` }}
         className="bg-no-repeat bg-cover bg-center container mx-auto"
       >
         <h2
-          style={{ height: "40vh" }}
+          style={{ height: "40vh", background: 'rgba(0, 0, 0, 0.6)' }}
           className="text-3xl flex items-center lg:justify-start justify-center lg:items-end text-white p-10 my-3 tittle-h2"
         >
           {dataInfoGeneral.pages[4].title}

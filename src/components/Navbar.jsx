@@ -28,8 +28,10 @@ export const NavBar = () => {
   // console.log({ dataInfoGeneral });
   // console.log("se renderiza el navbar");
 
-  const handleSearchCollapse = () => setIsSearchCollapsed((prevState) => !prevState);
-  const handleButtonCollapse = () => setIsButtonCollapsed((prevState) => !prevState);
+  const handleSearchCollapse = () =>
+    setIsSearchCollapsed((prevState) => !prevState);
+  const handleButtonCollapse = () =>
+    setIsButtonCollapsed((prevState) => !prevState);
 
   const handleButtonsCollapse = () => {
     setIsButtonCollapsed(false);
@@ -149,13 +151,17 @@ export const NavBar = () => {
                 isButtonCollapsed ? "" : "hidden"
               } lg:flex `}
             >
-              {dataInfoGeneral.pages.map((item) => (
-                <ItemsNavBar
-                  handleButtonsCollapse={handleButtonsCollapse}
-                  key={item.id}
-                  item={item}
-                />
-              ))}
+              {dataInfoGeneral.pages.map((item) => {
+                if (item.where === "navbar" || item.where === "both") {
+                  return (
+                    <ItemsNavBar
+                      handleButtonsCollapse={handleButtonsCollapse}
+                      key={item.id}
+                      item={item}
+                    />
+                  );
+                }
+              })}
             </ul>
           </div>
         </div>

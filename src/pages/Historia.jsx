@@ -301,7 +301,9 @@ export const Historia = () => {
         <>
           <p
             className="parrafo-historia  text-sm text-gray-500"
-            dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(truncatedText) }}
+            dangerouslySetInnerHTML={{
+              __html: DOMPurify.sanitize(truncatedText),
+            }}
           ></p>
           {words.length > maxWords && (
             <button className="text-blue-500" onClick={toggleShowMoreText}>
@@ -341,15 +343,13 @@ export const Historia = () => {
           {displayedImages.length > 0 && (
             <>
               <div className={`grid grid-cols-${imagesPerRow} gap-4`}>
-                {displayedImages.map((item) => {
-                  if (item.alt !== "teatro gran rex") {
-                    return <ImagenHistoria
-                      src={item.image}
-                      key={item.id}
-                      alt={item.alt}
-                    />;
-                  }
-                })}
+                {displayedImages.map((item) => (
+                  <ImagenHistoria
+                    src={item.image}
+                    key={item.id}
+                    alt={item.alt}
+                  />
+                ))}
               </div>
               {images.length > maxImagesToShow && (
                 <div className="flex justify-center mt-4">
@@ -373,12 +373,12 @@ export const Historia = () => {
     <div className="container mx-auto mb-5 lg:px-0">
       <section
         style={{
-          backgroundImage: `url(${dataInfoGeneral.pages[2].images[10].image})`,
+          backgroundImage: `url(${dataInfoGeneral.pages[2].image})`,
         }}
         className="bg-no-repeat bg-cover bg-center container mx-auto"
       >
         <h2
-          style={{ height: "40vh" }}
+          style={{ height: "40vh", background: 'rgba(0, 0, 0, 0.6)' }}
           className="text-3xl flex lg:justify-start justify-center items-center lg:items-end text-white p-10 my-3 tittle-h2"
         >
           {dataInfoGeneral.pages[2].title}

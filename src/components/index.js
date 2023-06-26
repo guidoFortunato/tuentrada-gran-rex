@@ -10,6 +10,7 @@ export * from "./header/HeaderEventos";
 export * from "./header/HeaderNoEventos";
 export * from "./IconAccordion";
 export * from "./ImagenHistoria";
+export * from "./ItemsFooter";
 export * from "./ItemsNavBar";
 export * from "./ItemsRedes";
 export * from "./LoadingVacio";
