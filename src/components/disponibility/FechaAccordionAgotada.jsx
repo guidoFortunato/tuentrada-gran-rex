@@ -1,4 +1,4 @@
-export const FechaAgotada = ({ dia, hora, mesFormateado, anio }) => {
+export const FechaAccordionAgotada = ({ dia, hora, mesFormateado, anio }) => {
   return (
     <>
       <div className="flex flex-row">

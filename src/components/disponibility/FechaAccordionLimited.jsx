@@ -1,8 +1,8 @@
 import React, { useContext } from "react";
-import { ModalPrecios } from "../";
+import { ModalPrecios } from "..";
 import { EventosContext } from "../../context/EventosProvider";
 
-export const FechaLimited = ({
+export const FechaAccordionLimited = ({
   dia,
   hora,
   mesFormateado,

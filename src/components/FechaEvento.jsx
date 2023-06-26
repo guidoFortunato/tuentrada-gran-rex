@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { FechaAgotada, FechaDisponible, FechaLimited } from "./disponibility";
+import { FechaAccordionAgotada, FechaAccordionDisponible, FechaAccordionLimited } from "./disponibility";
 
 const opciones = {
   day: "numeric",
@@ -30,7 +30,7 @@ export const FechaEvento = ({ dataFechas, dataEvento, availabilitLevel, reason }
     <>
       <div className="lg:flex lg:flex-row lg:justify-between border-b-2 border-gray-200 p-3">
         {availabilitLevel === "GOOD" && (
-          <FechaDisponible
+          <FechaAccordionDisponible
             dataFechas={dataFechas}
             dataEvento={dataEvento}
             dia={dia}
@@ -42,7 +42,7 @@ export const FechaEvento = ({ dataFechas, dataEvento, availabilitLevel, reason }
           />
         )}
         {availabilitLevel === "LIMITED" && (
-          <FechaLimited
+          <FechaAccordionLimited
             dataFechas={dataFechas}
             dataEvento={dataEvento}
             dia={dia}
@@ -54,7 +54,7 @@ export const FechaEvento = ({ dataFechas, dataEvento, availabilitLevel, reason }
           />
         )}
         {availabilitLevel === "NONE" && reason == "SOLD_OUT" && (
-          <FechaAgotada
+          <FechaAccordionAgotada
             dia={dia}
             hora={hora}
             mesFormateado={mesFormateado}

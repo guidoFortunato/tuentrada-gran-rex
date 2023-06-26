@@ -43,7 +43,7 @@ const EventosProvider = (props) => {
       const getDataEventosGenerales = async () => {
         const newLocal = `${VITE_API_EVENTOS + idVenue}?page=${page}`;
         const info = await getData(newLocal, VITE_EMAIL, VITE_PASS);
-        // console.log({info})
+        console.log(info.data)
         setData(info);
         setEventosGenerales((prevEventos) => prevEventos.concat(info.data));
       };

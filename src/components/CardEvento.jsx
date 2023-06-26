@@ -3,7 +3,7 @@ import { EventAvailable, EventLimited, EventNotAvailable, EventNotForSale } from
 
 import "../css/cardevento.css";
 
-export const CardEvento = ({ img = "", title = "", linkEvento = "", disponibility = [], data }) => {
+export const CardEvento = ({ img = "", title = "", linkEvento = "", disponibility, data }) => {
   const [availabilityGood, setAvailabilityGood] = useState(false);
   const [availabilityLimited, setAvailabilityLimited] = useState(false);
   const [reasonSoldOut, setReasonSoldOut] = useState(false);

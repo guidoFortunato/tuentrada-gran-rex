@@ -72,7 +72,8 @@ export const DetalleEvento = () => {
         <div className="flex flex-wrap">
           <div className="w-full lg:w-1/2 p-4">
             <section
-              className="bg-[url('assets/images/responsive.jpg')] lg:bg-[url('assets/images/desktop.jpg')] bg-no-repeat bg-cover bg-center mx-auto h-96"
+              className={`bg-no-repeat bg-contain bg-center mx-auto h-96`}
+              style={{ backgroundImage: `url("${data.stxImagMedium}")` }}
             ></section>
           </div>
           <div className="w-full lg:w-1/2 p-4">
