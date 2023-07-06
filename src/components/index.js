@@ -19,6 +19,7 @@ export * from "./main/MainNoEventos";
 export * from "./MediaEvento";
 export * from "./ModalPrecios";
 export * from "./NavBar";
+export * from "./RedesSociales";
 export * from "./Spinner";
 export * from "./TablaPrecios";
 export * from "./ToastError";

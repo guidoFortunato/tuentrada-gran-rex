@@ -19,7 +19,7 @@ export const ModalPrecios = ({ performances, openModal, setOpenModal }) => {
               </div>
               <div>
                 <img
-                  src={performances.venueImageMedium}
+                  src={performances.venueImage}
                   alt={`plano ${dataInfoGeneral.pages[0].title.toLowerCase()}`}
                   className="w-full object-cover"
                 />

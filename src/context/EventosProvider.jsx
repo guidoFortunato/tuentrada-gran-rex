@@ -1,7 +1,6 @@
 import { createContext, useEffect, useState } from "react";
 import { getData, getEnvVariables } from "../helpers";
-const { VITE_API_INFO_GENERAL, VITE_API_EVENTOS, VITE_EMAIL, VITE_PASS } =
-  getEnvVariables();
+const { VITE_API_INFO_GENERAL, VITE_API_EVENTOS, VITE_EMAIL, VITE_PASS } = getEnvVariables();
 
 export const EventosContext = createContext();
 
@@ -31,7 +30,7 @@ const EventosProvider = (props) => {
         VITE_EMAIL,
         VITE_PASS
       ); //window.location.hostname
-      console.log({data})
+      console.log({dataInfoGeneral: data})
       setDataInfoGeneral(data);
       setIdVenue(data.venueId);
     };

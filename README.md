@@ -10,18 +10,22 @@
 
 1. rompe en celular venues.tuentrada.com en detalle evento
 
-2. dividir en items al navbar y al footer
+2. no figura matilda en al api
 
-3. no figura matilda en al api
+3. no se ordena por fecha en la home, no viene en la api ordenada
 
-4. texto de home principal que se agregua a la api
-
-5. hay granrex2.tuentrada.com y me rompe la url
-
-6. no son dinamicos los li del footer
-
-7. no se ordena por fecha en la home, no viene en la api ordenada
-
-8. detalle:
+4. detalle:
 -si cambio el nombre de la url no hace nada
 -que no se vea el id en la url
+
+5. beriso por ej viene sin disponibilidad
+
+6. cerrar navbar cuando cambia de pestaña
+
+7. id en product social medias
+
+8. orden para mostrar product social medias
+
+9. id en media_json
+
+10. que no se me cierre el product cuando hago save
