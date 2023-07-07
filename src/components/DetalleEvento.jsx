@@ -106,7 +106,7 @@ export const DetalleEvento = () => {
           <div className="mt-5 flex flex-col items-end">
             <h3 className="text-[#6b7280] font-semibold text-lg lg:text-xl">
               {/*text-center*/}
-              Seguilo en sus sus redes
+              Seguilo en sus redes
             </h3>
             <ul className="flex space-x-3 my-2">
               {/*justify-center*/}
