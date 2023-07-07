@@ -1332,8 +1332,9 @@ export const Calendario = () => {
             <div className="grid grid-cols-1 ">
               <FullCalendar
                 buttonText={buttonTextOptions}
-                eventBackgroundColor="#2e5272"
-                eventBorderColor="#2e5272"
+                eventBackgroundColor="#855f35"
+                eventBorderColor="#855f35"
+                eventextColor="#FFF"
                 eventClick={handleClick}
                 eventDidMount={handleEventMount}
                 events={fullEvents}
