@@ -1352,6 +1352,7 @@ export const Calendario = () => {
                 plugins={fullPlugins}
                 themeSystem={"standard"}
                 titleFormat={handleTitle}
+                contentHeight='auto'
               />
             </div>
           </div>
