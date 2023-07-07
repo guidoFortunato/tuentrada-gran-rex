@@ -1343,7 +1343,7 @@ export const Calendario = () => {
                     ? headerToolbarOptionsResponsive
                     : headerToolbarOptionsDesktop
                 }
-                height={"70vh"}
+                height={"100vh"}
                 initialView={
                   window.innerWidth < 1023 ? "listMonth" : "dayGridMonth"
                 }
