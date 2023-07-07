@@ -11,15 +11,20 @@ const { VITE_API_EVENTOS, VITE_EMAIL, VITE_PASS } = getEnvVariables();
 export const DetalleEvento = () => {
   const [data, setData] = useState(null);
   const [itemsAccordion, setItemsAccordion] = useState(null);
-  const { idVenue, dataInfoGeneral, idProducto } = useContext(EventosContext);
+  const { idVenue, dataInfoGeneral, idProducto, handleButtonsCollapse } = useContext(EventosContext);
+  
   const { url } = dataInfoGeneral;
   const { name, id } = useParams();
   const navigate = useNavigate();
-  console.log({ dataEvento: data });
+  // console.log({ dataEvento: data });
   // console.log({name})
   // console.log({idProducto})
 
   const lastPath = localStorage.getItem("lastPath") || "/";
+
+  useEffect(() => {
+    handleButtonsCollapse()
+  }, []);
 
   useEffect(() => {
     setTimeout(() => {
@@ -109,7 +114,7 @@ export const DetalleEvento = () => {
           <div className="mt-5">
             <h3 className="text-[#6b7280] font-semibold text-lg lg:text-xl">
               {/*text-center*/}
-              Más Informacion
+              Más Información
             </h3>
             {/* {data.mediaJson.map((item) => (
               <iframe

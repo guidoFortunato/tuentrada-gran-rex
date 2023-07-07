@@ -1,6 +1,7 @@
 import { createContext, useEffect, useState } from "react";
 import { getData, getEnvVariables } from "../helpers";
-const { VITE_API_INFO_GENERAL, VITE_API_EVENTOS, VITE_EMAIL, VITE_PASS } = getEnvVariables();
+const { VITE_API_INFO_GENERAL, VITE_API_EVENTOS, VITE_EMAIL, VITE_PASS } =
+  getEnvVariables();
 
 export const EventosContext = createContext();
 
@@ -16,12 +17,18 @@ const EventosProvider = (props) => {
   const [data, setData] = useState(null);
   const [page, setPage] = useState(1);
   const [eventosCalendario, setEventosCalendario] = useState(null);
+  const [isSearchCollapsed, setIsSearchCollapsed] = useState(false);
+  const [isButtonCollapsed, setIsButtonCollapsed] = useState(false);
 
-  // const handleIdProducto = (id) => {
-  //   setIdProducto(idProducto)
-  // }
+  const handleButtonsCollapse = () => {
+    setIsButtonCollapsed(false);
+    setIsSearchCollapsed(false);
+  };
 
-  // console.log({dataInfoGeneral})
+  const handleSearchCollapse = () =>
+    setIsSearchCollapsed((prevState) => !prevState);
+  const handleButtonCollapse = () =>
+    setIsButtonCollapsed((prevState) => !prevState);
 
   useEffect(() => {
     const getDataInfoGeneral = async () => {
@@ -30,7 +37,7 @@ const EventosProvider = (props) => {
         VITE_EMAIL,
         VITE_PASS
       ); //window.location.hostname
-      console.log({dataInfoGeneral: data})
+      console.log({ dataInfoGeneral: data });
       setDataInfoGeneral(data);
       setIdVenue(data.venueId);
     };
@@ -53,7 +60,11 @@ const EventosProvider = (props) => {
   useEffect(() => {
     if (idVenue !== "") {
       const getDataEventosCalendario = async () => {
-        const {data} = await getData( VITE_API_INFO_GENERAL + idVenue + "/calendar", VITE_EMAIL, VITE_PASS);
+        const { data } = await getData(
+          VITE_API_INFO_GENERAL + idVenue + "/calendar",
+          VITE_EMAIL,
+          VITE_PASS
+        );
         setEventosCalendario(data);
       };
       getDataEventosCalendario();
@@ -63,15 +74,20 @@ const EventosProvider = (props) => {
   return (
     <EventosContext.Provider
       value={{
-        dataInfoGeneral,
-        data,
-        setPage,
         // handleIdProducto,
+        data,
+        dataInfoGeneral,
+        eventosCalendario,
+        eventosGenerales,
+        handleButtonCollapse,
+        handleButtonsCollapse,
+        handleSearchCollapse,
         idProducto,
         idVenue,
+        isButtonCollapsed,
+        isSearchCollapsed,
         setIdProducto,
-        eventosGenerales,
-        eventosCalendario,
+        setPage,
       }}
     >
       {props.children}

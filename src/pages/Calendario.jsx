@@ -268,7 +268,7 @@ const eventTimeFormat = {
 };
 
 export const Calendario = () => {
-  const { idVenue, dataInfoGeneral, eventosCalendario } = useContext(EventosContext);
+  const { idVenue, dataInfoGeneral, eventosCalendario, handleButtonsCollapse: handleNavBarCollapse } = useContext(EventosContext);
   // const [data, setData] = useState(null);
   const navigate = useNavigate();
   const { pathname } = useLocation();
@@ -338,6 +338,11 @@ export const Calendario = () => {
       return tooltip;
     }
   };
+  
+
+  useEffect(() => {
+    handleNavBarCollapse()
+  }, []);
 
   useEffect(() => {
     setTimeout(() => {

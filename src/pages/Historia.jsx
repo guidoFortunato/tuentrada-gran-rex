@@ -248,7 +248,7 @@ import { ImagenHistoria, Spinner } from "../components";
 import DOMPurify from "dompurify";
 
 export const Historia = () => {
-  const { dataInfoGeneral } = useContext(EventosContext);
+  const { dataInfoGeneral, handleButtonsCollapse: handleNavBarCollapse } = useContext(EventosContext);
   const [showMoreText, setShowMoreText] = useState(false);
   const [showMoreImages, setShowMoreImages] = useState(false);
   const maxWordsMobile = 200;
@@ -259,6 +259,10 @@ export const Historia = () => {
   const imagesPerRowMobile = 2;
   const imagesPerRowTablet = 3;
   const imagesPerRowDesktop = 4;
+
+  useEffect(() => {
+    handleNavBarCollapse()
+  }, []);
 
   useEffect(() => {
     setTimeout(() => {

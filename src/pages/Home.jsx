@@ -3,9 +3,13 @@ import { EventosContext } from "../context/EventosProvider";
 import { HeaderEventos, HeaderNoEventos, LoadingVacio, MainEventos, MainNoEventos } from "../components";
 
 export const Home = () => {
-  const { eventosGenerales, setPage, data } = useContext(EventosContext);
+  const { eventosGenerales, setPage, data, handleButtonsCollapse: handleNavBarCollapse } = useContext(EventosContext);
   // console.log({data});
   // console.log({ dataInfoGeneral });
+
+  useEffect(() => {
+    handleNavBarCollapse()
+  }, []);
 
   useEffect(() => {
     setTimeout(() => {

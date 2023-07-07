@@ -10,7 +10,7 @@ const { VITE_API_EVENTOS, VITE_EMAIL, VITE_PASS } = getEnvVariables();
 
 export const BusquedaEventos = () => {
   const [data, setData] = useState(null);
-  const { idVenue, dataInfoGeneral } = useContext(EventosContext);
+  const { idVenue, dataInfoGeneral, handleButtonsCollapse: handleNavBarCollapse } = useContext(EventosContext);
   const { pathname, search } = useLocation();
   const [isLoading, setIsLoading] = useState(false);
   const query = search.split("=")[1];
@@ -18,6 +18,10 @@ export const BusquedaEventos = () => {
   // console.log(paramSearch);
   // console.log({pathname,search})
   // console.log({pathname,search})
+
+  useEffect(() => {
+    handleNavBarCollapse()
+  }, []);
 
   useEffect(() => {
     setTimeout(() => {

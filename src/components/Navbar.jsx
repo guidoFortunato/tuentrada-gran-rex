@@ -4,9 +4,9 @@ import { EventosContext } from "../context/EventosProvider";
 import { FormBusqueda, ItemRedes, ItemsNavBar } from ".";
 
 export const NavBar = () => {
-  const { dataInfoGeneral } = useContext(EventosContext);
-  const [isSearchCollapsed, setIsSearchCollapsed] = useState(false);
-  const [isButtonCollapsed, setIsButtonCollapsed] = useState(false);
+  const { dataInfoGeneral, handleButtonsCollapse, handleSearchCollapse, handleButtonCollapse, isSearchCollapsed, isButtonCollapsed } = useContext(EventosContext);
+  // const [isSearchCollapsed, setIsSearchCollapsed] = useState(false);
+  // const [isButtonCollapsed, setIsButtonCollapsed] = useState(false);
   const [navbar, setNavbar] = useState(false);
 
   const changeBackground = () => {
@@ -28,15 +28,15 @@ export const NavBar = () => {
   // console.log({ dataInfoGeneral });
   // console.log("se renderiza el navbar");
 
-  const handleSearchCollapse = () =>
-    setIsSearchCollapsed((prevState) => !prevState);
-  const handleButtonCollapse = () =>
-    setIsButtonCollapsed((prevState) => !prevState);
+  // const handleSearchCollapse = () =>
+  //   setIsSearchCollapsed((prevState) => !prevState);
+  // const handleButtonCollapse = () =>
+  //   setIsButtonCollapsed((prevState) => !prevState);
 
-  const handleButtonsCollapse = () => {
-    setIsButtonCollapsed(false);
-    setIsSearchCollapsed(false);
-  };
+  // const handleButtonsCollapse = () => {
+  //   setIsButtonCollapsed(false);
+  //   setIsSearchCollapsed(false);
+  // };
 
   // if (dataInfoGeneral.length === 0) return <Spinner />;
 
@@ -134,7 +134,7 @@ export const NavBar = () => {
               } lg:flex `}
             >
               {dataInfoGeneral.socialNetworks.map((item) => (
-                <ItemRedes key={item.id} item={item} />
+                <ItemRedes  key={item.id} item={item} />
               ))}
             </ul>
           </div>

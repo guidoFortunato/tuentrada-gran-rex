@@ -7,7 +7,11 @@ import DOMPurify from "dompurify";
 // import "../css/comollegar.css";
 
 export const HorariosLlegada = () => {
-  const { dataInfoGeneral } = useContext(EventosContext);
+  const { dataInfoGeneral, handleButtonsCollapse: handleNavBarCollapse } = useContext(EventosContext);
+
+  useEffect(() => {
+    handleNavBarCollapse()
+  }, []);
 
   useEffect(() => {
     setTimeout(() => {

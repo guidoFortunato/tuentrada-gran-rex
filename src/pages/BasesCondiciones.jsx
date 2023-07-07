@@ -46,7 +46,11 @@ import { EventosContext } from "../context/EventosProvider";
 import DOMPurify from "dompurify";
 
 export const BasesCondiciones = () => {
-  const { dataInfoGeneral } = useContext(EventosContext);
+  const { dataInfoGeneral, handleButtonsCollapse: handleNavBarCollapse  } = useContext(EventosContext);
+
+  useEffect(() => {
+    handleNavBarCollapse()
+  }, []);
 
   useEffect(() => {
     setTimeout(() => {
