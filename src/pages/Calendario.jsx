@@ -161,7 +161,7 @@
 //   }, [idVenue]);
 
 //   if (data === null || dataInfoGeneral.length === 0) return <Spinner />;
-  
+
 //   return (
 //     <>
 //       <div className="container animate__animated animate__fadeIn animate__fast">
@@ -268,7 +268,12 @@ const eventTimeFormat = {
 };
 
 export const Calendario = () => {
-  const { idVenue, dataInfoGeneral, eventosCalendario, handleButtonsCollapse: handleNavBarCollapse } = useContext(EventosContext);
+  const {
+    idVenue,
+    dataInfoGeneral,
+    eventosCalendario,
+    handleButtonsCollapse: handleNavBarCollapse,
+  } = useContext(EventosContext);
   // const [data, setData] = useState(null);
   const navigate = useNavigate();
   const { pathname } = useLocation();
@@ -291,7 +296,8 @@ export const Calendario = () => {
 
   const handleClick = (info) => {
     info.jsEvent.preventDefault();
-    const statusEvento = info.event.extendedProps.status?.toLowerCase() !== "próximamente";
+    const statusEvento =
+      info.event.extendedProps.status?.toLowerCase() !== "próximamente";
 
     if (statusEvento) {
       navigate(info.event.url);
@@ -338,10 +344,9 @@ export const Calendario = () => {
       return tooltip;
     }
   };
-  
 
   useEffect(() => {
-    handleNavBarCollapse()
+    handleNavBarCollapse();
   }, []);
 
   useEffect(() => {
@@ -364,15 +369,13 @@ export const Calendario = () => {
   //   }
   // }, [idVenue]);
 
-  if (eventosCalendario === null || dataInfoGeneral.length === 0) return <LoadingVacio />;
+  if (eventosCalendario === null || dataInfoGeneral.length === 0)
+    return <LoadingVacio />;
 
   return (
     <>
       <div className="container mx-auto mb-5">
-       
-
-        <div className="row">
-          <div className="col-12">
+          <div className="grid grid-cols-1">
             <section
               style={{
                 backgroundImage: `url(${dataInfoGeneral.pages[1].image})`,
@@ -380,18 +383,18 @@ export const Calendario = () => {
               className="bg-no-repeat bg-cover bg-center container mx-auto"
             >
               <h2
-                style={{ height: "40vh", background: 'rgba(0, 0, 0, 0.6)' }}
+                style={{ height: "40vh", background: "rgba(0, 0, 0, 0.6)" }}
                 className=" text-3xl flex lg:justify-start justify-center items-center lg:items-end text-white p-10 my-3 tittle-h2"
               >
                 {dataInfoGeneral.pages[1].title}
               </h2>
             </section>
           </div>
-        </div>
+  
 
         <div className="container mx-auto mb-5">
-          <div className="row mt-5 container-calendar px-4 lg:px-0">
-            <div className="col-12">
+          <div className="mt-5 p-2.5 bg-white px-4 lg:px-0">
+            <div className="grid grid-cols-1">
               <FullCalendar
                 buttonText={buttonTextOptions}
                 eventBackgroundColor="#ba2828"
@@ -412,7 +415,7 @@ export const Calendario = () => {
                 locale={"es"}
                 noEventsContent={"No hay eventos disponibles"}
                 plugins={fullPlugins}
-                themeSystem={"bootstrap5"}
+                themeSystem={"standard"}
                 titleFormat={handleTitle}
               />
             </div>

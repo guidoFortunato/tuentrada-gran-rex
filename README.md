@@ -20,8 +20,6 @@
 
 5. beriso por ej viene sin disponibilidad
 
-6. cerrar navbar cuando cambia de pestaña
-
 7. id en product social medias
 
 8. orden para mostrar product social medias
@@ -29,3 +27,5 @@
 9. id en media_json
 
 10. que no se me cierre el product cuando hago save
+
+11. estilo calendar

@@ -9,7 +9,7 @@ export const ModalPrecios = ({ performances, openModal, setOpenModal }) => {
   // console.log({ performances });
   return (
     <>
-      <Modal dismissible show={openModal} size={"4xl"} onClose={() => setOpenModal(false)}>
+      <Modal dismissible show={openModal} size={"7xl"} onClose={() => setOpenModal(false)}>
         <Modal.Header>Precios y Ubicaciones</Modal.Header>
         <Modal.Body>
           <div className="space-y-6 w-full">
