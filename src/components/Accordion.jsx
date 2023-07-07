@@ -6,9 +6,9 @@ import { FechaEvento, MediaEvento, Spinner, IconAccordion } from "./";
 export const Accordion = ({ itemsAccordion, dataEvento }) => {
   const [performances, setPerformances] = useState(true);
   const [history, setHistory] = useState(false);
-  const [socialNetworks, setSocialNetworks] = useState(false);
+  // const [socialNetworks, setSocialNetworks] = useState(false);
   const [extra, setExtra] = useState(false);
-  const [mediaJson, setMediaJson] = useState(false);
+  const [mediaJson, setMediaJson] = useState(true);
   const [promotion, setPromotion] = useState(false);
   const [recomendation, setRecomendation] = useState(false);
   const [newPerformances, setNewPerformances] = useState([]);
@@ -43,7 +43,7 @@ export const Accordion = ({ itemsAccordion, dataEvento }) => {
           <h2 id="accordion-open-heading-1">
             <button
               type="button"
-              className="flex items-center justify-between w-full p-5 font-medium text-left text-gray-500 border-b-2 bg-gray-100  border-gray-200  hover:bg-gray-200 dark:hover:bg-gray-800"
+              className="flex items-center justify-between w-full p-5 font-medium text-left text-gray-500 border-b-2   border-gray-200  hover:bg-gray-50 dark:hover:bg-gray-800"
               data-accordion-target="#accordion-open-body-1"
               aria-expanded="true"
               aria-controls="accordion-open-body-1"
@@ -79,45 +79,12 @@ export const Accordion = ({ itemsAccordion, dataEvento }) => {
         </>
       )}
 
-      {itemsAccordion.history && (
-        <>
-          <h2 id="accordion-open-heading-2">
-            <button
-              type="button"
-              className="flex items-center justify-between w-full p-5 font-medium text-left text-gray-500 border-b-2 bg-gray-100  border-gray-200  hover:bg-gray-200 dark:hover:bg-gray-800"
-              data-accordion-target="#accordion-open-body-2"
-              aria-expanded="false"
-              aria-controls="accordion-open-body-2"
-              onClick={() => setHistory((prevState) => !prevState)}
-            >
-              <span className="flex items-center text-xl font-semibold">
-                Descripción
-              </span>
-              <IconAccordion item={history} />
-            </button>
-          </h2>
-          <div
-            id="accordion-open-body-2"
-            className={history ? "" : "hidden"}
-            aria-labelledby="accordion-open-heading-2"
-          >
-            <div className="p-5 border-0 border-gray-200 dark:border-gray-700">
-              <p
-                className="text-base  text-gray-500"
-                dangerouslySetInnerHTML={{
-                  __html: DOMPurify.sanitize(itemsAccordion.history),
-                }}
-              ></p>
-            </div>
-          </div>
-        </>
-      )}
       {itemsAccordion.promotion && (
         <>
           <h2 id="accordion-open-heading-3">
             <button
               type="button"
-              className="flex items-center justify-between w-full p-5 font-medium text-left text-gray-500 border-b-2 bg-gray-100  border-gray-200  hover:bg-gray-200 dark:hover:bg-gray-800"
+              className="flex items-center justify-between w-full p-5 font-medium text-left text-gray-500 border-b-2   border-gray-200  hover:bg-gray-50 dark:hover:bg-gray-800"
               data-accordion-target="#accordion-open-body-3"
               aria-expanded="false"
               aria-controls="accordion-open-body-3"
@@ -146,20 +113,53 @@ export const Accordion = ({ itemsAccordion, dataEvento }) => {
         </>
       )}
 
-     
+      {itemsAccordion.history && (
+        <>
+          <h2 id="accordion-open-heading-2">
+            <button
+              type="button"
+              className="flex items-center justify-between w-full p-5 font-medium text-left text-gray-500 border-b-2   border-gray-200  hover:bg-gray-50 dark:hover:bg-gray-800"
+              data-accordion-target="#accordion-open-body-2"
+              aria-expanded="false"
+              aria-controls="accordion-open-body-2"
+              onClick={() => setHistory((prevState) => !prevState)}
+            >
+              <span className="flex items-center text-xl font-semibold">
+                Más Información
+              </span>
+              <IconAccordion item={history} />
+            </button>
+          </h2>
+          <div
+            id="accordion-open-body-2"
+            className={history ? "" : "hidden"}
+            aria-labelledby="accordion-open-heading-2"
+          >
+            <div className="p-5 border-0 border-gray-200 dark:border-gray-700">
+              <p
+                className="text-base  text-gray-500"
+                dangerouslySetInnerHTML={{
+                  __html: DOMPurify.sanitize(itemsAccordion.history),
+                }}
+              ></p>
+            </div>
+          </div>
+        </>
+      )}
+
       {itemsAccordion.recomendation && (
         <>
           <h2 id="accordion-open-heading-6">
             <button
               type="button"
-              className="flex items-center justify-between w-full p-5 font-medium text-left text-gray-500 border-b-2 bg-gray-100  border-gray-200  hover:bg-gray-200 dark:hover:bg-gray-800"
+              className="flex items-center justify-between w-full p-5 font-medium text-left text-gray-500 border-b-2   border-gray-200  hover:bg-gray-50 dark:hover:bg-gray-800"
               data-accordion-target="#accordion-open-body-6"
               aria-expanded="false"
               aria-controls="accordion-open-body-6"
               onClick={() => setRecomendation((prevState) => !prevState)}
             >
               <span className="flex items-center text-xl font-semibold">
-                Información general
+                Recomendaciones y condiciones
               </span>
               <IconAccordion item={recomendation} />
             </button>
@@ -185,7 +185,7 @@ export const Accordion = ({ itemsAccordion, dataEvento }) => {
           <h2 id="accordion-open-heading-7">
             <button
               type="button"
-              className="flex items-center justify-between w-full p-5 font-medium text-left text-gray-500 border-b-2 bg-gray-100  border-gray-200  hover:bg-gray-200 dark:hover:bg-gray-800"
+              className="flex items-center justify-between w-full p-5 font-medium text-left text-gray-500 border-b-2   border-gray-200  hover:bg-gray-50 dark:hover:bg-gray-800"
               data-accordion-target="#accordion-open-body-7"
               aria-expanded="false"
               aria-controls="accordion-open-body-7"
@@ -209,6 +209,107 @@ export const Accordion = ({ itemsAccordion, dataEvento }) => {
                   __html: DOMPurify.sanitize(itemsAccordion.extra),
                 }}
               ></p>
+            </div>
+          </div>
+        </>
+      )}
+
+      {/* {itemsAccordion.mediaJson.length > 0 && (
+        <div className="mt-5">
+          <h3 className="text-[#6b7280] font-semibold text-lg lg:text-xl">
+            Galería multimedia
+          </h3>
+
+          {itemsAccordion.mediaJson.map((item) => {
+            const url = item.media_json;
+            const newUrl = new URL(url);
+            const domainName = newUrl.hostname;
+            if (domainName.includes("spotify")) {
+              // console.log({urlSpo: url.split('/')[5]})
+              return (
+                <iframe
+                  key={url.split("/")[5]}
+                  className="w-full xl:w-[70%] rounded-xl h-20 mt-5"
+                  src={item.media_json}
+                  allowFullScreen=""
+                  allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                  loading="lazy"
+                ></iframe>
+              );
+            }
+            if (domainName.includes("youtube")) {
+              // console.log({urlYou: url.split('/')[4]})
+              return (
+                <iframe
+                  key={url.split("/")[4]}
+                  className="w-full xl:w-[70%] mt-5"
+                  height="350"
+                  src={item.media_json}
+                  title={dataEvento.name}
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowFullScreen
+                ></iframe>
+              );
+            }
+          })}
+        </div>
+      )} */}
+
+      {itemsAccordion.mediaJson.length > 0 && (
+        <>
+          <h2 id="accordion-open-heading-8">
+            <button
+              type="button"
+              className="flex items-center justify-between w-full p-5 font-medium text-left text-gray-500 border-b-2   border-gray-200  hover:bg-gray-50 dark:hover:bg-gray-800"
+              data-accordion-target="#accordion-open-body-8"
+              aria-expanded="false"
+              aria-controls="accordion-open-body-8"
+              onClick={() => setMediaJson((prevState) => !prevState)}
+            >
+              <span className="flex items-center text-xl font-semibold">
+                Galería multimedia
+              </span>
+              <IconAccordion item={mediaJson} />
+            </button>
+          </h2>
+          <div
+            id="accordion-open-body-8"
+            className={mediaJson ? "" : "hidden"}
+            aria-labelledby="accordion-open-heading-8"
+          >
+            <div className="p-5 border-0 border-gray-200 dark:border-gray-700">
+              {itemsAccordion.mediaJson.map((item) => {
+                const url = item.media_json;
+                const newUrl = new URL(url);
+                const domainName = newUrl.hostname;
+                if (domainName.includes("spotify")) {
+                  // console.log({urlSpo: url.split('/')[5]})
+                  return (
+                    <iframe
+                      key={url.split("/")[5]}
+                      className="w-full xl:w-[70%] rounded-xl h-20 mt-5"
+                      src={item.media_json}
+                      allowFullScreen=""
+                      allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                      loading="lazy"
+                    ></iframe>
+                  );
+                }
+                if (domainName.includes("youtube")) {
+                  // console.log({urlYou: url.split('/')[4]})
+                  return (
+                    <iframe
+                      key={url.split("/")[4]}
+                      className="w-full xl:w-[70%] mt-5"
+                      height="350"
+                      src={item.media_json}
+                      title={dataEvento.name}
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      allowFullScreen
+                    ></iframe>
+                  );
+                }
+              })}
             </div>
           </div>
         </>

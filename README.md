@@ -8,17 +8,15 @@
 
 ## TODO
 
-1. rompe en celular venues.tuentrada.com en detalle evento
+2. agregar eventos a mano
 
-2. no figura matilda en al api
-
-3. no se ordena por fecha en la home, no viene en la api ordenada
+3. ordenar eventos por fecha
 
 4. detalle:
 -si cambio el nombre de la url no hace nada
 -que no se vea el id en la url
 
-5. beriso por ej viene sin disponibilidad
+5. modificar disponibilidad
 
 7. id en product social medias
 
@@ -26,6 +24,4 @@
 
 9. id en media_json
 
-10. que no se me cierre el product cuando hago save
-
-11. estilo calendar
+10. que no se me cierre el product cuando hago save (esto es en el back)

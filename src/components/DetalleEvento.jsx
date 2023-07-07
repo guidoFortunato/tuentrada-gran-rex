@@ -11,8 +11,9 @@ const { VITE_API_EVENTOS, VITE_EMAIL, VITE_PASS } = getEnvVariables();
 export const DetalleEvento = () => {
   const [data, setData] = useState(null);
   const [itemsAccordion, setItemsAccordion] = useState(null);
-  const { idVenue, dataInfoGeneral, idProducto, handleButtonsCollapse } = useContext(EventosContext);
-  
+  const { idVenue, dataInfoGeneral, idProducto, handleButtonsCollapse } =
+    useContext(EventosContext);
+
   const { url } = dataInfoGeneral;
   const { name, id } = useParams();
   const navigate = useNavigate();
@@ -23,7 +24,7 @@ export const DetalleEvento = () => {
   const lastPath = localStorage.getItem("lastPath") || "/";
 
   useEffect(() => {
-    handleButtonsCollapse()
+    handleButtonsCollapse();
   }, []);
 
   useEffect(() => {
@@ -98,8 +99,11 @@ export const DetalleEvento = () => {
         </div>
 
         <Accordion itemsAccordion={itemsAccordion} dataEvento={data} />
+
+        
+
         {data.socialNetworks.length > 0 && (
-          <div className="mt-5">
+          <div className="mt-5 flex flex-col items-end">
             <h3 className="text-[#6b7280] font-semibold text-lg lg:text-xl">
               {/*text-center*/}
               Seguilo en sus sus redes
@@ -108,38 +112,6 @@ export const DetalleEvento = () => {
               {/*justify-center*/}
               <RedesSociales dataRedes={data.socialNetworks} />
             </ul>
-          </div>
-        )}
-        {data.mediaJson.length > 0 && (
-          <div className="mt-5">
-            <h3 className="text-[#6b7280] font-semibold text-lg lg:text-xl">
-              {/*text-center*/}
-              Más Información
-            </h3>
-            {/* {data.mediaJson.map((item) => (
-              <iframe
-                style="border-radius:12px"
-                src={item.media_json}
-                width="100%"
-                height="152"
-                allowFullScreen=""
-                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-                loading="lazy"
-              ></iframe>
-            ))} */}
-            {data.mediaJson.map((item) => {
-              const url = item.media_json;
-              const newUrl = new URL(url);
-              const domainName = newUrl.hostname;
-              if (domainName.includes("spotify")) {
-                // console.log({urlSpo: url.split('/')[5]})
-                return <iframe key={url.split('/')[5]} className="w-full xl:w-[70%] rounded-xl h-20 mt-5" src={item.media_json}  allowFullScreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-              }
-              if (domainName.includes("youtube")) {
-                // console.log({urlYou: url.split('/')[4]})
-                return <iframe key={url.split('/')[4]} className="w-full xl:w-[70%] mt-5" height="350" src={item.media_json} title={data.name}  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
-              }
-            })}
           </div>
         )}
       </div>
