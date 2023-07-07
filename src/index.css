@@ -12,13 +12,38 @@
   padding-bottom: 320px;
 }
 
+/* border navbar */
+
 .active{
   border-bottom-color: #855F35
 }
+
+/* alerta */
 .swal2-confirm:focus {
   outline: none; /* Desactiva el contorno predeterminado del enfoque */
   box-shadow: 0 0 0 3px #d1bda8 !important; /* Cambia el color del contorno del enfoque */
 }
+
+/*calendario*/
+.fc-toolbar-chunk{
+  font-size: 8.5px;
+}
+.fc-list-day-text, .fc-list-day-side-text, .fc-list-event-time, .fc-list-event-title {
+  font-size: 13px;
+}
+
+
+@media screen and (min-width: 361px) {
+  .fc-toolbar-chunk{
+    font-size: 11px;
+  }
+  .fc-list-day-text, .fc-list-day-side-text, .fc-list-event-time, .fc-list-event-title {
+    font-size: 16px;
+  }
+}
+
+
+
 /*
 
 
