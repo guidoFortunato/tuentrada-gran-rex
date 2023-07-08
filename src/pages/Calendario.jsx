@@ -1334,7 +1334,7 @@ export const Calendario = () => {
                 buttonText={buttonTextOptions}
                 eventBackgroundColor="#855f35"
                 eventBorderColor="#855f35"
-                eventextColor="#FFF"
+                eventTextColor="#FFF"
                 eventClick={handleClick}
                 eventDidMount={handleEventMount}
                 events={fullEvents}

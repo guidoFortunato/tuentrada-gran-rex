@@ -37,7 +37,7 @@ const EventosProvider = (props) => {
         VITE_EMAIL,
         VITE_PASS
       ); //window.location.hostname
-      console.log({ dataInfoGeneral: data });
+      // console.log({ dataInfoGeneral: data });
       setDataInfoGeneral(data);
       setIdVenue(data.venueId);
     };
