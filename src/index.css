@@ -64,12 +64,13 @@
 
  .fc .fc-button-primary {
   background-color: #855f35!important;
-  border-color:#855f35(145, 145, 145);
+  border-color:rgb(145, 145, 145);
  }
+
 
  .fc .fc-button-primary:not(:disabled).fc-button-active, .fc .fc-button-primary:not(:disabled):active {
   background-color: rgb(228, 228, 228)!important;
-  border-color: #855f35!important;
+  border-color: #855f35 !important;
   color: #e6e6e6;
  }
 
