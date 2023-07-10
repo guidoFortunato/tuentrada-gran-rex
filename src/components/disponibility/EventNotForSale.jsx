@@ -34,8 +34,8 @@ export const EventNotForSale = ({
             : "No disponible"}
         </button>
         <Link to={linkEvento}>
-          <figcaption className="hidden md:block bg-[#000]  bg-opacity-90 absolute text-md text-white bottom-2 right-0 left-0">
-            <p>{title}</p>
+        <figcaption className=" opacity-0 hover:opacity-100 transition duration-500 ease-in-out h-full bg-gradient-to-t hover:from-[rgba(15,15,15,0.89)] hover:to-[rgba(173,170,167,0.15)] hover:bg-gradient-to-t absolute bottom-0 right-0 left-0 top-0">
+            <p className="flex items-end text-lg text-white h-full p-5 font-bold hover:transition-colors duration-500 ease-in-out hover:text-white">{title}</p>
           </figcaption>
         </Link>
       </figure>

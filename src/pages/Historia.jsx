@@ -358,7 +358,7 @@ export const Historia = () => {
               {images.length > maxImagesToShow && (
                 <div className="flex justify-center mt-4">
                   <button
-                    className={`text-[${dataInfoGeneral.colorButton}] text-white font-semibold bg-[${dataInfoGeneral.backgroundButton}] hover:bg-[#5c452c] hover:border[${dataInfoGeneral.colorHoverButton}] font-medium rounded-3xl text-sm px-4 py-2`}
+                    className={`text-[${dataInfoGeneral.colorButton}] text-white font-semibold bg-[${dataInfoGeneral.backgroundButton}] hover:bg-[#5c452c] hover:border[${dataInfoGeneral.colorHoverButton}] rounded text-sm px-4 py-2`}
                     onClick={toggleShowMoreImages}
                   >
                     {toggleButtonTextImages}
