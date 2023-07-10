@@ -29,11 +29,7 @@ export const FechaAccordionAgotada = ({ dia, hora, mesFormateado, anio }) => {
           <div className="md:mr-1 text-left text-sm text-gray-300 font-semibold ">
             <span>{hora}hs</span>
           </div>
-          {/* <ModalPrecios
-            performances={dataFechas}
-            openModal={openModal}
-            setOpenModal={setOpenModal}
-          /> */}
+       
         </div>
       </div>
 

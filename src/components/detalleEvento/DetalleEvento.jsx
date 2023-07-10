@@ -104,7 +104,7 @@ export const DetalleEvento = () => {
         
 
         {data.socialNetworks.length > 0 && (
-          <div className="mt-5 flex flex-col items-end">
+          <div className="mt-5 flex flex-col items-center">
             <h3 className="text-[#6b7280] font-semibold text-lg lg:text-xl">
               {/*text-center*/}
               Seguilo en sus redes

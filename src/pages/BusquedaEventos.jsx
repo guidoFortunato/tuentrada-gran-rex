@@ -59,12 +59,7 @@ export const BusquedaEventos = () => {
   return (
     <>
       <div className="container mx-auto">
-        {/* <div className="flex justify-center mt-10 text-center">
-          <h2>
-            Resultados de tu búsqueda
-            <strong className="mx-1">"{query.split("%20").join(" ")}"</strong>:
-          </h2>
-        </div> */}
+       
 
         {data.length > 0 ? (
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6 lg:gap-10 mt-10 px-3 lg:px-0">
@@ -106,20 +101,7 @@ export const BusquedaEventos = () => {
           </div>
         )}
 
-        {/* <div className="flex justify-center mt-10">
-          <Link to="/">
-            <button
-              style={{
-                color: dataInfoGeneral.colorButton,
-                backgroundColor: dataInfoGeneral.backgroundButton,
-              }}
-              type="button"
-              className="text-white bg-blue-700 hover:bg-blue-800 focus:outline-none font-medium rounded text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-            >
-              Home
-            </button>
-          </Link>
-        </div> */}
+       
       </div>
     </>
   );

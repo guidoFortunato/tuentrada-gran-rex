@@ -4,7 +4,6 @@ import { EventosContext } from "../context/EventosProvider";
 
 import DOMPurify from "dompurify";
 
-// import "../css/comollegar.css";
 
 export const HorariosLlegada = () => {
   const { dataInfoGeneral, handleButtonsCollapse: handleNavBarCollapse } = useContext(EventosContext);

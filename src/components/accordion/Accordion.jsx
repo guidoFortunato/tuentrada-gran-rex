@@ -33,11 +33,7 @@ export const Accordion = ({ itemsAccordion, dataEvento }) => {
 
   return (
     <div id="accordion-open" data-accordion="open" className="mt-5">
-      {/* {Object.keys(itemsAccordion).forEach((item) => {
-        if (itemsAccordion[item] !== null) {
-          return <AccordionItem item={item} itemsAccordion={itemsAccordion} />;
-        }
-      })} */}
+   
 
       {itemsAccordion.performances.length > 0 && (
         <>
@@ -215,46 +211,7 @@ export const Accordion = ({ itemsAccordion, dataEvento }) => {
         </>
       )}
 
-      {/* {itemsAccordion.mediaJson.length > 0 && (
-        <div className="mt-5">
-          <h3 className="text-[#6b7280] font-semibold text-lg lg:text-xl">
-            Galería multimedia
-          </h3>
-
-          {itemsAccordion.mediaJson.map((item) => {
-            const url = item.media_json;
-            const newUrl = new URL(url);
-            const domainName = newUrl.hostname;
-            if (domainName.includes("spotify")) {
-              // console.log({urlSpo: url.split('/')[5]})
-              return (
-                <iframe
-                  key={url.split("/")[5]}
-                  className="w-full xl:w-[70%] rounded-xl h-20 mt-5"
-                  src={item.media_json}
-                  allowFullScreen=""
-                  allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-                  loading="lazy"
-                ></iframe>
-              );
-            }
-            if (domainName.includes("youtube")) {
-              // console.log({urlYou: url.split('/')[4]})
-              return (
-                <iframe
-                  key={url.split("/")[4]}
-                  className="w-full xl:w-[70%] mt-5"
-                  height="350"
-                  src={item.media_json}
-                  title={dataEvento.name}
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  allowFullScreen
-                ></iframe>
-              );
-            }
-          })}
-        </div>
-      )} */}
+     
 
       {itemsAccordion.mediaJson.length > 0 && (
         <>
