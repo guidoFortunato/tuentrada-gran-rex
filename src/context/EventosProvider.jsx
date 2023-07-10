@@ -46,6 +46,7 @@ const EventosProvider = (props) => {
 
   useEffect(() => {
     if (idVenue !== "") {
+      // console.log({idVenue})
       const getDataEventosGenerales = async () => {
         const newLocal = `${VITE_API_EVENTOS + idVenue}?page=${page}`;
         const info = await getData(newLocal, VITE_EMAIL, VITE_PASS);
