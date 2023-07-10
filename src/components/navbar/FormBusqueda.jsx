@@ -1,7 +1,7 @@
 import { useContext, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
-import { EventosContext } from "../context/EventosProvider";
-import { alertaWarning } from "../helpers";
+import { EventosContext } from "../../context/EventosProvider";
+import { alertaWarning } from "../../helpers";
 
 export const FormBusqueda = () => {
   const { dataInfoGeneral } = useContext(EventosContext);

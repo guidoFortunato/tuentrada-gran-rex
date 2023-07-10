@@ -1,7 +1,8 @@
 import React, { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { EventosContext } from "../context/EventosProvider";
-import { FormBusqueda, ItemRedes, ItemsNavBar } from ".";
+import { EventosContext } from "../../context/EventosProvider";
+import { FormBusqueda, ItemsNavBar } from "./";
+import { ItemRedes } from "../";
 
 export const NavBar = () => {
   const { dataInfoGeneral, handleButtonsCollapse, handleSearchCollapse, handleButtonCollapse, isSearchCollapsed, isButtonCollapsed } = useContext(EventosContext);
@@ -24,19 +25,6 @@ export const NavBar = () => {
       window.removeEventListener("scroll", changeBackground);
     };
   }, []);
-
-  // console.log({ dataInfoGeneral });
-  // console.log("se renderiza el navbar");
-
-  // const handleSearchCollapse = () =>
-  //   setIsSearchCollapsed((prevState) => !prevState);
-  // const handleButtonCollapse = () =>
-  //   setIsButtonCollapsed((prevState) => !prevState);
-
-  // const handleButtonsCollapse = () => {
-  //   setIsButtonCollapsed(false);
-  //   setIsSearchCollapsed(false);
-  // };
 
   // if (dataInfoGeneral.length === 0) return <Spinner />;
 

@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import { NavLink } from "react-router-dom";
-import { EventosContext } from "../context/EventosProvider";
+import { EventosContext } from "../../context/EventosProvider";
 
 export const ItemsNavBar = ({ item, handleButtonsCollapse }) => {
   const { dataInfoGeneral } = useContext(EventosContext);

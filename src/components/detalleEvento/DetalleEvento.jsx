@@ -2,9 +2,10 @@ import { useContext, useEffect, useState } from "react";
 import { Navigate, useNavigate, useParams } from "react-router-dom";
 import DOMPurify from "dompurify";
 
-import { EventosContext } from "../context/EventosProvider";
-import { Accordion, ItemRedes, RedesSociales, Spinner } from "./";
-import { getData, getEnvVariables } from "../helpers";
+import { EventosContext } from "../../context/EventosProvider";
+import { RedesSociales, Spinner } from "..";
+import { getData, getEnvVariables } from "../../helpers";
+import { Accordion } from "../accordion";
 
 const { VITE_API_EVENTOS, VITE_EMAIL, VITE_PASS } = getEnvVariables();
 

@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { Modal } from "flowbite-react";
+import { EventosContext } from "../../context/EventosProvider";
 import { TablaPrecios } from "./";
-import { EventosContext } from "../context/EventosProvider";
 
 export const ModalPrecios = ({ performances, openModal, setOpenModal }) => {
   const { dataInfoGeneral } = useContext(EventosContext);

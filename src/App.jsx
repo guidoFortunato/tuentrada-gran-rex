@@ -1,14 +1,15 @@
 import { useContext } from "react";
 import { EventosContext } from "./context/EventosProvider";
-import { Footer, LoadingVacio, NavBar } from "./components";
 import { AppRouter } from "./router/AppRouter";
+import { NavBar } from "./components/navbar/";
+import { Footer } from "./components/footer/";
 
 import "animate.css";
 
 function App() {
 
   const { dataInfoGeneral } = useContext(EventosContext);
-  if (dataInfoGeneral.length === 0) return <LoadingVacio />;
+  if (dataInfoGeneral.length === 0) return <span></span>;
 
   return (
     <>

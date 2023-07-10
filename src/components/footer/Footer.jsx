@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import { Link } from "react-router-dom";
-import { EventosContext } from "../context/EventosProvider";
+import { EventosContext } from "../../context/EventosProvider";
 import { ItemsFooter } from "./";
 
 export const Footer = () => {

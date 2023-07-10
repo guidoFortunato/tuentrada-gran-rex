@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { FechaAccordionAgotada, FechaAccordionDisponible, FechaAccordionLimited } from "./disponibility";
+import { FechaAccordionDisponible, FechaAccordionLimited, FechaAccordionAgotada } from "../accordion";
 
 const opciones = {
   day: "numeric",

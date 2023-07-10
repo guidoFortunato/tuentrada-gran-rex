@@ -1,14 +1,20 @@
 import { useContext, useEffect } from "react";
 import { EventosContext } from "../context/EventosProvider";
-import { HeaderEventos, HeaderNoEventos, LoadingVacio, MainEventos, MainNoEventos } from "../components";
+import { HeaderNoEventos, HeaderEventos } from "../components/header/";
+import { MainNoEventos, MainEventos } from "../components/main/";
 
 export const Home = () => {
-  const { eventosGenerales, setPage, data, handleButtonsCollapse: handleNavBarCollapse } = useContext(EventosContext);
+  const {
+    eventosGenerales,
+    setPage,
+    data,
+    handleButtonsCollapse: handleNavBarCollapse,
+  } = useContext(EventosContext);
   // console.log({data});
   // console.log({ dataInfoGeneral });
 
   useEffect(() => {
-    handleNavBarCollapse()
+    handleNavBarCollapse();
   }, []);
 
   useEffect(() => {
@@ -18,7 +24,7 @@ export const Home = () => {
   }, []);
 
   // useEffect(() => {
-    
+
   //     const getInfo = async () => {
   //       const newLocal = `${VITE_API_EVENTOS + 136}?page=${page}`;
   //       const info = await getData(newLocal, VITE_EMAIL, VITE_PASS);
@@ -29,13 +35,17 @@ export const Home = () => {
   //       setEventos((prevEventos) => prevEventos.concat(info.data));
   //     };
   //     getInfo();
-    
+
   // }, [page]);
 
-  if (data === null) return <LoadingVacio />;
+  if (data === null) return <span></span>;
   // if (eventosGenerales.length === 0) return <Spinner />;
 
-  if (eventosGenerales === undefined || eventosGenerales.length === 0 || data.data.length === 0) {
+  if (
+    eventosGenerales === undefined ||
+    eventosGenerales.length === 0 ||
+    data.data.length === 0
+  ) {
     return (
       <>
         <HeaderNoEventos />
