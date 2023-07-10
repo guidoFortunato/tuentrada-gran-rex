@@ -1,10 +1,50 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
-
+import fs from 'fs-extra';
+import { SitemapStream, streamToPromise } from 'sitemap';
+import { Readable } from 'stream';
 
 export default defineConfig({
   plugins: [react()],
- 
+  build: {
+    rollupOptions: {
+      output: {
+        manualChunks: undefined,
+      },
+      plugins: [
+        {
+          name: 'generate-sitemap',
+          writeBundle() {
+            generateSitemap();
+          },
+        },
+      ],
+    },
+  },
 });
 
+async function generateSitemap() {
+  const smStream = new SitemapStream({
+    hostname: 'https://tu-sitio-web.com/', // Reemplaza con la URL de tu sitio
+  });
 
+  // Genera dinámicamente las URLs del sitemap
+  // Puedes obtener los datos de tu base de datos u otra fuente de datos
+  const urls = [
+    { url: '/home', changefreq: 'daily', priority: 0.8 },
+    { url: '/historia', changefreq: 'daily', priority: 0.8 },
+    // Agrega más URLs según tus necesidades
+  ];
+
+  // Agrega las URLs al sitemap utilizando smStream.write()
+  urls.forEach((url) => smStream.write(url));
+
+  smStream.end();
+
+  const sitemap = await streamToPromise(Readable.from(smStream), { encoding: 'utf8' });
+
+  // Guarda el sitemap en un archivo
+  await fs.writeFile('./dist/sitemap.xml', sitemap);
+
+  console.log('Sitemap generado y guardado en ./dist/sitemap.xml');
+}
