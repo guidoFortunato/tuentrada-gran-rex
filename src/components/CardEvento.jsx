@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { EventAvailable, EventLimited, EventNotAvailable, EventNotForSale } from "./EventDisponibility/";
+import { EventAvailable, EventLimited, EventNotAvailable, EventNotForSale } from "./eventDisponibility";
 
 
 export const CardEvento = ({ img = "", title = "", linkEvento = "", disponibility, data }) => {
