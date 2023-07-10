@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import DOMPurify from "dompurify";
 import { IconAccordion } from "./";
-import { FechaEvento } from "../EventDisponibility";
+import { FechaEvento } from "../eventDisponibility";
 import { Spinner } from "../";
 
 export const Accordion = ({ itemsAccordion, dataEvento }) => {

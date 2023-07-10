@@ -98,7 +98,7 @@ export const DetalleEvento = () => {
             </div>
           </div>
         </div>
-
+                
         <Accordion itemsAccordion={itemsAccordion} dataEvento={data} />
 
         
