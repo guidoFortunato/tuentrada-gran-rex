@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
-import { EventAvailable, EventLimited, EventNotAvailable, EventNotForSale } from "./disponibility";
+import { EventAvailable, EventLimited, EventNotAvailable, EventNotForSale } from "./EventDisponibility/";
 
-import "../css/cardevento.css";
 
 export const CardEvento = ({ img = "", title = "", linkEvento = "", disponibility, data }) => {
   const [availabilityGood, setAvailabilityGood] = useState(false);

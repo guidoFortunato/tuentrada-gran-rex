@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
 import DOMPurify from "dompurify";
-
-import { FechaEvento, MediaEvento, Spinner, IconAccordion } from "./";
+import { IconAccordion } from "./";
+import { FechaEvento } from "../EventDisponibility";
+import { Spinner } from "../";
 
 export const Accordion = ({ itemsAccordion, dataEvento }) => {
   const [performances, setPerformances] = useState(true);

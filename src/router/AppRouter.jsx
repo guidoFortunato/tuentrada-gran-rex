@@ -1,6 +1,6 @@
 import { Navigate, Route, Routes } from "react-router-dom";
 import { BasesCondiciones, BusquedaEventos, Calendario, HorariosLlegada, Historia, Home } from "../pages/";
-import { DetalleEvento } from "../components";
+import { DetalleEvento } from "../components/detalleEvento";
 
 export const AppRouter = () => {
   return (

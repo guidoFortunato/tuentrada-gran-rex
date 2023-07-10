@@ -49,15 +49,6 @@
   
 }
 
-/* .fc-event { 
- background-color: #dadada00!important;
- border-color: rgba(128, 128, 128, 0.699)!important;
- }
-
- .a .fc-event {
-  color:"black"!important;
- } */
-
  .fc .fc-daygrid-day.fc-day-today {
   background-color: #f3f3f2!important;
  }
@@ -77,3 +68,21 @@
  .fc .fc-button-primary:not(:disabled).fc-button-active, .fc .fc-button-primary:not(:disabled):hover {
   background-color: #583711!important;
  }
+
+ /* spinner */
+
+ .spinner{
+  display: flex;
+  justify-content: center;
+  margin: 30px;
+}
+
+.spinning{
+  animation: spinner 1s linear infinite;
+}
+
+@keyframes spinner {
+  to{
+    transform: rotate(360deg);
+  }
+}
