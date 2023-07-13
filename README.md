@@ -16,7 +16,7 @@
 -si cambio el nombre de la url no hace nada
 -que no se vea el id en la url
 
-5. modificar disponibilidad
+5. disponibilidad
 
 7. id en product social medias
 

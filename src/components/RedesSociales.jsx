@@ -4,6 +4,7 @@ export const RedesSociales = ({ dataRedes }) => {
   return (
     <>
       {dataRedes.map( item => (
+
         <li key={item.type.name}>
           <a
             href={item.url}
