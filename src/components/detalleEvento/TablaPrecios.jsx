@@ -2,6 +2,37 @@ import React from "react";
 
 export const TablaPrecios = ({ performances }) => {
   // console.log({performances})
+  // Definir el orden de las categorías de asientos
+const order = {
+  "Platea 1": 1,
+  "Platea 2": 2,
+  "Super Pullman": 3,
+  "Pullman": 4,
+};
+
+// Ordenar el array de objetos
+const sortedData = performances.prices.sort((a, b) => {
+  const categoryA = a.seatCategory.name;
+  const categoryB = b.seatCategory.name;
+  console.log({categoryA})
+  console.log({categoryB})
+  
+  // Comparar las categorías de asientos según el orden definido
+  if (order[categoryA] < order[categoryB]) {
+    return -1;
+  } else if (order[categoryA] > order[categoryB]) {
+    return 1;
+  } 
+  // else {
+    
+  //   const amountA = parseInt(a.amount.replace(/[^0-9]/g, ""));
+  //   const amountB = parseInt(b.amount.replace(/[^0-9]/g, ""));
+  //   return amountB - amountA;
+  // }
+});
+  // console.log({sortedData})
+
+
   return (
     <table className="w-full text-sm text-left text-gray-500 dark:text-gray-400 border">
       <thead className="text-xs text-gray-700 uppercase bg-gray-100 dark:bg-gray-700 dark:text-gray-400">
