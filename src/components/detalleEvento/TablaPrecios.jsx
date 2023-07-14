@@ -6,21 +6,31 @@ export const TablaPrecios = ({ performances }) => {
 const order = {
   "Platea 1": 1,
   "Platea 2": 2,
-  "Super Pullman": 3,
-  "Pullman": 4,
+  "Platea 3": 3,
+  "Platea 4": 4,
+  "Platea 5": 5,
+  "Super Pullman 1": 6,
+  "Super Pullman 2": 7,
+  "Pullman 1": 8,
+  "Pullman 2": 9,
+  "Pullman 3": 10,
+  "Pullman 4": 11,
+  "Pullman 5": 12,
 };
 
 // Ordenar el array de objetos
 const sortedData = performances.prices.sort((a, b) => {
   const categoryA = a.seatCategory.name;
   const categoryB = b.seatCategory.name;
-  console.log({categoryA})
-  console.log({categoryB})
+  // console.log({categoryA})
+  // console.log({categoryB})
   
   // Comparar las categorías de asientos según el orden definido
   if (order[categoryA] < order[categoryB]) {
+    // console.log({orderA: order[categoryA]})
     return -1;
   } else if (order[categoryA] > order[categoryB]) {
+    // console.log({orderB: order[categoryB]})
     return 1;
   } 
   // else {
@@ -30,7 +40,7 @@ const sortedData = performances.prices.sort((a, b) => {
   //   return amountB - amountA;
   // }
 });
-  // console.log({sortedData})
+  console.log({sortedData})
 
 
   return (
@@ -46,7 +56,7 @@ const sortedData = performances.prices.sort((a, b) => {
         </tr>
       </thead>
       <tbody>
-        {performances.prices.map((item) => (
+        {sortedData.map((item) => (
          
            
               <tr
