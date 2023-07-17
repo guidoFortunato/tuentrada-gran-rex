@@ -5,7 +5,7 @@ import { ModalPrecios } from "../detalleEvento/";
 export const FechaAccordionDisponible = ({ dia, hora, mesFormateado, anio, openModal, setOpenModal, dataFechas: dataFecha, dataEvento }) => {
   const { dataInfoGeneral } = useContext(EventosContext);
   // console.log({dataInfoGeneral})
-  console.log({dataFecha})
+  // console.log({dataFecha})
   // console.log({dataEvento})
   return (
     <>

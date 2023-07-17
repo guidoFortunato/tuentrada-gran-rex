@@ -18,7 +18,7 @@ export const DetalleEvento = () => {
   const { url } = dataInfoGeneral;
   const { name, id } = useParams();
   const navigate = useNavigate();
-  console.log({ dataEvento: data });
+  // console.log({ dataEvento: data });
   // console.log({name})
   // console.log({idProducto})
 
@@ -46,7 +46,7 @@ export const DetalleEvento = () => {
           VITE_EMAIL,
           VITE_PASS
         );
-        console.log({ performances: data.performances });
+        // console.log({ performances: data.performances });
         setData(data);
         setItemsAccordion({
           performances: data.performances.filter(
