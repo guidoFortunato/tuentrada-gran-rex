@@ -1,25 +1,30 @@
 # Teatro Gran Rex
 
-
 ## Development pasos
 
 1. Renombrar el archivo .env.template por .env
 2. Hacer los cambios respectivos en las variables de entorno
 
-## TODO
+## TODO 
 
-2. agregar eventos a mano
+1. Orden de fechas de eventos: Las fechas de los eventos deben aparecer en orden ascendente, es decir, de menor a mayor.
 
-3. ordenar eventos por fecha
+2. Carga manual de eventos: Queremos tener la opción de cargar eventos manualmente. Consultar con coqui.
+
+3. Orden de precios y ubicaciones: Los precios y ubicaciones de los eventos deben mostrarse en un orden específico.
 
 4. detalle:
--si cambio el nombre de la url no hace nada
--que no se vea el id en la url
+   -si cambio el nombre de la url no hace nada
+   -que no se vea el id en la url
 
-5. disponibilidad
+5. Correcta disponibilidad de eventos: Es muy importante que la página muestre la disponibilidad correcta de los eventos, asegurándose de que la información esté actualizada y precisa.
 
-10. que no se me cierre el product cuando hago save (esto es en el back)
+6. Mantener la pantalla después de aplicar cambios: Actualmente, cuando hacemos un cambio en el backend, la pantalla nos redirige a la página principal. Necesitamos que nos quedemos en la misma pantalla después de aplicar cambios para poder seguir editando sin problemas.
 
-11. En performances, el onSale dice desde "hasta", si completo solo "desde" en internalState dice "sin fechas", tengo que completar "hasta" si o si
+7. boton proximamente en el product general, ademas de en cada performance
 
-12. boton proximamente en el product general, ademas de en cada performance
+8. Agregar el límite para la descripción de caracteres máximo 900 caracteres
+
+13. Edición del botón de compra: Queremos tener la posibilidad de editar el href del botón de compra, que por defecto muestre la info de secutix.
+
+14. sitemap dinámico
