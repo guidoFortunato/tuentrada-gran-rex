@@ -4,7 +4,7 @@ import { EventosContext } from "../../context/EventosProvider";
 
 export const EventAvailable = ({ linkEvento, img, title, data }) => {
   const { setIdProducto } = useContext(EventosContext);
-  // console.log({data})
+  console.log({data})
   // console.log({linkEvento})
   return (
     <>

@@ -2,15 +2,16 @@ import React, { useContext } from "react";
 import { EventosContext } from "../../context/EventosProvider";
 import { ModalPrecios } from "../detalleEvento/";
 
-export const FechaAccordionDisponible = ({ dia, hora, mesFormateado, anio, openModal, setOpenModal, dataFechas, dataEvento }) => {
+export const FechaAccordionDisponible = ({ dia, hora, mesFormateado, anio, openModal, setOpenModal, dataFechas: dataFecha, dataEvento }) => {
   const { dataInfoGeneral } = useContext(EventosContext);
   // console.log({dataInfoGeneral})
-  // console.log({dataFechas})
+  console.log({dataFecha})
   // console.log({dataEvento})
   return (
     <>
       <div className="flex flex-row">
         <div className="flex flex-col justify-center w-12">
+          
           <div
             style={{ color: dataInfoGeneral.colorSiteName }}
             className="lg:mr-1 lg:whitespace-nowrap text-sm font-semibold "
@@ -46,7 +47,7 @@ export const FechaAccordionDisponible = ({ dia, hora, mesFormateado, anio, openM
             <span>{hora}hs</span>
           </div>
           <ModalPrecios
-            performances={dataFechas}
+            performances={dataFecha}
             openModal={openModal}
             setOpenModal={setOpenModal}
           />
@@ -62,7 +63,7 @@ export const FechaAccordionDisponible = ({ dia, hora, mesFormateado, anio, openM
           }}
         >
           <a
-            href={`${dataEvento.url}selection/event/seat?perfId=${dataFechas.performanceId}&productId=${dataEvento.productId}`}
+            href={`${dataEvento.url}selection/event/seat?perfId=${dataFecha.performanceId}&productId=${dataEvento.productId}`}
             target="_blank"
           >
             Comprar entradas

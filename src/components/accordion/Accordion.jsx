@@ -33,8 +33,6 @@ export const Accordion = ({ itemsAccordion, dataEvento }) => {
 
   return (
     <div id="accordion-open" data-accordion="open" className="mt-5">
-   
-
       {itemsAccordion.performances.length > 0 && (
         <>
           <h2 id="accordion-open-heading-1">
@@ -61,15 +59,17 @@ export const Accordion = ({ itemsAccordion, dataEvento }) => {
           >
             <div className="flex flex-col max-h-90 overflow-y-auto border-0 border-gray-200 dark:border-gray-700 dark:bg-gray-900 text-sm">
               {newPerformances.map((item) => {
-                return (
-                  <FechaEvento
-                    dataFechas={item}
-                    dataEvento={dataEvento}
-                    key={item.id}
-                    availabilitLevel={item.availabilitLevel}
-                    reason={item.reason}
-                  />
-                );
+                if (item.internalState !== "soon") {
+                  return (
+                    <FechaEvento
+                      dataFechas={item}
+                      dataEvento={dataEvento}
+                      key={item.id}
+                      availabilitLevel={item.availabilitLevel}
+                      reason={item.reason}
+                    />
+                  );
+                }
               })}
             </div>
           </div>
@@ -211,8 +211,6 @@ export const Accordion = ({ itemsAccordion, dataEvento }) => {
         </>
       )}
 
-     
-
       {itemsAccordion.mediaJson.length > 0 && (
         <>
           <h2 id="accordion-open-heading-8">
@@ -237,6 +235,7 @@ export const Accordion = ({ itemsAccordion, dataEvento }) => {
           >
             <div className="p-5 border-0 border-gray-200 dark:border-gray-700">
               {itemsAccordion.mediaJson.map((item) => {
+                // console.log({item})
                 const url = item.media_json;
                 const newUrl = new URL(url);
                 const domainName = newUrl.hostname;
@@ -244,7 +243,7 @@ export const Accordion = ({ itemsAccordion, dataEvento }) => {
                   // console.log({urlSpo: url.split('/')[5]})
                   return (
                     <iframe
-                      key={url.split("/")[5]}
+                      key={item.id}
                       className="w-full xl:w-[70%] rounded-xl h-20 mt-5"
                       src={item.media_json}
                       allowFullScreen=""
@@ -257,7 +256,7 @@ export const Accordion = ({ itemsAccordion, dataEvento }) => {
                   // console.log({urlYou: url.split('/')[4]})
                   return (
                     <iframe
-                      key={url.split("/")[4]}
+                      key={item.id}
                       className="w-full xl:w-[70%] mt-5"
                       height="350"
                       src={item.media_json}
