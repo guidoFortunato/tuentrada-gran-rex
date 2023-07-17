@@ -18,10 +18,8 @@
 
 5. disponibilidad
 
-7. id en product social medias
-
-8. orden para mostrar product social medias
-
-9. id en media_json
-
 10. que no se me cierre el product cuando hago save (esto es en el back)
+
+11. En performances, el onSale dice desde "hasta", si completo solo "desde" en internalState dice "sin fechas", tengo que completar "hasta" si o si
+
+12. boton proximamente en el product general, ademas de en cada performance
