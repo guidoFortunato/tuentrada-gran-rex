@@ -24,7 +24,7 @@ export const HeaderEventos = () => {
           }}
           className={`m-0 text-5xl titulo-principal pt-10 pb-5  text-center md:text-left`}
         >
-          <strong>{dataInfoGeneral.pages[0].title}</strong>
+          <strong>{dataInfoGeneral.name}</strong>
         </h1>
       </div>
       <div
@@ -50,7 +50,7 @@ export const HeaderEventos = () => {
             type="button"
             className={`w-auto py-2.5 px-11 mt-6 md:mt-0 bg-[#855F35] hover:bg-[#5c452c] font-medium rounded text-base lg:text-lg md:text-base`}
           >
-            <Link to={dataInfoGeneral.buttonLink}>
+            <Link to={dataInfoGeneral.buttonLink} target={dataInfoGeneral.buttonLink.startsWith("/") ? null : "_blank" }>
             {dataInfoGeneral.buttonLabel}
             </Link>
           </button>
