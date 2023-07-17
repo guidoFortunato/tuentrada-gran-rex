@@ -77,16 +77,16 @@ export const DetalleEvento = () => {
 
   return (
     <>
-      <div className="container mx-auto mb-5 px-3 xl:w-2/3">
+      <div className="container mx-auto mb-5 px-3 ">
         <div className="flex flex-wrap">
-          <div className="w-full lg:w-1/2 p-4">
+          <div className="w-full lg:w-[40%] p-0 sm:p-4">
             <section
               className={`bg-no-repeat bg-contain bg-center mx-auto h-96`}
               // style={{ backgroundImage: `url("${data.stxImagMedium}")` }}
               style={{ backgroundImage: `url("${data.image}")` }}
             ></section>
           </div>
-          <div className="w-full lg:w-1/2 p-4">
+          <div className="w-full lg:w-[60%] p-0 sm:p-4">
             <h2 className="text-3xl mt-2 lg:mt-4 mb-2">{data?.name}</h2>
             <div className="grid grid-cols-1">
               <p

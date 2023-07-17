@@ -49,10 +49,6 @@ export const Historia = () => {
         maxWords = maxWordsDesktop;
       }
 
-      if (words.length < maxWords) {
-        return null;
-      }
-
       const truncatedText = showMoreText
         ? words.join(" ")
         : words.slice(0, maxWords).join(" ");
