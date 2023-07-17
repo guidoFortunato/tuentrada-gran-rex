@@ -7,14 +7,15 @@ import { Footer } from "./components/footer/";
 import "animate.css";
 
 function App() {
-
   const { dataInfoGeneral } = useContext(EventosContext);
   if (dataInfoGeneral.length === 0) return <span></span>;
 
   return (
     <>
       <NavBar />
-      <AppRouter />
+      <div className="w-[95%] mx-auto">
+        <AppRouter />
+      </div>
       <Footer />
     </>
   );
