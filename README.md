@@ -35,3 +35,5 @@
 
 17. cuando buscas un evento muy largo se pone por debajo del boton buscar
 
+18. no aparecen los segundos en editar fecha en backend
+
