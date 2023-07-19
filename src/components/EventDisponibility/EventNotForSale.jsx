@@ -12,6 +12,7 @@ export const EventNotForSale = ({
   data,
 }) => {
   const { handleIdProducto } = useContext(EventosContext);
+  console.log({data})
   return (
     <>
       <figure className="relative max-w-sm cursor-pointer">
