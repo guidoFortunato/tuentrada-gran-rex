@@ -10,7 +10,7 @@ export const FechaAccordionDisponible = ({ dia, hora, mesFormateado, anio, openM
   return (
     <>
       <div className="flex flex-row">
-        <div className="flex flex-col justify-center w-12">
+        <div className="flex flex-col justify-center w-15">
           
           <div
             style={{ color: dataInfoGeneral.colorSiteName }}

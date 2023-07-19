@@ -2,7 +2,7 @@ export const FechaAccordionAgotada = ({ dia, hora, mesFormateado, anio }) => {
   return (
     <>
       <div className="flex flex-row">
-        <div className="flex flex-col justify-center w-12">
+        <div className="flex flex-col justify-center w-15">
           <div className="lg:mr-1 lg:whitespace-nowrap text-md font-semibold text-gray-300">
             <span>
               {dia} {mesFormateado}
@@ -21,7 +21,7 @@ export const FechaAccordionAgotada = ({ dia, hora, mesFormateado, anio }) => {
           </div>
 
           <div>
-            <span className="uppercase text-gray-300 text-xs font-semibold">
+            <span className="uppercase text-red-400 text-xs font-semibold"> { /* text-gray-300 */ }
               entradas agotadas
             </span>
           </div>
