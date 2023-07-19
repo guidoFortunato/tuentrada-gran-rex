@@ -33,3 +33,5 @@
 
 16. eventos del calendario
 
+17. cuando buscas un evento muy largo se pone por debajo del boton buscar
+

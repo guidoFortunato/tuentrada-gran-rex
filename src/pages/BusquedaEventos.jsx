@@ -85,7 +85,7 @@ export const BusquedaEventos = () => {
             <span className="sr-only">Info</span>
             <div>
               <span
-                className="font-semibold text-xl flex justify-center items-center flex-col"
+                className="font-semibold text-xl text-center flex justify-center items-center flex-col"
                 style={{
                   color: dataInfoGeneral.backgroundButton,
                 }}
@@ -93,7 +93,7 @@ export const BusquedaEventos = () => {
                 <img
                   className="w-60 lg:w-1/2"
                   src="https://www.tuentrada.com/teatro/gran-rex/imagenes/error.png"
-                  alt=""
+                  alt="no hay eventos"
                 />
                 No pudimos encontrar el evento
               </span>
