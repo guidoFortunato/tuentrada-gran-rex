@@ -71,46 +71,61 @@ export const CardEvento = ({
   return (
     <article className="text-center pt-4">
 
-      {availabilityGood && (
-        <EventAvailable
-          linkEvento={linkEvento}
-          img={img}
-          title={title}
-          data={data}
-        />
-      )}
-      {availabilityLimited && (
-        <EventLimited
-        linkEvento={linkEvento}
-        img={img}
-        title={title}
-        data={data}
-      />
-      )}
-      {reasonSoldOut && (
-         <EventNotForSale
-         linkEvento={linkEvento}
-         img={img}
-         title={title}
-         disponibility={disponibility}
-         reasonSuspended={reasonSuspended}
-         reasonCanceled={reasonCanceled}
-         reasonSoldOut={reasonSoldOut}
-         data={data}
-       />
-      )}
-      {reasonNotAvailable && (
-        <EventNotAvailable img={img} title={title} />
-      )}
-      { !availabilityGood &&
-        !reasonSoldOut &&
-        !reasonCanceled &&
-        !reasonSuspended &&
-        !reasonNotAvailable && (
-        <EventNotAvailable img={img} title={title} />
-      )}
+      {
+        availabilityGood ? (
+          <EventAvailable
+            linkEvento={linkEvento}
+            img={img}
+            title={title}
+            data={data}
+          />
+        ) : 
+        availabilityLimited ? (
+          <EventLimited
+            linkEvento={linkEvento}
+            img={img}
+            title={title}
+            data={data}
+          />
+        ) :
+        reasonSoldOut ? (
+          <EventNotForSale
+            linkEvento={linkEvento}
+            img={img}
+            title={title}
+            disponibility={disponibility}
+            reasonSuspended={reasonSuspended}
+            reasonCanceled={reasonCanceled}
+            reasonSoldOut={reasonSoldOut}
+            data={data}
+          />
+        ) : 
+        reasonSuspended ? (
+          <EventNotForSale
+            linkEvento={linkEvento}
+            img={img}
+            title={title}
+            disponibility={disponibility}
+            reasonSuspended={reasonSuspended}
+            reasonCanceled={reasonCanceled}
+            reasonSoldOut={reasonSoldOut}
+            data={data}
+          />
+        ) : 
+        reasonCanceled ? (
+          <EventNotForSale
+            linkEvento={linkEvento}
+            img={img}
+            title={title}
+            disponibility={disponibility}
+            reasonSuspended={reasonSuspended}
+            reasonCanceled={reasonCanceled}
+            reasonSoldOut={reasonSoldOut}
+            data={data}
+          />
+        ) : reasonNotAvailable ?  <EventNotAvailable img={img} title={title} /> : <EventNotAvailable img={img} title={title} />
 
-    
+      }
     </article>
   );
 };
