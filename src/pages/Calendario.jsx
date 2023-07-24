@@ -76,8 +76,9 @@ export const Calendario = () => {
 
   const handleClick = (info) => {
     info.jsEvent.preventDefault();
-    console.log({def:info.event._def})
-    const statusEvento = info.event._def.extendedProps.state.toLowerCase() !== "próximamente";
+    console.log({ def: info.event._def });
+    const statusEvento =
+      info.event._def.extendedProps.state.toLowerCase() !== "próximamente";
 
     if (statusEvento) {
       navigate(`${info.event._def.url}/${info.event._def.publicId}`);
@@ -93,7 +94,11 @@ export const Calendario = () => {
     // console.log({extendedProps: info.event._def.extendedProps})
     // console.log({disponibility: info.event._def.extendedProps.disponibility})
     // console.log({reason: info.event._def.extendedProps.reason})
-    const status = info.event._def.extendedProps.disponibility == "LIMITED" ? "LIMITED" : info.event._def.extendedProps.disponibility == "NONE" && info.event._def.extendedProps.reason 
+    const status =
+      info.event._def.extendedProps.disponibility == "LIMITED"
+        ? "LIMITED"
+        : info.event._def.extendedProps.disponibility == "NONE" &&
+          info.event._def.extendedProps.reason;
     // console.log({status})
     if (status == "SOLD_OUT") {
       const tooltip = tippy(info.el, {
@@ -127,7 +132,6 @@ export const Calendario = () => {
       });
       return tooltip;
     }
-   
   };
 
   useEffect(() => {
