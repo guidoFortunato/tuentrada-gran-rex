@@ -9,8 +9,6 @@
 
 1. Orden de fechas de eventos: Las fechas de los eventos deben aparecer en orden ascendente, es decir, de menor a mayor.
 
-2. Carga manual de eventos: Queremos tener la opción de cargar eventos manualmente. Consultar con coqui.
-
 3. Orden de precios y ubicaciones: Los precios y ubicaciones de los eventos deben mostrarse en un orden específico.
 
 4. detalle:
@@ -32,8 +30,6 @@
 15. autocompletado onSale backend, requeridas las fechas "hasta" sino dice "sin fechas". Cuando el evento termina aparece "sin fechas" en vez de por ej "evento finalizado"
 
 16. eventos del calendario
-
-17. cuando buscas un evento muy largo se pone por debajo del boton buscar
 
 18. no aparecen los segundos en editar fecha en backend
 

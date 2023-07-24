@@ -15,7 +15,6 @@ import "tippy.js/animations/scale.css";
 // const { VITE_API_INFO_GENERAL, VITE_EMAIL, VITE_PASS } = getEnvVariables();
 
 const fullEvents = [
-
   {
     id: 2,
     date: "2023-05-07",
@@ -932,7 +931,7 @@ const fullEvents = [
     start: "2023-08-26T20:30:00",
     end: "-",
     title: "JULIETA VENEGAS",
-      // url: "/shows/julieta-venegas/17",
+    // url: "/shows/julieta-venegas/17",
     url: "",
     display: "block",
     status: "Próximamente",
@@ -1006,30 +1005,31 @@ export const Calendario = () => {
   // const [data, setData] = useState(null);
   const navigate = useNavigate();
   const { pathname } = useLocation();
-  const newEvents = [];
+  // const newEvents = [];
 
   localStorage.setItem("lastPath", pathname);
+  console.log({eventosCalendario})
 
-  for (let i = 0; i < eventosCalendario?.length; i++) {
-    for (let j = 0; j < eventosCalendario[i].performances.length; j++) {
-      newEvents.push({
-        id: eventosCalendario[i].id,
-        start: eventosCalendario[i].performances[j].start,
-        title: eventosCalendario[i].title.toUpperCase(),
-        url: `${eventosCalendario[i].url}/${eventosCalendario[i].id}`,
-        display: eventosCalendario[i].display,
-        status: eventosCalendario[i].performances[j].disponibility,
-      });
-    }
-  }
+  // for (let i = 0; i < eventosCalendario?.length; i++) {
+  //   for (let j = 0; j < eventosCalendario[i].performances.length; j++) {
+  //     newEvents.push({
+  //       id: eventosCalendario[i].id,
+  //       start: eventosCalendario[i].performances[j].start,
+  //       title: eventosCalendario[i].title.toUpperCase(),
+  //       url: `${eventosCalendario[i].url}/${eventosCalendario[i].id}`,
+  //       display: eventosCalendario[i].display,
+  //       status: eventosCalendario[i].performances[j].disponibility,
+  //     });
+  //   }
+  // }
 
   const handleClick = (info) => {
     info.jsEvent.preventDefault();
-    const statusEvento =
-      info.event.extendedProps.status?.toLowerCase() !== "próximamente";
+    console.log({def:info.event._def})
+    const statusEvento = info.event._def.extendedProps.state.toLowerCase() !== "próximamente";
 
     if (statusEvento) {
-      navigate(info.event.url);
+      navigate(`${info.event._def.url}/${info.event._def.publicId}`);
     }
   };
 
@@ -1104,22 +1104,19 @@ export const Calendario = () => {
   return (
     <>
       <div className="container mx-auto mb-5">
-          
-            <section
-              style={{
-                backgroundImage: `url(${dataInfoGeneral.pages[1].image})`,
-              }}
-              className="bg-no-repeat bg-cover bg-center container mx-auto"
-            >
-              <h2
-                style={{ height: "40vh", background: "rgba(0, 0, 0, 0.5)" }}
-                className=" text-3xl flex lg:justify-start justify-center items-center lg:items-end text-white p-10 my-3 tittle-h2"
-              >
-                {dataInfoGeneral.pages[1].title}
-              </h2>
-            </section>
-          
-  
+        <section
+          style={{
+            backgroundImage: `url(${dataInfoGeneral.pages[1].image})`,
+          }}
+          className="bg-no-repeat bg-cover bg-center container mx-auto"
+        >
+          <h2
+            style={{ height: "40vh", background: "rgba(0, 0, 0, 0.5)" }}
+            className=" text-3xl flex lg:justify-start justify-center items-center lg:items-end text-white p-10 my-3 tittle-h2"
+          >
+            {dataInfoGeneral.pages[1].title}
+          </h2>
+        </section>
 
         <div className="container mx-auto mb-5">
           <div className="mt-10 bg-white px-5 2xl:px-0">
@@ -1131,7 +1128,7 @@ export const Calendario = () => {
                 eventTextColor="#FFF"
                 eventClick={handleClick}
                 eventDidMount={handleEventMount}
-                events={fullEvents}
+                events={eventosCalendario}
                 eventTimeFormat={eventTimeFormat}
                 headerToolbar={
                   window.innerWidth < 1023
@@ -1147,7 +1144,7 @@ export const Calendario = () => {
                 plugins={fullPlugins}
                 themeSystem={"standard"}
                 titleFormat={handleTitle}
-                contentHeight='auto'
+                contentHeight="auto"
               />
             </div>
           </div>
