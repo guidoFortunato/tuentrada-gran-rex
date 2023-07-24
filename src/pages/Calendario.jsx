@@ -1121,7 +1121,7 @@ export const Calendario = () => {
         <div className="container mx-auto mb-5">
           <div className="mt-10 bg-white px-5 2xl:px-0">
             <div className="grid grid-cols-1 ">
-              <FullCalendar
+              <FullCalendar 
                 buttonText={buttonTextOptions}
                 eventBackgroundColor="#855f35"
                 eventBorderColor="#855f35"
