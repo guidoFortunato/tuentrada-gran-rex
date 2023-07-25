@@ -2,7 +2,16 @@ import React, { useContext } from "react";
 import { EventosContext } from "../../context/EventosProvider";
 import { ModalPrecios } from "../detalleEvento/";
 
-export const FechaAccordionDisponible = ({ dia, hora, mesFormateado, anio, openModal, setOpenModal, dataFechas: dataFecha, dataEvento }) => {
+export const FechaAccordionDisponible = ({
+  dia,
+  hora,
+  mesFormateado,
+  anio,
+  openModal,
+  setOpenModal,
+  dataFechas: dataFecha,
+  dataEvento,
+}) => {
   const { dataInfoGeneral } = useContext(EventosContext);
   // console.log({dataInfoGeneral})
   // console.log({dataFecha})
@@ -11,7 +20,6 @@ export const FechaAccordionDisponible = ({ dia, hora, mesFormateado, anio, openM
     <>
       <div className="flex flex-row">
         <div className="flex flex-col justify-center w-15">
-          
           <div
             style={{ color: dataInfoGeneral.colorSiteName }}
             className="lg:mr-1 lg:whitespace-nowrap text-sm font-semibold "
@@ -38,7 +46,7 @@ export const FechaAccordionDisponible = ({ dia, hora, mesFormateado, anio, openM
           </div>
 
           <div>
-            <span className="uppercase text-green-700  text-xs font-bold">
+            <span className="uppercase text-green-700  text-xs font-semibold">
               entradas disponibles
             </span>
           </div>
@@ -55,20 +63,20 @@ export const FechaAccordionDisponible = ({ dia, hora, mesFormateado, anio, openM
       </div>
 
       <div className="text-end mt-4 lg:my-auto">
-        <button
-          type="button"
-          className={`bg-[${dataInfoGeneral.backgroundButton}] hover:bg-[${dataInfoGeneral.colorHoverButton}] hover:border[${dataInfoGeneral.colorHoverButton}] focus:outline-none font-medium rounded text-sm px-3 py-2.5 text-center`}
-          style={{
-            color: dataInfoGeneral.colorButton,
-          }}
+        <a
+          href={`${dataEvento.url}selection/event/seat?perfId=${dataFecha.performanceId}&productId=${dataEvento.productId}`}
+          target="_blank"
         >
-          <a
-            href={`${dataEvento.url}selection/event/seat?perfId=${dataFecha.performanceId}&productId=${dataEvento.productId}`}
-            target="_blank"
+          <button
+            type="button"
+            className={`bg-[${dataInfoGeneral.backgroundButton}] hover:bg-[${dataInfoGeneral.colorHoverButton}] hover:border[${dataInfoGeneral.colorHoverButton}] focus:outline-none font-medium rounded text-sm px-3 py-2.5 text-center`}
+            style={{
+              color: dataInfoGeneral.colorButton,
+            }}
           >
             Comprar entradas
-          </a>
-        </button>
+          </button>
+        </a>
       </div>
     </>
   );

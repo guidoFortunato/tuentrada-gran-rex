@@ -21,7 +21,7 @@ export const FechaAccordionProximamente = ({ dia, hora, mesFormateado, anio }) =
           </div>
 
           <div>
-            <span className="uppercase text-blue-700 text-xs font-semibold"> { /* text-gray-300 */ }
+            <span className="uppercase text-blue-900 text-xs font-semibold"> { /* text-gray-300 */ }
               próximamente
             </span>
           </div>
