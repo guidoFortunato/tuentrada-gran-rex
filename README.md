@@ -17,19 +17,13 @@
 
 5. Correcta disponibilidad de eventos: Es muy importante que la página muestre la disponibilidad correcta de los eventos, asegurándose de que la información esté actualizada y precisa.
 
-6. Mantener la pantalla después de aplicar cambios: Actualmente, cuando hacemos un cambio en el backend, la pantalla nos redirige a la página principal. Necesitamos que nos quedemos en la misma pantalla después de aplicar cambios para poder seguir editando sin problemas.
-
 7. boton proximamente en el product general
-
-8. Agregar el límite para la descripción de caracteres máximo 900 caracteres
 
 13. Edición del botón de compra: Queremos tener la posibilidad de editar el href del botón de compra, que por defecto muestre la info de secutix.
 
 14. sitemap dinámico
 
 15. autocompletado onSale backend, requeridas las fechas "hasta" sino dice "sin fechas". Cuando el evento termina aparece "sin fechas" en vez de por ej "evento finalizado"
-
-16. eventos del calendario
 
 18. no aparecen los segundos en editar fecha en backend
 
