@@ -4,7 +4,7 @@ import { EventosContext } from "../context/EventosProvider";
 
 export const EventosHome = () => {
   const { eventosGenerales } = useContext(EventosContext);
-  console.log({eventosGenerales})
+  // console.log({eventosGenerales})
   return (
     <>
       {eventosGenerales.map((item) => (

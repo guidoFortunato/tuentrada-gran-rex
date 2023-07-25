@@ -33,7 +33,7 @@ export const HeaderEventos = () => {
         >
           <p
             style={{ color: dataInfoGeneral.colorButton }}
-            className={`md:w-3/5 md:mr-6 text-justify pl-10 pr-10 md:pl-0 md:pr-0 text-base md:text-base lg:text-lg`}
+            className={`md:w-3/5 md:mr-6  text-center md:text-justify pl-10 pr-10 md:pl-0 md:pr-0 text-base md:text-base lg:text-lg`}
             dangerouslySetInnerHTML={{
               __html: DOMPurify.sanitize(dataInfoGeneral.description),
             }}

@@ -27,3 +27,5 @@
 
 18. no aparecen los segundos en editar fecha en backend
 
+19. saber quien modifica el catalogo en el backend, que quede registrado quien fue el ultimo que aplicó cambios
+
