@@ -8,7 +8,7 @@ export const CardEvento = ({ img = "", title = "", linkEvento = "", disponibilit
   const [reasonCanceled, setReasonCanceled] = useState(false);
   const [reasonSuspended, setReasonSuspended] = useState(false);
   const [reasonNotAvailable, setReasonNotAvailable] = useState(false);
-  console.log({ name: data.name });
+  // console.log({ name: data.name });
   // console.log({disponibility})
 
   useEffect(() => {

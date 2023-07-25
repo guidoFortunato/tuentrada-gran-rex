@@ -57,7 +57,7 @@ export const Home = () => {
   return (
     <>
       <HeaderEventos />
-      <MainEventos eventos={eventosGenerales} data={data} setPage={setPage} />
+      <MainEventos />
     </>
   );
 };

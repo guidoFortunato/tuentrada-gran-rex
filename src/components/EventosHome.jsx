@@ -1,9 +1,13 @@
+import { useContext } from "react";
 import { CardEvento } from "./";
+import { EventosContext } from "../context/EventosProvider";
 
-export const EventosHome = ({ eventos }) => {
+export const EventosHome = () => {
+  const { eventosGenerales } = useContext(EventosContext);
+  console.log({eventosGenerales})
   return (
     <>
-      {eventos.map((item) => (
+      {eventosGenerales.map((item) => (
         <CardEvento
           linkEvento={item.slug + "/" + item.id}
           img={item.image}
