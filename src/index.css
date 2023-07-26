@@ -86,3 +86,15 @@
     transform: rotate(360deg);
   }
 }
+
+.fc-h-event .fc-event-main-frame { 
+  flex-direction: column;
+}
+
+.fc-h-event .fc-event-title-container {
+  white-space: normal;
+}
+
+.fc-direction-ltr .fc-daygrid-event .fc-event-time {
+  border-bottom: 1px solid #cea38333;
+}

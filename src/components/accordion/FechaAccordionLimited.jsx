@@ -63,20 +63,20 @@ export const FechaAccordionLimited = ({
       </div>
 
       <div className="text-end mt-4 lg:my-auto">
-        <button
-          type="button"
-          className={`bg-[${dataInfoGeneral.backgroundButton}] hover:bg-[${dataInfoGeneral.colorHoverButton}] hover:border[${dataInfoGeneral.colorHoverButton}] focus:outline-none font-medium rounded text-sm px-3 py-2.5 text-center`}
-          style={{
-            color: dataInfoGeneral.colorButton,
-          }}
+        <a
+          href={`${dataEvento.url}selection/event/seat?perfId=${dataFechas.performanceId}&productId=${dataEvento.productId}`}
+          target="_blank"
         >
-          <a
-            href={`${dataEvento.url}selection/event/seat?perfId=${dataFechas.performanceId}&productId=${dataEvento.productId}`}
-            target="_blank"
+          <button
+            type="button"
+            className={`bg-[${dataInfoGeneral.backgroundButton}] hover:bg-[${dataInfoGeneral.colorHoverButton}] hover:border[${dataInfoGeneral.colorHoverButton}] focus:outline-none font-medium rounded text-sm px-3 py-2.5 text-center`}
+            style={{
+              color: dataInfoGeneral.colorButton,
+            }}
           >
             Comprar entradas
-          </a>
-        </button>
+          </button>
+        </a>
       </div>
     </>
   );
