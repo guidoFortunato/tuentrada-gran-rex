@@ -25,12 +25,10 @@
 
 15. autocompletado onSale backend, requeridas las fechas "hasta" sino dice "sin fechas". Cuando el evento termina aparece "sin fechas" en vez de por ej "evento finalizado"
 
-<<<<<<< HEAD
-16. eventos del calendario
-
-=======
->>>>>>> 374a0694dd8a62e152d66884d4dd7a8156738a9a
 18. no aparecen los segundos en editar fecha en backend
 
 19. saber quien modifica el catalogo en el backend, que quede registrado quien fue el ultimo que aplicó cambios
 
+20. el onSale del product general debe tener un desde y hasta para que el evento se active de forma dinamica
+
+21. alt en imagenes del product: historyImage, promotionImage, etc

@@ -10,7 +10,7 @@ export const Accordion = ({ itemsAccordion, dataEvento }) => {
   // const [socialNetworks, setSocialNetworks] = useState(false);
   const [extra, setExtra] = useState(false);
   const [mediaJson, setMediaJson] = useState(true);
-  const [promotion, setPromotion] = useState(false);
+  const [promotion, setPromotion] = useState(true);
   const [recomendation, setRecomendation] = useState(false);
   const [newPerformances, setNewPerformances] = useState([]);
 
@@ -78,7 +78,7 @@ export const Accordion = ({ itemsAccordion, dataEvento }) => {
         </>
       )}
 
-      {itemsAccordion.promotion && (
+      {(itemsAccordion.promotion || dataEvento.promotionImage) && (
         <>
           <h2 id="accordion-open-heading-3">
             <button
@@ -101,18 +101,24 @@ export const Accordion = ({ itemsAccordion, dataEvento }) => {
             aria-labelledby="accordion-open-heading-3"
           >
             <div className="p-5 border-0 border-gray-200 dark:border-gray-700">
-              <p
-                className="text-base  text-gray-500"
-                dangerouslySetInnerHTML={{
-                  __html: DOMPurify.sanitize(itemsAccordion.promotion),
-                }}
-              ></p>
+              {itemsAccordion.promotion && (
+                <p
+                  className={`text-base mb-6 text-gray-500`}
+                  dangerouslySetInnerHTML={{
+                    __html: DOMPurify.sanitize(itemsAccordion.promotion),
+                  }}
+                ></p>
+              )}
+
+              {Boolean(dataEvento.promotionImage) && (
+                <img src={dataEvento.promotionImage} alt="" />
+              )}
             </div>
           </div>
         </>
       )}
 
-      {itemsAccordion.history && (
+      {(itemsAccordion.history || dataEvento.historyImage) && (
         <>
           <h2 id="accordion-open-heading-2">
             <button
@@ -135,18 +141,26 @@ export const Accordion = ({ itemsAccordion, dataEvento }) => {
             aria-labelledby="accordion-open-heading-2"
           >
             <div className="p-5 border-0 border-gray-200 dark:border-gray-700">
-              <p
-                className="text-base  text-gray-500"
-                dangerouslySetInnerHTML={{
-                  __html: DOMPurify.sanitize(itemsAccordion.history),
-                }}
-              ></p>
+            {itemsAccordion.history && (
+                <p
+                  className={`text-base mb-6 text-gray-500`}
+                  dangerouslySetInnerHTML={{
+                    __html: DOMPurify.sanitize(itemsAccordion.history),
+                  }}
+                ></p>
+              )}
+
+              {Boolean(dataEvento.historyImage) && (
+                <img src={dataEvento.historyImage} alt="" />
+              )}
+              
+              
             </div>
           </div>
         </>
       )}
 
-      {itemsAccordion.recomendation && (
+      {(itemsAccordion.recomendation || dataEvento.recomendationImage) && (
         <>
           <h2 id="accordion-open-heading-6">
             <button
@@ -169,17 +183,24 @@ export const Accordion = ({ itemsAccordion, dataEvento }) => {
             aria-labelledby="accordion-open-heading-6"
           >
             <div className="p-5 border-0 border-gray-200 dark:border-gray-700">
-              <p
-                className="text-base  text-gray-500"
-                dangerouslySetInnerHTML={{
-                  __html: DOMPurify.sanitize(itemsAccordion.recomendation),
-                }}
-              ></p>
+            {itemsAccordion.recomendation && (
+                <p
+                  className={`text-base mb-6 text-gray-500`}
+                  dangerouslySetInnerHTML={{
+                    __html: DOMPurify.sanitize(itemsAccordion.recomendation),
+                  }}
+                ></p>
+              )}
+
+              {Boolean(dataEvento.recomendationImage) && (
+                <img src={dataEvento.recomendationImage} alt="" />
+              )}
+            
             </div>
           </div>
         </>
       )}
-      {itemsAccordion.extra && (
+      {(itemsAccordion.extra || dataEvento.extraImage) && (
         <>
           <h2 id="accordion-open-heading-7">
             <button
@@ -202,12 +223,19 @@ export const Accordion = ({ itemsAccordion, dataEvento }) => {
             aria-labelledby="accordion-open-heading-7"
           >
             <div className="p-5 border-0 border-gray-200 dark:border-gray-700">
-              <p
-                className="text-base  text-gray-500"
-                dangerouslySetInnerHTML={{
-                  __html: DOMPurify.sanitize(itemsAccordion.extra),
-                }}
-              ></p>
+            {itemsAccordion.extra && (
+                <p
+                  className={`text-base mb-6 text-gray-500`}
+                  dangerouslySetInnerHTML={{
+                    __html: DOMPurify.sanitize(itemsAccordion.extra),
+                  }}
+                ></p>
+              )}
+
+              {Boolean(dataEvento.extraImage) && (
+                <img src={dataEvento.extraImage} alt="" />
+              )}
+             
             </div>
           </div>
         </>
