@@ -15,15 +15,13 @@
    -si cambio el nombre de la url no hace nada
    -que no se vea el id en la url
 
-5. Correcta disponibilidad de eventos: Es muy importante que la página muestre la disponibilidad correcta de los eventos, asegurándose de que la información esté actualizada y precisa.
-
 7. boton proximamente en el product general
 
 13. Edición del botón de compra: Queremos tener la posibilidad de editar el href del botón de compra, que por defecto muestre la info de secutix.
 
 14. sitemap dinámico
 
-15. autocompletado onSale backend, requeridas las fechas "hasta" sino dice "sin fechas". Cuando el evento termina aparece "sin fechas" en vez de por ej "evento finalizado"
+15. autocompletado onSale backend, si completan la fecha "desde" debe estar requerido que completen "hasta", fecha "hasta" no puede ser menor a "desde". Proximamente no puede ser menor a onSale.
 
 18. no aparecen los segundos en editar fecha en backend
 
