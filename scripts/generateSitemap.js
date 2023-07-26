@@ -22,7 +22,7 @@ async function generateSitemap() {
   // Guarda el sitemap en un archivo
   await fs.writeFile("./dist/sitemap.xml", sitemap);
 
-  console.log("Sitemap generado y guardado en ./dist/sitemap.xml");
+  // console.log("Sitemap generado y guardado en ./dist/sitemap.xml");
 }
 
 // Crea el servidor para generar las rutas y el sitemap

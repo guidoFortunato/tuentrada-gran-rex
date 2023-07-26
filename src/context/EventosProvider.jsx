@@ -1,7 +1,6 @@
 import { createContext, useEffect, useState } from "react";
 import { getData, getEnvVariables } from "../helpers";
-const { VITE_API_INFO_GENERAL, VITE_API_EVENTOS, VITE_EMAIL, VITE_PASS } =
-  getEnvVariables();
+const { VITE_API_INFO_GENERAL, VITE_API_EVENTOS, VITE_EMAIL, VITE_PASS } = getEnvVariables();
 
 export const EventosContext = createContext();
 
@@ -38,6 +37,7 @@ const EventosProvider = (props) => {
         VITE_PASS
       ); //window.location.hostname
       // console.log({ dataInfoGeneral: data });
+      console.log({ dataInfoGeneral: data.pages });
       setDataInfoGeneral(data);
       setIdVenue(data.venueId);
     };
@@ -51,6 +51,7 @@ const EventosProvider = (props) => {
         const newLocal = `${VITE_API_EVENTOS + idVenue}?page=${page}`;
         const info = await getData(newLocal, VITE_EMAIL, VITE_PASS);
         // console.log({dataEventosGeneralesn: info.data})
+        console.log(info.data)
         setData(info);
         setEventosGenerales((prevEventos) => prevEventos.concat(info.data));
       };
