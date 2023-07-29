@@ -1,5 +1,7 @@
 import { createContext, useEffect, useState } from "react";
 import { getData, getEnvVariables } from "../helpers";
+import { sitemap } from "../../scripts/sitemap";
+import { generateSitemap2 } from "../../scripts/generateSitemap2";
 const { VITE_API_INFO_GENERAL, VITE_API_EVENTOS, VITE_EMAIL, VITE_PASS } = getEnvVariables();
 
 export const EventosContext = createContext();
@@ -29,6 +31,13 @@ const EventosProvider = (props) => {
   const handleButtonCollapse = () =>
     setIsButtonCollapsed((prevState) => !prevState);
 
+    // const urls = sitemap()
+    // console.log({urls})
+
+    // const sitemap = generateSitemap2()
+    // console.log({sitemap})
+  
+
   useEffect(() => {
     const getDataInfoGeneral = async () => {
       const { data } = await getData(
@@ -37,7 +46,7 @@ const EventosProvider = (props) => {
         VITE_PASS
       ); //window.location.hostname
       // console.log({ dataInfoGeneral: data });
-      console.log({ dataInfoGeneral: data.pages });
+      // console.log({ pages: data.pages });
       setDataInfoGeneral(data);
       setIdVenue(data.venueId);
     };
@@ -50,8 +59,8 @@ const EventosProvider = (props) => {
       const getDataEventosGenerales = async () => {
         const newLocal = `${VITE_API_EVENTOS + idVenue}?page=${page}`;
         const info = await getData(newLocal, VITE_EMAIL, VITE_PASS);
-        // console.log({dataEventosGeneralesn: info.data})
-        console.log(info.data)
+        // console.log({dataEventosGenerales: info.data})
+        // console.log(info.data)
         setData(info);
         setEventosGenerales((prevEventos) => prevEventos.concat(info.data));
       };

@@ -30,3 +30,5 @@
 20. el onSale del product general debe tener un desde y hasta para que el evento se active de forma dinamica
 
 21. alt en imagenes del product: historyImage, promotionImage, etc
+
+22. '#' en la url
