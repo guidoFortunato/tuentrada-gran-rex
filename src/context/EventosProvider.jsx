@@ -1,7 +1,7 @@
 import { createContext, useEffect, useState } from "react";
 import { getData, getEnvVariables } from "../helpers";
-import { sitemap } from "../../scripts/sitemap";
-import { generateSitemap2 } from "../../scripts/generateSitemap2";
+// import { sitemap } from "../../scripts/sitemap";
+// import { generateSitemap2 } from "../../scripts/generateSitemap2";
 const { VITE_API_INFO_GENERAL, VITE_API_EVENTOS, VITE_EMAIL, VITE_PASS } = getEnvVariables();
 
 export const EventosContext = createContext();

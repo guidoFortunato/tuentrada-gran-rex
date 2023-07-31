@@ -1,17 +1,17 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
-import Pages from "vite-plugin-pages";
-import generateSitemap from "vite-plugin-pages-sitemap";
-const { VITE_API_INFO_GENERAL, VITE_API_EVENTOS, VITE_EMAIL, VITE_PASS } = getEnvVariables();
 import Sitemap from "vite-plugin-sitemap";
+// import Pages from "vite-plugin-pages";
+// import generateSitemap from "vite-plugin-pages-sitemap";
+// const { VITE_API_INFO_GENERAL, VITE_API_EVENTOS, VITE_EMAIL, VITE_PASS } = getEnvVariables();
 
-import { getEnvVariables } from "./src/helpers";
-import { sitemap } from "./scripts/sitemap";
-import { generateSitemap2 } from "./scripts/generateSitemap2";
-let pages;
-let eventos;
+// import { getEnvVariables } from "./src/helpers";
+// import { sitemap } from "./scripts/sitemap";
+// import { generateSitemap2 } from "./scripts/generateSitemap2";
+// let pages;
+// let eventos;
 
-let urlsFinales;
+// let urlsFinales;
 
 // 1672|nBeLSyxKxPJNuOA7vhlCpzZHJ1rl2FQt7yJvET5O
 
