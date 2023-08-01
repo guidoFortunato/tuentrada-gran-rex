@@ -16,7 +16,7 @@ export const DetalleEvento = () => {
     useContext(EventosContext);
 
   const { url } = dataInfoGeneral;
-  const { name, id } = useParams();
+  const { name } = useParams();
   const navigate = useNavigate();
   // console.log({ dataEvento: data });
   // console.log({name})
@@ -42,7 +42,7 @@ export const DetalleEvento = () => {
     if (idVenue !== "") {
       const getInfo = async () => {
         const { data } = await getData(
-          VITE_API_EVENTOS + idVenue + "/details/" + id,
+          `${VITE_API_EVENTOS + idVenue}/details/${name}`,
           VITE_EMAIL,
           VITE_PASS
         );
@@ -63,7 +63,7 @@ export const DetalleEvento = () => {
       };
       getInfo();
     }
-  }, [idVenue, id, name]);
+  }, [idVenue, name]);
 
   // console.log({dataInfoGeneral})
 

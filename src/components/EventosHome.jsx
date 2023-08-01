@@ -9,7 +9,7 @@ export const EventosHome = () => {
     <>
       {eventosGenerales.map((item) => (
         <CardEvento
-          linkEvento={item.slug + "/" + item.id}
+          linkEvento={item.slug}
           img={item.image}
           status={item.state}
           title={item.name}
