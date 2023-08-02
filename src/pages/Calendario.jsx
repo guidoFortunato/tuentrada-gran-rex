@@ -73,15 +73,14 @@ export const Calendario = () => {
   const { pathname } = useLocation();
   localStorage.setItem("lastPath", pathname);
   // console.log({eventosCalendario})
-
+  // console.log({dataInfoGeneral})
   const handleClick = (info) => {
     info.jsEvent.preventDefault();
-    console.log({ def: info.event._def });
-    const statusEvento =
-      info.event._def.extendedProps.state.toLowerCase() !== "próximamente";
+    // console.log({ def: info.event._def });
+    const statusEvento = info.event._def.extendedProps.state.toLowerCase() !== "próximamente";
 
     if (statusEvento) {
-      navigate(`${info.event._def.url}/${info.event._def.publicId}`);
+      navigate(info.event._def.url);
     }
   };
 
