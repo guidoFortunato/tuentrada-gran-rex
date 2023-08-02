@@ -4,6 +4,7 @@ import {
   FechaAccordionLimited,
   FechaAccordionAgotada,
   FechaAccordionProximamente,
+  FechasAccordion,
 } from "../accordion";
 
 const opciones = {
@@ -56,6 +57,20 @@ export const FechaEvento = ({
   return (
     <>
       <div className="lg:flex lg:flex-row lg:justify-between border-b-2 border-gray-200 p-3">
+        {/* {
+          <FechasAccordion
+            dataFechas={dataFecha}
+            dataEvento={dataEvento}
+            dia={dia}
+            hora={hora}
+            mesFormateado={mesFormateado}
+            anio={anio}
+            openModal={openModal}
+            setOpenModal={setOpenModal}
+            availabilitLevel={availabilitLevel}
+            reason={reason}
+          />
+        } */}
         {availabilitLevel === "GOOD" && (
           <FechaAccordionDisponible
             dataFechas={dataFecha}

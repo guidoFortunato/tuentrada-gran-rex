@@ -2,13 +2,13 @@ export const FechaAccordionProximamente = ({ dia, hora, mesFormateado, anio }) =
   return (
     <>
       <div className="flex flex-row">
-        <div className="flex flex-col justify-center w-15">
-          <div className="lg:mr-1 lg:whitespace-nowrap text-md font-semibold text-gray-300">
+        <div className="flex flex-col justify-center w-16">
+          <div className="lg:mr-1 lg:whitespace-nowrap text-base lg:text-lg font-semibold text-gray-300">
             <span>
               {dia} {mesFormateado}
             </span>
           </div>
-          <div className="md:mr-1 text-left text-md font-semibold text-gray-300">
+          <div className="md:mr-1 text-left text-base lg:text-lg font-semibold text-gray-300">
             <span>{anio}</span>
           </div>
         </div>

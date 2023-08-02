@@ -12,7 +12,7 @@ const { VITE_API_EVENTOS, VITE_EMAIL, VITE_PASS } = getEnvVariables();
 export const DetalleEvento = () => {
   const [data, setData] = useState(null);
   const [itemsAccordion, setItemsAccordion] = useState(null);
-  const { idVenue, dataInfoGeneral, idProducto, handleButtonsCollapse } = useContext(EventosContext);
+  const { idVenue, dataInfoGeneral, handleButtonsCollapse } = useContext(EventosContext);
 
   // const { url } = dataInfoGeneral;
   const { name } = useParams();
@@ -76,7 +76,8 @@ export const DetalleEvento = () => {
   if (data === undefined || data.length === 0) return <Navigate to="/" />;
 
   return (
-    <>
+    // <div className="w-[100%] lg:w-[70%] mx-auto" > 
+    <div className="w-[100%] mx-auto" > 
       <div className="container mx-auto mb-5 px-3 ">
         <div className="flex flex-wrap">
           <div className="w-full lg:w-[40%] p-0 sm:p-4">
@@ -128,6 +129,6 @@ export const DetalleEvento = () => {
           </div>
         )}
       </div>
-    </>
+    </div>
   );
 };

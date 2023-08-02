@@ -4,7 +4,7 @@ import App from "./App";
 import 'normalize.css'
 import "./index.css";
 
-import { BrowserRouter, HashRouter } from "react-router-dom";
+import { BrowserRouter } from "react-router-dom";
 import EventosProvider from "./context/EventosProvider";
 
 

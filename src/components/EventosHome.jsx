@@ -7,19 +7,23 @@ export const EventosHome = () => {
   // console.log({eventosGenerales})
   return (
     <>
-      {eventosGenerales.map((item) => (
-        <CardEvento
-          linkEvento={item.slug}
-          img={item.image}
-          status={item.state}
-          title={item.name}
-          key={item.id}
-          disabled={item.disabled}
-          reason={item.reason}
-          disponibility={item.disponibility}
-          data={item}
-        />
-      ))}
+      {eventosGenerales.map((item) => {
+        if (item.internalState === "RUNNING") {
+          return (
+            <CardEvento
+              linkEvento={item.slug}
+              img={item.image}
+              status={item.state}
+              title={item.name}
+              key={item.id}
+              disabled={item.disabled}
+              reason={item.reason}
+              disponibility={item.disponibility}
+              data={item}
+            />
+          );
+        }
+      })}
     </>
   );
 };

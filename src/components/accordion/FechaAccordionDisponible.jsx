@@ -19,10 +19,10 @@ export const FechaAccordionDisponible = ({
   return (
     <>
       <div className="flex flex-row">
-        <div className="flex flex-col justify-center w-15">
+        <div className="flex flex-col justify-center w-16">
           <div
             style={{ color: dataInfoGeneral.colorSiteName }}
-            className="lg:mr-1 lg:whitespace-nowrap text-sm font-semibold "
+            className="lg:mr-1 lg:whitespace-nowrap text-base lg:text-lg font-semibold "
           >
             <span>
               {dia} {mesFormateado}
@@ -30,7 +30,7 @@ export const FechaAccordionDisponible = ({
           </div>
           <div
             style={{ color: dataInfoGeneral.colorSiteName }}
-            className="md:mr-1 text-left text-base font-semibold"
+            className="md:mr-1 text-left text-base lg:text-lg font-semibold"
           >
             <span>{anio}</span>
           </div>
