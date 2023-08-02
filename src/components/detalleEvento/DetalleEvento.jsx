@@ -1,5 +1,5 @@
 import { useContext, useEffect, useState } from "react";
-import { Navigate, useNavigate, useParams } from "react-router-dom";
+import { Link, Navigate, useNavigate, useParams } from "react-router-dom";
 import DOMPurify from "dompurify";
 
 import { EventosContext } from "../../context/EventosProvider";
@@ -12,12 +12,12 @@ const { VITE_API_EVENTOS, VITE_EMAIL, VITE_PASS } = getEnvVariables();
 export const DetalleEvento = () => {
   const [data, setData] = useState(null);
   const [itemsAccordion, setItemsAccordion] = useState(null);
-  const { idVenue, dataInfoGeneral, idProducto, handleButtonsCollapse } =
-    useContext(EventosContext);
+  const { idVenue, dataInfoGeneral, idProducto, handleButtonsCollapse } = useContext(EventosContext);
 
-  const { url } = dataInfoGeneral;
+  // const { url } = dataInfoGeneral;
   const { name } = useParams();
   const navigate = useNavigate();
+  // console.log({dataInfoGeneral})
   // console.log({ dataEvento: data });
   // console.log({name})
   // console.log({idProducto})
@@ -46,12 +46,12 @@ export const DetalleEvento = () => {
           VITE_EMAIL,
           VITE_PASS
         );
+        // console.log({data})
+        // console.log({data})
         // console.log({ performances: data.performances });
         setData(data);
         setItemsAccordion({
-          performances: data.performances.filter(
-            (item) => item.state === "RUNNING"
-          ),
+          performances: data.performances,
           history: data.history,
           promotion: data.promotion,
           recomendation: data.recomendation,
@@ -95,13 +95,25 @@ export const DetalleEvento = () => {
                   __html: DOMPurify.sanitize(data?.description),
                 }}
               ></p>
+              <a
+                href={`${data.url}selection/event/date?productId=${data.productId}`}
+                target="_blank"
+              >
+                <button
+                  type="button"
+                  className={`bg-[${dataInfoGeneral.backgroundButton}] hover:bg-[${dataInfoGeneral.colorHoverButton}] hover:border[${dataInfoGeneral.colorHoverButton}] focus:outline-none font-medium rounded text-sm px-3 py-2.5 text-center mt-4`}
+                  style={{
+                    color: dataInfoGeneral.colorButton,
+                  }}
+                >
+                  Comprar entradas
+                </button>
+              </a>
             </div>
           </div>
         </div>
-                
-        <Accordion itemsAccordion={itemsAccordion} dataEvento={data} />
 
-        
+        <Accordion itemsAccordion={itemsAccordion} dataEvento={data} />
 
         {data.socialNetworks.length > 0 && (
           <div className="mt-5 flex flex-col items-center">

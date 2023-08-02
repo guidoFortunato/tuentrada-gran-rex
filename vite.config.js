@@ -22,27 +22,27 @@ import Sitemap from "vite-plugin-sitemap";
 
 const urls = [
   "/",
-  "/#/bases-y-condiciones",
-  "/#/calendario",
-  "/#/historia",
-  "/#/horarios-y-llegada",
-  "/#/paz-martinez/695",
-  "/#/perota-chingo/696",
-  "/#/fabiana-cantilo/697",
-  "/#/natalie-perez/698",
-  "/#/mya/699",
-  "/#/vetusta-morla/700",
-  "/#/piano-bar/701",
-  "/#/el-polaco/702",
-  "/#/julieta-venegas/703",
-  "/#/daniel-agostini/705",
-  "/#/gladys-la-bomba-tucumana/706",
-  "/#/matias-valdez/707",
-  "/#/antes-que-nadie/708",
-  "/#/conociendo-rusia/709",
-  "/#/la-beriso/713",
-  "/#/vanesa-martin/715",
-  "/#/khea/717",
+  "/bases-y-condiciones",
+  "/calendario",
+  "/historia",
+  "/horarios-y-llegada",
+  "/paz-martinez",
+  "/perota-chingo",
+  "/fabiana-cantilo",
+  "/natalie-perez",
+  "/mya",
+  "/vetusta-morla",
+  "/piano-bar",
+  "/el-polaco",
+  "/julieta-venegas",
+  "/daniel-agostini",
+  "/gladys-la-bomba-tucumana",
+  "/matias-valdez",
+  "/antes-que-nadie",
+  "/conociendo-rusia",
+  "/la-beriso",
+  "/vanesa-martin",
+  "/khea",
   
 ];
 
@@ -72,6 +72,7 @@ const urls = [
 // ];
 
 export default defineConfig({
+
   plugins: [
     react(),
     Sitemap({dynamicRoutes: urls, hostname: "https://ejemplo.com", changefreq: "monthly"}),

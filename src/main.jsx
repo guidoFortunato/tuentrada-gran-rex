@@ -10,10 +10,10 @@ import EventosProvider from "./context/EventosProvider";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <HashRouter>
+    <BrowserRouter>
       <EventosProvider>
         <App />
       </EventosProvider>
-    </HashRouter>
+    </BrowserRouter>
   </React.StrictMode> 
 );
