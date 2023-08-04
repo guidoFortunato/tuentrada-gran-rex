@@ -13,7 +13,7 @@ export const Footer = () => {
     <footer
       style={{
         backgroundColor: dataInfoGeneral.backgroundFooter,
-        fontFamily: "Raleway",
+        // fontFamily: "Raleway",
         color: dataInfoGeneral.colorFooter,
       }}
       className={`shadow absolute bottom-0 w-full`}

@@ -23,9 +23,6 @@ export const FechasAccordion = ({
     setOpenModal((prevstate) => !prevstate);
   };
 
-  const divStyles = {
-    color: isActive ? `${dataInfoGeneral.colorSiteName}` : "red"
-  }
   // console.log({dataInfoGeneral})
   // console.log({dataFecha})
   // console.log({dataEvento})
@@ -33,30 +30,55 @@ export const FechasAccordion = ({
   return (
     <>
       <div className="flex flex-row">
-        <div className="flex flex-col justify-center w-16">
-          <div
-            style={divStyles}
-            className={` ${
-              availabilitLevel === "NONE" &&
-              reason == "SOLD_OUT" &&
-              "text-gray-300"
-            } lg:mr-1 lg:whitespace-nowrap text-base lg:text-lg font-semibold`}
-          >
-            <span>
-              {dia} {mesFormateado}
-            </span>
+        {availabilitLevel === "GOOD" && (
+          <div className="flex flex-col justify-center w-16">
+            <div
+              style={{ color: dataInfoGeneral.colorSiteName }}
+              className="lg:mr-1 lg:whitespace-nowrap text-base lg:text-lg font-semibold "
+            >
+              <span>
+                {dia} {mesFormateado}
+              </span>
+            </div>
+            <div
+              style={{ color: dataInfoGeneral.colorSiteName }}
+              className="md:mr-1 text-left text-base lg:text-lg font-semibold"
+            >
+              <span>{anio}</span>
+            </div>
           </div>
-          <div
-            style={divStyles}
-            className={`${
-              availabilitLevel === "NONE" &&
-              reason == "SOLD_OUT" &&
-              "text-gray-300"
-            } md:mr-1 text-left text-base lg:text-lg font-semibold`}
-          >
-            <span>{anio}</span>
+        )}
+        {availabilitLevel === "LIMITED" && (
+          <div className="flex flex-col justify-center w-16">
+            <div
+              style={{ color: dataInfoGeneral.colorSiteName }}
+              className="lg:mr-1 lg:whitespace-nowrap text-base lg:text-lg font-semibold "
+            >
+              <span>
+                {" "}
+                {dia} {mesFormateado}
+              </span>
+            </div>
+            <div
+              style={{ color: dataInfoGeneral.colorSiteName }}
+              className="md:mr-1 text-left text-base lg:text-lg font-semibold"
+            >
+              <span>{anio}</span>
+            </div>
           </div>
-        </div>
+        )}
+        {availabilitLevel === "NONE" && reason == "SOLD_OUT" && (
+          <div className="flex flex-col justify-center w-16">
+            <div className="lg:mr-1 whitespace-nowrap text-base lg:text-lg font-semibold text-gray-300">
+              <span>
+                {dia} {mesFormateado}
+              </span>
+            </div>
+            <div className="md:mr-1 text-left text-base lg:text-lg font-semibold text-gray-300">
+              <span>{anio}</span>
+            </div>
+          </div>
+        )}
 
         <div className="flex flex-col justify-center ml-4">
           <div onClick={isActive ? handleClick : null}>
@@ -120,22 +142,36 @@ export const FechasAccordion = ({
           }
           target="_blank"
         >
-          <button
-            type="button"
-            className={` ${
-              availabilitLevel === "GOOD" || availabilitLevel === "LIMITED"
-                ? `bg-[${dataInfoGeneral.backgroundButton}] hover:bg-[${dataInfoGeneral.colorHoverButton}] hover:border[${dataInfoGeneral.colorHoverButton}]`
-                : "text-white bg-gray-300 cursor-default"
-            }  focus:outline-none font-medium rounded text-sm px-3 py-2.5 text-center`}
-            style={
-              (availabilitLevel === "GOOD" ||
-                availabilitLevel === "LIMITED") && {
+          {availabilitLevel === "GOOD" && (
+            <button
+              type="button"
+              className={`bg-[${dataInfoGeneral.backgroundButton}] hover:bg-[${dataInfoGeneral.colorHoverButton}] hover:border[${dataInfoGeneral.colorHoverButton}] focus:outline-none font-medium rounded text-sm px-3 py-2.5 text-center`}
+              style={{
                 color: dataInfoGeneral.colorButton,
-              }
-            }
-          >
-            Comprar entradas
-          </button>
+              }}
+            >
+              Comprar entradas
+            </button>
+          )}
+          {availabilitLevel === "LIMITED" && (
+            <button
+              type="button"
+              className={`bg-[${dataInfoGeneral.backgroundButton}] hover:bg-[${dataInfoGeneral.colorHoverButton}] hover:border[${dataInfoGeneral.colorHoverButton}] focus:outline-none font-medium rounded text-sm px-3 py-2.5 text-center`}
+              style={{
+                color: dataInfoGeneral.colorButton,
+              }}
+            >
+              Comprar entradas
+            </button>
+          )}
+          {availabilitLevel === "NONE" && reason == "SOLD_OUT" && (
+            <button
+              type="button"
+              className="text-white bg-gray-300 cursor-default focus:outline-none font-medium rounded text-sm px-3 py-2.5 text-center"
+            >
+              Comprar entradas
+            </button>
+          )}
         </a>
       </div>
     </>

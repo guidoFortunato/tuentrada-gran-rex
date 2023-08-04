@@ -11,10 +11,6 @@
 
 3. Orden de precios y ubicaciones: Los precios y ubicaciones de los eventos deben mostrarse en un orden específico.
 
-4. detalle:
-   -si cambio el nombre de la url no hace nada
-   -que no se vea el id en la url
-
 7. boton proximamente en el product general
 
 13. Edición del botón de compra: Queremos tener la posibilidad de editar el href del botón de compra, que por defecto muestre la info de secutix.
@@ -25,10 +21,8 @@
 
 18. no aparecen los segundos en editar fecha en backend
 
-19. saber quien modifica el catalogo en el backend, que quede registrado quien fue el ultimo que aplicó cambios
-
 20. el onSale del product general debe tener un desde y hasta para que el evento se active de forma dinamica
 
 21. alt en imagenes del product: historyImage, promotionImage, etc
 
-22. '#' en la url
+22. agregar en los colores del site: background gradient, color navbar

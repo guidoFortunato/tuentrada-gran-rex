@@ -10,7 +10,7 @@ export const CardEvento = ({ img = "", title = "", linkEvento = "", disponibilit
   const [reasonNotAvailable, setReasonNotAvailable] = useState(false);
   // console.log({ name: data.name });
   // console.log({disponibility})
-  // console.log(data.name.toLowerCase().includes("gladys") && data)
+  // console.log(data.name.toLowerCase().includes("julieta") && data)
 
   useEffect(() => {
     // console.log(disponibility)

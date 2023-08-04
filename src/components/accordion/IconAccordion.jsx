@@ -10,13 +10,13 @@ export const IconAccordion = ({ item }) => {
       {item ? (
         <AiOutlineMinus 
         style={{
-          color: dataInfoGeneral.backgroundButton,
+          color: dataInfoGeneral.colorHoverButton,
         }} 
         className={`w-6 h-6 shrink-0`} />
       ) : (
         <AiOutlinePlus 
         style={{
-          color: dataInfoGeneral.backgroundButton,
+          color: dataInfoGeneral.colorHoverButton,
         }}
         className={`w-6 h-6 shrink-0`} />
       )}

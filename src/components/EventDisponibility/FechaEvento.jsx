@@ -43,7 +43,7 @@ export const FechaEvento = ({
 
   if (internalState === "soon") {
     return (
-      <div className="lg:flex lg:flex-row lg:justify-between border-b-2 border-gray-200 p-3">
+      <div className="lg:flex lg:flex-row lg:justify-between border-b-2 border-gray-200 p-5">
         <FechaAccordionProximamente
           dia={dia}
           hora={hora}
@@ -56,21 +56,8 @@ export const FechaEvento = ({
 
   return (
     <>
-      <div className="lg:flex lg:flex-row lg:justify-between border-b-2 border-gray-200 p-3">
-        {/* {
-          <FechasAccordion
-            dataFechas={dataFecha}
-            dataEvento={dataEvento}
-            dia={dia}
-            hora={hora}
-            mesFormateado={mesFormateado}
-            anio={anio}
-            openModal={openModal}
-            setOpenModal={setOpenModal}
-            availabilitLevel={availabilitLevel}
-            reason={reason}
-          />
-        } */}
+      <div className="lg:flex lg:flex-row lg:justify-between border-b-2 border-gray-200 p-5">
+        
         {availabilitLevel === "GOOD" && (
           <FechaAccordionDisponible
             dataFechas={dataFecha}
@@ -104,6 +91,20 @@ export const FechaEvento = ({
           />
         )}
       </div>
+      {/* {
+          <FechasAccordion
+            dataFechas={dataFecha}
+            dataEvento={dataEvento}
+            dia={dia}
+            hora={hora}
+            mesFormateado={mesFormateado}
+            anio={anio}
+            openModal={openModal}
+            setOpenModal={setOpenModal}
+            availabilitLevel={availabilitLevel}
+            reason={reason}
+          />
+        } */}
     </>
   );
 };

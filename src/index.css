@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Roboto:wght@300;400;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;900&family=Poppins:wght@300;400;600;700;900&family=Raleway:wght@300;400;600;700;900&family=Roboto:wght@300;400;700;900&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -12,11 +12,11 @@
   padding-bottom: 320px;
 }
 
+/* navbar */ 
+/* .background-navbar{
+  background: linear-gradient(0deg, rgba(164,103,31,0.7875525210084033) 0%, rgba(87,47,2,0.8855917366946778) 100%), url(https://www.tuentrada.com/newsletter/footer/images/background/page-title-bg.jpg);
+} */
 /* border navbar */
-
-.active{
-  border-bottom-color: #855F35
-}
 
 /* alerta */
 .swal2-confirm:focus {
@@ -98,3 +98,4 @@
 .fc-direction-ltr .fc-daygrid-event .fc-event-time {
   border-bottom: 1px solid #cea38333;
 }
+

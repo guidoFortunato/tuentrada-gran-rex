@@ -33,20 +33,23 @@ export const NavBar = () => {
       <nav
         style={{
           backgroundColor: `${dataInfoGeneral.backgroundNavbar}`,
-          fontFamily: "Raleway",
+          // fontFamily: "Raleway",
         }}
         className={`${
           navbar ? "shadow-light" : ""
-        } border-gray-200 sticky top-0 z-30 pb-3 lg:pb-0`}
+        } border-gray-200 sticky top-0 z-30 pb-3 lg:pb-0 background-navbar`}
+        // className={`${
+        //   navbar ? "shadow-light" : ""
+        // } border-gray-200 sticky top-0 z-30 pb-3 lg:pb-0 background-navbar`}
       >
         <div className="max-w-screen-2xl flex flex-wrap items-center justify-between mx-auto px-4 pt-4">
           <Link to="/" className="flex items-center">
             <img
               src={dataInfoGeneral.logo}
-              className="h-8 mr-3"
+              className="h-12 mr-3"
               alt={dataInfoGeneral.altLogo}
             />
-            <span className="self-center text-xl font-bold whitespace-nowrap">
+            <span className="self-center text-xl font-semibold whitespace-nowrap" style={{ color: dataInfoGeneral.backgroundBody }}>
               {dataInfoGeneral.name}
             </span>
           </Link>
@@ -135,7 +138,7 @@ export const NavBar = () => {
           >
             <ul
               style={{ backgroundColor: `${dataInfoGeneral.backgroundNavbar}` }}
-              className={`flex flex-col font-medium  lg:flex-row lg:space-x-8 lg:mt-0 lg:border-2 lg:border-transparent lg:bg-white space-y-2 lg:space-y-0 ${
+              className={`flex flex-col font-medium  lg:flex-row lg:space-x-8 lg:mt-0 lg:border-2 lg:border-transparent lg:bg-white space-y-3 lg:space-y-0 ${
                 isButtonCollapsed ? "" : "hidden"
               } lg:flex `}
             >
