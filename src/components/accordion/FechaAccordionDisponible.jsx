@@ -69,9 +69,10 @@ export const FechaAccordionDisponible = ({
         >
           <button
             type="button"
-            className={`bg-[${dataInfoGeneral.backgroundButton}] hover:bg-[${dataInfoGeneral.colorHoverButton}] hover:border[${dataInfoGeneral.colorHoverButton}] focus:outline-none font-medium rounded text-sm px-3 py-2.5 text-center`}
+            className={`focus:outline-none font-medium rounded text-sm px-3 py-2.5 text-center`}
             style={{
               color: dataInfoGeneral.colorButton,
+              backgroundColor: dataInfoGeneral.backgroundButton
             }}
           >
             Comprar entradas
