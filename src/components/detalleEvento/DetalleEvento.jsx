@@ -100,9 +100,10 @@ export const DetalleEvento = () => {
               >
                 <button
                   type="button"
-                  className={`bg-[${dataInfoGeneral.backgroundButton}] hover:bg-[${dataInfoGeneral.colorHoverButton}] hover:border[${dataInfoGeneral.colorHoverButton}] focus:outline-none font-medium rounded text-sm px-3 py-2.5 text-center mt-4`}
+                  className={`focus:outline-none font-medium rounded text-sm px-3 py-2.5 text-center mt-4`}
                   style={{
                     color: dataInfoGeneral.colorButton,
+                    backgroundColor: dataInfoGeneral.backgroundButton
                   }}
                 >
                   Comprar entradas

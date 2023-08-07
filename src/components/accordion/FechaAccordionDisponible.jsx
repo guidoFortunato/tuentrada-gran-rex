@@ -13,8 +13,8 @@ export const FechaAccordionDisponible = ({
   dataEvento,
 }) => {
   const { dataInfoGeneral } = useContext(EventosContext);
-  // console.log({dataInfoGeneral})
-  console.log({dataFecha})
+  console.log({dataInfoGeneral})
+  // console.log({dataFecha})
   // console.log({dataEvento})
   return (
     <>

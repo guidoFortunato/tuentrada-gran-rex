@@ -14,7 +14,7 @@ export const FechaAccordionLimited = ({
 }) => {
   const { dataInfoGeneral } = useContext(EventosContext);
   // console.log({dataFechas})
-  // console.log({dataInfoGeneral})
+  console.log({dataInfoGeneral})
   return (
     <>
       <div className="flex flex-row">
@@ -64,14 +64,15 @@ export const FechaAccordionLimited = ({
 
       <div className="text-end mt-4 lg:my-auto">
         <a
-          href={`${dataEvento.url}selection/event/seat?perfId=${dataFechas.performanceId}&productId=${dataEvento.productId}`}
+          href={`${dataEvento.product.url}selection/event/seat?perfId=${dataFechas.performanceId}&productId=${dataEvento.product.productId}`}
           target="_blank"
         >
           <button
             type="button"
-            className={`bg-[${dataInfoGeneral.backgroundButton}] hover:bg-[${dataInfoGeneral.colorHoverButton}] hover:border[${dataInfoGeneral.colorHoverButton}] focus:outline-none font-medium rounded text-sm px-3 py-2.5 text-center`}
+            className={`focus:outline-none font-medium rounded text-sm px-3 py-2.5 text-center`}
             style={{
               color: dataInfoGeneral.colorButton,
+              backgroundColor: dataInfoGeneral.backgroundButton
             }}
           >
             Comprar entradas
