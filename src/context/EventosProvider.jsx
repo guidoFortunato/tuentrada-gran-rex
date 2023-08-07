@@ -57,12 +57,13 @@ const EventosProvider = (props) => {
     if (idVenue !== "") {
       // console.log({idVenue})
       const getDataEventosGenerales = async () => {
-        const newLocal = `${VITE_API_EVENTOS + idVenue}?page=${page}`;
+        const newLocal = `${VITE_API_EVENTOS + idVenue}/products/?page=${page}`;
         const info = await getData(newLocal, VITE_EMAIL, VITE_PASS);
         // console.log({dataEventosGenerales: info.data})
-        // console.log(info.data)
+        // console.log({infoData:info.data})
         setData(info);
         setEventosGenerales((prevEventos) => prevEventos.concat(info.data));
+        setEventosGenerales(info.data.products);
       };
       getDataEventosGenerales();
     }
@@ -72,7 +73,7 @@ const EventosProvider = (props) => {
     if (idVenue !== "") {
       const getDataEventosCalendario = async () => {
         const { data } = await getData(
-          VITE_API_INFO_GENERAL + idVenue + "/calendar",
+          VITE_API_EVENTOS + idVenue + "/calendar",
           VITE_EMAIL,
           VITE_PASS
         );

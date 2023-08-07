@@ -14,7 +14,7 @@ export const FechaAccordionDisponible = ({
 }) => {
   const { dataInfoGeneral } = useContext(EventosContext);
   // console.log({dataInfoGeneral})
-  // console.log({dataFecha})
+  console.log({dataFecha})
   // console.log({dataEvento})
   return (
     <>
@@ -64,7 +64,7 @@ export const FechaAccordionDisponible = ({
 
       <div className="text-end mt-4 lg:my-auto">
         <a
-          href={`${dataEvento.url}selection/event/seat?perfId=${dataFecha.performanceId}&productId=${dataEvento.productId}`}
+          href={`${dataEvento.product.url}selection/event/seat?perfId=${dataFecha.performanceId}&productId=${dataEvento.product.productId}`}
           target="_blank"
         >
           <button

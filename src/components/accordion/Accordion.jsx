@@ -16,7 +16,7 @@ export const Accordion = ({ itemsAccordion, dataEvento }) => {
 
   // console.log({ itemsAccordion });
   // console.log({ dataEvento });
-  // console.log({newPerformances})
+  // console.log(newPerformances)
 
   useEffect(() => {
     const updatedPerformances = itemsAccordion.performances.map(
@@ -60,6 +60,7 @@ export const Accordion = ({ itemsAccordion, dataEvento }) => {
             <div className="flex flex-col max-h-90 overflow-y-auto border-0 border-gray-200 dark:border-gray-700 dark:bg-gray-900 text-sm">
               {newPerformances.map((item) => {
                 // console.log({internalState: item.internalState})
+                console.log({item})
                 if (item.internalState !== "sin fechas") {
                   return (
                     <FechaEvento

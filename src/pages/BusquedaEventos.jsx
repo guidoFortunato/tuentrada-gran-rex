@@ -10,7 +10,11 @@ const { VITE_API_EVENTOS, VITE_EMAIL, VITE_PASS } = getEnvVariables();
 
 export const BusquedaEventos = () => {
   const [data, setData] = useState(null);
-  const { idVenue, dataInfoGeneral, handleButtonsCollapse: handleNavBarCollapse } = useContext(EventosContext);
+  const {
+    idVenue,
+    dataInfoGeneral,
+    handleButtonsCollapse: handleNavBarCollapse,
+  } = useContext(EventosContext);
   const { pathname, search } = useLocation();
   const [isLoading, setIsLoading] = useState(false);
   const query = search.split("=")[1];
@@ -20,7 +24,7 @@ export const BusquedaEventos = () => {
   // console.log({pathname,search})
 
   useEffect(() => {
-    handleNavBarCollapse()
+    handleNavBarCollapse();
   }, []);
 
   useEffect(() => {
@@ -38,7 +42,7 @@ export const BusquedaEventos = () => {
           VITE_EMAIL,
           VITE_PASS
         );
-        // console.log({ data });
+        console.log({ data });
         setData(data);
         setIsLoading(false);
       };
@@ -59,20 +63,15 @@ export const BusquedaEventos = () => {
   return (
     <>
       <div className="container mx-auto">
-       
-
-        {data.length > 0 ? (
+        {data.products.length > 0 ? (
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6 lg:gap-10 mt-10 px-3 lg:px-0">
-            {data.map((item) => (
+            {data.products.map((item) => (
               <CardEvento
-                linkEvento={"/" + item.slug + "/" + item.id}
+                linkEvento={"/" + item.slug}
                 img={item.image}
                 status={item.state}
                 title={item.name}
                 key={item.id}
-                disabled={item.disabled}
-                reason={item.reason}
-                disponibility={item.disponibility}
                 data={item}
               />
             ))}
@@ -100,8 +99,6 @@ export const BusquedaEventos = () => {
             </div>
           </div>
         )}
-
-       
       </div>
     </>
   );

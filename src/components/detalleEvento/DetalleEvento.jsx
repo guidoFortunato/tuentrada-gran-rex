@@ -42,22 +42,20 @@ export const DetalleEvento = () => {
     if (idVenue !== "") {
       const getInfo = async () => {
         const { data } = await getData(
-          `${VITE_API_EVENTOS + idVenue}/details/${name}`,
+          `${VITE_API_EVENTOS + idVenue}/product/${name}`,
           VITE_EMAIL,
           VITE_PASS
         );
         // console.log({data})
-        // console.log({data})
-        // console.log({ performances: data.performances });
         setData(data);
         setItemsAccordion({
-          performances: data.performances,
-          history: data.history,
-          promotion: data.promotion,
-          recomendation: data.recomendation,
-          extra: data.extra,
-          mediaJson: data.mediaJson,
-          socialNetworks: data.socialNetworks,
+          performances: data.product.performances,
+          history: data.product.history,
+          promotion: data.product.promotion,
+          recomendation: data.product.recomendation,
+          extra: data.product.extra,
+          mediaJson: data.product.mediaJson,
+          socialNetworks: data.product.socialNetworks,
           disponibility: data.disponibility,
         });
       };
@@ -84,20 +82,20 @@ export const DetalleEvento = () => {
             <section
               className={`bg-no-repeat bg-contain bg-start mx-auto h-96`}
               // style={{ backgroundImage: `url("${data.stxImagMedium}")` }}
-              style={{ backgroundImage: `url("${data.image}")` }}
+              style={{ backgroundImage: `url("${data.product.image}")` }}
             ></section>
           </div>
           <div className="w-full lg:w-[70%] p-0 sm:p-4">
-            <h2 className="text-3xl mt-2 lg:mt-4 mb-2">{data?.name}</h2>
+            <h2 className="text-3xl mt-2 lg:mt-4 mb-2">{data.product.name}</h2>
             <div className="grid grid-cols-1">
               <p
                 className="text-sm text-gray-500"
                 dangerouslySetInnerHTML={{
-                  __html: DOMPurify.sanitize(data?.description),
+                  __html: DOMPurify.sanitize(data.product.description),
                 }}
               ></p>
               <a
-                href={`${data.url}selection/event/date?productId=${data.productId}`}
+                href={`${data.product.url}selection/event/date?productId=${data.product.productId}`}
                 target="_blank"
               >
                 <button
@@ -116,7 +114,7 @@ export const DetalleEvento = () => {
 
         <Accordion itemsAccordion={itemsAccordion} dataEvento={data} />
 
-        {data.socialNetworks.length > 0 && (
+        {data.product.socialNetworks.length > 0 && (
           <div className="mt-5 flex flex-col items-center">
             <h3 className="text-[#6b7280] font-semibold text-lg lg:text-xl">
               {/*text-center*/}
@@ -124,7 +122,7 @@ export const DetalleEvento = () => {
             </h3>
             <ul className="flex space-x-3 my-2">
               {/*justify-center*/}
-              <RedesSociales dataRedes={data.socialNetworks} />
+              <RedesSociales dataRedes={data.product.socialNetworks} />
             </ul>
           </div>
         )}

@@ -1,80 +1,32 @@
-import { useEffect, useState } from "react";
-import { EventAvailable, EventLimited, EventNotAvailable, EventNotForSale, } from "./eventDisponibility";
+import {
+  EventAvailable,
+  EventLimited,
+  EventNotAvailable,
+  EventNotForSale,
+} from "./eventDisponibility";
 
-export const CardEvento = ({ img = "", title = "", linkEvento = "", disponibility, data, }) => {
-  const [availabilityGood, setAvailabilityGood] = useState(false);
-  const [availabilityLimited, setAvailabilityLimited] = useState(false);
-  const [reasonSoldOut, setReasonSoldOut] = useState(false);
-  const [reasonCanceled, setReasonCanceled] = useState(false);
-  const [reasonSuspended, setReasonSuspended] = useState(false);
-  const [reasonNotAvailable, setReasonNotAvailable] = useState(false);
+export const CardEvento = ({ img = "", title = "", linkEvento = "", data }) => {
   // console.log({ name: data.name });
   // console.log({disponibility})
   // console.log(data.name.toLowerCase().includes("julieta") && data)
 
-  useEffect(() => {
-    // console.log(disponibility)
-    const eventAvailability = (disponibilidad) => {
-      // Verificar si alguna fecha tiene availabilitLevel "GOOD"
-      const hasGoodAvailability = disponibilidad.some(
-        (fecha) => fecha.availabilitLevel === "GOOD"
-      );
-      setAvailabilityGood(hasGoodAvailability);
-
-      // Verificar si alguna fecha tiene availabilitLevel "LIMITED"
-      const hasLimitedAvailability = disponibilidad.some(
-        (fecha) => fecha.availabilitLevel === "LIMITED"
-      );
-      setAvailabilityLimited(hasLimitedAvailability);
-
-      // Verificar los reasons en caso de que no haya disponibilidad "GOOD"
-      const hasSoldOut = disponibilidad.every(
-        (fecha) =>
-          fecha.availabilitLevel === "NONE" && fecha.reason === "SOLD_OUT"
-      );
-      setReasonSoldOut(hasSoldOut);
-
-      const hasCanceled = disponibilidad.every(
-        (fecha) =>
-          fecha.availabilitLevel === "NONE" && fecha.reason === "CANCELED"
-      );
-      setReasonCanceled(hasCanceled);
-
-      const hasSuspended = disponibilidad.every(
-        (fecha) =>
-          fecha.availabilitLevel === "NONE" && fecha.reason === "SUSPENDED"
-      );
-      setReasonSuspended(hasSuspended);
-
-      const hasNotAvailable = disponibilidad.every(
-        (fecha) =>
-          fecha.availabilitLevel === "NONE" &&
-          (fecha.reason !== "SUSPENDED" ||
-            fecha.reason !== "CANCELED" ||
-            fecha.reason !== "SOLD_OUT")
-      );
-      setReasonNotAvailable(hasNotAvailable);
-    };
-    eventAvailability(disponibility);
-  }, []);
-
   return (
     <article className="text-center pt-4">
-      {availabilityGood ? (
+      {data.disponibility === "GOOD" ? (
         <EventAvailable
           linkEvento={linkEvento}
           img={img}
           title={title}
           data={data}
         />
-      ) : availabilityLimited ? (
+      ) : data.disponibility === "LIMITED" ? (
         <EventLimited
           linkEvento={linkEvento}
           img={img}
           title={title}
           data={data}
         />
-      ) : reasonSoldOut ? (
+      ) : data.disponibility === "SOLD_OUT" ? (
         <EventNotForSale
           linkEvento={linkEvento}
           img={img}
@@ -85,7 +37,7 @@ export const CardEvento = ({ img = "", title = "", linkEvento = "", disponibilit
           reasonSoldOut={reasonSoldOut}
           data={data}
         />
-      ) : reasonSuspended ? (
+      ) : data.disponibility === "SUSPENDED" ? (
         <EventNotForSale
           linkEvento={linkEvento}
           img={img}
@@ -96,7 +48,7 @@ export const CardEvento = ({ img = "", title = "", linkEvento = "", disponibilit
           reasonSoldOut={reasonSoldOut}
           data={data}
         />
-      ) : reasonCanceled ? (
+      ) : data.disponibility === "CANCELED" ? (
         <EventNotForSale
           linkEvento={linkEvento}
           img={img}
@@ -107,8 +59,6 @@ export const CardEvento = ({ img = "", title = "", linkEvento = "", disponibilit
           reasonSoldOut={reasonSoldOut}
           data={data}
         />
-      ) : reasonNotAvailable ? (
-        <EventNotAvailable img={img} title={title} />
       ) : (
         <EventNotAvailable img={img} title={title} />
       )}

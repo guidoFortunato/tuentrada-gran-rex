@@ -4,7 +4,6 @@ import {
   FechaAccordionLimited,
   FechaAccordionAgotada,
   FechaAccordionProximamente,
-  FechasAccordion,
 } from "../accordion";
 
 const opciones = {
@@ -34,9 +33,7 @@ export const FechaEvento = ({
   const fecha = new Date(dataFecha.start);
   const formatoFecha = fecha.toLocaleDateString("es-ES", opciones);
   const dia = formatoFecha.split(",")[0].split(" ")[0];
-  const mes =
-    formatoFecha.split(",")[0].split(" ")[2].charAt(0).toUpperCase() +
-    formatoFecha.split(",")[0].split(" ")[2].slice(1);
+  const mes = formatoFecha.split(",")[0].split(" ")[2].charAt(0).toUpperCase() + formatoFecha.split(",")[0].split(" ")[2].slice(1);
   const mesFormateado = mes.slice(0, 3);
   const anio = formatoFecha.split(",")[0].split(" ")[4];
   const hora = formatoFecha.split(",")[1].trim();
@@ -57,7 +54,6 @@ export const FechaEvento = ({
   return (
     <>
       <div className="lg:flex lg:flex-row lg:justify-between border-b-2 border-gray-200 p-5">
-        
         {availabilitLevel === "GOOD" && (
           <FechaAccordionDisponible
             dataFechas={dataFecha}
