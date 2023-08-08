@@ -14,7 +14,7 @@ export const FechaAccordionLimited = ({
 }) => {
   const { dataInfoGeneral } = useContext(EventosContext);
   // console.log({dataFechas})
-  console.log({dataInfoGeneral})
+  // console.log({dataInfoGeneral})
   return (
     <>
       <div className="flex flex-row">

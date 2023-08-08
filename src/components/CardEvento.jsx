@@ -9,6 +9,7 @@ export const CardEvento = ({ img = "", title = "", linkEvento = "", data }) => {
   // console.log({ name: data.name });
   // console.log({disponibility})
   // console.log(data.name.toLowerCase().includes("julieta") && data)
+  console.log({data})
 
   return (
     <article className="text-center pt-4">

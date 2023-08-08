@@ -6,7 +6,7 @@ import { MainNoEventos, MainEventos } from "../components/main/";
 export const Home = () => {
   const {
     eventosGenerales,
-    setPage,
+    // setPage,
     data,
     handleButtonsCollapse: handleNavBarCollapse,
   } = useContext(EventosContext);
@@ -39,7 +39,6 @@ export const Home = () => {
   // }, [page]);
 
   if (data === null) return <span></span>;
-  // if (eventosGenerales.length === 0) return <Spinner />;
 
   if (
     eventosGenerales === undefined ||

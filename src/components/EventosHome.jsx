@@ -9,7 +9,7 @@ export const EventosHome = () => {
     <>
       {eventosGenerales.map((item) => {
         // console.log({item})
-        if (item.stateSTX === "RUNNING") {
+        // if (item.stateSTX === "RUNNING") {
           return (
             <CardEvento
               linkEvento={item.slug}
@@ -19,7 +19,7 @@ export const EventosHome = () => {
               data={item}
             />
           );
-        }
+        // }
       })}
     </>
   );
