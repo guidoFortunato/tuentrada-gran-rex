@@ -49,12 +49,19 @@ export const HeaderEventos = () => {
               }
             >
               <button
+             
+                type="button"
+                className={`w-auto py-2.5 px-11 mt-6 md:mt-0 font-medium rounded text-base lg:text-lg md:text-base`}
                 style={{
                   color: dataInfoGeneral.colorButton,
-                  // background: dataInfoGeneral.backgroundButton,
+                  backgroundColor: dataInfoGeneral.backgroundButton,
                 }}
-                type="button"
-                className={`w-auto py-2.5 px-11 mt-6 md:mt-0 bg-[#855F35] hover:bg-[#5c452c] font-medium rounded text-base lg:text-lg md:text-base`}
+                onMouseOver={(e) => {
+                  e.target.style.backgroundColor = dataInfoGeneral.colorHoverButton; // Cambiar al color de hover
+                }}
+                onMouseOut={(e) => {
+                  e.target.style.backgroundColor = dataInfoGeneral.backgroundButton; // Restaurar el color original
+                }}
               >
                 {dataInfoGeneral.buttonLabel}
               </button>

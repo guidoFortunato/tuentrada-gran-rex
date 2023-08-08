@@ -62,7 +62,7 @@ export const Historia = () => {
             }}
           ></p>
           {words.length > maxWords && (
-            <button className="text-blue-500" onClick={toggleShowMoreText}>
+            <button style={{color: dataInfoGeneral.colorHoverLi}} onClick={toggleShowMoreText}>
               {toggleButtonTextText}
             </button>
           )}
@@ -110,8 +110,18 @@ export const Historia = () => {
               {images.length > maxImagesToShow && (
                 <div className="flex justify-center mt-4">
                   <button
-                    className={`text-[${dataInfoGeneral.colorButton}] text-white font-semibold bg-[${dataInfoGeneral.backgroundButton}] hover:bg-[#5c452c] hover:border[${dataInfoGeneral.colorHoverButton}] rounded text-sm px-4 py-2`}
+                    className={` font-medium right-2.5 bottom-2.5 rounded text-sm px-4 py-2`}
                     onClick={toggleShowMoreImages}
+                    style={{
+                      color: dataInfoGeneral.colorButton,
+                      backgroundColor: dataInfoGeneral.backgroundButton,
+                    }}
+                    onMouseOver={(e) => {
+                      e.target.style.backgroundColor = dataInfoGeneral.colorHoverButton; // Cambiar al color de hover
+                    }}
+                    onMouseOut={(e) => {
+                      e.target.style.backgroundColor = dataInfoGeneral.backgroundButton; // Restaurar el color original
+                    }}
                   >
                     {toggleButtonTextImages}
                   </button>

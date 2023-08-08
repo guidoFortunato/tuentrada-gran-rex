@@ -148,6 +148,13 @@ export const FechasAccordion = ({
               className={`bg-[${dataInfoGeneral.backgroundButton}] hover:bg-[${dataInfoGeneral.colorHoverButton}] hover:border[${dataInfoGeneral.colorHoverButton}] focus:outline-none font-medium rounded text-sm px-3 py-2.5 text-center`}
               style={{
                 color: dataInfoGeneral.colorButton,
+                backgroundColor: dataInfoGeneral.backgroundButton,
+              }}
+              onMouseOver={(e) => {
+                e.target.style.backgroundColor = dataInfoGeneral.colorHoverButton; // Cambiar al color de hover
+              }}
+              onMouseOut={(e) => {
+                e.target.style.backgroundColor = dataInfoGeneral.backgroundButton; // Restaurar el color original
               }}
             >
               Comprar entradas
@@ -159,6 +166,13 @@ export const FechasAccordion = ({
               className={`bg-[${dataInfoGeneral.backgroundButton}] hover:bg-[${dataInfoGeneral.colorHoverButton}] hover:border[${dataInfoGeneral.colorHoverButton}] focus:outline-none font-medium rounded text-sm px-3 py-2.5 text-center`}
               style={{
                 color: dataInfoGeneral.colorButton,
+                backgroundColor: dataInfoGeneral.backgroundButton,
+              }}
+              onMouseOver={(e) => {
+                e.target.style.backgroundColor = dataInfoGeneral.colorHoverButton; // Cambiar al color de hover
+              }}
+              onMouseOut={(e) => {
+                e.target.style.backgroundColor = dataInfoGeneral.backgroundButton; // Restaurar el color original
               }}
             >
               Comprar entradas
