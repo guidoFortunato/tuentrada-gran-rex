@@ -5,7 +5,14 @@ import { FormBusqueda, ItemsNavBar } from "./";
 import { ItemRedes } from "../";
 
 export const NavBar = () => {
-  const { dataInfoGeneral, handleButtonsCollapse, handleSearchCollapse, handleButtonCollapse, isSearchCollapsed, isButtonCollapsed } = useContext(EventosContext);
+  const {
+    dataInfoGeneral,
+    handleButtonsCollapse,
+    handleSearchCollapse,
+    handleButtonCollapse,
+    isSearchCollapsed,
+    isButtonCollapsed,
+  } = useContext(EventosContext);
   // const [isSearchCollapsed, setIsSearchCollapsed] = useState(false);
   // const [isButtonCollapsed, setIsButtonCollapsed] = useState(false);
   const [navbar, setNavbar] = useState(false);
@@ -49,7 +56,10 @@ export const NavBar = () => {
               className="h-12 mr-3"
               alt={dataInfoGeneral.altLogo}
             />
-            <span className="self-center text-xl font-semibold whitespace-nowrap" style={{ color: dataInfoGeneral.backgroundBody }}>
+            <span
+              className="self-center text-xl font-semibold whitespace-nowrap"
+              style={{ color: dataInfoGeneral.backgroundBody }}
+            >
               {dataInfoGeneral.name}
             </span>
           </Link>
@@ -125,7 +135,7 @@ export const NavBar = () => {
               } lg:flex `}
             >
               {dataInfoGeneral.socialNetworks.map((item) => (
-                <ItemRedes  key={item.id} item={item} />
+                <ItemRedes key={item.id} item={item} />
               ))}
             </ul>
           </div>
@@ -137,7 +147,6 @@ export const NavBar = () => {
             id="navbar-search"
           >
             <ul
-              
               className={`flex flex-col font-medium  lg:flex-row lg:space-x-8 lg:mt-0 lg:border-2 lg:border-transparent lg:bg-white space-y-3 lg:space-y-0 ${
                 isButtonCollapsed ? "" : "hidden"
               } lg:flex `}

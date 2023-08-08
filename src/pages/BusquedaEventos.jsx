@@ -42,7 +42,7 @@ export const BusquedaEventos = () => {
           VITE_EMAIL,
           VITE_PASS
         );
-        console.log({ data });
+        console.log( data );
         setData(data);
         setIsLoading(false);
       };
@@ -63,9 +63,9 @@ export const BusquedaEventos = () => {
   return (
     <>
       <div className="container mx-auto">
-        {data.products.length > 0 ? (
+        {data.length > 0 ? (
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6 lg:gap-10 mt-10 px-3 lg:px-0">
-            {data.products.map((item) => (
+            {data.map((item) => (
               <CardEvento
                 linkEvento={"/" + item.slug}
                 img={item.image}
