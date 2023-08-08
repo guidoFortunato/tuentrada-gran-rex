@@ -63,17 +63,23 @@ export const FormBusqueda = () => {
             type="search"
             id="default-search"
             // className={`focus:ring-[${dataInfoGeneral.backgroundButton}] focus:border-[${dataInfoGeneral.backgroundButton}] block w-full p-4 pl-10 text-sm text-gray-900 border border-gray-300 rounded-3xl bg-gray-50`}
-            className={`focus:ring-[#5c452c] pr-[95px] focus:border-[#5c452c] block w-full p-4 pl-10 text-sm text-gray-900 border border-gray-300 rounded bg-gray-50`}
+            className={`focus:ring-[#00000041] pr-[95px] focus:border-[#00000041] block w-full p-4 pl-10 text-sm text-gray-900 border border-gray-300 rounded bg-gray-50`}
             placeholder="Buscar un evento..."
             value={evento}
             onChange={(e) => handleEvento(e.target.value)}
           />
           <button
             type="submit" 
-            className={`opacity-85 ml-55 font-semibold absolute right-2.5 bottom-2.5 hover:bg-[${dataInfoGeneral.colorHoverButton}] hover:border[${dataInfoGeneral.colorHoverButton}] rounded text-sm px-4 py-2`}
+            className={` ml-55 font-medium absolute right-2.5 bottom-2.5 rounded text-sm px-4 py-2`}
             style={{
               color: dataInfoGeneral.colorButton,
-              backgroundColor: dataInfoGeneral.backgroundButton
+              backgroundColor: dataInfoGeneral.backgroundButton,
+            }}
+            onMouseOver={(e) => {
+              e.target.style.backgroundColor = dataInfoGeneral.colorHoverButton; // Cambiar al color de hover
+            }}
+            onMouseOut={(e) => {
+              e.target.style.backgroundColor = dataInfoGeneral.backgroundButton; // Restaurar el color original
             }}
           >
             Buscar

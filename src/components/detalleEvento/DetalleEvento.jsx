@@ -95,39 +95,29 @@ export const DetalleEvento = () => {
                   __html: DOMPurify.sanitize(data.product.description),
                 }}
               ></p>
-              {data.buttonBuyLink ? (
-                <a
-                  href={data.buttonBuyLink}
-                  target="_blank"
+              <a
+                href={`${data.product.url}selection/event/date?productId=${data.product.productId}`}
+                target="_blank"
+              >
+                <button
+                  type="button"
+                  className={`focus:outline-none font-medium rounded text-sm px-3 py-2.5 text-center mt-4`}
+                  style={{
+                    color: dataInfoGeneral.colorButton,
+                    backgroundColor: dataInfoGeneral.backgroundButton,
+                  }}
+                  onMouseOver={(e) => {
+                    e.target.style.backgroundColor = dataInfoGeneral.colorHoverButton; // Cambiar al color de hover
+                  }}
+                  onMouseOut={(e) => {
+                    e.target.style.backgroundColor = dataInfoGeneral.backgroundButton; // Restaurar el color original
+                  }}
                 >
-                  <button
-                    type="button"
-                    className={`focus:outline-none font-medium rounded text-sm px-3 py-2.5 text-center mt-4`}
-                    style={{
-                      color: dataInfoGeneral.colorButton,
-                      backgroundColor: dataInfoGeneral.backgroundButton,
-                    }}
-                  >
+                 
                     Comprar entradas
                   </button>
                 </a>
-              ) : (
-                <a
-                  href={`${data.product.url}selection/event/date?productId=${data.product.productId}`}
-                  target="_blank"
-                >
-                  <button
-                    type="button"
-                    className={`focus:outline-none font-medium rounded text-sm px-3 py-2.5 text-center mt-4`}
-                    style={{
-                      color: dataInfoGeneral.colorButton,
-                      backgroundColor: dataInfoGeneral.backgroundButton,
-                    }}
-                  >
-                    Comprar entradas
-                  </button>
-                </a>
-              )}
+             
             </div>
           </div>
         </div>

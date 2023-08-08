@@ -1,11 +1,18 @@
+import React, { useContext } from "react";
+import { EventosContext } from "../context/EventosProvider";
+
 export const ItemRedes = ({item}) => {
+  const { dataInfoGeneral } = useContext(EventosContext);
+  // console.log(item)
   return (
     <li key={item.id}>
       <a
         href={item.href}
         target="_blank"
         // onClick={() => handleButtonsCollapse()}
-        className="text-[#855F35] font-bold border-b-2 border-transparent lg:hover:border-b-[#855F35] transition-all duration-300 ease-in-out"
+        className=" font-bold border-b-2 border-transparent transition-all duration-300 ease-in-out"
+    
+      
       >
         <svg
           xmlns={item.xmlns}
