@@ -80,7 +80,7 @@ export const DetalleEvento = () => {
         <div className="flex flex-wrap">
           <div className="w-full lg:w-[30%] p-0 sm:p-4">
             <section
-              className={`bg-no-repeat bg-contain bg-start mx-auto h-96`}
+              className={`bg-no-repeat bg-contain bg-center lg:bg-start mx-auto h-96 lg:h-full`}
               // style={{ backgroundImage: `url("${data.stxImagMedium}")` }}
               style={{ backgroundImage: `url("${data.product.image}")` }}
             ></section>
