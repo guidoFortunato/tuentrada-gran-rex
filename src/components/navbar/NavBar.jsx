@@ -137,7 +137,7 @@ export const NavBar = () => {
             id="navbar-search"
           >
             <ul
-              style={{ backgroundColor: `${dataInfoGeneral.backgroundNavbar}` }}
+              
               className={`flex flex-col font-medium  lg:flex-row lg:space-x-8 lg:mt-0 lg:border-2 lg:border-transparent lg:bg-white space-y-3 lg:space-y-0 ${
                 isButtonCollapsed ? "" : "hidden"
               } lg:flex `}
