@@ -8,6 +8,7 @@ import "animate.css";
 
 function App() {
   const { dataInfoGeneral } = useContext(EventosContext);
+  // console.log({dataInfoGeneral})
   if (dataInfoGeneral.length === 0) return <span></span>;
 
   return (

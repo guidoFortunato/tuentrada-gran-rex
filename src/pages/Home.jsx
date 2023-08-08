@@ -44,7 +44,7 @@ export const Home = () => {
   if (
     eventosGenerales === undefined ||
     eventosGenerales.length === 0 ||
-    data.data.length === 0
+    data?.data?.length === 0
   ) {
     return (
       <>

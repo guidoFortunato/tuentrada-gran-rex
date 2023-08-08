@@ -45,10 +45,10 @@ const EventosProvider = (props) => {
         VITE_EMAIL,
         VITE_PASS
       ); //window.location.hostname
-      // console.log({ dataInfoGeneral: data });
+      // console.log({dataInfoGeneral: data} );
       // console.log({ pages: data.pages });
-      setDataInfoGeneral(data);
-      setIdVenue(data.venueId);
+      setDataInfoGeneral(data.products.data);
+      setIdVenue(data.products.data.venueId);
     };
     getDataInfoGeneral();
   }, []);
@@ -60,10 +60,10 @@ const EventosProvider = (props) => {
         const newLocal = `${VITE_API_EVENTOS + idVenue}/products/?page=${page}`;
         const info = await getData(newLocal, VITE_EMAIL, VITE_PASS);
         // console.log({dataEventosGenerales: info.data})
-        // console.log({infoData:info.data})
+        // console.log({infoData:info})
         setData(info);
-        setEventosGenerales((prevEventos) => prevEventos.concat(info.data));
-        setEventosGenerales(info.data.products);
+        setEventosGenerales((prevEventos) => prevEventos.concat(info.data.products));
+        // setEventosGenerales(info.data.products);
       };
       getDataEventosGenerales();
     }
@@ -77,7 +77,7 @@ const EventosProvider = (props) => {
           VITE_EMAIL,
           VITE_PASS
         );
-        setEventosCalendario(data);
+        setEventosCalendario(data.products.data);
       };
       getDataEventosCalendario();
     }

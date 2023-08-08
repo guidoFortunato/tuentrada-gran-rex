@@ -6,7 +6,7 @@ import { EventosHome } from "../";
 
 export const MainEventos = () => {
   const { eventosGenerales, setPage, data } = useContext(EventosContext);
-  // console.log({data})
+  console.log({data})
   return (
     <main className="container mx-auto mb-5 ">
       <InfiniteScroll
