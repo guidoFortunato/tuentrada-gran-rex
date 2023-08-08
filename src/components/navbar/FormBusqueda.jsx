@@ -69,10 +69,11 @@ export const FormBusqueda = () => {
             onChange={(e) => handleEvento(e.target.value)}
           />
           <button
-            type="submit"
-            className={` text-white ml-55 font-semibold absolute right-2.5 bottom-2.5 bg-[${dataInfoGeneral.backgroundButton}] hover:bg-[${dataInfoGeneral.colorHoverButton}] hover:border[${dataInfoGeneral.colorHoverButton}] rounded text-sm px-4 py-2`}
+            type="submit" 
+            className={`opacity-85 ml-55 font-semibold absolute right-2.5 bottom-2.5 hover:bg-[${dataInfoGeneral.colorHoverButton}] hover:border[${dataInfoGeneral.colorHoverButton}] rounded text-sm px-4 py-2`}
             style={{
               color: dataInfoGeneral.colorButton,
+              backgroundColor: dataInfoGeneral.backgroundButton
             }}
           >
             Buscar
