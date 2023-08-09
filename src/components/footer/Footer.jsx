@@ -24,7 +24,7 @@ export const Footer = () => {
           <Link to="/" className="flex items-center mb-4 sm:mb-0">
             <img
               src={dataInfoGeneral.logoFooter}
-              className="h-8 mr-3"
+              className="h-12 mr-3"
               alt={dataInfoGeneral.altLogoFooter}
             />
             <span className="self-center text-xl font-semibold whitespace-nowrap ">

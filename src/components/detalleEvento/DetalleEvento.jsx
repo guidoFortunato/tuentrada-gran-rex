@@ -19,7 +19,7 @@ export const DetalleEvento = () => {
   const { name } = useParams();
   // const navigate = useNavigate();
   // console.log({dataInfoGeneral})
-  // console.log({ dataEvento: data });
+  console.log({ dataEvento: data });
   // console.log({name})
   // console.log({idProducto})
 
@@ -80,11 +80,19 @@ export const DetalleEvento = () => {
       <div className="container mx-auto mb-5 px-3 ">
         <div className="flex flex-wrap">
           <div className="w-full lg:w-[30%] p-0 sm:px-4">
-            <section
-              className={`bg-no-repeat bg-contain bg-center lg:bg-start mx-auto h-[300px]`}
-              // style={{ backgroundImage: `url("${data.stxImagMedium}")` }}
-              style={{ backgroundImage: `url("${data.product.image}")` }}
-            ></section>
+            {data.product.image ? (
+              <section
+                className={`bg-no-repeat bg-contain bg-center lg:bg-start mx-auto h-[300px]`}
+                style={{ backgroundImage: `url("${data.product.image}")` }}
+              ></section>
+            ) : (
+              <section
+                className={`bg-no-repeat bg-contain bg-center lg:bg-start mx-auto h-[300px]`}
+                style={{
+                  backgroundImage: `url("${data.product.stxImagXLarge}")`,
+                }}
+              ></section>
+            )}
           </div>
           <div className="w-full lg:w-[70%] p-0 sm:px-4">
             <h2 className="text-3xl mt-2 lg:mt-4 mb-2">{data.product.name}</h2>
@@ -95,55 +103,6 @@ export const DetalleEvento = () => {
                   __html: DOMPurify.sanitize(data.product.description),
                 }}
               ></p>
-              {/* {data.product.buttonBuyLink === null ? (
-                <a
-                  href={`${data.product.url}selection/event/date?productId=${data.product.productId}`}
-                  target="_blank"
-                >
-                  <button
-                    type="button"
-                    className={`focus:outline-none font-medium rounded text-sm px-3 py-2.5 text-center mt-4`}
-                    style={{
-                      color: dataInfoGeneral.colorButton,
-                      backgroundColor: dataInfoGeneral.backgroundButton,
-                    }}
-                    onMouseOver={(e) => {
-                      e.target.style.backgroundColor =
-                        dataInfoGeneral.colorHoverButton; // Cambiar al color de hover
-                    }}
-                    onMouseOut={(e) => {
-                      e.target.style.backgroundColor =
-                        dataInfoGeneral.backgroundButton; // Restaurar el color original
-                    }}
-                  >
-                    Comprar entradas
-                  </button>
-                </a>
-              ) : (
-                <a
-                  href={data.product.buttonBuyLink}
-                  target="_blank"
-                >
-                  <button
-                    type="button"
-                    className={`focus:outline-none font-medium rounded text-sm px-3 py-2.5 text-center mt-4`}
-                    style={{
-                      color: dataInfoGeneral.colorButton,
-                      backgroundColor: dataInfoGeneral.backgroundButton,
-                    }}
-                    onMouseOver={(e) => {
-                      e.target.style.backgroundColor =
-                        dataInfoGeneral.colorHoverButton; // Cambiar al color de hover
-                    }}
-                    onMouseOut={(e) => {
-                      e.target.style.backgroundColor =
-                        dataInfoGeneral.backgroundButton; // Restaurar el color original
-                    }}
-                  >
-                    Comprar entradas
-                  </button>
-                </a>
-              )} */}
             </div>
           </div>
         </div>
@@ -153,11 +112,9 @@ export const DetalleEvento = () => {
         {data.product.socialNetworks.length > 0 && (
           <div className="mt-5 flex flex-col items-center">
             <h3 className="text-[#6b7280] font-semibold text-lg lg:text-xl">
-              {/*text-center*/}
               Seguilo en sus redes
             </h3>
             <ul className="flex space-x-3 my-2">
-              {/*justify-center*/}
               <RedesSociales dataRedes={data.product.socialNetworks} />
             </ul>
           </div>
