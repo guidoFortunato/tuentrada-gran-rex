@@ -1,5 +1,5 @@
 import { useContext, useEffect, useState } from "react";
-import { Navigate, useNavigate, useParams } from "react-router-dom";
+import { Navigate, useParams } from "react-router-dom";
 import DOMPurify from "dompurify";
 
 import { EventosContext } from "../../context/EventosProvider";
@@ -17,7 +17,7 @@ export const DetalleEvento = () => {
 
   // const { url } = dataInfoGeneral;
   const { name } = useParams();
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
   // console.log({dataInfoGeneral})
   // console.log({ dataEvento: data });
   // console.log({name})
@@ -48,7 +48,8 @@ export const DetalleEvento = () => {
           VITE_PASS
         );
         // console.log({buttonBuyLink: data.product.buttonBuyLink});
-        // console.log({data});
+        // console.log({dataDetail: data});
+        // if (data === undefined) return <Navigate to="/" />;
         setData(data);
         setItemsAccordion({
           performances: data.product.performances,
@@ -70,8 +71,6 @@ export const DetalleEvento = () => {
   // itemsAccordion.forEach( item => console.log(item) )
 
   if (data === null || dataInfoGeneral.length === 0) return <Spinner />;
-
-  if (itemsAccordion === null) return <Spinner />;
 
   if (data === undefined || data.length === 0) return <Navigate to="/" />;
 
