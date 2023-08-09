@@ -95,7 +95,7 @@ export const DetalleEvento = () => {
                   __html: DOMPurify.sanitize(data.product.description),
                 }}
               ></p>
-              {data.product.buttonBuyLink === null ? (
+              {/* {data.product.buttonBuyLink === null ? (
                 <a
                   href={`${data.product.url}selection/event/date?productId=${data.product.productId}`}
                   target="_blank"
@@ -143,7 +143,7 @@ export const DetalleEvento = () => {
                     Comprar entradas
                   </button>
                 </a>
-              )}
+              )} */}
             </div>
           </div>
         </div>
