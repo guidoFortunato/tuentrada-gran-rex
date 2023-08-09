@@ -73,6 +73,7 @@ export const BusquedaEventos = () => {
                 key={item.id}
                 data={item}
                 imgSTXLarge={item.stxImagLarge}
+                internalState={item.internalState}
               />
             ))}
           </div>

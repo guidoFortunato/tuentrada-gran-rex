@@ -4,7 +4,7 @@ export const EventAvailable = ({
   linkEvento,
   imgApi,
   title,
-  imgSTXLarge,
+  imgSTXVeryLarge,
   disponibility,
 }) => {
   // console.log({linkEvento})
@@ -21,18 +21,20 @@ export const EventAvailable = ({
           ) : (
             <img
               className="rounded-lg md:rounded-none"
-              src={imgSTXLarge}
+              src={imgSTXVeryLarge}
               alt={title}
             />
           )}
         </Link>
         <button
           type="button"
-          className={`  ${disponibility === "GOOD"
-          ? "bg-green-600"
-          : disponibility === "LIMITED"
-          ? "bg-pink-800"
-          : "bg-red-600"} z-10 absolute -right-0 -top-4 text-white rounded text-xs px-2 py-1 lg:py-1.5 text-center mr-2 mb-2`}
+          className={`  ${
+            disponibility === "GOOD"
+              ? "bg-green-600"
+              : disponibility === "LIMITED"
+              ? "bg-pink-800"
+              : "bg-red-600"
+          } z-10 absolute -right-0 -top-4 text-white rounded text-xs px-2 py-1 lg:py-1.5 text-center mr-2 mb-2`}
         >
           {disponibility === "GOOD"
             ? "Disponible"

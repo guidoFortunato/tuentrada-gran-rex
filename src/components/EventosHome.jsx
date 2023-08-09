@@ -8,7 +8,7 @@ export const EventosHome = () => {
   return (
     <>
       {eventosGenerales.map((item) => {
-        // console.log({item})
+        console.log({item})
         // if (item.stateSTX === "RUNNING") {
           return (
             <CardEvento
@@ -17,7 +17,8 @@ export const EventosHome = () => {
               title={item.name}
               key={item.id}
               data={item}
-              imgSTXLarge={item.stxImagLarge}
+              imgSTXVeryLarge={item.stxImagXLarge}
+              internalState={item.internalState}
             />
           );
         // }
