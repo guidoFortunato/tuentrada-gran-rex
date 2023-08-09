@@ -1,36 +1,44 @@
-import {
-  EventAvailable,
-  EventLimited,
-  EventNotAvailable,
-  EventNotForSale,
-} from "./eventDisponibility";
+import { EventAvailable } from "./disponibility";
 
-export const CardEvento = ({ img = "", title = "", linkEvento = "", data }) => {
+export const CardEvento = ({ imgApi = "", title = "", linkEvento = "", data = "", imgSTXLarge = "" }) => {
   // console.log({ name: data.name });
   // console.log({disponibility})
   // console.log(data.name.toLowerCase().includes("julieta") && data)
-  console.log({data})
+  console.log({ data });
 
   return (
     <article className="text-center pt-4">
-      {data.disponibility === "GOOD" ? (
+      <EventAvailable
+        linkEvento={linkEvento}
+        imgApi={imgApi}
+        imgSTXLarge={imgSTXLarge}
+        title={title}
+        disponibility={data.disponibility}
+      />
+      {/* {data.disponibility === "GOOD" ? (
         <EventAvailable
           linkEvento={linkEvento}
-          img={img}
+          imgApi={imgApi}
+          imgSTXLarge={imgSTXLarge}
+          imgSTXVeryLarge={imgSTXVeryLarge}
           title={title}
           data={data}
         />
       ) : data.disponibility === "LIMITED" ? (
         <EventLimited
           linkEvento={linkEvento}
-          img={img}
+          imgApi={imgApi}
+          imgSTXLarge={imgSTXLarge}
+          imgSTXVeryLarge={imgSTXVeryLarge}
           title={title}
           data={data}
         />
       ) : data.disponibility === "SOLD_OUT" ? (
         <EventNotForSale
           linkEvento={linkEvento}
-          img={img}
+          imgApi={imgApi}
+          imgSTXLarge={imgSTXLarge}
+          imgSTXVeryLarge={imgSTXVeryLarge}
           title={title}
           disponibility={disponibility}
           reasonSuspended={reasonSuspended}
@@ -41,7 +49,9 @@ export const CardEvento = ({ img = "", title = "", linkEvento = "", data }) => {
       ) : data.disponibility === "SUSPENDED" ? (
         <EventNotForSale
           linkEvento={linkEvento}
-          img={img}
+          imgApi={imgApi}
+          imgSTXLarge={imgSTXLarge}
+          imgSTXVeryLarge={imgSTXVeryLarge}
           title={title}
           disponibility={disponibility}
           reasonSuspended={reasonSuspended}
@@ -52,7 +62,9 @@ export const CardEvento = ({ img = "", title = "", linkEvento = "", data }) => {
       ) : data.disponibility === "CANCELED" ? (
         <EventNotForSale
           linkEvento={linkEvento}
-          img={img}
+          imgApi={imgApi}
+          imgSTXLarge={imgSTXLarge}
+          imgSTXVeryLarge={imgSTXVeryLarge}
           title={title}
           disponibility={disponibility}
           reasonSuspended={reasonSuspended}
@@ -61,8 +73,13 @@ export const CardEvento = ({ img = "", title = "", linkEvento = "", data }) => {
           data={data}
         />
       ) : (
-        <EventNotAvailable img={img} title={title} />
-      )}
+        <EventNotAvailable
+          imgApi={imgApi}
+          imgSTXLarge={imgSTXLarge}
+          imgSTXVeryLarge={imgSTXVeryLarge}
+          title={title}
+        />
+      )} */}
     </article>
   );
 };

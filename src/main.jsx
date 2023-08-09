@@ -1,12 +1,11 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App";
-import 'normalize.css'
+import "normalize.css";
 import "./index.css";
 
 import { BrowserRouter } from "react-router-dom";
 import EventosProvider from "./context/EventosProvider";
-
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
@@ -15,5 +14,5 @@ ReactDOM.createRoot(document.getElementById("root")).render(
         <App />
       </EventosProvider>
     </BrowserRouter>
-  </React.StrictMode> 
+  </React.StrictMode>
 );

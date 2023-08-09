@@ -7,12 +7,12 @@
 
 ## TODO 
 
-7. boton proximamente en el product general
+1. sitemap dinámico
 
-14. sitemap dinámico
+2. autocompletado onSale backend, si completan la fecha "desde" debe estar requerido que completen "hasta", fecha "hasta" no puede ser menor a "desde". Proximamente no puede ser menor a onSale.
 
-15. autocompletado onSale backend, si completan la fecha "desde" debe estar requerido que completen "hasta", fecha "hasta" no puede ser menor a "desde". Proximamente no puede ser menor a onSale.
+3. agregar en los colores del site: background gradient
 
-18. no aparecen los segundos en editar fecha en backend
+4. api search, buscar pela romero yb darle click, mismo probelma que calendario, esta guardado sin el onSaleForm, no deberia venir en la api de search
 
-22. agregar en los colores del site: background gradient
+5. gladys aparece en el backend como running pero no me lo trae la api

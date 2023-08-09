@@ -13,10 +13,11 @@ export const EventosHome = () => {
           return (
             <CardEvento
               linkEvento={item.slug}
-              img={item.image}
+              imgApi={item.image}
               title={item.name}
               key={item.id}
               data={item}
+              imgSTXLarge={item.stxImagLarge}
             />
           );
         // }

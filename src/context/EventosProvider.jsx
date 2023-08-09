@@ -36,7 +36,7 @@ const EventosProvider = (props) => {
 
     // const sitemap = generateSitemap2()
     // console.log({sitemap})
-    console.log({idVenue})
+    // console.log({idVenue})
   
 
   useEffect(() => {
@@ -58,7 +58,7 @@ const EventosProvider = (props) => {
     if (idVenue !== "") {
       // console.log({idVenue})
       const getDataEventosGenerales = async () => {
-        const newLocal = `${VITE_API_EVENTOS + idVenue}/products/?page=${page}`;// https://testapi.tuentrada.com/api/v1/site/venue/136/products/?page=1
+        const newLocal = `${VITE_API_EVENTOS + idVenue}/products/?page=${page}`;
         const info = await getData(newLocal, VITE_EMAIL, VITE_PASS);
         // console.log({dataEventosGenerales: info.data})
         // console.log({infoData:info})
