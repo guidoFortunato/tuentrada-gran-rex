@@ -20,3 +20,6 @@
 6. agregar "/" a slug. ver busqueda Eventos
 
 7. que en el onSale hasta se copmplete automaticamente la fecha del evento, una hora despues
+
+8. ver disponibilidad proximamente en calendario
+

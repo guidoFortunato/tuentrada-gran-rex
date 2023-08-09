@@ -93,11 +93,9 @@ export const Calendario = () => {
     // console.log({extendedProps: info.event._def.extendedProps})
     // console.log({disponibility: info.event._def.extendedProps.disponibility})
     // console.log({reason: info.event._def.extendedProps.reason})
-    const status =
-      info.event._def.extendedProps.disponibility == "LIMITED"
-        ? "LIMITED"
-        : info.event._def.extendedProps.disponibility == "NONE" &&
-          info.event._def.extendedProps.reason;
+    console.log(info)
+
+    const status = info.event._def.extendedProps.disponibility == "LIMITED" ? "LIMITED"  : info.event._def.extendedProps.disponibility == "NONE" &&  info.event._def.extendedProps.reason;
     // console.log({status})
     if (status == "SOLD_OUT") {
       const tooltip = tippy(info.el, {
