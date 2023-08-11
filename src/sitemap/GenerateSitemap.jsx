@@ -17,7 +17,7 @@ export const GenerateSitemap = () => {
           VITE_EMAIL,
           VITE_PASS
         );
-        // console.log({dataSitemap: data})
+        console.log({dataSitemap: data})
         setUrls(data);
       };
       getUrlSitemap();

@@ -16,7 +16,7 @@ export const Accordion = ({ itemsAccordion, dataEvento }) => {
 
   // console.log({ itemsAccordion });
   // console.log({ dataEvento });
-  // console.log({newPerformances})
+  console.log({newPerformances})
 
   useEffect(() => {
     if (itemsAccordion.disponibility.length > 0) {
@@ -64,7 +64,7 @@ export const Accordion = ({ itemsAccordion, dataEvento }) => {
               {newPerformances.map((item) => {
                 // console.log({internalState: item.internalState})
                 // console.log({item})
-                if (item.internalState !== "sin fechas") {
+                // if (item.internalState !== "sin fechas") {
                   return (
                     <FechaEvento
                       dataFechas={item}
@@ -75,7 +75,7 @@ export const Accordion = ({ itemsAccordion, dataEvento }) => {
                       internalState={item.internalState}
                     />
                   );
-                }
+                // }
               })}
             </div>
           </div>

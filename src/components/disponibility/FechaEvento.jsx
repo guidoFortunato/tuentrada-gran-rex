@@ -51,6 +51,10 @@ export const FechaEvento = ({
     );
   }
 
+  if (availabilitLevel === "NONE" && reason !== "SOLD_OUT") {
+    return
+  }
+
   return (
     <>
       <div className="lg:flex lg:flex-row lg:justify-between border-b-2 border-gray-200 p-5">
@@ -78,7 +82,7 @@ export const FechaEvento = ({
             setOpenModal={setOpenModal}
           />
         )}
-        {availabilitLevel === "NONE" && reason == "SOLD_OUT" && (
+        {availabilitLevel === "NONE" && reason === "SOLD_OUT" && (
           <FechaAccordionAgotada
             dia={dia}
             hora={hora}
