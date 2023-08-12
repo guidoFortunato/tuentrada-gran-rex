@@ -15,8 +15,8 @@ export const Accordion = ({ itemsAccordion, dataEvento }) => {
   const [newPerformances, setNewPerformances] = useState(null);
 
   // console.log({ itemsAccordion });
-  // console.log({ dataEvento });
-  console.log({newPerformances})
+  console.log({ dataEvento });
+  // console.log({newPerformances})
 
   useEffect(() => {
     if (itemsAccordion.disponibility.length > 0) {

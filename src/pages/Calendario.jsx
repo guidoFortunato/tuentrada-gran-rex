@@ -80,7 +80,7 @@ export const Calendario = () => {
     const {internalState} = info.event._def.extendedProps;
     // console.log({internalState})
 
-    if (internalState != "soon") {
+    if (internalState !== "soon") {
       navigate(info.event._def.url);
     }
   };
@@ -96,11 +96,11 @@ export const Calendario = () => {
     // console.log({reason: info.event._def.extendedProps.reason})
     // console.log(info)
 
-    const status = info.event._def.extendedProps.disponibility == "LIMITED" ? "LIMITED"  : info.event._def.extendedProps.disponibility == "NONE" &&  info.event._def.extendedProps.reason;
+    const status = info.event._def.extendedProps.disponibility === "LIMITED" ? "LIMITED"  : info.event._def.extendedProps.disponibility === "NONE" &&  info.event._def.extendedProps.reason;
 
     const {internalState} = info.event._def.extendedProps
     // console.log({status})
-    if (internalState == "soon") {
+    if (internalState === "soon") {
       const tooltip = tippy(info.el, {
         content: "Próximamente",
         placement: "top",
@@ -109,7 +109,7 @@ export const Calendario = () => {
       return tooltip;
     }
 
-    if (status == "SOLD_OUT") {
+    if (status === "SOLD_OUT") {
       const tooltip = tippy(info.el, {
         content: "Agotado",
         placement: "top",
@@ -117,7 +117,7 @@ export const Calendario = () => {
       });
       return tooltip;
     }
-    if (status == "SUSPENDED") {
+    if (status === "SUSPENDED") {
       const tooltip = tippy(info.el, {
         content: "Suspendido",
         placement: "top",
@@ -125,7 +125,7 @@ export const Calendario = () => {
       });
       return tooltip;
     }
-    if (status == "CANCELED") {
+    if (status === "CANCELED") {
       const tooltip = tippy(info.el, {
         content: "Cancelado",
         placement: "top",
@@ -133,7 +133,7 @@ export const Calendario = () => {
       });
       return tooltip;
     }
-    if (status == "LIMITED") {
+    if (status === "LIMITED") {
       const tooltip = tippy(info.el, {
         content: "Últimas entradas!",
         placement: "top",

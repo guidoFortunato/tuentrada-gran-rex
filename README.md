@@ -19,3 +19,7 @@
 
 7. que en el onSale hasta se complete automaticamente la fecha del evento, una hora despues
 
+8. problema con isCancel
+
+9. vienen los product con state en suspended en la api de calendario
+
