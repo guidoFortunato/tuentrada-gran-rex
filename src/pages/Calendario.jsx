@@ -77,9 +77,10 @@ export const Calendario = () => {
   const handleClick = (info) => {
     info.jsEvent.preventDefault();
     // console.log({ def: info.event._def });
-    const statusEvento = info.event._def.extendedProps.state.toLowerCase() !== "próximamente";
+    const {internalState} = info.event._def.extendedProps;
+    // console.log({internalState})
 
-    if (statusEvento) {
+    if (internalState != "soon") {
       navigate(info.event._def.url);
     }
   };
@@ -96,7 +97,18 @@ export const Calendario = () => {
     // console.log(info)
 
     const status = info.event._def.extendedProps.disponibility == "LIMITED" ? "LIMITED"  : info.event._def.extendedProps.disponibility == "NONE" &&  info.event._def.extendedProps.reason;
+
+    const {internalState} = info.event._def.extendedProps
     // console.log({status})
+    if (internalState == "soon") {
+      const tooltip = tippy(info.el, {
+        content: "Próximamente",
+        placement: "top",
+        theme: "dark",
+      });
+      return tooltip;
+    }
+
     if (status == "SOLD_OUT") {
       const tooltip = tippy(info.el, {
         content: "Agotado",

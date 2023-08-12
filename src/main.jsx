@@ -1,11 +1,11 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
+import { BrowserRouter } from "react-router-dom";
 import App from "./App";
+import EventosProvider from "./context/EventosProvider";
+
 import "normalize.css";
 import "./index.css";
-
-import { BrowserRouter } from "react-router-dom";
-import EventosProvider from "./context/EventosProvider";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>

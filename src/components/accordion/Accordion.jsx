@@ -12,24 +12,27 @@ export const Accordion = ({ itemsAccordion, dataEvento }) => {
   const [mediaJson, setMediaJson] = useState(true);
   const [promotion, setPromotion] = useState(true);
   const [recomendation, setRecomendation] = useState(false);
-  const [newPerformances, setNewPerformances] = useState([]);
+  const [newPerformances, setNewPerformances] = useState(null);
 
   // console.log({ itemsAccordion });
   // console.log({ dataEvento });
-  // console.log(newPerformances)
+  console.log({newPerformances})
 
   useEffect(() => {
-    const updatedPerformances = itemsAccordion.performances.map(
-      (performance, index) => ({
-        ...performance,
-        availabilitLevel: itemsAccordion.disponibility[index].availabilitLevel,
-        reason: itemsAccordion.disponibility[index].reason,
-      })
-    );
-    setNewPerformances(updatedPerformances);
+    if (itemsAccordion.disponibility.length > 0) {
+      const updatedPerformances = itemsAccordion.performances.map(
+        (performance, index) => ({
+          ...performance,
+          availabilitLevel:
+            itemsAccordion.disponibility[index].availabilitLevel,
+          reason: itemsAccordion.disponibility[index].reason,
+        })
+      );
+      setNewPerformances(updatedPerformances);
+    }
   }, []);
 
-  if (newPerformances.length === 0) return <Spinner />;
+  if (newPerformances === null) return <Spinner />;
 
   return (
     <div id="accordion-open" data-accordion="open" className="mt-5">
@@ -61,7 +64,7 @@ export const Accordion = ({ itemsAccordion, dataEvento }) => {
               {newPerformances.map((item) => {
                 // console.log({internalState: item.internalState})
                 // console.log({item})
-                if (item.internalState !== "sin fechas") {
+                // if (item.internalState !== "sin fechas") {
                   return (
                     <FechaEvento
                       dataFechas={item}
@@ -72,7 +75,7 @@ export const Accordion = ({ itemsAccordion, dataEvento }) => {
                       internalState={item.internalState}
                     />
                   );
-                }
+                // }
               })}
             </div>
           </div>
@@ -142,7 +145,7 @@ export const Accordion = ({ itemsAccordion, dataEvento }) => {
             aria-labelledby="accordion-open-heading-2"
           >
             <div className="p-5 border-0 border-gray-200 dark:border-gray-700">
-            {itemsAccordion.history && (
+              {itemsAccordion.history && (
                 <p
                   className={`text-base mb-6 text-gray-500`}
                   dangerouslySetInnerHTML={{
@@ -154,8 +157,6 @@ export const Accordion = ({ itemsAccordion, dataEvento }) => {
               {Boolean(dataEvento.historyImage) && (
                 <img src={dataEvento.historyImage} alt="" />
               )}
-              
-              
             </div>
           </div>
         </>
@@ -184,7 +185,7 @@ export const Accordion = ({ itemsAccordion, dataEvento }) => {
             aria-labelledby="accordion-open-heading-6"
           >
             <div className="p-5 border-0 border-gray-200 dark:border-gray-700">
-            {itemsAccordion.recomendation && (
+              {itemsAccordion.recomendation && (
                 <p
                   className={`text-base mb-6 text-gray-500`}
                   dangerouslySetInnerHTML={{
@@ -196,7 +197,6 @@ export const Accordion = ({ itemsAccordion, dataEvento }) => {
               {Boolean(dataEvento.recomendationImage) && (
                 <img src={dataEvento.recomendationImage} alt="" />
               )}
-            
             </div>
           </div>
         </>
@@ -224,7 +224,7 @@ export const Accordion = ({ itemsAccordion, dataEvento }) => {
             aria-labelledby="accordion-open-heading-7"
           >
             <div className="p-5 border-0 border-gray-200 dark:border-gray-700">
-            {itemsAccordion.extra && (
+              {itemsAccordion.extra && (
                 <p
                   className={`text-base mb-6 text-gray-500`}
                   dangerouslySetInnerHTML={{
@@ -236,7 +236,6 @@ export const Accordion = ({ itemsAccordion, dataEvento }) => {
               {Boolean(dataEvento.extraImage) && (
                 <img src={dataEvento.extraImage} alt="" />
               )}
-             
             </div>
           </div>
         </>
