@@ -1,21 +1,21 @@
 import { useContext, useEffect } from "react";
 import { EventosContext } from "../context/EventosProvider";
-import { getEnvVariables, useFetch } from "../helpers";
-import { CardEvento, FormBusqueda, Spinner } from "../components/";
-
-// import { SliderDestacado } from "../components/";
-
-import "../css/header.css";
-import "../css/footer.css";
-
-const urlEventos = "/storage/json/eventos.json";
-// const urlTestEventos = "/src/json/eventosTest.json";
-// const { VITE_JSON_EVENTOS } = getEnvVariables();
-
+import { HeaderNoEventos, HeaderEventos } from "../components/header/";
+import { MainNoEventos, MainEventos } from "../components/main/";
 
 export const Home = () => {
-  const { dataNavbar, isLoadingNavbar } = useContext(EventosContext);
-  const { data: dataEventos, isLoading: isLoadingEventos } = useFetch( urlEventos );
+  const {
+    eventosGenerales,
+    // setPage,
+    data,
+    handleButtonsCollapse: handleNavBarCollapse,
+  } = useContext(EventosContext);
+  // console.log({data});
+  // console.log({ dataInfoGeneral });
+
+  useEffect(() => {
+    handleNavBarCollapse();
+  }, []);
 
   useEffect(() => {
     setTimeout(() => {
@@ -23,66 +23,40 @@ export const Home = () => {
     }, 100);
   }, []);
 
-  if (isLoadingNavbar) {
-    return <Spinner />;
-  }
-  if (isLoadingEventos) {
-    return <Spinner />;
-  }
+  // useEffect(() => {
 
+  //     const getInfo = async () => {
+  //       const newLocal = `${VITE_API_EVENTOS + 136}?page=${page}`;
+  //       const info = await getData(newLocal, VITE_EMAIL, VITE_PASS);
+  //       // console.log(info);
+  //       // console.log(info.data);
+  //       console.log('ejecuta uef')
+  //       setData(info);
+  //       setEventos((prevEventos) => prevEventos.concat(info.data));
+  //     };
+  //     getInfo();
+
+  // }, [page]);
+
+  if (data === null) return <span></span>;
+
+  if (
+    eventosGenerales === undefined ||
+    eventosGenerales.length === 0 ||
+    data?.data?.length === 0
+  ) {
+    return (
+      <>
+        <HeaderNoEventos />
+        <MainNoEventos />
+      </>
+    );
+  }
 
   return (
     <>
-      <header className="animate__animated animate__fadeIn animate__fast">
-        <div className="header-home">
-          <h1 className="titulo-principal animate__animated animate__fadeInDown animate__fast	 ">
-            <strong>{ dataNavbar?.items[0].titulo1.toUpperCase() }</strong>
-          </h1>
-          <FormBusqueda placeholder={ dataNavbar?.placeholderInput } />
-        </div>
-      </header>
-      <main>
-        <div className="container">
-          <div className="row animate__animated animate__fadeIn animate__fast	 ">
-            <div className="col-12 text-center mt-3 ">
-              <h2
-                style={{ fontSize: "30px" }}
-                className="my-3 animate__fadeIn animate__delay-1s tittle-h2"
-              >
-                {dataNavbar?.items[0].titulo2.toUpperCase()}
-              </h2>
-            </div>
-          </div>
-
-          {/* <div className="row justify-content-center">
-            <SliderDestacado />
-          </div>
-          <div className="img-slider">
-            <div className="img-opacity">
-              <h3>SOY UN COMUNICADO</h3>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam
-                aspernatur illo praesentium, dolore eos nostrum voluptatibus id
-                obcaecati cum ad impedit velit eligendi voluptatem quisquam nam
-                voluptate pariatur, enim deleniti.
-              </p>
-            </div>
-          </div> */}
-
-          <div className="row sin-padding-right-left animate__animated animate__fadeIn  animate__delay-1s ">
-            {dataEventos?.eventos.map((evento) => (
-              <CardEvento
-                linkEvento={evento.links.path}
-                img={evento.imagenes.evento}
-                status={evento.estado}
-                title={evento.nombre}
-                key={evento.id}
-                disabled={evento.disabled}
-              />
-            ))}
-          </div>
-        </div>
-      </main>
+      <HeaderEventos />
+      <MainEventos />
     </>
   );
 };

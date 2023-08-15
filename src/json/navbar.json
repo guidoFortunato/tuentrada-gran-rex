@@ -89,10 +89,10 @@
     },
     {
       "id": 7,
-      "name": "Términos y condiciones",
-      "link": "/terminos-condiciones",
-      "mostrar": false,
-      "titulo1": "Términos y condiciones",
+      "name": "Bases y Condiciones",
+      "link": "/bases-y-condiciones",
+      "mostrar": true,
+      "titulo1": "Bases y Condiciones",
       "titulo2": ""
     }
   ],

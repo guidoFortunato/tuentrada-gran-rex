@@ -1,18 +1,31 @@
-import { useContext, useEffect } from "react";
-import { EventosContext } from "../context/EventosProvider";
-import { useParams } from "react-router-dom";
-
+import { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { CardEvento, FormBusqueda, Spinner } from "../components";
+import { Navigate, useLocation } from "react-router-dom";
+
+import { EventosContext } from "../context/EventosProvider";
+import { CardEvento, Spinner } from "../components";
+import { getData, getEnvVariables } from "../helpers";
+
+const { VITE_API_EVENTOS, VITE_EMAIL, VITE_PASS } = getEnvVariables();
 
 export const BusquedaEventos = () => {
-  const { listaEventosBusqueda, agregarEvento, dataNavbar, isLoadingNavbar } = useContext(EventosContext);
-
-  let { name } = useParams();
+  const [data, setData] = useState(null);
+  const {
+    idVenue,
+    dataInfoGeneral,
+    handleButtonsCollapse: handleNavBarCollapse,
+  } = useContext(EventosContext);
+  const { pathname, search } = useLocation();
+  const [isLoading, setIsLoading] = useState(false);
+  const query = search.split("=")[1];
+  const paramSearch = (pathname.split("/")[2] + search).split("=")[0] + "=";
+  // console.log(paramSearch);
+  // console.log({pathname,search})
+  // console.log({pathname,search})
 
   useEffect(() => {
-    agregarEvento(name);
-  }, [name]);
+    handleNavBarCollapse();
+  }, []);
 
   useEffect(() => {
     setTimeout(() => {
@@ -20,52 +33,73 @@ export const BusquedaEventos = () => {
     }, 100);
   }, []);
 
-  if (isLoadingNavbar) {
-    return <Spinner />;
-  }
+  useEffect(() => {
+    if (idVenue !== "") {
+      const getInfo = async () => {
+        setIsLoading(true);
+        const { data } = await getData(
+          VITE_API_EVENTOS + idVenue + "/search/" + query,
+          VITE_EMAIL,
+          VITE_PASS
+        );
+        // console.log( data );
+        setData(data);
+        setIsLoading(false);
+      };
+      getInfo();
+    }
+  }, [idVenue, query, search]);
+
+  // console.log({isLoading})
+
+  if (data === null) return <Spinner />;
+
+  if (isLoading === true) return <Spinner />;
+
+  if (data === undefined) return <Navigate to="/" />;
+
+  if (paramSearch !== "search?q=") return <Navigate to="/" />;
 
   return (
     <>
-      <div className="container animate__animated animate__fadeIn animate__fast">
-        <div className="row justify-content-center my-5 form">
-          <FormBusqueda placeholder={dataNavbar?.placeholderInput} />
-        </div>
-        <div className="row justify-content-center py-5">
-          <h2 className="text-center">
-            {dataNavbar?.resultadoBusqueda} <strong>"{name}"</strong>
-          </h2>
-        </div>
-        <div className="row justify-content-center">
-          {listaEventosBusqueda?.length > 0 ? (
-            listaEventosBusqueda?.map((evento) => (
+      <div className="container mx-auto">
+        {data.length > 0 ? (
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6 lg:gap-10 mt-10 px-3 lg:px-0">
+            {data.map((item) => (
               <CardEvento
-                linkEvento={evento.links.path}
-                img={evento.imagenes.evento}
-                status={evento.estado}
-                title={evento.nombre}
-                key={evento.id}
-                disabled={evento.disabled}
+                linkEvento={"/" + item.slug}
+                imgApi={item.image}
+                title={item.name}
+                key={item.id}
+                data={item}
+                imgSTXVeryLarge={item.stxImagXLarge}
+                internalState={item.internalState}
               />
-            ))
-          ) : (
-            <div
-              className="d-flex justify-content-center alert alert-danger my-5 w-50"
-              role="alert"
-            >
-              {dataNavbar?.noHayEventos}
+            ))}
+          </div>
+        ) : (
+          <div
+            className="mt-10 flex justify-center mx-auto  p-4 mb-4 text-sm   }"
+            role="alert"
+          >
+            <span className="sr-only">Info</span>
+            <div>
+              <span
+                className="font-semibold text-xl text-center flex justify-center items-center flex-col"
+                style={{
+                  color: dataInfoGeneral.backgroundButton,
+                }}
+              >
+                <img
+                  className="w-60 lg:w-1/2"
+                  src="https://www.tuentrada.com/teatro/gran-rex/imagenes/error.png"
+                  alt="no hay eventos"
+                />
+                No pudimos encontrar el evento
+              </span>
             </div>
-          )}
-        </div>
-        <div className="row">
-          <Link to="/" className="text-center">
-            <div
-              style={{ fontSize: "14px", padding: "3px 20px" }}
-              className="btn-general"
-            >
-              {dataNavbar?.botonHomeBusqueda}
-            </div>
-          </Link>
-        </div>
+          </div>
+        )}
       </div>
     </>
   );

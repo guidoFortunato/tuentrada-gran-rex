@@ -1,10 +1,7 @@
-import { useContext, useEffect } from "react";
+import { useContext, useEffect, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
-
 import { EventosContext } from "../context/EventosProvider";
-import { Spinner } from "../components";
-import { getEnvVariables, useFetch } from "../helpers";
-
+import { getEnvVariables } from "../helpers";
 import FullCalendar from "@fullcalendar/react"; // must go before plugins
 import dayGridPlugin from "@fullcalendar/daygrid";
 import timeGridPlugin from "@fullcalendar/timegrid";
@@ -12,12 +9,10 @@ import interactionPlugin from "@fullcalendar/interaction";
 import bootstrap5Plugin from "@fullcalendar/bootstrap5";
 import listViewPlugin from "@fullcalendar/list";
 import tippy from "tippy.js";
+import "tippy.js/dist/tippy.css";
+import "tippy.js/animations/scale.css";
 
-
-import 'tippy.js/dist/tippy.css';
-import 'tippy.js/animations/scale.css';
-
-import "../css/calendario.css";
+// const { VITE_API_INFO_GENERAL, VITE_EMAIL, VITE_PASS } = getEnvVariables();
 
 const month = [
   "Enero",
@@ -34,7 +29,6 @@ const month = [
   "Diciembre",
 ];
 
-
 const fullPlugins = [
   dayGridPlugin,
   timeGridPlugin,
@@ -44,15 +38,15 @@ const fullPlugins = [
 ];
 
 const headerToolbarOptionsResponsive = {
-  start: "title", // will normally be on the left. if RTL, will be on the right
+  start: "title",
   center: "",
-  end: "today prev,next", // will normally be on the right. if RTL, will be on the left
+  end: "today prev,next",
 };
 
 const headerToolbarOptionsDesktop = {
-  start: "today prev,next", // will normally be on the left. if RTL, will be on the right
+  start: "today prev,next",
   center: "title",
-  end: "dayGridMonth,dayGridWeek", // will normally be on the right. if RTL, will be on the left
+  end: "dayGridMonth,dayGridWeek",
 };
 
 const buttonTextOptions = {
@@ -68,38 +62,27 @@ const eventTimeFormat = {
   minute: "2-digit",
 };
 
-const urlEventos = "/storage/json/eventos.json";
-// const urlTestEventos = "/src/json/eventosTest.json";
-// const { VITE_JSON_EVENTOS } = getEnvVariables();
-
-
 export const Calendario = () => {
-  const { dataNavbar, isLoadingNavbar } = useContext(EventosContext)
-  const { data: dataEventos, isLoading: isLoadingEventos } = useFetch(urlEventos);
-
+  const {
+    dataInfoGeneral,
+    eventosCalendario,
+    handleButtonsCollapse: handleNavBarCollapse,
+  } = useContext(EventosContext);
+  // const [data, setData] = useState(null);
   const navigate = useNavigate();
   const { pathname } = useLocation();
-  const newEvents = []
-  
   localStorage.setItem("lastPath", pathname);
-
-  for (let i = 0; i < dataEventos?.eventos.length; i++) {
-    for (let j = 0; j < dataEventos?.eventos[i].fechas.length; j++) {
-      newEvents.push({id: dataEventos?.eventos[i].id, start: dataEventos?.eventos[i].fechas[j].start, title: dataEventos?.eventos[i].nombre.toUpperCase(), url: dataEventos?.eventos[i].links.path, display: dataEventos?.eventos[i].display, status: dataEventos?.eventos[i].fechas[j].estadoCalendario})      
-    }    
-  }
-
+  // console.log({eventosCalendario})
+  // console.log({dataInfoGeneral})
   const handleClick = (info) => {
-
     info.jsEvent.preventDefault();
-    const statusEvento =  info.event.extendedProps.status?.toLowerCase() !== "próximamente";
+    // console.log({ def: info.event._def });
+    const {internalState} = info.event._def.extendedProps;
+    // console.log({internalState})
 
-    if (statusEvento) {
-      navigate(info.event.url);
+    if (internalState !== "soon") {
+      navigate(info.event._def.url);
     }
-    
-
-
   };
 
   const handleTitle = (info) => {
@@ -107,42 +90,70 @@ export const Calendario = () => {
     return month[date.month] + " - " + date.year;
   };
 
-  const handleEventMount = ( info ) => {
+  const handleEventMount = (info) => {
+    console.log({extendedProps: info.event._def.extendedProps})
+    // console.log({disponibility: info.event._def.extendedProps.disponibility})
+    // console.log({reason: info.event._def.extendedProps.reason})
+    // console.log(info)
 
-    const status = info.event.extendedProps.status?.toLowerCase()
-      if (status === "agotado") {
-        const tooltip = tippy(info.el, {
-          content: 'Agotado',
-          placement: 'top',
-          theme: 'dark',
-        });
-        return tooltip        
-      }
-      if (status === "próximamente") {
-        const tooltip = tippy(info.el, {
-          content: 'Próximamente',
-          placement: 'top',
-          theme: 'dark',
-        });
-        return tooltip        
-      }
-      if (status === "cancelado") {
-        const tooltip = tippy(info.el, {
-          content: 'Cancelado',
-          placement: 'top',
-          theme: 'dark',
-        });
-        return tooltip        
-      }
-      if (status === "reprogramado") {
-        const tooltip = tippy(info.el, {
-          content: 'Reprogramado',
-          placement: 'top',
-          theme: 'dark',
-        });
-        return tooltip        
-      }
-  }
+    const status = info.event._def.extendedProps.disponibility === "LIMITED" ? "LIMITED"  : info.event._def.extendedProps.disponibility === "NONE" &&  info.event._def.extendedProps.reason;
+
+    const {internalState} = info.event._def.extendedProps
+    // console.log({internalState})
+    if (internalState === "soon") {
+      const tooltip = tippy(info.el, {
+        content: "Próximamente",
+        placement: "top",
+        theme: "dark",
+      });
+      return tooltip;
+    }
+    if (internalState === "cancel") {
+      const tooltip = tippy(info.el, {
+        content: "Cancelado",
+        placement: "top",
+        theme: "dark",
+      });
+      return tooltip;
+    }
+
+    if (status === "SOLD_OUT") {
+      const tooltip = tippy(info.el, {
+        content: "Agotado",
+        placement: "top",
+        theme: "dark",
+      });
+      return tooltip;
+    }
+    if (status === "SUSPENDED") {
+      const tooltip = tippy(info.el, {
+        content: "Suspendido",
+        placement: "top",
+        theme: "dark",
+      });
+      return tooltip;
+    }
+    if (status === "CANCELED") {
+      const tooltip = tippy(info.el, {
+        content: "Cancelado",
+        placement: "top",
+        theme: "dark",
+      });
+      return tooltip;
+    }
+    if (status === "LIMITED") {
+      const tooltip = tippy(info.el, {
+        content: "Últimas entradas!",
+        placement: "top",
+        theme: "dark",
+      });
+      return tooltip;
+    }
+  };
+
+  useEffect(() => {
+    handleNavBarCollapse();
+  }, []);
 
   useEffect(() => {
     setTimeout(() => {
@@ -150,46 +161,69 @@ export const Calendario = () => {
     }, 100);
   }, []);
 
-  if (isLoadingNavbar) {
-    return <Spinner/>;
-  }
-  if (isLoadingEventos) {
-    return <Spinner/>;
-  }
+  // useEffect(() => {
+  //   if (idVenue !== "") {
+  //     const getInfo = async () => {
+  //       const { data } = await getData(
+  //         VITE_API_INFO_GENERAL + idVenue + "/calendar",
+  //         VITE_EMAIL,
+  //         VITE_PASS
+  //       );
+  //       setData(data);
+  //     };
+  //     getInfo();
+  //   }
+  // }, [idVenue]);
+
+  if (eventosCalendario === null || dataInfoGeneral.length === 0)
+    return <span></span>;
 
   return (
     <>
-      <div className="container animate__animated animate__fadeIn animate__fast">
-        <div className="row animate__animated animate__fadeIn ">
-          <div className="col-12 text-center mt-3 ">
-            <h2 style={{ fontSize: "30px" }} className="my-3 tittle-h2">
-              { dataNavbar?.items[1].titulo1}
-            </h2>
-          </div>
-        </div>
+      <div className="container mx-auto mb-5">
+        <section
+          style={{
+            backgroundImage: `url(${dataInfoGeneral.pages[1].image})`,
+          }}
+          className="bg-no-repeat bg-cover bg-center container mx-auto"
+        >
+          <h2
+            style={{ height: "40vh", background: "rgba(0, 0, 0, 0.5)" }}
+            className=" text-3xl flex lg:justify-start justify-center items-center lg:items-end text-white p-10 my-3 tittle-h2"
+          >
+            {dataInfoGeneral.pages[1].title}
+          </h2>
+        </section>
 
-        <div className="row mt-5 container-calendar">
-          <div className="col-12">
-            <FullCalendar
-              // eventBackgroundColor="red"
-              // eventClassNames={eventClassNames}
-              // eventMouseEnter={ handleMouseEnter }
-              buttonText={buttonTextOptions}
-              eventBackgroundColor="#ba2828"
-              eventBorderColor="#ba2828"
-              eventClick={handleClick}
-              eventDidMount={ handleEventMount }
-              events={newEvents}
-              eventTimeFormat={eventTimeFormat}
-              headerToolbar={ window.innerWidth < 1023 ? headerToolbarOptionsResponsive : headerToolbarOptionsDesktop }
-              height={"70vh"}
-              initialView={ window.innerWidth < 1023 ? "listMonth" : "dayGridMonth" }
-              locale={"es"}
-              noEventsContent={"No hay eventos disponibles"}
-              plugins={fullPlugins}
-              themeSystem={"bootstrap5"}
-              titleFormat={handleTitle}
-            />
+        <div className="container mx-auto mb-5">
+          <div className="mt-10 bg-white px-5 2xl:px-0">
+            <div className="grid grid-cols-1 ">
+              <FullCalendar 
+                buttonText={buttonTextOptions}
+                eventBackgroundColor= {dataInfoGeneral.backgroundButton}
+                eventBorderColor={dataInfoGeneral.backgroundButton}
+                eventTextColor="#FFF"
+                eventClick={handleClick}
+                eventDidMount={handleEventMount}
+                events={eventosCalendario}
+                eventTimeFormat={eventTimeFormat}
+                headerToolbar={
+                  window.innerWidth < 1023
+                    ? headerToolbarOptionsResponsive
+                    : headerToolbarOptionsDesktop
+                }
+                height={"100vh"}
+                initialView={
+                  window.innerWidth < 1023 ? "listMonth" : "dayGridMonth"
+                }
+                locale={"es"}
+                noEventsContent={"No hay eventos disponibles"}
+                plugins={fullPlugins}
+                themeSystem={"standard"}
+                titleFormat={handleTitle}
+                contentHeight="auto"
+              />
+            </div>
           </div>
         </div>
       </div>
