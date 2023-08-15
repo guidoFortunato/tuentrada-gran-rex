@@ -7,6 +7,7 @@ import { RedesSociales, Spinner } from "..";
 import { getData, getEnvVariables } from "../../helpers";
 import { Accordion } from "../accordion";
 
+
 const { VITE_API_EVENTOS, VITE_EMAIL, VITE_PASS } = getEnvVariables();
 
 export const DetalleEvento = () => {

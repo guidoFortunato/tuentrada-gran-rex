@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import { Modal } from "flowbite-react";
 import { TransformWrapper, TransformComponent } from "react-zoom-pan-pinch";
 import { EventosContext } from "../../context/EventosProvider";
-import { TablaPrecios } from "./";
+import { TablaPrecios } from "./TablaPrecios";
 import { AiFillPlusCircle } from "react-icons/ai";
 import { AiFillMinusCircle } from "react-icons/ai";
 import { RiRestartFill } from "react-icons/ri";

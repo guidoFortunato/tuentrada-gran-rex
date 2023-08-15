@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { EventosContext } from "../../context/EventosProvider";
-import { ModalPrecios } from "../detalleEvento/";
+import { ModalPrecios } from "../detalleEvento/ModalPrecios";
 
 export const FechaAccordionDisponible = ({
   dia,
