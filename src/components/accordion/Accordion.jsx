@@ -48,9 +48,13 @@ export const Accordion = ({ itemsAccordion, dataEvento }) => {
               onClick={() => setPerformances((prevState) => !prevState)}
             >
               <span className="flex items-center text-xl font-semibold">
-                {itemsAccordion.performances.length > 1
+                {itemsAccordion.performances.length > 1 && dataEvento.product.internalState !== "cancel"
                   ? "Fechas disponibles"
-                  : "Fecha disponible"}
+                  : itemsAccordion.performances.length <= 1 && dataEvento.product.internalState !== "cancel" ? "Fecha disponible"
+                  : itemsAccordion.performances.length > 1 && dataEvento.product.internalState === "cancel" ? "Fechas no disponibles"
+                  : itemsAccordion.performances.length <= 1 && dataEvento.product.internalState === "cancel" && "Fecha no disponible"
+                
+                }
               </span>
               <IconAccordion item={performances} />
             </button>

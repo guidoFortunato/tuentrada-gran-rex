@@ -1,4 +1,4 @@
-export const FechaAccordionAgotada = ({ dia, hora, mesFormateado, anio }) => {
+export const FechaAccordionAgotadaCancel = ({ dia, hora, mesFormateado, anio, internalState }) => {
   return (
     <>
       <div className="flex flex-row">
@@ -21,8 +21,8 @@ export const FechaAccordionAgotada = ({ dia, hora, mesFormateado, anio }) => {
           </div>
 
           <div>
-            <span className="uppercase text-red-400 text-xs font-semibold"> { /* text-gray-300 */ }
-              entradas agotadas
+            <span className={`${internalState === "cancel" ? "text-black" : "text-red-400"} uppercase text-xs font-semibold`}>
+              {internalState === "cancel" ? "fecha cancelada" : "entradas agotadas" }
             </span>
           </div>
 

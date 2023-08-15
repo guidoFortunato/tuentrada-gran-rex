@@ -91,7 +91,7 @@ export const Calendario = () => {
   };
 
   const handleEventMount = (info) => {
-    // console.log({extendedProps: info.event._def.extendedProps})
+    console.log({extendedProps: info.event._def.extendedProps})
     // console.log({disponibility: info.event._def.extendedProps.disponibility})
     // console.log({reason: info.event._def.extendedProps.reason})
     // console.log(info)
@@ -99,10 +99,18 @@ export const Calendario = () => {
     const status = info.event._def.extendedProps.disponibility === "LIMITED" ? "LIMITED"  : info.event._def.extendedProps.disponibility === "NONE" &&  info.event._def.extendedProps.reason;
 
     const {internalState} = info.event._def.extendedProps
-    // console.log({status})
+    // console.log({internalState})
     if (internalState === "soon") {
       const tooltip = tippy(info.el, {
         content: "Próximamente",
+        placement: "top",
+        theme: "dark",
+      });
+      return tooltip;
+    }
+    if (internalState === "cancel") {
+      const tooltip = tippy(info.el, {
+        content: "Cancelado",
         placement: "top",
         theme: "dark",
       });

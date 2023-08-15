@@ -72,7 +72,7 @@ export const BusquedaEventos = () => {
                 title={item.name}
                 key={item.id}
                 data={item}
-                imgSTXLarge={item.stxImagLarge}
+                imgSTXVeryLarge={item.stxImagXLarge}
                 internalState={item.internalState}
               />
             ))}

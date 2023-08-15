@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import {
   FechaAccordionDisponible,
   FechaAccordionLimited,
-  FechaAccordionAgotada,
+  FechaAccordionAgotadaCancel,
   FechaAccordionProximamente,
 } from "../accordion";
 
@@ -46,6 +46,20 @@ export const FechaEvento = ({
           hora={hora}
           mesFormateado={mesFormateado}
           anio={anio}
+
+        />
+      </div>
+    );
+  }
+  if (internalState === "cancel") {
+    return (
+      <div className="lg:flex lg:flex-row lg:justify-between border-b-2 border-gray-200 p-5">
+        <FechaAccordionAgotadaCancel
+          dia={dia}
+          hora={hora}
+          mesFormateado={mesFormateado}
+          anio={anio}
+          internalState={internalState}
         />
       </div>
     );
@@ -83,11 +97,12 @@ export const FechaEvento = ({
           />
         )}
         {availabilitLevel === "NONE" && reason === "SOLD_OUT" && (
-          <FechaAccordionAgotada
+          <FechaAccordionAgotadaCancel
             dia={dia}
             hora={hora}
             mesFormateado={mesFormateado}
             anio={anio}
+            internalState={internalState}
           />
         )}
       </div>

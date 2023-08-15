@@ -1,5 +1,5 @@
 export * from "./Accordion";
-export * from "./FechaAccordionAgotada";
+export * from "./FechaAccordionAgotadaCancel";
 export * from "./FechaAccordionDisponible";
 export * from "./FechaAccordionLimited";
 export * from "./FechaAccordionProximamente";

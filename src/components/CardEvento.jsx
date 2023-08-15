@@ -1,4 +1,4 @@
-import { EventAvailable, EventSoon } from "./disponibility";
+import { EventAvailable, EventCancel, EventSoon } from "./disponibility";
 
 export const CardEvento = ({
   imgApi = "",
@@ -13,6 +13,18 @@ export const CardEvento = ({
     return (
       <article className="text-center pt-4">
         <EventSoon
+          imgApi={imgApi}
+          imgSTXVeryLarge={imgSTXVeryLarge}
+          title={title}
+        />
+      </article>
+    );
+  }
+  if (internalState === "cancel") {
+    return (
+      <article className="text-center pt-4">
+        <EventCancel
+          linkEvento={linkEvento}
           imgApi={imgApi}
           imgSTXVeryLarge={imgSTXVeryLarge}
           title={title}

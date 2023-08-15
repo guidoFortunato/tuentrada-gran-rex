@@ -9,17 +9,10 @@
 
 1. sitemap dinámico
 
-2. onSale desde no debe estar requerido
-
 3. agregar en los colores del site: background gradient
-
-5. gladys aparece en el backend como running pero no me lo trae la api
 
 6. agregar "/" a slug. ver busqueda Eventos
 
 7. que en el onSale hasta se complete automaticamente la fecha del evento, una hora despues
 
-8. problema con isCancel
-
-9. vienen los product con state en suspended en la api de calendario
 
