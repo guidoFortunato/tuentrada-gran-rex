@@ -9,11 +9,11 @@ export const FechaAccordionLimited = ({
   anio,
   openModal,
   setOpenModal,
-  dataFechas,
+  dataFechas: dataFecha,
   dataEvento,
 }) => {
   const { dataInfoGeneral } = useContext(EventosContext);
-  // console.log({dataFechas})
+  // console.log({dataFecha})
   // console.log({dataInfoGeneral})
   return (
     <>
@@ -55,7 +55,7 @@ export const FechaAccordionLimited = ({
             <span>{hora}hs</span>
           </div>
           <ModalPrecios
-            performances={dataFechas}
+            performances={dataFecha}
             openModal={openModal}
             setOpenModal={setOpenModal}
           />
@@ -64,7 +64,7 @@ export const FechaAccordionLimited = ({
 
       <div className="text-end mt-4 lg:my-auto">
         <a
-          href={`${dataEvento.product.url}selection/event/seat?perfId=${dataFechas.performanceId}&productId=${dataEvento.product.productId}`}
+          href={dataFecha.buyButtons[0].link}
           target="_blank"
         >
           <button
@@ -81,7 +81,7 @@ export const FechaAccordionLimited = ({
               e.target.style.backgroundColor = dataInfoGeneral.backgroundButton; // Restaurar el color original
             }}
           >
-            Comprar entradas
+            {dataFecha.buyButtons[0].label}
           </button>
         </a>
       </div>

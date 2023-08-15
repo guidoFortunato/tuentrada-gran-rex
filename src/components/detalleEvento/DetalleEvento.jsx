@@ -82,12 +82,12 @@ export const DetalleEvento = () => {
           <div className="w-full lg:w-[30%] p-0 sm:px-4">
             {data.product.image ? (
               <section
-                className={`bg-no-repeat bg-contain bg-center lg:bg-start mx-auto h-[300px]`}
+                className={`bg-no-repeat bg-contain bg-center lg:bg-start mx-auto h-[400px] md:h-[300px]`}
                 style={{ backgroundImage: `url("${data.product.image}")` }}
               ></section>
             ) : (
               <section
-                className={`bg-no-repeat bg-contain bg-center lg:bg-start mx-auto h-[300px]`}
+                className={`bg-no-repeat bg-contain bg-center lg:bg-start mx-auto h-[400px] md:h-[300px]`}
                 style={{
                   backgroundImage: `url("${data.product.stxImagXLarge}")`,
                 }}
