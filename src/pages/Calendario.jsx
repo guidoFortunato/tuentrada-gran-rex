@@ -91,7 +91,7 @@ export const Calendario = () => {
   };
 
   const handleEventMount = (info) => {
-    console.log({extendedProps: info.event._def.extendedProps})
+    // console.log({extendedProps: info.event._def.extendedProps})
     // console.log({disponibility: info.event._def.extendedProps.disponibility})
     // console.log({reason: info.event._def.extendedProps.reason})
     // console.log(info)

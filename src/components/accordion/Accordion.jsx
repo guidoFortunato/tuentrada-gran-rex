@@ -15,7 +15,7 @@ export const Accordion = ({ itemsAccordion, dataEvento }) => {
   const [newPerformances, setNewPerformances] = useState(null);
 
   // console.log({ itemsAccordion });
-  console.log({ dataEvento });
+  // console.log({ dataEvento });
   // console.log({newPerformances})
 
   useEffect(() => {
@@ -278,7 +278,7 @@ export const Accordion = ({ itemsAccordion, dataEvento }) => {
                   return (
                     <iframe
                       key={item.id}
-                      className="w-full xl:w-[70%] rounded-xl h-20 mt-5"
+                      className="w-full rounded-xl h-20 mt-5"
                       src={item.media_json}
                       allowFullScreen=""
                       allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
@@ -291,7 +291,7 @@ export const Accordion = ({ itemsAccordion, dataEvento }) => {
                   return (
                     <iframe
                       key={item.id}
-                      className="w-full xl:w-[70%] mt-5"
+                      className="w-full mt-5"
                       height="350"
                       src={item.media_json}
                       title={dataEvento.name}
