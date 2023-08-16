@@ -11,11 +11,11 @@ export const AppRouter = () => {
       <Route path="/" element={<Layout />}>
         <Route index element={<Home />} />
         <Route path=":name" element={<DetalleEvento />} />
-        <Route path="bases-y-condiciones" element={<BasesCondiciones />} />
+        <Route path="bases-condiciones" element={<BasesCondiciones />} />
         <Route path="busqueda-eventos/:name" element={<BusquedaEventos />} />
         <Route path="calendario" element={<Calendario />} />
         <Route path="historia" element={<Historia />} />
-        <Route path="horarios-y-llegada" element={<HorariosLlegada />} />
+        <Route path="horarios-llegada" element={<HorariosLlegada />} />
         <Route path="*" element={<Navigate to="/" />} />
       </Route>
 

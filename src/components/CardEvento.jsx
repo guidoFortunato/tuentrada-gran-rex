@@ -8,7 +8,7 @@ export const CardEvento = ({
   imgSTXVeryLarge = "",
   internalState = "",
 }) => {
-  // console.log({data})
+  console.log({data})
   if (internalState === "soon") {
     return (
       <article className="text-center pt-4">
