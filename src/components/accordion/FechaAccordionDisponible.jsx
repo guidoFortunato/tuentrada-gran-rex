@@ -58,6 +58,7 @@ export const FechaAccordionDisponible = ({
             performances={dataFecha}
             openModal={openModal}
             setOpenModal={setOpenModal}
+            dataEvento={dataEvento}
           />
         </div>
       </div>

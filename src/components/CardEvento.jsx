@@ -2,6 +2,7 @@ import { EventAvailable, EventCancel, EventSoon } from "./disponibility";
 
 export const CardEvento = ({ imgApi = "", title = "", linkEvento = "", data = "", imgSTXVeryLarge = "", internalState = "" }) => {
   // console.log({data})
+  // console.log(data.name.toLowerCase().includes('dale') ? data : "")
   if (internalState === "soon") {
     return (
       <article className="text-center pt-4">

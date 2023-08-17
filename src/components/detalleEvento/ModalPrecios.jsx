@@ -8,10 +8,11 @@ import { AiFillMinusCircle } from "react-icons/ai";
 import { RiRestartFill } from "react-icons/ri";
 
 
-export const ModalPrecios = ({ performances, openModal, setOpenModal }) => {
+export const ModalPrecios = ({ performances, openModal, setOpenModal, dataEvento }) => {
   const { dataInfoGeneral } = useContext(EventosContext);
   // console.log({ dataInfoGeneral });
   // console.log({ performances });
+  // console.log({dataEvento})
 
   return (
     <>
@@ -47,7 +48,7 @@ export const ModalPrecios = ({ performances, openModal, setOpenModal }) => {
                     </div>
                     <TransformComponent>
                       <img
-                        src={performances.venueImage}
+                        src={performances.venueImage ? performances.venueImage : dataEvento.product.venueImage}
                         alt={`plano ${dataInfoGeneral.pages[0].title.toLowerCase()}`}
                       />
                     </TransformComponent>

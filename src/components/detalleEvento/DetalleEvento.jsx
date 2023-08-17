@@ -53,14 +53,15 @@ export const DetalleEvento = () => {
         // console.log({data})
         setData(data);
         setItemsAccordion({
-          performances: data.product.performances,
+          disponibility: data.disponibility,
+          extra: data.product.extra,
           history: data.product.history,
+          mediaJson: data.product.mediaJson,
+          performances: data.product.performances,
           promotion: data.product.promotion,
           recomendation: data.product.recomendation,
-          extra: data.product.extra,
-          mediaJson: data.product.mediaJson,
           socialNetworks: data.product.socialNetworks,
-          disponibility: data.disponibility,
+          // venueImageProduct: data.venueImage,
         });
       };
       getInfo();
@@ -73,7 +74,7 @@ export const DetalleEvento = () => {
 
   if (data === null || dataInfoGeneral.length === 0) return <span></span>
 
-  if (data === undefined) return <Navigate to="/" />;
+  if (data === undefined || data.length === 0) return <Navigate to="/" />;
 
   return (
     // <div className="w-[100%] lg:w-[70%] mx-auto" >
