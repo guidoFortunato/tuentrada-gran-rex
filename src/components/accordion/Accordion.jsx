@@ -20,23 +20,35 @@ export const Accordion = ({ itemsAccordion, dataEvento }) => {
 
   useEffect(() => {
     if (itemsAccordion.disponibility.length > 0) {
-      const updatedPerformances = itemsAccordion.performances.map(
-        (performance, index) => ({
-          ...performance,
-          availabilitLevel:
-            itemsAccordion.disponibility[index].availabilitLevel,
-          reason: itemsAccordion.disponibility[index].reason,
-        })
-      );
+      const updatedPerformances = itemsAccordion.performances.map((performance) => {
+        const correspondingDisponibility = itemsAccordion.disponibility.find(
+          (item) => item.performanceId === performance.id
+        );
+      // console.log({correspondingDisponibility})
+        if (correspondingDisponibility) {
+          return {
+            ...performance,
+            availabilitLevel: correspondingDisponibility.availabilitLevel,
+            reason: correspondingDisponibility.reason,
+          };
+        }
+      
+        return performance; // Mantener sin cambios si no hay correspondencia
+      });
       setNewPerformances(updatedPerformances);
+    }else{
+      setNewPerformances([]);
     }
   }, []);
+
+  
+  
 
   if (newPerformances === null) return <Spinner />;
 
   return (
     <div id="accordion-open" data-accordion="open" className="mt-5">
-      {itemsAccordion.performances.length > 0 && (
+      {(itemsAccordion.performances.length > 0 && newPerformances.length > 0) && (
         <>
           <h2 id="accordion-open-heading-1">
             <button

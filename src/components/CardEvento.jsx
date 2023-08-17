@@ -1,14 +1,7 @@
 import { EventAvailable, EventCancel, EventSoon } from "./disponibility";
 
-export const CardEvento = ({
-  imgApi = "",
-  title = "",
-  linkEvento = "",
-  data = "",
-  imgSTXVeryLarge = "",
-  internalState = "",
-}) => {
-  console.log({data})
+export const CardEvento = ({ imgApi = "", title = "", linkEvento = "", data = "", imgSTXVeryLarge = "", internalState = "" }) => {
+  // console.log({data})
   if (internalState === "soon") {
     return (
       <article className="text-center pt-4">
