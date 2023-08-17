@@ -77,7 +77,7 @@ export const Calendario = () => {
   const handleClick = (info) => {
     info.jsEvent.preventDefault();
     // console.log({ def: info.event._def });
-    const {internalState} = info.event._def.extendedProps;
+    const { internalState } = info.event._def.extendedProps;
     // console.log({internalState})
 
     if (internalState !== "soon") {
@@ -95,59 +95,64 @@ export const Calendario = () => {
     // console.log({disponibility: info.event._def.extendedProps.disponibility})
     // console.log({reason: info.event._def.extendedProps.reason})
     // console.log(info)
+    if (window.innerWidth > 1023) {
+      const status =
+        info.event._def.extendedProps.disponibility === "LIMITED"
+          ? "LIMITED"
+          : info.event._def.extendedProps.disponibility === "NONE" &&
+            info.event._def.extendedProps.reason;
 
-    const status = info.event._def.extendedProps.disponibility === "LIMITED" ? "LIMITED"  : info.event._def.extendedProps.disponibility === "NONE" &&  info.event._def.extendedProps.reason;
+      const { internalState } = info.event._def.extendedProps;
+      // console.log({internalState})
+      if (internalState === "soon") {
+        const tooltip = tippy(info.el, {
+          content: "Próximamente",
+          placement: "top",
+          theme: "dark",
+        });
+        return tooltip;
+      }
+      if (internalState === "cancel") {
+        const tooltip = tippy(info.el, {
+          content: "Cancelado",
+          placement: "top",
+          theme: "dark",
+        });
+        return tooltip;
+      }
 
-    const {internalState} = info.event._def.extendedProps
-    // console.log({internalState})
-    if (internalState === "soon") {
-      const tooltip = tippy(info.el, {
-        content: "Próximamente",
-        placement: "top",
-        theme: "dark",
-      });
-      return tooltip;
-    }
-    if (internalState === "cancel") {
-      const tooltip = tippy(info.el, {
-        content: "Cancelado",
-        placement: "top",
-        theme: "dark",
-      });
-      return tooltip;
-    }
-
-    if (status === "SOLD_OUT") {
-      const tooltip = tippy(info.el, {
-        content: "Agotado",
-        placement: "top",
-        theme: "dark",
-      });
-      return tooltip;
-    }
-    if (status === "SUSPENDED") {
-      const tooltip = tippy(info.el, {
-        content: "Suspendido",
-        placement: "top",
-        theme: "dark",
-      });
-      return tooltip;
-    }
-    if (status === "CANCELED") {
-      const tooltip = tippy(info.el, {
-        content: "Cancelado",
-        placement: "top",
-        theme: "dark",
-      });
-      return tooltip;
-    }
-    if (status === "LIMITED") {
-      const tooltip = tippy(info.el, {
-        content: "Últimas entradas!",
-        placement: "top",
-        theme: "dark",
-      });
-      return tooltip;
+      if (status === "SOLD_OUT") {
+        const tooltip = tippy(info.el, {
+          content: "Agotado",
+          placement: "top",
+          theme: "dark",
+        });
+        return tooltip;
+      }
+      if (status === "SUSPENDED") {
+        const tooltip = tippy(info.el, {
+          content: "Suspendido",
+          placement: "top",
+          theme: "dark",
+        });
+        return tooltip;
+      }
+      if (status === "CANCELED") {
+        const tooltip = tippy(info.el, {
+          content: "Cancelado",
+          placement: "top",
+          theme: "dark",
+        });
+        return tooltip;
+      }
+      if (status === "LIMITED") {
+        const tooltip = tippy(info.el, {
+          content: "Últimas entradas!",
+          placement: "top",
+          theme: "dark",
+        });
+        return tooltip;
+      }
     }
   };
 
@@ -198,9 +203,9 @@ export const Calendario = () => {
         <div className="container mx-auto mb-5">
           <div className="mt-10 bg-white px-5 2xl:px-0">
             <div className="grid grid-cols-1 ">
-              <FullCalendar 
+              <FullCalendar
                 buttonText={buttonTextOptions}
-                eventBackgroundColor= {dataInfoGeneral.backgroundButton}
+                eventBackgroundColor={dataInfoGeneral.backgroundButton}
                 eventBorderColor={dataInfoGeneral.backgroundButton}
                 eventTextColor="#FFF"
                 eventClick={handleClick}
