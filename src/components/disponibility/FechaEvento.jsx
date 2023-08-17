@@ -33,7 +33,9 @@ export const FechaEvento = ({
   const fecha = new Date(dataFecha.start);
   const formatoFecha = fecha.toLocaleDateString("es-ES", opciones);
   const dia = formatoFecha.split(",")[0].split(" ")[0];
-  const mes = formatoFecha.split(",")[0].split(" ")[2].charAt(0).toUpperCase() + formatoFecha.split(",")[0].split(" ")[2].slice(1);
+  const mes =
+    formatoFecha.split(",")[0].split(" ")[2].charAt(0).toUpperCase() +
+    formatoFecha.split(",")[0].split(" ")[2].slice(1);
   const mesFormateado = mes.slice(0, 3);
   const anio = formatoFecha.split(",")[0].split(" ")[4];
   const hora = formatoFecha.split(",")[1].trim();
@@ -46,7 +48,7 @@ export const FechaEvento = ({
           hora={hora}
           mesFormateado={mesFormateado}
           anio={anio}
-
+          dataFechas={dataFecha}
         />
       </div>
     );
@@ -60,13 +62,14 @@ export const FechaEvento = ({
           mesFormateado={mesFormateado}
           anio={anio}
           internalState={internalState}
+          dataFechas={dataFecha}
         />
       </div>
     );
   }
 
   if (availabilitLevel === "NONE" && reason !== "SOLD_OUT") {
-    return
+    return;
   }
 
   return (
@@ -103,6 +106,7 @@ export const FechaEvento = ({
             mesFormateado={mesFormateado}
             anio={anio}
             internalState={internalState}
+            dataFechas={dataFecha}
           />
         )}
       </div>

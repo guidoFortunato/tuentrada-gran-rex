@@ -79,7 +79,7 @@ export const FechaAccordionDisponible = ({
                 e.target.style.backgroundColor = dataInfoGeneral.backgroundButton; // Restaurar el color original
               }}
             >
-              {dataFecha.buyButtons[0].label}
+              {dataFecha.buyButtons[0]?.label}
             </button>
           </a>
         
