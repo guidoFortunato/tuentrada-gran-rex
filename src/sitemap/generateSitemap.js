@@ -4,7 +4,7 @@ import { getData, getEnvVariables } from "../helpers";
 
 const { VITE_API_EVENTOS, VITE_EMAIL, VITE_PASS } = getEnvVariables();
 
-export const GenerateSitemap = () => {
+export const generateSitemap = () => {
   const { idVenue } = useContext(EventosContext);
 
   const [urls, setUrls] = useState([]);
@@ -23,32 +23,6 @@ export const GenerateSitemap = () => {
       getUrlSitemap();
     }
   }, [idVenue]);
-
-  useEffect(() => {
-    if (urls.length > 0) {
-      const xmlFile =  `
-      <?xml version="1.0" encoding="UTF-8"?>
-      <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:news="http://www.google.com/schemas/sitemap-news/0.9"
-        xmlns:xhtml="http://www.w3.org/1999/xhtml"
-        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
-        xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
-        ${urls
-          .map(
-            (item) => `
-          <url>
-            <loc>${item.site}</loc>
-            <lastmod>${new Date().toISOString()}</lastmod>
-            <changefreq>monthly</changefreq>
-            <priority>1.0</priority>
-          </url>
-        `
-          )
-          .join("")}
-      </urlset>
-    `;
-    }
-  }, [urls]);
 
   return `
   <?xml version="1.0" encoding="UTF-8"?>
