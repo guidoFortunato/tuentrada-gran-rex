@@ -52,14 +52,15 @@ export const DetalleEvento = () => {
         // if (data === undefined) return <Navigate to="/" />;
         setData(data);
         setItemsAccordion({
-          performances: data.product.performances,
+          disponibility: data.disponibility,
+          extra: data.product.extra,
           history: data.product.history,
+          mediaJson: data.product.mediaJson,
+          performances: data.product.performances,
           promotion: data.product.promotion,
           recomendation: data.product.recomendation,
-          extra: data.product.extra,
-          mediaJson: data.product.mediaJson,
           socialNetworks: data.product.socialNetworks,
-          disponibility: data.disponibility,
+          // venueImageProduct: data.venueImage,
         });
       };
       getInfo();
