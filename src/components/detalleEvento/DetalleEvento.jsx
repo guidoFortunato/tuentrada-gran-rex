@@ -113,7 +113,7 @@ export const DetalleEvento = () => {
             )}
           </div>
           <div className="w-full md:w-[50%] lg:w-[70%] p-0 sm:px-4">
-            <h2 className="text-3xl mt-2 lg:mt-4 mb-2">{data.product.name}</h2>
+            <h2 className="text-xl mt-2 lg:mt-4 mb-2 uppercase font-semibold">{data.product.name}</h2>
             <div className="grid grid-cols-1">
               <p
                 className="text-sm text-gray-500"
