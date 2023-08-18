@@ -20,7 +20,7 @@ export const AppRouter = () => {
       </Route>
 
       {/* Ruta sin el layout */}
-      <Route path="sitemap" element={<GenerateSitemap />} />
+      {/* <Route path="sitemap" element={<GenerateSitemap />} /> */}
       <Route path="*" element={<Navigate to="/" />} />
     </Routes>
   );
