@@ -4,7 +4,7 @@ import { getData, getEnvVariables } from "../helpers";
 
 const { VITE_API_EVENTOS, VITE_EMAIL, VITE_PASS } = getEnvVariables();
 
-export const GenerateSitemap = () => {
+export const generateSitemap = () => {
   const { idVenue } = useContext(EventosContext);
 
   const [urls, setUrls] = useState([]);

@@ -1,1 +1,1 @@
-export * from "./GenerateSitemap";
+export * from "./generateSitemap";
