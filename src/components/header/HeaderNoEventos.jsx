@@ -43,7 +43,7 @@ export const HeaderNoEventos = () => {
             <button
              
               type="button"
-              className={`w-auto py-2.5 px-11 mt-6 md:mt-0 font-medium rounded text-base lg:text-lg md:text-base cursor-default`}
+              className={`w-auto py-2.5 px-8 mt-6 md:mt-0 rounded text-base cursor-default`}
               style={{
                 color: dataInfoGeneral.colorButton,
                 backgroundColor: dataInfoGeneral.backgroundButton,

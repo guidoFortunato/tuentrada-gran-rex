@@ -53,13 +53,13 @@ export const Accordion = ({ itemsAccordion, dataEvento }) => {
           <h2 id="accordion-open-heading-1">
             <button
               type="button"
-              className="flex items-center justify-between w-full p-5 font-medium text-left text-gray-500 border-b-2   border-gray-200  hover:bg-gray-50 dark:hover:bg-gray-800"
+              className="flex items-center justify-between w-full p-5 font-medium text-left text-gray-700 uppercase    border-b-2   border-gray-200  hover:bg-gray-50 dark:hover:bg-gray-800"
               data-accordion-target="#accordion-open-body-1"
               aria-expanded="true"
               aria-controls="accordion-open-body-1"
               onClick={() => setPerformances((prevState) => !prevState)}
             >
-              <span className="flex items-center text-xl font-semibold">
+              <span className="flex items-center text-lg font-semibold">
                 {itemsAccordion.performances.length > 1 && dataEvento.product.internalState !== "cancel"
                   ? "Fechas disponibles"
                   : itemsAccordion.performances.length <= 1 && dataEvento.product.internalState !== "cancel" ? "Fecha disponible"
@@ -76,7 +76,7 @@ export const Accordion = ({ itemsAccordion, dataEvento }) => {
             className={performances ? "" : "hidden"}
             aria-labelledby="accordion-open-heading-1"
           >
-            <div className="flex flex-col max-h-90 overflow-y-auto border-0 border-gray-200 dark:border-gray-700 dark:bg-gray-900 text-sm">
+            <div  className={performances ? "max-h-[400px] overflow-y-auto border-0 border-gray-200 dark:border-gray-700 dark:bg-gray-900 text-sm" : "hidden"}>
               {newPerformances.map((item) => {
                 // console.log({internalState: item.internalState})
                 // console.log({item})
@@ -103,7 +103,7 @@ export const Accordion = ({ itemsAccordion, dataEvento }) => {
           <h2 id="accordion-open-heading-3">
             <button
               type="button"
-              className="flex items-center justify-between w-full p-5 font-medium text-left text-gray-500 border-b-2   border-gray-200  hover:bg-gray-50 dark:hover:bg-gray-800"
+              className="flex items-center justify-between w-full p-5 font-medium text-left text-gray-700 uppercase    border-b-2   border-gray-200  hover:bg-gray-50 dark:hover:bg-gray-800"
               data-accordion-target="#accordion-open-body-3"
               aria-expanded="false"
               aria-controls="accordion-open-body-3"
@@ -123,7 +123,7 @@ export const Accordion = ({ itemsAccordion, dataEvento }) => {
             <div className="p-5 border-0 border-gray-200 dark:border-gray-700">
               {itemsAccordion.promotion && (
                 <p
-                  className={`text-base mb-6 text-gray-500`}
+                  className={`text-base mb-6 text-gray-700 uppercase   `}
                   dangerouslySetInnerHTML={{
                     __html: DOMPurify.sanitize(itemsAccordion.promotion),
                   }}
@@ -143,7 +143,7 @@ export const Accordion = ({ itemsAccordion, dataEvento }) => {
           <h2 id="accordion-open-heading-2">
             <button
               type="button"
-              className="flex items-center justify-between w-full p-5 font-medium text-left text-gray-500 border-b-2   border-gray-200  hover:bg-gray-50 dark:hover:bg-gray-800"
+              className="flex items-center justify-between w-full p-5 font-medium text-left text-gray-700 uppercase    border-b-2   border-gray-200  hover:bg-gray-50 dark:hover:bg-gray-800"
               data-accordion-target="#accordion-open-body-2"
               aria-expanded="false"
               aria-controls="accordion-open-body-2"
@@ -163,7 +163,7 @@ export const Accordion = ({ itemsAccordion, dataEvento }) => {
             <div className="p-5 border-0 border-gray-200 dark:border-gray-700">
               {itemsAccordion.history && (
                 <p
-                  className={`text-base mb-6 text-gray-500`}
+                  className={`text-base mb-6 text-gray-700 uppercase   `}
                   dangerouslySetInnerHTML={{
                     __html: DOMPurify.sanitize(itemsAccordion.history),
                   }}
@@ -183,7 +183,7 @@ export const Accordion = ({ itemsAccordion, dataEvento }) => {
           <h2 id="accordion-open-heading-6">
             <button
               type="button"
-              className="flex items-center justify-between w-full p-5 font-medium text-left text-gray-500 border-b-2   border-gray-200  hover:bg-gray-50 dark:hover:bg-gray-800"
+              className="flex items-center justify-between w-full p-5 font-medium text-left text-gray-700 uppercase    border-b-2   border-gray-200  hover:bg-gray-50 dark:hover:bg-gray-800"
               data-accordion-target="#accordion-open-body-6"
               aria-expanded="false"
               aria-controls="accordion-open-body-6"
@@ -203,7 +203,7 @@ export const Accordion = ({ itemsAccordion, dataEvento }) => {
             <div className="p-5 border-0 border-gray-200 dark:border-gray-700">
               {itemsAccordion.recomendation && (
                 <p
-                  className={`text-base mb-6 text-gray-500`}
+                  className={`text-base mb-6 text-gray-700 uppercase   `}
                   dangerouslySetInnerHTML={{
                     __html: DOMPurify.sanitize(itemsAccordion.recomendation),
                   }}
@@ -222,7 +222,7 @@ export const Accordion = ({ itemsAccordion, dataEvento }) => {
           <h2 id="accordion-open-heading-7">
             <button
               type="button"
-              className="flex items-center justify-between w-full p-5 font-medium text-left text-gray-500 border-b-2   border-gray-200  hover:bg-gray-50 dark:hover:bg-gray-800"
+              className="flex items-center justify-between w-full p-5 font-medium text-left text-gray-700 uppercase    border-b-2   border-gray-200  hover:bg-gray-50 dark:hover:bg-gray-800"
               data-accordion-target="#accordion-open-body-7"
               aria-expanded="false"
               aria-controls="accordion-open-body-7"
@@ -242,7 +242,7 @@ export const Accordion = ({ itemsAccordion, dataEvento }) => {
             <div className="p-5 border-0 border-gray-200 dark:border-gray-700">
               {itemsAccordion.extra && (
                 <p
-                  className={`text-base mb-6 text-gray-500`}
+                  className={`text-base mb-6 text-gray-700 uppercase   `}
                   dangerouslySetInnerHTML={{
                     __html: DOMPurify.sanitize(itemsAccordion.extra),
                   }}
@@ -262,7 +262,7 @@ export const Accordion = ({ itemsAccordion, dataEvento }) => {
           <h2 id="accordion-open-heading-8">
             <button
               type="button"
-              className="flex items-center justify-between w-full p-5 font-medium text-left text-gray-500 border-b-2   border-gray-200  hover:bg-gray-50 dark:hover:bg-gray-800"
+              className="flex items-center justify-between w-full p-5 font-medium text-left text-gray-700 uppercase    border-b-2   border-gray-200  hover:bg-gray-50 dark:hover:bg-gray-800"
               data-accordion-target="#accordion-open-body-8"
               aria-expanded="false"
               aria-controls="accordion-open-body-8"
