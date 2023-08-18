@@ -123,7 +123,7 @@ export const Accordion = ({ itemsAccordion, dataEvento }) => {
             <div className="p-5 border-0 border-gray-200 dark:border-gray-700">
               {itemsAccordion.promotion && (
                 <p
-                  className={`text-base mb-6 text-gray-700 uppercase   `}
+                  className={`text-base mb-6 text-gray-700    `}
                   dangerouslySetInnerHTML={{
                     __html: DOMPurify.sanitize(itemsAccordion.promotion),
                   }}
@@ -163,7 +163,7 @@ export const Accordion = ({ itemsAccordion, dataEvento }) => {
             <div className="p-5 border-0 border-gray-200 dark:border-gray-700">
               {itemsAccordion.history && (
                 <p
-                  className={`text-base mb-6 text-gray-700 uppercase   `}
+                  className={`text-base mb-6 text-gray-700    `}
                   dangerouslySetInnerHTML={{
                     __html: DOMPurify.sanitize(itemsAccordion.history),
                   }}
@@ -203,7 +203,7 @@ export const Accordion = ({ itemsAccordion, dataEvento }) => {
             <div className="p-5 border-0 border-gray-200 dark:border-gray-700">
               {itemsAccordion.recomendation && (
                 <p
-                  className={`text-base mb-6 text-gray-700 uppercase   `}
+                  className={`text-base mb-6 text-gray-700   `}
                   dangerouslySetInnerHTML={{
                     __html: DOMPurify.sanitize(itemsAccordion.recomendation),
                   }}
@@ -242,7 +242,7 @@ export const Accordion = ({ itemsAccordion, dataEvento }) => {
             <div className="p-5 border-0 border-gray-200 dark:border-gray-700">
               {itemsAccordion.extra && (
                 <p
-                  className={`text-base mb-6 text-gray-700 uppercase   `}
+                  className={`text-base mb-6 text-gray-700    `}
                   dangerouslySetInnerHTML={{
                     __html: DOMPurify.sanitize(itemsAccordion.extra),
                   }}
