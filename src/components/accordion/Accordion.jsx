@@ -109,7 +109,7 @@ export const Accordion = ({ itemsAccordion, dataEvento }) => {
               aria-controls="accordion-open-body-3"
               onClick={() => setPromotion((prevState) => !prevState)}
             >
-              <span className="flex items-center text-xl font-semibold">
+              <span className="flex items-center text-lg font-semibold">
                 Promociones
               </span>
               <IconAccordion item={promotion} />
@@ -149,7 +149,7 @@ export const Accordion = ({ itemsAccordion, dataEvento }) => {
               aria-controls="accordion-open-body-2"
               onClick={() => setHistory((prevState) => !prevState)}
             >
-              <span className="flex items-center text-xl font-semibold">
+              <span className="flex items-center text-lg font-semibold">
                 Más Información
               </span>
               <IconAccordion item={history} />
@@ -189,7 +189,7 @@ export const Accordion = ({ itemsAccordion, dataEvento }) => {
               aria-controls="accordion-open-body-6"
               onClick={() => setRecomendation((prevState) => !prevState)}
             >
-              <span className="flex items-center text-xl font-semibold">
+              <span className="flex items-center text-lg font-semibold">
                 Recomendaciones y condiciones
               </span>
               <IconAccordion item={recomendation} />
@@ -228,7 +228,7 @@ export const Accordion = ({ itemsAccordion, dataEvento }) => {
               aria-controls="accordion-open-body-7"
               onClick={() => setExtra((prevState) => !prevState)}
             >
-              <span className="flex items-center text-xl font-semibold">
+              <span className="flex items-center text-lg font-semibold">
                 Extra
               </span>
               <IconAccordion item={extra} />
@@ -268,7 +268,7 @@ export const Accordion = ({ itemsAccordion, dataEvento }) => {
               aria-controls="accordion-open-body-8"
               onClick={() => setMediaJson((prevState) => !prevState)}
             >
-              <span className="flex items-center text-xl font-semibold">
+              <span className="flex items-center text-lg font-semibold">
                 Galería multimedia
               </span>
               <IconAccordion item={mediaJson} />
