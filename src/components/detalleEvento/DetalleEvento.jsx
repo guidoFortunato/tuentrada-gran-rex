@@ -7,19 +7,19 @@ import { RedesSociales, Spinner } from "..";
 import { getData, getEnvVariables } from "../../helpers";
 import { Accordion } from "../accordion";
 
-
 const { VITE_API_EVENTOS, VITE_EMAIL, VITE_PASS } = getEnvVariables();
 
 export const DetalleEvento = () => {
   const [data, setData] = useState(null);
   const [itemsAccordion, setItemsAccordion] = useState(null);
-  const { idVenue, dataInfoGeneral, handleButtonsCollapse } = useContext(EventosContext);
+  const { idVenue, dataInfoGeneral, handleButtonsCollapse } =
+    useContext(EventosContext);
 
   // const { url } = dataInfoGeneral;
   const { name } = useParams();
   // const navigate = useNavigate();
   // console.log({dataInfoGeneral})
-  // console.log({ dataEvento: data });
+  console.log({ dataEvento: data });
   // console.log({name})
   // console.log({idProducto})
 
@@ -50,7 +50,6 @@ export const DetalleEvento = () => {
         // console.log({buttonBuyLink: data.product.buttonBuyLink});
         // console.log({dataDetail: data});
         // if (data === undefined) return <Navigate to="/" />;
-        // console.log({data})
         setData(data);
         setItemsAccordion({
           performances: data.product.performances,
@@ -69,58 +68,73 @@ export const DetalleEvento = () => {
 
   // console.log({dataInfoGeneral})
 
-  // console.log({data})
+  // itemsAccordion.forEach( item => console.log(item) )
 
-  if (data === null || dataInfoGeneral.length === 0) return <span></span>
+  if (data === null || dataInfoGeneral.length === 0) return <Spinner />;
 
-  if (data === undefined) return <Navigate to="/" />;
+  if (data === undefined || data.length === 0) return <Navigate to="/" />;
 
   return (
     // <div className="w-[100%] lg:w-[70%] mx-auto" >
     <div className="w-[100%] mx-auto">
       <div className="container mx-auto mb-5 px-3 ">
         <div className="flex flex-wrap">
-          <div className="w-full lg:w-[30%] p-0 sm:px-4">
-            {data?.product.image ? (
+          <div className="w-full md:w-[50%]  lg:w-[30%] p-0 sm:px-4 ">
+            {/* {data.product.image ? (
               <section
-                className={`bg-no-repeat bg-contain bg-center lg:bg-start mx-auto h-[400px] md:h-[300px]`}
-                style={{ backgroundImage: `url("${data?.product.image}")` }}
+                className={` bg-no-repeat bg-contain bg-center lg:bg-start mx-auto h-[400px] md:h-[300px]`}
+                style={{ backgroundImage: `url("${data.product.image}")` }}
               ></section>
             ) : (
               <section
                 className={`bg-no-repeat bg-contain bg-center lg:bg-start mx-auto h-[400px] md:h-[300px]`}
                 style={{
-                  backgroundImage: `url("${data?.product.stxImagXLarge}")`,
+                  backgroundImage: `url("${data.product.stxImagXLarge}")`,
                 }}
               ></section>
+            )} */}
+            {data.product.image ? (
+              <div className="border border-gray-300 rounded-lg ">
+                <img
+                  src={data.product.image}
+                  alt={data.product.name}
+                  className="rounded-lg w-full"
+                />
+              </div>
+            ) : (
+              <div className="border border-gray-300 rounded-lg ">
+                <img
+                  src={data.product.stxImagXLarge}
+                  alt={data.product.name}
+                  className="rounded-lg w-full"
+                />
+              </div>
             )}
           </div>
-          <div className="w-full lg:w-[70%] p-0 sm:px-4">
-            <h2 className="text-3xl mt-2 lg:mt-4 mb-2">{data?.product.name}</h2>
+          <div className="w-full md:w-[50%] lg:w-[70%] p-0 sm:px-4">
+            <h2 className="text-3xl mt-2 lg:mt-4 mb-2">{data.product.name}</h2>
             <div className="grid grid-cols-1">
               <p
                 className="text-sm text-gray-500"
                 dangerouslySetInnerHTML={{
-                  __html: DOMPurify.sanitize(data?.product.description),
+                  __html: DOMPurify.sanitize(data.product.description),
                 }}
               ></p>
-               {data?.product.socialNetworks.length > 0 && (
-          <div className="mt-5 flex flex-col items-center lg:items-start">
-            <h3 className="text-[#6b7280] font-semibold text-lg lg:text-xl w-full text-center lg:text-start">
-              Seguilo en sus redes
-            </h3>
-            <ul className="flex space-x-3 my-2">
-              <RedesSociales dataRedes={data?.product.socialNetworks} />
-            </ul>
-          </div>
-        )}  
+              {data.product.socialNetworks.length > 0 && (
+                <div className="mt-5 flex flex-col items-center lg:items-start">
+                  <h3 className="text-[#6b7280] font-semibold text-lg lg:text-xl w-full text-center lg:text-start">
+                    Seguilo en sus redes
+                  </h3>
+                  <ul className="flex space-x-3 my-2">
+                    <RedesSociales dataRedes={data.product.socialNetworks} />
+                  </ul>
+                </div>
+              )}
             </div>
           </div>
         </div>
-       
-        <Accordion itemsAccordion={itemsAccordion} dataEvento={data} />
 
-       
+        <Accordion itemsAccordion={itemsAccordion} dataEvento={data} />
       </div>
     </div>
   );
