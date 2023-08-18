@@ -15,8 +15,6 @@
 
 7. que en el onSale hasta se complete automaticamente la fecha del evento, una hora despues
 
-8. dale q ' va
-
 9. barra de busqueda se va en responsive en la primera busqueda
 
 
