@@ -10,13 +10,7 @@ export const EventAvailable = ({
   // console.log({linkEvento})
   return (
     <>
-      <figure className={`  ${
-            disponibility === "GOOD"
-              ? "border-green-600"
-              : disponibility === "LIMITED"
-              ? "border-pink-800"
-              : "border-red-600"
-          } relative max-w-sm cursor-pointer border rounded-lg border-black `}>
+      <figure className="relative max-w-sm cursor-pointer border rounded-lg border-gray-300 ">
         <Link to={linkEvento}>
           {imgApi ? (
             <img
