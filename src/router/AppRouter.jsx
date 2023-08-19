@@ -2,7 +2,7 @@ import { Navigate, Route, Routes } from "react-router-dom";
 import { BasesCondiciones, BusquedaEventos, Calendario, HorariosLlegada, Historia, Home } from "../pages/";
 import { DetalleEvento } from "../components/detalleEvento";
 import { Layout } from "../layout/";
-// import { generateSitemap } from "../sitemap/";
+// import { GenerateSitemap } from "../sitemap/";
 
 export const AppRouter = () => {
   return (
