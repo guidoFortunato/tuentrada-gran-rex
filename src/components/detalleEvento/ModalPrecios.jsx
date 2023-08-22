@@ -29,7 +29,7 @@ export const ModalPrecios = ({
       <Modal
         dismissible
         show={openModal}
-        size={"7xl"}
+        size={(venueImagePerformace || venueImageProduct) ? "7xl" : "3xl"}
         onClose={() => setOpenModal(false)}
       >
         <Modal.Header>Precios y Ubicaciones</Modal.Header>
