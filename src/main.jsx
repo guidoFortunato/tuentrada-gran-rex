@@ -8,11 +8,11 @@ import "normalize.css";
 import "./index.css";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-  <React.StrictMode>
+  //<React.StrictMode>
     <BrowserRouter>
       <EventosProvider>
         <App />
       </EventosProvider>
     </BrowserRouter>
-  </React.StrictMode>
+  //</React.StrictMode>
 );
