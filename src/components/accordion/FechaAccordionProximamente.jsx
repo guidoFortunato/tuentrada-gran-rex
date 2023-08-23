@@ -16,7 +16,7 @@ export const FechaAccordionProximamente = ({ dia, hora, mesFormateado, anio, dat
         <div className="flex flex-col justify-center ml-4">
           <div>
             <span className={`text-md text-gray-300 uppercase font-semibold`}>
-            {dataEvento?.product.name.toLowerCase().includes("meet and greet") ? "ver precio" : " ver precios y ubicaciones"}
+            {(dataEvento?.product.venueImage || dataFecha?.venueImage) ? "ver precios y ubicaciones" : "ver precios"}
             </span>
           </div>
 

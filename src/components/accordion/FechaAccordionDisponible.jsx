@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { EventosContext } from "../../context/EventosProvider";
 import { ModalPrecios } from "../detalleEvento/ModalPrecios";
-import { Spinner } from "../Spinner";
+// import { Spinner } from "../Spinner";
 
 export const FechaAccordionDisponible = ({
   dia,
@@ -44,7 +44,7 @@ export const FechaAccordionDisponible = ({
             <span
               className={`text-sm text-gray-500 hover:text-gray-800 cursor-pointer uppercase font-semibold`}
             >
-             {dataEvento?.product.name.toLowerCase().includes("meet and greet") ? "ver precio" : " ver precios y ubicaciones"}
+             {(dataEvento?.product.venueImage || dataFecha?.venueImage) ? "ver precios y ubicaciones" : "ver precios"}
             </span>
           </div>
 
