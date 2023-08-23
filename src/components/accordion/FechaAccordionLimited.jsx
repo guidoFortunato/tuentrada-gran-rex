@@ -58,6 +58,7 @@ export const FechaAccordionLimited = ({
             performances={dataFecha}
             openModal={openModal}
             setOpenModal={setOpenModal}
+            dataEvento={dataEvento}
           />
         </div>
       </div>

@@ -19,9 +19,9 @@ export const ModalPrecios = ({
   // console.log({ performances });
   // console.log({dataEvento})
 
-  if (dataEvento === null) return <Spinner /> 
+  if (dataEvento === null) return <Spinner />;
 
-  const venueImagePerformace = performances?.venueImage;
+  const venueImagePerformance = performances?.venueImage;
   const venueImageProduct = dataEvento?.product.venueImage;
 
   return (
@@ -29,55 +29,73 @@ export const ModalPrecios = ({
       <Modal
         dismissible
         show={openModal}
-        size={(venueImagePerformace || venueImageProduct) ? "7xl" : "3xl"}
+        size={venueImagePerformance || venueImageProduct ? "7xl" : "3xl"}
         onClose={() => setOpenModal(false)}
       >
         {/* <Modal.Header className="uppercase">{dataEvento?.product.name.toLowerCase().includes("meet and greet") ? "precio" : "precios y ubicaciones"}</Modal.Header> */}
         <Modal.Body>
           <div className="space-y-6 w-full">
-            <div className={`${(venueImagePerformace || venueImageProduct) && "grid grid-cols-1 lg:grid-cols-2 gap-6"}  relative overflow-x-auto`}>
+            <div
+              className={`${
+                (venueImagePerformance || venueImageProduct) &&
+                "grid grid-cols-1 lg:grid-cols-2 gap-6"
+              }  relative overflow-x-auto`}
+            >
               <div>
-                <TablaPrecios performances={performances} dataEvento={dataEvento} />
+                <TablaPrecios
+                  performances={performances}
+                  dataEvento={dataEvento}
+                />
               </div>
 
-              {venueImagePerformace.length === 0 &&
+              {venueImagePerformance.length === 0 &&
               venueImageProduct.length === 0 ? null : (
-                <TransformWrapper>
-                  {({ zoomIn, zoomOut, resetTransform }) => (
-                    <div className="relative">
-                      <div className="absolute  top-0 mt-1  z-50">
-                        <button
-                          onClick={() => zoomIn()}
-                          className="text-2xl mr-1"
-                        >
-                          <AiFillPlusCircle />
-                        </button>
-                        <button
-                          onClick={() => zoomOut()}
-                          className="text-2xl mr-1"
-                        >
-                          <AiFillMinusCircle />
-                        </button>
-                        <button
-                          onClick={() => resetTransform()}
-                          className="text-2xl"
-                        >
-                          <RiRestartFill />
-                        </button>
-                      </div>
-                      <TransformComponent>
-                        <img
-                          src={
-                            venueImagePerformace
-                              ? venueImagePerformace
-                              : venueImageProduct
-                          }
-                          alt={`plano ${dataInfoGeneral.pages[0].title.toLowerCase()}`}
-                        />
-                      </TransformComponent>
-                    </div>
-                  )}
-                </TransformWrapper>
+                <div className="relative">
+                  <img
+                    src={
+                      venueImagePerformance
+                        ? venueImagePerformance
+                        : venueImageProduct
+                    }
+                    alt={`plano ${dataInfoGeneral.pages[0].title.toLowerCase()}`}
+                  />
+                </div>
+                // <TransformWrapper>
+                //   {({ zoomIn, zoomOut, resetTransform }) => (
+                //     <div className="relative">
+                //       <div className="absolute  top-0 mt-1  z-50">
+                //         <button
+                //           onClick={() => zoomIn()}
+                //           className="text-2xl mr-1"
+                //         >
+                //           <AiFillPlusCircle />
+                //         </button>
+                //         <button
+                //           onClick={() => zoomOut()}
+                //           className="text-2xl mr-1"
+                //         >
+                //           <AiFillMinusCircle />
+                //         </button>
+                //         <button
+                //           onClick={() => resetTransform()}
+                //           className="text-2xl"
+                //         >
+                //           <RiRestartFill />
+                //         </button>
+                //       </div>
+                //       <TransformComponent>
+                //         <img
+                //           src={
+                //             venueImagePerformance
+                //               ? venueImagePerformance
+                //               : venueImageProduct
+                //           }
+                //           alt={`plano ${dataInfoGeneral.pages[0].title.toLowerCase()}`}
+                //         />
+                //       </TransformComponent>
+                //     </div>
+                //   )}
+                // </TransformWrapper>
               )}
             </div>
           </div>

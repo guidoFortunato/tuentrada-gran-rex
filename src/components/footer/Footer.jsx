@@ -40,10 +40,10 @@ export const Footer = () => {
           </ul>
         </div>
         <hr className="my-6 border-gray-200 sm:mx-auto  lg:my-8" />
-        <span className="block text-sm  sm:text-center ">
-          © {anio} <span className="mr-1">TuEntrada</span>-
-          <span className="ml-1">Todos los derechos reservados</span>
-        </span>
+        <div className="flex flex-col items-center justify-center md:flex-row text-sm sm:text-center">
+          <div>© {anio} TuEntrada</div>
+          <div className="md:ml-1"><span className="hidden md:inline md:mr-1">-</span> Todos los derechos reservados</div>
+        </div>
       </div>
     </footer>
   );
