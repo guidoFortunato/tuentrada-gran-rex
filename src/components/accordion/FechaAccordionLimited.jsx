@@ -41,7 +41,7 @@ export const FechaAccordionLimited = ({
             <span
               className={`text-md text-gray-500 hover:text-gray-800 cursor-pointer uppercase font-semibold`}
             >
-              Ver precios y ubicaciones
+              {dataEvento?.product.name.toLowerCase().includes("meet and greet") ? "ver precio" : " ver precios y ubicaciones"}
             </span>
           </div>
 

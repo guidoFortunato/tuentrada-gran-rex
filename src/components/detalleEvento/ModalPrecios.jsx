@@ -32,12 +32,12 @@ export const ModalPrecios = ({
         size={(venueImagePerformace || venueImageProduct) ? "7xl" : "3xl"}
         onClose={() => setOpenModal(false)}
       >
-        <Modal.Header>Precios y Ubicaciones</Modal.Header>
+        {/* <Modal.Header className="uppercase">{dataEvento?.product.name.toLowerCase().includes("meet and greet") ? "precio" : "precios y ubicaciones"}</Modal.Header> */}
         <Modal.Body>
           <div className="space-y-6 w-full">
             <div className={`${(venueImagePerformace || venueImageProduct) && "grid grid-cols-1 lg:grid-cols-2 gap-6"}  relative overflow-x-auto`}>
               <div>
-                <TablaPrecios performances={performances} />
+                <TablaPrecios performances={performances} dataEvento={dataEvento} />
               </div>
 
               {venueImagePerformace.length === 0 &&
@@ -82,7 +82,7 @@ export const ModalPrecios = ({
             </div>
           </div>
         </Modal.Body>
-        <Modal.Footer></Modal.Footer>
+        {/* <Modal.Footer></Modal.Footer> */}
       </Modal>
     </>
   );
