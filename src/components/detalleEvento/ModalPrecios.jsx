@@ -32,7 +32,7 @@ export const ModalPrecios = ({
         size={venueImagePerformance || venueImageProduct ? "7xl" : "3xl"}
         onClose={() => setOpenModal(false)}
       >
-        <Modal.Header></Modal.Header>
+        {/* <Modal.Header className="uppercase">{dataEvento?.product.name.toLowerCase().includes("meet and greet") ? "precio" : "precios y ubicaciones"}</Modal.Header> */}
         <Modal.Body>
           <div className="space-y-6 w-full">
             <div
@@ -51,52 +51,51 @@ export const ModalPrecios = ({
               {venueImagePerformance.length === 0 &&
               venueImageProduct.length === 0 ? null : (
                 <div className="relative">
-                  {/* <img
+                  <img
                     src={
                       venueImagePerformance
                         ? venueImagePerformance
                         : venueImageProduct
                     }
                     alt={`plano ${dataInfoGeneral.pages[0].title.toLowerCase()}`}
-                  /> */}
-                    <TransformWrapper>
-                  {({ zoomIn, zoomOut, resetTransform }) => (
-                    <div className="relative">
-                      <div className="absolute  top-0 mt-1  z-50">
-                        <button
-                          onClick={() => zoomIn()}
-                          className="text-2xl mr-1"
-                        >
-                          <AiFillPlusCircle />
-                        </button>
-                        <button
-                          onClick={() => zoomOut()}
-                          className="text-2xl mr-1"
-                        >
-                          <AiFillMinusCircle />
-                        </button>
-                        <button
-                          onClick={() => resetTransform()}
-                          className="text-2xl"
-                        >
-                          <RiRestartFill />
-                        </button>
-                      </div>
-                      <TransformComponent>
-                        <img
-                          src={
-                            venueImagePerformance
-                              ? venueImagePerformance
-                              : venueImageProduct
-                          }
-                          alt={`plano ${dataInfoGeneral.pages[0].title.toLowerCase()}`}
-                        />
-                      </TransformComponent>
-                    </div>
-                  )}
-                </TransformWrapper>
+                  />
                 </div>
-              
+                // <TransformWrapper>
+                //   {({ zoomIn, zoomOut, resetTransform }) => (
+                //     <div className="relative">
+                //       <div className="absolute  top-0 mt-1  z-50">
+                //         <button
+                //           onClick={() => zoomIn()}
+                //           className="text-2xl mr-1"
+                //         >
+                //           <AiFillPlusCircle />
+                //         </button>
+                //         <button
+                //           onClick={() => zoomOut()}
+                //           className="text-2xl mr-1"
+                //         >
+                //           <AiFillMinusCircle />
+                //         </button>
+                //         <button
+                //           onClick={() => resetTransform()}
+                //           className="text-2xl"
+                //         >
+                //           <RiRestartFill />
+                //         </button>
+                //       </div>
+                //       <TransformComponent>
+                //         <img
+                //           src={
+                //             venueImagePerformance
+                //               ? venueImagePerformance
+                //               : venueImageProduct
+                //           }
+                //           alt={`plano ${dataInfoGeneral.pages[0].title.toLowerCase()}`}
+                //         />
+                //       </TransformComponent>
+                //     </div>
+                //   )}
+                // </TransformWrapper>
               )}
             </div>
           </div>

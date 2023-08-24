@@ -123,9 +123,9 @@ export const DetalleEvento = () => {
               ></p>
               {data.product.socialNetworks.length > 0 && (
                 <div className="mt-5 flex flex-col items-center lg:items-start">
-                  {/* <h3 className="text-[#6b7280] font-semibold text-lg lg:text-xl w-full text-center lg:text-start">
-                    Redes sociales
-                  </h3> */}
+                  <h3 className="text-[#6b7280] font-semibold text-lg lg:text-xl w-full text-center lg:text-start">
+                    Seguilo en sus redes
+                  </h3>
                   <ul className="flex space-x-3 my-2">
                     <RedesSociales dataRedes={data.product.socialNetworks} />
                   </ul>

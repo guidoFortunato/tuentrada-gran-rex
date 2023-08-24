@@ -7,13 +7,6 @@ export const ItemsNavBar = ({ item, handleButtonsCollapse }) => {
   const { dataInfoGeneral } = useContext(EventosContext);
 
   const path = item.path;
-  // console.log({item})
-
-  const handleDownload = (e)=>{
-    // console.log(e)
-    handleButtonsCollapse()
-    // alertaSuccess();
-  }
 
   return (
     <>
@@ -28,7 +21,7 @@ export const ItemsNavBar = ({ item, handleButtonsCollapse }) => {
       >
         {path.startsWith("/") ? (
           <NavLink
-            to={path}
+            to={item.path}
             onClick={() => handleButtonsCollapse()}
             style={({ isActive }) => ({
               color: isActive
@@ -53,11 +46,10 @@ export const ItemsNavBar = ({ item, handleButtonsCollapse }) => {
           </NavLink>
         ) : (
           <a
-            href={path}
-            // download
+            href={item.path}
             rel="noreferrer"
             target="_blank"
-            onClick={ handleDownload }
+            onClick={() => handleButtonsCollapse()}
             // style={({ isActive }) => ({
             //   color: isActive
             //     ? dataInfoGeneral.colorHoverLi
