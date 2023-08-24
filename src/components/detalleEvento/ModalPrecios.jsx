@@ -32,7 +32,7 @@ export const ModalPrecios = ({
         size={venueImagePerformance || venueImageProduct ? "7xl" : "3xl"}
         onClose={() => setOpenModal(false)}
       >
-        {/* <Modal.Header className="uppercase">{dataEvento?.product.name.toLowerCase().includes("meet and greet") ? "precio" : "precios y ubicaciones"}</Modal.Header> */}
+        <Modal.Header></Modal.Header>
         <Modal.Body>
           <div className="space-y-6 w-full">
             <div
