@@ -1,5 +1,12 @@
 import { Navigate, Route, Routes } from "react-router-dom";
-import { BasesCondiciones, BusquedaEventos, Calendario, HorariosLlegada, Historia, Home } from "../pages/";
+import {
+  BasesCondiciones,
+  BusquedaEventos,
+  Calendario,
+  HorariosLlegada,
+  Historia,
+  Home,
+} from "../pages/";
 import { DetalleEvento } from "../components/detalleEvento";
 import { Layout } from "../layout/";
 // import { GenerateSitemap } from "../sitemap/";

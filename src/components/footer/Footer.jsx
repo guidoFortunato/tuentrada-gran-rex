@@ -7,6 +7,8 @@ export const Footer = () => {
   const { dataInfoGeneral } = useContext(EventosContext);
   const anio = new Date().getFullYear();
 
+  // console.log(dataInfoGeneral.pages)
+
   // if (dataInfoGeneral.length === 0) return <Spinner />;
 
   return (
