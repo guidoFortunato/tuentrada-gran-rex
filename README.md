@@ -19,6 +19,5 @@
 
 12. precios con promo
 
-13. plano está en mi drive
 
 
