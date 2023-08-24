@@ -56,7 +56,7 @@ export const Historia = () => {
       return (
         <>
           <p
-            className="parrafo-historia  text-sm text-gray-500"
+            className="parrafo-historia  text-sm text-gray-700"
             dangerouslySetInnerHTML={{
               __html: DOMPurify.sanitize(truncatedText),
             }}

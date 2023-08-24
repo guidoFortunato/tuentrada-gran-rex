@@ -35,7 +35,7 @@ export const HorariosLlegada = () => {
         <article className="col-12 col-lg-6 px-4 lg:px-0">
           <div>
             <p
-              className="parrafo-historia text-sm text-gray-500"
+              className="parrafo-historia text-sm text-gray-700"
               dangerouslySetInnerHTML={{
                 __html: DOMPurify.sanitize(dataInfoGeneral.pages[3].text),
               }}

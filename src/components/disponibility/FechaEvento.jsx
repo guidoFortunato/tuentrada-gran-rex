@@ -49,6 +49,7 @@ export const FechaEvento = ({
           mesFormateado={mesFormateado}
           anio={anio}
           dataFechas={dataFecha}
+          dataEvento={dataEvento}
         />
       </div>
     );
@@ -63,6 +64,7 @@ export const FechaEvento = ({
           anio={anio}
           internalState={internalState}
           dataFechas={dataFecha}
+          dataEvento={dataEvento}
         />
       </div>
     );
@@ -107,6 +109,7 @@ export const FechaEvento = ({
             anio={anio}
             internalState={internalState}
             dataFechas={dataFecha}
+            dataEvento={dataEvento}
           />
         )}
       </div>

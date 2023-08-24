@@ -5,14 +5,7 @@ import { FormBusqueda, ItemsNavBar } from "./";
 import { ItemRedes } from "../";
 
 export const NavBar = () => {
-  const {
-    dataInfoGeneral,
-    handleButtonsCollapse,
-    handleSearchCollapse,
-    handleButtonCollapse,
-    isSearchCollapsed,
-    isButtonCollapsed,
-  } = useContext(EventosContext);
+  const { dataInfoGeneral, handleButtonsCollapse, handleSearchCollapse, handleButtonCollapse, isSearchCollapsed, isButtonCollapsed } = useContext(EventosContext);
   // const [isSearchCollapsed, setIsSearchCollapsed] = useState(false);
   // const [isButtonCollapsed, setIsButtonCollapsed] = useState(false);
   const [navbar, setNavbar] = useState(false);
@@ -39,7 +32,7 @@ export const NavBar = () => {
     <>
       <nav
         style={{
-          backgroundColor: `${dataInfoGeneral.backgroundNavbar}`,
+          backgroundColor: dataInfoGeneral.backgroundNavbar,
           // fontFamily: "Raleway",
         }}
         className={`${

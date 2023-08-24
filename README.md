@@ -11,8 +11,13 @@
 
 3. agregar en los colores del site: background gradient
 
-6. agregar "/" a slug. ver busqueda Eventos
+9. barra de busqueda se va en responsive en la primera busqueda
 
-7. que en el onSale hasta se complete automaticamente la fecha del evento, una hora despues
+10. modal en responsive no se puede sacar
+
+11. detalle evento: seguilo/seguila/seguilos/seguilas
+
+12. precios con promo
+
 
 

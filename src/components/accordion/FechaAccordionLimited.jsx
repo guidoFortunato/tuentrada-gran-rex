@@ -41,7 +41,7 @@ export const FechaAccordionLimited = ({
             <span
               className={`text-md text-gray-500 hover:text-gray-800 cursor-pointer uppercase font-semibold`}
             >
-              Ver precios y ubicaciones
+              {(dataEvento?.product.venueImage || dataFecha?.venueImage) ? "ver precios y ubicaciones" : "ver precios"}
             </span>
           </div>
 
@@ -58,6 +58,7 @@ export const FechaAccordionLimited = ({
             performances={dataFecha}
             openModal={openModal}
             setOpenModal={setOpenModal}
+            dataEvento={dataEvento}
           />
         </div>
       </div>

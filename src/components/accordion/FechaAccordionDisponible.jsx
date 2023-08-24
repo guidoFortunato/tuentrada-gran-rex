@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import { EventosContext } from "../../context/EventosProvider";
 import { ModalPrecios } from "../detalleEvento/ModalPrecios";
+// import { Spinner } from "../Spinner";
 
 export const FechaAccordionDisponible = ({
   dia,
@@ -16,6 +17,8 @@ export const FechaAccordionDisponible = ({
   // console.log({dataInfoGeneral})
   // console.log({ dataFecha });
   // console.log({dataEvento})
+
+  // if(dataEvento === null) return <Spinner />
   return (
     <>
       <div className="flex flex-row">
@@ -41,7 +44,7 @@ export const FechaAccordionDisponible = ({
             <span
               className={`text-sm text-gray-500 hover:text-gray-800 cursor-pointer uppercase font-semibold`}
             >
-              Ver precios y ubicaciones
+             {(dataEvento?.product.venueImage || dataFecha?.venueImage) ? "ver precios y ubicaciones" : "ver precios"}
             </span>
           </div>
 
