@@ -17,7 +17,7 @@ export const ModalPrecios = ({
   const { dataInfoGeneral } = useContext(EventosContext);
   // console.log({ dataInfoGeneral });
   // console.log({ performances });
-  console.log({ dataEvento });
+  // console.log({ dataEvento });
 
   if (dataEvento === null) return <Spinner />;
 
