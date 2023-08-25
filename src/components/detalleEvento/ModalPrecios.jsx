@@ -17,19 +17,26 @@ export const ModalPrecios = ({
   const { dataInfoGeneral } = useContext(EventosContext);
   // console.log({ dataInfoGeneral });
   // console.log({ performances });
-  // console.log({dataEvento})
+  console.log({ dataEvento });
 
   if (dataEvento === null) return <Spinner />;
 
   const venueImagePerformance = performances?.venueImage;
   const venueImageProduct = dataEvento?.product.venueImage;
+  const venueImageSite = dataInfoGeneral?.venueImage;
+  const enableVenueImage = dataEvento?.product.enableVenueImage;
 
   return (
     <>
       <Modal
         dismissible
         show={openModal}
-        size={venueImagePerformance || venueImageProduct ? "7xl" : "3xl"}
+        size={
+          enableVenueImage === 1 &&
+          (venueImagePerformance || venueImageProduct || venueImageSite)
+            ? "7xl"
+            : "3xl"
+        }
         onClose={() => setOpenModal(false)}
       >
         <Modal.Header></Modal.Header>
@@ -37,7 +44,10 @@ export const ModalPrecios = ({
           <div className="space-y-6 w-full">
             <div
               className={`${
-                (venueImagePerformance || venueImageProduct) &&
+                enableVenueImage === 1 &&
+                (venueImagePerformance ||
+                  venueImageProduct ||
+                  venueImageSite) &&
                 "grid grid-cols-1 lg:grid-cols-2 gap-6"
               }  relative overflow-x-auto`}
             >
@@ -48,9 +58,17 @@ export const ModalPrecios = ({
                 />
               </div>
 
-              {venueImagePerformance.length === 0 &&
-              venueImageProduct.length === 0 ? null : (
-                <div className="relative">
+              {
+                enableVenueImage === 0 
+                ? null 
+                : 
+                venueImagePerformance.length === 0 &&
+                venueImageProduct.length === 0 &&
+                venueImageSite.length === 0 
+                ? null 
+                : 
+                (
+                <div className="relative mt-10 lg:mt-0">
                   {/* <img
                     src={
                       venueImagePerformance
@@ -59,44 +77,45 @@ export const ModalPrecios = ({
                     }
                     alt={`plano ${dataInfoGeneral.pages[0].title.toLowerCase()}`}
                   /> */}
-                    <TransformWrapper>
-                  {({ zoomIn, zoomOut, resetTransform }) => (
-                    <div className="relative">
-                      <div className="absolute  top-0 mt-1  z-50">
-                        <button
-                          onClick={() => zoomIn()}
-                          className="text-2xl mr-1"
-                        >
-                          <AiFillPlusCircle />
-                        </button>
-                        <button
-                          onClick={() => zoomOut()}
-                          className="text-2xl mr-1"
-                        >
-                          <AiFillMinusCircle />
-                        </button>
-                        <button
-                          onClick={() => resetTransform()}
-                          className="text-2xl"
-                        >
-                          <RiRestartFill />
-                        </button>
+                  <TransformWrapper>
+                    {({ zoomIn, zoomOut, resetTransform }) => (
+                      <div className="relative">
+                        <div className="absolute  top-0 mt-1  z-50">
+                          <button
+                            onClick={() => zoomIn()}
+                            className="text-2xl mr-1"
+                          >
+                            <AiFillPlusCircle />
+                          </button>
+                          <button
+                            onClick={() => zoomOut()}
+                            className="text-2xl mr-1"
+                          >
+                            <AiFillMinusCircle />
+                          </button>
+                          <button
+                            onClick={() => resetTransform()}
+                            className="text-2xl"
+                          >
+                            <RiRestartFill />
+                          </button>
+                        </div>
+                        <TransformComponent>
+                          <img
+                            src={
+                              venueImagePerformance
+                                ? venueImagePerformance
+                                : venueImageProduct
+                                ? venueImageProduct
+                                : venueImageSite
+                            }
+                            alt={`plano ${dataInfoGeneral.pages[0].title.toLowerCase()}`}
+                          />
+                        </TransformComponent>
                       </div>
-                      <TransformComponent>
-                        <img
-                          src={
-                            venueImagePerformance
-                              ? venueImagePerformance
-                              : venueImageProduct
-                          }
-                          alt={`plano ${dataInfoGeneral.pages[0].title.toLowerCase()}`}
-                        />
-                      </TransformComponent>
-                    </div>
-                  )}
-                </TransformWrapper>
+                    )}
+                  </TransformWrapper>
                 </div>
-              
               )}
             </div>
           </div>

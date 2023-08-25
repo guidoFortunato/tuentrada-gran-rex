@@ -1,4 +1,8 @@
+import { useContext } from "react";
+import { EventosContext } from "../../context/EventosProvider";
+
 export const FechaAccordionAgotadaCancel = ({ dia, hora, mesFormateado, anio, internalState, dataFechas: dataFecha, dataEvento }) => {
+  const { dataInfoGeneral } = useContext(EventosContext);
   return (
     <>
       <div className="flex flex-row">
@@ -16,7 +20,7 @@ export const FechaAccordionAgotadaCancel = ({ dia, hora, mesFormateado, anio, in
         <div className="flex flex-col justify-center ml-4">
           <div>
             <span className={`text-md text-gray-300 uppercase font-semibold`}>
-            {(dataEvento?.product.venueImage || dataFecha?.venueImage) ? "ver precios y ubicaciones" : "ver precios"}
+            {(dataEvento?.product.enableVenueImage === 1 && (dataEvento?.product.venueImage || dataFecha?.venueImage || dataInfoGeneral?.venueImage)) ? "ver precios y ubicaciones" : "ver precios"}
             </span>
           </div>
 

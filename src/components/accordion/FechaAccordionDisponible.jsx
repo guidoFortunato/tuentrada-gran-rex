@@ -44,7 +44,7 @@ export const FechaAccordionDisponible = ({
             <span
               className={`text-sm text-gray-500 hover:text-gray-800 cursor-pointer uppercase font-semibold`}
             >
-             {(dataEvento?.product.venueImage || dataFecha?.venueImage) ? "ver precios y ubicaciones" : "ver precios"}
+             {(dataEvento?.product.enableVenueImage === 1 && (dataEvento?.product.venueImage || dataFecha?.venueImage || dataInfoGeneral?.venueImage)) ? "ver precios y ubicaciones" : "ver precios"}
             </span>
           </div>
 
