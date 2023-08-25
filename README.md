@@ -13,11 +13,5 @@
 
 9. barra de busqueda se va en responsive en la primera busqueda
 
-10. modal en responsive no se puede sacar
-
-11. detalle evento: seguilo/seguila/seguilos/seguilas
-
-12. precios con promo
-
 
 
