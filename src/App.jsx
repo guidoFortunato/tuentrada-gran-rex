@@ -8,18 +8,18 @@ import { getEnvVariables } from "./helpers";
 import "animate.css";
 
 const { VITE_GA } = getEnvVariables();
-const TagManagerArgs = {
-	gtmId: 'GTM-WFJN4M5G',
-};
 
 function App() {
   const { dataInfoGeneral } = useContext(EventosContext);
 
+  
   // console.log({dataInfoGeneral})
-
+  
   useEffect(() => {
-		TagManager.initialize(TagManagerArgs);
-	}, []);
+    if (dataInfoGeneral.length !== 0){
+      TagManager.initialize({gtmId: dataInfoGeneral.tagManager});
+    }
+	}, [dataInfoGeneral]);
   
   useEffect(() => {
     ReactGA.initialize(VITE_GA);
@@ -29,7 +29,7 @@ function App() {
       title: "Home Page",
     });
   }, []);
-
+  
   if (dataInfoGeneral.length === 0) return <span></span>;
   
   return (
