@@ -20,6 +20,7 @@ const EventosProvider = (props) => {
   const [eventosCalendario, setEventosCalendario] = useState(null);
   const [isSearchCollapsed, setIsSearchCollapsed] = useState(false);
   const [isButtonCollapsed, setIsButtonCollapsed] = useState(false);
+  const [url, setUrl] = useState("");
 
   const handleButtonsCollapse = () => {
     setIsButtonCollapsed(false);
@@ -42,17 +43,19 @@ const EventosProvider = (props) => {
   useEffect(() => {
     const getDataInfoGeneral = async () => {
       const { data } = await getData(
-        VITE_API_INFO_GENERAL + "teatro-granrex.com.ar",
+        VITE_API_INFO_GENERAL + "venues.tuentrada.com",
         VITE_EMAIL,
         VITE_PASS
       ); //window.location.hostname
-      // console.log({dataInfoGeneral: data.products.data} );
+      console.log({dataInfoGeneral: data.products.data} );
+      // console.log({hostname: window.location.hostname} )
       // console.log({ pages: data.pages });
       setDataInfoGeneral(data.products.data);
       setIdVenue(data.products.data.venueId);
     };
     getDataInfoGeneral();
   }, []);
+
 
   useEffect(() => {
     if (idVenue !== "") {

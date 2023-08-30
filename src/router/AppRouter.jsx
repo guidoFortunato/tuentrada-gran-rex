@@ -3,9 +3,10 @@ import {
   BasesCondiciones,
   BusquedaEventos,
   Calendario,
-  HorariosLlegada,
+  ErrorApi,
   Historia,
   Home,
+  HorariosLlegada,
 } from "../pages/";
 import { DetalleEvento } from "../components/detalleEvento";
 import { Layout } from "../layout/";
@@ -28,6 +29,7 @@ export const AppRouter = () => {
 
       {/* Ruta sin el layout */}
       {/* <Route path="sitemap" element={<GenerateSitemap />} /> */}
+      <Route path="error" element={<ErrorApi to="/" />} />
       <Route path="*" element={<Navigate to="/" />} />
     </Routes>
   );

@@ -207,7 +207,7 @@ export const Calendario = () => {
                 buttonText={buttonTextOptions}
                 eventBackgroundColor={dataInfoGeneral.backgroundButton}
                 eventBorderColor={dataInfoGeneral.backgroundButton}
-                eventTextColor="#FFF"
+                eventTextColor={dataInfoGeneral.colorButton}
                 eventClick={handleClick}
                 eventDidMount={handleEventMount}
                 events={eventosCalendario}
