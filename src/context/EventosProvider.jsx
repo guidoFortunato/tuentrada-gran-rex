@@ -1,5 +1,6 @@
 import { createContext, useEffect, useState } from "react";
 import { getData, getEnvVariables } from "../helpers";
+import { useNavigate } from "react-router-dom";
 // import { sitemap } from "../../scripts/sitemap";
 // import { generateSitemap2 } from "../../scripts/generateSitemap2";
 const { VITE_API_INFO_GENERAL, VITE_API_EVENTOS, VITE_EMAIL, VITE_PASS } = getEnvVariables();
@@ -20,7 +21,8 @@ const EventosProvider = (props) => {
   const [eventosCalendario, setEventosCalendario] = useState(null);
   const [isSearchCollapsed, setIsSearchCollapsed] = useState(false);
   const [isButtonCollapsed, setIsButtonCollapsed] = useState(false);
-  const [url, setUrl] = useState("");
+
+  const navigate = useNavigate();
 
   const handleButtonsCollapse = () => {
     setIsButtonCollapsed(false);
@@ -42,12 +44,17 @@ const EventosProvider = (props) => {
 
   useEffect(() => {
     const getDataInfoGeneral = async () => {
-      const { data } = await getData(
+      const {data}  = await getData(
         VITE_API_INFO_GENERAL + "venues.tuentrada.com",
         VITE_EMAIL,
         VITE_PASS
       ); //window.location.hostname
-      console.log({dataInfoGeneral: data.products.data} );
+      // console.log(data)
+      if (data.error) {
+        setDataInfoGeneral(null);
+        return
+      }
+      // console.log({dataInfoGeneral: data.products.data} );
       // console.log({hostname: window.location.hostname} )
       // console.log({ pages: data.pages });
       setDataInfoGeneral(data.products.data);

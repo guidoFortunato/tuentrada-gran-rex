@@ -1,11 +1,6 @@
-import { useNavigate } from "react-router-dom";
 import { getEnvVariables } from "./getEnvVariables";
 
 export const getToken = async (email, password) => {
-
-  // const navigate = useNavigate()
-
-
   const { VITE_LOGIN } = getEnvVariables();
   try {
     const response = await fetch(VITE_LOGIN, {
@@ -20,8 +15,9 @@ export const getToken = async (email, password) => {
     });
 
     if (!response.ok) {
-      // navigate('/error')
-      throw new Error(`Error: ${response.status}. ${response.statusText}`);
+      throw new Error(
+        `Error getToken !response.ok: ${response.status}. ${response.statusText}`
+      );
     }
 
     const data = await response.json();
@@ -29,6 +25,6 @@ export const getToken = async (email, password) => {
     const tokenExpires = new Date(data.expired_at).getTime();
     return { token, tokenExpires };
   } catch (error) {
-    throw new Error(error);
+    throw new Error(`Error catch getToken: ${error}`);
   }
 };

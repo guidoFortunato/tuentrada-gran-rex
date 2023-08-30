@@ -1,18 +1,42 @@
+import { useContext, useEffect } from "react";
 import { Navigate, Route, Routes } from "react-router-dom";
 import {
   BasesCondiciones,
   BusquedaEventos,
   Calendario,
-  ErrorApi,
+  // ErrorApi,
   Historia,
   Home,
   HorariosLlegada,
 } from "../pages/";
+import ReactGA from "react-ga4";
+import TagManager from "react-gtm-module";
 import { DetalleEvento } from "../components/detalleEvento";
 import { Layout } from "../layout/";
+import { EventosContext } from "../context/EventosProvider";
+import { getEnvVariables } from "../helpers";
 // import { GenerateSitemap } from "../sitemap/";
 
+const { VITE_GA } = getEnvVariables();
+
 export const AppRouter = () => {
+  const { dataInfoGeneral } = useContext(EventosContext);
+
+  useEffect(() => {
+    if (dataInfoGeneral.length !== 0) {
+      TagManager.initialize({ gtmId: dataInfoGeneral.tagManager });
+    }
+  }, [dataInfoGeneral]);
+
+  useEffect(() => {
+    ReactGA.initialize(VITE_GA);
+    ReactGA.send({
+      hitType: "pageview",
+      page: document.location.pathname,
+      title: "Home Page",
+    });
+  }, []);
+
   return (
     <Routes>
       {/* Rutas con el layout */}
@@ -29,7 +53,7 @@ export const AppRouter = () => {
 
       {/* Ruta sin el layout */}
       {/* <Route path="sitemap" element={<GenerateSitemap />} /> */}
-      <Route path="error" element={<ErrorApi to="/" />} />
+      {/* <Route path="error" element={<ErrorApi />} /> */}
       <Route path="*" element={<Navigate to="/" />} />
     </Routes>
   );

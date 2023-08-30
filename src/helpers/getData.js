@@ -6,7 +6,6 @@ export const getData = async (URL, email, password) => {
   // console.log("-------------getDataEvent----------------");
   if (tokenSessionStorage) {
     try {
-
       const response = await fetch(URL, {
         credentials: "include",
         method: "GET",
@@ -30,10 +29,18 @@ export const getData = async (URL, email, password) => {
         });
         // console.log(response);
         if (!response.ok) {
-          throw new Error(`${response.status}: ${response.statusText} `);
+          console.error(
+            `Error getData con TS !response.ok: ${response.status}: ${response.statusText} `
+          );
+          return {
+            data: {
+              error: "authentication",
+              message: "Authentication note valid",
+            },
+          };
         }
         sessionStorage.setItem("tokenSessionStorage", token);
-        const data  = await response.json();
+        const data = await response.json();
         // console.log('401', {response});
         return data;
       }
@@ -44,7 +51,13 @@ export const getData = async (URL, email, password) => {
       // console.log('200', {response});
       return data;
     } catch (error) {
-      throw new Error(error);
+      console.error(`Error catch getData con TS: ${error}`);
+      return {
+        data: {
+          error: "authentication",
+          message: "Authentication note valid",
+        },
+      };
     }
   } else {
     try {
@@ -60,14 +73,27 @@ export const getData = async (URL, email, password) => {
       });
       // console.log(response);
       if (!response.ok) {
-        throw new Error(`${response.status}: ${response.statusText} `);
+        console.error(
+          `Error getData sin TS !response.ok: ${response.status}: ${response.statusText} `
+        );
+        return {
+          data: {
+            error: "authentication",
+            message: "Authentication note valid",
+          },
+        };
       }
       sessionStorage.setItem("tokenSessionStorage", token);
       const data = await response.json();
       return data;
-      
     } catch (error) {
-      throw new Error(error);
+      console.error(`Error catch getData sin TS: ${error}`);
+      return {
+        data: {
+          error: "authentication",
+          message: "Authentication note valid",
+        },
+      };
     }
   }
 };

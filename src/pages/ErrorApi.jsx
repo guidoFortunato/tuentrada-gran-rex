@@ -1,7 +1,7 @@
 export const ErrorApi = () => {
   return (
     <div
-      className="mt-10 flex justify-center mx-auto  p-4 mb-4 text-sm   }"
+      className="mt-10 flex justify-center mx-auto p-4 mb-4 text-sm"
       role="alert"
     >
       <span className="sr-only">Info</span>
@@ -12,7 +12,7 @@ export const ErrorApi = () => {
             src="https://www.tuentrada.com/teatro/gran-rex/imagenes/error.png"
             alt="no hay eventos"
           />
-          Disculpe las molestias
+          Sitio en mantenimiento, intente nuevamente mas tarde
         </span>
       </div>
     </div>
