@@ -12,8 +12,11 @@ export const ErrorApi = () => {
             src="https://www.tuentrada.com/teatro/gran-rex/imagenes/error.png"
             alt="no hay eventos"
           />
-          Sitio en mantenimiento, intente nuevamente mas tarde
+          Sitio en mantenimiento, intente nuevamente mas tarde <br />
+          
         </span>
+        <span className="font-semibold text-base text-gray-500 flex-col">Podes ver nuestros eventos en <a href="https://tuentrada.com" className="text-blue-700 underline" >tuentrada.com</a></span>
+       
       </div>
     </div>
   );
