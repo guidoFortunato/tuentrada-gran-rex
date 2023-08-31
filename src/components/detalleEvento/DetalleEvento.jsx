@@ -18,7 +18,7 @@ export const DetalleEvento = () => {
   const { name } = useParams();
   // const navigate = useNavigate();
   // console.log({dataInfoGeneral})
-  console.log({ dataEvento: data });
+  // console.log({ dataEvento: data });
   // console.log({name})
   // console.log({idProducto})
 

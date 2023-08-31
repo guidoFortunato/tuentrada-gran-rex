@@ -13,7 +13,5 @@
 
 9. barra de busqueda se va en responsive en la primera busqueda
 
-5. plano matilda
-
 
 

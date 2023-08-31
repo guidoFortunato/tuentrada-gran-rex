@@ -41,13 +41,13 @@ const EventosProvider = (props) => {
   
 
   useEffect(() => {
-    const getDataInfoGeneral = async () => {
+    const getDataInfoGeneral = async () => { 
       const {data}  = await getData(
-        VITE_API_INFO_GENERAL + "venues.tuentrada.com",
+        VITE_API_INFO_GENERAL + "venues.tuentrada.com",//window.location.hostname
         VITE_EMAIL,
         VITE_PASS
-      ); //window.location.hostname
-      // console.log({data})
+      ); 
+      console.log({data})
       if (data.error) {
         setDataInfoGeneral(null);
         return
