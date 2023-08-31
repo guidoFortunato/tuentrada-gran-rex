@@ -72,7 +72,7 @@ const EventosProvider = (props) => {
     if (idVenue !== "") {
       // console.log({idVenue})
       const getDataEventosGenerales = async () => {
-        const newLocal = `${VITE_API_EVENTOS + idVenue}/productss/?page=${page}`;
+        const newLocal = `${VITE_API_EVENTOS + idVenue}/products/?page=${page}`;
         const info = await getData(newLocal, VITE_EMAIL, VITE_PASS);
         // console.log({dataEventosGenerales: info.data})
         // console.log({infoData:info})
