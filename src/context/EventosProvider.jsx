@@ -7,9 +7,9 @@ const { VITE_API_INFO_GENERAL, VITE_API_EVENTOS, VITE_EMAIL, VITE_PASS } = getEn
 
 export const EventosContext = createContext();
 
-const initialStateGeneral = [];
+const initialStateGeneral = "";
 const initialStateEventosGenerales = [];
-const initialStateEventosCalendario = [];
+// const initialStateEventosCalendario = [];
 
 const EventosProvider = (props) => {
   const [idVenue, setIdVenue] = useState("");
@@ -29,10 +29,8 @@ const EventosProvider = (props) => {
     setIsSearchCollapsed(false);
   };
 
-  const handleSearchCollapse = () =>
-    setIsSearchCollapsed((prevState) => !prevState);
-  const handleButtonCollapse = () =>
-    setIsButtonCollapsed((prevState) => !prevState);
+  const handleSearchCollapse = () => setIsSearchCollapsed((prevState) => !prevState);
+  const handleButtonCollapse = () => setIsButtonCollapsed((prevState) => !prevState);
 
     // const urls = sitemap()
     // console.log({urls})
@@ -49,10 +47,16 @@ const EventosProvider = (props) => {
         VITE_EMAIL,
         VITE_PASS
       ); //window.location.hostname
-      // console.log(data)
+      // console.log({data})
       if (data.error) {
         setDataInfoGeneral(null);
         return
+      }
+      if (Array.isArray(data)) {
+        if (data.length === 0) {
+          setDataInfoGeneral(null);
+          return
+        }
       }
       // console.log({dataInfoGeneral: data.products.data} );
       // console.log({hostname: window.location.hostname} )
@@ -68,10 +72,14 @@ const EventosProvider = (props) => {
     if (idVenue !== "") {
       // console.log({idVenue})
       const getDataEventosGenerales = async () => {
-        const newLocal = `${VITE_API_EVENTOS + idVenue}/products/?page=${page}`;
+        const newLocal = `${VITE_API_EVENTOS + idVenue}/productss/?page=${page}`;
         const info = await getData(newLocal, VITE_EMAIL, VITE_PASS);
         // console.log({dataEventosGenerales: info.data})
         // console.log({infoData:info})
+        if (info.message === "Page Not Found.") {
+          setDataInfoGeneral(null);
+          return
+        }
         setData(info);
         setEventosGenerales((prevEventos) => prevEventos.concat(info.data));
         // setEventosGenerales(info.data.products);

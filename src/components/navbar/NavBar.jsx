@@ -10,6 +10,7 @@ export const NavBar = () => {
   // const [isButtonCollapsed, setIsButtonCollapsed] = useState(false);
   const [navbar, setNavbar] = useState(false);
 
+
   const changeBackground = () => {
     if (window.scrollY >= 1) {
       setNavbar(true);
@@ -28,6 +29,7 @@ export const NavBar = () => {
 
   // if (dataInfoGeneral.length === 0) return <Spinner />;
 
+  // if (dataInfoGeneral == "") return <Spinner />;
   return (
     <>
       <nav

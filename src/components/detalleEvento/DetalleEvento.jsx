@@ -12,14 +12,13 @@ const { VITE_API_EVENTOS, VITE_EMAIL, VITE_PASS } = getEnvVariables();
 export const DetalleEvento = () => {
   const [data, setData] = useState(null);
   const [itemsAccordion, setItemsAccordion] = useState(null);
-  const { idVenue, dataInfoGeneral, handleButtonsCollapse } =
-    useContext(EventosContext);
+  const { idVenue, dataInfoGeneral, handleButtonsCollapse } = useContext(EventosContext);
 
   // const { url } = dataInfoGeneral;
   const { name } = useParams();
   // const navigate = useNavigate();
   // console.log({dataInfoGeneral})
-  // console.log({ dataEvento: data });
+  console.log({ dataEvento: data });
   // console.log({name})
   // console.log({idProducto})
 

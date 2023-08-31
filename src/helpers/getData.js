@@ -16,6 +16,9 @@ export const getData = async (URL, email, password) => {
       });
       // console.log(response);
 
+    
+
+
       if (response.status === 401) {
         const { token } = await getToken(email, password);
         // // console.log("Uso token de getToken para hacer la peticion: " + token);
@@ -35,7 +38,7 @@ export const getData = async (URL, email, password) => {
           return {
             data: {
               error: "authentication",
-              message: "Authentication note valid",
+              message: "Authentication not valid",
             },
           };
         }
@@ -55,7 +58,7 @@ export const getData = async (URL, email, password) => {
       return {
         data: {
           error: "authentication",
-          message: "Authentication note valid",
+          message: "Authentication not valid",
         },
       };
     }
@@ -79,7 +82,7 @@ export const getData = async (URL, email, password) => {
         return {
           data: {
             error: "authentication",
-            message: "Authentication note valid",
+            message: "Authentication not valid",
           },
         };
       }
@@ -91,7 +94,7 @@ export const getData = async (URL, email, password) => {
       return {
         data: {
           error: "authentication",
-          message: "Authentication note valid",
+          message: "Authentication not valid",
         },
       };
     }
