@@ -7,7 +7,7 @@ export const EventosHome = () => {
   // console.log({eventosGenerales})
   return (
     <>
-      {eventosGenerales.map((item) => {
+      {eventosGenerales?.map((item) => {
         // console.log({item})
         // if (item.stateSTX === "RUNNING") {
           return (

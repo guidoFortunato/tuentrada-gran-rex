@@ -63,7 +63,7 @@ export const HeaderEventos = () => {
                   e.target.style.backgroundColor = dataInfoGeneral?.backgroundButton; // Restaurar el color original
                 }}
               >
-                {dataInfoGeneral.buttonLabel}
+                {dataInfoGeneral?.buttonLabel}
               </button>
             </Link>
           </div>

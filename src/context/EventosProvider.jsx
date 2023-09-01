@@ -43,7 +43,7 @@ const EventosProvider = (props) => {
   useEffect(() => {
     const getDataInfoGeneral = async () => { 
       const {data}  = await getData(
-        VITE_API_INFO_GENERAL + window.location.hostname,//window.location.hostname
+        VITE_API_INFO_GENERAL + "venues.tuentrada.com",//window.location.hostname - venues.tuentrada.com - nave-cultural.tuentrada.com
         VITE_EMAIL,
         VITE_PASS
       ); 

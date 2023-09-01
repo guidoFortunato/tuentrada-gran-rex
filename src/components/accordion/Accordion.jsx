@@ -14,7 +14,7 @@ export const Accordion = ({ itemsAccordion, dataEvento }) => {
   const [recomendation, setRecomendation] = useState(false);
   const [newPerformances, setNewPerformances] = useState(null);
 
-  // console.log({ itemsAccordion });
+  console.log({ itemsAccordion });
   // console.log({ dataEvento });
   // console.log({newPerformances})
 
@@ -98,7 +98,7 @@ export const Accordion = ({ itemsAccordion, dataEvento }) => {
         </>
       )}
 
-      {(itemsAccordion.promotion || dataEvento.promotionImage) && (
+      {(itemsAccordion.promotion || itemsAccordion.promotionImage) && (
         <>
           <h2 id="accordion-open-heading-3">
             <button
@@ -130,15 +130,15 @@ export const Accordion = ({ itemsAccordion, dataEvento }) => {
                 ></p>
               )}
 
-              {Boolean(dataEvento.promotionImage) && (
-                <img src={dataEvento.promotionImage} alt="" />
+              {Boolean(itemsAccordion.promotionImage) && (
+                <img src={itemsAccordion.promotionImage} alt="promociones" />
               )}
             </div>
           </div>
         </>
       )}
 
-      {(itemsAccordion.history || dataEvento.historyImage) && (
+      {(itemsAccordion.history || itemsAccordion.historyImage) && (
         <>
           <h2 id="accordion-open-heading-2">
             <button
@@ -170,15 +170,15 @@ export const Accordion = ({ itemsAccordion, dataEvento }) => {
                 ></p>
               )}
 
-              {Boolean(dataEvento.historyImage) && (
-                <img src={dataEvento.historyImage} alt="" />
+              {Boolean(itemsAccordion.historyImage) && (
+                <img src={itemsAccordion.historyImage} alt="descripcion" />
               )}
             </div>
           </div>
         </>
       )}
 
-      {(itemsAccordion.recomendation || dataEvento.recomendationImage) && (
+      {(itemsAccordion.recomendation || itemsAccordion.recomendationImage) && (
         <>
           <h2 id="accordion-open-heading-6">
             <button
@@ -210,14 +210,14 @@ export const Accordion = ({ itemsAccordion, dataEvento }) => {
                 ></p>
               )}
 
-              {Boolean(dataEvento.recomendationImage) && (
-                <img src={dataEvento.recomendationImage} alt="" />
+              {Boolean(itemsAccordion.recomendationImage) && (
+                <img src={itemsAccordion.recomendationImage} alt="recomendaciones" />
               )}
             </div>
           </div>
         </>
       )}
-      {(itemsAccordion.extra || dataEvento.extraImage) && (
+      {(itemsAccordion.extra || itemsAccordion.extraImage) && (
         <>
           <h2 id="accordion-open-heading-7">
             <button
@@ -249,8 +249,8 @@ export const Accordion = ({ itemsAccordion, dataEvento }) => {
                 ></p>
               )}
 
-              {Boolean(dataEvento.extraImage) && (
-                <img src={dataEvento.extraImage} alt="" />
+              {Boolean(itemsAccordion.extraImage) && (
+                <img src={itemsAccordion.extraImage} alt="extra" />
               )}
             </div>
           </div>
