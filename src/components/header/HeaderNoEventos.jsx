@@ -4,9 +4,10 @@ import DOMPurify from "dompurify";
 
 export const HeaderNoEventos = () => {
   const { dataInfoGeneral } = useContext(EventosContext);
+  // console.log({dataInfoGeneral})
   return (
     <header
-      style={{ backgroundImage: `url(${dataInfoGeneral.backgroundImage})` }}
+      style={{ backgroundImage: `url(${dataInfoGeneral?.backgroundImage})` }}
       className={`bg-no-repeat bg-cover bg-center container mx-auto mb-5 `}
     >
       <div
@@ -16,13 +17,13 @@ export const HeaderNoEventos = () => {
         <div className="flex justify-center w-full">
           <h1
             style={{
-              color: dataInfoGeneral.colorH1,
+              color: dataInfoGeneral?.colorH1,
               fontSize: "2.5em",
               width: "92%",
             }}
             className={`m-0 text-5xl titulo-principal pt-10 pb-5  text-center md:text-left`}
           >
-            <strong>{dataInfoGeneral.pages[0].title}</strong>
+            <strong>{dataInfoGeneral.pages[0]?.title}</strong>
           </h1>
         </div>
         <div
@@ -30,10 +31,10 @@ export const HeaderNoEventos = () => {
           style={{ justifyContent: "center", alignItems: "center" }}
         >
          <p
-          style={{ color: dataInfoGeneral.colorButton }}
+          style={{ color: dataInfoGeneral?.colorButton }}
           className={`md:w-3/5 md:mr-6 text-justify pl-10 pr-10 md:pl-0 md:pr-0 text-base md:text-base lg:text-lg`}
           dangerouslySetInnerHTML={{
-            __html: DOMPurify.sanitize(dataInfoGeneral.description),
+            __html: DOMPurify.sanitize(dataInfoGeneral?.description),
           }}
         ></p>
           <div
@@ -45,17 +46,17 @@ export const HeaderNoEventos = () => {
               type="button"
               className={`w-auto py-2.5 px-8 mt-6 md:mt-0 rounded text-base cursor-default`}
               style={{
-                color: dataInfoGeneral.colorButton,
-                backgroundColor: dataInfoGeneral.backgroundButton,
+                color: dataInfoGeneral?.colorButton,
+                backgroundColor: dataInfoGeneral?.backgroundButton,
               }}
               onMouseOver={(e) => {
-                e.target.style.backgroundColor = dataInfoGeneral.colorHoverButton; // Cambiar al color de hover
+                e.target.style.backgroundColor = dataInfoGeneral?.colorHoverButton; // Cambiar al color de hover
               }}
               onMouseOut={(e) => {
-                e.target.style.backgroundColor = dataInfoGeneral.backgroundButton; // Restaurar el color original
+                e.target.style.backgroundColor = dataInfoGeneral?.backgroundButton; // Restaurar el color original
               }}
             >
-              {dataInfoGeneral.buttonLabel}
+              {dataInfoGeneral?.buttonLabel}
             </button>
           </div>
         </div>

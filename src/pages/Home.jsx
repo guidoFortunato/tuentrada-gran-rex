@@ -12,6 +12,7 @@ export const Home = () => {
   } = useContext(EventosContext);
   // console.log({data});
   // console.log({ dataInfoGeneral });
+  console.log({eventosGenerales})
 
   useEffect(() => {
     handleNavBarCollapse();
