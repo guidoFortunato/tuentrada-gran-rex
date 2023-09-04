@@ -1,10 +1,8 @@
 import { createContext, useEffect, useState } from "react";
 import { getData, getEnvVariables } from "../helpers";
-import { Navigate, useNavigate } from "react-router-dom";
 // import { sitemap } from "../../scripts/sitemap";
 // import { generateSitemap2 } from "../../scripts/generateSitemap2";
-const { VITE_API_INFO_GENERAL, VITE_API_EVENTOS, VITE_EMAIL, VITE_PASS } =
-  getEnvVariables();
+const { VITE_API_INFO_GENERAL, VITE_API_EVENTOS, VITE_EMAIL, VITE_PASS } = getEnvVariables();
 
 export const EventosContext = createContext();
 
@@ -16,16 +14,13 @@ const EventosProvider = (props) => {
   const [idVenue, setIdVenue] = useState("");
   const [idProducto, setIdProducto] = useState(null);
   const [dataInfoGeneral, setDataInfoGeneral] = useState(initialStateGeneral);
-  const [eventosGenerales, setEventosGenerales] = useState(
-    initialStateEventosGenerales
-  );
+  const [eventosGenerales, setEventosGenerales] = useState(initialStateEventosGenerales);
   const [data, setData] = useState(null);
   const [page, setPage] = useState(1);
   const [eventosCalendario, setEventosCalendario] = useState(null);
   const [isSearchCollapsed, setIsSearchCollapsed] = useState(false);
   const [isButtonCollapsed, setIsButtonCollapsed] = useState(false);
 
-  const navigate = useNavigate();
 
   const handleButtonsCollapse = () => {
     setIsButtonCollapsed(false);
