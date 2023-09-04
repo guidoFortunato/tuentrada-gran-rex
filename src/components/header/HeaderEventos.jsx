@@ -12,7 +12,7 @@ export const HeaderEventos = () => {
       className={`bg-no-repeat bg-cover bg-center container mx-auto mb-5 z-40 my-3`}
     >
       <div
-        className={`min-h-[50vh] flex justify-center items-start flex-col `}
+        className={`min-h-[50vh] flex justify-center items-stretch flex-col `}
         style={{ background: "rgba(0,0,0,.5)" }}
       >
         <div className="flex justify-center w-full">

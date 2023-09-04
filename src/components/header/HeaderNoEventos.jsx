@@ -11,7 +11,7 @@ export const HeaderNoEventos = () => {
       className={`bg-no-repeat bg-cover bg-center container mx-auto mb-5 `}
     >
       <div
-        className={`min-h-[50vh] flex justify-center items-start flex-col `}
+        className={`min-h-[50vh] flex justify-center items-stretch flex-col `}
         style={{ background: "rgba(0,0,0,.50)" }}
       >
         <div className="flex justify-center w-full">
@@ -23,7 +23,7 @@ export const HeaderNoEventos = () => {
             }}
             className={`m-0 text-5xl titulo-principal pt-10 pb-5  text-center md:text-left`}
           >
-            <strong>{dataInfoGeneral.pages[0]?.title}</strong>
+            <strong>{dataInfoGeneral?.name}</strong>
           </h1>
         </div>
         <div

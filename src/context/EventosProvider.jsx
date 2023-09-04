@@ -49,7 +49,7 @@ const EventosProvider = (props) => {
   useEffect(() => {
     const getDataInfoGeneral = async () => {
       const info = await getData(
-        VITE_API_INFO_GENERAL + "venues.tuentrada.com", //window.location.hostname - venues.tuentrada.com - nave-cultural.tuentrada.com
+        VITE_API_INFO_GENERAL + window.location.hostname, //window.location.hostname - venues.tuentrada.com - nave-cultural.tuentrada.com
         VITE_EMAIL,
         VITE_PASS
       );
@@ -80,7 +80,7 @@ const EventosProvider = (props) => {
         }
         setData(info);
         setEventosGenerales((prevEventos) => {
-          console.log({prevEventos})
+          // console.log({prevEventos})
           return prevEventos.concat(info.data)
         });
         // setEventosGenerales(info.data);
