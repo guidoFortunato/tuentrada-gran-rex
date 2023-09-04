@@ -7,6 +7,7 @@ export const ErrorRouter = () => {
     <Routes>
       <Route path="/" element={<Navigate to='error' />} />
       <Route path="error" element={<ErrorApi />} />
+      <Route path="/*" element={<Navigate to='error' />} />
     </Routes>
   );
 };

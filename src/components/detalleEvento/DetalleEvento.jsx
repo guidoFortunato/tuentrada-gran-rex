@@ -78,6 +78,7 @@ export const DetalleEvento = () => {
 
   if (data === undefined || data.length === 0) return <Navigate to="/" />;
 
+
   return (
     // <div className="w-[100%] lg:w-[70%] mx-auto" >
     <div className="w-[100%] mx-auto">

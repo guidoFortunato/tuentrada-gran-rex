@@ -1,6 +1,6 @@
 import { createContext, useEffect, useState } from "react";
 import { getData, getEnvVariables } from "../helpers";
-import { useNavigate } from "react-router-dom";
+import { Navigate, useNavigate } from "react-router-dom";
 // import { sitemap } from "../../scripts/sitemap";
 // import { generateSitemap2 } from "../../scripts/generateSitemap2";
 const { VITE_API_INFO_GENERAL, VITE_API_EVENTOS, VITE_EMAIL, VITE_PASS } = getEnvVariables();
@@ -38,16 +38,23 @@ const EventosProvider = (props) => {
     // const sitemap = generateSitemap2()
     // console.log({sitemap})
     // console.log({idVenue})
+
+    // console.log({dataInfoGeneral})
   
 
   useEffect(() => {
     const getDataInfoGeneral = async () => { 
-      const {data}  = await getData(
+      const info  = await getData(
         VITE_API_INFO_GENERAL + "venues.tuentrada.com",//window.location.hostname - venues.tuentrada.com - nave-cultural.tuentrada.com
         VITE_EMAIL,
         VITE_PASS
       ); 
-      // console.log({data})
+      const { data } = info
+      // console.log({info})
+      if (!info.status) {
+        setDataInfoGeneral(null);
+        return
+      }
       if (data.error) {
         setDataInfoGeneral(null);
         return
@@ -76,7 +83,7 @@ const EventosProvider = (props) => {
         const info = await getData(newLocal, VITE_EMAIL, VITE_PASS);
         // console.log({dataEventosGenerales: info.data})
         // console.log({infoData:info})
-        if (info.message === "Page Not Found.") {
+        if (!info.status) {
           setDataInfoGeneral(null);
           return
         }
@@ -102,6 +109,9 @@ const EventosProvider = (props) => {
       getDataEventosCalendario();
     }
   }, [idVenue]);
+
+
+
 
   return (
     <EventosContext.Provider
