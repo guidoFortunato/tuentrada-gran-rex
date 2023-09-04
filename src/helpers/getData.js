@@ -16,9 +16,6 @@ export const getData = async (URL, email, password) => {
       });
       // console.log(response);
 
-    
-
-
       if (response.status === 401) {
         const { token } = await getToken(email, password);
         // // console.log("Uso token de getToken para hacer la peticion: " + token);
@@ -36,10 +33,9 @@ export const getData = async (URL, email, password) => {
             `Error getData con TS !response.ok: ${response.status}: ${response.statusText} `
           );
           return {
-            data: {
-              error: "authentication",
-              message: "Authentication not valid",
-            },
+            error: "authentication",
+            message: "Authentication not valid",
+            status: false,
           };
         }
         sessionStorage.setItem("tokenSessionStorage", token);
@@ -56,10 +52,9 @@ export const getData = async (URL, email, password) => {
     } catch (error) {
       console.error(`Error catch getData con TS: ${error}`);
       return {
-        data: {
-          error: "authentication",
-          message: "Authentication not valid",
-        },
+        error: "authentication",
+        message: "Authentication not valid",
+        status: false,
       };
     }
   } else {
@@ -80,10 +75,9 @@ export const getData = async (URL, email, password) => {
           `Error getData sin TS !response.ok: ${response.status}: ${response.statusText} `
         );
         return {
-          data: {
-            error: "authentication",
-            message: "Authentication not valid",
-          },
+          error: "authentication",
+          message: "Authentication not valid",
+          status: false,
         };
       }
       sessionStorage.setItem("tokenSessionStorage", token);
@@ -92,10 +86,9 @@ export const getData = async (URL, email, password) => {
     } catch (error) {
       console.error(`Error catch getData sin TS: ${error}`);
       return {
-        data: {
-          error: "authentication",
-          message: "Authentication not valid",
-        },
+        error: "authentication",
+        message: "Authentication not valid",
+        status: false,
       };
     }
   }

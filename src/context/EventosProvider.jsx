@@ -3,7 +3,8 @@ import { getData, getEnvVariables } from "../helpers";
 import { Navigate, useNavigate } from "react-router-dom";
 // import { sitemap } from "../../scripts/sitemap";
 // import { generateSitemap2 } from "../../scripts/generateSitemap2";
-const { VITE_API_INFO_GENERAL, VITE_API_EVENTOS, VITE_EMAIL, VITE_PASS } = getEnvVariables();
+const { VITE_API_INFO_GENERAL, VITE_API_EVENTOS, VITE_EMAIL, VITE_PASS } =
+  getEnvVariables();
 
 export const EventosContext = createContext();
 
@@ -15,7 +16,9 @@ const EventosProvider = (props) => {
   const [idVenue, setIdVenue] = useState("");
   const [idProducto, setIdProducto] = useState(null);
   const [dataInfoGeneral, setDataInfoGeneral] = useState(initialStateGeneral);
-  const [eventosGenerales, setEventosGenerales] = useState(initialStateEventosGenerales);
+  const [eventosGenerales, setEventosGenerales] = useState(
+    initialStateEventosGenerales
+  );
   const [data, setData] = useState(null);
   const [page, setPage] = useState(1);
   const [eventosCalendario, setEventosCalendario] = useState(null);
@@ -29,55 +32,43 @@ const EventosProvider = (props) => {
     setIsSearchCollapsed(false);
   };
 
-  const handleSearchCollapse = () => setIsSearchCollapsed((prevState) => !prevState);
-  const handleButtonCollapse = () => setIsButtonCollapsed((prevState) => !prevState);
+  const handleSearchCollapse = () =>
+    setIsSearchCollapsed((prevState) => !prevState);
+  const handleButtonCollapse = () =>
+    setIsButtonCollapsed((prevState) => !prevState);
 
-    // const urls = sitemap()
-    // console.log({urls})
+  // const urls = sitemap()
+  // console.log({urls})
 
-    // const sitemap = generateSitemap2()
-    // console.log({sitemap})
-    // console.log({idVenue})
+  // const sitemap = generateSitemap2()
+  // console.log({sitemap})
+  // console.log({idVenue})
 
-    // console.log({dataInfoGeneral})
-  
+  // console.log({dataInfoGeneral})
 
   useEffect(() => {
-    const getDataInfoGeneral = async () => { 
-      const info  = await getData(
-        VITE_API_INFO_GENERAL + "venues.tuentrada.com",//window.location.hostname - venues.tuentrada.com - nave-cultural.tuentrada.com
+    const getDataInfoGeneral = async () => {
+      const info = await getData(
+        VITE_API_INFO_GENERAL + "venues.tuentrada.com", //window.location.hostname - venues.tuentrada.com - nave-cultural.tuentrada.com
         VITE_EMAIL,
         VITE_PASS
-      ); 
-      const { data } = info
-      // console.log({info})
+      );
+      // console.log({ info });
+      // console.log({ data });
       if (!info.status) {
         setDataInfoGeneral(null);
-        return
+        return;
       }
-      if (data.error) {
-        setDataInfoGeneral(null);
-        return
-      }
-      if (Array.isArray(data)) {
-        if (data.length === 0) {
-          setDataInfoGeneral(null);
-          return
-        }
-      }
-      // console.log({dataInfoGeneral: data.products.data} );
-      // console.log({hostname: window.location.hostname} )
-      // console.log({ pages: data.pages });
+      const { data } = info;
+
       setDataInfoGeneral(data.products.data);
       setIdVenue(data.products.data.venueId);
     };
     getDataInfoGeneral();
   }, []);
 
-
   useEffect(() => {
     if (idVenue !== "") {
-      // console.log({idVenue})
       const getDataEventosGenerales = async () => {
         const newLocal = `${VITE_API_EVENTOS + idVenue}/products/?page=${page}`;
         const info = await getData(newLocal, VITE_EMAIL, VITE_PASS);
@@ -85,11 +76,14 @@ const EventosProvider = (props) => {
         // console.log({infoData:info})
         if (!info.status) {
           setDataInfoGeneral(null);
-          return
+          return;
         }
         setData(info);
-        setEventosGenerales((prevEventos) => prevEventos.concat(info.data));
-        // setEventosGenerales(info.data.products);
+        setEventosGenerales((prevEventos) => {
+          console.log({prevEventos})
+          return prevEventos.concat(info.data)
+        });
+        // setEventosGenerales(info.data);
       };
       getDataEventosGenerales();
     }
@@ -109,9 +103,6 @@ const EventosProvider = (props) => {
       getDataEventosCalendario();
     }
   }, [idVenue]);
-
-
-
 
   return (
     <EventosContext.Provider
