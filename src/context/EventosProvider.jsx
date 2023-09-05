@@ -74,10 +74,7 @@ const EventosProvider = (props) => {
           return;
         }
         setData(info);
-        setEventosGenerales((prevEventos) => {
-          // console.log({prevEventos})
-          return prevEventos.concat(info.data)
-        });
+        setEventosGenerales((prevEventos) =>  prevEventos.concat(info.data));
         // setEventosGenerales(info.data);
       };
       getDataEventosGenerales();
