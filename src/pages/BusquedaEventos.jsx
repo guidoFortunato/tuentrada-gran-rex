@@ -3,10 +3,11 @@ import { Link } from "react-router-dom";
 import { Navigate, useLocation } from "react-router-dom";
 
 import { EventosContext } from "../context/EventosProvider";
-import { CardEvento, Spinner } from "../components";
+import { CardEvento, FormBusqueda, Spinner } from "../components";
 import { getData, getEnvVariables } from "../helpers";
 
-const { VITE_API_EVENTOS, VITE_EMAIL, VITE_PASS } = getEnvVariables();
+const { VITE_API_EVENTOS, VITE_EMAIL, VITE_PASS, VITE_VENUE } =
+  getEnvVariables();
 
 export const BusquedaEventos = () => {
   const [data, setData] = useState(null);
@@ -14,6 +15,7 @@ export const BusquedaEventos = () => {
     idVenue,
     dataInfoGeneral,
     handleButtonsCollapse: handleNavBarCollapse,
+    host,
   } = useContext(EventosContext);
   const { pathname, search } = useLocation();
   const [isLoading, setIsLoading] = useState(false);
@@ -63,6 +65,13 @@ export const BusquedaEventos = () => {
   return (
     <>
       <div className="container mx-auto">
+        {host === VITE_VENUE && (
+          <div className="flex justify-center mt-3">
+            <div className="w-[90%] md:w-[75%] lg:w-1/2 2xl:w-[40%]">
+              <FormBusqueda />
+            </div>
+          </div>
+        )}
         {data.length > 0 ? (
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6 lg:gap-10 mt-10 px-3 lg:px-0">
             {data.map((item) => (

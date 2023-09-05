@@ -20,6 +20,7 @@ const EventosProvider = (props) => {
   const [eventosCalendario, setEventosCalendario] = useState(null);
   const [isSearchCollapsed, setIsSearchCollapsed] = useState(false);
   const [isButtonCollapsed, setIsButtonCollapsed] = useState(false);
+  const host = window.location.hostname;
 
 
   const handleButtonsCollapse = () => {
@@ -107,6 +108,7 @@ const EventosProvider = (props) => {
         handleButtonCollapse,
         handleButtonsCollapse,
         handleSearchCollapse,
+        host,
         idProducto,
         idVenue,
         isButtonCollapsed,
