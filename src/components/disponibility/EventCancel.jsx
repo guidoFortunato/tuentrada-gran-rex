@@ -36,39 +36,30 @@ export const EventCancel = ({ linkEvento, imgApi, title, imgSTXVeryLarge }) => {
     //   </figure>
     // </>
     <>
-     <figure className="relative max-w-sm cursor-pointer   ">
-      <div className="overflow-hidden rounded-lg border  border-gray-300">
-    <div className="  rounded-lg   hover:scale-105 transition-all ease-in-out duration-500" >
-      <Link to={linkEvento}>
-        {imgApi ? (
-          <img
-            className="rounded-lg"
-            src={imgApi}
-            alt={title}
-          />
-        ) : (
-          <img
-            className="rounded-lg"
-            src={imgSTXVeryLarge}
-            alt={title}
-          />
-        )}
-     
-      </Link>
-      </div>
-      </div>
-      <button
-        type="button"
-        className={`bg-black z-10 absolute -right-0 -top-4 text-white rounded text-xs 2xl:text-sm px-2 py-1 lg:py-1.5 text-center mr-2 mb-2`}
-      >
-        Cancelado
-      </button>
-      <Link to={linkEvento}>
-      <p className="text-center text-xs 2xl:text-sm uppercase  text-black font-bold p-1">
+      <figure className="relative max-w-sm cursor-pointer   ">
+        <div className="overflow-hidden rounded-lg border  border-gray-300">
+          <div className="  rounded-lg   hover:scale-105 transition-all ease-in-out duration-500">
+            <Link to={linkEvento}>
+              {imgApi ? (
+                <img className="rounded-lg" src={imgApi} alt={title} />
+              ) : (
+                <img className="rounded-lg" src={imgSTXVeryLarge} alt={title} />
+              )}
+            </Link>
+          </div>
+        </div>
+        <button
+          type="button"
+          className={`bg-black z-10 absolute -right-0 -top-4 text-white rounded text-xs 2xl:text-sm px-2 py-1 lg:py-1.5 text-center mr-2 mb-2`}
+        >
+          Cancelado
+        </button>
+        <Link to={linkEvento}>
+          <p className="text-center text-xs 2xl:text-sm uppercase  text-black font-bold p-1">
             {title}
           </p>
-      </Link>
-    </figure>
-  </>
+        </Link>
+      </figure>
+    </>
   );
 };

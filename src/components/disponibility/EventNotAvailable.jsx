@@ -1,8 +1,4 @@
-export const EventNotAvailable = ({
-  imgApi,
-  title,
-  imgSTXVeryLarge,
-}) => {
+export const EventNotAvailable = ({ imgApi, title, imgSTXVeryLarge }) => {
   return (
     // <>
     //   <figure className="relative max-w-sm cursor-default border rounded-lg border-gray-300 ">
@@ -39,46 +35,43 @@ export const EventNotAvailable = ({
     //       </figcaption>
     //   </figure>
     // </>
-       <>
-       <figure className="relative max-w-sm cursor-default ">
-       <div className="overflow-hidden rounded-lg border  border-gray-300">
-    <div className="  rounded-lg   hover:scale-105 transition-all ease-in-out duration-500" >
-      <Link to={linkEvento}>
-        {imgApi ? (
-          <img
-            className="rounded-lg opacity-40"
-            src={imgApi}
-            alt={title}
-          />
-        ) : (
-          <img
-            className="rounded-lg opacity-40"
-            src={imgSTXVeryLarge}
-            alt={title}
-         
-            />
-           
-        )}
-     
-      </Link>
-       {/* <img
+    <>
+      <figure className="relative max-w-sm cursor-default ">
+        <div className="overflow-hidden rounded-lg border  border-gray-300">
+          <div className="  rounded-lg   hover:scale-105 transition-all ease-in-out duration-500">
+            <Link to={linkEvento}>
+              {imgApi ? (
+                <img
+                  className="rounded-lg opacity-40"
+                  src={imgApi}
+                  alt={title}
+                />
+              ) : (
+                <img
+                  className="rounded-lg opacity-40"
+                  src={imgSTXVeryLarge}
+                  alt={title}
+                />
+              )}
+            </Link>
+            {/* <img
     //         className="rounded-lg md:rounded-none opacity-40"
     //         src={imgApi}
     //         alt={title}
     //       /> */}
-      </div>
-      </div> 
-        
-         <button
-           type="button"
-           className="z-10 absolute -right-0 -top-4 text-white bg-gray-600 cursor-default rounded text-xs px-2 py-1 lg:py-1.5 text-center mr-2 mb-2"
-         >
-           No disponible
-         </button>
-         <p className="text-center text-xs 2xl:text-sm uppercase  text-black font-bold p-1">
-            {title}
-          </p>
-       </figure>
-     </>
+          </div>
+        </div>
+
+        <button
+          type="button"
+          className="z-10 absolute -right-0 -top-4 text-white bg-gray-600 cursor-default rounded text-xs px-2 py-1 lg:py-1.5 text-center mr-2 mb-2"
+        >
+          No disponible
+        </button>
+        <p className="text-center text-xs 2xl:text-sm uppercase  text-black font-bold p-1">
+          {title}
+        </p>
+      </figure>
+    </>
   );
 };
