@@ -59,7 +59,7 @@ export const Footer = () => {
         <div className="flex flex-col items-center justify-center md:flex-row text-sm sm:text-center">
           <div>© {anio} TuEntrada</div>
           <div className="md:ml-1">
-            <span className="hidden md:inline md:mr-1">-</span> Todos los
+            <span className="hidden md:inline md:mr-1">-</span>Todos los
             derechos reservados
           </div>
         </div>
