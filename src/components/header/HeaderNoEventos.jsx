@@ -1,9 +1,11 @@
 import { useContext } from "react";
 import { EventosContext } from "../../context/EventosProvider";
 import DOMPurify from "dompurify";
+import { getEnvVariables } from "../../helpers";
+const { VITE_VENUE } = getEnvVariables();
 
 export const HeaderNoEventos = () => {
-  const { dataInfoGeneral } = useContext(EventosContext);
+  const { dataInfoGeneral, host } = useContext(EventosContext);
   // console.log({dataInfoGeneral})
   return (
     <header
@@ -14,19 +16,31 @@ export const HeaderNoEventos = () => {
         className={`min-h-[50vh] flex justify-center items-stretch flex-col `}
         style={{ background: "rgba(0,0,0,.50)" }}
       >
-        <div className="flex justify-center w-full">
+        <div className="flex justify-center items-center flex-col w-full">
           <h1
             style={{
               color: dataInfoGeneral?.colorH1,
-              fontSize: "2.5em",
+              // fontSize: "2.5em",
               width: "92%",
             }}
-            className={`m-0 text-5xl titulo-principal pt-10 pb-5  text-center md:text-left`}
+            className={`m-0 ${ host === VITE_VENUE ? "text-5xl md:text-6xl" : "text-5xl" } titulo-principal pt-10 pb-5  ${ host === VITE_VENUE ? "text-center" : "text-center md:text-left" }`}
           >
             <strong>{dataInfoGeneral?.name}</strong>
           </h1>
+          {
+            host === VITE_VENUE && (
+
+              <div className="w-[90%] md:w-[75%] lg:w-1/2 2xl:w-[40%]">
+    
+                <FormBusqueda />
+              </div>
+              
+            )
+          }
         </div>
-        <div
+      {
+        host !== VITE_VENUE && (
+          <div
           className="flex flex-col md:flex-row "
           style={{ justifyContent: "center", alignItems: "center" }}
         >
@@ -60,6 +74,8 @@ export const HeaderNoEventos = () => {
             </button>
           </div>
         </div>
+        )
+      }
       </div>
     </header>
   );

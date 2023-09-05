@@ -26,7 +26,7 @@ export const HeaderEventos = () => {
               // fontSize: "2.5em",
               width: "92%",
             }}
-            className={`m-0 text-5xl md:text-6xl titulo-principal pt-10 pb-5  ${ host === VITE_VENUE ? "text-center" : "text-center md:text-left" }`}
+            className={`m-0 ${ host === VITE_VENUE ? "text-5xl md:text-6xl" : "text-5xl" } titulo-principal pt-10 pb-5  ${ host === VITE_VENUE ? "text-center" : "text-center md:text-left" }`}
           >
             <strong>{dataInfoGeneral?.name}</strong>
           </h1>
