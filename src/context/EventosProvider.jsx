@@ -42,6 +42,8 @@ const EventosProvider = (props) => {
 
   // console.log({dataInfoGeneral})
 
+  
+
   useEffect(() => {
     const getDataInfoGeneral = async () => {
       const info = await getData(
@@ -96,6 +98,14 @@ const EventosProvider = (props) => {
       getDataEventosCalendario();
     }
   }, [idVenue]);
+
+  useEffect(() => {
+    if (dataInfoGeneral !== null) {
+      if (dataInfoGeneral.length !== 0) {
+        document.querySelector("body").style.fontFamily = "Hind Madurai";
+      }
+    }
+  }, [dataInfoGeneral]);
 
   return (
     <EventosContext.Provider

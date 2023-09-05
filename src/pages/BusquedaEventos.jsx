@@ -1,13 +1,12 @@
 import { useContext, useEffect, useState } from "react";
-import { Link } from "react-router-dom";
 import { Navigate, useLocation } from "react-router-dom";
 
 import { EventosContext } from "../context/EventosProvider";
-import { CardEvento, FormBusqueda, Spinner } from "../components";
+import { CardEvento, Spinner } from "../components";
 import { getData, getEnvVariables } from "../helpers";
+import { FormBusquedaRex } from "../components/header";
 
-const { VITE_API_EVENTOS, VITE_EMAIL, VITE_PASS, VITE_VENUE } =
-  getEnvVariables();
+const { VITE_API_EVENTOS, VITE_EMAIL, VITE_PASS, VITE_VENUE } = getEnvVariables();
 
 export const BusquedaEventos = () => {
   const [data, setData] = useState(null);
@@ -68,7 +67,7 @@ export const BusquedaEventos = () => {
         {host === VITE_VENUE && (
           <div className="flex justify-center mt-3">
             <div className="w-[90%] md:w-[75%] lg:w-1/2 2xl:w-[40%]">
-              <FormBusqueda />
+              <FormBusquedaRex />
             </div>
           </div>
         )}

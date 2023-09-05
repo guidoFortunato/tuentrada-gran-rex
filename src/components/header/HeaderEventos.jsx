@@ -1,11 +1,12 @@
 import { useContext } from "react";
 import { Link } from "react-router-dom";
 import DOMPurify from "dompurify";
-import { EventosContext } from "../../context/EventosProvider";
-import { FormBusqueda } from "../navbar";
-import { getEnvVariables } from "../../helpers";
-const { VITE_VENUE } = getEnvVariables();
 
+import { EventosContext } from "../../context/EventosProvider";
+import { getEnvVariables } from "../../helpers";
+import { FormBusquedaRex } from "./";
+
+const { VITE_VENUE } = getEnvVariables();
 
 export const HeaderEventos = () => {
   const { dataInfoGeneral, host } = useContext(EventosContext);
@@ -16,8 +17,8 @@ export const HeaderEventos = () => {
       className={`bg-no-repeat bg-cover bg-center container mx-auto mb-5 z-40 my-3`}
     >
       <div
-        className={`min-h-[50vh] flex justify-center items-stretch flex-col `}
-        style={{ background: "rgba(0,0,0,.5)" }}
+        className={`${host === VITE_VENUE ? "min-h-[60vh]" : "min-h-[50vh]"}  flex justify-center items-stretch flex-col `}
+        style={{ background: "rgba(0,0,0,.6)" }}
       >
         <div className="flex justify-center items-center flex-col w-full">
           <h1
@@ -26,20 +27,19 @@ export const HeaderEventos = () => {
               // fontSize: "2.5em",
               width: "92%",
             }}
-            className={`m-0 ${ host === VITE_VENUE ? "text-5xl md:text-6xl" : "text-5xl" } titulo-principal pt-10 pb-5  ${ host === VITE_VENUE ? "text-center" : "text-center md:text-left" }`}
+            className={`m-0 ${
+              host === VITE_VENUE ? "text-6xl md:text-[5rem]" : "text-5xl"
+            } font-medium pt-10 pb-5  ${
+              host === VITE_VENUE ? "text-center" : "text-center md:text-left"
+            }`}
           >
-            <strong>{dataInfoGeneral?.name}</strong>
+            {dataInfoGeneral?.name}
           </h1>
-          {
-            host === VITE_VENUE && (
-
-              <div className="w-[90%] md:w-[75%] lg:w-1/2 2xl:w-[40%]">
-    
-                <FormBusqueda />
-              </div>
-              
-            )
-          }
+          {host === VITE_VENUE && (
+            <div className="w-[87%] sm:w-[70%] md:w-[50%] lg:w-[35%] 2xl:w-[25%]">
+              <FormBusquedaRex />
+            </div>
+          )}
         </div>
         {host !== VITE_VENUE && (
           <div

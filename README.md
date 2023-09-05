@@ -11,7 +11,11 @@
 
 3. agregar en los colores del site: background gradient
 
-9. barra de busqueda se va en responsive en la primera busqueda
+4. font family fuera de body, en context
+
+5. falta pullman 5 en el mapa
+
+
 
 
 

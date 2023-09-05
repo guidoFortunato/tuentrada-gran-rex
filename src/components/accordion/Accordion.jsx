@@ -189,7 +189,7 @@ export const Accordion = ({ itemsAccordion, dataEvento }) => {
               aria-controls="accordion-open-body-6"
               onClick={() => setRecomendation((prevState) => !prevState)}
             >
-              <span className="flex items-center text-lg font-semibold">
+              <span className="flex items-center text-lg font-semibold w-[80%] sm:w-full">
                 Recomendaciones y condiciones
               </span>
               <IconAccordion item={recomendation} />

@@ -3,7 +3,8 @@ import { useLocation, useNavigate } from "react-router-dom";
 import { EventosContext } from "../../context/EventosProvider";
 import { alertaWarning } from "../../helpers";
 
-export const FormBusqueda = () => {
+
+export const FormBusquedaRex = () => {
   const { dataInfoGeneral } = useContext(EventosContext);
   const [evento, setEvento] = useState("");
   let navigate = useNavigate();
@@ -34,10 +35,10 @@ export const FormBusqueda = () => {
 
   return (
     <>
-      <form onSubmit={handleSubmit} className="text-center">
+      <form onSubmit={handleSubmit}>
         <label
           htmlFor="default-search"
-          className="mb-2  font-medium text-gray-900 sr-only dark:text-white"
+          className="mb-2 font-medium text-gray-900 sr-only dark:text-white"
         >
           Search
         </label>
@@ -63,14 +64,14 @@ export const FormBusqueda = () => {
             type="search"
             id="default-search"
             // className={`focus:ring-[${dataInfoGeneral.backgroundButton}] focus:border-[${dataInfoGeneral.backgroundButton}] block w-full p-4 pl-10 text-sm text-gray-900 border border-gray-300 rounded-3xl bg-gray-50`}
-            className={`focus:ring-[#00000041] pr-[95px] focus:border-[#00000041] block w-full p-4 pl-10 text-sm text-gray-900 border border-gray-300 rounded bg-gray-50`}
+            className={`focus:ring-[#00000041]  focus:border-[#00000041] block w-full pl-10 text-sm text-gray-900 border border-gray-300 rounded bg-gray-50`}
             placeholder="Buscar un evento..."
             value={evento}
             onChange={(e) => handleEvento(e.target.value)}
           />
           <button
             type="submit" 
-            className={` ml-55 font-medium absolute right-2.5 bottom-2.5 rounded text-sm px-4 py-2`}
+            className={`font-medium absolute right-1 bottom-1 top-1 rounded text-sm px-4 py-1`}
             style={{
               color: dataInfoGeneral.colorButton,
               backgroundColor: dataInfoGeneral.backgroundButton,

@@ -29,7 +29,7 @@ export const Footer = () => {
               className="h-12 mr-3"
               alt={dataInfoGeneral.altLogoFooter}
             />
-            <span className="self-center text-xl font-semibold whitespace-nowrap ">
+            <span className="self-center text-xl font-medium whitespace-nowrap ">
               {dataInfoGeneral.name}
             </span>
           </Link>

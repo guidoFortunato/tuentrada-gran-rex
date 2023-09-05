@@ -6,6 +6,7 @@ import { ErrorRouter } from "./router/ErrorRouter";
 import { EventosContext } from "./context/EventosProvider";
 
 import "animate.css";
+import { useEffect } from "react";
 
 function App() {
   const { dataInfoGeneral } = useContext(EventosContext);
