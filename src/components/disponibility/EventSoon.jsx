@@ -9,7 +9,7 @@ export const EventSoon = ({ imgApi, title, imgSTXVeryLarge }) => {
 
   if (host === VITE_VENUE) {
     return (
-      <figure className="relative max-w-sm cursor-default hover:shadow-2xl transition-all ease-in-out duration-500">
+      <figure className="relative max-w-sm cursor-default hover:shadow-xl transition-all ease-in-out duration-500">
         <div className="overflow-hidden rounded-lg border border-gray-300">
           <div className="rounded-lg">
             <div className="rounded-lg">
