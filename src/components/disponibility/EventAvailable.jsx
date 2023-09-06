@@ -17,7 +17,7 @@ export const EventAvailable = ({
 
   if (host === VITE_VENUE) {
     return (
-      <figure className="relative max-w-sm cursor-pointer hover:shadow-2xl transition-all ease-in-out duration-500">
+      <figure className="relative max-w-sm cursor-pointer rounded-lg hover:shadow-2xl transition-all ease-in-out duration-500">
         <div className="overflow-hidden rounded-lg border border-gray-300">
           <div className="rounded-lg">
             <Link to={linkEvento}>

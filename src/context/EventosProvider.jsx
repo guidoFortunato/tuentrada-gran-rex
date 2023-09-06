@@ -99,13 +99,13 @@ const EventosProvider = (props) => {
     }
   }, [idVenue]);
 
-  useEffect(() => {
-    if (dataInfoGeneral !== null) {
-      if (dataInfoGeneral.length !== 0) {
-        document.querySelector("body").style.fontFamily = "Hind Madurai";
-      }
-    }
-  }, [dataInfoGeneral]);
+  // useEffect(() => {
+  //   if (dataInfoGeneral !== null) {
+  //     if (dataInfoGeneral.length !== 0) {
+  //       document.querySelector("body").style.fontFamily = "Roboto";
+  //     }
+  //   }
+  // }, [dataInfoGeneral]);
 
   return (
     <EventosContext.Provider
