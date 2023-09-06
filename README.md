@@ -13,9 +13,6 @@
 
 4. font family fuera de body, en context
 
-5. falta pullman 5 en el mapa
-
-
 
 
 
