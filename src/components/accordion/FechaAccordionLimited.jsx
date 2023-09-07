@@ -1,6 +1,8 @@
 import React, { useContext } from "react";
 import { EventosContext } from "../../context/EventosProvider";
 import { ModalPrecios } from "../detalleEvento/ModalPrecios";
+import { BotonCompra } from "./BotonCompra";
+
 
 export const FechaAccordionLimited = ({
   dia,
@@ -41,7 +43,12 @@ export const FechaAccordionLimited = ({
             <span
               className={`text-md text-gray-500 hover:text-gray-800 cursor-pointer uppercase font-semibold`}
             >
-              {(dataEvento?.product.enableVenueImage === 1 && (dataEvento?.product.venueImage || dataFecha?.venueImage || dataInfoGeneral?.venueImage)) ? "ver precios y ubicaciones" : "ver precios"}
+              {dataEvento?.product.enableVenueImage === 1 &&
+              (dataEvento?.product.venueImage ||
+                dataFecha?.venueImage ||
+                dataInfoGeneral?.venueImage)
+                ? "ver precios y ubicaciones"
+                : "ver precios"}
             </span>
           </div>
 
@@ -64,27 +71,7 @@ export const FechaAccordionLimited = ({
       </div>
 
       <div className="text-end mt-4 lg:my-auto">
-        <a
-          href={dataFecha.buyButtons[0].link}
-          target="_blank"
-        >
-          <button
-            type="button"
-            className={`focus:outline-none font-medium rounded text-sm px-3 py-2.5 text-center`}
-            style={{
-              color: dataInfoGeneral.colorButton,
-              backgroundColor: dataInfoGeneral.backgroundButton,
-            }}
-            onMouseOver={(e) => {
-              e.target.style.backgroundColor = dataInfoGeneral.colorHoverButton; // Cambiar al color de hover
-            }}
-            onMouseOut={(e) => {
-              e.target.style.backgroundColor = dataInfoGeneral.backgroundButton; // Restaurar el color original
-            }}
-          >
-            {dataFecha.buyButtons[0].label}
-          </button>
-        </a>
+        <BotonCompra performances={dataFecha} />
       </div>
     </>
   );

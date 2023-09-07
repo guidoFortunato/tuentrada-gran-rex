@@ -1,7 +1,15 @@
 import { useContext } from "react";
 import { EventosContext } from "../../context/EventosProvider";
+import { BotonCompraDisabled } from "./";
 
-export const FechaAccordionProximamente = ({ dia, hora, mesFormateado, anio, dataFechas: dataFecha, dataEvento }) => {
+export const FechaAccordionProximamente = ({
+  dia,
+  hora,
+  mesFormateado,
+  anio,
+  dataFechas: dataFecha,
+  dataEvento,
+}) => {
   const { dataInfoGeneral } = useContext(EventosContext);
   return (
     <>
@@ -20,12 +28,19 @@ export const FechaAccordionProximamente = ({ dia, hora, mesFormateado, anio, dat
         <div className="flex flex-col justify-center ml-4">
           <div>
             <span className={`text-md text-gray-300 uppercase font-semibold`}>
-            {(dataEvento?.product.enableVenueImage === 1 && (dataEvento?.product.venueImage || dataFecha?.venueImage || dataInfoGeneral?.venueImage)) ? "ver precios y ubicaciones" : "ver precios"}
+              {dataEvento?.product.enableVenueImage === 1 &&
+              (dataEvento?.product.venueImage ||
+                dataFecha?.venueImage ||
+                dataInfoGeneral?.venueImage)
+                ? "ver precios y ubicaciones"
+                : "ver precios"}
             </span>
           </div>
 
           <div>
-            <span className="uppercase text-blue-900 text-xs font-semibold"> { /* text-gray-300 */ }
+            <span className="uppercase text-blue-900 text-xs font-semibold">
+              {" "}
+              {/* text-gray-300 */}
               próximamente
             </span>
           </div>
@@ -33,17 +48,11 @@ export const FechaAccordionProximamente = ({ dia, hora, mesFormateado, anio, dat
           <div className="md:mr-1 text-left text-sm text-gray-300 font-semibold ">
             <span>{hora}hs</span>
           </div>
-       
         </div>
       </div>
 
       <div className="text-end mt-4 lg:my-auto">
-        <button
-          type="button"
-          className="text-white bg-gray-300 cursor-default focus:outline-none font-medium rounded text-sm px-3 py-2.5 text-center"
-        >
-          {dataFecha.buyButtons[0]?.label}
-        </button>
+        <BotonCompraDisabled dataFecha={dataFecha} />
       </div>
     </>
   );

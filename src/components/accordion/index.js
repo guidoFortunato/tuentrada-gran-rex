@@ -1,4 +1,6 @@
 export * from "./Accordion";
+export * from "./BotonCompra";
+export * from "./BotonCompraDisabled";
 export * from "./FechaAccordionAgotadaCancel";
 export * from "./FechaAccordionDisponible";
 export * from "./FechaAccordionLimited";

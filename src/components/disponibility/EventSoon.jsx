@@ -12,18 +12,16 @@ export const EventSoon = ({ imgApi, title, imgSTXVeryLarge }) => {
       <figure className="relative max-w-sm cursor-default hover:shadow-xl transition-all ease-in-out duration-500 h-full">
         <div className="overflow-hidden rounded-lg border border-gray-300 h-full">
           <div className="rounded-lg">
-            <div className="rounded-lg">
-              {imgApi ? (
-                <img className="opacity-40" src={imgApi} alt={title} />
-              ) : (
-                <img className="opacity-40" src={imgSTXVeryLarge} alt={title} />
-              )}
-            </div>
-            <div className="h-[63px] rounded-lg flex justify-center items-center">
-              <p className="text-center text-base 2xl:text-lg uppercase py-3 text-black font-bold p-1">
-                {title}
-              </p>
-            </div>
+            {imgApi ? (
+              <img className="opacity-40" src={imgApi} alt={title} />
+            ) : (
+              <img className="opacity-40" src={imgSTXVeryLarge} alt={title} />
+            )}
+          </div>
+          <div className="h-[63px] rounded-lg flex justify-center items-center">
+            <p className="text-center text-base 2xl:text-lg uppercase py-3 text-black font-bold p-1">
+              {title}
+            </p>
           </div>
         </div>
         <button

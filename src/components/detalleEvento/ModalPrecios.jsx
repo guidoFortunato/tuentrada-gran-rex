@@ -7,6 +7,8 @@ import { AiFillPlusCircle } from "react-icons/ai";
 import { AiFillMinusCircle } from "react-icons/ai";
 import { RiRestartFill } from "react-icons/ri";
 import { Spinner } from "../Spinner";
+import { BotonCompra } from "../accordion";
+
 
 export const ModalPrecios = ({
   performances,
@@ -39,7 +41,9 @@ export const ModalPrecios = ({
         }
         onClose={() => setOpenModal(false)}
       >
-        <Modal.Header></Modal.Header>
+        <Modal.Header>
+         <BotonCompra performances={performances} />
+        </Modal.Header>
         <Modal.Body>
           <div className="space-y-6 w-full">
             <div
@@ -58,16 +62,10 @@ export const ModalPrecios = ({
                 />
               </div>
 
-              {
-                enableVenueImage === 0 
-                ? null 
-                : 
-                venueImagePerformance.length === 0 &&
+              {enableVenueImage === 0 ? null : venueImagePerformance.length ===
+                  0 &&
                 venueImageProduct.length === 0 &&
-                venueImageSite.length === 0 
-                ? null 
-                : 
-                (
+                venueImageSite.length === 0 ? null : (
                 <div className="relative mt-10 lg:mt-0">
                   {/* <img
                     src={

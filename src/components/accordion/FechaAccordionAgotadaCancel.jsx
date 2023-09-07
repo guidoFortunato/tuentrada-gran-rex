@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import { EventosContext } from "../../context/EventosProvider";
+import { BotonCompraDisabled } from './'
 
 export const FechaAccordionAgotadaCancel = ({ dia, hora, mesFormateado, anio, internalState, dataFechas: dataFecha, dataEvento }) => {
   const { dataInfoGeneral } = useContext(EventosContext);
@@ -38,12 +39,7 @@ export const FechaAccordionAgotadaCancel = ({ dia, hora, mesFormateado, anio, in
       </div>
 
       <div className="text-end mt-4 lg:my-auto">
-        <button
-          type="button"
-          className="text-white bg-gray-300 cursor-default focus:outline-none font-medium rounded text-sm px-3 py-2.5 text-center"
-        >
-          {dataFecha.buyButtons[0]?.label}
-        </button>
+       <BotonCompraDisabled dataFecha={dataFecha} />
       </div>
     </>
   );
