@@ -17,7 +17,7 @@ export const HeaderEventos = () => {
       className={`bg-no-repeat bg-cover bg-center container mx-auto mb-5 z-40 my-3`}
     >
       <div
-        className={`${host === VITE_VENUE ? "min-h-[60vh]" : "min-h-[50vh]"}  flex justify-center items-stretch flex-col `}
+        className={`${host === VITE_VENUE ? "min-h-[60vh] md:min-h-[50vh]" : "min-h-[50vh]"}  flex justify-center items-stretch flex-col `}
         style={{ background: "rgba(0,0,0,.6)" }}
       >
         <div className="flex justify-center items-center flex-col w-full">
@@ -27,10 +27,7 @@ export const HeaderEventos = () => {
               // fontSize: "2.5em",
               width: "92%",
             }}
-            className={`m-0 ${
-              host === VITE_VENUE ? "text-6xl md:text-[5rem]" : "text-5xl"
-            } font-medium pt-10 pb-5  ${
-              host === VITE_VENUE ? "text-center" : "text-center md:text-left"
+            className={`m-0 ${host === VITE_VENUE ? "text-6xl md:text-[5rem]" : "text-5xl"} font-medium pt-10 pb-1  ${host === VITE_VENUE ? "text-center" : "text-center md:text-left"
             }`}
           >
             {dataInfoGeneral?.name}

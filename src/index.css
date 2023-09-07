@@ -7,10 +7,10 @@
 
 
  body {
-  font-family: "Roboto", "Poppins", "Montserrat", "Raleway",'Hind Madurai', sans-serif;
+  font-family: "Hind Madurai", "Poppins", "Montserrat", "Raleway",'Roboto', sans-serif;
   min-height: 100vh;
   position: relative;
-  padding-bottom: 300px;
+  padding-bottom: 320px;
 }
 
 

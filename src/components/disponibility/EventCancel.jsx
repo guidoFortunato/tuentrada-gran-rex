@@ -11,8 +11,8 @@ export const EventCancel = ({ linkEvento, imgApi, title, imgSTXVeryLarge }) => {
 
   if (host === VITE_VENUE) {
     return (
-      <figure className="relative max-w-sm cursor-pointer hover:shadow-xl transition-all ease-in-out duration-500">
-        <div className="overflow-hidden rounded-lg border border-gray-300">
+      <figure className="relative max-w-sm cursor-pointer hover:shadow-xl transition-all ease-in-out duration-500 h-full">
+        <div className="overflow-hidden rounded-lg border border-gray-300 h-full">
           <div className="rounded-lg">
             <Link to={linkEvento}>
               {imgApi ? (
@@ -22,11 +22,13 @@ export const EventCancel = ({ linkEvento, imgApi, title, imgSTXVeryLarge }) => {
               )}
             </Link>
           </div>
-          <Link to={linkEvento}>
-            <p className="text-center text-xs 2xl:text-sm uppercase  text-black font-bold p-1">
-              {title}
-            </p>
-          </Link>
+          <div className="h-[63px] rounded-lg flex justify-center items-center">
+            <Link to={linkEvento}>
+              <p className="text-center text-base 2xl:text-lg uppercase py-3 text-black font-bold p-1">
+                {title}
+              </p>
+            </Link>
+          </div>
         </div>
         <button
           type="button"

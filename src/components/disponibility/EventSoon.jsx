@@ -9,8 +9,8 @@ export const EventSoon = ({ imgApi, title, imgSTXVeryLarge }) => {
 
   if (host === VITE_VENUE) {
     return (
-      <figure className="relative max-w-sm cursor-default hover:shadow-xl transition-all ease-in-out duration-500">
-        <div className="overflow-hidden rounded-lg border border-gray-300">
+      <figure className="relative max-w-sm cursor-default hover:shadow-xl transition-all ease-in-out duration-500 h-full">
+        <div className="overflow-hidden rounded-lg border border-gray-300 h-full">
           <div className="rounded-lg">
             <div className="rounded-lg">
               {imgApi ? (
@@ -19,9 +19,11 @@ export const EventSoon = ({ imgApi, title, imgSTXVeryLarge }) => {
                 <img className="opacity-40" src={imgSTXVeryLarge} alt={title} />
               )}
             </div>
-            <p className="text-center text-xs 2xl:text-sm uppercase  text-black font-bold p-1">
-              {title}
-            </p>
+            <div className="h-[63px] rounded-lg flex justify-center items-center">
+              <p className="text-center text-base 2xl:text-lg uppercase py-3 text-black font-bold p-1">
+                {title}
+              </p>
+            </div>
           </div>
         </div>
         <button
