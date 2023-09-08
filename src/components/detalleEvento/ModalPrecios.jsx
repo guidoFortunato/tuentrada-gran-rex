@@ -9,6 +9,20 @@ import { RiRestartFill } from "react-icons/ri";
 import { Spinner } from "../Spinner";
 import { BotonCompra } from "../accordion";
 
+const nombresMeses = [
+  "Ene",
+  "Feb",
+  "Mar",
+  "Abr",
+  "May",
+  "Jun",
+  "Jul",
+  "Ago",
+  "Sep",
+  "Oct",
+  "Nov",
+  "Dic",
+];
 
 export const ModalPrecios = ({
   performances,
@@ -27,6 +41,17 @@ export const ModalPrecios = ({
   const venueImageProduct = dataEvento?.product.venueImage;
   const venueImageSite = dataInfoGeneral?.venueImage;
   const enableVenueImage = dataEvento?.product.enableVenueImage;
+  const fecha = new Date(performances?.start);
+
+
+  const dia = fecha.getDate();
+  const mes = fecha.getMonth();
+  const año = fecha.getFullYear();
+  const hora = fecha.getHours();
+  const minutos = performances?.start.split("T")[1].split(":")[1]
+
+
+  const fechaFormateada = `${dia} ${nombresMeses[mes]} ${año} - ${hora}:${minutos}hs`;
 
   return (
     <>
@@ -42,7 +67,15 @@ export const ModalPrecios = ({
         onClose={() => setOpenModal(false)}
       >
         <Modal.Header>
-         <BotonCompra performances={performances} />
+          <div className="flex flex-col justify-between">
+            <div className="mb-3">
+              <span className="text-base">{fechaFormateada}</span>
+            </div>
+
+            <div className="mt-3">
+              <BotonCompra performances={performances} />
+            </div>
+          </div>
         </Modal.Header>
         <Modal.Body>
           <div className="space-y-6 w-full">
