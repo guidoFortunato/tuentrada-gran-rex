@@ -16,8 +16,8 @@ export const HeaderNoEventos = () => {
       className={`bg-no-repeat bg-cover bg-center container mx-auto mb-5 `}
     >
       <div
-        className={`min-h-[50vh] flex justify-center items-stretch flex-col `}
-        style={{ background: "rgba(0,0,0,.6)" }}
+        className={`min-h-[50vh] flex justify-center items-stretch flex-colP `}
+        style={{ background: "rgba(0,0,0,.5)" }}
       >
         <div className="flex justify-center items-center flex-col w-full">
           <h1

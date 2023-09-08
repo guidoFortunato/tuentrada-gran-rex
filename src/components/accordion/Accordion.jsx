@@ -122,12 +122,12 @@ export const Accordion = ({ itemsAccordion, dataEvento }) => {
           >
             <div className="p-5 border-0 border-gray-200 dark:border-gray-700">
               {itemsAccordion.promotion && (
-                <p
-                  className={`text-base mb-6 text-gray-700    `}
+                <div
+                  className={`text-base ${Boolean(itemsAccordion.promotionImage) && "mb-6"} text-gray-700`}
                   dangerouslySetInnerHTML={{
                     __html: DOMPurify.sanitize(itemsAccordion.promotion),
                   }}
-                ></p>
+                ></div>
               )}
 
               {Boolean(itemsAccordion.promotionImage) && (

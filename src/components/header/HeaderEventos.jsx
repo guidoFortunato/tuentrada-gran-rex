@@ -18,7 +18,7 @@ export const HeaderEventos = () => {
     >
       <div
         className={`${host === VITE_VENUE ? "min-h-[60vh] md:min-h-[50vh]" : "min-h-[50vh]"}  flex justify-center items-stretch flex-col `}
-        style={{ background: "rgba(0,0,0,.6)" }}
+        style={{ background: "rgba(0,0,0,.5)" }}
       >
         <div className="flex justify-center items-center flex-col w-full">
           <h1

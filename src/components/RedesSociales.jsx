@@ -18,7 +18,7 @@ export const RedesSociales = ({ dataRedes }) => {
               y="0px"
               width={item.type.width}
               height={item.type.height}
-              fill={item.type.fill}
+              fill={item.fill}
               viewBox={item.type.viewBox}
             >
               <path d={item.type.path}></path>
