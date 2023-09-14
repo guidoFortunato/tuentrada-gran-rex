@@ -13,6 +13,6 @@
 
 4. font family fuera de body, en context
 
-
+5. falta icono spotify y tiktok
 
 
