@@ -3,6 +3,7 @@ import { EventosContext } from "../../context/EventosProvider";
 
 export const BotonCompra = ({ performances }) => {
   const { dataInfoGeneral } = useContext(EventosContext);
+  // console.log({performances})
   return (
     <a href={performances?.buyButtons[0]?.link} target="_blank">
       <button
