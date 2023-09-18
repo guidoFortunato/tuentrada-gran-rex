@@ -14,6 +14,7 @@ export const EventAvailable = ({
 }) => {
   const { host } = useContext(EventosContext);
   // console.log({linkEvento})
+  // console.log({disponibility})
 
   if (host === VITE_VENUE) {
     return (

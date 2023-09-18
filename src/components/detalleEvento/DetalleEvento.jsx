@@ -120,7 +120,7 @@ export const DetalleEvento = () => {
             <h2 className="text-xl mt-2 lg:mt-4 mb-2 uppercase font-semibold">{data?.product?.name}</h2>
             <div className="grid grid-cols-1">
               <p
-                className="text-base lg:text-lg text-gray-700"
+                className="text-base text-gray-700"
                 dangerouslySetInnerHTML={{
                   __html: DOMPurify.sanitize(data?.product?.description),
                 }}
