@@ -25,9 +25,8 @@ export const FechaEvento = ({
   const [openModal, setOpenModal] = useState(false);
   // console.log({dataInfoGeneral})
   // console.log({dataEvento})
-  // console.log({dataFechas})
-  // console.log({ availabilitLevel });
-  // console.log({ reason });
+  // console.log({dataFecha})
+  // console.log({ availabilitLevel, reason });
   // console.log({ internalState });
 
   const fecha = new Date(dataFecha.start);
@@ -70,9 +69,9 @@ export const FechaEvento = ({
     );
   }
 
-  if (availabilitLevel === "NONE" && reason !== "SOLD_OUT") {
-    return;
-  }
+  // if (availabilitLevel === "NONE" && reason !== "SOLD_OUT") {
+  //   return;
+  // }
 
   return (
     <>
@@ -101,7 +100,7 @@ export const FechaEvento = ({
             setOpenModal={setOpenModal}
           />
         )}
-        {availabilitLevel === "NONE" && reason === "SOLD_OUT" && (
+        {availabilitLevel === "NONE" && (
           <FechaAccordionAgotadaCancel
             dia={dia}
             hora={hora}
