@@ -47,7 +47,7 @@ const EventosProvider = (props) => {
   useEffect(() => {
     const getDataInfoGeneral = async () => {
       const info = await getData(
-        VITE_API_INFO_GENERAL + "auditorio-sur.tuentrada.com", //auditoriosur.tuentrada.com - teatro-granrex.com.ar - nave-cultural.tuentrada.com
+        VITE_API_INFO_GENERAL + "venues.tuentrada.com", //auditoriosur.tuentrada.com - teatro-granrex.com.ar - nave-cultural.tuentrada.com
         VITE_EMAIL,
         VITE_PASS
       );

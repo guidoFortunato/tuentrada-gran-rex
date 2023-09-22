@@ -62,7 +62,8 @@ export const DetalleEvento = () => {
           recomendation: data.product.recomendation,
           recomendationImage: data.product.recomendationImage,
           socialNetworks: data.product.socialNetworks,
-          promotionImage: data.product.promotionImage
+          promotionImage: data.product.promotionImage,
+          useWallet: data.product.useWallet
           // venueImageProduct: data.venueImage,
         });
       };
@@ -138,6 +139,8 @@ export const DetalleEvento = () => {
             </div>
           </div>
         </div>
+
+        
 
         <Accordion itemsAccordion={itemsAccordion} dataEvento={data} />
       </div>

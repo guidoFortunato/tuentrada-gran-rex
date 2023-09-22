@@ -20,35 +20,49 @@ export const Accordion = ({ itemsAccordion, dataEvento }) => {
 
   useEffect(() => {
     if (itemsAccordion.disponibility.length > 0) {
-      const updatedPerformances = itemsAccordion.performances.map((performance) => {
-        const correspondingDisponibility = itemsAccordion.disponibility.find(
-          (item) => item.performanceId === performance.id
-        );
-      // console.log({correspondingDisponibility})
-        if (correspondingDisponibility) {
-          return {
-            ...performance,
-            availabilitLevel: correspondingDisponibility.availabilitLevel,
-            reason: correspondingDisponibility.reason,
-          };
+      const updatedPerformances = itemsAccordion.performances.map(
+        (performance) => {
+          const correspondingDisponibility = itemsAccordion.disponibility.find(
+            (item) => item.performanceId === performance.id
+          );
+          // console.log({correspondingDisponibility})
+          if (correspondingDisponibility) {
+            return {
+              ...performance,
+              availabilitLevel: correspondingDisponibility.availabilitLevel,
+              reason: correspondingDisponibility.reason,
+            };
+          }
+
+          return performance; // Mantener sin cambios si no hay correspondencia
         }
-      
-        return performance; // Mantener sin cambios si no hay correspondencia
-      });
+      );
       setNewPerformances(updatedPerformances);
-    }else{
+    } else {
       setNewPerformances([]);
     }
   }, []);
-
-  
-  
 
   if (newPerformances === null) return <Spinner />;
 
   return (
     <div id="accordion-open" data-accordion="open" className="mt-5">
-      {(itemsAccordion.performances.length > 0 && newPerformances.length > 0) && (
+      {itemsAccordion.useWallet && (
+        <h2 id="accordion-open-heading-30">
+          <div className="flex flex-col sm:flex-row w-full p-5 font-medium text-left text-gray-700 border-b-2 border-gray-200 ">
+            <span className="flex items-center text-lg font-semibold pb-1 sm:pb-0 sm:pr-1">
+              Entradas disponibles con
+            </span>
+            <img
+              className="w-[120px]"
+              src="https://www.tuentrada.com/teatro/gran-rex/imagenes/tuEntradaWallet-chica.png"
+              alt="tuentrada wallet"
+            />
+          </div>
+        </h2>
+      )}
+
+      {itemsAccordion.performances.length > 0 && newPerformances.length > 0 && (
         <>
           <h2 id="accordion-open-heading-1">
             <button
@@ -60,13 +74,18 @@ export const Accordion = ({ itemsAccordion, dataEvento }) => {
               onClick={() => setPerformances((prevState) => !prevState)}
             >
               <span className="flex items-center text-lg font-semibold">
-                {itemsAccordion.performances.length > 1 && dataEvento.product.internalState !== "cancel"
+                {itemsAccordion.performances.length > 1 &&
+                dataEvento.product.internalState !== "cancel"
                   ? "Fechas disponibles"
-                  : itemsAccordion.performances.length <= 1 && dataEvento.product.internalState !== "cancel" ? "Fecha disponible"
-                  : itemsAccordion.performances.length > 1 && dataEvento.product.internalState === "cancel" ? "Fechas no disponibles"
-                  : itemsAccordion.performances.length <= 1 && dataEvento.product.internalState === "cancel" && "Fecha no disponible"
-                
-                }
+                  : itemsAccordion.performances.length <= 1 &&
+                    dataEvento.product.internalState !== "cancel"
+                  ? "Fecha disponible"
+                  : itemsAccordion.performances.length > 1 &&
+                    dataEvento.product.internalState === "cancel"
+                  ? "Fechas no disponibles"
+                  : itemsAccordion.performances.length <= 1 &&
+                    dataEvento.product.internalState === "cancel" &&
+                    "Fecha no disponible"}
               </span>
               <IconAccordion item={performances} />
             </button>
@@ -76,21 +95,27 @@ export const Accordion = ({ itemsAccordion, dataEvento }) => {
             className={performances ? "" : "hidden"}
             aria-labelledby="accordion-open-heading-1"
           >
-            <div  className={performances ? "max-h-[400px] overflow-y-auto border-0 border-gray-200 dark:border-gray-700 dark:bg-gray-900 text-sm" : "hidden"}>
+            <div
+              className={
+                performances
+                  ? "max-h-[400px] overflow-y-auto border-0 border-gray-200 dark:border-gray-700 dark:bg-gray-900 text-sm"
+                  : "hidden"
+              }
+            >
               {newPerformances.map((item) => {
                 // console.log({internalState: item.internalState})
                 // console.log({item})
                 // if (item.internalState !== "sin fechas") {
-                  return (
-                    <FechaEvento
-                      dataFechas={item}
-                      dataEvento={dataEvento}
-                      key={item.id}
-                      availabilitLevel={item.availabilitLevel}
-                      reason={item.reason}
-                      internalState={item.internalState}
-                    />
-                  );
+                return (
+                  <FechaEvento
+                    dataFechas={item}
+                    dataEvento={dataEvento}
+                    key={item.id}
+                    availabilitLevel={item.availabilitLevel}
+                    reason={item.reason}
+                    internalState={item.internalState}
+                  />
+                );
                 // }
               })}
             </div>
@@ -123,7 +148,9 @@ export const Accordion = ({ itemsAccordion, dataEvento }) => {
             <div className="p-5 border-0 border-gray-200 dark:border-gray-700">
               {itemsAccordion.promotion && (
                 <div
-                  className={`text-base ${Boolean(itemsAccordion.promotionImage) && "mb-6"} text-gray-700`}
+                  className={`text-base ${
+                    Boolean(itemsAccordion.promotionImage) && "mb-6"
+                  } text-gray-700`}
                   dangerouslySetInnerHTML={{
                     __html: DOMPurify.sanitize(itemsAccordion.promotion),
                   }}
@@ -211,7 +238,10 @@ export const Accordion = ({ itemsAccordion, dataEvento }) => {
               )}
 
               {Boolean(itemsAccordion.recomendationImage) && (
-                <img src={itemsAccordion.recomendationImage} alt="recomendaciones" />
+                <img
+                  src={itemsAccordion.recomendationImage}
+                  alt="recomendaciones"
+                />
               )}
             </div>
           </div>

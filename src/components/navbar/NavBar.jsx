@@ -29,6 +29,8 @@ export const NavBar = () => {
     };
   }, []);
 
+  // console.log({dataInfoGeneral})
+
   // if (dataInfoGeneral.length === 0) return <Spinner />;
 
   // if (dataInfoGeneral == "") return <Spinner />;
@@ -60,7 +62,7 @@ export const NavBar = () => {
               className="self-center text-xl font-semibold whitespace-nowrap"
               style={{ color: dataInfoGeneral.backgroundBody }}
             >
-              {dataInfoGeneral.name}
+              {dataInfoGeneral.pages[0].title}
             </span>
           </Link>
           <div className="flex lg:w-1/3">

@@ -6,7 +6,7 @@ import { ErrorRouter } from "./router/ErrorRouter";
 import { EventosContext } from "./context/EventosProvider";
 
 import "animate.css";
-import { useEffect } from "react";
+// import AdSense from "./components/Adsense";
 
 function App() {
   const { dataInfoGeneral } = useContext(EventosContext);
@@ -34,6 +34,7 @@ function App() {
         </Helmet>
       </HelmetProvider>
       <AppRouter />
+      {/* <AdSense /> */}
     </>
   );
 }

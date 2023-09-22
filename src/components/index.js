@@ -1,5 +1,7 @@
 export * from "./accordion";
+export * from "./Adsense";
 export * from "./CardEvento";
+export * from "./detalleEvento";
 export * from "./EventosHome";
 export * from "./footer";
 export * from "./ImagenHistoria";
@@ -7,4 +9,3 @@ export * from "./ItemsRedes";
 export * from "./navbar";
 export * from "./RedesSociales";
 export * from "./Spinner";
-export * from './detalleEvento'
