@@ -3,6 +3,11 @@ import DOMPurify from "dompurify";
 import { IconAccordion } from "./";
 import { FechaEvento } from "../disponibility";
 import { Spinner } from "../";
+import tippy from "tippy.js";
+import "tippy.js/dist/tippy.css";
+import "tippy.js/animations/scale.css";
+
+// import { Tooltip } from "flowbite-react";
 
 export const Accordion = ({ itemsAccordion, dataEvento }) => {
   const [performances, setPerformances] = useState(true);
@@ -17,6 +22,17 @@ export const Accordion = ({ itemsAccordion, dataEvento }) => {
   // console.log({ itemsAccordion });
   // console.log({ dataEvento });
   // console.log({newPerformances})
+
+  const mouseHover = ( e ) => {
+      // console.log({e})
+      const tooltip = tippy(e.target, {
+        content: "Mas información de TuEntrada Wallet",
+        placement: "top",
+        theme: "dark",
+      });
+      return tooltip;
+
+  }
 
   useEffect(() => {
     if (itemsAccordion.disponibility.length > 0) {
@@ -49,15 +65,29 @@ export const Accordion = ({ itemsAccordion, dataEvento }) => {
     <div id="accordion-open" data-accordion="open" className="mt-5">
       {itemsAccordion.useWallet && (
         <h2 id="accordion-open-heading-30">
-          <div className="flex flex-col sm:flex-row w-full p-5 font-medium text-left text-gray-700 border-b-2 border-gray-200 ">
+          <div className="flex flex-col items-center sm:flex-row justify-center w-full p-5 font-medium text-left text-gray-700 border-b-2 border-gray-200 ">
             <span className="flex items-center text-lg font-semibold pb-1 sm:pb-0 sm:pr-1">
               Entradas disponibles con
             </span>
-            <img
-              className="w-[120px]"
-              src="https://www.tuentrada.com/teatro/gran-rex/imagenes/tuEntradaWallet-chica.png"
-              alt="tuentrada wallet"
-            />
+            {/* <Tooltip
+              content="Mas información de TuEntrada Wallet"
+              animation="duration-500"
+              trigger="hover"
+              style="dark"
+            > */}
+              <a
+                href="https://www.tuentrada.com/wallet/"
+                target="_blank"
+                rel="noreferrer"
+                onMouseOver={mouseHover}
+              >
+                <img
+                  className="w-[120px]"
+                  src="https://www.tuentrada.com/teatro/gran-rex/imagenes/tuEntradaWallet-chica.png"
+                  alt="tuentrada wallet"
+                />
+              </a>
+            {/* </Tooltip> */}
           </div>
         </h2>
       )}
