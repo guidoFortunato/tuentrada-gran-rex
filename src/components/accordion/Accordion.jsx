@@ -23,16 +23,15 @@ export const Accordion = ({ itemsAccordion, dataEvento }) => {
   // console.log({ dataEvento });
   // console.log({newPerformances})
 
-  const mouseHover = ( e ) => {
-      // console.log({e})
-      const tooltip = tippy(e.target, {
-        content: "Mas información de TuEntrada Wallet",
-        placement: "top",
-        theme: "dark",
-      });
-      return tooltip;
-
-  }
+  const mouseHover = (e) => {
+    // console.log({e})
+    const tooltip = tippy(e.target, {
+      content: "Mas información de TuEntrada Wallet",
+      placement: "top",
+      theme: "dark",
+    });
+    return tooltip;
+  };
 
   useEffect(() => {
     if (itemsAccordion.disponibility.length > 0) {
@@ -65,21 +64,15 @@ export const Accordion = ({ itemsAccordion, dataEvento }) => {
     <div id="accordion-open" data-accordion="open" className="mt-5">
       {itemsAccordion.useWallet && (
         <h2 id="accordion-open-heading-30">
-          <div className="flex flex-col items-center sm:flex-row justify-center w-full p-5 font-medium text-left text-gray-700 border-b-2 border-gray-200 ">
-            <span className="flex items-center text-lg font-semibold pb-1 sm:pb-0 sm:pr-1">
-              Entradas disponibles con
-            </span>
-            {/* <Tooltip
-              content="Mas información de TuEntrada Wallet"
-              animation="duration-500"
-              trigger="hover"
-              style="dark"
-            > */}
+          <div className="flex flex-col items-center justify-center md:items-start w-full p-5 font-medium text-left text-gray-700 border-b-2 border-gray-200 ">
+            <span>Entradas disponibles con</span>
+            <div className="md:pl-5">
               <a
                 href="https://www.tuentrada.com/wallet/"
                 target="_blank"
                 rel="noreferrer"
                 onMouseOver={mouseHover}
+                className="w-full block text-center"
               >
                 <img
                   className="w-[120px]"
@@ -87,6 +80,15 @@ export const Accordion = ({ itemsAccordion, dataEvento }) => {
                   alt="tuentrada wallet"
                 />
               </a>
+            </div>
+
+            {/* <Tooltip
+              content="Mas información de TuEntrada Wallet"
+              animation="duration-500"
+              trigger="hover"
+              style="dark"
+            > */}
+
             {/* </Tooltip> */}
           </div>
         </h2>

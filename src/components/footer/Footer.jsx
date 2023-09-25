@@ -30,7 +30,7 @@ export const Footer = () => {
               alt={dataInfoGeneral.altLogoFooter}
             />
             <span className="self-center text-xl font-medium whitespace-nowrap ">
-              {dataInfoGeneral.name}
+            {(dataInfoGeneral.whereName === "footer" || dataInfoGeneral.whereName === "both") && dataInfoGeneral.name }
             </span>
           </Link>
           <ul className="flex flex-wrap items-center mb-6 text-sm font-medium  sm:mb-0 ">

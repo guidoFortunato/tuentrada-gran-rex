@@ -62,7 +62,7 @@ export const NavBar = () => {
               className="self-center text-xl font-semibold whitespace-nowrap"
               style={{ color: dataInfoGeneral.backgroundBody }}
             >
-              {dataInfoGeneral.pages[0].title}
+              {(dataInfoGeneral.whereName === "navbar" || dataInfoGeneral.whereName === "both") && dataInfoGeneral.name }
             </span>
           </Link>
           <div className="flex lg:w-1/3">
