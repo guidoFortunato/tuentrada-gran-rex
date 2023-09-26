@@ -291,7 +291,7 @@ export const Accordion = ({ itemsAccordion, dataEvento }) => {
               onClick={() => setExtra((prevState) => !prevState)}
             >
               <span className="flex items-center text-lg font-semibold">
-                Extra
+                {itemsAccordion.extraLabel ? itemsAccordion.extraLabel : "Extra"}
               </span>
               <IconAccordion item={extra} />
             </button>

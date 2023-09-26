@@ -52,12 +52,16 @@ export const NavbarRex = () => {
               className="h-12 mr-3"
               alt={dataInfoGeneral.altLogo}
             />
-            <span
-              className="self-center text-xl font-semibold whitespace-nowrap"
-              style={{ color: dataInfoGeneral.backgroundBody }}
-            >
-              {dataInfoGeneral.name}
-            </span>
+            {(dataInfoGeneral.whereName === "navbar" ||
+              dataInfoGeneral.whereName === "both") && (
+              <span
+                className="self-center text-xl font-semibold whitespace-nowrap"
+                style={{ color: dataInfoGeneral.backgroundBody }}
+              >
+                {dataInfoGeneral.name}
+              </span>
+            )}
+           
           </Link>
          
             <button

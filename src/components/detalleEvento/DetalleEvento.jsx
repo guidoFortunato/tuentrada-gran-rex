@@ -54,6 +54,7 @@ export const DetalleEvento = () => {
           disponibility: data.disponibility,
           extra: data.product.extra,
           extraImage: data.product.extraImage,
+          extraLabel: data.product.extraLabel,
           history: data.product.history,
           historyImage: data.product.historyImage,
           mediaJson: data.product.mediaJson,

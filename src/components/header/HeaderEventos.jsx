@@ -30,7 +30,7 @@ export const HeaderEventos = () => {
             className={`m-0 ${host === VITE_VENUE ? "text-6xl md:text-[5rem]" : "text-5xl"} font-medium pt-10 pb-1  ${host === VITE_VENUE ? "text-center" : "text-center md:text-left"
             }`}
           >
-            {dataInfoGeneral?.pages[0]?.title}
+            {dataInfoGeneral?.pages[0]?.title.toUpperCase()}
           </h1>
           {host === VITE_VENUE && (
             <div className="w-[87%] sm:w-[70%] md:w-[50%] lg:w-[35%] 2xl:w-[25%]">

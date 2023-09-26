@@ -4,6 +4,7 @@ import { BotonCompraDisabled } from './'
 
 export const FechaAccordionAgotadaCancel = ({ dia, hora, mesFormateado, anio, internalState, dataFechas: dataFecha, dataEvento }) => {
   const { dataInfoGeneral } = useContext(EventosContext);
+  console.log({internalState})
   return (
     <>
       <div className="flex flex-row">
@@ -39,7 +40,7 @@ export const FechaAccordionAgotadaCancel = ({ dia, hora, mesFormateado, anio, in
       </div>
 
       <div className="text-end mt-4 lg:my-auto">
-       <BotonCompraDisabled dataFecha={dataFecha} />
+       <BotonCompraDisabled dataFecha={dataFecha} internalState={internalState} />
       </div>
     </>
   );

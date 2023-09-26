@@ -52,7 +52,7 @@ export const FechaAccordionProximamente = ({
       </div>
 
       <div className="text-end mt-4 lg:my-auto">
-        <BotonCompraDisabled dataFecha={dataFecha} />
+        <BotonCompraDisabled dataFecha={dataFecha} internalState={internalState} />
       </div>
     </>
   );

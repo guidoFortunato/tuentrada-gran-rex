@@ -7,11 +7,18 @@ import { getEnvVariables } from "../../helpers";
 const { VITE_VENUE } = getEnvVariables();
 
 export const NavBar = () => {
-  const { dataInfoGeneral, handleButtonsCollapse, handleSearchCollapse, handleButtonCollapse, isSearchCollapsed, isButtonCollapsed, host } = useContext(EventosContext);
+  const {
+    dataInfoGeneral,
+    handleButtonsCollapse,
+    handleSearchCollapse,
+    handleButtonCollapse,
+    isSearchCollapsed,
+    isButtonCollapsed,
+    host,
+  } = useContext(EventosContext);
   // const [isSearchCollapsed, setIsSearchCollapsed] = useState(false);
   // const [isButtonCollapsed, setIsButtonCollapsed] = useState(false);
   const [navbar, setNavbar] = useState(false);
-
 
   const changeBackground = () => {
     if (window.scrollY >= 1) {
@@ -34,8 +41,8 @@ export const NavBar = () => {
   // if (dataInfoGeneral.length === 0) return <Spinner />;
 
   // if (dataInfoGeneral == "") return <Spinner />;
-  if( host === VITE_VENUE ){
-    return <NavbarRex />
+  if (host === VITE_VENUE) {
+    return <NavbarRex />;
   }
   return (
     <>
@@ -58,12 +65,15 @@ export const NavBar = () => {
               className="h-12 mr-3"
               alt={dataInfoGeneral.altLogo}
             />
-            <span
-              className="self-center text-xl font-semibold whitespace-nowrap"
-              style={{ color: dataInfoGeneral.backgroundBody }}
-            >
-              {(dataInfoGeneral.whereName === "navbar" || dataInfoGeneral.whereName === "both") && dataInfoGeneral.name }
-            </span>
+            {(dataInfoGeneral.whereName === "navbar" ||
+              dataInfoGeneral.whereName === "both") && (
+              <span
+                className="self-center text-xl font-semibold whitespace-nowrap"
+                style={{ color: dataInfoGeneral.backgroundBody }}
+              >
+                {dataInfoGeneral.name}
+              </span>
+            )}
           </Link>
           <div className="flex lg:w-1/3">
             <button
