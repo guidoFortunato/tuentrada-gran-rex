@@ -4,7 +4,7 @@ import { BotonCompraDisabled } from './'
 
 export const FechaAccordionAgotadaCancel = ({ dia, hora, mesFormateado, anio, internalState, dataFechas: dataFecha, dataEvento }) => {
   const { dataInfoGeneral } = useContext(EventosContext);
-  console.log({internalState})
+  // console.log({internalState})
   return (
     <>
       <div className="flex flex-row">
