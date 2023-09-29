@@ -1,5 +1,4 @@
 export * from "./accordion";
-export * from "./Adsense";
 export * from "./CardEvento";
 export * from "./detalleEvento";
 export * from "./EventosHome";
