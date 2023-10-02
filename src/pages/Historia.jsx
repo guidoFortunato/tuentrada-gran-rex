@@ -4,7 +4,8 @@ import { ImagenHistoria, Spinner } from "../components";
 import DOMPurify from "dompurify";
 
 export const Historia = () => {
-  const { dataInfoGeneral, handleButtonsCollapse: handleNavBarCollapse } = useContext(EventosContext);
+  const { dataInfoGeneral, handleButtonsCollapse: handleNavBarCollapse } =
+    useContext(EventosContext);
   const [showMoreText, setShowMoreText] = useState(false);
   const [showMoreImages, setShowMoreImages] = useState(false);
   const maxWordsMobile = 200;
@@ -17,7 +18,7 @@ export const Historia = () => {
   const imagesPerRowDesktop = 4;
 
   useEffect(() => {
-    handleNavBarCollapse()
+    handleNavBarCollapse();
   }, []);
 
   useEffect(() => {
@@ -62,7 +63,10 @@ export const Historia = () => {
             }}
           ></p>
           {words.length > maxWords && (
-            <button style={{color: dataInfoGeneral.colorHoverLi}} onClick={toggleShowMoreText}>
+            <button
+              style={{ color: dataInfoGeneral.colorHoverLi }}
+              onClick={toggleShowMoreText}
+            >
               {toggleButtonTextText}
             </button>
           )}
@@ -101,9 +105,9 @@ export const Historia = () => {
               <div className={`grid grid-cols-${imagesPerRow} gap-4`}>
                 {displayedImages.map((item) => (
                   <ImagenHistoria
-                    src={item.image}
+                    src={item.image.src}
                     key={item.id}
-                    alt={item.alt}
+                    alt={item.image.alt}
                   />
                 ))}
               </div>
@@ -117,10 +121,12 @@ export const Historia = () => {
                       backgroundColor: dataInfoGeneral.backgroundButton,
                     }}
                     onMouseOver={(e) => {
-                      e.target.style.backgroundColor = dataInfoGeneral.colorHoverButton; // Cambiar al color de hover
+                      e.target.style.backgroundColor =
+                        dataInfoGeneral.colorHoverButton; // Cambiar al color de hover
                     }}
                     onMouseOut={(e) => {
-                      e.target.style.backgroundColor = dataInfoGeneral.backgroundButton; // Restaurar el color original
+                      e.target.style.backgroundColor =
+                        dataInfoGeneral.backgroundButton; // Restaurar el color original
                     }}
                   >
                     {toggleButtonTextImages}
@@ -138,14 +144,21 @@ export const Historia = () => {
   return (
     <div className="container mx-auto mb-5 lg:px-0">
       <section
-        style={{
-          backgroundImage: `url(${dataInfoGeneral.pages[2].image})`,
-        }}
-        className="bg-no-repeat bg-cover bg-center container mx-auto"
+        // style={{
+        //   backgroundImage: `url(${dataInfoGeneral.pages[2].image})`,
+        // }}
+        // className="bg-no-repeat bg-cover bg-center container mx-auto"
+        className="relative mb-5"
       >
+        <img
+          src={dataInfoGeneral.pages[2].image.src}
+          srcSet={dataInfoGeneral.pages[1].image.srcset}
+          alt={dataInfoGeneral.pages[1].image.alt}
+          className="h-[35vh] w-full object-cover brightness-[50%]"
+        />
         <h2
-          style={{ height: "40vh", background: 'rgba(0, 0, 0, 0.5)' }}
-          className="text-3xl flex lg:justify-start justify-center items-center lg:items-end text-white p-10 my-3 tittle-h2"
+          // style={{ height: "40vh", background: "rgba(0, 0, 0, 0.5)" }}
+          className="absolute top-0 bottom-0 left-0 right-0 text-2xl lg:text-3xl flex lg:justify-start justify-center items-center lg:items-end text-white p-10 my-3"
         >
           {dataInfoGeneral.pages[2].title}
         </h2>

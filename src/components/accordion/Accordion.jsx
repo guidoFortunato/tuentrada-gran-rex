@@ -19,7 +19,7 @@ export const Accordion = ({ itemsAccordion, dataEvento }) => {
   const [recomendation, setRecomendation] = useState(false);
   const [newPerformances, setNewPerformances] = useState(null);
 
-  // console.log({ itemsAccordion });
+  console.log({ itemsAccordion });
   // console.log({ dataEvento });
   // console.log({newPerformances})
 
@@ -190,7 +190,12 @@ export const Accordion = ({ itemsAccordion, dataEvento }) => {
               )}
 
               {Boolean(itemsAccordion.promotionImage) && (
-                <img src={itemsAccordion.promotionImage} alt="promociones" />
+                <img
+                  className="object-cover"
+                  src={itemsAccordion.promotionImage.src}
+                  srcSet={itemsAccordion.promotionImage.srcset}
+                  alt={itemsAccordion.promotionImage.alt}
+                />
               )}
             </div>
           </div>
@@ -230,7 +235,12 @@ export const Accordion = ({ itemsAccordion, dataEvento }) => {
               )}
 
               {Boolean(itemsAccordion.historyImage) && (
-                <img src={itemsAccordion.historyImage} alt="descripcion" />
+                <img
+                  className="object-cover"
+                  src={itemsAccordion.historyImage.src}
+                  srcSet={itemsAccordion.historyImage.srcset}
+                  alt={itemsAccordion.historyImage.alt}
+                />
               )}
             </div>
           </div>
@@ -271,8 +281,10 @@ export const Accordion = ({ itemsAccordion, dataEvento }) => {
 
               {Boolean(itemsAccordion.recomendationImage) && (
                 <img
-                  src={itemsAccordion.recomendationImage}
-                  alt="recomendaciones"
+                  className="object-cover"
+                  src={itemsAccordion.recomendationImage.src}
+                  srcSet={itemsAccordion.recomendationImage.srcset}
+                  alt={itemsAccordion.recomendationImage.alt}
                 />
               )}
             </div>
@@ -291,7 +303,9 @@ export const Accordion = ({ itemsAccordion, dataEvento }) => {
               onClick={() => setExtra((prevState) => !prevState)}
             >
               <span className="flex items-center text-lg font-semibold">
-                {itemsAccordion.extraLabel ? itemsAccordion.extraLabel : "Extra"}
+                {itemsAccordion.extraLabel
+                  ? itemsAccordion.extraLabel
+                  : "Extra"}
               </span>
               <IconAccordion item={extra} />
             </button>
@@ -312,7 +326,12 @@ export const Accordion = ({ itemsAccordion, dataEvento }) => {
               )}
 
               {Boolean(itemsAccordion.extraImage) && (
-                <img src={itemsAccordion.extraImage} alt="extra" />
+                <img
+                  className="object-cover"
+                  src={itemsAccordion.extraImage.src}
+                  srcSet={itemsAccordion.extraImage.srcset}
+                  
+                />
               )}
             </div>
           </div>

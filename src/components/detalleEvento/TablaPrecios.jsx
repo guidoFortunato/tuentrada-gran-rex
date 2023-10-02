@@ -1,6 +1,6 @@
 import React from "react";
 
-export const TablaPrecios = ({ performances, dataEvento }) => {
+export const TablaPrecios = ({ performances }) => {
   // console.log({performances})
   return (
     <table className="w-full text-sm text-left text-gray-500 dark:text-gray-400 border">

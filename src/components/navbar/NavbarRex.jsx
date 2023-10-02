@@ -48,9 +48,9 @@ export const NavbarRex = () => {
         <div className="max-w-screen-2xl flex flex-wrap items-center justify-between mx-auto px-4 pt-4">
           <Link to="/" className="flex items-center">
             <img
-              src={dataInfoGeneral.logo}
+              src={dataInfoGeneral.logo.src}
               className="h-12 mr-3"
-              alt={dataInfoGeneral.altLogo}
+              alt={dataInfoGeneral.logo.alt}
             />
             {(dataInfoGeneral.whereName === "navbar" ||
               dataInfoGeneral.whereName === "both") && (

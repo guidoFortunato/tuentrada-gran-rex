@@ -13,7 +13,7 @@ export const EventSoon = ({ imgApi, title, imgSTXVeryLarge }) => {
         <div className="overflow-hidden rounded-lg border border-gray-300 h-full">
           <div className="rounded-lg">
             {imgApi ? (
-              <img className="opacity-40" src={imgApi} alt={title} />
+              <img className="opacity-40" src={imgApi.src} alt={imgApi.alt} srcSet={imgApi.srcset} />
             ) : (
               <img className="opacity-40" src={imgSTXVeryLarge} alt={title} />
             )}

@@ -12,7 +12,7 @@ export const HeaderNoEventos = () => {
   // console.log({dataInfoGeneral})
   return (
     <header
-      style={{ backgroundImage: `url(${dataInfoGeneral?.backgroundImage})` }}
+      style={{ backgroundImage: `url(${dataInfoGeneral?.backgroundImage.src})` }}
       className={`bg-no-repeat bg-cover bg-center container mx-auto mb-5 `}
     >
       <div
@@ -32,7 +32,7 @@ export const HeaderNoEventos = () => {
               host === VITE_VENUE ? "text-center" : "text-center md:text-left"
             }`}
           >
-            {dataInfoGeneral?.pages[0]?.title.toUpperCase()}
+            {dataInfoGeneral?.pages[0]?.title}
           </h1>
           {host === VITE_VENUE && (
             <div className="w-[87%] sm:w-[70%] md:w-[50%] lg:w-[35%] 2xl:w-[25%]">

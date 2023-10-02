@@ -16,7 +16,7 @@ export const EventCancel = ({ linkEvento, imgApi, title, imgSTXVeryLarge }) => {
           <div className="rounded-lg">
             <Link to={linkEvento}>
               {imgApi ? (
-                <img src={imgApi} alt={title} />
+                <img src={imgApi.src} alt={imgApi.alt} srcSet={imgApi.srcset} />
               ) : (
                 <img src={imgSTXVeryLarge} alt={title} />
               )}
@@ -46,8 +46,9 @@ export const EventCancel = ({ linkEvento, imgApi, title, imgSTXVeryLarge }) => {
           {imgApi ? (
             <img
               className="rounded-lg md:rounded-none"
-              src={imgApi}
-              alt={title}
+              src={imgApi.src}
+              alt={imgApi.alt}
+              srcSet={imgApi.srcset}
             />
           ) : (
             <img

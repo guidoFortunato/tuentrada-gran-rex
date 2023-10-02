@@ -103,10 +103,16 @@ export const DetalleEvento = () => {
             {data?.product?.image ? (
               <div className="border border-gray-300 rounded-lg ">
                 <img
+                  src={data.product.image.src}
+                  srcSet={data.product.image.srcset}
+                  alt={data.product.image.alt}
+                  className="rounded-lg w-full"
+                />
+                {/* <img
                   src={data.product.image}
                   alt={data.product.name}
                   className="rounded-lg w-full"
-                />
+                /> */}
               </div>
             ) : (
               <div className="border border-gray-300 rounded-lg ">

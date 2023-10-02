@@ -25,9 +25,9 @@ export const Footer = () => {
         <div className="sm:flex sm:items-center sm:justify-between">
           <Link to="/" className="flex items-center mb-4 sm:mb-0">
             <img
-              src={dataInfoGeneral.logoFooter}
+              src={dataInfoGeneral.logoFooter.src}
               className="h-12 mr-3"
-              alt={dataInfoGeneral.altLogoFooter}
+              alt={dataInfoGeneral.logoFooter.alt}
             />
             <span className="self-center text-xl font-medium whitespace-nowrap ">
             {(dataInfoGeneral.whereName === "footer" || dataInfoGeneral.whereName === "both") && dataInfoGeneral.name }

@@ -15,6 +15,7 @@ export const EventAvailable = ({
   const { host } = useContext(EventosContext);
   // console.log({linkEvento})
   // console.log({disponibility})
+  // console.log({imgApi})
 
   if (host === VITE_VENUE) {
     return (
@@ -23,7 +24,7 @@ export const EventAvailable = ({
           <div className="rounded-lg">
             <Link to={linkEvento}>
               {imgApi ? (
-                <img src={imgApi} alt={title} />
+                <img src={imgApi.src} alt={imgApi.src} srcSet={imgApi.srcset} />
               ) : (
                 <img src={imgSTXVeryLarge} alt={title} />
               )}
@@ -61,7 +62,7 @@ export const EventAvailable = ({
       <figure className="relative max-w-sm cursor-pointer border rounded-lg border-gray-300 ">
         <Link to={linkEvento}>
           {imgApi ? (
-            <img className="rounded-lg " src={imgApi} alt={title} />
+            <img className="rounded-lg" src={imgApi.src} alt={imgApi.alt} srcSet={imgApi.srcset} />
           ) : (
             <img className="rounded-lg" src={imgSTXVeryLarge} alt={title} />
           )}

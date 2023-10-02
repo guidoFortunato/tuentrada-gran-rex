@@ -23,10 +23,20 @@ export const HorariosLlegada = () => {
   return (
     <div className="container mx-auto mb-5">
       <section
-        style={{ backgroundImage: `url(${dataInfoGeneral.pages[3].image}` }}
-        className="bg-no-repeat bg-cover bg-center container mx-auto"
+        // style={{ backgroundImage: `url(${dataInfoGeneral.pages[3].image}` }}
+        // className="bg-no-repeat bg-cover bg-center container mx-auto"
+        className="relative mb-5"
       >
-        <h2 style={{height:"40vh", background: 'rgba(0, 0, 0, 0.5)'}} className="text-3xl flex lg:justify-start justify-center items-center lg:items-end text-white p-10 my-3 tittle-h2">
+        <img
+          src={dataInfoGeneral.pages[3].image.src}
+          srcSet={dataInfoGeneral.pages[3].image.srcset}
+          alt={dataInfoGeneral.pages[3].image.alt}
+          className="h-[35vh] w-full object-cover brightness-[50%]"
+        />
+        <h2 
+        className="absolute top-0 bottom-0 left-0 right-0 text-2xl lg:text-3xl flex lg:justify-start justify-center items-center lg:items-end text-white p-10 my-3"
+        
+        >
           {dataInfoGeneral.pages[3].title}
         </h2>
       </section>
