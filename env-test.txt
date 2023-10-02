@@ -1,7 +1,0 @@
-VITE_API_EVENTOS=https://testapi.tuentrada.com/api/v1/site/venue/ 
-VITE_API_INFO_GENERAL=https://testapi.tuentrada.com/api/v1/site/
-VITE_LOGIN=https://testapi.tuentrada.com/api/login
-VITE_EMAIL=gfortunato@tuentrada.com
-VITE_PASS=Correa.3030
-VITE_GA=G-K2KT0GJC8Q
-VITE_VENUE=venues.tuentrada.com
