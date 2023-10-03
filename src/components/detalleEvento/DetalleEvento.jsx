@@ -51,20 +51,20 @@ export const DetalleEvento = () => {
         // if (data === undefined) return <Navigate to="/" />;
         setData(data);
         setItemsAccordion({
-          disponibility: data.disponibility,
-          extra: data.product.extra,
-          extraImage: data.product.extraImage,
-          extraLabel: data.product.extraLabel,
-          history: data.product.history,
-          historyImage: data.product.historyImage,
-          mediaJson: data.product.mediaJson,
-          performances: data.product.performances,
-          promotion: data.product.promotion,
-          recomendation: data.product.recomendation,
-          recomendationImage: data.product.recomendationImage,
-          socialNetworks: data.product.socialNetworks,
-          promotionImage: data.product.promotionImage,
-          useWallet: data.product.useWallet
+          disponibility: data?.disponibility,
+          extra: data?.product?.extra,
+          extraImage: data?.product?.extraImage,
+          extraLabel: data?.product?.extraLabel,
+          history: data?.product?.history,
+          historyImage: data?.product?.historyImage,
+          mediaJson: data?.product?.mediaJson,
+          performances: data?.product?.performances,
+          promotion: data?.product?.promotion,
+          recomendation: data?.product?.recomendation,
+          recomendationImage: data?.product?.recomendationImage,
+          socialNetworks: data?.product?.socialNetworks,
+          promotionImage: data?.product?.promotionImage,
+          useWallet: data?.product?.useWallet
           // venueImageProduct: data.venueImage,
         });
       };

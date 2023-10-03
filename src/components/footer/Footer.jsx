@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { Link } from "react-router-dom";
 import { EventosContext } from "../../context/EventosProvider";
 import { ItemsFooter } from "./";
+import { ImagenResponsive } from "../";
 import DOMPurify from "dompurify";
 
 export const Footer = () => {
@@ -24,10 +25,12 @@ export const Footer = () => {
       <div className="w-full max-w-screen-xl mx-auto p-4 md:py-8">
         <div className="sm:flex sm:items-center sm:justify-between">
           <Link to="/" className="flex items-center mb-4 sm:mb-0">
-            <img
-              src={dataInfoGeneral.logoFooter.src}
-              className="h-12 mr-3"
-              alt={dataInfoGeneral.logoFooter.alt}
+            
+            <ImagenResponsive
+              src={dataInfoGeneral?.logoFooter?.src}
+              srcSet={dataInfoGeneral?.logoFooter?.srcSet}
+              alt={dataInfoGeneral?.logoFooter?.alt}
+              className={"h-12 mr-3"}
             />
             <span className="self-center text-xl font-medium whitespace-nowrap ">
             {(dataInfoGeneral.whereName === "footer" || dataInfoGeneral.whereName === "both") && dataInfoGeneral.name }

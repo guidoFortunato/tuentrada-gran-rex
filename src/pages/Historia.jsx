@@ -2,6 +2,7 @@ import { useContext, useEffect, useState } from "react";
 import { EventosContext } from "../context/EventosProvider";
 import { ImagenHistoria, Spinner } from "../components";
 import DOMPurify from "dompurify";
+import { HeaderPages } from "../components/pages";
 
 export const Historia = () => {
   const { dataInfoGeneral, handleButtonsCollapse: handleNavBarCollapse } =
@@ -16,6 +17,20 @@ export const Historia = () => {
   const imagesPerRowMobile = 2;
   const imagesPerRowTablet = 3;
   const imagesPerRowDesktop = 4;
+
+  const src = dataInfoGeneral?.pages[2]?.image?.src
+    ? dataInfoGeneral?.pages[2]?.image?.src
+    : undefined;
+
+  const srcset = dataInfoGeneral?.pages[2]?.image?.srcset
+    ? dataInfoGeneral?.pages[2]?.image?.srcset
+    : undefined;
+
+  const alt = dataInfoGeneral?.pages[2]?.image?.alt
+    ? dataInfoGeneral?.pages[2]?.image?.alt
+    : undefined;
+
+  const title = dataInfoGeneral?.pages[2]?.title;
 
   useEffect(() => {
     handleNavBarCollapse();
@@ -143,26 +158,7 @@ export const Historia = () => {
 
   return (
     <div className="container mx-auto mb-5 lg:px-0">
-      <section
-        // style={{
-        //   backgroundImage: `url(${dataInfoGeneral.pages[2].image})`,
-        // }}
-        // className="bg-no-repeat bg-cover bg-center container mx-auto"
-        className="relative mb-5"
-      >
-        <img
-          src={dataInfoGeneral.pages[2].image.src}
-          srcSet={dataInfoGeneral.pages[1].image.srcset}
-          alt={dataInfoGeneral.pages[1].image.alt}
-          className="h-[35vh] w-full object-cover brightness-[50%]"
-        />
-        <h2
-          // style={{ height: "40vh", background: "rgba(0, 0, 0, 0.5)" }}
-          className="absolute top-0 bottom-0 left-0 right-0 text-2xl lg:text-3xl flex lg:justify-start justify-center items-center lg:items-end text-white p-10 my-3"
-        >
-          {dataInfoGeneral.pages[2].title}
-        </h2>
-      </section>
+      <HeaderPages src={src} srcSet={srcset} alt={alt} title={title} />
       <div className="row">
         <div className="col-12 px-4 lg:px-0">
           <div className="flex flex-wrap">

@@ -3,13 +3,28 @@ import { Spinner } from "../components";
 import { EventosContext } from "../context/EventosProvider";
 
 import DOMPurify from "dompurify";
-
+import { HeaderPages } from "../components/pages";
 
 export const HorariosLlegada = () => {
-  const { dataInfoGeneral, handleButtonsCollapse: handleNavBarCollapse } = useContext(EventosContext);
+  const { dataInfoGeneral, handleButtonsCollapse: handleNavBarCollapse } =
+    useContext(EventosContext);
+
+  const src = dataInfoGeneral?.pages[3]?.image?.src
+    ? dataInfoGeneral?.pages[3]?.image?.src
+    : undefined;
+
+  const srcset = dataInfoGeneral?.pages[3]?.image?.srcset
+    ? dataInfoGeneral?.pages[3]?.image?.srcset
+    : undefined;
+
+  const alt = dataInfoGeneral?.pages[3]?.image?.alt
+    ? dataInfoGeneral?.pages[3]?.image?.alt
+    : undefined;
+
+  const title = dataInfoGeneral?.pages[3]?.title;
 
   useEffect(() => {
-    handleNavBarCollapse()
+    handleNavBarCollapse();
   }, []);
 
   useEffect(() => {
@@ -18,29 +33,12 @@ export const HorariosLlegada = () => {
     }, 100);
   }, []);
 
-  if (dataInfoGeneral.length === 0) return <Spinner />;  
+  if (dataInfoGeneral.length === 0) return <Spinner />;
 
   return (
     <div className="container mx-auto mb-5">
-      <section
-        // style={{ backgroundImage: `url(${dataInfoGeneral.pages[3].image}` }}
-        // className="bg-no-repeat bg-cover bg-center container mx-auto"
-        className="relative mb-5"
-      >
-        <img
-          src={dataInfoGeneral.pages[3].image.src}
-          srcSet={dataInfoGeneral.pages[3].image.srcset}
-          alt={dataInfoGeneral.pages[3].image.alt}
-          className="h-[35vh] w-full object-cover brightness-[50%]"
-        />
-        <h2 
-        className="absolute top-0 bottom-0 left-0 right-0 text-2xl lg:text-3xl flex lg:justify-start justify-center items-center lg:items-end text-white p-10 my-3"
-        
-        >
-          {dataInfoGeneral.pages[3].title}
-        </h2>
-      </section>
-  
+      <HeaderPages src={src} srcSet={srcset} alt={alt} title={title} />
+
       <div className="row">
         <article className="col-12 col-lg-6 px-4 lg:px-0">
           <div>
@@ -69,5 +67,4 @@ export const HorariosLlegada = () => {
       </div>
     </div>
   );
-  
 };

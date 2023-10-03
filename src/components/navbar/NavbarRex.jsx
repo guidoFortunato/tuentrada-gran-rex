@@ -2,7 +2,7 @@ import React, { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { EventosContext } from "../../context/EventosProvider";
 import { ItemsNavBar } from "./";
-import { ItemRedes } from "../";
+import { ImagenResponsive, ItemRedes } from "../";
 
 export const NavbarRex = () => {
   const {
@@ -47,10 +47,11 @@ export const NavbarRex = () => {
       >
         <div className="max-w-screen-2xl flex flex-wrap items-center justify-between mx-auto px-4 pt-4">
           <Link to="/" className="flex items-center">
-            <img
-              src={dataInfoGeneral.logo.src}
-              className="h-12 mr-3"
-              alt={dataInfoGeneral.logo.alt}
+            <ImagenResponsive
+              src={dataInfoGeneral?.logo?.src}
+              srcSet={dataInfoGeneral?.logo?.srcSet}
+              alt={dataInfoGeneral?.logo?.alt}
+              className={"h-12 mr-3"}
             />
             {(dataInfoGeneral.whereName === "navbar" ||
               dataInfoGeneral.whereName === "both") && (
@@ -61,33 +62,32 @@ export const NavbarRex = () => {
                 {dataInfoGeneral.name}
               </span>
             )}
-           
           </Link>
-         
-            <button
-              data-collapse-toggle="navbar-search"
-              type="button"
-              className="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
-              aria-controls="navbar-search"
-              aria-expanded="false"
-              onClick={handleButtonCollapse}
+
+          <button
+            data-collapse-toggle="navbar-search"
+            type="button"
+            className="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
+            aria-controls="navbar-search"
+            aria-expanded="false"
+            onClick={handleButtonCollapse}
+          >
+            <span className="sr-only">Menu abrir</span>
+            <svg
+              className="w-6 h-6"
+              aria-hidden="true"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
             >
-              <span className="sr-only">Menu abrir</span>
-              <svg
-                className="w-6 h-6"
-                aria-hidden="true"
-                fill="currentColor"
-                viewBox="0 0 20 20"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  fillRule="evenodd"
-                  d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
-                  clipRule="evenodd"
-                ></path>
-              </svg>
-            </button>
-          
+              <path
+                fillRule="evenodd"
+                d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                clipRule="evenodd"
+              ></path>
+            </svg>
+          </button>
+
           <div
             className={`items-center justify-center ${
               isSearchCollapsed || isButtonCollapsed ? "" : "hidden"

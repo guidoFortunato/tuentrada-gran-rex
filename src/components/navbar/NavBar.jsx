@@ -2,7 +2,7 @@ import React, { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { EventosContext } from "../../context/EventosProvider";
 import { FormBusqueda, ItemsNavBar } from "./";
-import { ItemRedes, NavbarRex } from "../";
+import { ImagenResponsive, ItemRedes, NavbarRex } from "../";
 import { getEnvVariables } from "../../helpers";
 const { VITE_VENUE } = getEnvVariables();
 
@@ -60,10 +60,11 @@ export const NavBar = () => {
       >
         <div className="max-w-screen-2xl flex flex-wrap items-center justify-between mx-auto px-4 pt-4">
           <Link to="/" className="flex items-center">
-            <img
-              src={dataInfoGeneral.logo.src}
-              className="h-12 mr-3"
-              alt={dataInfoGeneral.logo.alt}
+            <ImagenResponsive
+              src={dataInfoGeneral?.logo?.src}
+              srcSet={dataInfoGeneral?.logo?.srcSet}
+              alt={dataInfoGeneral?.logo?.alt}
+              className={"h-12 mr-3"}
             />
             {(dataInfoGeneral.whereName === "navbar" ||
               dataInfoGeneral.whereName === "both") && (

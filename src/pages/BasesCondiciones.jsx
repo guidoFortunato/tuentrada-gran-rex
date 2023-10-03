@@ -1,12 +1,27 @@
 import { useContext, useEffect } from "react";
 import { EventosContext } from "../context/EventosProvider";
 import DOMPurify from "dompurify";
+import { HeaderPages } from "../components/pages";
 
 export const BasesCondiciones = () => {
   const { dataInfoGeneral, handleButtonsCollapse: handleNavBarCollapse } =
     useContext(EventosContext);
 
-    // console.log({dataInfoGeneral})
+  // console.log({dataInfoGeneral})
+
+  const src = dataInfoGeneral?.pages[4]?.image?.src
+    ? dataInfoGeneral?.pages[4]?.image?.src
+    : undefined;
+
+  const srcset = dataInfoGeneral?.pages[4]?.image?.srcset
+    ? dataInfoGeneral?.pages[4]?.image?.srcset
+    : undefined;
+
+  const alt = dataInfoGeneral?.pages[4]?.image?.alt
+    ? dataInfoGeneral?.pages[4]?.image?.alt
+    : undefined;
+
+  const title = dataInfoGeneral?.pages[4]?.title;
 
   useEffect(() => {
     handleNavBarCollapse();
@@ -22,26 +37,7 @@ export const BasesCondiciones = () => {
 
   return (
     <div className="container mx-auto mb-5 ">
-      <section
-        // style={{ backgroundImage: `url(${dataInfoGeneral.pages[4].image})` }}
-        // className="bg-no-repeat bg-cover bg-center container mx-auto"
-        className="relative mb-5"
-      >
-        <img
-          src={dataInfoGeneral.pages[4].image.src}
-          srcSet={dataInfoGeneral.pages[4].image.srcset}
-          alt={dataInfoGeneral.pages[4].image.alt}
-          className="h-[35vh] w-full object-cover brightness-[50%]"
-        />
-        <h2
-          // style={{ height: "40vh", background: "rgba(0, 0, 0, 0.5)" }}
-          className="absolute top-0 bottom-0 left-0 right-0 text-2xl lg:text-3xl flex items-center lg:justify-start justify-center lg:items-end text-white p-10 my-3"
-
-        >
-          {dataInfoGeneral.pages[4].title}
-        </h2>
-      </section>
-
+      <HeaderPages src={src} srcSet={srcset} alt={alt} title={title} />
       <div className="row">
         <div className="col-12 mb-4 px-4 lg:px-0">
           <div

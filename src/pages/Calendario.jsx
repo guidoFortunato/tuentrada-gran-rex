@@ -7,6 +7,7 @@ import timeGridPlugin from "@fullcalendar/timegrid";
 import interactionPlugin from "@fullcalendar/interaction";
 import bootstrap5Plugin from "@fullcalendar/bootstrap5";
 import listViewPlugin from "@fullcalendar/list";
+import { HeaderPages } from "../components/pages/";
 
 import tippy from "tippy.js";
 import "tippy.js/dist/tippy.css";
@@ -74,6 +75,20 @@ export const Calendario = () => {
   localStorage.setItem("lastPath", pathname);
   // console.log({eventosCalendario})
   // console.log({dataInfoGeneral})
+  const src = dataInfoGeneral?.pages[1]?.image?.src
+    ? dataInfoGeneral?.pages[1]?.image?.src
+    : undefined;
+
+  const srcset = dataInfoGeneral?.pages[1]?.image?.srcset
+    ? dataInfoGeneral?.pages[1]?.image?.srcset
+    : undefined;
+
+  const alt = dataInfoGeneral?.pages[1]?.image?.alt
+    ? dataInfoGeneral?.pages[1]?.image?.alt
+    : undefined;
+
+  const title = dataInfoGeneral?.pages[1]?.title;
+
   const handleClick = (info) => {
     info.jsEvent.preventDefault();
     // console.log({ def: info.event._def });
@@ -166,45 +181,13 @@ export const Calendario = () => {
     }, 100);
   }, []);
 
-  // useEffect(() => {
-  //   if (idVenue !== "") {
-  //     const getInfo = async () => {
-  //       const { data } = await getData(
-  //         VITE_API_INFO_GENERAL + idVenue + "/calendar",
-  //         VITE_EMAIL,
-  //         VITE_PASS
-  //       );
-  //       setData(data);
-  //     };
-  //     getInfo();
-  //   }
-  // }, [idVenue]);
-
   if (eventosCalendario === null || dataInfoGeneral.length === 0)
     return <span></span>;
 
   return (
     <>
       <div className="container mx-auto mb-5">
-        <section
-          // style={{
-          //   backgroundImage: `url(${dataInfoGeneral.pages[1].image.src})`,
-          // }}
-          // className="bg-no-repeat bg-cover bg-center container mx-auto"
-          className="relative"
-          
-        >
-          <img src={dataInfoGeneral.pages[1].image.src} srcSet={dataInfoGeneral.pages[1].image.srcset}  alt={dataInfoGeneral.pages[1].image.alt} className="h-[35vh] w-full object-cover brightness-[50%]" />
-          <h2
-            // style={{ height: "40vh", background: "rgba(0, 0, 0, 0.5)" }}
-            // style={{ textShadow: "0 0 8px black" }}
-            
-            className="absolute top-0 bottom-0 left-0 right-0 text-2xl lg:text-3xl flex lg:justify-start justify-center items-center lg:items-end text-white p-10 my-3"
-          >
-            {dataInfoGeneral.pages[1].title}
-          </h2>
-        </section>
-
+        <HeaderPages src={src} srcSet={srcset} alt={alt} title={title} />
         <div className="container mx-auto mb-5">
           <div className="mt-10 bg-white px-5 2xl:px-0">
             <div className="grid grid-cols-1 ">

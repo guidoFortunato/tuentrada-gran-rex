@@ -32,15 +32,25 @@ export const ModalPrecios = ({
 }) => {
   const { dataInfoGeneral } = useContext(EventosContext);
   // console.log({ dataInfoGeneral });
-  // console.log({ performances });
+  console.log({ performances });
   console.log({ dataEvento });
 
   if (dataEvento === null) return <Spinner />;
 
-  const venueImagePerformance = performances?.venueImage;
-  const venueImageProduct = dataEvento?.product.venueImage;
-  const venueImageSite = dataInfoGeneral?.venueImage;
-  const enableVenueImage = dataEvento?.product.enableVenueImage;
+
+  const venueImagePerformance = performances?.venueImage?.src ? performances?.venueImage?.src : undefined;
+  const venueImagePerformanceSrcSet = performances?.venueImage?.srcset ? performances?.venueImage?.srcset : undefined;
+  const venueImagePerformanceAlt = performances?.venueImage?.alt ? performances?.venueImage?.alt : undefined;
+
+  const venueImageProduct = dataEvento?.product?.venueImage?.src ? dataEvento?.product?.venueImage?.src : undefined;
+  const venueImageProductSrcSet = dataEvento?.product?.venueImage?.srcset ? dataEvento?.product?.venueImage?.srcset : undefined;
+  const venueImageProductAlt = dataEvento?.product?.venueImage?.alt ? dataEvento?.product?.venueImage?.alt : undefined;
+
+  const venueImageSite = dataInfoGeneral?.venueImage?.src ? dataInfoGeneral?.venueImage?.src : undefined;
+  const venueImageSiteSrcSet = dataInfoGeneral?.venueImage?.srcset ? dataInfoGeneral?.venueImage?.srcset : undefined;
+  const venueImageSiteAlt = dataInfoGeneral?.venueImage?.alt ? dataInfoGeneral?.venueImage?.alt : undefined;
+
+  const enableVenueImage = dataEvento?.product?.enableVenueImage;
   const fecha = new Date(performances?.start);
 
 
@@ -140,7 +150,21 @@ export const ModalPrecios = ({
                                 ? venueImageProduct
                                 : venueImageSite
                             }
-                            alt={`plano ${dataInfoGeneral.pages[0].title.toLowerCase()}`}
+                            srcSet={
+                              venueImagePerformanceSrcSet
+                                ? venueImagePerformanceSrcSet
+                                : venueImageProductSrcSet
+                                ? venueImageProductSrcSet
+                                : venueImageSiteSrcSet
+                            }
+                            
+                            alt={
+                              venueImagePerformanceAlt
+                                ? venueImagePerformanceAlt
+                                : venueImageProductAlt
+                                ? venueImageProductAlt
+                                : venueImageSiteAlt
+                            }
                           />
                         </TransformComponent>
                       </div>

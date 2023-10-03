@@ -19,7 +19,7 @@ export const Accordion = ({ itemsAccordion, dataEvento }) => {
   const [recomendation, setRecomendation] = useState(false);
   const [newPerformances, setNewPerformances] = useState(null);
 
-  console.log({ itemsAccordion });
+  // console.log({ itemsAccordion });
   // console.log({ dataEvento });
   // console.log({newPerformances})
 

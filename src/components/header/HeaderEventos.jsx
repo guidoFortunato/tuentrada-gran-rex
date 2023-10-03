@@ -13,7 +13,7 @@ export const HeaderEventos = () => {
   // console.log({dataInfoGeneral})
   return (
     <header
-      style={{ backgroundImage: `url(${dataInfoGeneral?.backgroundImage.src})` }}
+      style={{ backgroundImage: `url(${dataInfoGeneral?.backgroundImage?.src})` }}
       className={`bg-no-repeat bg-cover bg-center container mx-auto mb-5 z-40 my-3`}
     >
       <div
