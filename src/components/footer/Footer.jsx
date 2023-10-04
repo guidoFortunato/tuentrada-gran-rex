@@ -28,9 +28,9 @@ export const Footer = () => {
             
             <ImagenResponsive
               src={dataInfoGeneral?.logoFooter?.src}
-              srcSet={dataInfoGeneral?.logoFooter?.srcSet}
+              srcSet={dataInfoGeneral?.logoFooter?.srcset}
               alt={dataInfoGeneral?.logoFooter?.alt}
-              className={"h-12 mr-3"}
+              className={"max-w-[150px] h-12 mr-3"}
             />
             <span className="self-center text-xl font-medium whitespace-nowrap ">
             {(dataInfoGeneral.whereName === "footer" || dataInfoGeneral.whereName === "both") && dataInfoGeneral.name }

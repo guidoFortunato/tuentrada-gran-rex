@@ -118,11 +118,14 @@ export const Historia = () => {
           {displayedImages.length > 0 && (
             <>
               <div className={`grid grid-cols-${imagesPerRow} gap-4`}>
+                {" "}
+                {/* grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 */}
                 {displayedImages.map((item) => (
                   <ImagenHistoria
                     src={item.image.src}
                     key={item.id}
                     alt={item.image.alt}
+                    srcSet={item.image.srcset}
                   />
                 ))}
               </div>

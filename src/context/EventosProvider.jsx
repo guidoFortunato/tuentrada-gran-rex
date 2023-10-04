@@ -40,7 +40,7 @@ const EventosProvider = (props) => {
   // console.log({sitemap})
   // console.log({idVenue})
 
-  console.log({dataInfoGeneral})
+  // console.log({dataInfoGeneral})
 
   
 

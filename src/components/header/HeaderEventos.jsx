@@ -5,6 +5,7 @@ import DOMPurify from "dompurify";
 import { EventosContext } from "../../context/EventosProvider";
 import { getEnvVariables } from "../../helpers";
 import { FormBusquedaRex } from "./";
+import { ImagenResponsive } from "../ImagenResponsive";
 
 const { VITE_VENUE } = getEnvVariables();
 
@@ -13,24 +14,31 @@ export const HeaderEventos = () => {
   // console.log({dataInfoGeneral})
   return (
     <header
-      style={{ backgroundImage: `url(${dataInfoGeneral?.backgroundImage?.src})` }}
-      className={`bg-no-repeat bg-cover bg-center container mx-auto mb-5 z-40 my-3`}
+      // style={{ backgroundImage: `url(${dataInfoGeneral?.backgroundImage.src})` }}
+      // className={`bg-no-repeat bg-cover bg-center container mx-auto mb-5 z-40 my-3`}
+      className="relative container mx-auto mb-5 my-3"
     >
+      <ImagenResponsive
+        src={dataInfoGeneral?.backgroundImage?.src}
+        srcSet={dataInfoGeneral?.backgroundImage?.srcset}
+        alt={dataInfoGeneral?.backgroundImage?.alt}
+        className={`absolute h-[60vh] md:h-[50vh] w-full object-cover brightness-[50%]`}
+      />
       <div
-        className={`${host === VITE_VENUE ? "min-h-[60vh] md:min-h-[50vh]" : "min-h-[50vh]"}  flex justify-center items-stretch flex-col `}
+        className={`h-[60vh] md:h-[50vh] flex justify-center items-stretch flex-col`}
         style={{ background: "rgba(0,0,0,.5)" }}
       >
-        <div className="flex justify-center items-center flex-col w-full">
+        <div className="flex justify-center items-center flex-col w-full z-50">
           <h1
             style={{
               color: dataInfoGeneral?.colorH1,
               // fontSize: "2.5em",
               width: "92%",
             }}
-            className={`m-0 ${host === VITE_VENUE ? "text-6xl md:text-[5rem]" : "text-5xl"} font-medium pt-10 pb-1  ${host === VITE_VENUE ? "text-center" : "text-center md:text-left"
+            className={`m-0 ${host === VITE_VENUE ? "text-6xl md:text-[5rem]" : "text-5xl"} font-medium pt-5 pb-1  ${host === VITE_VENUE ? "text-center" : "text-center md:text-left"
             }`}
           >
-            {dataInfoGeneral?.pages[0]?.title}
+            {dataInfoGeneral?.pages[0]?.title.toUpperCase()}
           </h1>
           {host === VITE_VENUE && (
             <div className="w-[87%] sm:w-[70%] md:w-[50%] lg:w-[35%] 2xl:w-[25%]">
@@ -40,7 +48,7 @@ export const HeaderEventos = () => {
         </div>
         {host !== VITE_VENUE && (
           <div
-            className="flex flex-col md:flex-row "
+            className="flex flex-col md:flex-row z-50"
             style={{ justifyContent: "center", alignItems: "center" }}
           >
             <p

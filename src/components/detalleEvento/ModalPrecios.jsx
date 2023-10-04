@@ -32,34 +32,49 @@ export const ModalPrecios = ({
 }) => {
   const { dataInfoGeneral } = useContext(EventosContext);
   // console.log({ dataInfoGeneral });
-  console.log({ performances });
-  console.log({ dataEvento });
+  // console.log({ performances });
+  // console.log({ dataEvento });
 
   if (dataEvento === null) return <Spinner />;
 
+  const venueImagePerformance = performances?.venueImage?.src
+    ? performances?.venueImage?.src
+    : undefined;
+  const venueImagePerformanceSrcSet = performances?.venueImage?.srcset
+    ? performances?.venueImage?.srcset
+    : undefined;
+  const venueImagePerformanceAlt = performances?.venueImage?.alt
+    ? performances?.venueImage?.alt
+    : undefined;
 
-  const venueImagePerformance = performances?.venueImage?.src ? performances?.venueImage?.src : undefined;
-  const venueImagePerformanceSrcSet = performances?.venueImage?.srcset ? performances?.venueImage?.srcset : undefined;
-  const venueImagePerformanceAlt = performances?.venueImage?.alt ? performances?.venueImage?.alt : undefined;
+  const venueImageProduct = dataEvento?.product?.venueImage?.src
+    ? dataEvento?.product?.venueImage?.src
+    : undefined;
+  const venueImageProductSrcSet = dataEvento?.product?.venueImage?.srcset
+    ? dataEvento?.product?.venueImage?.srcset
+    : undefined;
+  const venueImageProductAlt = dataEvento?.product?.venueImage?.alt
+    ? dataEvento?.product?.venueImage?.alt
+    : undefined;
 
-  const venueImageProduct = dataEvento?.product?.venueImage?.src ? dataEvento?.product?.venueImage?.src : undefined;
-  const venueImageProductSrcSet = dataEvento?.product?.venueImage?.srcset ? dataEvento?.product?.venueImage?.srcset : undefined;
-  const venueImageProductAlt = dataEvento?.product?.venueImage?.alt ? dataEvento?.product?.venueImage?.alt : undefined;
-
-  const venueImageSite = dataInfoGeneral?.venueImage?.src ? dataInfoGeneral?.venueImage?.src : undefined;
-  const venueImageSiteSrcSet = dataInfoGeneral?.venueImage?.srcset ? dataInfoGeneral?.venueImage?.srcset : undefined;
-  const venueImageSiteAlt = dataInfoGeneral?.venueImage?.alt ? dataInfoGeneral?.venueImage?.alt : undefined;
+  const venueImageSite = dataInfoGeneral?.venueImage?.src
+    ? dataInfoGeneral?.venueImage?.src
+    : undefined;
+  const venueImageSiteSrcSet = dataInfoGeneral?.venueImage?.srcset
+    ? dataInfoGeneral?.venueImage?.srcset
+    : undefined;
+  const venueImageSiteAlt = dataInfoGeneral?.venueImage?.alt
+    ? dataInfoGeneral?.venueImage?.alt
+    : undefined;
 
   const enableVenueImage = dataEvento?.product?.enableVenueImage;
   const fecha = new Date(performances?.start);
-
 
   const dia = fecha.getDate();
   const mes = fecha.getMonth();
   const año = fecha.getFullYear();
   const hora = fecha.getHours();
-  const minutos = performances?.start.split("T")[1].split(":")[1]
-
+  const minutos = performances?.start.split("T")[1].split(":")[1];
 
   const fechaFormateada = `${dia} ${nombresMeses[mes]} ${año} - ${hora}:${minutos}hs`;
 
@@ -105,10 +120,10 @@ export const ModalPrecios = ({
                 />
               </div>
 
-              {enableVenueImage === 0 ? null : venueImagePerformance.length ===
-                  0 &&
-                venueImageProduct.length === 0 &&
-                venueImageSite.length === 0 ? null : (
+              {enableVenueImage === 0 ? null : venueImagePerformance ===
+                  undefined &&
+                venueImageProduct === undefined &&
+                venueImageSite === undefined ? null : (
                 <div className="relative mt-10 lg:mt-0">
                   {/* <img
                     src={
@@ -157,7 +172,6 @@ export const ModalPrecios = ({
                                 ? venueImageProductSrcSet
                                 : venueImageSiteSrcSet
                             }
-                            
                             alt={
                               venueImagePerformanceAlt
                                 ? venueImagePerformanceAlt

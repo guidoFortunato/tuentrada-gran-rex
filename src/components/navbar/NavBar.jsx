@@ -62,9 +62,9 @@ export const NavBar = () => {
           <Link to="/" className="flex items-center">
             <ImagenResponsive
               src={dataInfoGeneral?.logo?.src}
-              srcSet={dataInfoGeneral?.logo?.srcSet}
+              srcSet={dataInfoGeneral?.logo?.srcset}
               alt={dataInfoGeneral?.logo?.alt}
-              className={"h-12 mr-3"}
+              className={"max-w-[150px] h-12 mr-3"}
             />
             {(dataInfoGeneral.whereName === "navbar" ||
               dataInfoGeneral.whereName === "both") && (
