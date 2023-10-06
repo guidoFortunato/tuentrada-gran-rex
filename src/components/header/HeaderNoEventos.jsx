@@ -21,10 +21,10 @@ export const HeaderNoEventos = () => {
         src={dataInfoGeneral?.backgroundImage?.src}
         srcSet={dataInfoGeneral?.backgroundImage?.srcset}
         alt={dataInfoGeneral?.backgroundImage?.alt}
-        className={`absolute h-[60vh] md:h-[50vh] w-full object-cover brightness-[50%]`}
+        className={`absolute h-[70vh] md:h-[50vh] w-full object-cover brightness-[50%]`}
       />
       <div
-        className={`h-[60vh] md:h-[50vh] flex justify-center items-stretch flex-col`}
+        className={`h-[70vh] md:h-[50vh] flex justify-center items-stretch flex-col`}
         style={{ background: "rgba(0,0,0,.5)" }}
       >
         <div className="flex justify-center items-center flex-col w-full z-50">
