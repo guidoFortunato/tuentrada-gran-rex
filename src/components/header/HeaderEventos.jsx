@@ -16,19 +16,19 @@ export const HeaderEventos = () => {
     <header
       // style={{ backgroundImage: `url(${dataInfoGeneral?.backgroundImage.src})` }}
       // className={`bg-no-repeat bg-cover bg-center container mx-auto mb-5 z-40 my-3`}
-      className="relative container mx-auto mb-5 my-3"
+      className="relative container mx-auto mb-5"
     >
       <ImagenResponsive
         src={dataInfoGeneral?.backgroundImage?.src}
         srcSet={dataInfoGeneral?.backgroundImage?.srcset}
         alt={dataInfoGeneral?.backgroundImage?.alt}
-        className={`absolute h-[60vh] md:h-[50vh] w-full object-cover brightness-[50%]`}
+        className={`absolute h-[70vh] md:h-[50vh] w-full object-cover brightness-[50%]`}
       />
       <div
-        className={`h-[60vh] md:h-[50vh] flex justify-center items-stretch flex-col`}
+        className={`h-[70vh] md:h-[50vh] flex justify-center items-stretch flex-col`}
         style={{ background: "rgba(0,0,0,.5)" }}
       >
-        <div className="flex justify-center items-center flex-col w-full z-50">
+        <div className="flex justify-center items-center flex-col w-full z-10">
           <h1
             style={{
               color: dataInfoGeneral?.colorH1,
@@ -48,7 +48,7 @@ export const HeaderEventos = () => {
         </div>
         {host !== VITE_VENUE && (
           <div
-            className="flex flex-col md:flex-row z-50"
+            className="flex flex-col md:flex-row z-10"
             style={{ justifyContent: "center", alignItems: "center" }}
           >
             <p

@@ -53,7 +53,7 @@ export const NavBar = () => {
         }}
         className={`${
           navbar ? "shadow-light" : ""
-        } border-gray-200 sticky top-0 z-30 pb-3 lg:pb-0 background-navbar`}
+        } border-gray-200 sticky top-0 z-50 pb-4`}
         // className={`${
         //   navbar ? "shadow-light" : ""
         // } border-gray-200 sticky top-0 z-30 pb-3 lg:pb-0 background-navbar`}

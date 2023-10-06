@@ -15,7 +15,7 @@ export const HeaderNoEventos = () => {
     <header
       // style={{ backgroundImage: `url(${dataInfoGeneral?.backgroundImage.src})` }}
       // className={`bg-no-repeat bg-cover bg-center container mx-auto mb-5 z-40 my-3`}
-      className="relative container mx-auto mb-5 my-3"
+      className="relative container mx-auto mb-5"
     >
       <ImagenResponsive
         src={dataInfoGeneral?.backgroundImage?.src}

@@ -43,7 +43,7 @@ export const NavbarRex = () => {
         }}
         className={`${
           navbar ? "shadow-light" : ""
-        } border-gray-200 sticky top-0 z-30 background-navbar pb-3`}
+        } border-gray-200 sticky top-0 z-50 pb-4`}
       >
         <div className="max-w-screen-2xl flex flex-wrap items-center justify-between mx-auto px-4 pt-4">
           <Link to="/" className="flex items-center">
