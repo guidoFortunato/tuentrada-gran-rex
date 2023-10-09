@@ -3,13 +3,15 @@ import { EventosContext } from "../../context/EventosProvider";
 import { ModalPrecios } from "../detalleEvento/ModalPrecios";
 import { BotonCompra } from "./BotonCompra";
 import { DrawerPromos } from "./DrawerPromos";
-import { Drawer } from "flowbite";
 
 // import { Spinner } from "../Spinner";
+
+const pruebaButtons = [1, 2];
 
 export const FechaAccordionDisponible = ({
   dia,
   hora,
+  mes,
   mesFormateado,
   anio,
   openModal,
@@ -18,7 +20,8 @@ export const FechaAccordionDisponible = ({
   dataEvento,
 }) => {
   const { dataInfoGeneral } = useContext(EventosContext);
-  
+  const drawerRef = useRef(null);
+
   // console.log({dataInfoGeneral})
   // console.log({ dataFecha });
   // console.log({dataEvento})
@@ -26,8 +29,6 @@ export const FechaAccordionDisponible = ({
   // if(dataEvento === null) return <Spinner />
 
   // console.log({drawerRef})
-
-  
 
   return (
     <>
@@ -82,30 +83,24 @@ export const FechaAccordionDisponible = ({
       </div>
 
       <div className="text-end mt-4 lg:my-auto">
-        <BotonCompra performances={dataFecha} />
-        
-        {/* <button
-          type="button"
-          className={`focus:outline-none font-medium rounded text-sm px-3 py-2.5 text-center`}
-          data-drawer-target="drawer-right-example"
-          data-drawer-show="drawer-right-example"
-          data-drawer-placement="right"
-          aria-controls="drawer-right-example"
-          style={{
-            color: dataInfoGeneral?.colorButton,
-            backgroundColor: dataInfoGeneral?.backgroundButton,
-          }}
-          onMouseOver={(e) => {
-            e.target.style.backgroundColor = dataInfoGeneral?.colorHoverButton; // Cambiar al color de hover
-          }}
-          onMouseOut={(e) => {
-            e.target.style.backgroundColor = dataInfoGeneral?.backgroundButton; // Restaurar el color original
-          }}
-        >
-          {dataFecha?.buyButtons[0]?.label}
-        </button>
-        <DrawerPromos  /> */}
-        
+        {pruebaButtons.length > 1 ? (
+          <DrawerPromos
+            dia={dia}
+            mes={mes}
+            anio={anio}
+            hora={hora}
+            drawerRef={drawerRef}
+            performances={dataFecha}
+          />
+        ) : (
+          <BotonCompra
+            performances={dataFecha}
+            styles={{
+              color: dataInfoGeneral?.colorButton,
+              backgroundColor: dataInfoGeneral?.backgroundButton,
+            }}
+          />
+        )}
       </div>
     </>
   );

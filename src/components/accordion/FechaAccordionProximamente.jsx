@@ -5,6 +5,7 @@ import { BotonCompraDisabled } from "./";
 export const FechaAccordionProximamente = ({
   dia,
   hora,
+  mes,
   mesFormateado,
   anio,
   dataFechas: dataFecha,

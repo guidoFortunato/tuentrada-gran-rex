@@ -2,7 +2,7 @@ import { useContext } from "react";
 import { EventosContext } from "../../context/EventosProvider";
 import { BotonCompraDisabled } from './'
 
-export const FechaAccordionAgotadaCancel = ({ dia, hora, mesFormateado, anio, internalState, dataFechas: dataFecha, dataEvento }) => {
+export const FechaAccordionAgotadaCancel = ({ dia, hora, mes, mesFormateado, anio, internalState, dataFechas: dataFecha, dataEvento }) => {
   const { dataInfoGeneral } = useContext(EventosContext);
   // console.log({internalState})
   return (

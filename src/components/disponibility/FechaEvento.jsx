@@ -32,9 +32,7 @@ export const FechaEvento = ({
   const fecha = new Date(dataFecha.start);
   const formatoFecha = fecha.toLocaleDateString("es-ES", opciones);
   const dia = formatoFecha.split(",")[0].split(" ")[0];
-  const mes =
-    formatoFecha.split(",")[0].split(" ")[2].charAt(0).toUpperCase() +
-    formatoFecha.split(",")[0].split(" ")[2].slice(1);
+  const mes = formatoFecha.split(",")[0].split(" ")[2].charAt(0).toUpperCase() + formatoFecha.split(",")[0].split(" ")[2].slice(1);
   const mesFormateado = mes.slice(0, 3);
   const anio = formatoFecha.split(",")[0].split(" ")[4];
   const hora = formatoFecha.split(",")[1].trim();
@@ -45,6 +43,7 @@ export const FechaEvento = ({
         <FechaAccordionProximamente
           dia={dia}
           hora={hora}
+          mes={mes}
           mesFormateado={mesFormateado}
           anio={anio}
           dataFechas={dataFecha}
@@ -59,6 +58,7 @@ export const FechaEvento = ({
         <FechaAccordionAgotadaCancel
           dia={dia}
           hora={hora}
+          mes={mes}
           mesFormateado={mesFormateado}
           anio={anio}
           internalState={internalState}
@@ -82,6 +82,7 @@ export const FechaEvento = ({
             dataEvento={dataEvento}
             dia={dia}
             hora={hora}
+            mes={mes}
             mesFormateado={mesFormateado}
             anio={anio}
             openModal={openModal}
@@ -94,6 +95,7 @@ export const FechaEvento = ({
             dataEvento={dataEvento}
             dia={dia}
             hora={hora}
+            mes={mes}
             mesFormateado={mesFormateado}
             anio={anio}
             openModal={openModal}
@@ -104,6 +106,7 @@ export const FechaEvento = ({
           <FechaAccordionAgotadaCancel
             dia={dia}
             hora={hora}
+            mes={mes}
             mesFormateado={mesFormateado}
             anio={anio}
             internalState={internalState}

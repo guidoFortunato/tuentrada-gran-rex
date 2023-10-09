@@ -7,6 +7,7 @@ import { BotonCompra } from "./BotonCompra";
 export const FechaAccordionLimited = ({
   dia,
   hora,
+  mes,
   mesFormateado,
   anio,
   openModal,
