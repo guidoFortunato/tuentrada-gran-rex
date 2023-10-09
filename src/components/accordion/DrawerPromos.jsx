@@ -129,49 +129,54 @@ export const DrawerPromos = ({
         <p className="mb-5 text-left text-base font-semibold text-gray-700">
           {hora} hs
         </p>
-        <div className="grid grid-cols-1 gap-2">
-          <h3 className="text-left text-base font-semibold mb-0">
-            Venta general
-          </h3>
-          <h5 className="text-left text-md font-semibold mb-0">
-            Todos los medios de pago correspondientes
-          </h5>
-          <BotonCompra
-            performances={performances}
-            styles={{
-              color: dataInfoGeneral?.colorButton,
-              backgroundColor: dataInfoGeneral?.backgroundButton,
-              width: "100%",
-            }}
-          />
-          <h3 className="text-left text-base font-semibold mb-0">
-            Banco Galicia
-          </h3>
-          <h5 className="text-left text-md font-semibold mb-0">
-            Exclusivo Visa Eminent hast agotar stock
-          </h5>
-          <BotonCompra
-            performances={performances}
-            styles={{
-              color: dataInfoGeneral?.colorButton,
-              backgroundColor: dataInfoGeneral?.backgroundButton,
-              width: "100%",
-            }}
-          />
-          <h3 className="text-left text-base font-semibold mb-0 text-gray-300">
-            Preventa Spotify
-          </h3>
-          <h5 className="text-left text-md font-semibold mb-0 text-gray-300">
-            Finalizada
-          </h5>
-          <BotonCompraDisabled
-            dataFecha={performances}
-            styles={{
-              color: dataInfoGeneral?.colorButton,
-              backgroundColor: dataInfoGeneral?.backgroundButton,
-              width: "100%",
-            }}
-          />
+
+        <div className="flex flex-col">
+          <div className="mb-5">
+            <h3 className="text-left text-base font-semibold mb-0">
+              Venta general
+            </h3>
+            <h5 className="text-left text-md font-semibold mb-0">
+              Todos los medios de pago correspondientes
+            </h5>
+            <BotonCompra
+              performances={performances}
+              styles={{
+                color: dataInfoGeneral?.colorButton,
+                backgroundColor: dataInfoGeneral?.backgroundButton,
+                width: "100%",
+              }}
+            />
+          </div>
+          <div className="mb-5">
+            <h3 className="text-left text-base font-semibold mb-0">
+              Banco Galicia
+            </h3>
+            <h5 className="text-left text-md font-semibold mb-0">
+              Exclusivo Visa Eminent hasta agotar stock
+            </h5>
+            <BotonCompra
+              performances={performances}
+              styles={{
+                color: dataInfoGeneral?.colorButton,
+                backgroundColor: dataInfoGeneral?.backgroundButton,
+                width: "100%",
+              }}
+            />
+          </div>
+          <div>
+            <h3 className="text-left text-base font-semibold mb-0 text-gray-300">
+              Preventa Spotify
+            </h3>
+            <h5 className="text-left text-md font-semibold mb-0 text-gray-300">
+              Finalizada
+            </h5>
+            <BotonCompraDisabled
+              dataFecha={performances}
+              styles={{
+                width: "100%",
+              }}
+            />
+          </div>
         </div>
       </div>
     </>
