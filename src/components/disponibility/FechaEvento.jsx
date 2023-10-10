@@ -28,11 +28,14 @@ export const FechaEvento = ({
   // console.log({dataFecha})
   // console.log({ availabilitLevel, reason });
   // console.log({ internalState });
+  const pruebaButtons = [1, 2];
 
   const fecha = new Date(dataFecha.start);
   const formatoFecha = fecha.toLocaleDateString("es-ES", opciones);
   const dia = formatoFecha.split(",")[0].split(" ")[0];
-  const mes = formatoFecha.split(",")[0].split(" ")[2].charAt(0).toUpperCase() + formatoFecha.split(",")[0].split(" ")[2].slice(1);
+  const mes =
+    formatoFecha.split(",")[0].split(" ")[2].charAt(0).toUpperCase() +
+    formatoFecha.split(",")[0].split(" ")[2].slice(1);
   const mesFormateado = mes.slice(0, 3);
   const anio = formatoFecha.split(",")[0].split(" ")[4];
   const hora = formatoFecha.split(",")[1].trim();

@@ -2,7 +2,8 @@ import { createContext, useEffect, useState } from "react";
 import { getData, getEnvVariables } from "../helpers";
 // import { sitemap } from "../../scripts/sitemap";
 // import { generateSitemap2 } from "../../scripts/generateSitemap2";
-const { VITE_API_INFO_GENERAL, VITE_API_EVENTOS, VITE_EMAIL, VITE_PASS } = getEnvVariables();
+const { VITE_API_INFO_GENERAL, VITE_API_EVENTOS, VITE_EMAIL, VITE_PASS } =
+  getEnvVariables();
 
 export const EventosContext = createContext();
 
@@ -14,7 +15,9 @@ const EventosProvider = (props) => {
   const [idVenue, setIdVenue] = useState("");
   const [idProducto, setIdProducto] = useState(null);
   const [dataInfoGeneral, setDataInfoGeneral] = useState(initialStateGeneral);
-  const [eventosGenerales, setEventosGenerales] = useState(initialStateEventosGenerales);
+  const [eventosGenerales, setEventosGenerales] = useState(
+    initialStateEventosGenerales
+  );
   const [data, setData] = useState(null);
   const [page, setPage] = useState(1);
   const [eventosCalendario, setEventosCalendario] = useState(null);
@@ -22,6 +25,7 @@ const EventosProvider = (props) => {
   const [isButtonCollapsed, setIsButtonCollapsed] = useState(false);
   const host = window.location.hostname;
 
+  const pruebaButtons = [1, 2];
 
   const handleButtonsCollapse = () => {
     setIsButtonCollapsed(false);
@@ -42,12 +46,10 @@ const EventosProvider = (props) => {
 
   // console.log({dataInfoGeneral})
 
-  
-
   useEffect(() => {
     const getDataInfoGeneral = async () => {
       const info = await getData(
-        VITE_API_INFO_GENERAL + 'venues.tuentrada.com', //auditorio-sur.tuentrada.com - teatro-granrex.com.ar - nave-cultural.tuentrada.com - venues.tuentrada.com
+        VITE_API_INFO_GENERAL + "venues.tuentrada.com", //auditorio-sur.tuentrada.com - teatro-granrex.com.ar - nave-cultural.tuentrada.com - venues.tuentrada.com
         VITE_EMAIL,
         VITE_PASS
       );
@@ -77,7 +79,7 @@ const EventosProvider = (props) => {
           return;
         }
         setData(info);
-        setEventosGenerales((prevEventos) =>  prevEventos.concat(info.data));
+        setEventosGenerales((prevEventos) => prevEventos.concat(info.data));
         // setEventosGenerales(info.data);
       };
       getDataEventosGenerales();
@@ -125,6 +127,7 @@ const EventosProvider = (props) => {
         isSearchCollapsed,
         setIdProducto,
         setPage,
+        pruebaButtons,
       }}
     >
       {props.children}

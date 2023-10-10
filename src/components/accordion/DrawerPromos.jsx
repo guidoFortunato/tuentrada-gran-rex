@@ -53,7 +53,7 @@ export const DrawerPromos = ({
 
   return (
     <>
-      <div className="text-center">
+      <div>
         <button
           className="text-white font-medium rounded text-sm px-5 py-2.5 mr-2 mb-2 focus:outline-none"
           type="button"
@@ -73,12 +73,12 @@ export const DrawerPromos = ({
           }}
           onClick={openDrawer}
         >
-          Comprar Entradas Drawer
+          Comprar Entradas
         </button>
       </div>
       <div
         id="drawer-right-example"
-        className="fixed top-0 right-0 z-50 h-screen p-4 overflow-y-auto transition-transform translate-x-full bg-white w-80"
+        className="fixed top-0 right-0 z-50 h-screen p-4 overflow-y-auto transition-transform translate-x-full bg-white sm:w-80"
         tabIndex="-1"
         aria-labelledby="drawer-right-label"
         ref={drawerRef}
@@ -167,7 +167,7 @@ export const DrawerPromos = ({
             <h3 className="text-left text-base font-semibold mb-0 text-gray-300">
               Preventa Spotify
             </h3>
-            <h5 className="text-left text-md font-semibold mb-0 text-gray-300">
+            <h5 className="text-left text-md font-semibold mb-0 text-red-600">
               Finalizada
             </h5>
             <BotonCompraDisabled

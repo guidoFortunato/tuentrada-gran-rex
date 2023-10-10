@@ -6,8 +6,6 @@ import { DrawerPromos } from "./DrawerPromos";
 
 // import { Spinner } from "../Spinner";
 
-const pruebaButtons = [1, 2];
-
 export const FechaAccordionDisponible = ({
   dia,
   hora,
@@ -19,11 +17,11 @@ export const FechaAccordionDisponible = ({
   dataFechas: dataFecha,
   dataEvento,
 }) => {
-  const { dataInfoGeneral } = useContext(EventosContext);
+  const { dataInfoGeneral, pruebaButtons } = useContext(EventosContext);
   const drawerRef = useRef(null);
 
   // console.log({dataInfoGeneral})
-  // console.log({ dataFecha });
+  console.log({ dataFecha });
   // console.log({dataEvento})
 
   // if(dataEvento === null) return <Spinner />
@@ -83,7 +81,7 @@ export const FechaAccordionDisponible = ({
       </div>
 
       <div className="text-end mt-4 lg:my-auto">
-        {pruebaButtons.length > 1 ? (
+        {dataFecha.buyButtons.length > 1 ? (
           <DrawerPromos
             dia={dia}
             mes={mes}

@@ -3,7 +3,6 @@ import { EventosContext } from "../../context/EventosProvider";
 import { ModalPrecios } from "../detalleEvento/ModalPrecios";
 import { BotonCompra } from "./BotonCompra";
 
-
 export const FechaAccordionLimited = ({
   dia,
   hora,
@@ -15,7 +14,7 @@ export const FechaAccordionLimited = ({
   dataFechas: dataFecha,
   dataEvento,
 }) => {
-  const { dataInfoGeneral } = useContext(EventosContext);
+  const { dataInfoGeneral, pruebaButtons } = useContext(EventosContext);
   // console.log({dataFecha})
   // console.log({dataInfoGeneral})
   return (
@@ -72,7 +71,24 @@ export const FechaAccordionLimited = ({
       </div>
 
       <div className="text-end mt-4 lg:my-auto">
-        <BotonCompra performances={dataFecha} />
+        {pruebaButtons.length > 1 ? (
+          <DrawerPromos
+            dia={dia}
+            mes={mes}
+            anio={anio}
+            hora={hora}
+            drawerRef={drawerRef}
+            performances={dataFecha}
+          />
+        ) : (
+          <BotonCompra
+            performances={dataFecha}
+            styles={{
+              color: dataInfoGeneral?.colorButton,
+              backgroundColor: dataInfoGeneral?.backgroundButton,
+            }}
+          />
+        )}
       </div>
     </>
   );
