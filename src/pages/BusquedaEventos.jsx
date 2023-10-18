@@ -43,7 +43,7 @@ export const BusquedaEventos = () => {
           VITE_EMAIL,
           VITE_PASS
         );
-        // console.log( data );
+        // console.log( {data} );
         setData(data);
         setIsLoading(false);
       };

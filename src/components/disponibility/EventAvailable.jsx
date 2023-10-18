@@ -15,7 +15,8 @@ export const EventAvailable = ({
   const { host } = useContext(EventosContext);
   // console.log({linkEvento})
   // console.log({disponibility})
-  // console.log({imgApi})
+  // console.log(imgApi.alt)
+  // console.log({imgSTXVeryLarge})
 
   if (host === VITE_VENUE) {
     return (
@@ -24,7 +25,7 @@ export const EventAvailable = ({
           <div className="rounded-lg">
             <Link to={linkEvento}>
               {imgApi ? (
-                <img src={imgApi.src} alt={imgApi.src} srcSet={imgApi.srcset} />
+                <img src={imgApi.src} alt={imgApi.alt} srcSet={imgApi.srcset} />
               ) : (
                 <img src={imgSTXVeryLarge} alt={title} />
               )}

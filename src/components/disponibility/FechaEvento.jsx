@@ -28,7 +28,7 @@ export const FechaEvento = ({
   // console.log({dataFecha})
   // console.log({ availabilitLevel, reason });
   // console.log({ internalState });
-  const pruebaButtons = [1, 2];
+  // const pruebaButtons = [1, 2];
 
   const fecha = new Date(dataFecha.start);
   const formatoFecha = fecha.toLocaleDateString("es-ES", opciones);

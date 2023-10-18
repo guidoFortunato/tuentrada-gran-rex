@@ -98,7 +98,13 @@ export const ModalPrecios = ({
             </div>
 
             <div className="mt-3">
-              <BotonCompra performances={performances} />
+              <BotonCompra
+                performances={performances}
+                styles={{
+                  color: dataInfoGeneral?.colorButton,
+                  backgroundColor: dataInfoGeneral?.backgroundButton,
+                }}
+              />
             </div>
           </div>
         </Modal.Header>
