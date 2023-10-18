@@ -25,7 +25,7 @@ const EventosProvider = (props) => {
   const [isButtonCollapsed, setIsButtonCollapsed] = useState(false);
   const host = window.location.hostname;
 
-  const pruebaButtons = [1, 2];
+  const pruebaButtons = [1];
 
   const handleButtonsCollapse = () => {
     setIsButtonCollapsed(false);

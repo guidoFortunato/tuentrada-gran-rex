@@ -1,7 +1,8 @@
-import React, { useContext } from "react";
+import React, { useContext, useRef } from "react";
 import { EventosContext } from "../../context/EventosProvider";
 import { ModalPrecios } from "../detalleEvento/ModalPrecios";
 import { BotonCompra } from "./BotonCompra";
+import { DrawerPromos } from "./DrawerPromos";
 
 export const FechaAccordionLimited = ({
   dia,
@@ -15,6 +16,7 @@ export const FechaAccordionLimited = ({
   dataEvento,
 }) => {
   const { dataInfoGeneral, pruebaButtons } = useContext(EventosContext);
+  const drawerRef = useRef(null);
   // console.log({dataFecha})
   // console.log({dataInfoGeneral})
   return (
