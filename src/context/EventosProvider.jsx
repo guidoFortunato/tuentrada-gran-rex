@@ -2,8 +2,7 @@ import { createContext, useEffect, useState } from "react";
 import { getData, getEnvVariables } from "../helpers";
 // import { sitemap } from "../../scripts/sitemap";
 // import { generateSitemap2 } from "../../scripts/generateSitemap2";
-const { VITE_API_INFO_GENERAL, VITE_API_EVENTOS, VITE_EMAIL, VITE_PASS } =
-  getEnvVariables();
+const { VITE_API_INFO_GENERAL, VITE_API_EVENTOS, VITE_EMAIL, VITE_PASS } = getEnvVariables();
 
 export const EventosContext = createContext();
 
@@ -49,7 +48,7 @@ const EventosProvider = (props) => {
   useEffect(() => {
     const getDataInfoGeneral = async () => {
       const info = await getData(
-        VITE_API_INFO_GENERAL + 'venues.tuentrada.com', //auditorio-sur.tuentrada.com - teatro-granrex.com.ar - nave-cultural.tuentrada.com - venues.tuentrada.com
+        VITE_API_INFO_GENERAL + host, //auditorio-sur.tuentrada.com - teatro-granrex.com.ar - nave-cultural.tuentrada.com - venues.tuentrada.com
         VITE_EMAIL,
         VITE_PASS
       );
@@ -60,9 +59,9 @@ const EventosProvider = (props) => {
         return;
       }
       const { data } = info;
-
-      setDataInfoGeneral(data.products.data);
-      setIdVenue(data.products.data.venueId);
+      // console.log({data})
+      setDataInfoGeneral(data.site);
+      setIdVenue(data.site.venueId);
     };
     getDataInfoGeneral();
   }, []);
@@ -78,8 +77,9 @@ const EventosProvider = (props) => {
           setDataInfoGeneral(null);
           return;
         }
+        // console.log({infoEventosGenerales: info})
         setData(info);
-        setEventosGenerales((prevEventos) => prevEventos.concat(info.data));
+        setEventosGenerales((prevEventos) => prevEventos.concat(info.data.products));
         // setEventosGenerales(info.data);
       };
       getDataEventosGenerales();

@@ -6,7 +6,8 @@ import { CardEvento, Spinner } from "../components";
 import { getData, getEnvVariables } from "../helpers";
 import { FormBusquedaRex } from "../components/header";
 
-const { VITE_API_EVENTOS, VITE_EMAIL, VITE_PASS, VITE_VENUE } = getEnvVariables();
+const { VITE_API_EVENTOS, VITE_EMAIL, VITE_PASS, VITE_VENUE } =
+  getEnvVariables();
 
 export const BusquedaEventos = () => {
   const [data, setData] = useState(null);
@@ -18,11 +19,14 @@ export const BusquedaEventos = () => {
   } = useContext(EventosContext);
   const { pathname, search } = useLocation();
   const [isLoading, setIsLoading] = useState(false);
+  const [status, setStatus] = useState(null);
   const query = search.split("=")[1];
   const paramSearch = (pathname.split("/")[2] + search).split("=")[0] + "=";
   // console.log(paramSearch);
   // console.log({pathname,search})
-  // console.log({pathname,search})
+  // console.log({status})
+  // console.log({isLoading})
+
 
   useEffect(() => {
     handleNavBarCollapse();
@@ -36,28 +40,27 @@ export const BusquedaEventos = () => {
 
   useEffect(() => {
     if (idVenue !== "") {
+      setIsLoading(true);
       const getInfo = async () => {
-        setIsLoading(true);
-        const { data } = await getData(
+        const info = await getData(
           VITE_API_EVENTOS + idVenue + "/search/" + query,
           VITE_EMAIL,
           VITE_PASS
         );
-        // console.log( {data} );
-        setData(data);
-        setIsLoading(false);
+        // console.log({ info });
+        setStatus(info.status);
+        setData(info.data.products);
       };
+      setIsLoading(false);
       getInfo();
     }
   }, [idVenue, query, search]);
 
   // console.log({isLoading})
 
-  if (data === null) return <Spinner />;
+  if (status === null) return <Spinner />;
 
-  if (isLoading === true) return <Spinner />;
-
-  if (data === undefined) return <Navigate to="/" />;
+  // if (data === null) return <Spinner />;
 
   if (paramSearch !== "search?q=") return <Navigate to="/" />;
 
@@ -71,8 +74,9 @@ export const BusquedaEventos = () => {
             </div>
           </div>
         )}
-        {data.length > 0 ? (
+        {status ? (
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6 lg:gap-10 mt-10 px-3 lg:px-0">
+        
             {data.map((item) => (
               <CardEvento
                 linkEvento={"/" + item.slug}

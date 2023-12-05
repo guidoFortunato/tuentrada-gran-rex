@@ -6,13 +6,13 @@ import { EventosHome } from "../";
 
 export const MainEventos = () => {
   const { eventosGenerales, setPage, data } = useContext(EventosContext);
-  // console.log({data})
+  // console.log(data)
   return (
     <main className="container mx-auto mb-5 ">
       <InfiniteScroll
         dataLength={eventosGenerales?.length}
         next={() => setPage((prevPage) => prevPage + 1)}
-        hasMore={data?.links?.next !== null}
+        hasMore={data?.data?.links?.next !== null}
         loader={<Spinner />}
         className="pb-12"
       >

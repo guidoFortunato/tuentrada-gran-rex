@@ -225,6 +225,7 @@ export const Accordion = ({ itemsAccordion, dataEvento }) => {
             aria-labelledby="accordion-open-heading-2"
           >
             <div className="p-5 border-0 border-gray-200 dark:border-gray-700">
+              {/* {console.log(itemsAccordion.history)} */}
               {itemsAccordion.history && (
                 <p
                   className={`text-base mb-6 text-gray-700    `}
