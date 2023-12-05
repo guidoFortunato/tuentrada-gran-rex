@@ -1,4 +1,5 @@
 import { useContext } from "react";
+import { Helmet, HelmetProvider } from "react-helmet-async";
 
 import { AppRouter } from "./router/AppRouter";
 import { ErrorRouter } from "./router/ErrorRouter";
@@ -19,9 +20,9 @@ function App() {
 
   return (
     <>
-     
-       
-          <link rel="icon" type="image" href={dataInfoGeneral.favicon} />
+      <HelmetProvider>
+        <Helmet>
+          <link rel="icon" type="image" href={dataInfoGeneral.favicon.src} />
           <meta name="keywords" content={dataInfoGeneral.headTag} />
           <meta name="description" content={dataInfoGeneral.headDescription} />
           <link
@@ -30,8 +31,9 @@ function App() {
             type="text/css"
           />
           <title>{dataInfoGeneral.headTitle}</title>
-       
-     
+        </Helmet>
+      </HelmetProvider>
+
       <AppRouter />
       {/* <AdSense /> */}
     </>
