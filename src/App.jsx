@@ -22,7 +22,7 @@ function App() {
     <>
       <HelmetProvider>
         <Helmet>
-          <link rel="icon" type="image" href={dataInfoGeneral.favicon.src} />
+          <link rel="icon" type="image" href={dataInfoGeneral.favicon?.src} />
           <meta name="keywords" content={dataInfoGeneral.headTag} />
           <meta name="description" content={dataInfoGeneral.headDescription} />
           <link

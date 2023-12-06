@@ -7,7 +7,8 @@ const { VITE_VENUE } = getEnvVariables();
 
 export const EventCancel = ({ linkEvento, imgApi, title, imgSTXVeryLarge }) => {
   const { host } = useContext(EventosContext);
-  // console.log({linkEvento})
+  console.log({imgApi})
+  console.log({imgSTXVeryLarge})
 
   if (host === VITE_VENUE) {
     return (

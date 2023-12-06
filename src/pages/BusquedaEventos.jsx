@@ -80,7 +80,7 @@ export const BusquedaEventos = () => {
             {data.map((item) => (
               <CardEvento
                 linkEvento={"/" + item.slug}
-                imgApi={item.image}
+                imgApi={item.intermedia}
                 title={item.name}
                 key={item.id}
                 data={item}

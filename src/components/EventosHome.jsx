@@ -8,12 +8,12 @@ export const EventosHome = () => {
   return (
     <>
       {eventosGenerales?.map((item) => {
-        // console.log({item})
+        console.log({item})
         // if (item.stateSTX === "RUNNING") {
           return (
             <CardEvento
               linkEvento={item.slug}
-              imgApi={item.image}
+              imgApi={item.intermedia}
               title={item.name}
               key={item.id}
               data={item}
