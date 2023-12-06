@@ -80,7 +80,7 @@ export const DetalleEvento = () => {
 
   if (data === undefined || data.length === 0) return <Navigate to="/" />;
 
-
+  // console.log({data})
   return (
     // <div className="w-[100%] lg:w-[70%] mx-auto" >
     <div className="w-[100%] mx-auto">
@@ -102,6 +102,7 @@ export const DetalleEvento = () => {
             )} */}
             {data?.product?.image ? (
               <div className="border border-gray-300 rounded-lg ">
+                
                 <img
                   src={data.product.image.src}
                   srcSet={data.product.image.srcset}
