@@ -15,7 +15,7 @@ export const EventAvailable = ({
   const { host } = useContext(EventosContext);
   // console.log({linkEvento})
   // console.log({disponibility})
-  console.log({imgApi})
+  // console.log({imgApi})
   // console.log({imgSTXVeryLarge})
 
   if (host === VITE_VENUE) {

@@ -8,7 +8,7 @@ export const EventosHome = () => {
   return (
     <>
       {eventosGenerales?.map((item) => {
-        console.log({item})
+        // console.log({item})
         // if (item.stateSTX === "RUNNING") {
           return (
             <CardEvento
