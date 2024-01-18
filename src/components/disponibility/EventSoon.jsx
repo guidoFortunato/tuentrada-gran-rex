@@ -6,6 +6,7 @@ const { VITE_VENUE } = getEnvVariables();
 
 export const EventSoon = ({ imgApi, title, imgSTXVeryLarge }) => {
   const { host } = useContext(EventosContext);
+  console.log({imgApi})
 
   if (host === VITE_VENUE) {
     return (
@@ -13,7 +14,7 @@ export const EventSoon = ({ imgApi, title, imgSTXVeryLarge }) => {
         <div className="overflow-hidden rounded-lg border border-gray-300 h-full">
           <div className="rounded-lg">
             {imgApi ? (
-              <img className="opacity-40" src={imgApi.src} alt={imgApi.alt} srcSet={imgApi.srcset} />
+              <img className="opacity-40" src={imgApi.src} alt={imgApi.alt ? imgApi.alt : title} srcSet={imgApi.srcset} />
             ) : (
               <img className="opacity-40" src={imgSTXVeryLarge} alt={title} />
             )}
@@ -34,14 +35,15 @@ export const EventSoon = ({ imgApi, title, imgSTXVeryLarge }) => {
     );
   }
   return (
-    <>
+    
       <figure className="relative max-w-sm cursor-default border rounded-lg border-gray-300">
         <div>
           {imgApi ? (
             <img
               className="rounded-lg md:rounded-none opacity-40"
-              src={imgApi}
-              alt={title}
+              src={imgApi.src}
+              alt={imgApi.alt ? imgApi.alt : title}
+              srcSet={imgApi.srcset}
             />
           ) : (
             <img
@@ -63,6 +65,6 @@ export const EventSoon = ({ imgApi, title, imgSTXVeryLarge }) => {
           </p>
         </figcaption>
       </figure>
-    </>
+    
   );
 };

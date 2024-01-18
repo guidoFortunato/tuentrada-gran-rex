@@ -25,7 +25,7 @@ export const EventAvailable = ({
           <div className="rounded-lg">
             <Link to={linkEvento}>
               {imgApi ? (
-                <img src={imgApi.src} alt={imgApi.alt} srcSet={imgApi.srcset} />
+                <img src={imgApi.src} alt={imgApi.alt ? imgApi.alt : title} srcSet={imgApi.srcset} />
               ) : (
                 <img src={imgSTXVeryLarge} alt={title} />
               )}
@@ -63,7 +63,7 @@ export const EventAvailable = ({
       <figure className="relative max-w-sm cursor-pointer border rounded-lg border-gray-300 ">
         <Link to={linkEvento}>
           {imgApi ? (
-            <img className="rounded-lg" src={imgApi.src} alt={imgApi.alt} srcSet={imgApi.srcset} />
+            <img className="rounded-lg" src={imgApi.src} alt={imgApi.alt ? imgApi.alt : title} srcSet={imgApi.srcset} />
           ) : (
             <img className="rounded-lg" src={imgSTXVeryLarge} alt={title} />
           )}

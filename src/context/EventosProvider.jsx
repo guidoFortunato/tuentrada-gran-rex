@@ -35,7 +35,7 @@ const EventosProvider = (props) => {
   useEffect(() => {
     const getDataInfoGeneral = async () => {
       const info = await getData(
-        VITE_API_INFO_GENERAL + "venues.tuentrada.com", //auditorio-sur.tuentrada.com - teatro-granrex.com.ar - nave-cultural.tuentrada.com - venues.tuentrada.com
+        VITE_API_INFO_GENERAL + host, //auditorio-sur.tuentrada.com - teatro-granrex.com.ar - nave-cultural.tuentrada.com - venues.tuentrada.com
         VITE_EMAIL,
         VITE_PASS
       );
@@ -59,7 +59,7 @@ const EventosProvider = (props) => {
         const newLocal = `${VITE_API_EVENTOS + idVenue}/products/?page=${page}`;
         const info = await getData(newLocal, VITE_EMAIL, VITE_PASS);
         // console.log({dataEventosGenerales: info.data})
-        console.log({infoData:info})
+        // console.log({infoData:info})
         if (!info.status) {
           setEventosGenerales(null)
           setData(undefined);

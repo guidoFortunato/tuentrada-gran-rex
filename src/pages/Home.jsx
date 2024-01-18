@@ -10,7 +10,7 @@ export const Home = () => {
     handleButtonsCollapse: handleNavBarCollapse,
   } = useContext(EventosContext);
 
-  console.log({eventosGenerales})
+  // console.log({eventosGenerales})
 
   useEffect(() => {
     handleNavBarCollapse();
@@ -26,7 +26,7 @@ export const Home = () => {
   if ( eventosGenerales === null  ) {
     return (
       <>
-        <HeaderNoEventos />
+        <HeaderEventos />
         <MainNoEventos />
       </>
     );

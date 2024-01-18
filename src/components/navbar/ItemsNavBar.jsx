@@ -4,7 +4,7 @@ import { EventosContext } from "../../context/EventosProvider";
 // import { alertaSuccess } from "../../helpers";
 
 export const ItemsNavBar = ({ item, handleButtonsCollapse }) => {
-  const { dataInfoGeneral, eventosCalendario } = useContext(EventosContext);
+  const { dataInfoGeneral } = useContext(EventosContext);
 
   const path = item.path;
   // console.log({item})
@@ -17,9 +17,9 @@ export const ItemsNavBar = ({ item, handleButtonsCollapse }) => {
   // console.log({eventosCalendario})
   // console.log({eventosCalendario})
 
-  if(eventosCalendario === null) return <span></span>
 
-  if (!(eventosCalendario === undefined && item.type.name.toLowerCase() === "calendario")) {
+
+
     return (
    
       <li
@@ -83,7 +83,7 @@ export const ItemsNavBar = ({ item, handleButtonsCollapse }) => {
       </li>
     
   );
-  }
+  
 
   
 };

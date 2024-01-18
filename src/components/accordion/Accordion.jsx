@@ -94,7 +94,7 @@ export const Accordion = ({ itemsAccordion, dataEvento }) => {
         </h2>
       )}
 
-      {itemsAccordion.performances.length > 0 && newPerformances.length > 0 && (
+      {itemsAccordion.performances?.length > 0 && newPerformances?.length > 0 && (
         <>
           <h2 id="accordion-open-heading-1">
             <button
@@ -339,7 +339,7 @@ export const Accordion = ({ itemsAccordion, dataEvento }) => {
         </>
       )}
 
-      {itemsAccordion.mediaJson.length > 0 && (
+      {itemsAccordion?.mediaJson?.length > 0 && (
         <>
           <h2 id="accordion-open-heading-8">
             <button

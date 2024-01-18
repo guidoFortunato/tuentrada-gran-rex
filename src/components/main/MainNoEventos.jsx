@@ -1,13 +1,23 @@
+import { useContext } from "react";
+import { EventosContext } from "../../context/EventosProvider";
+
 export const MainNoEventos = () => {
+  const { dataInfoGeneral } = useContext(EventosContext);
+
   return (
     <main className="container mx-auto mb-5">
       <div
-        className="w-1/2 flex justify-center mx-auto p-4 mb-4 text-md text-blue-900 rounded-lg bg-blue-300 dark:bg-gray-800 dark:text-blue-400"
+      style={{
+        backgroundColor: dataInfoGeneral?.backgroundButton,
+        color: dataInfoGeneral?.colorButton
+
+      }}
+        className="w-1/2 flex justify-center items-center mx-auto p-4 mb-4 text-lg rounded-lg"
         role="alert"
       >
         <svg
           aria-hidden="true"
-          className="flex-shrink-0 inline w-5 h-5 mr-3"
+          className="flex-shrink-0 inline w-7 h-7 mr-3"
           fill="currentColor"
           viewBox="0 0 20 20"
           xmlns="http://www.w3.org/2000/svg"
