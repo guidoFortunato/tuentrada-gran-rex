@@ -10,6 +10,7 @@ export const FechaAccordionProximamente = ({
   anio,
   dataFechas: dataFecha,
   dataEvento,
+  internalState
 }) => {
   const { dataInfoGeneral } = useContext(EventosContext);
   return (

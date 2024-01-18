@@ -6,13 +6,11 @@ import { MainNoEventos, MainEventos } from "../components/main/";
 export const Home = () => {
   const {
     eventosGenerales,
-    // setPage,
     data,
     handleButtonsCollapse: handleNavBarCollapse,
   } = useContext(EventosContext);
-  // console.log({data});
-  // console.log({ dataInfoGeneral });
-  // console.log({eventosGenerales})
+
+  console.log({eventosGenerales})
 
   useEffect(() => {
     handleNavBarCollapse();
@@ -24,28 +22,8 @@ export const Home = () => {
     }, 100);
   }, []);
 
-  // useEffect(() => {
-
-  //     const getInfo = async () => {
-  //       const newLocal = `${VITE_API_EVENTOS + 136}?page=${page}`;
-  //       const info = await getData(newLocal, VITE_EMAIL, VITE_PASS);
-  //       // console.log(info);
-  //       // console.log(info.data);
-  //       console.log('ejecuta uef')
-  //       setData(info);
-  //       setEventos((prevEventos) => prevEventos.concat(info.data));
-  //     };
-  //     getInfo();
-
-  // }, [page]);
-
   if (data === null) return <span></span>;
-
-  if (
-    eventosGenerales === undefined ||
-    eventosGenerales.length === 0 ||
-    data?.data?.length === 0
-  ) {
+  if ( eventosGenerales === null  ) {
     return (
       <>
         <HeaderNoEventos />

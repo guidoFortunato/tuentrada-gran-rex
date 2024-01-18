@@ -11,8 +11,6 @@ import "animate.css";
 function App() {
   const { dataInfoGeneral } = useContext(EventosContext);
 
-  // console.log({ dataInfoGeneral });
-
   if (dataInfoGeneral === null) {
     return <ErrorRouter />;
   }

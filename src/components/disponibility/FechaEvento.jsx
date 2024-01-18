@@ -23,13 +23,7 @@ export const FechaEvento = ({
   reason,
 }) => {
   const [openModal, setOpenModal] = useState(false);
-  // console.log({dataInfoGeneral})
-  // console.log({dataEvento})
-  // console.log({dataFecha})
-  // console.log({ availabilitLevel, reason });
-  // console.log({ internalState });
-  // const pruebaButtons = [1, 2];
-
+  
   const fecha = new Date(dataFecha.start);
   const formatoFecha = fecha.toLocaleDateString("es-ES", opciones);
   const dia = formatoFecha.split(",")[0].split(" ")[0];
@@ -51,6 +45,7 @@ export const FechaEvento = ({
           anio={anio}
           dataFechas={dataFecha}
           dataEvento={dataEvento}
+          internalState={internalState}
         />
       </div>
     );

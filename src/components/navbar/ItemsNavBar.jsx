@@ -4,7 +4,7 @@ import { EventosContext } from "../../context/EventosProvider";
 // import { alertaSuccess } from "../../helpers";
 
 export const ItemsNavBar = ({ item, handleButtonsCollapse }) => {
-  const { dataInfoGeneral } = useContext(EventosContext);
+  const { dataInfoGeneral, eventosCalendario } = useContext(EventosContext);
 
   const path = item.path;
   // console.log({item})
@@ -14,9 +14,14 @@ export const ItemsNavBar = ({ item, handleButtonsCollapse }) => {
     handleButtonsCollapse()
     // alertaSuccess();
   }
+  // console.log({eventosCalendario})
+  // console.log({eventosCalendario})
 
-  return (
-    <>
+  if(eventosCalendario === null) return <span></span>
+
+  if (!(eventosCalendario === undefined && item.type.name.toLowerCase() === "calendario")) {
+    return (
+   
       <li
         key={item.id}
         className={
@@ -58,11 +63,6 @@ export const ItemsNavBar = ({ item, handleButtonsCollapse }) => {
             rel="noreferrer"
             target="_blank"
             onClick={ handleDownload }
-            // style={({ isActive }) => ({
-            //   color: isActive
-            //     ? dataInfoGeneral.colorHoverLi
-            //     : dataInfoGeneral.colorLi,
-            // })}
             onMouseOver={(e) => {
               const isActive = e.target.classList.contains("active");
               if (!isActive) {
@@ -81,6 +81,9 @@ export const ItemsNavBar = ({ item, handleButtonsCollapse }) => {
           </a>
         )}
       </li>
-    </>
+    
   );
+  }
+
+  
 };
