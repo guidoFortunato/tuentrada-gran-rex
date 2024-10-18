@@ -47,7 +47,7 @@ export const DetalleEvento = () => {
           VITE_PASS
         );
         // console.log({buttonBuyLink: data.product.buttonBuyLink});
-        console.log({dataDetail: data});
+        // console.log({dataDetail: data});
         // if (data === undefined) return <Navigate to="/" />;
         setData(data);
         setItemsAccordion({

@@ -1,18 +1,10 @@
-# Teatro Gran Rex
+# Development
 
-## Development pasos
+## Requistos para compartir build
 
-1. Renombrar el archivo .env.template por .env
-2. Hacer los cambios respectivos en las variables de entorno
+1. Cambiar la variable "host" en EventosProviders
+2. Fijarse credenciales de las variables de entorno
+3. Ver variable VITE_VENUE para estilos del rex
 
-## TODO 
-
-1. sitemap dinámico
-
-3. agregar en los colores del site: background gradient
-
-4. font family fuera de body, en context
-
-5. falta icono spotify y tiktok
 
 
