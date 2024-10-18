@@ -47,7 +47,7 @@ export const DetalleEvento = () => {
           VITE_PASS
         );
         // console.log({buttonBuyLink: data.product.buttonBuyLink});
-        // console.log({dataDetail: data});
+        console.log({dataDetail: data});
         // if (data === undefined) return <Navigate to="/" />;
         setData(data);
         setItemsAccordion({
@@ -58,7 +58,7 @@ export const DetalleEvento = () => {
           history: data?.product?.history,
           historyImage: data?.product?.historyImage,
           mediaJson: data?.product?.mediaJson,
-          performances: data?.product?.performances,
+          performances: data?.performances,
           promotion: data?.product?.promotion,
           recomendation: data?.product?.recomendation,
           recomendationImage: data?.product?.recomendationImage,
