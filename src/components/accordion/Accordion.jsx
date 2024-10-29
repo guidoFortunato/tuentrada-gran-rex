@@ -34,18 +34,18 @@ export const Accordion = ({ itemsAccordion, dataEvento }) => {
   };
 
   useEffect(() => {
-    if (itemsAccordion.disponibility.length > 0) {
-      const updatedPerformances = itemsAccordion.performances.map(
+    if (itemsAccordion.disponibility?.length > 0) {
+      const updatedPerformances = itemsAccordion.performances?.map(
         (performance) => {
-          const correspondingDisponibility = itemsAccordion.disponibility.find(
+          const correspondingDisponibility = itemsAccordion.disponibility?.find(
             (item) => item.performanceId === performance.id
           );
           // console.log({correspondingDisponibility})
           if (correspondingDisponibility) {
             return {
               ...performance,
-              availabilitLevel: correspondingDisponibility.availabilitLevel,
-              reason: correspondingDisponibility.reason,
+              availabilitLevel: correspondingDisponibility?.availabilitLevel,
+              reason: correspondingDisponibility?.reason,
             };
           }
 
@@ -94,66 +94,67 @@ export const Accordion = ({ itemsAccordion, dataEvento }) => {
         </h2>
       )}
 
-      {itemsAccordion.performances?.length > 0 && newPerformances?.length > 0 && (
-        <>
-          <h2 id="accordion-open-heading-1">
-            <button
-              type="button"
-              className="flex items-center justify-between w-full p-5 font-medium text-left text-gray-700 uppercase    border-b-2   border-gray-200  hover:bg-gray-50 dark:hover:bg-gray-800"
-              data-accordion-target="#accordion-open-body-1"
-              aria-expanded="true"
-              aria-controls="accordion-open-body-1"
-              onClick={() => setPerformances((prevState) => !prevState)}
-            >
-              <span className="flex items-center text-lg font-semibold">
-                {itemsAccordion.performances.length > 1 &&
-                dataEvento.product.internalState !== "cancel"
-                  ? "Fechas disponibles"
-                  : itemsAccordion.performances.length <= 1 &&
-                    dataEvento.product.internalState !== "cancel"
-                  ? "Fecha disponible"
-                  : itemsAccordion.performances.length > 1 &&
-                    dataEvento.product.internalState === "cancel"
-                  ? "Fechas no disponibles"
-                  : itemsAccordion.performances.length <= 1 &&
-                    dataEvento.product.internalState === "cancel" &&
-                    "Fecha no disponible"}
-              </span>
-              <IconAccordion item={performances} />
-            </button>
-          </h2>
-          <div
-            id="accordion-open-body-1"
-            className={performances ? "" : "hidden"}
-            aria-labelledby="accordion-open-heading-1"
-          >
+      {itemsAccordion.performances?.length > 0 &&
+        newPerformances?.length > 0 && (
+          <>
+            <h2 id="accordion-open-heading-1">
+              <button
+                type="button"
+                className="flex items-center justify-between w-full p-5 font-medium text-left text-gray-700 uppercase    border-b-2   border-gray-200  hover:bg-gray-50 dark:hover:bg-gray-800"
+                data-accordion-target="#accordion-open-body-1"
+                aria-expanded="true"
+                aria-controls="accordion-open-body-1"
+                onClick={() => setPerformances((prevState) => !prevState)}
+              >
+                <span className="flex items-center text-lg font-semibold">
+                  {itemsAccordion.performances.length > 1 &&
+                  dataEvento.product.internalState !== "cancel"
+                    ? "Fechas disponibles"
+                    : itemsAccordion.performances.length <= 1 &&
+                      dataEvento.product.internalState !== "cancel"
+                    ? "Fecha disponible"
+                    : itemsAccordion.performances.length > 1 &&
+                      dataEvento.product.internalState === "cancel"
+                    ? "Fechas no disponibles"
+                    : itemsAccordion.performances.length <= 1 &&
+                      dataEvento.product.internalState === "cancel" &&
+                      "Fecha no disponible"}
+                </span>
+                <IconAccordion item={performances} />
+              </button>
+            </h2>
             <div
-              className={
-                performances
-                  ? "max-h-[400px] overflow-y-auto border-0 border-gray-200 dark:border-gray-700 dark:bg-gray-900 text-sm"
-                  : "hidden"
-              }
+              id="accordion-open-body-1"
+              className={performances ? "" : "hidden"}
+              aria-labelledby="accordion-open-heading-1"
             >
-              {newPerformances.map((item) => {
-                // console.log({internalState: item.internalState})
-                // console.log({item})
-                // if (item.internalState !== "sin fechas") {
-                return (
-                  <FechaEvento
-                    dataFechas={item}
-                    dataEvento={dataEvento}
-                    key={item.id}
-                    availabilitLevel={item.availabilitLevel}
-                    reason={item.reason}
-                    internalState={item.internalState}
-                  />
-                );
-                // }
-              })}
+              <div
+                className={
+                  performances
+                    ? "max-h-[400px] overflow-y-auto border-0 border-gray-200 dark:border-gray-700 dark:bg-gray-900 text-sm"
+                    : "hidden"
+                }
+              >
+                {newPerformances.map((item) => {
+                  // console.log({internalState: item.internalState})
+                  // console.log({item})
+                  // if (item.internalState !== "sin fechas") {
+                  return (
+                    <FechaEvento
+                      dataFechas={item}
+                      dataEvento={dataEvento}
+                      key={item.id}
+                      availabilitLevel={item.availabilitLevel}
+                      reason={item.reason}
+                      internalState={item.internalState}
+                    />
+                  );
+                  // }
+                })}
+              </div>
             </div>
-          </div>
-        </>
-      )}
+          </>
+        )}
 
       {(itemsAccordion.promotion || itemsAccordion.promotionImage) && (
         <>
@@ -331,7 +332,6 @@ export const Accordion = ({ itemsAccordion, dataEvento }) => {
                   className="object-cover"
                   src={itemsAccordion.extraImage.src}
                   srcSet={itemsAccordion.extraImage.srcset}
-                  
                 />
               )}
             </div>

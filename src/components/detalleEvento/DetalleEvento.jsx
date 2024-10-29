@@ -18,11 +18,11 @@ export const DetalleEvento = () => {
   const { name } = useParams();
   // const navigate = useNavigate();
   // console.log({dataInfoGeneral})
-  // console.log({ dataEvento: data });
-  // console.log({name})
-  // console.log({idProducto})
+  // if (data !== null) {
+  //   console.log({ dataEvento: data });
+    
+  // }
 
-  // const lastPath = localStorage.getItem("lastPath") || "/";
 
   useEffect(() => {
     handleButtonsCollapse();
@@ -41,30 +41,32 @@ export const DetalleEvento = () => {
   useEffect(() => {
     if (idVenue !== "") {
       const getInfo = async () => {
-        const { data } = await getData(
+        const info= await getData(
           `${VITE_API_EVENTOS + idVenue}/product/${name}`,
           VITE_EMAIL,
           VITE_PASS
         );
+        // console.log({info})
         // console.log({buttonBuyLink: data.product.buttonBuyLink});
         // console.log({dataDetail: data});
         // if (data === undefined) return <Navigate to="/" />;
-        setData(data);
+        setData(info.data);
         setItemsAccordion({
-          disponibility: data?.disponibility,
-          extra: data?.product?.extra,
-          extraImage: data?.product?.extraImage,
-          extraLabel: data?.product?.extraLabel,
-          history: data?.product?.history,
-          historyImage: data?.product?.historyImage,
-          mediaJson: data?.product?.mediaJson,
-          performances: data?.performances,
-          promotion: data?.product?.promotion,
-          recomendation: data?.product?.recomendation,
-          recomendationImage: data?.product?.recomendationImage,
-          socialNetworks: data?.product?.socialNetworks,
-          promotionImage: data?.product?.promotionImage,
-          useWallet: data?.product?.useWallet
+          disponibility: info.data?.disponibility,
+          extra: info.data?.product?.extra,
+          extraImage: info.data?.product?.extraImage,
+          extraLabel: info.data?.product?.extraLabel,
+          history: info.data?.product?.history,
+          historyImage: info.data?.product?.historyImage,
+          mediaJson: info.data?.product?.mediaJson,
+          // performances: info.data?.product.performances,
+          performances: info.data?.performances,
+          promotion: info.data?.product?.promotion,
+          recomendation: info.data?.product?.recomendation,
+          recomendationImage: info.data?.product?.recomendationImage,
+          socialNetworks: info.data?.product?.socialNetworks,
+          promotionImage: info.data?.product?.promotionImage,
+          useWallet: info.data?.product?.useWallet
           // venueImageProduct: data.venueImage,
         });
       };
