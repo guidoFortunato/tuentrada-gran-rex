@@ -43,7 +43,7 @@ export const FechaAccordionLimited = ({
         <div className="flex flex-col justify-center ml-4">
           <div onClick={() => setOpenModal((prevstate) => !prevstate)}>
             <span
-              className={`text-md text-gray-500 hover:text-gray-800 cursor-pointer uppercase font-semibold`}
+              className={`text-sm text-gray-500 hover:text-gray-800 cursor-pointer uppercase font-semibold`}
             >
               {dataEvento?.product.enableVenueImage === 1 &&
               (dataEvento?.product.venueImage ||

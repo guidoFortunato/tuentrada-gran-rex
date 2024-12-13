@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { Modal } from "flowbite-react";
 import { TransformWrapper, TransformComponent } from "react-zoom-pan-pinch";
 import { EventosContext } from "../../context/EventosProvider";
@@ -8,6 +8,9 @@ import { AiFillMinusCircle } from "react-icons/ai";
 import { RiRestartFill } from "react-icons/ri";
 import { Spinner } from "../Spinner";
 import { BotonCompra } from "../accordion";
+import { getData, getEnvVariables } from "../../helpers";
+
+const { VITE_API_EVENTOS, VITE_EMAIL, VITE_PASS } = getEnvVariables();
 
 const nombresMeses = [
   "Ene",
@@ -30,10 +33,9 @@ export const ModalPrecios = ({
   setOpenModal,
   dataEvento,
 }) => {
-  const { dataInfoGeneral } = useContext(EventosContext);
-  // console.log({ dataInfoGeneral });
-  // console.log({ performances });
-  // console.log({ dataEvento });
+  const { dataInfoGeneral, idVenue } = useContext(EventosContext);
+  const [isLoading, setIsLoading] = useState(false);
+  const [prices, setPrices] = useState([]);
 
   if (dataEvento === null) return <Spinner />;
 
@@ -77,6 +79,30 @@ export const ModalPrecios = ({
   const minutos = performances?.start.split("T")[1].split(":")[1];
 
   const fechaFormateada = `${dia} ${nombresMeses[mes]} ${año} - ${hora}:${minutos}hs`;
+
+  useEffect(() => {
+    try {
+      setIsLoading(true);
+      const getPrices = async () => {
+        const newLocal = `${VITE_API_EVENTOS + idVenue}/performance/${
+          performances.id
+        }/prices`;
+        const info = await getData(newLocal, VITE_EMAIL, VITE_PASS);
+        if (!info.status) {
+          setPrices([]);
+          return;
+        }
+        setPrices(info.data.prices);
+      };
+      getPrices();
+    } catch (error) {
+      console.log({ error });
+    } finally {
+      setIsLoading(false);
+    }
+  }, []);
+
+  if (isLoading) return <Spinner />;
 
   return (
     <>
@@ -123,6 +149,7 @@ export const ModalPrecios = ({
                 <TablaPrecios
                   performances={performances}
                   dataEvento={dataEvento}
+                  prices={prices}
                 />
               </div>
 

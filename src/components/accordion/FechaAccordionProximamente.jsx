@@ -29,7 +29,7 @@ export const FechaAccordionProximamente = ({
 
         <div className="flex flex-col justify-center ml-4">
           <div>
-            <span className={`text-md text-gray-300 uppercase font-semibold`}>
+            <span className={`text-sm text-gray-300 uppercase font-semibold`}>
               {dataEvento?.product.enableVenueImage === 1 &&
               (dataEvento?.product.venueImage ||
                 dataFecha?.venueImage ||

@@ -48,7 +48,7 @@ export const DetalleEvento = () => {
         );
         // console.log({info})
         // console.log({buttonBuyLink: data.product.buttonBuyLink});
-        // console.log({dataDetail: data});
+        // console.log({dataDetail: info.data});
         // if (data === undefined) return <Navigate to="/" />;
         setData(info.data);
         setItemsAccordion({

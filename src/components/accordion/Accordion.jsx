@@ -81,15 +81,6 @@ export const Accordion = ({ itemsAccordion, dataEvento }) => {
                 />
               </a>
             </div>
-
-            {/* <Tooltip
-              content="Mas información de TuEntrada Wallet"
-              animation="duration-500"
-              trigger="hover"
-              style="dark"
-            > */}
-
-            {/* </Tooltip> */}
           </div>
         </h2>
       )}
@@ -100,7 +91,7 @@ export const Accordion = ({ itemsAccordion, dataEvento }) => {
             <h2 id="accordion-open-heading-1">
               <button
                 type="button"
-                className="flex items-center justify-between w-full p-5 font-medium text-left text-gray-700 uppercase    border-b-2   border-gray-200  hover:bg-gray-50 dark:hover:bg-gray-800"
+                className="flex items-center justify-between w-full p-5 font-medium text-left text-gray-700 uppercase border-b-2 border-gray-200 hover:bg-gray-50"
                 data-accordion-target="#accordion-open-body-1"
                 aria-expanded="true"
                 aria-controls="accordion-open-body-1"
@@ -131,14 +122,11 @@ export const Accordion = ({ itemsAccordion, dataEvento }) => {
               <div
                 className={
                   performances
-                    ? "max-h-[400px] overflow-y-auto border-0 border-gray-200 dark:border-gray-700 dark:bg-gray-900 text-sm"
+                    ? "max-h-[400px] overflow-y-auto border-0 border-gray-200"
                     : "hidden"
                 }
               >
                 {newPerformances.map((item) => {
-                  // console.log({internalState: item.internalState})
-                  // console.log({item})
-                  // if (item.internalState !== "sin fechas") {
                   return (
                     <FechaEvento
                       dataFechas={item}
@@ -149,7 +137,6 @@ export const Accordion = ({ itemsAccordion, dataEvento }) => {
                       internalState={item.internalState}
                     />
                   );
-                  // }
                 })}
               </div>
             </div>
